@@ -7,8 +7,12 @@ tasks:
   docker-build:
     cmds:
       - >-
-        docker buildx build --no-cache --file=Dockerfile
-        --output={{.USER_WORKING_DIR}}/bin --target=releaser {{.USER_WORKING_DIR}}
+        docker buildx build
+        --no-cache
+        --platform=linux/amd64
+        --file=Dockerfile.build
+        --output={{.USER_WORKING_DIR}}/bin
+        --target=releaser {{.USER_WORKING_DIR}}
 
   go-fmt:
     cmds:
@@ -19,7 +23,7 @@ tasks:
     cmds:
       - task: go-fmt
       - >-
-        go build -a
+        go build
         -o bin/$GRPC_PROXY_BIN_NAME
         {{if .VERBOSE}}-v -a{{end}}
         main.go
