@@ -3,6 +3,8 @@ package proxy
 import (
 	"context"
 	"io"
+	"sync/atomic"
+	"time"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
@@ -14,6 +16,7 @@ var clientStreamDescForProxying = &grpc.StreamDesc{
 	ServerStreams: true,
 	ClientStreams: true,
 }
+var counter atomic.Uint64
 
 // RegisterService sets up a proxy handler for a particular gRPC service and method.
 // The behaviour is the same as if you were registering a handler method, e.g. from a generated pb.go file.
@@ -51,29 +54,55 @@ type handler struct {
 // It is invoked like any gRPC server stream and uses the emptypb.Empty type server
 // to proxy calls between the input and output streams.
 func (s *handler) handler(srv interface{}, serverStream grpc.ServerStream) error {
+	tsProxyReceived := time.Now()
+
 	// little bit of gRPC internals never hurt anyone
 	fullMethodName, ok := grpc.MethodFromServerStream(serverStream)
 	if !ok {
 		return status.Errorf(codes.Internal, "lowLevelServerStream not exists in context")
 	}
+
+	serial := counter.Add(1)
+
+	// `ProxyFlow` is the main mechanism for state propagation
+	flow := &ProxyFlow{
+		Serial: &serial,
+		Stats: &ProxyStats{
+			Counters: &ProxyCounters{},
+		},
+		TsProxyReceived: &tsProxyReceived,
+		Method:          &fullMethodName,
+	}
+
 	// We require that the director's returned context inherits from the serverStream.Context().
-	outgoingCtx, backendConn, err := s.director(serverStream.Context(), fullMethodName)
+	outgoingCtx, backendConn, onStreamEnd, err := s.director(serverStream.Context(), flow)
 	if err != nil {
 		return err
 	}
 
 	clientCtx, clientCancel := context.WithCancel(outgoingCtx)
 	defer clientCancel()
-	// TODO(mwitkow): Add a `forwarded` header to metadata, https://en.wikipedia.org/wiki/X-Forwarded-For.
+
 	clientStream, err := grpc.NewClientStream(clientCtx, clientStreamDescForProxying, backendConn, fullMethodName)
 	if err != nil {
 		return err
 	}
+
+	// [ToDo]: split stream timestamps into: server{start|end} and client{start|end}
+	tsStreamStart := time.Now()
+	defer func() {
+		tsStreamEnd := time.Now()
+		flow.TsStreamStart = &tsStreamStart
+		flow.TsStreamEnd = &tsStreamEnd
+		onStreamEnd(clientCtx, clientStream.Context(), flow)
+	}()
+
 	// Explicitly *do not close* s2cErrChan and c2sErrChan, otherwise the select below will not terminate.
 	// Channels do not have to be closed, it is just a control flow mechanism, see
 	// https://groups.google.com/forum/#!msg/golang-nuts/pZwdYRGxCIk/qpbHxRRPJdUJ
-	s2cErrChan := s.forwardServerToClient(serverStream, clientStream)
-	c2sErrChan := s.forwardClientToServer(clientStream, serverStream)
+	s2cErrChan := s.forwardServerToClient(serverStream, clientStream, flow)
+	c2sErrChan := s.forwardClientToServer(clientStream, serverStream, flow)
+
 	// We don't know which side is going to stop sending first, so we need a select between the two.
 	for i := 0; i < 2; i++ {
 		select {
@@ -93,7 +122,11 @@ func (s *handler) handler(srv interface{}, serverStream grpc.ServerStream) error
 			// This happens when the clientStream has nothing else to offer (io.EOF), returned a gRPC error. In those two
 			// cases we may have received Trailers as part of the call. In case of other errors (stream closed) the trailers
 			// will be nil.
-			serverStream.SetTrailer(clientStream.Trailer())
+			md := clientStream.Trailer()
+			serverStream.SetTrailer(md)
+			if rpcStatus, ok := status.FromError(c2sErr); ok {
+				flow.StatusProto = rpcStatus.Proto()
+			}
 			// c2sErr will contain RPC error from client code. If not io.EOF return the RPC error as server stream error.
 			if c2sErr != io.EOF {
 				return c2sErr
@@ -101,10 +134,11 @@ func (s *handler) handler(srv interface{}, serverStream grpc.ServerStream) error
 			return nil
 		}
 	}
+
 	return status.Errorf(codes.Internal, "gRPC proxying should never reach this stage.")
 }
 
-func (s *handler) forwardClientToServer(src grpc.ClientStream, dst grpc.ServerStream) chan error {
+func (s *handler) forwardClientToServer(src grpc.ClientStream, dst grpc.ServerStream, flow *ProxyFlow) chan error {
 	ret := make(chan error, 1)
 	go func() {
 		f := &emptypb.Empty{}
@@ -127,6 +161,16 @@ func (s *handler) forwardClientToServer(src grpc.ClientStream, dst grpc.ServerSt
 					break
 				}
 			}
+
+			/*
+				protoBytes, _ := proto.Marshal(f)
+				listQueuesResponseProto := &cloudtaskspb.ListQueuesResponse{}
+				proto.Unmarshal(protoBytes, listQueuesResponseProto)
+				jsonProto := protojson.Format(listQueuesResponseProto)
+			*/
+			jsonProto := ""
+			flow.ResponseJSON = &jsonProto
+
 			if err := dst.SendMsg(f); err != nil {
 				ret <- err
 				break
@@ -136,7 +180,7 @@ func (s *handler) forwardClientToServer(src grpc.ClientStream, dst grpc.ServerSt
 	return ret
 }
 
-func (s *handler) forwardServerToClient(src grpc.ServerStream, dst grpc.ClientStream) chan error {
+func (s *handler) forwardServerToClient(src grpc.ServerStream, dst grpc.ClientStream, flow *ProxyFlow) chan error {
 	ret := make(chan error, 1)
 	go func() {
 		f := &emptypb.Empty{}

@@ -1,0 +1,10 @@
+[submodule "google-cloud-go"]
+	path = google-cloud-go
+	url = https://github.com/googleapis/google-cloud-go.git
+  branch = main
+  shallow = true
+[submodule "googleapis"]
+	path = googleapis
+	url = https://github.com/googleapis/googleapis.git
+  branch = main
+  shallow = true
