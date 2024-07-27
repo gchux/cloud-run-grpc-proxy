@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.4
 
-FROM golang:1.22.4-bookworm AS builder
+FROM --platform=linux/amd64 golang:1.22.4-bookworm AS builder
 
 WORKDIR /app
 

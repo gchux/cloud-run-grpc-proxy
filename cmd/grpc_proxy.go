@@ -548,7 +548,7 @@ func main() {
 	proxyServer := grpc.NewServer(
 		grpc.UnknownServiceHandler(streamHandler),
 		grpc.MaxConcurrentStreams(100),
-		grpc.KeepaliveParams(keepAliveServerParams),
+		// grpc.KeepaliveParams(keepAliveServerParams),
 		grpc.KeepaliveEnforcementPolicy(keepAliveEnforcementPolicy),
 	)
 
