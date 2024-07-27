@@ -359,7 +359,7 @@ func onStreamEnd(
 
 	if flow.XCloudTraceContext != nil && *flow.XCloudTraceContext != "" {
 		if traceAndSpan := xCloudTraceContextRegexp.FindStringSubmatch(*flow.XCloudTraceContext); traceAndSpan != nil {
-			json.Set(stringFormatter.Format("projects/{}/traces/{}", _projectID, traceAndSpan[1]), "logging.googleapis.com/trace")
+			json.Set(stringFormatter.Format("projects/{0}/traces/{1}", _projectID, traceAndSpan[1]), "logging.googleapis.com/trace")
 			json.Set(traceAndSpan[2], "logging.googleapis.com/spanId")
 			json.Set(true, "logging.googleapis.com/trace_sampled")
 		}
@@ -418,7 +418,6 @@ func rpcTrafficDirector(
 	tsDirectorStart := time.Now()
 
 	serial := *flow.Serial
-
 	flows.Set(serial, flow)
 
 	// count RPCs by method
@@ -439,6 +438,7 @@ func rpcTrafficDirector(
 	//   - allow whitelisting endpoints and methods
 	//   - ratelimit on max-concurrent-rpc per project/host/method
 	rpcEndpointHeader := md.Get("x-grpc-proxy-endpoint")
+	fmt.Fprintln(os.Stderr, rpcEndpointHeader)
 	if len(rpcEndpointHeader) > 0 && rpcEndpointHeader[0] != target {
 		rpcEndpoint := rpcEndpointHeader[0]
 		rpcConn, rpcConnLoaded = endpoints.GetOrCompute(rpcEndpoint, newClientConnFactory(&rpcEndpoint))
@@ -482,6 +482,7 @@ func rpcTrafficDirector(
 		flow.ProjectID = &_projectID
 	} else {
 		md.Set("x-goog-user-project", projectID)
+		flow.ProjectID = &projectID
 	}
 
 	xCloudTraceContextHeader := md.Get("x-cloud-trace-context")
@@ -522,10 +523,10 @@ func main() {
 	serverListener, listenerErr := net.Listen("tcp", fmt.Sprintf(":%d", proxyPort))
 
 	if listenerErr != nil {
-		fmt.Fprintf(os.Stderr, "failed to start gRPC proxy at: %d", proxyPort)
+		fmt.Fprintf(os.Stderr, "failed to start gRPC proxy at: %d\n", proxyPort)
 		os.Exit(1)
 	} else {
-		fmt.Fprintf(os.Stderr, "gRPC proxy listening at: %d", proxyPort)
+		fmt.Fprintf(os.Stderr, "gRPC proxy listening at: %d\n", proxyPort)
 	}
 
 	ipToIfaceMap = make(map[string]net.Interface)
