@@ -187,9 +187,9 @@ func main() {
 	protoDefMap := make(ProtoDefMap)
 
 	sizeOfProto2RPC := loadProto2RPC(proto2rpc, protoDefMap)
+	sizeOFPRoto2Go := loadProto2Go(proto2go, protoDefMap)
 	sizeOFProto2Pkg := loadProto2Package(proto2pkg, protoDefMap)
 	sizeOfProto2Svc := loadProto2Service(proto2svc, protoDefMap)
-	sizeOFPRoto2Go := loadProto2Go(proto2go, protoDefMap)
 
 	size := minOf(sizeOFProto2Pkg, sizeOfProto2Svc, sizeOFPRoto2Go)
 
