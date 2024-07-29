@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"strings"
 )
 
 type (
@@ -39,11 +40,11 @@ type (
 	}
 
 	ProtoDef struct {
-		Proto   *string `json:"proto"`
-		RPCs    []*RPC  `json:"rpc"`
-		Package *string `json:"pkg"`
-		Service *string `json:"svc"`
-		Go      *string `json:"go"`
+		Proto    *string   `json:"proto"`
+		RPCs     []*RPC    `json:"rpc"`
+		Package  *string   `json:"pkg"`
+		Services []*string `json:"svc"`
+		Go       *string   `json:"go"`
 	}
 
 	ProtoDefMap map[string]*ProtoDef
@@ -140,7 +141,11 @@ func loadProto2Service(jsonFilePath *string, protoDefMap ProtoDefMap) uint64 {
 		}
 
 		if protoDef, ok := protoDefMap[v.Proto]; ok {
-			protoDef.Service = &v.Service
+			if protoDef.Services == nil {
+				protoDef.Services = []*string{&v.Service}
+			} else {
+				protoDef.Services = append(protoDef.Services, &v.Service)
+			}
 			size += 1
 		}
 	}
@@ -197,12 +202,20 @@ func main() {
 	index := 0
 	for _, protoDef := range protoDefMap {
 		if protoDef.Package != nil &&
-			protoDef.Service != nil &&
+			protoDef.Services != nil &&
 			protoDef.Go != nil {
 			RPCs[index] = protoDef
 			for _, rpc := range protoDef.RPCs {
-				fmt.Fprintf(os.Stderr, "%s.%s/%s(%s,%s) @%s\n",
-					*protoDef.Package, *protoDef.Service, *rpc.Method, *rpc.Request, *rpc.Response, *protoDef.Go)
+				var services strings.Builder
+				sizeOfServices := len(protoDef.Services)
+				for i := sizeOfServices - 1; i >= 0; i-- {
+					services.WriteString(*protoDef.Services[i])
+					if i > 0 {
+						services.WriteString(",")
+					}
+				}
+				fmt.Fprintf(os.Stderr, "%s.[%s]/%s(%s,%s) @%s\n",
+					*protoDef.Package, services.String(), *rpc.Method, *rpc.Request, *rpc.Response, *protoDef.Go)
 			}
 			index += 1
 		}
@@ -211,6 +224,6 @@ func main() {
 	if err == nil {
 		io.WriteString(os.Stdout, string(jsonBytes)+"\n")
 	}
-	fmt.Fprintf(os.Stderr, "SizeOf[protos:%d|packages:%d|services:%d|go:%d] => %d\n",
-		sizeOfProto2RPC, sizeOFProto2Pkg, sizeOfProto2Svc, sizeOFPRoto2Go, size)
+	fmt.Fprintf(os.Stderr, "SizeOf[protos:%d|packages:%d|services:%d|go:%d] => %d/%d\n",
+		sizeOfProto2RPC, sizeOFProto2Pkg, sizeOfProto2Svc, sizeOFPRoto2Go, index, size)
 }
