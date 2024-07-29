@@ -194,21 +194,23 @@ func main() {
 	size := minOf(sizeOFProto2Pkg, sizeOfProto2Svc, sizeOFPRoto2Go)
 
 	RPCs := make([]*ProtoDef, size)
+	index := 0
 	for _, protoDef := range protoDefMap {
 		if protoDef.Package != nil &&
 			protoDef.Service != nil &&
 			protoDef.Go != nil {
-			RPCs = append(RPCs, protoDef)
+			RPCs[index] = protoDef
 			for _, rpc := range protoDef.RPCs {
 				fmt.Fprintf(os.Stderr, "%s.%s/%s(%s,%s) @%s\n",
 					*protoDef.Package, *protoDef.Service, *rpc.Method, *rpc.Request, *rpc.Response, *protoDef.Go)
 			}
+			index += 1
 		}
 	}
 	jsonBytes, err := json.Marshal(RPCs)
 	if err == nil {
 		io.WriteString(os.Stdout, string(jsonBytes)+"\n")
 	}
-	fmt.Fprintf(os.Stderr, "SizeOf[protos:%d|packages:%d|services:%d|go:%d]\n",
-		sizeOfProto2RPC, sizeOFProto2Pkg, sizeOfProto2Svc, sizeOFPRoto2Go)
+	fmt.Fprintf(os.Stderr, "SizeOf[protos:%d|packages:%d|services:%d|go:%d] => %d\n",
+		sizeOfProto2RPC, sizeOFProto2Pkg, sizeOfProto2Svc, sizeOFPRoto2Go, size)
 }
