@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"slices"
 	"strings"
 )
 
@@ -197,8 +198,8 @@ func main() {
 	sizeOfProto2Svc := loadProto2Service(proto2svc, protoDefMap)
 
 	size := minOf(sizeOFProto2Pkg, sizeOfProto2Svc, sizeOFPRoto2Go)
-
 	RPCs := make([]*ProtoDef, size)
+
 	index := 0
 	for _, protoDef := range protoDefMap {
 		if protoDef.Package != nil &&
@@ -220,6 +221,14 @@ func main() {
 			index += 1
 		}
 	}
+
+	RPCs = slices.DeleteFunc(RPCs,
+		func(rpc *ProtoDef) bool {
+			return rpc == nil
+		},
+	)
+	RPCs = slices.Clip(RPCs)
+
 	jsonBytes, err := json.Marshal(RPCs)
 	if err == nil {
 		io.WriteString(os.Stdout, string(jsonBytes)+"\n")
