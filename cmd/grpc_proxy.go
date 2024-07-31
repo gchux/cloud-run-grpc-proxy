@@ -27,6 +27,7 @@ import (
 	"google.golang.org/grpc/keepalive"
 	"google.golang.org/grpc/metadata"
 	"google.golang.org/grpc/peer"
+	"google.golang.org/protobuf/encoding/protojson"
 
 	"golang.org/x/oauth2"
 	auth "golang.org/x/oauth2/google"
@@ -301,15 +302,21 @@ func onStreamEnd(
 	authorityJSON.Set(authorityParts[0], "src")
 	authorityJSON.Set(endpoint, "dst")
 
-	responseJSON, _ := rpcJSON.Object("response")
+	rpcRequestJSON, _ := rpcJSON.Object("request")
+	jsonRquest := protojson.Format(flow.ProtoRequest)
+	protoRequest, _ := gabs.ParseJSON([]byte(jsonRquest))
+	rpcRequestJSON.Set(protoRequest, "proto")
+
+	rpcResponseJSON, _ := rpcJSON.Object("response")
 	if flow.StatusProto != nil {
 		status := flow.StatusProto
-		responseJSON.Set(status.GetCode(), "status")
-		responseJSON.Set(status.GetMessage(), "message")
+		rpcResponseJSON.Set(status.GetCode(), "status")
+		rpcResponseJSON.Set(status.GetMessage(), "message")
 	} else {
-		responseJSON.Set(0, "status")
-		rpcJSON, _ := gabs.ParseJSON([]byte(*flow.ResponseJSON))
-		responseJSON.Set(rpcJSON, "proto")
+		rpcResponseJSON.Set(0, "status")
+		jsonResponse := protojson.Format(flow.ProtoResponse)
+		protoResponse, _ := gabs.ParseJSON([]byte(jsonResponse))
+		rpcResponseJSON.Set(protoResponse, "proto")
 	}
 
 	timestampJSON, _ := json.Object("timestamp")
@@ -438,7 +445,6 @@ func rpcTrafficDirector(
 	//   - allow whitelisting endpoints and methods
 	//   - ratelimit on max-concurrent-rpc per project/host/method
 	rpcEndpointHeader := md.Get("x-grpc-proxy-endpoint")
-	fmt.Fprintln(os.Stderr, rpcEndpointHeader)
 	if len(rpcEndpointHeader) > 0 && rpcEndpointHeader[0] != target {
 		rpcEndpoint := rpcEndpointHeader[0]
 		rpcConn, rpcConnLoaded = endpoints.GetOrCompute(rpcEndpoint, newClientConnFactory(&rpcEndpoint))

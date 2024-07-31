@@ -2,13 +2,17 @@ package proxy
 
 import (
 	"context"
+	"fmt"
 	"io"
+	"reflect"
 	"sync/atomic"
 	"time"
 
+	"github.com/zhangyunhao116/skipmap"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
+	"google.golang.org/protobuf/reflect/protoreflect"
 	"google.golang.org/protobuf/types/known/emptypb"
 )
 
@@ -48,6 +52,26 @@ func TransparentHandler(director StreamDirector) grpc.StreamHandler {
 
 type handler struct {
 	director StreamDirector
+}
+
+func newProto(rpc *string, regsitry *skipmap.OrderedMap[string, reflect.Type]) (protoreflect.ProtoMessage, error) {
+	protoType, loaded := regsitry.Load(*rpc)
+	if !loaded {
+		return &emptypb.Empty{},
+			fmt.Errorf("no proto not foound for: %s", *rpc)
+	}
+
+	if proto, ok := reflect.New(protoType).Interface().(protoreflect.ProtoMessage); ok {
+		return proto, nil
+	}
+	return &emptypb.Empty{},
+		fmt.Errorf("proto is not 'protoreflect.ProtoMessage': %s", protoType.Name())
+}
+
+func getProtosForRPC(rpc *string) (protoreflect.ProtoMessage, protoreflect.ProtoMessage) {
+	requestProto, _ := newProto(rpc, method2RequestType)
+	responseProto, _ := newProto(rpc, method2ResponseType)
+	return requestProto, responseProto
 }
 
 // handler is where the real magic of proxying happens.
@@ -94,8 +118,11 @@ func (s *handler) handler(srv interface{}, serverStream grpc.ServerStream) error
 		tsStreamEnd := time.Now()
 		flow.TsStreamStart = &tsStreamStart
 		flow.TsStreamEnd = &tsStreamEnd
-		onStreamEnd(clientCtx, clientStream.Context(), flow)
+		go onStreamEnd(clientCtx, clientStream.Context(), flow)
 	}()
+
+	rpcKey := fullMethodName[1:]
+	flow.ProtoRequest, flow.ProtoResponse = getProtosForRPC(&rpcKey)
 
 	// Explicitly *do not close* s2cErrChan and c2sErrChan, otherwise the select below will not terminate.
 	// Channels do not have to be closed, it is just a control flow mechanism, see
@@ -141,9 +168,9 @@ func (s *handler) handler(srv interface{}, serverStream grpc.ServerStream) error
 func (s *handler) forwardClientToServer(src grpc.ClientStream, dst grpc.ServerStream, flow *ProxyFlow) chan error {
 	ret := make(chan error, 1)
 	go func() {
-		f := &emptypb.Empty{}
+		// f := &emptypb.Empty{}
 		for i := 0; ; i++ {
-			if err := src.RecvMsg(f); err != nil {
+			if err := src.RecvMsg(flow.ProtoResponse); err != nil {
 				ret <- err // this can be io.EOF which is happy case
 				break
 			}
@@ -162,16 +189,7 @@ func (s *handler) forwardClientToServer(src grpc.ClientStream, dst grpc.ServerSt
 				}
 			}
 
-			/*
-				protoBytes, _ := proto.Marshal(f)
-				listQueuesResponseProto := &cloudtaskspb.ListQueuesResponse{}
-				proto.Unmarshal(protoBytes, listQueuesResponseProto)
-				jsonProto := protojson.Format(listQueuesResponseProto)
-			*/
-			jsonProto := ""
-			flow.ResponseJSON = &jsonProto
-
-			if err := dst.SendMsg(f); err != nil {
+			if err := dst.SendMsg(flow.ProtoResponse); err != nil {
 				ret <- err
 				break
 			}
@@ -183,13 +201,14 @@ func (s *handler) forwardClientToServer(src grpc.ClientStream, dst grpc.ServerSt
 func (s *handler) forwardServerToClient(src grpc.ServerStream, dst grpc.ClientStream, flow *ProxyFlow) chan error {
 	ret := make(chan error, 1)
 	go func() {
-		f := &emptypb.Empty{}
+		// f := &emptypb.Empty{}
 		for i := 0; ; i++ {
-			if err := src.RecvMsg(f); err != nil {
+			if err := src.RecvMsg(flow.ProtoRequest); err != nil {
 				ret <- err // this can be io.EOF which is happy case
 				break
 			}
-			if err := dst.SendMsg(f); err != nil {
+
+			if err := dst.SendMsg(flow.ProtoRequest); err != nil {
 				ret <- err
 				break
 			}

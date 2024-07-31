@@ -7,6 +7,7 @@ import (
 	spb "google.golang.org/genproto/googleapis/rpc/status"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/peer"
+	"google.golang.org/protobuf/reflect/protoreflect"
 )
 
 type (
@@ -23,8 +24,8 @@ type (
 		ProjectID              *string
 		Endpoint, Method       *string
 		XCloudTraceContext     *string
-		RequestJSON            *string
-		ResponseJSON           *string
+		ProtoRequest           protoreflect.ProtoMessage
+		ProtoResponse          protoreflect.ProtoMessage
 		StatusProto            *spb.Status
 		Client, Server         *peer.Peer
 		TsProxyReceived        *time.Time

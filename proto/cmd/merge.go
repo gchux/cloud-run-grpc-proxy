@@ -17,6 +17,12 @@ type (
 		Package string `json:"package"`
 	}
 
+	Proto2GoPackage struct {
+		Proto       string `json:"proto"`
+		PackageFull string `json:"pkg_full"`
+		Package     string `json:"pkg"`
+	}
+
 	Proto2Service struct {
 		Proto   string `json:"proto"`
 		Service string `json:"service"`
@@ -34,33 +40,16 @@ type (
 		Response string `json:"response"`
 	}
 
-	RPC struct {
-		Method   *string `json:"method"`
-		Request  *string `json:"request"`
-		Response *string `json:"response"`
-	}
-
-	ProtoDef struct {
-		Proto    *string   `json:"proto"`
-		RPCs     []*RPC    `json:"rpc"`
-		Package  *string   `json:"pkg"`
-		Services []*string `json:"svc"`
-		Go       *string   `json:"go"`
-	}
-
 	ProtoDefMap map[string]*ProtoDef
 )
 
 var (
-	proto2rpc = flag.String("proto2rpc", "", "")
-	proto2pkg = flag.String("proto2pkg", "", "")
-	proto2svc = flag.String("proto2svc", "", "")
-	proto2go  = flag.String("proto2go", "", "")
+	proto2rpc   = flag.String("proto2rpc", "", "")
+	proto2pkg   = flag.String("proto2pkg", "", "")
+	proto2svc   = flag.String("proto2svc", "", "")
+	proto2go    = flag.String("proto2go", "", "")
+	proto2gopkg = flag.String("proto2go_pkg", "", "")
 )
-
-func openJSON(jsonFile *string) (*os.File, error) {
-	return os.OpenFile(*jsonFile, os.O_RDONLY, 0o444 /* -r--r--r-- */)
-}
 
 func loadProto2RPC(jsonFilePath *string, protoDefMap ProtoDefMap) uint64 {
 	jsonFile, err := openJSON(jsonFilePath)
@@ -78,10 +67,28 @@ func loadProto2RPC(jsonFilePath *string, protoDefMap ProtoDefMap) uint64 {
 			os.Exit(2)
 		}
 
+		isStreamRequest := strings.HasPrefix(v.Request, "stream ")
+		isStreamResponse := strings.HasPrefix(v.Response, "stream ")
+
+		requestMessage := v.Request
+		if isStreamRequest {
+			requestMessage = requestMessage[7:]
+		}
+		responseMessage := v.Response
+		if isStreamResponse {
+			responseMessage = responseMessage[7:]
+		}
+
 		rpc := &RPC{
-			Method:   &v.RPC,
-			Request:  &v.Request,
-			Response: &v.Response,
+			Method: &v.RPC,
+			Request: &Message{
+				&requestMessage,
+				isStreamRequest,
+			},
+			Response: &Message{
+				&responseMessage,
+				isStreamResponse,
+			},
 		}
 
 		protoDef, ok := protoDefMap[v.Proto]
@@ -138,7 +145,7 @@ func loadProto2Service(jsonFilePath *string, protoDefMap ProtoDefMap) uint64 {
 		var v Proto2Service
 		if unmarshalErr := json.Unmarshal(s.Bytes(), &v); unmarshalErr != nil {
 			fmt.Fprintln(os.Stderr, unmarshalErr.Error())
-			os.Exit(3)
+			os.Exit(4)
 		}
 
 		if protoDef, ok := protoDefMap[v.Proto]; ok {
@@ -166,14 +173,63 @@ func loadProto2Go(jsonFilePath *string, protoDefMap ProtoDefMap) uint64 {
 		var v Proto2Go
 		if unmarshalErr := json.Unmarshal(s.Bytes(), &v); unmarshalErr != nil {
 			fmt.Fprintln(os.Stderr, unmarshalErr.Error())
+			os.Exit(5)
+		}
+
+		if protoDef, ok := protoDefMap[v.Proto]; ok {
+			if protoDef.Go == nil {
+				protoDef.Go = &Go{
+					SrcFile: &v.Go,
+				}
+			} else {
+				protoDef.Go.SrcFile = &v.Go
+			}
+			size += 1
+		}
+	}
+	return size
+}
+
+func loadProto2GoPackage(jsonFilePath *string, protoDefMap ProtoDefMap) uint64 {
+	jsonFile, err := openJSON(jsonFilePath)
+	if err != nil {
+		fmt.Fprintln(os.Stderr, err.Error())
+		os.Exit(1)
+	}
+
+	size := uint64(0)
+	s := bufio.NewScanner(jsonFile)
+	for s.Scan() {
+		var v Proto2GoPackage
+		if unmarshalErr := json.Unmarshal(s.Bytes(), &v); unmarshalErr != nil {
+			fmt.Fprintln(os.Stderr, unmarshalErr.Error())
 			os.Exit(3)
 		}
 
 		if protoDef, ok := protoDefMap[v.Proto]; ok {
-			protoDef.Go = &v.Go
+			goPkgFullParts := goPkgRegexp.FindStringSubmatch(v.PackageFull)
+			if len(goPkgFullParts) == 0 {
+				continue
+			}
+
+			namespace := fmt.Sprintf("%s_%s_%s",
+				goPkgFullParts[1], goPkgFullParts[2], v.Package)
+
+			if protoDef.Go == nil {
+				protoDef.Go = &Go{
+					Package:     &v.Package,
+					PackageFull: &v.PackageFull,
+					Namespace:   &namespace,
+				}
+			} else {
+				protoDef.Go.Package = &v.Package
+				protoDef.Go.PackageFull = &v.PackageFull
+				protoDef.Go.Namespace = &namespace
+			}
 			size += 1
 		}
 	}
+
 	return size
 }
 
@@ -187,24 +243,26 @@ func minOf(nums ...uint64) uint64 {
 	return min
 }
 
-func main() {
-	flag.Parse()
-
+func main_merge() {
 	protoDefMap := make(ProtoDefMap)
 
 	sizeOfProto2RPC := loadProto2RPC(proto2rpc, protoDefMap)
 	sizeOFPRoto2Go := loadProto2Go(proto2go, protoDefMap)
+	sizeOFPRoto2GoPkg := loadProto2GoPackage(proto2gopkg, protoDefMap)
 	sizeOFProto2Pkg := loadProto2Package(proto2pkg, protoDefMap)
 	sizeOfProto2Svc := loadProto2Service(proto2svc, protoDefMap)
 
-	size := minOf(sizeOFProto2Pkg, sizeOfProto2Svc, sizeOFPRoto2Go)
+	size := minOf(sizeOFProto2Pkg, sizeOfProto2Svc, sizeOFPRoto2Go, sizeOFPRoto2GoPkg)
 	RPCs := make([]*ProtoDef, size)
 
 	index := 0
 	for _, protoDef := range protoDefMap {
 		if protoDef.Package != nil &&
 			protoDef.Services != nil &&
-			protoDef.Go != nil {
+			protoDef.Go != nil &&
+			protoDef.Go.SrcFile != nil &&
+			protoDef.Go.PackageFull != nil &&
+			!strings.Contains(*protoDef.Go.PackageFull, "/internal/") {
 			RPCs[index] = protoDef
 			for _, rpc := range protoDef.RPCs {
 				var services strings.Builder
@@ -216,7 +274,7 @@ func main() {
 					}
 				}
 				fmt.Fprintf(os.Stderr, "%s.[%s]/%s(%s,%s) @%s\n",
-					*protoDef.Package, services.String(), *rpc.Method, *rpc.Request, *rpc.Response, *protoDef.Go)
+					*protoDef.Package, services.String(), *rpc.Method, *rpc.Request, *rpc.Response, *protoDef.Go.PackageFull)
 			}
 			index += 1
 		}
