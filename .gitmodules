@@ -8,3 +8,6 @@
 	url = https://github.com/googleapis/googleapis.git
   branch = main
   shallow = true
+[submodule "go-genproto"]
+	path = go-genproto
+	url = https://github.com/googleapis/go-genproto.git

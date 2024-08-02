@@ -6,6 +6,7 @@ import (
 	"errors"
 	"flag"
 	"fmt"
+	"go/format"
 	"io"
 	"os"
 	"regexp"
@@ -38,12 +39,17 @@ import (
 {{- end }}
 )
 	
+	var service2Host *skipmap.OrderedMap[string, string]
 	var method2RequestType *skipmap.OrderedMap[string, reflect.Type]
 	var method2ResponseType *skipmap.OrderedMap[string, reflect.Type]
 
 func init() {
 	method2RequestType = skipmap.New[string, reflect.Type]()
 	method2ResponseType = skipmap.New[string, reflect.Type]()
+
+{{- range $service, $host := .svcHost }}
+	service2Host.Store("{{$service}}", "{{$host}}")
+{{- end }}
 
 {{- range $method, $request := .rpcReq }}
 	method2RequestType.Store("{{$method}}", reflect.TypeOf((*{{ index $.rpcReqGoPkg $method }}.{{$request}})(nil)).Elem())
@@ -115,8 +121,8 @@ func (t *CodeTemplate) CreateFile(filePath string, data interface{}) error {
 			return nil, errors.New("output does not follow standard defined at https://golang.org/s/generatedcode")
 		}
 
-		// return format.Source(code)
-		return code, nil
+		return format.Source(code)
+		// return code, nil
 	}()
 	if err != nil {
 		return err
@@ -130,108 +136,168 @@ func (t *CodeTemplate) CreateFile(filePath string, data interface{}) error {
 	return err
 }
 
-// method2Type.Store("{{$method}}:{{$request}}", reflect.TypeOf((*{{ index $.rpcGoPkg $method }}.{{$request}})(nil)).Elem())
-// method2Type.Store("$method.$request", reflect.TypeOf({{index .rpcPkg "$method"}}.$request))
-// 	method2Type.Store("$method.{{.index .rpcRes "$method"}}", reflect.TypeOf({{index .rpcPkg "$method"}}.{{.index .rpcRes "$method"}}))
+func processMessages(pkg, ns *string, messages []*Message, messageType2namespace map[string]string) {
+	if len(messages) == 0 {
+		return
+	}
+	for _, msg := range messages {
+		messageType := *pkg + "." + *msg.Type
+		messageType2namespace[messageType] = *ns
+		processMessages(&messageType, ns, msg.Messages, messageType2namespace)
+	}
+}
 
 func main_codegen() {
-	jsonFile, err := openJSON(codegenSrc)
+	jsonFile, err := openFile(codegenSrc)
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err.Error())
 		os.Exit(1)
 	}
 
-	jsonFileBytes, err := io.ReadAll(jsonFile)
-	if err != nil {
-		fmt.Fprintln(os.Stderr, err.Error())
-		os.Exit(2)
-	}
+	// blacklist only for types
+	blacklist := mapset.NewSet[string]()
+	blacklist.Add("StreamRawPredictRequest")
+	blacklist.Add("UpdateDeploymentResourcePoolRequest")
 
-	protoDefs := make([]ProtoDef, 0)
-	json.Unmarshal(jsonFileBytes, &protoDefs)
-
-	// [ToDo]: use NAMESPACES, TYPES and IMPORTS from json
+	// [ToDo]: load whitelists from files; match by:
+	//   - regular expressions
+	//   - literal names
+	pkgWhitelist := mapset.NewSet[string]()
+	svcWhitelist := mapset.NewSet[string]()
+	rpcWhitelist := mapset.NewSet[string]()
 
 	namespaces := mapset.NewSet[string]()
-	namespaces.Add("emptypb")
-	namespaces.Add("httpbodypb")
-	namespaces.Add("metricpb")
-	namespaces.Add("monitoredrespb")
-	namespaces.Add("serviceconfigpb")
-	namespaces.Add("longrunningpb")
-	namespaces.Add("oslogin_common_commonpb")
-
+	messageType2namespace := make(map[string]string)
 	imports := make(map[string]string)
+
+	// https://github.com/googleapis/google-cloud-go/blob/main/internal/gapicgen/generator/genproto.go#L56-L140
+
+	namespaces.Add("emptypb")
+	messageType2namespace["google.protobuf.Empty"] = "emptypb"
 	imports["emptypb"] = "google.golang.org/protobuf/types/known/emptypb"
+
+	namespaces.Add("httpbodypb")
+	messageType2namespace["google.api.HttpBody"] = "httpbodypb"
 	imports["httpbodypb"] = "google.golang.org/genproto/googleapis/api/httpbody"
+
+	namespaces.Add("metricpb")
+	messageType2namespace["google.api.MetricDescriptor"] = "metricpb"
 	imports["metricpb"] = "google.golang.org/genproto/googleapis/api/metric"
+
+	namespaces.Add("monitoredrespb")
+	messageType2namespace["google.api.MonitoredResourceDescriptor"] = "monitoredrespb"
 	imports["monitoredrespb"] = "google.golang.org/genproto/googleapis/api/monitoredres"
+
+	namespaces.Add("serviceconfigpb")
 	imports["serviceconfigpb"] = "google.golang.org/genproto/googleapis/api/serviceconfig"
+	messageType2namespace["google.api.Service"] = "serviceconfigpb"
+
+	namespaces.Add("longrunningpb")
+	messageType2namespace["google.longrunning.Operation"] = "longrunningpb"
 	imports["longrunningpb"] = "cloud.google.com/go/longrunning/autogen/longrunningpb"
+
+	namespaces.Add("oslogin_common_commonpb")
+	messageType2namespace["google.cloud.oslogin.common.SshPublicKey"] = "oslogin_common_commonpb"
 	imports["oslogin_common_commonpb"] = "cloud.google.com/go/oslogin/common/commonpb"
 
-	messageType2namespace := make(map[string]string)
-	// https://github.com/googleapis/google-cloud-go/blob/main/internal/gapicgen/generator/genproto.go#L56-L140
-	messageType2namespace["google.api.HttpBody"] = "httpbodypb"
-	messageType2namespace["google.api.Service"] = "serviceconfigpb"
-	messageType2namespace["google.api.MetricDescriptor"] = "metricpb"
-	messageType2namespace["google.api.MonitoredResourceDescriptor"] = "monitoredrespb"
-	messageType2namespace["google.protobuf.Empty"] = "emptypb"
-	messageType2namespace["google.longrunning.Operation"] = "longrunningpb"
-	messageType2namespace["google.cloud.oslogin.common.SshPublicKey"] = "oslogin_common_commonpb"
+	protos := make([]*ProtoDef, 0)
+	d := json.NewDecoder(jsonFile)
+	protosCount := 0
+	for {
+		var v ProtoDef
+		err := d.Decode(&v)
+		if err == io.EOF {
+			break
+		}
+		if err != nil {
+			fmt.Fprintln(os.Stderr, err.Error())
+			os.Exit(2)
+		}
 
-	for _, protoDef := range protoDefs {
-		for _, rpc := range protoDef.RPCs {
-			namespaces.Add(*protoDef.Go.Namespace)
+		if strings.HasPrefix(*v.Package, "google.ads.") ||
+			strings.HasPrefix(*v.Package, "google.analytics.") ||
+			len(v.Services)+len(v.Messages) == 0 {
+			// skipping:
+			//   - google ads/analytics stuff (sorry...)
+			//   - protos with 0 side effects
+			continue
+		}
 
-			requestType := *rpc.Request.Type
-			responseType := *rpc.Response.Type
+		protosCount += 1
 
-			if !strings.HasPrefix(requestType, "google.") {
-				messageType2namespace[*protoDef.Package+"."+requestType] = *protoDef.Go.Namespace
-			} else if strings.HasPrefix(requestType, *protoDef.Package) {
-				messageType2namespace[requestType] = *protoDef.Go.Namespace
-			}
+		namespace := strings.ReplaceAll(*v.Package, ".", "_") + "_" + *v.Go.Package
+		namespaces.Add(namespace)
 
-			if !strings.HasPrefix(responseType, "google.") {
-				messageType2namespace[*protoDef.Package+"."+responseType] = *protoDef.Go.Namespace
-			} else if strings.HasPrefix(responseType, *protoDef.Package) {
-				messageType2namespace[responseType] = *protoDef.Go.Namespace
+		v.Go.Namespace = &namespace
+		protos = append(protos, &v)
+	}
+
+	for _, proto := range protos {
+		ns := *proto.Go.Namespace
+
+		for _, svc := range proto.Services {
+			for _, rpc := range svc.RPCs {
+
+				requestType := *rpc.Request.Type
+				responseType := *rpc.Response.Type
+
+				if !strings.HasPrefix(requestType, "google.") {
+					messageType2namespace[*proto.Package+"."+requestType] = ns
+				} else if strings.HasPrefix(requestType, *proto.Package) {
+					messageType2namespace[requestType] = ns
+				}
+
+				if !strings.HasPrefix(responseType, "google.") {
+					messageType2namespace[*proto.Package+"."+responseType] = ns
+				} else if strings.HasPrefix(responseType, *proto.Package) {
+					messageType2namespace[responseType] = ns
+				}
 			}
 		}
+
+		processMessages(proto.Package, &ns, proto.Messages, messageType2namespace)
 	}
 
 	rpcMethod2rpcReq := make(map[string]string)
 	rpcMethod2rpcRes := make(map[string]string)
 	rpcMethod2rpcReqGoPkg := make(map[string]string)
 	rpcMethod2rpcResGoPkg := make(map[string]string)
-
-	blacklist := mapset.NewSet[string]()
-	blacklist.Add("StreamRawPredictRequest")
-	blacklist.Add("UpdateDeploymentResourcePoolRequest")
-
-	whitelist := mapset.NewSet[string]()
+	service2host := make(map[string]string)
 
 	usedNamespaces := mapset.NewSet[string]()
 
-	for _, protoDef := range protoDefs {
-		if !whitelist.IsEmpty() &&
-			!whitelist.Contains(*protoDef.Package) {
+	for _, proto := range protos {
+		if len(proto.Services) == 0 {
 			continue
 		}
 
-		goPkgFull := *protoDef.Go.PackageFull
-		goPkgFullParts := goPkgRegexp.FindStringSubmatch(goPkgFull)
-		if len(goPkgFullParts) == 0 {
+		// fmt.Fprintln(os.Stderr, *v.Package)
+		if !pkgWhitelist.IsEmpty() && !pkgWhitelist.Contains(*proto.Package) {
 			continue
 		}
-		goPkgAlias := *protoDef.Go.Namespace
 
-		imports[goPkgAlias] = goPkgFull
+		goPkgNamespace := *proto.Go.Namespace
 
-		for _, svc := range protoDef.Services {
-			pkgAndSvc := *protoDef.Package + "." + *svc
-			for _, rpc := range protoDef.RPCs {
+		imports[goPkgNamespace] = *proto.Go.PackageFull
+
+		for _, svc := range proto.Services {
+			if !svcWhitelist.IsEmpty() && !svcWhitelist.Contains(*svc.Service) {
+				continue
+			}
+
+			pkgAndSvc := *proto.Package + "." + *svc.Service
+
+			if svc.Host != nil {
+				// yes... this can happen:
+				//   - sample: https://github.com/googleapis/googleapis/blob/master/google/firebase/fcm/connection/v1alpha1/connection_api.proto
+				service2host[pkgAndSvc] = *svc.Host
+			}
+
+			for _, rpc := range svc.RPCs {
+				if !rpcWhitelist.IsEmpty() && !rpcWhitelist.Contains(*rpc.Method) {
+					continue
+				}
+
 				requestType := *rpc.Request.Type
 				responseType := *rpc.Response.Type
 
@@ -245,23 +311,22 @@ func main_codegen() {
 					requestTypeParts := strings.Split(requestType, ".")
 					rpcMethod2rpcReq[fullMethodName] = requestTypeParts[len(requestTypeParts)-1]
 					rpcMethod2rpcReqGoPkg[fullMethodName] = messageType2namespace[requestType]
-					usedNamespaces.Add(messageType2namespace[requestType])
 				} else {
 					rpcMethod2rpcReq[fullMethodName] = requestType
-					rpcMethod2rpcReqGoPkg[fullMethodName] = goPkgAlias
-					usedNamespaces.Add(goPkgAlias)
+					rpcMethod2rpcReqGoPkg[fullMethodName] = goPkgNamespace
 				}
 
 				if strings.HasPrefix(responseType, "google.") {
 					responseTypeParts := strings.Split(responseType, ".")
 					rpcMethod2rpcRes[fullMethodName] = responseTypeParts[len(responseTypeParts)-1]
 					rpcMethod2rpcResGoPkg[fullMethodName] = messageType2namespace[responseType]
-					usedNamespaces.Add(messageType2namespace[responseType])
 				} else {
 					rpcMethod2rpcRes[fullMethodName] = *rpc.Response.Type
-					rpcMethod2rpcResGoPkg[fullMethodName] = goPkgAlias
-					usedNamespaces.Add(goPkgAlias)
+					rpcMethod2rpcResGoPkg[fullMethodName] = goPkgNamespace
 				}
+
+				usedNamespaces.Add(rpcMethod2rpcReqGoPkg[fullMethodName])
+				usedNamespaces.Add(rpcMethod2rpcResGoPkg[fullMethodName])
 			}
 		}
 	}
@@ -276,6 +341,7 @@ func main_codegen() {
 		*codegenDst,
 		map[string]any{
 			"imports":     imports,
+			"svcHost":     service2host,
 			"rpcReq":      rpcMethod2rpcReq,
 			"rpcRes":      rpcMethod2rpcRes,
 			"rpcReqGoPkg": rpcMethod2rpcReqGoPkg,
