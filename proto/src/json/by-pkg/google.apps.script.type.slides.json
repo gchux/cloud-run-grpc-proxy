@@ -1,17 +1,1 @@
-{
-  "proto": "google/apps/script/type/slides/slides_addon_manifest",
-  "pkg": "google.apps.script.type.slides",
-  "msgs": [
-    {
-      "type": "SlidesAddOnManifest"
-    },
-    {
-      "type": "SlidesExtensionPoint"
-    }
-  ],
-  "go": {
-    "src": "googleapis/apps/script/type/slides/slides_addon_manifest.pb.go",
-    "pkg": "slides",
-    "pkg_full": "google.golang.org/genproto/googleapis/apps/script/type/slides"
-  }
-}
+{"proto":"google/apps/script/type/slides/slides_addon_manifest","pkg":"google.apps.script.type.slides","msgs":[{"type":"SlidesAddOnManifest"},{"type":"SlidesExtensionPoint"}],"go":{"src":"googleapis/apps/script/type/slides/slides_addon_manifest.pb.go","pkg":"slides","pkg_full":"google.golang.org/genproto/googleapis/apps/script/type/slides"}}

@@ -1,15 +1,1 @@
-{
-  "proto": "google/cloud/gkeconnect/gateway/v1alpha1/gateway",
-  "pkg": "google.cloud.gkeconnect.gateway.v1alpha1",
-  "svcs": [
-    {
-      "svc": "GatewayService",
-      "host": "connectgateway.googleapis.com"
-    }
-  ],
-  "go": {
-    "src": "googleapis/cloud/gkeconnect/gateway/v1alpha1/gateway.pb.go",
-    "pkg": "gatewaypb",
-    "pkg_full": "cloud.google.com/go/gkeconnect/gateway/apiv1alpha1/gatewaypb"
-  }
-}
+{"proto":"google/cloud/gkeconnect/gateway/v1alpha1/gateway","pkg":"google.cloud.gkeconnect.gateway.v1alpha1","svcs":[{"svc":"GatewayService","host":"connectgateway.googleapis.com"}],"go":{"src":"googleapis/cloud/gkeconnect/gateway/v1alpha1/gateway.pb.go","pkg":"gatewaypb","pkg_full":"cloud.google.com/go/gkeconnect/gateway/apiv1alpha1/gatewaypb"}}

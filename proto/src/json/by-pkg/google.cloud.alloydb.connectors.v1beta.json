@@ -1,17 +1,1 @@
-{
-  "proto": "google/cloud/alloydb/connectors/v1beta/resources",
-  "pkg": "google.cloud.alloydb.connectors.v1beta",
-  "msgs": [
-    {
-      "type": "MetadataExchangeRequest"
-    },
-    {
-      "type": "MetadataExchangeResponse"
-    }
-  ],
-  "go": {
-    "src": "alloydb/connectors/apiv1beta/connectorspb/resources.pb.go",
-    "pkg": "connectorspb",
-    "pkg_full": "cloud.google.com/go/alloydb/connectors/apiv1beta/connectorspb"
-  }
-}
+{"proto":"google/cloud/alloydb/connectors/v1beta/resources","pkg":"google.cloud.alloydb.connectors.v1beta","msgs":[{"type":"MetadataExchangeRequest"},{"type":"MetadataExchangeResponse"}],"go":{"src":"alloydb/connectors/apiv1beta/connectorspb/resources.pb.go","pkg":"connectorspb","pkg_full":"cloud.google.com/go/alloydb/connectors/apiv1beta/connectorspb"}}

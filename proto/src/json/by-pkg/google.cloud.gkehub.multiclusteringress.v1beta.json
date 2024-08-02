@@ -1,14 +1,1 @@
-{
-  "proto": "google/cloud/gkehub/v1beta/multiclusteringress/multiclusteringress",
-  "pkg": "google.cloud.gkehub.multiclusteringress.v1beta",
-  "msgs": [
-    {
-      "type": "FeatureSpec"
-    }
-  ],
-  "go": {
-    "src": "googleapis/cloud/gkehub/multiclusteringress/v1beta/multiclusteringress.pb.go",
-    "pkg": "multiclusteringresspb",
-    "pkg_full": "cloud.google.com/go/gkehub/multiclusteringress/apiv1beta/multiclusteringresspb"
-  }
-}
+{"proto":"google/cloud/gkehub/v1beta/multiclusteringress/multiclusteringress","pkg":"google.cloud.gkehub.multiclusteringress.v1beta","msgs":[{"type":"FeatureSpec"}],"go":{"src":"googleapis/cloud/gkehub/multiclusteringress/v1beta/multiclusteringress.pb.go","pkg":"multiclusteringresspb","pkg_full":"cloud.google.com/go/gkehub/multiclusteringress/apiv1beta/multiclusteringresspb"}}

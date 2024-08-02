@@ -1,14 +1,1 @@
-{
-  "proto": "google/appengine/legacy/audit_data",
-  "pkg": "google.appengine.legacy",
-  "msgs": [
-    {
-      "type": "AuditData"
-    }
-  ],
-  "go": {
-    "src": "googleapis/appengine/legacy/audit_data.pb.go",
-    "pkg": "legacy",
-    "pkg_full": "google.golang.org/genproto/googleapis/appengine/legacy"
-  }
-}
+{"proto":"google/appengine/legacy/audit_data","pkg":"google.appengine.legacy","msgs":[{"type":"AuditData"}],"go":{"src":"googleapis/appengine/legacy/audit_data.pb.go","pkg":"legacy","pkg_full":"google.golang.org/genproto/googleapis/appengine/legacy"}}

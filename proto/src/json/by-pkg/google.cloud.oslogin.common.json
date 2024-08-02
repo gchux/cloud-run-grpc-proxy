@@ -1,17 +1,1 @@
-{
-  "proto": "google/cloud/oslogin/common/common",
-  "pkg": "google.cloud.oslogin.common",
-  "msgs": [
-    {
-      "type": "PosixAccount"
-    },
-    {
-      "type": "SshPublicKey"
-    }
-  ],
-  "go": {
-    "src": "oslogin/common/commonpb/common.pb.go",
-    "pkg": "commonpb",
-    "pkg_full": "cloud.google.com/go/oslogin/common/commonpb"
-  }
-}
+{"proto":"google/cloud/oslogin/common/common","pkg":"google.cloud.oslogin.common","msgs":[{"type":"PosixAccount"},{"type":"SshPublicKey"}],"go":{"src":"oslogin/common/commonpb/common.pb.go","pkg":"commonpb","pkg_full":"cloud.google.com/go/oslogin/common/commonpb"}}

@@ -1,16 +1,1 @@
-{
-  "proto": "google/compute/logging/gdnsusage/v1/gdns_vm_usage",
-  "pkg": "google.compute.logging.gdnsusage.v1",
-  "msgs": [
-    {
-      "type": "GdnsVmUsagePlatformLog"
-    },
-    {
-      "type": "VmInfo"
-    }
-  ],
-  "go": {
-    "pkg": "gdnsusage",
-    "pkg_full": "google.golang.org/genproto/googleapis/compute/logging/gdnsusage/v1"
-  }
-}
+{"proto":"google/compute/logging/gdnsusage/v1/gdns_vm_usage","pkg":"google.compute.logging.gdnsusage.v1","msgs":[{"type":"GdnsVmUsagePlatformLog"},{"type":"VmInfo"}],"go":{"pkg":"gdnsusage","pkg_full":"google.golang.org/genproto/googleapis/compute/logging/gdnsusage/v1"}}

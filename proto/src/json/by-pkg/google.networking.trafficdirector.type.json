@@ -1,14 +1,1 @@
-{
-  "proto": "google/networking/trafficdirector/type/traffic_director_log_entry",
-  "pkg": "google.networking.trafficdirector.type",
-  "msgs": [
-    {
-      "type": "TrafficDirectorLogEntry"
-    }
-  ],
-  "go": {
-    "src": "googleapis/networking/trafficdirector/type/traffic_director_log_entry.pb.go",
-    "pkg": "type",
-    "pkg_full": "google.golang.org/genproto/googleapis/networking/trafficdirector/type"
-  }
-}
+{"proto":"google/networking/trafficdirector/type/traffic_director_log_entry","pkg":"google.networking.trafficdirector.type","msgs":[{"type":"TrafficDirectorLogEntry"}],"go":{"src":"googleapis/networking/trafficdirector/type/traffic_director_log_entry.pb.go","pkg":"type","pkg_full":"google.golang.org/genproto/googleapis/networking/trafficdirector/type"}}

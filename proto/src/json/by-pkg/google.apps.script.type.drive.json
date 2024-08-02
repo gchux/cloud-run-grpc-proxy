@@ -1,17 +1,1 @@
-{
-  "proto": "google/apps/script/type/drive/drive_addon_manifest",
-  "pkg": "google.apps.script.type.drive",
-  "msgs": [
-    {
-      "type": "DriveAddOnManifest"
-    },
-    {
-      "type": "DriveExtensionPoint"
-    }
-  ],
-  "go": {
-    "src": "googleapis/apps/script/type/drive/drive_addon_manifest.pb.go",
-    "pkg": "drive",
-    "pkg_full": "google.golang.org/genproto/googleapis/apps/script/type/drive"
-  }
-}
+{"proto":"google/apps/script/type/drive/drive_addon_manifest","pkg":"google.apps.script.type.drive","msgs":[{"type":"DriveAddOnManifest"},{"type":"DriveExtensionPoint"}],"go":{"src":"googleapis/apps/script/type/drive/drive_addon_manifest.pb.go","pkg":"drive","pkg_full":"google.golang.org/genproto/googleapis/apps/script/type/drive"}}

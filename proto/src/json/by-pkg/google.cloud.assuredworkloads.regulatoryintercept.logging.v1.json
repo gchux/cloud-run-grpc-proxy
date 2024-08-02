@@ -1,14 +1,1 @@
-{
-  "proto": "google/cloud/assuredworkloads/regulatoryintercept/logging/v1/regulatory_intercept_ack_log_entry",
-  "pkg": "google.cloud.assuredworkloads.regulatoryintercept.logging.v1",
-  "msgs": [
-    {
-      "type": "RegulatoryInterceptAckLogEntry"
-    }
-  ],
-  "go": {
-    "src": "googleapis/cloud/assuredworkloads/regulatoryintercept/logging/v1/regulatory_intercept_ack_log_entry.pb.go",
-    "pkg": "loggingpb",
-    "pkg_full": "cloud.google.com/go/assuredworkloads/regulatoryintercept/logging/apiv1/loggingpb"
-  }
-}
+{"proto":"google/cloud/assuredworkloads/regulatoryintercept/logging/v1/regulatory_intercept_ack_log_entry","pkg":"google.cloud.assuredworkloads.regulatoryintercept.logging.v1","msgs":[{"type":"RegulatoryInterceptAckLogEntry"}],"go":{"src":"googleapis/cloud/assuredworkloads/regulatoryintercept/logging/v1/regulatory_intercept_ack_log_entry.pb.go","pkg":"loggingpb","pkg_full":"cloud.google.com/go/assuredworkloads/regulatoryintercept/logging/apiv1/loggingpb"}}

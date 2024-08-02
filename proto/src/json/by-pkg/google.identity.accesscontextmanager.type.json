@@ -1,9 +1,1 @@
-{
-  "proto": "google/identity/accesscontextmanager/type/device_resources",
-  "pkg": "google.identity.accesscontextmanager.type",
-  "go": {
-    "src": "googleapis/identity/accesscontextmanager/type/device_resources.pb.go",
-    "pkg": "type",
-    "pkg_full": "google.golang.org/genproto/googleapis/identity/accesscontextmanager/type"
-  }
-}
+{"proto":"google/identity/accesscontextmanager/type/device_resources","pkg":"google.identity.accesscontextmanager.type","go":{"src":"googleapis/identity/accesscontextmanager/type/device_resources.pb.go","pkg":"type","pkg_full":"google.golang.org/genproto/googleapis/identity/accesscontextmanager/type"}}

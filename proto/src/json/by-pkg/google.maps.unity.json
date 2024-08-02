@@ -1,14 +1,1 @@
-{
-  "proto": "google/maps/unity/clientinfo",
-  "pkg": "google.maps.unity",
-  "msgs": [
-    {
-      "type": "ClientInfo"
-    }
-  ],
-  "go": {
-    "src": "googleapis/maps/unity/clientinfo.pb.go",
-    "pkg": "unitypb",
-    "pkg_full": "cloud.google.com/go/maps/unity/unitypb"
-  }
-}
+{"proto":"google/maps/unity/clientinfo","pkg":"google.maps.unity","msgs":[{"type":"ClientInfo"}],"go":{"src":"googleapis/maps/unity/clientinfo.pb.go","pkg":"unitypb","pkg_full":"cloud.google.com/go/maps/unity/unitypb"}}

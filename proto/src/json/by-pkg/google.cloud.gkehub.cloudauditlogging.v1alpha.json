@@ -1,14 +1,1 @@
-{
-  "proto": "google/cloud/gkehub/v1alpha/cloudauditlogging/cloudauditlogging",
-  "pkg": "google.cloud.gkehub.cloudauditlogging.v1alpha",
-  "msgs": [
-    {
-      "type": "FeatureSpec"
-    }
-  ],
-  "go": {
-    "src": "googleapis/cloud/gkehub/cloudauditlogging/v1alpha/cloudauditlogging.pb.go",
-    "pkg": "cloudauditloggingpb",
-    "pkg_full": "cloud.google.com/go/gkehub/cloudauditlogging/apiv1alpha/cloudauditloggingpb"
-  }
-}
+{"proto":"google/cloud/gkehub/v1alpha/cloudauditlogging/cloudauditlogging","pkg":"google.cloud.gkehub.cloudauditlogging.v1alpha","msgs":[{"type":"FeatureSpec"}],"go":{"src":"googleapis/cloud/gkehub/cloudauditlogging/v1alpha/cloudauditlogging.pb.go","pkg":"cloudauditloggingpb","pkg_full":"cloud.google.com/go/gkehub/cloudauditlogging/apiv1alpha/cloudauditloggingpb"}}

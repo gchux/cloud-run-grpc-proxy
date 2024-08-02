@@ -1,14 +1,1 @@
-{
-  "proto": "google/cloud/aiplatform/logging/prediction",
-  "pkg": "google.cloud.aiplatform.logging",
-  "msgs": [
-    {
-      "type": "OnlinePredictionLogEntry"
-    }
-  ],
-  "go": {
-    "src": "googleapis/cloud/aiplatform/logging/prediction.pb.go",
-    "pkg": "loggingpb",
-    "pkg_full": "cloud.google.com/go/aiplatform/logging/loggingpb"
-  }
-}
+{"proto":"google/cloud/aiplatform/logging/prediction","pkg":"google.cloud.aiplatform.logging","msgs":[{"type":"OnlinePredictionLogEntry"}],"go":{"src":"googleapis/cloud/aiplatform/logging/prediction.pb.go","pkg":"loggingpb","pkg_full":"cloud.google.com/go/aiplatform/logging/loggingpb"}}

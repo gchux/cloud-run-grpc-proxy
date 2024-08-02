@@ -1,17 +1,1 @@
-{
-  "proto": "google/cloud/recommender/logging/v1beta1/action_log",
-  "pkg": "google.cloud.recommender.logging.v1beta1",
-  "msgs": [
-    {
-      "type": "ActionLog"
-    },
-    {
-      "type": "InsightActionLog"
-    }
-  ],
-  "go": {
-    "src": "googleapis/cloud/recommender/logging/v1beta1/action_log.pb.go",
-    "pkg": "loggingpb",
-    "pkg_full": "cloud.google.com/go/recommender/logging/apiv1beta1/loggingpb"
-  }
-}
+{"proto":"google/cloud/recommender/logging/v1beta1/action_log","pkg":"google.cloud.recommender.logging.v1beta1","msgs":[{"type":"ActionLog"},{"type":"InsightActionLog"}],"go":{"src":"googleapis/cloud/recommender/logging/v1beta1/action_log.pb.go","pkg":"loggingpb","pkg_full":"cloud.google.com/go/recommender/logging/apiv1beta1/loggingpb"}}

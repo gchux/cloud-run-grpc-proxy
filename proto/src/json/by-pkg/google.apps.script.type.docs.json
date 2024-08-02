@@ -1,17 +1,1 @@
-{
-  "proto": "google/apps/script/type/docs/docs_addon_manifest",
-  "pkg": "google.apps.script.type.docs",
-  "msgs": [
-    {
-      "type": "DocsAddOnManifest"
-    },
-    {
-      "type": "DocsExtensionPoint"
-    }
-  ],
-  "go": {
-    "src": "googleapis/apps/script/type/docs/docs_addon_manifest.pb.go",
-    "pkg": "docs",
-    "pkg_full": "google.golang.org/genproto/googleapis/apps/script/type/docs"
-  }
-}
+{"proto":"google/apps/script/type/docs/docs_addon_manifest","pkg":"google.apps.script.type.docs","msgs":[{"type":"DocsAddOnManifest"},{"type":"DocsExtensionPoint"}],"go":{"src":"googleapis/apps/script/type/docs/docs_addon_manifest.pb.go","pkg":"docs","pkg_full":"google.golang.org/genproto/googleapis/apps/script/type/docs"}}

@@ -1,14 +1,1 @@
-{
-  "proto": "google/cloud/notebooks/logging/v1/runtime_log",
-  "pkg": "google.cloud.notebooks.logging.v1",
-  "msgs": [
-    {
-      "type": "RuntimeEvent"
-    }
-  ],
-  "go": {
-    "src": "googleapis/cloud/notebooks/logging/v1/runtime_log.pb.go",
-    "pkg": "loggingpb",
-    "pkg_full": "cloud.google.com/go/notebooks/logging/apiv1/loggingpb"
-  }
-}
+{"proto":"google/cloud/notebooks/logging/v1/runtime_log","pkg":"google.cloud.notebooks.logging.v1","msgs":[{"type":"RuntimeEvent"}],"go":{"src":"googleapis/cloud/notebooks/logging/v1/runtime_log.pb.go","pkg":"loggingpb","pkg_full":"cloud.google.com/go/notebooks/logging/apiv1/loggingpb"}}

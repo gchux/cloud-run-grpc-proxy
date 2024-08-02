@@ -1,14 +1,1 @@
-{
-  "proto": "google/chat/logging/v1/chat_app_log_entry",
-  "pkg": "google.chat.logging.v1",
-  "msgs": [
-    {
-      "type": "ChatAppLogEntry"
-    }
-  ],
-  "go": {
-    "src": "googleapis/chat/logging/v1/chat_app_log_entry.pb.go",
-    "pkg": "loggingpb",
-    "pkg_full": "cloud.google.com/go/chat/logging/apiv1/loggingpb"
-  }
-}
+{"proto":"google/chat/logging/v1/chat_app_log_entry","pkg":"google.chat.logging.v1","msgs":[{"type":"ChatAppLogEntry"}],"go":{"src":"googleapis/chat/logging/v1/chat_app_log_entry.pb.go","pkg":"loggingpb","pkg_full":"cloud.google.com/go/chat/logging/apiv1/loggingpb"}}

@@ -1,17 +1,1 @@
-{
-  "proto": "google/cloud/identitytoolkit/logging/request_log",
-  "pkg": "google.cloud.identitytoolkit.logging",
-  "msgs": [
-    {
-      "type": "RequestLog"
-    },
-    {
-      "type": "RequestMetadata"
-    }
-  ],
-  "go": {
-    "src": "googleapis/cloud/identitytoolkit/logging/request_log.pb.go",
-    "pkg": "loggingpb",
-    "pkg_full": "cloud.google.com/go/identitytoolkit/logging/loggingpb"
-  }
-}
+{"proto":"google/cloud/identitytoolkit/logging/request_log","pkg":"google.cloud.identitytoolkit.logging","msgs":[{"type":"RequestLog"},{"type":"RequestMetadata"}],"go":{"src":"googleapis/cloud/identitytoolkit/logging/request_log.pb.go","pkg":"loggingpb","pkg_full":"cloud.google.com/go/identitytoolkit/logging/loggingpb"}}

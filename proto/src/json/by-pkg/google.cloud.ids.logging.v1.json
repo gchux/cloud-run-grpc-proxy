@@ -1,17 +1,1 @@
-{
-  "proto": "google/cloud/ids/logging/v1/logging",
-  "pkg": "google.cloud.ids.logging.v1",
-  "msgs": [
-    {
-      "type": "ThreatLog"
-    },
-    {
-      "type": "TrafficLog"
-    }
-  ],
-  "go": {
-    "src": "googleapis/cloud/ids/logging/v1/logging.pb.go",
-    "pkg": "loggingpb",
-    "pkg_full": "cloud.google.com/go/ids/logging/apiv1/loggingpb"
-  }
-}
+{"proto":"google/cloud/ids/logging/v1/logging","pkg":"google.cloud.ids.logging.v1","msgs":[{"type":"ThreatLog"},{"type":"TrafficLog"}],"go":{"src":"googleapis/cloud/ids/logging/v1/logging.pb.go","pkg":"loggingpb","pkg_full":"cloud.google.com/go/ids/logging/apiv1/loggingpb"}}

@@ -1,14 +1,1 @@
-{
-  "proto": "google/search/partnerdataingestion/logging/v1/platformlog",
-  "pkg": "google.search.partnerdataingestion.logging.v1",
-  "msgs": [
-    {
-      "type": "IngestDetailsLog"
-    }
-  ],
-  "go": {
-    "src": "googleapis/search/partnerdataingestion/logging/v1/platformlog.pb.go",
-    "pkg": "logging",
-    "pkg_full": "google.golang.org/genproto/googleapis/search/partnerdataingestion/logging/v1"
-  }
-}
+{"proto":"google/search/partnerdataingestion/logging/v1/platformlog","pkg":"google.search.partnerdataingestion.logging.v1","msgs":[{"type":"IngestDetailsLog"}],"go":{"src":"googleapis/search/partnerdataingestion/logging/v1/platformlog.pb.go","pkg":"logging","pkg_full":"google.golang.org/genproto/googleapis/search/partnerdataingestion/logging/v1"}}

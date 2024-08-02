@@ -1,17 +1,1 @@
-{
-  "proto": "google/apps/script/type/sheets/sheets_addon_manifest",
-  "pkg": "google.apps.script.type.sheets",
-  "msgs": [
-    {
-      "type": "SheetsAddOnManifest"
-    },
-    {
-      "type": "SheetsExtensionPoint"
-    }
-  ],
-  "go": {
-    "src": "googleapis/apps/script/type/sheets/sheets_addon_manifest.pb.go",
-    "pkg": "sheets",
-    "pkg_full": "google.golang.org/genproto/googleapis/apps/script/type/sheets"
-  }
-}
+{"proto":"google/apps/script/type/sheets/sheets_addon_manifest","pkg":"google.apps.script.type.sheets","msgs":[{"type":"SheetsAddOnManifest"},{"type":"SheetsExtensionPoint"}],"go":{"src":"googleapis/apps/script/type/sheets/sheets_addon_manifest.pb.go","pkg":"sheets","pkg_full":"google.golang.org/genproto/googleapis/apps/script/type/sheets"}}
