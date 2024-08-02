@@ -1,0 +1,14 @@
+{
+  "proto": "google/cloud/gsuiteaddons/logging/v1/g_suite_add_ons_log_entry",
+  "pkg": "google.cloud.gsuiteaddons.logging.v1",
+  "msgs": [
+    {
+      "type": "GSuiteAddOnsLogEntry"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/gsuiteaddons/logging/v1/g_suite_add_ons_log_entry.pb.go",
+    "pkg": "loggingpb",
+    "pkg_full": "cloud.google.com/go/gsuiteaddons/logging/apiv1/loggingpb"
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "proto": "google/cloud/bigquery/storage/v1beta1/arrow",
+  "pkg": "google.cloud.bigquery.storage.v1beta1",
+  "msgs": [
+    {
+      "type": "ArrowSchema"
+    },
+    {
+      "type": "ArrowRecordBatch"
+    }
+  ],
+  "go": {
+    "src": "bigquery/storage/apiv1beta1/storagepb/arrow.pb.go",
+    "pkg": "storagepb",
+    "pkg_full": "cloud.google.com/go/bigquery/storage/apiv1beta1/storagepb"
+  }
+}
+{
+  "proto": "google/cloud/bigquery/storage/v1beta1/table_reference",
+  "pkg": "google.cloud.bigquery.storage.v1beta1",
+  "msgs": [
+    {
+      "type": "TableReference"
+    },
+    {
+      "type": "TableModifiers"
+    }
+  ],
+  "go": {
+    "src": "bigquery/storage/apiv1beta1/storagepb/table_reference.pb.go",
+    "pkg": "storagepb",
+    "pkg_full": "cloud.google.com/go/bigquery/storage/apiv1beta1/storagepb"
+  }
+}
+{
+  "proto": "google/cloud/bigquery/storage/v1beta1/avro",
+  "pkg": "google.cloud.bigquery.storage.v1beta1",
+  "msgs": [
+    {
+      "type": "AvroSchema"
+    },
+    {
+      "type": "AvroRows"
+    }
+  ],
+  "go": {
+    "src": "bigquery/storage/apiv1beta1/storagepb/avro.pb.go",
+    "pkg": "storagepb",
+    "pkg_full": "cloud.google.com/go/bigquery/storage/apiv1beta1/storagepb"
+  }
+}
+{
+  "proto": "google/cloud/bigquery/storage/v1beta1/storage",
+  "pkg": "google.cloud.bigquery.storage.v1beta1",
+  "svcs": [
+    {
+      "svc": "BigQueryStorage",
+      "host": "bigquerystorage.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateReadSession",
+          "request": {
+            "type": "CreateReadSessionRequest"
+          },
+          "response": {
+            "type": "ReadSession"
+          }
+        },
+        {
+          "method": "ReadRows",
+          "request": {
+            "type": "ReadRowsRequest"
+          },
+          "response": {
+            "type": "ReadRowsResponse",
+            "stream": true
+          }
+        },
+        {
+          "method": "BatchCreateReadSessionStreams",
+          "request": {
+            "type": "BatchCreateReadSessionStreamsRequest"
+          },
+          "response": {
+            "type": "BatchCreateReadSessionStreamsResponse"
+          }
+        },
+        {
+          "method": "FinalizeStream",
+          "request": {
+            "type": "FinalizeStreamRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "SplitReadStream",
+          "request": {
+            "type": "SplitReadStreamRequest"
+          },
+          "response": {
+            "type": "SplitReadStreamResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Stream"
+    },
+    {
+      "type": "StreamPosition"
+    },
+    {
+      "type": "ReadSession"
+    },
+    {
+      "type": "CreateReadSessionRequest"
+    },
+    {
+      "type": "ReadRowsRequest"
+    },
+    {
+      "type": "StreamStatus"
+    },
+    {
+      "type": "Progress"
+    },
+    {
+      "type": "ThrottleStatus"
+    },
+    {
+      "type": "ReadRowsResponse"
+    },
+    {
+      "type": "BatchCreateReadSessionStreamsRequest"
+    },
+    {
+      "type": "BatchCreateReadSessionStreamsResponse"
+    },
+    {
+      "type": "FinalizeStreamRequest"
+    },
+    {
+      "type": "SplitReadStreamRequest"
+    },
+    {
+      "type": "SplitReadStreamResponse"
+    }
+  ],
+  "go": {
+    "src": "bigquery/storage/apiv1beta1/storagepb/storage.pb.go",
+    "pkg": "storagepb",
+    "pkg_full": "cloud.google.com/go/bigquery/storage/apiv1beta1/storagepb"
+  }
+}
+{
+  "proto": "google/cloud/bigquery/storage/v1beta1/read_options",
+  "pkg": "google.cloud.bigquery.storage.v1beta1",
+  "msgs": [
+    {
+      "type": "TableReadOptions"
+    }
+  ],
+  "go": {
+    "src": "bigquery/storage/apiv1beta1/storagepb/read_options.pb.go",
+    "pkg": "storagepb",
+    "pkg_full": "cloud.google.com/go/bigquery/storage/apiv1beta1/storagepb"
+  }
+}

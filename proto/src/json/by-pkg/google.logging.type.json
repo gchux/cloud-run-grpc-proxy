@@ -1,0 +1,23 @@
+{
+  "proto": "google/logging/type/log_severity",
+  "pkg": "google.logging.type",
+  "go": {
+    "src": "googleapis/logging/type/log_severity.pb.go",
+    "pkg": "ltype",
+    "pkg_full": "google.golang.org/genproto/googleapis/logging/type"
+  }
+}
+{
+  "proto": "google/logging/type/http_request",
+  "pkg": "google.logging.type",
+  "msgs": [
+    {
+      "type": "HttpRequest"
+    }
+  ],
+  "go": {
+    "src": "googleapis/logging/type/http_request.pb.go",
+    "pkg": "ltype",
+    "pkg_full": "google.golang.org/genproto/googleapis/logging/type"
+  }
+}

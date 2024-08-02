@@ -1,0 +1,96 @@
+{
+  "proto": "google/shopping/merchant/reports/v1beta/reports",
+  "pkg": "google.shopping.merchant.reports.v1beta",
+  "svcs": [
+    {
+      "svc": "ReportService",
+      "host": "merchantapi.googleapis.com",
+      "rpcs": [
+        {
+          "method": "Search",
+          "request": {
+            "type": "SearchRequest"
+          },
+          "response": {
+            "type": "SearchResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "SearchRequest"
+    },
+    {
+      "type": "SearchResponse"
+    },
+    {
+      "type": "ReportRow"
+    },
+    {
+      "type": "ProductPerformanceView"
+    },
+    {
+      "type": "ProductView",
+      "msgs": [
+        {
+          "type": "ItemIssue"
+        },
+        {
+          "type": "ItemIssueType"
+        },
+        {
+          "type": "ItemIssueSeverity"
+        },
+        {
+          "type": "IssueSeverityPerReportingContext"
+        }
+      ]
+    },
+    {
+      "type": "PriceCompetitivenessProductView"
+    },
+    {
+      "type": "PriceInsightsProductView"
+    },
+    {
+      "type": "BestSellersProductClusterView"
+    },
+    {
+      "type": "BestSellersBrandView"
+    },
+    {
+      "type": "NonProductPerformanceView"
+    },
+    {
+      "type": "CompetitiveVisibilityCompetitorView"
+    },
+    {
+      "type": "CompetitiveVisibilityTopMerchantView"
+    },
+    {
+      "type": "CompetitiveVisibilityBenchmarkView"
+    },
+    {
+      "type": "MarketingMethod"
+    },
+    {
+      "type": "ReportGranularity"
+    },
+    {
+      "type": "RelativeDemand"
+    },
+    {
+      "type": "RelativeDemandChangeType"
+    },
+    {
+      "type": "TrafficSource"
+    }
+  ],
+  "go": {
+    "src": "shopping/merchant/reports/apiv1beta/reportspb/reports.pb.go",
+    "pkg": "reportspb",
+    "pkg_full": "cloud.google.com/go/shopping/merchant/reports/apiv1beta/reportspb"
+  }
+}

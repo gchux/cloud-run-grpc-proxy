@@ -86,6 +86,8 @@ func (s *handler) handler(srv interface{}, serverStream grpc.ServerStream) error
 		return status.Errorf(codes.Internal, "lowLevelServerStream not exists in context")
 	}
 
+	// [ToDo]: get default host from registry: `service2Host`
+
 	serial := counter.Add(1)
 
 	// `ProxyFlow` is the main mechanism for state propagation

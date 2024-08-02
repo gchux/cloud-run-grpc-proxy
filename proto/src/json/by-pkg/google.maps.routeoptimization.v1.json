@@ -1,0 +1,195 @@
+{
+  "proto": "google/maps/routeoptimization/v1/route_optimization_service",
+  "pkg": "google.maps.routeoptimization.v1",
+  "svcs": [
+    {
+      "svc": "RouteOptimization",
+      "host": "routeoptimization.googleapis.com",
+      "rpcs": [
+        {
+          "method": "OptimizeTours",
+          "request": {
+            "type": "OptimizeToursRequest"
+          },
+          "response": {
+            "type": "OptimizeToursResponse"
+          }
+        },
+        {
+          "method": "BatchOptimizeTours",
+          "request": {
+            "type": "BatchOptimizeToursRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "BatchOptimizeToursRequest",
+      "msgs": [
+        {
+          "type": "AsyncModelConfig"
+        }
+      ]
+    },
+    {
+      "type": "BatchOptimizeToursResponse"
+    },
+    {
+      "type": "BatchOptimizeToursMetadata"
+    },
+    {
+      "type": "OptimizeToursRequest"
+    },
+    {
+      "type": "OptimizeToursResponse",
+      "msgs": [
+        {
+          "type": "Metrics"
+        }
+      ]
+    },
+    {
+      "type": "ShipmentModel",
+      "msgs": [
+        {
+          "type": "DurationDistanceMatrix"
+        },
+        {
+          "type": "Row"
+        },
+        {
+          "type": "PrecedenceRule"
+        }
+      ]
+    },
+    {
+      "type": "Shipment",
+      "msgs": [
+        {
+          "type": "VisitRequest"
+        },
+        {
+          "type": "Load"
+        }
+      ]
+    },
+    {
+      "type": "ShipmentTypeIncompatibility"
+    },
+    {
+      "type": "ShipmentTypeRequirement"
+    },
+    {
+      "type": "Vehicle",
+      "msgs": [
+        {
+          "type": "LoadLimit"
+        },
+        {
+          "type": "Interval"
+        },
+        {
+          "type": "DurationLimit"
+        }
+      ]
+    },
+    {
+      "type": "TimeWindow"
+    },
+    {
+      "type": "DistanceLimit"
+    },
+    {
+      "type": "TransitionAttributes"
+    },
+    {
+      "type": "Waypoint"
+    },
+    {
+      "type": "Location"
+    },
+    {
+      "type": "BreakRule",
+      "msgs": [
+        {
+          "type": "BreakRequest"
+        },
+        {
+          "type": "FrequencyConstraint"
+        }
+      ]
+    },
+    {
+      "type": "ShipmentRoute",
+      "msgs": [
+        {
+          "type": "Visit"
+        },
+        {
+          "type": "Transition"
+        },
+        {
+          "type": "VehicleLoad"
+        },
+        {
+          "type": "EncodedPolyline"
+        },
+        {
+          "type": "Break"
+        }
+      ]
+    },
+    {
+      "type": "SkippedShipment",
+      "msgs": [
+        {
+          "type": "Reason"
+        }
+      ]
+    },
+    {
+      "type": "AggregatedMetrics"
+    },
+    {
+      "type": "InjectedSolutionConstraint",
+      "msgs": [
+        {
+          "type": "ConstraintRelaxation"
+        },
+        {
+          "type": "Relaxation"
+        }
+      ]
+    },
+    {
+      "type": "OptimizeToursValidationError",
+      "msgs": [
+        {
+          "type": "FieldReference"
+        }
+      ]
+    },
+    {
+      "type": "InputConfig"
+    },
+    {
+      "type": "OutputConfig"
+    },
+    {
+      "type": "GcsSource"
+    },
+    {
+      "type": "GcsDestination"
+    }
+  ],
+  "go": {
+    "src": "maps/routeoptimization/apiv1/routeoptimizationpb/route_optimization_service.pb.go",
+    "pkg": "routeoptimizationpb",
+    "pkg_full": "cloud.google.com/go/maps/routeoptimization/apiv1/routeoptimizationpb"
+  }
+}

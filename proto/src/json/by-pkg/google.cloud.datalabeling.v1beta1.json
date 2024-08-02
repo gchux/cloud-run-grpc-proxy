@@ -1,0 +1,837 @@
+{
+  "proto": "google/cloud/datalabeling/v1beta1/evaluation",
+  "pkg": "google.cloud.datalabeling.v1beta1",
+  "msgs": [
+    {
+      "type": "Evaluation"
+    },
+    {
+      "type": "EvaluationConfig"
+    },
+    {
+      "type": "BoundingBoxEvaluationOptions"
+    },
+    {
+      "type": "EvaluationMetrics"
+    },
+    {
+      "type": "ClassificationMetrics"
+    },
+    {
+      "type": "ObjectDetectionMetrics"
+    },
+    {
+      "type": "PrCurve",
+      "msgs": [
+        {
+          "type": "ConfidenceMetricsEntry"
+        }
+      ]
+    },
+    {
+      "type": "ConfusionMatrix",
+      "msgs": [
+        {
+          "type": "ConfusionMatrixEntry"
+        },
+        {
+          "type": "Row"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "datalabeling/apiv1beta1/datalabelingpb/evaluation.pb.go",
+    "pkg": "datalabelingpb",
+    "pkg_full": "cloud.google.com/go/datalabeling/apiv1beta1/datalabelingpb"
+  }
+}
+{
+  "proto": "google/cloud/datalabeling/v1beta1/evaluation_job",
+  "pkg": "google.cloud.datalabeling.v1beta1",
+  "msgs": [
+    {
+      "type": "EvaluationJob"
+    },
+    {
+      "type": "EvaluationJobConfig"
+    },
+    {
+      "type": "EvaluationJobAlertConfig"
+    },
+    {
+      "type": "Attempt"
+    }
+  ],
+  "go": {
+    "src": "datalabeling/apiv1beta1/datalabelingpb/evaluation_job.pb.go",
+    "pkg": "datalabelingpb",
+    "pkg_full": "cloud.google.com/go/datalabeling/apiv1beta1/datalabelingpb"
+  }
+}
+{
+  "proto": "google/cloud/datalabeling/v1beta1/data_payloads",
+  "pkg": "google.cloud.datalabeling.v1beta1",
+  "msgs": [
+    {
+      "type": "ImagePayload"
+    },
+    {
+      "type": "TextPayload"
+    },
+    {
+      "type": "VideoThumbnail"
+    },
+    {
+      "type": "VideoPayload"
+    }
+  ],
+  "go": {
+    "src": "datalabeling/apiv1beta1/datalabelingpb/data_payloads.pb.go",
+    "pkg": "datalabelingpb",
+    "pkg_full": "cloud.google.com/go/datalabeling/apiv1beta1/datalabelingpb"
+  }
+}
+{
+  "proto": "google/cloud/datalabeling/v1beta1/data_labeling_service",
+  "pkg": "google.cloud.datalabeling.v1beta1",
+  "svcs": [
+    {
+      "svc": "DataLabelingService",
+      "host": "datalabeling.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateDataset",
+          "request": {
+            "type": "CreateDatasetRequest"
+          },
+          "response": {
+            "type": "Dataset"
+          }
+        },
+        {
+          "method": "GetDataset",
+          "request": {
+            "type": "GetDatasetRequest"
+          },
+          "response": {
+            "type": "Dataset"
+          }
+        },
+        {
+          "method": "ListDatasets",
+          "request": {
+            "type": "ListDatasetsRequest"
+          },
+          "response": {
+            "type": "ListDatasetsResponse"
+          }
+        },
+        {
+          "method": "DeleteDataset",
+          "request": {
+            "type": "DeleteDatasetRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ImportData",
+          "request": {
+            "type": "ImportDataRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ExportData",
+          "request": {
+            "type": "ExportDataRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetDataItem",
+          "request": {
+            "type": "GetDataItemRequest"
+          },
+          "response": {
+            "type": "DataItem"
+          }
+        },
+        {
+          "method": "ListDataItems",
+          "request": {
+            "type": "ListDataItemsRequest"
+          },
+          "response": {
+            "type": "ListDataItemsResponse"
+          }
+        },
+        {
+          "method": "GetAnnotatedDataset",
+          "request": {
+            "type": "GetAnnotatedDatasetRequest"
+          },
+          "response": {
+            "type": "AnnotatedDataset"
+          }
+        },
+        {
+          "method": "ListAnnotatedDatasets",
+          "request": {
+            "type": "ListAnnotatedDatasetsRequest"
+          },
+          "response": {
+            "type": "ListAnnotatedDatasetsResponse"
+          }
+        },
+        {
+          "method": "DeleteAnnotatedDataset",
+          "request": {
+            "type": "DeleteAnnotatedDatasetRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "LabelImage",
+          "request": {
+            "type": "LabelImageRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "LabelVideo",
+          "request": {
+            "type": "LabelVideoRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "LabelText",
+          "request": {
+            "type": "LabelTextRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetExample",
+          "request": {
+            "type": "GetExampleRequest"
+          },
+          "response": {
+            "type": "Example"
+          }
+        },
+        {
+          "method": "ListExamples",
+          "request": {
+            "type": "ListExamplesRequest"
+          },
+          "response": {
+            "type": "ListExamplesResponse"
+          }
+        },
+        {
+          "method": "CreateAnnotationSpecSet",
+          "request": {
+            "type": "CreateAnnotationSpecSetRequest"
+          },
+          "response": {
+            "type": "AnnotationSpecSet"
+          }
+        },
+        {
+          "method": "GetAnnotationSpecSet",
+          "request": {
+            "type": "GetAnnotationSpecSetRequest"
+          },
+          "response": {
+            "type": "AnnotationSpecSet"
+          }
+        },
+        {
+          "method": "ListAnnotationSpecSets",
+          "request": {
+            "type": "ListAnnotationSpecSetsRequest"
+          },
+          "response": {
+            "type": "ListAnnotationSpecSetsResponse"
+          }
+        },
+        {
+          "method": "DeleteAnnotationSpecSet",
+          "request": {
+            "type": "DeleteAnnotationSpecSetRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "CreateInstruction",
+          "request": {
+            "type": "CreateInstructionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetInstruction",
+          "request": {
+            "type": "GetInstructionRequest"
+          },
+          "response": {
+            "type": "Instruction"
+          }
+        },
+        {
+          "method": "ListInstructions",
+          "request": {
+            "type": "ListInstructionsRequest"
+          },
+          "response": {
+            "type": "ListInstructionsResponse"
+          }
+        },
+        {
+          "method": "DeleteInstruction",
+          "request": {
+            "type": "DeleteInstructionRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "GetEvaluation",
+          "request": {
+            "type": "GetEvaluationRequest"
+          },
+          "response": {
+            "type": "Evaluation"
+          }
+        },
+        {
+          "method": "SearchEvaluations",
+          "request": {
+            "type": "SearchEvaluationsRequest"
+          },
+          "response": {
+            "type": "SearchEvaluationsResponse"
+          }
+        },
+        {
+          "method": "SearchExampleComparisons",
+          "request": {
+            "type": "SearchExampleComparisonsRequest"
+          },
+          "response": {
+            "type": "SearchExampleComparisonsResponse"
+          }
+        },
+        {
+          "method": "CreateEvaluationJob",
+          "request": {
+            "type": "CreateEvaluationJobRequest"
+          },
+          "response": {
+            "type": "EvaluationJob"
+          }
+        },
+        {
+          "method": "UpdateEvaluationJob",
+          "request": {
+            "type": "UpdateEvaluationJobRequest"
+          },
+          "response": {
+            "type": "EvaluationJob"
+          }
+        },
+        {
+          "method": "GetEvaluationJob",
+          "request": {
+            "type": "GetEvaluationJobRequest"
+          },
+          "response": {
+            "type": "EvaluationJob"
+          }
+        },
+        {
+          "method": "PauseEvaluationJob",
+          "request": {
+            "type": "PauseEvaluationJobRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ResumeEvaluationJob",
+          "request": {
+            "type": "ResumeEvaluationJobRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "DeleteEvaluationJob",
+          "request": {
+            "type": "DeleteEvaluationJobRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListEvaluationJobs",
+          "request": {
+            "type": "ListEvaluationJobsRequest"
+          },
+          "response": {
+            "type": "ListEvaluationJobsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateDatasetRequest"
+    },
+    {
+      "type": "GetDatasetRequest"
+    },
+    {
+      "type": "ListDatasetsRequest"
+    },
+    {
+      "type": "ListDatasetsResponse"
+    },
+    {
+      "type": "DeleteDatasetRequest"
+    },
+    {
+      "type": "ImportDataRequest"
+    },
+    {
+      "type": "ExportDataRequest"
+    },
+    {
+      "type": "GetDataItemRequest"
+    },
+    {
+      "type": "ListDataItemsRequest"
+    },
+    {
+      "type": "ListDataItemsResponse"
+    },
+    {
+      "type": "GetAnnotatedDatasetRequest"
+    },
+    {
+      "type": "ListAnnotatedDatasetsRequest"
+    },
+    {
+      "type": "ListAnnotatedDatasetsResponse"
+    },
+    {
+      "type": "DeleteAnnotatedDatasetRequest"
+    },
+    {
+      "type": "LabelImageRequest"
+    },
+    {
+      "type": "LabelVideoRequest"
+    },
+    {
+      "type": "LabelTextRequest"
+    },
+    {
+      "type": "GetExampleRequest"
+    },
+    {
+      "type": "ListExamplesRequest"
+    },
+    {
+      "type": "ListExamplesResponse"
+    },
+    {
+      "type": "CreateAnnotationSpecSetRequest"
+    },
+    {
+      "type": "GetAnnotationSpecSetRequest"
+    },
+    {
+      "type": "ListAnnotationSpecSetsRequest"
+    },
+    {
+      "type": "ListAnnotationSpecSetsResponse"
+    },
+    {
+      "type": "DeleteAnnotationSpecSetRequest"
+    },
+    {
+      "type": "CreateInstructionRequest"
+    },
+    {
+      "type": "GetInstructionRequest"
+    },
+    {
+      "type": "DeleteInstructionRequest"
+    },
+    {
+      "type": "ListInstructionsRequest"
+    },
+    {
+      "type": "ListInstructionsResponse"
+    },
+    {
+      "type": "GetEvaluationRequest"
+    },
+    {
+      "type": "SearchEvaluationsRequest"
+    },
+    {
+      "type": "SearchEvaluationsResponse"
+    },
+    {
+      "type": "SearchExampleComparisonsRequest"
+    },
+    {
+      "type": "SearchExampleComparisonsResponse",
+      "msgs": [
+        {
+          "type": "ExampleComparison"
+        }
+      ]
+    },
+    {
+      "type": "CreateEvaluationJobRequest"
+    },
+    {
+      "type": "UpdateEvaluationJobRequest"
+    },
+    {
+      "type": "GetEvaluationJobRequest"
+    },
+    {
+      "type": "PauseEvaluationJobRequest"
+    },
+    {
+      "type": "ResumeEvaluationJobRequest"
+    },
+    {
+      "type": "DeleteEvaluationJobRequest"
+    },
+    {
+      "type": "ListEvaluationJobsRequest"
+    },
+    {
+      "type": "ListEvaluationJobsResponse"
+    }
+  ],
+  "go": {
+    "src": "datalabeling/apiv1beta1/datalabelingpb/data_labeling_service.pb.go",
+    "pkg": "datalabelingpb",
+    "pkg_full": "cloud.google.com/go/datalabeling/apiv1beta1/datalabelingpb"
+  }
+}
+{
+  "proto": "google/cloud/datalabeling/v1beta1/dataset",
+  "pkg": "google.cloud.datalabeling.v1beta1",
+  "msgs": [
+    {
+      "type": "Dataset"
+    },
+    {
+      "type": "InputConfig"
+    },
+    {
+      "type": "TextMetadata"
+    },
+    {
+      "type": "ClassificationMetadata"
+    },
+    {
+      "type": "GcsSource"
+    },
+    {
+      "type": "BigQuerySource"
+    },
+    {
+      "type": "OutputConfig"
+    },
+    {
+      "type": "GcsDestination"
+    },
+    {
+      "type": "GcsFolderDestination"
+    },
+    {
+      "type": "DataItem"
+    },
+    {
+      "type": "AnnotatedDataset"
+    },
+    {
+      "type": "LabelStats"
+    },
+    {
+      "type": "AnnotatedDatasetMetadata"
+    },
+    {
+      "type": "Example"
+    }
+  ],
+  "go": {
+    "src": "datalabeling/apiv1beta1/datalabelingpb/dataset.pb.go",
+    "pkg": "datalabelingpb",
+    "pkg_full": "cloud.google.com/go/datalabeling/apiv1beta1/datalabelingpb"
+  }
+}
+{
+  "proto": "google/cloud/datalabeling/v1beta1/annotation",
+  "pkg": "google.cloud.datalabeling.v1beta1",
+  "msgs": [
+    {
+      "type": "Annotation"
+    },
+    {
+      "type": "AnnotationValue"
+    },
+    {
+      "type": "ImageClassificationAnnotation"
+    },
+    {
+      "type": "Vertex"
+    },
+    {
+      "type": "NormalizedVertex"
+    },
+    {
+      "type": "BoundingPoly"
+    },
+    {
+      "type": "NormalizedBoundingPoly"
+    },
+    {
+      "type": "ImageBoundingPolyAnnotation"
+    },
+    {
+      "type": "Polyline"
+    },
+    {
+      "type": "NormalizedPolyline"
+    },
+    {
+      "type": "ImagePolylineAnnotation"
+    },
+    {
+      "type": "ImageSegmentationAnnotation"
+    },
+    {
+      "type": "TextClassificationAnnotation"
+    },
+    {
+      "type": "TextEntityExtractionAnnotation"
+    },
+    {
+      "type": "SequentialSegment"
+    },
+    {
+      "type": "TimeSegment"
+    },
+    {
+      "type": "VideoClassificationAnnotation"
+    },
+    {
+      "type": "ObjectTrackingFrame"
+    },
+    {
+      "type": "VideoObjectTrackingAnnotation"
+    },
+    {
+      "type": "VideoEventAnnotation"
+    },
+    {
+      "type": "AnnotationMetadata"
+    },
+    {
+      "type": "OperatorMetadata"
+    }
+  ],
+  "go": {
+    "src": "datalabeling/apiv1beta1/datalabelingpb/annotation.pb.go",
+    "pkg": "datalabelingpb",
+    "pkg_full": "cloud.google.com/go/datalabeling/apiv1beta1/datalabelingpb"
+  }
+}
+{
+  "proto": "google/cloud/datalabeling/v1beta1/human_annotation_config",
+  "pkg": "google.cloud.datalabeling.v1beta1",
+  "msgs": [
+    {
+      "type": "HumanAnnotationConfig"
+    },
+    {
+      "type": "ImageClassificationConfig"
+    },
+    {
+      "type": "BoundingPolyConfig"
+    },
+    {
+      "type": "PolylineConfig"
+    },
+    {
+      "type": "SegmentationConfig"
+    },
+    {
+      "type": "VideoClassificationConfig",
+      "msgs": [
+        {
+          "type": "AnnotationSpecSetConfig"
+        }
+      ]
+    },
+    {
+      "type": "ObjectDetectionConfig"
+    },
+    {
+      "type": "ObjectTrackingConfig"
+    },
+    {
+      "type": "EventConfig"
+    },
+    {
+      "type": "TextClassificationConfig"
+    },
+    {
+      "type": "SentimentConfig"
+    },
+    {
+      "type": "TextEntityExtractionConfig"
+    }
+  ],
+  "go": {
+    "src": "datalabeling/apiv1beta1/datalabelingpb/human_annotation_config.pb.go",
+    "pkg": "datalabelingpb",
+    "pkg_full": "cloud.google.com/go/datalabeling/apiv1beta1/datalabelingpb"
+  }
+}
+{
+  "proto": "google/cloud/datalabeling/v1beta1/annotation_spec_set",
+  "pkg": "google.cloud.datalabeling.v1beta1",
+  "msgs": [
+    {
+      "type": "AnnotationSpecSet"
+    },
+    {
+      "type": "AnnotationSpec"
+    }
+  ],
+  "go": {
+    "src": "datalabeling/apiv1beta1/datalabelingpb/annotation_spec_set.pb.go",
+    "pkg": "datalabelingpb",
+    "pkg_full": "cloud.google.com/go/datalabeling/apiv1beta1/datalabelingpb"
+  }
+}
+{
+  "proto": "google/cloud/datalabeling/v1beta1/operations",
+  "pkg": "google.cloud.datalabeling.v1beta1",
+  "msgs": [
+    {
+      "type": "ImportDataOperationResponse"
+    },
+    {
+      "type": "ExportDataOperationResponse"
+    },
+    {
+      "type": "ImportDataOperationMetadata"
+    },
+    {
+      "type": "ExportDataOperationMetadata"
+    },
+    {
+      "type": "LabelOperationMetadata"
+    },
+    {
+      "type": "LabelImageClassificationOperationMetadata"
+    },
+    {
+      "type": "LabelImageBoundingBoxOperationMetadata"
+    },
+    {
+      "type": "LabelImageOrientedBoundingBoxOperationMetadata"
+    },
+    {
+      "type": "LabelImageBoundingPolyOperationMetadata"
+    },
+    {
+      "type": "LabelImagePolylineOperationMetadata"
+    },
+    {
+      "type": "LabelImageSegmentationOperationMetadata"
+    },
+    {
+      "type": "LabelVideoClassificationOperationMetadata"
+    },
+    {
+      "type": "LabelVideoObjectDetectionOperationMetadata"
+    },
+    {
+      "type": "LabelVideoObjectTrackingOperationMetadata"
+    },
+    {
+      "type": "LabelVideoEventOperationMetadata"
+    },
+    {
+      "type": "LabelTextClassificationOperationMetadata"
+    },
+    {
+      "type": "LabelTextEntityExtractionOperationMetadata"
+    },
+    {
+      "type": "CreateInstructionMetadata"
+    }
+  ],
+  "go": {
+    "src": "datalabeling/apiv1beta1/datalabelingpb/operations.pb.go",
+    "pkg": "datalabelingpb",
+    "pkg_full": "cloud.google.com/go/datalabeling/apiv1beta1/datalabelingpb"
+  }
+}
+{
+  "proto": "google/cloud/datalabeling/v1beta1/instruction",
+  "pkg": "google.cloud.datalabeling.v1beta1",
+  "msgs": [
+    {
+      "type": "Instruction"
+    },
+    {
+      "type": "CsvInstruction"
+    },
+    {
+      "type": "PdfInstruction"
+    }
+  ],
+  "go": {
+    "src": "datalabeling/apiv1beta1/datalabelingpb/instruction.pb.go",
+    "pkg": "datalabelingpb",
+    "pkg_full": "cloud.google.com/go/datalabeling/apiv1beta1/datalabelingpb"
+  }
+}

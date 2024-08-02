@@ -1,0 +1,14 @@
+{
+  "proto": "google/cloud/common/operation_metadata",
+  "pkg": "google.cloud.common",
+  "msgs": [
+    {
+      "type": "OperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/common/operation_metadata.pb.go",
+    "pkg": "common",
+    "pkg_full": "google.golang.org/genproto/googleapis/cloud/common"
+  }
+}

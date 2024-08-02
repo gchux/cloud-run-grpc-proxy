@@ -1,0 +1,91 @@
+{
+  "proto": "google/shopping/merchant/notifications/v1beta/notificationsapi",
+  "pkg": "google.shopping.merchant.notifications.v1beta",
+  "svcs": [
+    {
+      "svc": "NotificationsApiService",
+      "host": "merchantapi.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetNotificationSubscription",
+          "request": {
+            "type": "GetNotificationSubscriptionRequest"
+          },
+          "response": {
+            "type": "NotificationSubscription"
+          }
+        },
+        {
+          "method": "CreateNotificationSubscription",
+          "request": {
+            "type": "CreateNotificationSubscriptionRequest"
+          },
+          "response": {
+            "type": "NotificationSubscription"
+          }
+        },
+        {
+          "method": "UpdateNotificationSubscription",
+          "request": {
+            "type": "UpdateNotificationSubscriptionRequest"
+          },
+          "response": {
+            "type": "NotificationSubscription"
+          }
+        },
+        {
+          "method": "DeleteNotificationSubscription",
+          "request": {
+            "type": "DeleteNotificationSubscriptionRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListNotificationSubscriptions",
+          "request": {
+            "type": "ListNotificationSubscriptionsRequest"
+          },
+          "response": {
+            "type": "ListNotificationSubscriptionsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GetNotificationSubscriptionRequest"
+    },
+    {
+      "type": "CreateNotificationSubscriptionRequest"
+    },
+    {
+      "type": "UpdateNotificationSubscriptionRequest"
+    },
+    {
+      "type": "DeleteNotificationSubscriptionRequest"
+    },
+    {
+      "type": "ListNotificationSubscriptionsRequest"
+    },
+    {
+      "type": "ListNotificationSubscriptionsResponse"
+    },
+    {
+      "type": "NotificationSubscription"
+    },
+    {
+      "type": "ProductChange"
+    },
+    {
+      "type": "ProductStatusChangeMessage"
+    }
+  ],
+  "go": {
+    "src": "shopping/merchant/notifications/apiv1beta/notificationspb/notificationsapi.pb.go",
+    "pkg": "notificationspb",
+    "pkg_full": "cloud.google.com/go/shopping/merchant/notifications/apiv1beta/notificationspb"
+  }
+}

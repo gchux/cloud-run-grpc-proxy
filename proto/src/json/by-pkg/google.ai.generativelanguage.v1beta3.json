@@ -1,0 +1,449 @@
+{
+  "proto": "google/ai/generativelanguage/v1beta3/discuss_service",
+  "pkg": "google.ai.generativelanguage.v1beta3",
+  "svcs": [
+    {
+      "svc": "DiscussService",
+      "host": "generativelanguage.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GenerateMessage",
+          "request": {
+            "type": "GenerateMessageRequest"
+          },
+          "response": {
+            "type": "GenerateMessageResponse"
+          }
+        },
+        {
+          "method": "CountMessageTokens",
+          "request": {
+            "type": "CountMessageTokensRequest"
+          },
+          "response": {
+            "type": "CountMessageTokensResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GenerateMessageRequest"
+    },
+    {
+      "type": "GenerateMessageResponse"
+    },
+    {
+      "type": "Message"
+    },
+    {
+      "type": "MessagePrompt"
+    },
+    {
+      "type": "Example"
+    },
+    {
+      "type": "CountMessageTokensRequest"
+    },
+    {
+      "type": "CountMessageTokensResponse"
+    }
+  ],
+  "go": {
+    "pkg": "generativelanguagepb",
+    "pkg_full": "cloud.google.com/go/ai/generativelanguage/apiv1beta3/generativelanguagepb"
+  }
+}
+{
+  "proto": "google/ai/generativelanguage/v1beta3/model",
+  "pkg": "google.ai.generativelanguage.v1beta3",
+  "msgs": [
+    {
+      "type": "Model"
+    }
+  ],
+  "go": {
+    "pkg": "generativelanguagepb",
+    "pkg_full": "cloud.google.com/go/ai/generativelanguage/apiv1beta3/generativelanguagepb"
+  }
+}
+{
+  "proto": "google/ai/generativelanguage/v1beta3/tuned_model",
+  "pkg": "google.ai.generativelanguage.v1beta3",
+  "msgs": [
+    {
+      "type": "TunedModel"
+    },
+    {
+      "type": "TunedModelSource"
+    },
+    {
+      "type": "TuningTask"
+    },
+    {
+      "type": "Hyperparameters"
+    },
+    {
+      "type": "Dataset"
+    },
+    {
+      "type": "TuningExamples"
+    },
+    {
+      "type": "TuningExample"
+    },
+    {
+      "type": "TuningSnapshot"
+    }
+  ],
+  "go": {
+    "pkg": "generativelanguagepb",
+    "pkg_full": "cloud.google.com/go/ai/generativelanguage/apiv1beta3/generativelanguagepb"
+  }
+}
+{
+  "proto": "google/ai/generativelanguage/v1beta3/model_service",
+  "pkg": "google.ai.generativelanguage.v1beta3",
+  "svcs": [
+    {
+      "svc": "ModelService",
+      "host": "generativelanguage.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetModel",
+          "request": {
+            "type": "GetModelRequest"
+          },
+          "response": {
+            "type": "Model"
+          }
+        },
+        {
+          "method": "ListModels",
+          "request": {
+            "type": "ListModelsRequest"
+          },
+          "response": {
+            "type": "ListModelsResponse"
+          }
+        },
+        {
+          "method": "GetTunedModel",
+          "request": {
+            "type": "GetTunedModelRequest"
+          },
+          "response": {
+            "type": "TunedModel"
+          }
+        },
+        {
+          "method": "ListTunedModels",
+          "request": {
+            "type": "ListTunedModelsRequest"
+          },
+          "response": {
+            "type": "ListTunedModelsResponse"
+          }
+        },
+        {
+          "method": "CreateTunedModel",
+          "request": {
+            "type": "CreateTunedModelRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateTunedModel",
+          "request": {
+            "type": "UpdateTunedModelRequest"
+          },
+          "response": {
+            "type": "TunedModel"
+          }
+        },
+        {
+          "method": "DeleteTunedModel",
+          "request": {
+            "type": "DeleteTunedModelRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GetModelRequest"
+    },
+    {
+      "type": "ListModelsRequest"
+    },
+    {
+      "type": "ListModelsResponse"
+    },
+    {
+      "type": "GetTunedModelRequest"
+    },
+    {
+      "type": "ListTunedModelsRequest"
+    },
+    {
+      "type": "ListTunedModelsResponse"
+    },
+    {
+      "type": "CreateTunedModelRequest"
+    },
+    {
+      "type": "CreateTunedModelMetadata"
+    },
+    {
+      "type": "UpdateTunedModelRequest"
+    },
+    {
+      "type": "DeleteTunedModelRequest"
+    }
+  ],
+  "go": {
+    "pkg": "generativelanguagepb",
+    "pkg_full": "cloud.google.com/go/ai/generativelanguage/apiv1beta3/generativelanguagepb"
+  }
+}
+{
+  "proto": "google/ai/generativelanguage/v1beta3/safety",
+  "pkg": "google.ai.generativelanguage.v1beta3",
+  "msgs": [
+    {
+      "type": "ContentFilter"
+    },
+    {
+      "type": "SafetyFeedback"
+    },
+    {
+      "type": "SafetyRating"
+    },
+    {
+      "type": "SafetySetting"
+    }
+  ],
+  "go": {
+    "pkg": "generativelanguagepb",
+    "pkg_full": "cloud.google.com/go/ai/generativelanguage/apiv1beta3/generativelanguagepb"
+  }
+}
+{
+  "proto": "google/ai/generativelanguage/v1beta3/permission",
+  "pkg": "google.ai.generativelanguage.v1beta3",
+  "msgs": [
+    {
+      "type": "Permission"
+    }
+  ],
+  "go": {
+    "pkg": "generativelanguagepb",
+    "pkg_full": "cloud.google.com/go/ai/generativelanguage/apiv1beta3/generativelanguagepb"
+  }
+}
+{
+  "proto": "google/ai/generativelanguage/v1beta3/text_service",
+  "pkg": "google.ai.generativelanguage.v1beta3",
+  "svcs": [
+    {
+      "svc": "TextService",
+      "host": "generativelanguage.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GenerateText",
+          "request": {
+            "type": "GenerateTextRequest"
+          },
+          "response": {
+            "type": "GenerateTextResponse"
+          }
+        },
+        {
+          "method": "EmbedText",
+          "request": {
+            "type": "EmbedTextRequest"
+          },
+          "response": {
+            "type": "EmbedTextResponse"
+          }
+        },
+        {
+          "method": "BatchEmbedText",
+          "request": {
+            "type": "BatchEmbedTextRequest"
+          },
+          "response": {
+            "type": "BatchEmbedTextResponse"
+          }
+        },
+        {
+          "method": "CountTextTokens",
+          "request": {
+            "type": "CountTextTokensRequest"
+          },
+          "response": {
+            "type": "CountTextTokensResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GenerateTextRequest"
+    },
+    {
+      "type": "GenerateTextResponse"
+    },
+    {
+      "type": "TextPrompt"
+    },
+    {
+      "type": "TextCompletion"
+    },
+    {
+      "type": "EmbedTextRequest"
+    },
+    {
+      "type": "EmbedTextResponse"
+    },
+    {
+      "type": "BatchEmbedTextRequest"
+    },
+    {
+      "type": "BatchEmbedTextResponse"
+    },
+    {
+      "type": "Embedding"
+    },
+    {
+      "type": "CountTextTokensRequest"
+    },
+    {
+      "type": "CountTextTokensResponse"
+    }
+  ],
+  "go": {
+    "pkg": "generativelanguagepb",
+    "pkg_full": "cloud.google.com/go/ai/generativelanguage/apiv1beta3/generativelanguagepb"
+  }
+}
+{
+  "proto": "google/ai/generativelanguage/v1beta3/permission_service",
+  "pkg": "google.ai.generativelanguage.v1beta3",
+  "svcs": [
+    {
+      "svc": "PermissionService",
+      "host": "generativelanguage.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreatePermission",
+          "request": {
+            "type": "CreatePermissionRequest"
+          },
+          "response": {
+            "type": "Permission"
+          }
+        },
+        {
+          "method": "GetPermission",
+          "request": {
+            "type": "GetPermissionRequest"
+          },
+          "response": {
+            "type": "Permission"
+          }
+        },
+        {
+          "method": "ListPermissions",
+          "request": {
+            "type": "ListPermissionsRequest"
+          },
+          "response": {
+            "type": "ListPermissionsResponse"
+          }
+        },
+        {
+          "method": "UpdatePermission",
+          "request": {
+            "type": "UpdatePermissionRequest"
+          },
+          "response": {
+            "type": "Permission"
+          }
+        },
+        {
+          "method": "DeletePermission",
+          "request": {
+            "type": "DeletePermissionRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "TransferOwnership",
+          "request": {
+            "type": "TransferOwnershipRequest"
+          },
+          "response": {
+            "type": "TransferOwnershipResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreatePermissionRequest"
+    },
+    {
+      "type": "GetPermissionRequest"
+    },
+    {
+      "type": "ListPermissionsRequest"
+    },
+    {
+      "type": "ListPermissionsResponse"
+    },
+    {
+      "type": "UpdatePermissionRequest"
+    },
+    {
+      "type": "DeletePermissionRequest"
+    },
+    {
+      "type": "TransferOwnershipRequest"
+    },
+    {
+      "type": "TransferOwnershipResponse"
+    }
+  ],
+  "go": {
+    "pkg": "generativelanguagepb",
+    "pkg_full": "cloud.google.com/go/ai/generativelanguage/apiv1beta3/generativelanguagepb"
+  }
+}
+{
+  "proto": "google/ai/generativelanguage/v1beta3/citation",
+  "pkg": "google.ai.generativelanguage.v1beta3",
+  "msgs": [
+    {
+      "type": "CitationMetadata"
+    },
+    {
+      "type": "CitationSource"
+    }
+  ],
+  "go": {
+    "pkg": "generativelanguagepb",
+    "pkg_full": "cloud.google.com/go/ai/generativelanguage/apiv1beta3/generativelanguagepb"
+  }
+}

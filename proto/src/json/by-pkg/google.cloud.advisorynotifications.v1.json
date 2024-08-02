@@ -1,0 +1,104 @@
+{
+  "proto": "google/cloud/advisorynotifications/v1/service",
+  "pkg": "google.cloud.advisorynotifications.v1",
+  "svcs": [
+    {
+      "svc": "AdvisoryNotificationsService",
+      "host": "advisorynotifications.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListNotifications",
+          "request": {
+            "type": "ListNotificationsRequest"
+          },
+          "response": {
+            "type": "ListNotificationsResponse"
+          }
+        },
+        {
+          "method": "GetNotification",
+          "request": {
+            "type": "GetNotificationRequest"
+          },
+          "response": {
+            "type": "Notification"
+          }
+        },
+        {
+          "method": "GetSettings",
+          "request": {
+            "type": "GetSettingsRequest"
+          },
+          "response": {
+            "type": "Settings"
+          }
+        },
+        {
+          "method": "UpdateSettings",
+          "request": {
+            "type": "UpdateSettingsRequest"
+          },
+          "response": {
+            "type": "Settings"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Notification"
+    },
+    {
+      "type": "Text"
+    },
+    {
+      "type": "Subject"
+    },
+    {
+      "type": "Message",
+      "msgs": [
+        {
+          "type": "Body"
+        }
+      ]
+    },
+    {
+      "type": "Attachment"
+    },
+    {
+      "type": "Csv",
+      "msgs": [
+        {
+          "type": "CsvRow"
+        }
+      ]
+    },
+    {
+      "type": "ListNotificationsRequest"
+    },
+    {
+      "type": "ListNotificationsResponse"
+    },
+    {
+      "type": "GetNotificationRequest"
+    },
+    {
+      "type": "Settings"
+    },
+    {
+      "type": "NotificationSettings"
+    },
+    {
+      "type": "GetSettingsRequest"
+    },
+    {
+      "type": "UpdateSettingsRequest"
+    }
+  ],
+  "go": {
+    "src": "advisorynotifications/apiv1/advisorynotificationspb/service.pb.go",
+    "pkg": "advisorynotificationspb",
+    "pkg_full": "cloud.google.com/go/advisorynotifications/apiv1/advisorynotificationspb"
+  }
+}

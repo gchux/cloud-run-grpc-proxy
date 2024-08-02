@@ -1,0 +1,531 @@
+{
+  "proto": "google/cloud/paymentgateway/issuerswitch/v1/common_fields",
+  "pkg": "google.cloud.paymentgateway.issuerswitch.v1",
+  "msgs": [
+    {
+      "type": "AccountReference"
+    },
+    {
+      "type": "SettlementParticipant",
+      "msgs": [
+        {
+          "type": "SettlementDetails"
+        }
+      ]
+    },
+    {
+      "type": "DeviceDetails"
+    },
+    {
+      "type": "Participant"
+    },
+    {
+      "type": "MerchantInfo"
+    },
+    {
+      "type": "MerchantName"
+    },
+    {
+      "type": "MerchantAdditionalInfo"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/paymentgateway/issuerswitch/v1/common_fields.pb.go",
+    "pkg": "issuerswitchpb",
+    "pkg_full": "cloud.google.com/go/paymentgateway/issuerswitch/apiv1/issuerswitchpb"
+  }
+}
+{
+  "proto": "google/cloud/paymentgateway/issuerswitch/v1/participants",
+  "pkg": "google.cloud.paymentgateway.issuerswitch.v1",
+  "svcs": [
+    {
+      "svc": "IssuerSwitchParticipants",
+      "host": "issuerswitch.googleapis.com",
+      "rpcs": [
+        {
+          "method": "FetchParticipant",
+          "request": {
+            "type": "FetchParticipantRequest"
+          },
+          "response": {
+            "type": "IssuerParticipant"
+          }
+        },
+        {
+          "method": "UpdateIssuerParticipant",
+          "request": {
+            "type": "UpdateIssuerParticipantRequest"
+          },
+          "response": {
+            "type": "IssuerParticipant"
+          }
+        },
+        {
+          "method": "ActivateParticipant",
+          "request": {
+            "type": "ParticipantStateChangeRequest"
+          },
+          "response": {
+            "type": "IssuerParticipants"
+          }
+        },
+        {
+          "method": "DeactivateParticipant",
+          "request": {
+            "type": "ParticipantStateChangeRequest"
+          },
+          "response": {
+            "type": "IssuerParticipants"
+          }
+        },
+        {
+          "method": "MobileNumberChanged",
+          "request": {
+            "type": "ParticipantStateChangeRequest"
+          },
+          "response": {
+            "type": "IssuerParticipants"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "FetchParticipantRequest"
+    },
+    {
+      "type": "IssuerParticipant",
+      "msgs": [
+        {
+          "type": "Metadata"
+        }
+      ]
+    },
+    {
+      "type": "UpdateIssuerParticipantRequest"
+    },
+    {
+      "type": "ParticipantStateChangeRequest"
+    },
+    {
+      "type": "IssuerParticipants"
+    }
+  ],
+  "go": {
+    "pkg": "issuerswitchpb",
+    "pkg_full": "cloud.google.com/go/paymentgateway/issuerswitch/apiv1/issuerswitchpb"
+  }
+}
+{
+  "proto": "google/cloud/paymentgateway/issuerswitch/v1/transactions",
+  "pkg": "google.cloud.paymentgateway.issuerswitch.v1",
+  "svcs": [
+    {
+      "svc": "IssuerSwitchTransactions",
+      "host": "issuerswitch.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListMetadataTransactions",
+          "request": {
+            "type": "ListMetadataTransactionsRequest"
+          },
+          "response": {
+            "type": "ListMetadataTransactionsResponse"
+          }
+        },
+        {
+          "method": "ListFinancialTransactions",
+          "request": {
+            "type": "ListFinancialTransactionsRequest"
+          },
+          "response": {
+            "type": "ListFinancialTransactionsResponse"
+          }
+        },
+        {
+          "method": "ListMandateTransactions",
+          "request": {
+            "type": "ListMandateTransactionsRequest"
+          },
+          "response": {
+            "type": "ListMandateTransactionsResponse"
+          }
+        },
+        {
+          "method": "ListComplaintTransactions",
+          "request": {
+            "type": "ListComplaintTransactionsRequest"
+          },
+          "response": {
+            "type": "ListComplaintTransactionsResponse"
+          }
+        },
+        {
+          "method": "ExportFinancialTransactions",
+          "request": {
+            "type": "ExportFinancialTransactionsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ExportMetadataTransactions",
+          "request": {
+            "type": "ExportMetadataTransactionsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ExportMandateTransactions",
+          "request": {
+            "type": "ExportMandateTransactionsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ExportComplaintTransactions",
+          "request": {
+            "type": "ExportComplaintTransactionsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "TransactionInfo",
+      "msgs": [
+        {
+          "type": "TransactionMetadata"
+        },
+        {
+          "type": "TransactionErrorDetails"
+        },
+        {
+          "type": "AdapterInfo"
+        },
+        {
+          "type": "ResponseMetadata"
+        },
+        {
+          "type": "TransactionRiskInfo"
+        }
+      ]
+    },
+    {
+      "type": "MetadataTransaction"
+    },
+    {
+      "type": "FinancialTransaction",
+      "msgs": [
+        {
+          "type": "PaymentRule"
+        }
+      ]
+    },
+    {
+      "type": "MandateTransaction"
+    },
+    {
+      "type": "ComplaintTransaction"
+    },
+    {
+      "type": "ListMetadataTransactionsRequest"
+    },
+    {
+      "type": "ListFinancialTransactionsRequest"
+    },
+    {
+      "type": "ListMandateTransactionsRequest"
+    },
+    {
+      "type": "ListComplaintTransactionsRequest"
+    },
+    {
+      "type": "ListMetadataTransactionsResponse"
+    },
+    {
+      "type": "ListFinancialTransactionsResponse"
+    },
+    {
+      "type": "ListMandateTransactionsResponse"
+    },
+    {
+      "type": "ListComplaintTransactionsResponse"
+    },
+    {
+      "type": "ExportFinancialTransactionsRequest"
+    },
+    {
+      "type": "ExportMetadataTransactionsRequest"
+    },
+    {
+      "type": "ExportMandateTransactionsRequest"
+    },
+    {
+      "type": "ExportComplaintTransactionsRequest"
+    },
+    {
+      "type": "ExportFinancialTransactionsResponse"
+    },
+    {
+      "type": "ExportMetadataTransactionsResponse"
+    },
+    {
+      "type": "ExportMandateTransactionsResponse"
+    },
+    {
+      "type": "ExportComplaintTransactionsResponse"
+    },
+    {
+      "type": "ExportFinancialTransactionsMetadata"
+    },
+    {
+      "type": "ExportMandateTransactionsMetadata"
+    },
+    {
+      "type": "ExportMetadataTransactionsMetadata"
+    },
+    {
+      "type": "ExportComplaintTransactionsMetadata"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/paymentgateway/issuerswitch/v1/transactions.pb.go",
+    "pkg": "issuerswitchpb",
+    "pkg_full": "cloud.google.com/go/paymentgateway/issuerswitch/apiv1/issuerswitchpb"
+  }
+}
+{
+  "proto": "google/cloud/paymentgateway/issuerswitch/v1/rules",
+  "pkg": "google.cloud.paymentgateway.issuerswitch.v1",
+  "svcs": [
+    {
+      "svc": "IssuerSwitchRules",
+      "host": "issuerswitch.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListRules",
+          "request": {
+            "type": "ListRulesRequest"
+          },
+          "response": {
+            "type": "ListRulesResponse"
+          }
+        },
+        {
+          "method": "ListRuleMetadata",
+          "request": {
+            "type": "ListRuleMetadataRequest"
+          },
+          "response": {
+            "type": "ListRuleMetadataResponse"
+          }
+        },
+        {
+          "method": "ListRuleMetadataValues",
+          "request": {
+            "type": "ListRuleMetadataValuesRequest"
+          },
+          "response": {
+            "type": "ListRuleMetadataValuesResponse"
+          }
+        },
+        {
+          "method": "BatchCreateRuleMetadataValues",
+          "request": {
+            "type": "BatchCreateRuleMetadataValuesRequest"
+          },
+          "response": {
+            "type": "BatchCreateRuleMetadataValuesResponse"
+          }
+        },
+        {
+          "method": "BatchDeleteRuleMetadataValues",
+          "request": {
+            "type": "BatchDeleteRuleMetadataValuesRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Rule"
+    },
+    {
+      "type": "RuleMetadata"
+    },
+    {
+      "type": "RuleMetadataValue"
+    },
+    {
+      "type": "ListRulesRequest"
+    },
+    {
+      "type": "ListRulesResponse"
+    },
+    {
+      "type": "ListRuleMetadataRequest"
+    },
+    {
+      "type": "ListRuleMetadataResponse"
+    },
+    {
+      "type": "ListRuleMetadataValuesRequest"
+    },
+    {
+      "type": "ListRuleMetadataValuesResponse"
+    },
+    {
+      "type": "BatchCreateRuleMetadataValuesRequest"
+    },
+    {
+      "type": "BatchCreateRuleMetadataValuesResponse"
+    },
+    {
+      "type": "CreateRuleMetadataValueRequest"
+    },
+    {
+      "type": "BatchDeleteRuleMetadataValuesRequest"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/paymentgateway/issuerswitch/v1/rules.pb.go",
+    "pkg": "issuerswitchpb",
+    "pkg_full": "cloud.google.com/go/paymentgateway/issuerswitch/apiv1/issuerswitchpb"
+  }
+}
+{
+  "proto": "google/cloud/paymentgateway/issuerswitch/v1/logs",
+  "pkg": "google.cloud.paymentgateway.issuerswitch.v1",
+  "msgs": [
+    {
+      "type": "UpiTransaction"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/paymentgateway/issuerswitch/v1/logs.pb.go",
+    "pkg": "issuerswitchpb",
+    "pkg_full": "cloud.google.com/go/paymentgateway/issuerswitch/apiv1/issuerswitchpb"
+  }
+}
+{
+  "proto": "google/cloud/paymentgateway/issuerswitch/v1/resolutions",
+  "pkg": "google.cloud.paymentgateway.issuerswitch.v1",
+  "svcs": [
+    {
+      "svc": "IssuerSwitchResolutions",
+      "host": "issuerswitch.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateComplaint",
+          "request": {
+            "type": "CreateComplaintRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ResolveComplaint",
+          "request": {
+            "type": "ResolveComplaintRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CreateDispute",
+          "request": {
+            "type": "CreateDisputeRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ResolveDispute",
+          "request": {
+            "type": "ResolveDisputeRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Complaint"
+    },
+    {
+      "type": "CreateComplaintRequest"
+    },
+    {
+      "type": "ResolveComplaintRequest"
+    },
+    {
+      "type": "Dispute"
+    },
+    {
+      "type": "CreateDisputeRequest"
+    },
+    {
+      "type": "ResolveDisputeRequest"
+    },
+    {
+      "type": "OriginalTransaction"
+    },
+    {
+      "type": "CaseDetails"
+    },
+    {
+      "type": "CaseResponse"
+    },
+    {
+      "type": "RaiseComplaintAdjustment"
+    },
+    {
+      "type": "ResolveComplaintAdjustment"
+    },
+    {
+      "type": "RaiseDisputeAdjustment"
+    },
+    {
+      "type": "ResolveDisputeAdjustment"
+    },
+    {
+      "type": "CreateComplaintMetadata"
+    },
+    {
+      "type": "ResolveComplaintMetadata"
+    },
+    {
+      "type": "CreateDisputeMetadata"
+    },
+    {
+      "type": "ResolveDisputeMetadata"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/paymentgateway/issuerswitch/v1/resolutions.pb.go",
+    "pkg": "issuerswitchpb",
+    "pkg_full": "cloud.google.com/go/paymentgateway/issuerswitch/apiv1/issuerswitchpb"
+  }
+}

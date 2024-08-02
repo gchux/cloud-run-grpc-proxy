@@ -1,0 +1,306 @@
+{
+  "proto": "google/cloud/securityposture/v1/org_policy_config",
+  "pkg": "google.cloud.securityposture.v1",
+  "msgs": [
+    {
+      "type": "PolicyRule",
+      "msgs": [
+        {
+          "type": "StringValues"
+        }
+      ]
+    },
+    {
+      "type": "CustomConstraint"
+    }
+  ],
+  "go": {
+    "src": "securityposture/apiv1/securityposturepb/org_policy_config.pb.go",
+    "pkg": "securityposturepb",
+    "pkg_full": "cloud.google.com/go/securityposture/apiv1/securityposturepb"
+  }
+}
+{
+  "proto": "google/cloud/securityposture/v1/sha_constraints",
+  "pkg": "google.cloud.securityposture.v1",
+  "msgs": [
+    {
+      "type": "SecurityHealthAnalyticsModule"
+    },
+    {
+      "type": "SecurityHealthAnalyticsCustomModule"
+    }
+  ],
+  "go": {
+    "src": "securityposture/apiv1/securityposturepb/sha_constraints.pb.go",
+    "pkg": "securityposturepb",
+    "pkg_full": "cloud.google.com/go/securityposture/apiv1/securityposturepb"
+  }
+}
+{
+  "proto": "google/cloud/securityposture/v1/org_policy_constraints",
+  "pkg": "google.cloud.securityposture.v1",
+  "msgs": [
+    {
+      "type": "OrgPolicyConstraint"
+    },
+    {
+      "type": "OrgPolicyConstraintCustom"
+    }
+  ],
+  "go": {
+    "src": "securityposture/apiv1/securityposturepb/org_policy_constraints.pb.go",
+    "pkg": "securityposturepb",
+    "pkg_full": "cloud.google.com/go/securityposture/apiv1/securityposturepb"
+  }
+}
+{
+  "proto": "google/cloud/securityposture/v1/securityposture",
+  "pkg": "google.cloud.securityposture.v1",
+  "svcs": [
+    {
+      "svc": "SecurityPosture",
+      "host": "securityposture.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListPostures",
+          "request": {
+            "type": "ListPosturesRequest"
+          },
+          "response": {
+            "type": "ListPosturesResponse"
+          }
+        },
+        {
+          "method": "ListPostureRevisions",
+          "request": {
+            "type": "ListPostureRevisionsRequest"
+          },
+          "response": {
+            "type": "ListPostureRevisionsResponse"
+          }
+        },
+        {
+          "method": "GetPosture",
+          "request": {
+            "type": "GetPostureRequest"
+          },
+          "response": {
+            "type": "Posture"
+          }
+        },
+        {
+          "method": "CreatePosture",
+          "request": {
+            "type": "CreatePostureRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdatePosture",
+          "request": {
+            "type": "UpdatePostureRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeletePosture",
+          "request": {
+            "type": "DeletePostureRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ExtractPosture",
+          "request": {
+            "type": "ExtractPostureRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListPostureDeployments",
+          "request": {
+            "type": "ListPostureDeploymentsRequest"
+          },
+          "response": {
+            "type": "ListPostureDeploymentsResponse"
+          }
+        },
+        {
+          "method": "GetPostureDeployment",
+          "request": {
+            "type": "GetPostureDeploymentRequest"
+          },
+          "response": {
+            "type": "PostureDeployment"
+          }
+        },
+        {
+          "method": "CreatePostureDeployment",
+          "request": {
+            "type": "CreatePostureDeploymentRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdatePostureDeployment",
+          "request": {
+            "type": "UpdatePostureDeploymentRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeletePostureDeployment",
+          "request": {
+            "type": "DeletePostureDeploymentRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListPostureTemplates",
+          "request": {
+            "type": "ListPostureTemplatesRequest"
+          },
+          "response": {
+            "type": "ListPostureTemplatesResponse"
+          }
+        },
+        {
+          "method": "GetPostureTemplate",
+          "request": {
+            "type": "GetPostureTemplateRequest"
+          },
+          "response": {
+            "type": "PostureTemplate"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "OperationMetadata"
+    },
+    {
+      "type": "Posture"
+    },
+    {
+      "type": "PolicySet"
+    },
+    {
+      "type": "Policy",
+      "msgs": [
+        {
+          "type": "ComplianceStandard"
+        }
+      ]
+    },
+    {
+      "type": "Constraint"
+    },
+    {
+      "type": "ListPosturesRequest"
+    },
+    {
+      "type": "ListPosturesResponse"
+    },
+    {
+      "type": "ListPostureRevisionsRequest"
+    },
+    {
+      "type": "ListPostureRevisionsResponse"
+    },
+    {
+      "type": "GetPostureRequest"
+    },
+    {
+      "type": "CreatePostureRequest"
+    },
+    {
+      "type": "UpdatePostureRequest"
+    },
+    {
+      "type": "DeletePostureRequest"
+    },
+    {
+      "type": "ExtractPostureRequest"
+    },
+    {
+      "type": "PostureDeployment"
+    },
+    {
+      "type": "ListPostureDeploymentsRequest"
+    },
+    {
+      "type": "ListPostureDeploymentsResponse"
+    },
+    {
+      "type": "GetPostureDeploymentRequest"
+    },
+    {
+      "type": "CreatePostureDeploymentRequest"
+    },
+    {
+      "type": "UpdatePostureDeploymentRequest"
+    },
+    {
+      "type": "DeletePostureDeploymentRequest"
+    },
+    {
+      "type": "PostureTemplate"
+    },
+    {
+      "type": "ListPostureTemplatesRequest"
+    },
+    {
+      "type": "ListPostureTemplatesResponse"
+    },
+    {
+      "type": "GetPostureTemplateRequest"
+    }
+  ],
+  "go": {
+    "src": "securityposture/apiv1/securityposturepb/securityposture.pb.go",
+    "pkg": "securityposturepb",
+    "pkg_full": "cloud.google.com/go/securityposture/apiv1/securityposturepb"
+  }
+}
+{
+  "proto": "google/cloud/securityposture/v1/sha_custom_config",
+  "pkg": "google.cloud.securityposture.v1",
+  "msgs": [
+    {
+      "type": "CustomConfig",
+      "msgs": [
+        {
+          "type": "CustomOutputSpec"
+        },
+        {
+          "type": "Property"
+        },
+        {
+          "type": "ResourceSelector"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "securityposture/apiv1/securityposturepb/sha_custom_config.pb.go",
+    "pkg": "securityposturepb",
+    "pkg_full": "cloud.google.com/go/securityposture/apiv1/securityposturepb"
+  }
+}

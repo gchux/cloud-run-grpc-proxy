@@ -1,0 +1,582 @@
+{
+  "proto": "google/pubsub/v1/schema",
+  "pkg": "google.pubsub.v1",
+  "svcs": [
+    {
+      "svc": "SchemaService",
+      "host": "pubsub.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateSchema",
+          "request": {
+            "type": "CreateSchemaRequest"
+          },
+          "response": {
+            "type": "Schema"
+          }
+        },
+        {
+          "method": "GetSchema",
+          "request": {
+            "type": "GetSchemaRequest"
+          },
+          "response": {
+            "type": "Schema"
+          }
+        },
+        {
+          "method": "ListSchemas",
+          "request": {
+            "type": "ListSchemasRequest"
+          },
+          "response": {
+            "type": "ListSchemasResponse"
+          }
+        },
+        {
+          "method": "ListSchemaRevisions",
+          "request": {
+            "type": "ListSchemaRevisionsRequest"
+          },
+          "response": {
+            "type": "ListSchemaRevisionsResponse"
+          }
+        },
+        {
+          "method": "CommitSchema",
+          "request": {
+            "type": "CommitSchemaRequest"
+          },
+          "response": {
+            "type": "Schema"
+          }
+        },
+        {
+          "method": "RollbackSchema",
+          "request": {
+            "type": "RollbackSchemaRequest"
+          },
+          "response": {
+            "type": "Schema"
+          }
+        },
+        {
+          "method": "DeleteSchemaRevision",
+          "request": {
+            "type": "DeleteSchemaRevisionRequest"
+          },
+          "response": {
+            "type": "Schema"
+          }
+        },
+        {
+          "method": "DeleteSchema",
+          "request": {
+            "type": "DeleteSchemaRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ValidateSchema",
+          "request": {
+            "type": "ValidateSchemaRequest"
+          },
+          "response": {
+            "type": "ValidateSchemaResponse"
+          }
+        },
+        {
+          "method": "ValidateMessage",
+          "request": {
+            "type": "ValidateMessageRequest"
+          },
+          "response": {
+            "type": "ValidateMessageResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Schema"
+    },
+    {
+      "type": "CreateSchemaRequest"
+    },
+    {
+      "type": "GetSchemaRequest"
+    },
+    {
+      "type": "ListSchemasRequest"
+    },
+    {
+      "type": "ListSchemasResponse"
+    },
+    {
+      "type": "ListSchemaRevisionsRequest"
+    },
+    {
+      "type": "ListSchemaRevisionsResponse"
+    },
+    {
+      "type": "CommitSchemaRequest"
+    },
+    {
+      "type": "RollbackSchemaRequest"
+    },
+    {
+      "type": "DeleteSchemaRevisionRequest"
+    },
+    {
+      "type": "DeleteSchemaRequest"
+    },
+    {
+      "type": "ValidateSchemaRequest"
+    },
+    {
+      "type": "ValidateSchemaResponse"
+    },
+    {
+      "type": "ValidateMessageRequest"
+    },
+    {
+      "type": "ValidateMessageResponse"
+    }
+  ],
+  "go": {
+    "src": "pubsub/apiv1/pubsubpb/schema.pb.go",
+    "pkg": "pubsubpb",
+    "pkg_full": "cloud.google.com/go/pubsub/apiv1/pubsubpb"
+  }
+}
+{
+  "proto": "google/pubsub/v1/pubsub",
+  "pkg": "google.pubsub.v1",
+  "svcs": [
+    {
+      "svc": "Publisher",
+      "host": "pubsub.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateTopic",
+          "request": {
+            "type": "Topic"
+          },
+          "response": {
+            "type": "Topic"
+          }
+        },
+        {
+          "method": "UpdateTopic",
+          "request": {
+            "type": "UpdateTopicRequest"
+          },
+          "response": {
+            "type": "Topic"
+          }
+        },
+        {
+          "method": "Publish",
+          "request": {
+            "type": "PublishRequest"
+          },
+          "response": {
+            "type": "PublishResponse"
+          }
+        },
+        {
+          "method": "GetTopic",
+          "request": {
+            "type": "GetTopicRequest"
+          },
+          "response": {
+            "type": "Topic"
+          }
+        },
+        {
+          "method": "ListTopics",
+          "request": {
+            "type": "ListTopicsRequest"
+          },
+          "response": {
+            "type": "ListTopicsResponse"
+          }
+        },
+        {
+          "method": "ListTopicSubscriptions",
+          "request": {
+            "type": "ListTopicSubscriptionsRequest"
+          },
+          "response": {
+            "type": "ListTopicSubscriptionsResponse"
+          }
+        },
+        {
+          "method": "ListTopicSnapshots",
+          "request": {
+            "type": "ListTopicSnapshotsRequest"
+          },
+          "response": {
+            "type": "ListTopicSnapshotsResponse"
+          }
+        },
+        {
+          "method": "DeleteTopic",
+          "request": {
+            "type": "DeleteTopicRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "DetachSubscription",
+          "request": {
+            "type": "DetachSubscriptionRequest"
+          },
+          "response": {
+            "type": "DetachSubscriptionResponse"
+          }
+        }
+      ]
+    },
+    {
+      "svc": "Subscriber",
+      "host": "pubsub.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateSubscription",
+          "request": {
+            "type": "Subscription"
+          },
+          "response": {
+            "type": "Subscription"
+          }
+        },
+        {
+          "method": "GetSubscription",
+          "request": {
+            "type": "GetSubscriptionRequest"
+          },
+          "response": {
+            "type": "Subscription"
+          }
+        },
+        {
+          "method": "UpdateSubscription",
+          "request": {
+            "type": "UpdateSubscriptionRequest"
+          },
+          "response": {
+            "type": "Subscription"
+          }
+        },
+        {
+          "method": "ListSubscriptions",
+          "request": {
+            "type": "ListSubscriptionsRequest"
+          },
+          "response": {
+            "type": "ListSubscriptionsResponse"
+          }
+        },
+        {
+          "method": "DeleteSubscription",
+          "request": {
+            "type": "DeleteSubscriptionRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ModifyAckDeadline",
+          "request": {
+            "type": "ModifyAckDeadlineRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "Acknowledge",
+          "request": {
+            "type": "AcknowledgeRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "Pull",
+          "request": {
+            "type": "PullRequest"
+          },
+          "response": {
+            "type": "PullResponse"
+          }
+        },
+        {
+          "method": "StreamingPull",
+          "request": {
+            "type": "StreamingPullRequest",
+            "stream": true
+          },
+          "response": {
+            "type": "StreamingPullResponse",
+            "stream": true
+          }
+        },
+        {
+          "method": "ModifyPushConfig",
+          "request": {
+            "type": "ModifyPushConfigRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "GetSnapshot",
+          "request": {
+            "type": "GetSnapshotRequest"
+          },
+          "response": {
+            "type": "Snapshot"
+          }
+        },
+        {
+          "method": "ListSnapshots",
+          "request": {
+            "type": "ListSnapshotsRequest"
+          },
+          "response": {
+            "type": "ListSnapshotsResponse"
+          }
+        },
+        {
+          "method": "CreateSnapshot",
+          "request": {
+            "type": "CreateSnapshotRequest"
+          },
+          "response": {
+            "type": "Snapshot"
+          }
+        },
+        {
+          "method": "UpdateSnapshot",
+          "request": {
+            "type": "UpdateSnapshotRequest"
+          },
+          "response": {
+            "type": "Snapshot"
+          }
+        },
+        {
+          "method": "DeleteSnapshot",
+          "request": {
+            "type": "DeleteSnapshotRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "Seek",
+          "request": {
+            "type": "SeekRequest"
+          },
+          "response": {
+            "type": "SeekResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "MessageStoragePolicy"
+    },
+    {
+      "type": "SchemaSettings"
+    },
+    {
+      "type": "IngestionDataSourceSettings",
+      "msgs": [
+        {
+          "type": "AwsKinesis"
+        }
+      ]
+    },
+    {
+      "type": "Topic"
+    },
+    {
+      "type": "PubsubMessage"
+    },
+    {
+      "type": "GetTopicRequest"
+    },
+    {
+      "type": "UpdateTopicRequest"
+    },
+    {
+      "type": "PublishRequest"
+    },
+    {
+      "type": "PublishResponse"
+    },
+    {
+      "type": "ListTopicsRequest"
+    },
+    {
+      "type": "ListTopicsResponse"
+    },
+    {
+      "type": "ListTopicSubscriptionsRequest"
+    },
+    {
+      "type": "ListTopicSubscriptionsResponse"
+    },
+    {
+      "type": "ListTopicSnapshotsRequest"
+    },
+    {
+      "type": "ListTopicSnapshotsResponse"
+    },
+    {
+      "type": "DeleteTopicRequest"
+    },
+    {
+      "type": "DetachSubscriptionRequest"
+    },
+    {
+      "type": "DetachSubscriptionResponse"
+    },
+    {
+      "type": "Subscription"
+    },
+    {
+      "type": "RetryPolicy"
+    },
+    {
+      "type": "DeadLetterPolicy"
+    },
+    {
+      "type": "ExpirationPolicy"
+    },
+    {
+      "type": "PushConfig",
+      "msgs": [
+        {
+          "type": "OidcToken"
+        },
+        {
+          "type": "PubsubWrapper"
+        },
+        {
+          "type": "NoWrapper"
+        }
+      ]
+    },
+    {
+      "type": "BigQueryConfig"
+    },
+    {
+      "type": "CloudStorageConfig",
+      "msgs": [
+        {
+          "type": "TextConfig"
+        },
+        {
+          "type": "AvroConfig"
+        }
+      ]
+    },
+    {
+      "type": "ReceivedMessage"
+    },
+    {
+      "type": "GetSubscriptionRequest"
+    },
+    {
+      "type": "UpdateSubscriptionRequest"
+    },
+    {
+      "type": "ListSubscriptionsRequest"
+    },
+    {
+      "type": "ListSubscriptionsResponse"
+    },
+    {
+      "type": "DeleteSubscriptionRequest"
+    },
+    {
+      "type": "ModifyPushConfigRequest"
+    },
+    {
+      "type": "PullRequest"
+    },
+    {
+      "type": "PullResponse"
+    },
+    {
+      "type": "ModifyAckDeadlineRequest"
+    },
+    {
+      "type": "AcknowledgeRequest"
+    },
+    {
+      "type": "StreamingPullRequest"
+    },
+    {
+      "type": "StreamingPullResponse",
+      "msgs": [
+        {
+          "type": "AcknowledgeConfirmation"
+        },
+        {
+          "type": "ModifyAckDeadlineConfirmation"
+        },
+        {
+          "type": "SubscriptionProperties"
+        }
+      ]
+    },
+    {
+      "type": "CreateSnapshotRequest"
+    },
+    {
+      "type": "UpdateSnapshotRequest"
+    },
+    {
+      "type": "Snapshot"
+    },
+    {
+      "type": "GetSnapshotRequest"
+    },
+    {
+      "type": "ListSnapshotsRequest"
+    },
+    {
+      "type": "ListSnapshotsResponse"
+    },
+    {
+      "type": "DeleteSnapshotRequest"
+    },
+    {
+      "type": "SeekRequest"
+    },
+    {
+      "type": "SeekResponse"
+    }
+  ],
+  "go": {
+    "src": "pubsub/apiv1/pubsubpb/pubsub.pb.go",
+    "pkg": "pubsubpb",
+    "pkg_full": "cloud.google.com/go/pubsub/apiv1/pubsubpb"
+  }
+}

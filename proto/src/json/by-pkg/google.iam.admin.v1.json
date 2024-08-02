@@ -1,0 +1,448 @@
+{
+  "proto": "google/iam/admin/v1/iam",
+  "pkg": "google.iam.admin.v1",
+  "svcs": [
+    {
+      "svc": "IAM",
+      "host": "iam.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListServiceAccounts",
+          "request": {
+            "type": "ListServiceAccountsRequest"
+          },
+          "response": {
+            "type": "ListServiceAccountsResponse"
+          }
+        },
+        {
+          "method": "GetServiceAccount",
+          "request": {
+            "type": "GetServiceAccountRequest"
+          },
+          "response": {
+            "type": "ServiceAccount"
+          }
+        },
+        {
+          "method": "CreateServiceAccount",
+          "request": {
+            "type": "CreateServiceAccountRequest"
+          },
+          "response": {
+            "type": "ServiceAccount"
+          }
+        },
+        {
+          "method": "UpdateServiceAccount",
+          "request": {
+            "type": "ServiceAccount"
+          },
+          "response": {
+            "type": "ServiceAccount"
+          }
+        },
+        {
+          "method": "PatchServiceAccount",
+          "request": {
+            "type": "PatchServiceAccountRequest"
+          },
+          "response": {
+            "type": "ServiceAccount"
+          }
+        },
+        {
+          "method": "DeleteServiceAccount",
+          "request": {
+            "type": "DeleteServiceAccountRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "UndeleteServiceAccount",
+          "request": {
+            "type": "UndeleteServiceAccountRequest"
+          },
+          "response": {
+            "type": "UndeleteServiceAccountResponse"
+          }
+        },
+        {
+          "method": "EnableServiceAccount",
+          "request": {
+            "type": "EnableServiceAccountRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "DisableServiceAccount",
+          "request": {
+            "type": "DisableServiceAccountRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListServiceAccountKeys",
+          "request": {
+            "type": "ListServiceAccountKeysRequest"
+          },
+          "response": {
+            "type": "ListServiceAccountKeysResponse"
+          }
+        },
+        {
+          "method": "GetServiceAccountKey",
+          "request": {
+            "type": "GetServiceAccountKeyRequest"
+          },
+          "response": {
+            "type": "ServiceAccountKey"
+          }
+        },
+        {
+          "method": "CreateServiceAccountKey",
+          "request": {
+            "type": "CreateServiceAccountKeyRequest"
+          },
+          "response": {
+            "type": "ServiceAccountKey"
+          }
+        },
+        {
+          "method": "UploadServiceAccountKey",
+          "request": {
+            "type": "UploadServiceAccountKeyRequest"
+          },
+          "response": {
+            "type": "ServiceAccountKey"
+          }
+        },
+        {
+          "method": "DeleteServiceAccountKey",
+          "request": {
+            "type": "DeleteServiceAccountKeyRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "DisableServiceAccountKey",
+          "request": {
+            "type": "DisableServiceAccountKeyRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "EnableServiceAccountKey",
+          "request": {
+            "type": "EnableServiceAccountKeyRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "SignBlob",
+          "request": {
+            "type": "SignBlobRequest"
+          },
+          "response": {
+            "type": "SignBlobResponse"
+          }
+        },
+        {
+          "method": "SignJwt",
+          "request": {
+            "type": "SignJwtRequest"
+          },
+          "response": {
+            "type": "SignJwtResponse"
+          }
+        },
+        {
+          "method": "GetIamPolicy",
+          "request": {
+            "type": "google.iam.v1.GetIamPolicyRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.Policy"
+          }
+        },
+        {
+          "method": "SetIamPolicy",
+          "request": {
+            "type": "google.iam.v1.SetIamPolicyRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.Policy"
+          }
+        },
+        {
+          "method": "TestIamPermissions",
+          "request": {
+            "type": "google.iam.v1.TestIamPermissionsRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.TestIamPermissionsResponse"
+          }
+        },
+        {
+          "method": "QueryGrantableRoles",
+          "request": {
+            "type": "QueryGrantableRolesRequest"
+          },
+          "response": {
+            "type": "QueryGrantableRolesResponse"
+          }
+        },
+        {
+          "method": "ListRoles",
+          "request": {
+            "type": "ListRolesRequest"
+          },
+          "response": {
+            "type": "ListRolesResponse"
+          }
+        },
+        {
+          "method": "GetRole",
+          "request": {
+            "type": "GetRoleRequest"
+          },
+          "response": {
+            "type": "Role"
+          }
+        },
+        {
+          "method": "CreateRole",
+          "request": {
+            "type": "CreateRoleRequest"
+          },
+          "response": {
+            "type": "Role"
+          }
+        },
+        {
+          "method": "UpdateRole",
+          "request": {
+            "type": "UpdateRoleRequest"
+          },
+          "response": {
+            "type": "Role"
+          }
+        },
+        {
+          "method": "DeleteRole",
+          "request": {
+            "type": "DeleteRoleRequest"
+          },
+          "response": {
+            "type": "Role"
+          }
+        },
+        {
+          "method": "UndeleteRole",
+          "request": {
+            "type": "UndeleteRoleRequest"
+          },
+          "response": {
+            "type": "Role"
+          }
+        },
+        {
+          "method": "QueryTestablePermissions",
+          "request": {
+            "type": "QueryTestablePermissionsRequest"
+          },
+          "response": {
+            "type": "QueryTestablePermissionsResponse"
+          }
+        },
+        {
+          "method": "QueryAuditableServices",
+          "request": {
+            "type": "QueryAuditableServicesRequest"
+          },
+          "response": {
+            "type": "QueryAuditableServicesResponse"
+          }
+        },
+        {
+          "method": "LintPolicy",
+          "request": {
+            "type": "LintPolicyRequest"
+          },
+          "response": {
+            "type": "LintPolicyResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ServiceAccount"
+    },
+    {
+      "type": "CreateServiceAccountRequest"
+    },
+    {
+      "type": "ListServiceAccountsRequest"
+    },
+    {
+      "type": "ListServiceAccountsResponse"
+    },
+    {
+      "type": "GetServiceAccountRequest"
+    },
+    {
+      "type": "DeleteServiceAccountRequest"
+    },
+    {
+      "type": "PatchServiceAccountRequest"
+    },
+    {
+      "type": "UndeleteServiceAccountRequest"
+    },
+    {
+      "type": "UndeleteServiceAccountResponse"
+    },
+    {
+      "type": "EnableServiceAccountRequest"
+    },
+    {
+      "type": "DisableServiceAccountRequest"
+    },
+    {
+      "type": "ListServiceAccountKeysRequest"
+    },
+    {
+      "type": "ListServiceAccountKeysResponse"
+    },
+    {
+      "type": "GetServiceAccountKeyRequest"
+    },
+    {
+      "type": "ServiceAccountKey"
+    },
+    {
+      "type": "CreateServiceAccountKeyRequest"
+    },
+    {
+      "type": "UploadServiceAccountKeyRequest"
+    },
+    {
+      "type": "DeleteServiceAccountKeyRequest"
+    },
+    {
+      "type": "DisableServiceAccountKeyRequest"
+    },
+    {
+      "type": "EnableServiceAccountKeyRequest"
+    },
+    {
+      "type": "SignBlobRequest"
+    },
+    {
+      "type": "SignBlobResponse"
+    },
+    {
+      "type": "SignJwtRequest"
+    },
+    {
+      "type": "SignJwtResponse"
+    },
+    {
+      "type": "Role"
+    },
+    {
+      "type": "QueryGrantableRolesRequest"
+    },
+    {
+      "type": "QueryGrantableRolesResponse"
+    },
+    {
+      "type": "ListRolesRequest"
+    },
+    {
+      "type": "ListRolesResponse"
+    },
+    {
+      "type": "GetRoleRequest"
+    },
+    {
+      "type": "CreateRoleRequest"
+    },
+    {
+      "type": "UpdateRoleRequest"
+    },
+    {
+      "type": "DeleteRoleRequest"
+    },
+    {
+      "type": "UndeleteRoleRequest"
+    },
+    {
+      "type": "Permission"
+    },
+    {
+      "type": "QueryTestablePermissionsRequest"
+    },
+    {
+      "type": "QueryTestablePermissionsResponse"
+    },
+    {
+      "type": "QueryAuditableServicesRequest"
+    },
+    {
+      "type": "QueryAuditableServicesResponse",
+      "msgs": [
+        {
+          "type": "AuditableService"
+        }
+      ]
+    },
+    {
+      "type": "LintPolicyRequest"
+    },
+    {
+      "type": "LintResult"
+    },
+    {
+      "type": "LintPolicyResponse"
+    }
+  ],
+  "go": {
+    "src": "iam/admin/apiv1/adminpb/iam.pb.go",
+    "pkg": "adminpb",
+    "pkg_full": "cloud.google.com/go/iam/admin/apiv1/adminpb"
+  }
+}
+{
+  "proto": "google/iam/admin/v1/audit_data",
+  "pkg": "google.iam.admin.v1",
+  "msgs": [
+    {
+      "type": "AuditData",
+      "msgs": [
+        {
+          "type": "PermissionDelta"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "iam/admin/apiv1/adminpb/audit_data.pb.go",
+    "pkg": "adminpb",
+    "pkg_full": "cloud.google.com/go/iam/admin/apiv1/adminpb"
+  }
+}

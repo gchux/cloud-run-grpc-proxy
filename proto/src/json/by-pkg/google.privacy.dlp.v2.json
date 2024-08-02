@@ -1,0 +1,1554 @@
+{
+  "proto": "google/privacy/dlp/v2/dlp",
+  "pkg": "google.privacy.dlp.v2",
+  "svcs": [
+    {
+      "svc": "DlpService",
+      "host": "dlp.googleapis.com",
+      "rpcs": [
+        {
+          "method": "InspectContent",
+          "request": {
+            "type": "InspectContentRequest"
+          },
+          "response": {
+            "type": "InspectContentResponse"
+          }
+        },
+        {
+          "method": "RedactImage",
+          "request": {
+            "type": "RedactImageRequest"
+          },
+          "response": {
+            "type": "RedactImageResponse"
+          }
+        },
+        {
+          "method": "DeidentifyContent",
+          "request": {
+            "type": "DeidentifyContentRequest"
+          },
+          "response": {
+            "type": "DeidentifyContentResponse"
+          }
+        },
+        {
+          "method": "ReidentifyContent",
+          "request": {
+            "type": "ReidentifyContentRequest"
+          },
+          "response": {
+            "type": "ReidentifyContentResponse"
+          }
+        },
+        {
+          "method": "ListInfoTypes",
+          "request": {
+            "type": "ListInfoTypesRequest"
+          },
+          "response": {
+            "type": "ListInfoTypesResponse"
+          }
+        },
+        {
+          "method": "CreateInspectTemplate",
+          "request": {
+            "type": "CreateInspectTemplateRequest"
+          },
+          "response": {
+            "type": "InspectTemplate"
+          }
+        },
+        {
+          "method": "UpdateInspectTemplate",
+          "request": {
+            "type": "UpdateInspectTemplateRequest"
+          },
+          "response": {
+            "type": "InspectTemplate"
+          }
+        },
+        {
+          "method": "GetInspectTemplate",
+          "request": {
+            "type": "GetInspectTemplateRequest"
+          },
+          "response": {
+            "type": "InspectTemplate"
+          }
+        },
+        {
+          "method": "ListInspectTemplates",
+          "request": {
+            "type": "ListInspectTemplatesRequest"
+          },
+          "response": {
+            "type": "ListInspectTemplatesResponse"
+          }
+        },
+        {
+          "method": "DeleteInspectTemplate",
+          "request": {
+            "type": "DeleteInspectTemplateRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "CreateDeidentifyTemplate",
+          "request": {
+            "type": "CreateDeidentifyTemplateRequest"
+          },
+          "response": {
+            "type": "DeidentifyTemplate"
+          }
+        },
+        {
+          "method": "UpdateDeidentifyTemplate",
+          "request": {
+            "type": "UpdateDeidentifyTemplateRequest"
+          },
+          "response": {
+            "type": "DeidentifyTemplate"
+          }
+        },
+        {
+          "method": "GetDeidentifyTemplate",
+          "request": {
+            "type": "GetDeidentifyTemplateRequest"
+          },
+          "response": {
+            "type": "DeidentifyTemplate"
+          }
+        },
+        {
+          "method": "ListDeidentifyTemplates",
+          "request": {
+            "type": "ListDeidentifyTemplatesRequest"
+          },
+          "response": {
+            "type": "ListDeidentifyTemplatesResponse"
+          }
+        },
+        {
+          "method": "DeleteDeidentifyTemplate",
+          "request": {
+            "type": "DeleteDeidentifyTemplateRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "CreateJobTrigger",
+          "request": {
+            "type": "CreateJobTriggerRequest"
+          },
+          "response": {
+            "type": "JobTrigger"
+          }
+        },
+        {
+          "method": "UpdateJobTrigger",
+          "request": {
+            "type": "UpdateJobTriggerRequest"
+          },
+          "response": {
+            "type": "JobTrigger"
+          }
+        },
+        {
+          "method": "HybridInspectJobTrigger",
+          "request": {
+            "type": "HybridInspectJobTriggerRequest"
+          },
+          "response": {
+            "type": "HybridInspectResponse"
+          }
+        },
+        {
+          "method": "GetJobTrigger",
+          "request": {
+            "type": "GetJobTriggerRequest"
+          },
+          "response": {
+            "type": "JobTrigger"
+          }
+        },
+        {
+          "method": "ListJobTriggers",
+          "request": {
+            "type": "ListJobTriggersRequest"
+          },
+          "response": {
+            "type": "ListJobTriggersResponse"
+          }
+        },
+        {
+          "method": "DeleteJobTrigger",
+          "request": {
+            "type": "DeleteJobTriggerRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ActivateJobTrigger",
+          "request": {
+            "type": "ActivateJobTriggerRequest"
+          },
+          "response": {
+            "type": "DlpJob"
+          }
+        },
+        {
+          "method": "CreateDiscoveryConfig",
+          "request": {
+            "type": "CreateDiscoveryConfigRequest"
+          },
+          "response": {
+            "type": "DiscoveryConfig"
+          }
+        },
+        {
+          "method": "UpdateDiscoveryConfig",
+          "request": {
+            "type": "UpdateDiscoveryConfigRequest"
+          },
+          "response": {
+            "type": "DiscoveryConfig"
+          }
+        },
+        {
+          "method": "GetDiscoveryConfig",
+          "request": {
+            "type": "GetDiscoveryConfigRequest"
+          },
+          "response": {
+            "type": "DiscoveryConfig"
+          }
+        },
+        {
+          "method": "ListDiscoveryConfigs",
+          "request": {
+            "type": "ListDiscoveryConfigsRequest"
+          },
+          "response": {
+            "type": "ListDiscoveryConfigsResponse"
+          }
+        },
+        {
+          "method": "DeleteDiscoveryConfig",
+          "request": {
+            "type": "DeleteDiscoveryConfigRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "CreateDlpJob",
+          "request": {
+            "type": "CreateDlpJobRequest"
+          },
+          "response": {
+            "type": "DlpJob"
+          }
+        },
+        {
+          "method": "ListDlpJobs",
+          "request": {
+            "type": "ListDlpJobsRequest"
+          },
+          "response": {
+            "type": "ListDlpJobsResponse"
+          }
+        },
+        {
+          "method": "GetDlpJob",
+          "request": {
+            "type": "GetDlpJobRequest"
+          },
+          "response": {
+            "type": "DlpJob"
+          }
+        },
+        {
+          "method": "DeleteDlpJob",
+          "request": {
+            "type": "DeleteDlpJobRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "CancelDlpJob",
+          "request": {
+            "type": "CancelDlpJobRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "CreateStoredInfoType",
+          "request": {
+            "type": "CreateStoredInfoTypeRequest"
+          },
+          "response": {
+            "type": "StoredInfoType"
+          }
+        },
+        {
+          "method": "UpdateStoredInfoType",
+          "request": {
+            "type": "UpdateStoredInfoTypeRequest"
+          },
+          "response": {
+            "type": "StoredInfoType"
+          }
+        },
+        {
+          "method": "GetStoredInfoType",
+          "request": {
+            "type": "GetStoredInfoTypeRequest"
+          },
+          "response": {
+            "type": "StoredInfoType"
+          }
+        },
+        {
+          "method": "ListStoredInfoTypes",
+          "request": {
+            "type": "ListStoredInfoTypesRequest"
+          },
+          "response": {
+            "type": "ListStoredInfoTypesResponse"
+          }
+        },
+        {
+          "method": "DeleteStoredInfoType",
+          "request": {
+            "type": "DeleteStoredInfoTypeRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListProjectDataProfiles",
+          "request": {
+            "type": "ListProjectDataProfilesRequest"
+          },
+          "response": {
+            "type": "ListProjectDataProfilesResponse"
+          }
+        },
+        {
+          "method": "ListTableDataProfiles",
+          "request": {
+            "type": "ListTableDataProfilesRequest"
+          },
+          "response": {
+            "type": "ListTableDataProfilesResponse"
+          }
+        },
+        {
+          "method": "ListColumnDataProfiles",
+          "request": {
+            "type": "ListColumnDataProfilesRequest"
+          },
+          "response": {
+            "type": "ListColumnDataProfilesResponse"
+          }
+        },
+        {
+          "method": "GetProjectDataProfile",
+          "request": {
+            "type": "GetProjectDataProfileRequest"
+          },
+          "response": {
+            "type": "ProjectDataProfile"
+          }
+        },
+        {
+          "method": "ListFileStoreDataProfiles",
+          "request": {
+            "type": "ListFileStoreDataProfilesRequest"
+          },
+          "response": {
+            "type": "ListFileStoreDataProfilesResponse"
+          }
+        },
+        {
+          "method": "GetFileStoreDataProfile",
+          "request": {
+            "type": "GetFileStoreDataProfileRequest"
+          },
+          "response": {
+            "type": "FileStoreDataProfile"
+          }
+        },
+        {
+          "method": "DeleteFileStoreDataProfile",
+          "request": {
+            "type": "DeleteFileStoreDataProfileRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "GetTableDataProfile",
+          "request": {
+            "type": "GetTableDataProfileRequest"
+          },
+          "response": {
+            "type": "TableDataProfile"
+          }
+        },
+        {
+          "method": "GetColumnDataProfile",
+          "request": {
+            "type": "GetColumnDataProfileRequest"
+          },
+          "response": {
+            "type": "ColumnDataProfile"
+          }
+        },
+        {
+          "method": "DeleteTableDataProfile",
+          "request": {
+            "type": "DeleteTableDataProfileRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "HybridInspectDlpJob",
+          "request": {
+            "type": "HybridInspectDlpJobRequest"
+          },
+          "response": {
+            "type": "HybridInspectResponse"
+          }
+        },
+        {
+          "method": "FinishDlpJob",
+          "request": {
+            "type": "FinishDlpJobRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "CreateConnection",
+          "request": {
+            "type": "CreateConnectionRequest"
+          },
+          "response": {
+            "type": "Connection"
+          }
+        },
+        {
+          "method": "GetConnection",
+          "request": {
+            "type": "GetConnectionRequest"
+          },
+          "response": {
+            "type": "Connection"
+          }
+        },
+        {
+          "method": "ListConnections",
+          "request": {
+            "type": "ListConnectionsRequest"
+          },
+          "response": {
+            "type": "ListConnectionsResponse"
+          }
+        },
+        {
+          "method": "SearchConnections",
+          "request": {
+            "type": "SearchConnectionsRequest"
+          },
+          "response": {
+            "type": "SearchConnectionsResponse"
+          }
+        },
+        {
+          "method": "DeleteConnection",
+          "request": {
+            "type": "DeleteConnectionRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "UpdateConnection",
+          "request": {
+            "type": "UpdateConnectionRequest"
+          },
+          "response": {
+            "type": "Connection"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ExcludeInfoTypes"
+    },
+    {
+      "type": "ExcludeByHotword"
+    },
+    {
+      "type": "ExclusionRule"
+    },
+    {
+      "type": "InspectionRule"
+    },
+    {
+      "type": "InspectionRuleSet"
+    },
+    {
+      "type": "InspectConfig",
+      "msgs": [
+        {
+          "type": "InfoTypeLikelihood"
+        },
+        {
+          "type": "FindingLimits"
+        },
+        {
+          "type": "InfoTypeLimit"
+        }
+      ]
+    },
+    {
+      "type": "ByteContentItem"
+    },
+    {
+      "type": "ContentItem"
+    },
+    {
+      "type": "Table",
+      "msgs": [
+        {
+          "type": "Row"
+        }
+      ]
+    },
+    {
+      "type": "InspectResult"
+    },
+    {
+      "type": "Finding"
+    },
+    {
+      "type": "Location"
+    },
+    {
+      "type": "ContentLocation"
+    },
+    {
+      "type": "MetadataLocation"
+    },
+    {
+      "type": "StorageMetadataLabel"
+    },
+    {
+      "type": "DocumentLocation"
+    },
+    {
+      "type": "RecordLocation"
+    },
+    {
+      "type": "TableLocation"
+    },
+    {
+      "type": "Container"
+    },
+    {
+      "type": "Range"
+    },
+    {
+      "type": "ImageLocation"
+    },
+    {
+      "type": "BoundingBox"
+    },
+    {
+      "type": "RedactImageRequest",
+      "msgs": [
+        {
+          "type": "ImageRedactionConfig"
+        }
+      ]
+    },
+    {
+      "type": "Color"
+    },
+    {
+      "type": "RedactImageResponse"
+    },
+    {
+      "type": "DeidentifyContentRequest"
+    },
+    {
+      "type": "DeidentifyContentResponse"
+    },
+    {
+      "type": "ReidentifyContentRequest"
+    },
+    {
+      "type": "ReidentifyContentResponse"
+    },
+    {
+      "type": "InspectContentRequest"
+    },
+    {
+      "type": "InspectContentResponse"
+    },
+    {
+      "type": "OutputStorageConfig"
+    },
+    {
+      "type": "InfoTypeStats"
+    },
+    {
+      "type": "InspectDataSourceDetails",
+      "msgs": [
+        {
+          "type": "RequestedOptions"
+        },
+        {
+          "type": "Result"
+        }
+      ]
+    },
+    {
+      "type": "DataProfileBigQueryRowSchema"
+    },
+    {
+      "type": "HybridInspectStatistics"
+    },
+    {
+      "type": "ActionDetails"
+    },
+    {
+      "type": "DeidentifyDataSourceStats"
+    },
+    {
+      "type": "DeidentifyDataSourceDetails",
+      "msgs": [
+        {
+          "type": "RequestedDeidentifyOptions"
+        }
+      ]
+    },
+    {
+      "type": "InfoTypeDescription"
+    },
+    {
+      "type": "InfoTypeCategory"
+    },
+    {
+      "type": "VersionDescription"
+    },
+    {
+      "type": "ListInfoTypesRequest"
+    },
+    {
+      "type": "ListInfoTypesResponse"
+    },
+    {
+      "type": "RiskAnalysisJobConfig"
+    },
+    {
+      "type": "QuasiId"
+    },
+    {
+      "type": "StatisticalTable",
+      "msgs": [
+        {
+          "type": "QuasiIdentifierField"
+        }
+      ]
+    },
+    {
+      "type": "PrivacyMetric",
+      "msgs": [
+        {
+          "type": "NumericalStatsConfig"
+        },
+        {
+          "type": "CategoricalStatsConfig"
+        },
+        {
+          "type": "KAnonymityConfig"
+        },
+        {
+          "type": "LDiversityConfig"
+        },
+        {
+          "type": "KMapEstimationConfig"
+        },
+        {
+          "type": "TaggedField"
+        },
+        {
+          "type": "AuxiliaryTable"
+        },
+        {
+          "type": "QuasiIdField"
+        },
+        {
+          "type": "DeltaPresenceEstimationConfig"
+        }
+      ]
+    },
+    {
+      "type": "AnalyzeDataSourceRiskDetails",
+      "msgs": [
+        {
+          "type": "NumericalStatsResult"
+        },
+        {
+          "type": "CategoricalStatsResult"
+        },
+        {
+          "type": "CategoricalStatsHistogramBucket"
+        },
+        {
+          "type": "KAnonymityResult"
+        },
+        {
+          "type": "KAnonymityEquivalenceClass"
+        },
+        {
+          "type": "KAnonymityHistogramBucket"
+        },
+        {
+          "type": "LDiversityResult"
+        },
+        {
+          "type": "LDiversityEquivalenceClass"
+        },
+        {
+          "type": "LDiversityHistogramBucket"
+        },
+        {
+          "type": "KMapEstimationResult"
+        },
+        {
+          "type": "KMapEstimationQuasiIdValues"
+        },
+        {
+          "type": "KMapEstimationHistogramBucket"
+        },
+        {
+          "type": "DeltaPresenceEstimationResult"
+        },
+        {
+          "type": "DeltaPresenceEstimationQuasiIdValues"
+        },
+        {
+          "type": "DeltaPresenceEstimationHistogramBucket"
+        },
+        {
+          "type": "RequestedRiskAnalysisOptions"
+        }
+      ]
+    },
+    {
+      "type": "ValueFrequency"
+    },
+    {
+      "type": "Value"
+    },
+    {
+      "type": "QuoteInfo"
+    },
+    {
+      "type": "DateTime",
+      "msgs": [
+        {
+          "type": "TimeZone"
+        }
+      ]
+    },
+    {
+      "type": "DeidentifyConfig"
+    },
+    {
+      "type": "ImageTransformations",
+      "msgs": [
+        {
+          "type": "ImageTransformation"
+        },
+        {
+          "type": "SelectedInfoTypes"
+        },
+        {
+          "type": "AllInfoTypes"
+        },
+        {
+          "type": "AllText"
+        }
+      ]
+    },
+    {
+      "type": "TransformationErrorHandling",
+      "msgs": [
+        {
+          "type": "ThrowError"
+        },
+        {
+          "type": "LeaveUntransformed"
+        }
+      ]
+    },
+    {
+      "type": "PrimitiveTransformation"
+    },
+    {
+      "type": "TimePartConfig"
+    },
+    {
+      "type": "CryptoHashConfig"
+    },
+    {
+      "type": "CryptoDeterministicConfig"
+    },
+    {
+      "type": "ReplaceValueConfig"
+    },
+    {
+      "type": "ReplaceDictionaryConfig"
+    },
+    {
+      "type": "ReplaceWithInfoTypeConfig"
+    },
+    {
+      "type": "RedactConfig"
+    },
+    {
+      "type": "CharsToIgnore"
+    },
+    {
+      "type": "CharacterMaskConfig"
+    },
+    {
+      "type": "FixedSizeBucketingConfig"
+    },
+    {
+      "type": "BucketingConfig",
+      "msgs": [
+        {
+          "type": "Bucket"
+        }
+      ]
+    },
+    {
+      "type": "CryptoReplaceFfxFpeConfig"
+    },
+    {
+      "type": "CryptoKey"
+    },
+    {
+      "type": "TransientCryptoKey"
+    },
+    {
+      "type": "UnwrappedCryptoKey"
+    },
+    {
+      "type": "KmsWrappedCryptoKey"
+    },
+    {
+      "type": "DateShiftConfig"
+    },
+    {
+      "type": "InfoTypeTransformations",
+      "msgs": [
+        {
+          "type": "InfoTypeTransformation"
+        }
+      ]
+    },
+    {
+      "type": "FieldTransformation"
+    },
+    {
+      "type": "RecordTransformations"
+    },
+    {
+      "type": "RecordSuppression"
+    },
+    {
+      "type": "RecordCondition",
+      "msgs": [
+        {
+          "type": "Condition"
+        },
+        {
+          "type": "Conditions"
+        },
+        {
+          "type": "Expressions"
+        }
+      ]
+    },
+    {
+      "type": "TransformationOverview"
+    },
+    {
+      "type": "TransformationSummary",
+      "msgs": [
+        {
+          "type": "SummaryResult"
+        }
+      ]
+    },
+    {
+      "type": "TransformationDescription"
+    },
+    {
+      "type": "TransformationDetails"
+    },
+    {
+      "type": "TransformationLocation"
+    },
+    {
+      "type": "RecordTransformation"
+    },
+    {
+      "type": "TransformationResultStatus"
+    },
+    {
+      "type": "TransformationDetailsStorageConfig"
+    },
+    {
+      "type": "Schedule"
+    },
+    {
+      "type": "Manual"
+    },
+    {
+      "type": "InspectTemplate"
+    },
+    {
+      "type": "DeidentifyTemplate"
+    },
+    {
+      "type": "Error"
+    },
+    {
+      "type": "JobTrigger",
+      "msgs": [
+        {
+          "type": "Trigger"
+        }
+      ]
+    },
+    {
+      "type": "Action",
+      "msgs": [
+        {
+          "type": "SaveFindings"
+        },
+        {
+          "type": "PublishToPubSub"
+        },
+        {
+          "type": "PublishSummaryToCscc"
+        },
+        {
+          "type": "PublishFindingsToCloudDataCatalog"
+        },
+        {
+          "type": "Deidentify"
+        },
+        {
+          "type": "JobNotificationEmails"
+        },
+        {
+          "type": "PublishToStackdriver"
+        }
+      ]
+    },
+    {
+      "type": "TransformationConfig"
+    },
+    {
+      "type": "CreateInspectTemplateRequest"
+    },
+    {
+      "type": "UpdateInspectTemplateRequest"
+    },
+    {
+      "type": "GetInspectTemplateRequest"
+    },
+    {
+      "type": "ListInspectTemplatesRequest"
+    },
+    {
+      "type": "ListInspectTemplatesResponse"
+    },
+    {
+      "type": "DeleteInspectTemplateRequest"
+    },
+    {
+      "type": "CreateJobTriggerRequest"
+    },
+    {
+      "type": "ActivateJobTriggerRequest"
+    },
+    {
+      "type": "UpdateJobTriggerRequest"
+    },
+    {
+      "type": "GetJobTriggerRequest"
+    },
+    {
+      "type": "CreateDiscoveryConfigRequest"
+    },
+    {
+      "type": "UpdateDiscoveryConfigRequest"
+    },
+    {
+      "type": "GetDiscoveryConfigRequest"
+    },
+    {
+      "type": "ListDiscoveryConfigsRequest"
+    },
+    {
+      "type": "ListDiscoveryConfigsResponse"
+    },
+    {
+      "type": "DeleteDiscoveryConfigRequest"
+    },
+    {
+      "type": "CreateDlpJobRequest"
+    },
+    {
+      "type": "ListJobTriggersRequest"
+    },
+    {
+      "type": "ListJobTriggersResponse"
+    },
+    {
+      "type": "DeleteJobTriggerRequest"
+    },
+    {
+      "type": "InspectJobConfig"
+    },
+    {
+      "type": "DataProfileAction",
+      "msgs": [
+        {
+          "type": "Export"
+        },
+        {
+          "type": "PubSubNotification"
+        }
+      ]
+    },
+    {
+      "type": "DataProfileJobConfig"
+    },
+    {
+      "type": "BigQueryRegex"
+    },
+    {
+      "type": "BigQueryRegexes"
+    },
+    {
+      "type": "BigQueryTableTypes"
+    },
+    {
+      "type": "Disabled"
+    },
+    {
+      "type": "DataProfileLocation"
+    },
+    {
+      "type": "DiscoveryConfig",
+      "msgs": [
+        {
+          "type": "OrgConfig"
+        }
+      ]
+    },
+    {
+      "type": "DiscoveryTarget"
+    },
+    {
+      "type": "BigQueryDiscoveryTarget"
+    },
+    {
+      "type": "DiscoveryBigQueryFilter",
+      "msgs": [
+        {
+          "type": "AllOtherBigQueryTables"
+        }
+      ]
+    },
+    {
+      "type": "BigQueryTableCollection"
+    },
+    {
+      "type": "DiscoveryBigQueryConditions",
+      "msgs": [
+        {
+          "type": "OrConditions"
+        }
+      ]
+    },
+    {
+      "type": "DiscoveryGenerationCadence"
+    },
+    {
+      "type": "DiscoveryTableModifiedCadence"
+    },
+    {
+      "type": "DiscoverySchemaModifiedCadence"
+    },
+    {
+      "type": "DiscoveryInspectTemplateModifiedCadence"
+    },
+    {
+      "type": "CloudSqlDiscoveryTarget"
+    },
+    {
+      "type": "DiscoveryCloudSqlFilter"
+    },
+    {
+      "type": "DatabaseResourceCollection"
+    },
+    {
+      "type": "DatabaseResourceRegexes"
+    },
+    {
+      "type": "DatabaseResourceRegex"
+    },
+    {
+      "type": "AllOtherDatabaseResources"
+    },
+    {
+      "type": "DatabaseResourceReference"
+    },
+    {
+      "type": "DiscoveryCloudSqlConditions"
+    },
+    {
+      "type": "DiscoveryCloudSqlGenerationCadence",
+      "msgs": [
+        {
+          "type": "SchemaModifiedCadence"
+        }
+      ]
+    },
+    {
+      "type": "SecretsDiscoveryTarget"
+    },
+    {
+      "type": "CloudStorageDiscoveryTarget"
+    },
+    {
+      "type": "DiscoveryCloudStorageFilter"
+    },
+    {
+      "type": "FileStoreCollection"
+    },
+    {
+      "type": "FileStoreRegexes"
+    },
+    {
+      "type": "FileStoreRegex"
+    },
+    {
+      "type": "CloudStorageRegex"
+    },
+    {
+      "type": "CloudStorageResourceReference"
+    },
+    {
+      "type": "DiscoveryCloudStorageGenerationCadence"
+    },
+    {
+      "type": "DiscoveryCloudStorageConditions"
+    },
+    {
+      "type": "DiscoveryFileStoreConditions"
+    },
+    {
+      "type": "DiscoveryStartingLocation"
+    },
+    {
+      "type": "AllOtherResources"
+    },
+    {
+      "type": "DlpJob"
+    },
+    {
+      "type": "GetDlpJobRequest"
+    },
+    {
+      "type": "ListDlpJobsRequest"
+    },
+    {
+      "type": "ListDlpJobsResponse"
+    },
+    {
+      "type": "CancelDlpJobRequest"
+    },
+    {
+      "type": "FinishDlpJobRequest"
+    },
+    {
+      "type": "DeleteDlpJobRequest"
+    },
+    {
+      "type": "CreateDeidentifyTemplateRequest"
+    },
+    {
+      "type": "UpdateDeidentifyTemplateRequest"
+    },
+    {
+      "type": "GetDeidentifyTemplateRequest"
+    },
+    {
+      "type": "ListDeidentifyTemplatesRequest"
+    },
+    {
+      "type": "ListDeidentifyTemplatesResponse"
+    },
+    {
+      "type": "DeleteDeidentifyTemplateRequest"
+    },
+    {
+      "type": "LargeCustomDictionaryConfig"
+    },
+    {
+      "type": "LargeCustomDictionaryStats"
+    },
+    {
+      "type": "StoredInfoTypeConfig"
+    },
+    {
+      "type": "StoredInfoTypeStats"
+    },
+    {
+      "type": "StoredInfoTypeVersion"
+    },
+    {
+      "type": "StoredInfoType"
+    },
+    {
+      "type": "CreateStoredInfoTypeRequest"
+    },
+    {
+      "type": "UpdateStoredInfoTypeRequest"
+    },
+    {
+      "type": "GetStoredInfoTypeRequest"
+    },
+    {
+      "type": "ListStoredInfoTypesRequest"
+    },
+    {
+      "type": "ListStoredInfoTypesResponse"
+    },
+    {
+      "type": "DeleteStoredInfoTypeRequest"
+    },
+    {
+      "type": "HybridInspectJobTriggerRequest"
+    },
+    {
+      "type": "HybridInspectDlpJobRequest"
+    },
+    {
+      "type": "HybridContentItem"
+    },
+    {
+      "type": "HybridFindingDetails"
+    },
+    {
+      "type": "HybridInspectResponse"
+    },
+    {
+      "type": "ListProjectDataProfilesRequest"
+    },
+    {
+      "type": "ListProjectDataProfilesResponse"
+    },
+    {
+      "type": "ListTableDataProfilesRequest"
+    },
+    {
+      "type": "ListTableDataProfilesResponse"
+    },
+    {
+      "type": "ListColumnDataProfilesRequest"
+    },
+    {
+      "type": "ListColumnDataProfilesResponse"
+    },
+    {
+      "type": "DataRiskLevel"
+    },
+    {
+      "type": "ProjectDataProfile"
+    },
+    {
+      "type": "DataProfileConfigSnapshot"
+    },
+    {
+      "type": "TableDataProfile"
+    },
+    {
+      "type": "ProfileStatus"
+    },
+    {
+      "type": "InfoTypeSummary"
+    },
+    {
+      "type": "OtherInfoTypeSummary"
+    },
+    {
+      "type": "ColumnDataProfile"
+    },
+    {
+      "type": "FileStoreDataProfile"
+    },
+    {
+      "type": "FileStoreInfoTypeSummary"
+    },
+    {
+      "type": "FileExtensionInfo"
+    },
+    {
+      "type": "FileClusterSummary"
+    },
+    {
+      "type": "GetProjectDataProfileRequest"
+    },
+    {
+      "type": "GetFileStoreDataProfileRequest"
+    },
+    {
+      "type": "ListFileStoreDataProfilesRequest"
+    },
+    {
+      "type": "ListFileStoreDataProfilesResponse"
+    },
+    {
+      "type": "DeleteFileStoreDataProfileRequest"
+    },
+    {
+      "type": "GetTableDataProfileRequest"
+    },
+    {
+      "type": "GetColumnDataProfileRequest"
+    },
+    {
+      "type": "DataProfilePubSubCondition",
+      "msgs": [
+        {
+          "type": "PubSubCondition"
+        },
+        {
+          "type": "PubSubExpressions"
+        }
+      ]
+    },
+    {
+      "type": "DataProfilePubSubMessage"
+    },
+    {
+      "type": "CreateConnectionRequest"
+    },
+    {
+      "type": "GetConnectionRequest"
+    },
+    {
+      "type": "ListConnectionsRequest"
+    },
+    {
+      "type": "SearchConnectionsRequest"
+    },
+    {
+      "type": "ListConnectionsResponse"
+    },
+    {
+      "type": "SearchConnectionsResponse"
+    },
+    {
+      "type": "UpdateConnectionRequest"
+    },
+    {
+      "type": "DeleteConnectionRequest"
+    },
+    {
+      "type": "Connection"
+    },
+    {
+      "type": "SecretManagerCredential"
+    },
+    {
+      "type": "CloudSqlIamCredential"
+    },
+    {
+      "type": "CloudSqlProperties"
+    },
+    {
+      "type": "DeleteTableDataProfileRequest"
+    },
+    {
+      "type": "DataSourceType"
+    },
+    {
+      "type": "FileClusterType"
+    }
+  ],
+  "go": {
+    "src": "dlp/apiv2/dlppb/dlp.pb.go",
+    "pkg": "dlppb",
+    "pkg_full": "cloud.google.com/go/dlp/apiv2/dlppb"
+  }
+}
+{
+  "proto": "google/privacy/dlp/v2/storage",
+  "pkg": "google.privacy.dlp.v2",
+  "msgs": [
+    {
+      "type": "InfoType"
+    },
+    {
+      "type": "SensitivityScore"
+    },
+    {
+      "type": "StoredType"
+    },
+    {
+      "type": "CustomInfoType",
+      "msgs": [
+        {
+          "type": "Dictionary"
+        },
+        {
+          "type": "WordList"
+        },
+        {
+          "type": "Regex"
+        },
+        {
+          "type": "SurrogateType"
+        },
+        {
+          "type": "DetectionRule"
+        },
+        {
+          "type": "Proximity"
+        },
+        {
+          "type": "LikelihoodAdjustment"
+        },
+        {
+          "type": "HotwordRule"
+        }
+      ]
+    },
+    {
+      "type": "FieldId"
+    },
+    {
+      "type": "PartitionId"
+    },
+    {
+      "type": "KindExpression"
+    },
+    {
+      "type": "DatastoreOptions"
+    },
+    {
+      "type": "CloudStorageRegexFileSet"
+    },
+    {
+      "type": "CloudStorageOptions",
+      "msgs": [
+        {
+          "type": "FileSet"
+        }
+      ]
+    },
+    {
+      "type": "CloudStorageFileSet"
+    },
+    {
+      "type": "CloudStoragePath"
+    },
+    {
+      "type": "BigQueryOptions"
+    },
+    {
+      "type": "StorageConfig",
+      "msgs": [
+        {
+          "type": "TimespanConfig"
+        }
+      ]
+    },
+    {
+      "type": "HybridOptions"
+    },
+    {
+      "type": "BigQueryKey"
+    },
+    {
+      "type": "DatastoreKey"
+    },
+    {
+      "type": "Key",
+      "msgs": [
+        {
+          "type": "PathElement"
+        }
+      ]
+    },
+    {
+      "type": "RecordKey"
+    },
+    {
+      "type": "BigQueryTable"
+    },
+    {
+      "type": "TableReference"
+    },
+    {
+      "type": "BigQueryField"
+    },
+    {
+      "type": "EntityId"
+    },
+    {
+      "type": "TableOptions"
+    }
+  ],
+  "go": {
+    "src": "dlp/apiv2/dlppb/storage.pb.go",
+    "pkg": "dlppb",
+    "pkg_full": "cloud.google.com/go/dlp/apiv2/dlppb"
+  }
+}

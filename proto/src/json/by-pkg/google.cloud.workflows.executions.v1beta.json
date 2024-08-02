@@ -1,0 +1,78 @@
+{
+  "proto": "google/cloud/workflows/executions/v1beta/executions",
+  "pkg": "google.cloud.workflows.executions.v1beta",
+  "svcs": [
+    {
+      "svc": "Executions",
+      "host": "workflowexecutions.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListExecutions",
+          "request": {
+            "type": "ListExecutionsRequest"
+          },
+          "response": {
+            "type": "ListExecutionsResponse"
+          }
+        },
+        {
+          "method": "CreateExecution",
+          "request": {
+            "type": "CreateExecutionRequest"
+          },
+          "response": {
+            "type": "Execution"
+          }
+        },
+        {
+          "method": "GetExecution",
+          "request": {
+            "type": "GetExecutionRequest"
+          },
+          "response": {
+            "type": "Execution"
+          }
+        },
+        {
+          "method": "CancelExecution",
+          "request": {
+            "type": "CancelExecutionRequest"
+          },
+          "response": {
+            "type": "Execution"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Execution",
+      "msgs": [
+        {
+          "type": "Error"
+        }
+      ]
+    },
+    {
+      "type": "ListExecutionsRequest"
+    },
+    {
+      "type": "ListExecutionsResponse"
+    },
+    {
+      "type": "CreateExecutionRequest"
+    },
+    {
+      "type": "GetExecutionRequest"
+    },
+    {
+      "type": "CancelExecutionRequest"
+    }
+  ],
+  "go": {
+    "src": "workflows/executions/apiv1beta/executionspb/executions.pb.go",
+    "pkg": "executionspb",
+    "pkg_full": "cloud.google.com/go/workflows/executions/apiv1beta/executionspb"
+  }
+}

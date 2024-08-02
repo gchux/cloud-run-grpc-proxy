@@ -1,0 +1,221 @@
+{
+  "proto": "google/datastore/v1beta3/datastore",
+  "pkg": "google.datastore.v1beta3",
+  "svcs": [
+    {
+      "svc": "Datastore",
+      "rpcs": [
+        {
+          "method": "Lookup",
+          "request": {
+            "type": "LookupRequest"
+          },
+          "response": {
+            "type": "LookupResponse"
+          }
+        },
+        {
+          "method": "RunQuery",
+          "request": {
+            "type": "RunQueryRequest"
+          },
+          "response": {
+            "type": "RunQueryResponse"
+          }
+        },
+        {
+          "method": "BeginTransaction",
+          "request": {
+            "type": "BeginTransactionRequest"
+          },
+          "response": {
+            "type": "BeginTransactionResponse"
+          }
+        },
+        {
+          "method": "Commit",
+          "request": {
+            "type": "CommitRequest"
+          },
+          "response": {
+            "type": "CommitResponse"
+          }
+        },
+        {
+          "method": "Rollback",
+          "request": {
+            "type": "RollbackRequest"
+          },
+          "response": {
+            "type": "RollbackResponse"
+          }
+        },
+        {
+          "method": "AllocateIds",
+          "request": {
+            "type": "AllocateIdsRequest"
+          },
+          "response": {
+            "type": "AllocateIdsResponse"
+          }
+        },
+        {
+          "method": "ReserveIds",
+          "request": {
+            "type": "ReserveIdsRequest"
+          },
+          "response": {
+            "type": "ReserveIdsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "LookupRequest"
+    },
+    {
+      "type": "LookupResponse"
+    },
+    {
+      "type": "RunQueryRequest"
+    },
+    {
+      "type": "RunQueryResponse"
+    },
+    {
+      "type": "BeginTransactionRequest"
+    },
+    {
+      "type": "BeginTransactionResponse"
+    },
+    {
+      "type": "RollbackRequest"
+    },
+    {
+      "type": "RollbackResponse"
+    },
+    {
+      "type": "CommitRequest"
+    },
+    {
+      "type": "CommitResponse"
+    },
+    {
+      "type": "AllocateIdsRequest"
+    },
+    {
+      "type": "AllocateIdsResponse"
+    },
+    {
+      "type": "ReserveIdsRequest"
+    },
+    {
+      "type": "ReserveIdsResponse"
+    },
+    {
+      "type": "Mutation"
+    },
+    {
+      "type": "MutationResult"
+    },
+    {
+      "type": "ReadOptions"
+    },
+    {
+      "type": "TransactionOptions",
+      "msgs": [
+        {
+          "type": "ReadWrite"
+        },
+        {
+          "type": "ReadOnly"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/datastore/v1beta3/datastore.pb.go",
+    "pkg": "datastorepb",
+    "pkg_full": "cloud.google.com/go/datastore/apiv1beta3/datastorepb"
+  }
+}
+{
+  "proto": "google/datastore/v1beta3/query",
+  "pkg": "google.datastore.v1beta3",
+  "msgs": [
+    {
+      "type": "EntityResult"
+    },
+    {
+      "type": "Query"
+    },
+    {
+      "type": "KindExpression"
+    },
+    {
+      "type": "PropertyReference"
+    },
+    {
+      "type": "Projection"
+    },
+    {
+      "type": "PropertyOrder"
+    },
+    {
+      "type": "Filter"
+    },
+    {
+      "type": "CompositeFilter"
+    },
+    {
+      "type": "PropertyFilter"
+    },
+    {
+      "type": "GqlQuery"
+    },
+    {
+      "type": "GqlQueryParameter"
+    },
+    {
+      "type": "QueryResultBatch"
+    }
+  ],
+  "go": {
+    "src": "googleapis/datastore/v1beta3/query.pb.go",
+    "pkg": "datastorepb",
+    "pkg_full": "cloud.google.com/go/datastore/apiv1beta3/datastorepb"
+  }
+}
+{
+  "proto": "google/datastore/v1beta3/entity",
+  "pkg": "google.datastore.v1beta3",
+  "msgs": [
+    {
+      "type": "PartitionId"
+    },
+    {
+      "type": "Key",
+      "msgs": [
+        {
+          "type": "PathElement"
+        }
+      ]
+    },
+    {
+      "type": "ArrayValue"
+    },
+    {
+      "type": "Value"
+    },
+    {
+      "type": "Entity"
+    }
+  ],
+  "go": {
+    "src": "googleapis/datastore/v1beta3/entity.pb.go",
+    "pkg": "datastorepb",
+    "pkg_full": "cloud.google.com/go/datastore/apiv1beta3/datastorepb"
+  }
+}

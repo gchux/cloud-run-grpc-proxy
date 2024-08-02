@@ -1,0 +1,170 @@
+{
+  "proto": "google/cloud/language/v1/language_service",
+  "pkg": "google.cloud.language.v1",
+  "svcs": [
+    {
+      "svc": "LanguageService",
+      "host": "language.googleapis.com",
+      "rpcs": [
+        {
+          "method": "AnalyzeSentiment",
+          "request": {
+            "type": "AnalyzeSentimentRequest"
+          },
+          "response": {
+            "type": "AnalyzeSentimentResponse"
+          }
+        },
+        {
+          "method": "AnalyzeEntities",
+          "request": {
+            "type": "AnalyzeEntitiesRequest"
+          },
+          "response": {
+            "type": "AnalyzeEntitiesResponse"
+          }
+        },
+        {
+          "method": "AnalyzeEntitySentiment",
+          "request": {
+            "type": "AnalyzeEntitySentimentRequest"
+          },
+          "response": {
+            "type": "AnalyzeEntitySentimentResponse"
+          }
+        },
+        {
+          "method": "AnalyzeSyntax",
+          "request": {
+            "type": "AnalyzeSyntaxRequest"
+          },
+          "response": {
+            "type": "AnalyzeSyntaxResponse"
+          }
+        },
+        {
+          "method": "ClassifyText",
+          "request": {
+            "type": "ClassifyTextRequest"
+          },
+          "response": {
+            "type": "ClassifyTextResponse"
+          }
+        },
+        {
+          "method": "ModerateText",
+          "request": {
+            "type": "ModerateTextRequest"
+          },
+          "response": {
+            "type": "ModerateTextResponse"
+          }
+        },
+        {
+          "method": "AnnotateText",
+          "request": {
+            "type": "AnnotateTextRequest"
+          },
+          "response": {
+            "type": "AnnotateTextResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Document"
+    },
+    {
+      "type": "Sentence"
+    },
+    {
+      "type": "Entity"
+    },
+    {
+      "type": "Token"
+    },
+    {
+      "type": "Sentiment"
+    },
+    {
+      "type": "PartOfSpeech"
+    },
+    {
+      "type": "DependencyEdge"
+    },
+    {
+      "type": "EntityMention"
+    },
+    {
+      "type": "TextSpan"
+    },
+    {
+      "type": "ClassificationCategory"
+    },
+    {
+      "type": "ClassificationModelOptions",
+      "msgs": [
+        {
+          "type": "V1Model"
+        },
+        {
+          "type": "V2Model"
+        }
+      ]
+    },
+    {
+      "type": "AnalyzeSentimentRequest"
+    },
+    {
+      "type": "AnalyzeSentimentResponse"
+    },
+    {
+      "type": "AnalyzeEntitySentimentRequest"
+    },
+    {
+      "type": "AnalyzeEntitySentimentResponse"
+    },
+    {
+      "type": "AnalyzeEntitiesRequest"
+    },
+    {
+      "type": "AnalyzeEntitiesResponse"
+    },
+    {
+      "type": "AnalyzeSyntaxRequest"
+    },
+    {
+      "type": "AnalyzeSyntaxResponse"
+    },
+    {
+      "type": "ClassifyTextRequest"
+    },
+    {
+      "type": "ClassifyTextResponse"
+    },
+    {
+      "type": "ModerateTextRequest"
+    },
+    {
+      "type": "ModerateTextResponse"
+    },
+    {
+      "type": "AnnotateTextRequest",
+      "msgs": [
+        {
+          "type": "Features"
+        }
+      ]
+    },
+    {
+      "type": "AnnotateTextResponse"
+    }
+  ],
+  "go": {
+    "src": "language/apiv1/languagepb/language_service.pb.go",
+    "pkg": "languagepb",
+    "pkg_full": "cloud.google.com/go/language/apiv1/languagepb"
+  }
+}

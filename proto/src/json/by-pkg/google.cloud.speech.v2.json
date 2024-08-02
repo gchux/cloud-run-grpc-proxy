@@ -1,0 +1,471 @@
+{
+  "proto": "google/cloud/speech/v2/cloud_speech",
+  "pkg": "google.cloud.speech.v2",
+  "svcs": [
+    {
+      "svc": "Speech",
+      "host": "speech.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateRecognizer",
+          "request": {
+            "type": "CreateRecognizerRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListRecognizers",
+          "request": {
+            "type": "ListRecognizersRequest"
+          },
+          "response": {
+            "type": "ListRecognizersResponse"
+          }
+        },
+        {
+          "method": "GetRecognizer",
+          "request": {
+            "type": "GetRecognizerRequest"
+          },
+          "response": {
+            "type": "Recognizer"
+          }
+        },
+        {
+          "method": "UpdateRecognizer",
+          "request": {
+            "type": "UpdateRecognizerRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteRecognizer",
+          "request": {
+            "type": "DeleteRecognizerRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UndeleteRecognizer",
+          "request": {
+            "type": "UndeleteRecognizerRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "Recognize",
+          "request": {
+            "type": "RecognizeRequest"
+          },
+          "response": {
+            "type": "RecognizeResponse"
+          }
+        },
+        {
+          "method": "StreamingRecognize",
+          "request": {
+            "type": "StreamingRecognizeRequest",
+            "stream": true
+          },
+          "response": {
+            "type": "StreamingRecognizeResponse",
+            "stream": true
+          }
+        },
+        {
+          "method": "BatchRecognize",
+          "request": {
+            "type": "BatchRecognizeRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetConfig",
+          "request": {
+            "type": "GetConfigRequest"
+          },
+          "response": {
+            "type": "Config"
+          }
+        },
+        {
+          "method": "UpdateConfig",
+          "request": {
+            "type": "UpdateConfigRequest"
+          },
+          "response": {
+            "type": "Config"
+          }
+        },
+        {
+          "method": "CreateCustomClass",
+          "request": {
+            "type": "CreateCustomClassRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListCustomClasses",
+          "request": {
+            "type": "ListCustomClassesRequest"
+          },
+          "response": {
+            "type": "ListCustomClassesResponse"
+          }
+        },
+        {
+          "method": "GetCustomClass",
+          "request": {
+            "type": "GetCustomClassRequest"
+          },
+          "response": {
+            "type": "CustomClass"
+          }
+        },
+        {
+          "method": "UpdateCustomClass",
+          "request": {
+            "type": "UpdateCustomClassRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteCustomClass",
+          "request": {
+            "type": "DeleteCustomClassRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UndeleteCustomClass",
+          "request": {
+            "type": "UndeleteCustomClassRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CreatePhraseSet",
+          "request": {
+            "type": "CreatePhraseSetRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListPhraseSets",
+          "request": {
+            "type": "ListPhraseSetsRequest"
+          },
+          "response": {
+            "type": "ListPhraseSetsResponse"
+          }
+        },
+        {
+          "method": "GetPhraseSet",
+          "request": {
+            "type": "GetPhraseSetRequest"
+          },
+          "response": {
+            "type": "PhraseSet"
+          }
+        },
+        {
+          "method": "UpdatePhraseSet",
+          "request": {
+            "type": "UpdatePhraseSetRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeletePhraseSet",
+          "request": {
+            "type": "DeletePhraseSetRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UndeletePhraseSet",
+          "request": {
+            "type": "UndeletePhraseSetRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateRecognizerRequest"
+    },
+    {
+      "type": "OperationMetadata"
+    },
+    {
+      "type": "ListRecognizersRequest"
+    },
+    {
+      "type": "ListRecognizersResponse"
+    },
+    {
+      "type": "GetRecognizerRequest"
+    },
+    {
+      "type": "UpdateRecognizerRequest"
+    },
+    {
+      "type": "DeleteRecognizerRequest"
+    },
+    {
+      "type": "UndeleteRecognizerRequest"
+    },
+    {
+      "type": "Recognizer"
+    },
+    {
+      "type": "AutoDetectDecodingConfig"
+    },
+    {
+      "type": "ExplicitDecodingConfig"
+    },
+    {
+      "type": "SpeakerDiarizationConfig"
+    },
+    {
+      "type": "RecognitionFeatures"
+    },
+    {
+      "type": "TranscriptNormalization",
+      "msgs": [
+        {
+          "type": "Entry"
+        }
+      ]
+    },
+    {
+      "type": "TranslationConfig"
+    },
+    {
+      "type": "SpeechAdaptation",
+      "msgs": [
+        {
+          "type": "AdaptationPhraseSet"
+        }
+      ]
+    },
+    {
+      "type": "RecognitionConfig"
+    },
+    {
+      "type": "RecognizeRequest"
+    },
+    {
+      "type": "RecognitionResponseMetadata"
+    },
+    {
+      "type": "SpeechRecognitionAlternative"
+    },
+    {
+      "type": "WordInfo"
+    },
+    {
+      "type": "SpeechRecognitionResult"
+    },
+    {
+      "type": "RecognizeResponse"
+    },
+    {
+      "type": "StreamingRecognitionFeatures",
+      "msgs": [
+        {
+          "type": "VoiceActivityTimeout"
+        }
+      ]
+    },
+    {
+      "type": "StreamingRecognitionConfig"
+    },
+    {
+      "type": "StreamingRecognizeRequest"
+    },
+    {
+      "type": "BatchRecognizeRequest"
+    },
+    {
+      "type": "GcsOutputConfig"
+    },
+    {
+      "type": "InlineOutputConfig"
+    },
+    {
+      "type": "NativeOutputFileFormatConfig"
+    },
+    {
+      "type": "VttOutputFileFormatConfig"
+    },
+    {
+      "type": "SrtOutputFileFormatConfig"
+    },
+    {
+      "type": "OutputFormatConfig"
+    },
+    {
+      "type": "RecognitionOutputConfig"
+    },
+    {
+      "type": "BatchRecognizeResponse"
+    },
+    {
+      "type": "BatchRecognizeResults"
+    },
+    {
+      "type": "CloudStorageResult"
+    },
+    {
+      "type": "InlineResult"
+    },
+    {
+      "type": "BatchRecognizeFileResult"
+    },
+    {
+      "type": "BatchRecognizeTranscriptionMetadata"
+    },
+    {
+      "type": "BatchRecognizeMetadata"
+    },
+    {
+      "type": "BatchRecognizeFileMetadata"
+    },
+    {
+      "type": "StreamingRecognitionResult"
+    },
+    {
+      "type": "StreamingRecognizeResponse"
+    },
+    {
+      "type": "Config"
+    },
+    {
+      "type": "GetConfigRequest"
+    },
+    {
+      "type": "UpdateConfigRequest"
+    },
+    {
+      "type": "CustomClass",
+      "msgs": [
+        {
+          "type": "ClassItem"
+        }
+      ]
+    },
+    {
+      "type": "PhraseSet",
+      "msgs": [
+        {
+          "type": "Phrase"
+        }
+      ]
+    },
+    {
+      "type": "CreateCustomClassRequest"
+    },
+    {
+      "type": "ListCustomClassesRequest"
+    },
+    {
+      "type": "ListCustomClassesResponse"
+    },
+    {
+      "type": "GetCustomClassRequest"
+    },
+    {
+      "type": "UpdateCustomClassRequest"
+    },
+    {
+      "type": "DeleteCustomClassRequest"
+    },
+    {
+      "type": "UndeleteCustomClassRequest"
+    },
+    {
+      "type": "CreatePhraseSetRequest"
+    },
+    {
+      "type": "ListPhraseSetsRequest"
+    },
+    {
+      "type": "ListPhraseSetsResponse"
+    },
+    {
+      "type": "GetPhraseSetRequest"
+    },
+    {
+      "type": "UpdatePhraseSetRequest"
+    },
+    {
+      "type": "DeletePhraseSetRequest"
+    },
+    {
+      "type": "UndeletePhraseSetRequest"
+    }
+  ],
+  "go": {
+    "src": "speech/apiv2/speechpb/cloud_speech.pb.go",
+    "pkg": "speechpb",
+    "pkg_full": "cloud.google.com/go/speech/apiv2/speechpb"
+  }
+}
+{
+  "proto": "google/cloud/speech/v2/locations_metadata",
+  "pkg": "google.cloud.speech.v2",
+  "msgs": [
+    {
+      "type": "ModelFeature"
+    },
+    {
+      "type": "ModelFeatures"
+    },
+    {
+      "type": "ModelMetadata"
+    },
+    {
+      "type": "LanguageMetadata"
+    },
+    {
+      "type": "AccessMetadata"
+    },
+    {
+      "type": "LocationsMetadata"
+    }
+  ],
+  "go": {
+    "src": "speech/apiv2/speechpb/locations_metadata.pb.go",
+    "pkg": "speechpb",
+    "pkg_full": "cloud.google.com/go/speech/apiv2/speechpb"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "proto": "google/cloud/video/livestream/logging/v1/logs",
+  "pkg": "google.cloud.video.livestream.logging.v1",
+  "msgs": [
+    {
+      "type": "ChannelActivity"
+    },
+    {
+      "type": "StreamingStateChange"
+    },
+    {
+      "type": "StreamingError"
+    },
+    {
+      "type": "InputAccept"
+    },
+    {
+      "type": "InputError"
+    },
+    {
+      "type": "InputStreamProperty"
+    },
+    {
+      "type": "VideoStream"
+    },
+    {
+      "type": "VideoFormat"
+    },
+    {
+      "type": "AudioStream"
+    },
+    {
+      "type": "AudioFormat"
+    },
+    {
+      "type": "InputDisconnect"
+    },
+    {
+      "type": "EventStateChange"
+    },
+    {
+      "type": "Scte35Command",
+      "msgs": [
+        {
+          "type": "SpliceTime"
+        },
+        {
+          "type": "BreakDuration"
+        },
+        {
+          "type": "Component"
+        },
+        {
+          "type": "SpliceInsert"
+        },
+        {
+          "type": "SpliceInfoSection"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/video/livestream/logging/v1/logs.pb.go",
+    "pkg": "loggingpb",
+    "pkg_full": "cloud.google.com/go/video/livestream/logging/apiv1/loggingpb"
+  }
+}

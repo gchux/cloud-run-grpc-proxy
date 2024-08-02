@@ -1,0 +1,31 @@
+{
+  "proto": "google/devtools/containeranalysis/v1beta1/attestation/attestation",
+  "pkg": "grafeas.v1beta1.attestation",
+  "msgs": [
+    {
+      "type": "PgpSignedAttestation"
+    },
+    {
+      "type": "GenericSignedAttestation"
+    },
+    {
+      "type": "Authority",
+      "msgs": [
+        {
+          "type": "Hint"
+        }
+      ]
+    },
+    {
+      "type": "Details"
+    },
+    {
+      "type": "Attestation"
+    }
+  ],
+  "go": {
+    "src": "googleapis/devtools/containeranalysis/v1beta1/attestation/attestation.pb.go",
+    "pkg": "containeranalysispb",
+    "pkg_full": "cloud.google.com/go/containeranalysis/apiv1beta1/containeranalysispb"
+  }
+}

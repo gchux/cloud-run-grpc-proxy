@@ -1,0 +1,105 @@
+{
+  "proto": "google/iam/v2beta/deny",
+  "pkg": "google.iam.v2beta",
+  "msgs": [
+    {
+      "type": "DenyRule"
+    }
+  ],
+  "go": {
+    "src": "googleapis/iam/v2beta/deny.pb.go",
+    "pkg": "iampb",
+    "pkg_full": "cloud.google.com/go/iam/apiv2beta/iampb"
+  }
+}
+{
+  "proto": "google/iam/v2beta/policy",
+  "pkg": "google.iam.v2beta",
+  "svcs": [
+    {
+      "svc": "Policies",
+      "host": "iam.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListPolicies",
+          "request": {
+            "type": "ListPoliciesRequest"
+          },
+          "response": {
+            "type": "ListPoliciesResponse"
+          }
+        },
+        {
+          "method": "GetPolicy",
+          "request": {
+            "type": "GetPolicyRequest"
+          },
+          "response": {
+            "type": "Policy"
+          }
+        },
+        {
+          "method": "CreatePolicy",
+          "request": {
+            "type": "CreatePolicyRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdatePolicy",
+          "request": {
+            "type": "UpdatePolicyRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeletePolicy",
+          "request": {
+            "type": "DeletePolicyRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Policy"
+    },
+    {
+      "type": "PolicyRule"
+    },
+    {
+      "type": "ListPoliciesRequest"
+    },
+    {
+      "type": "ListPoliciesResponse"
+    },
+    {
+      "type": "GetPolicyRequest"
+    },
+    {
+      "type": "CreatePolicyRequest"
+    },
+    {
+      "type": "UpdatePolicyRequest"
+    },
+    {
+      "type": "DeletePolicyRequest"
+    },
+    {
+      "type": "PolicyOperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "googleapis/iam/v2beta/policy.pb.go",
+    "pkg": "iampb",
+    "pkg_full": "cloud.google.com/go/iam/apiv2beta/iampb"
+  }
+}

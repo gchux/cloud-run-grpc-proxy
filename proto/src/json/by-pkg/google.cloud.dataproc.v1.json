@@ -1,0 +1,1036 @@
+{
+  "proto": "google/cloud/dataproc/v1/batches",
+  "pkg": "google.cloud.dataproc.v1",
+  "svcs": [
+    {
+      "svc": "BatchController",
+      "host": "dataproc.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateBatch",
+          "request": {
+            "type": "CreateBatchRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetBatch",
+          "request": {
+            "type": "GetBatchRequest"
+          },
+          "response": {
+            "type": "Batch"
+          }
+        },
+        {
+          "method": "ListBatches",
+          "request": {
+            "type": "ListBatchesRequest"
+          },
+          "response": {
+            "type": "ListBatchesResponse"
+          }
+        },
+        {
+          "method": "DeleteBatch",
+          "request": {
+            "type": "DeleteBatchRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateBatchRequest"
+    },
+    {
+      "type": "GetBatchRequest"
+    },
+    {
+      "type": "ListBatchesRequest"
+    },
+    {
+      "type": "ListBatchesResponse"
+    },
+    {
+      "type": "DeleteBatchRequest"
+    },
+    {
+      "type": "Batch",
+      "msgs": [
+        {
+          "type": "StateHistory"
+        }
+      ]
+    },
+    {
+      "type": "PySparkBatch"
+    },
+    {
+      "type": "SparkBatch"
+    },
+    {
+      "type": "SparkRBatch"
+    },
+    {
+      "type": "SparkSqlBatch"
+    }
+  ],
+  "go": {
+    "src": "dataproc/apiv1/dataprocpb/batches.pb.go",
+    "pkg": "dataprocpb",
+    "pkg_full": "cloud.google.com/go/dataproc/v2/apiv1/dataprocpb"
+  }
+}
+{
+  "proto": "google/cloud/dataproc/v1/operations",
+  "pkg": "google.cloud.dataproc.v1",
+  "msgs": [
+    {
+      "type": "BatchOperationMetadata"
+    },
+    {
+      "type": "SessionOperationMetadata"
+    },
+    {
+      "type": "ClusterOperationStatus"
+    },
+    {
+      "type": "ClusterOperationMetadata"
+    },
+    {
+      "type": "NodeGroupOperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "dataproc/apiv1/dataprocpb/operations.pb.go",
+    "pkg": "dataprocpb",
+    "pkg_full": "cloud.google.com/go/dataproc/v2/apiv1/dataprocpb"
+  }
+}
+{
+  "proto": "google/cloud/dataproc/v1/session_templates",
+  "pkg": "google.cloud.dataproc.v1",
+  "svcs": [
+    {
+      "svc": "SessionTemplateController",
+      "host": "dataproc.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateSessionTemplate",
+          "request": {
+            "type": "CreateSessionTemplateRequest"
+          },
+          "response": {
+            "type": "SessionTemplate"
+          }
+        },
+        {
+          "method": "UpdateSessionTemplate",
+          "request": {
+            "type": "UpdateSessionTemplateRequest"
+          },
+          "response": {
+            "type": "SessionTemplate"
+          }
+        },
+        {
+          "method": "GetSessionTemplate",
+          "request": {
+            "type": "GetSessionTemplateRequest"
+          },
+          "response": {
+            "type": "SessionTemplate"
+          }
+        },
+        {
+          "method": "ListSessionTemplates",
+          "request": {
+            "type": "ListSessionTemplatesRequest"
+          },
+          "response": {
+            "type": "ListSessionTemplatesResponse"
+          }
+        },
+        {
+          "method": "DeleteSessionTemplate",
+          "request": {
+            "type": "DeleteSessionTemplateRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateSessionTemplateRequest"
+    },
+    {
+      "type": "UpdateSessionTemplateRequest"
+    },
+    {
+      "type": "GetSessionTemplateRequest"
+    },
+    {
+      "type": "ListSessionTemplatesRequest"
+    },
+    {
+      "type": "ListSessionTemplatesResponse"
+    },
+    {
+      "type": "DeleteSessionTemplateRequest"
+    },
+    {
+      "type": "SessionTemplate"
+    }
+  ],
+  "go": {
+    "src": "dataproc/apiv1/dataprocpb/session_templates.pb.go",
+    "pkg": "dataprocpb",
+    "pkg_full": "cloud.google.com/go/dataproc/v2/apiv1/dataprocpb"
+  }
+}
+{
+  "proto": "google/cloud/dataproc/v1/shared",
+  "pkg": "google.cloud.dataproc.v1",
+  "msgs": [
+    {
+      "type": "RuntimeConfig"
+    },
+    {
+      "type": "EnvironmentConfig"
+    },
+    {
+      "type": "ExecutionConfig"
+    },
+    {
+      "type": "SparkHistoryServerConfig"
+    },
+    {
+      "type": "PeripheralsConfig"
+    },
+    {
+      "type": "RuntimeInfo"
+    },
+    {
+      "type": "UsageMetrics"
+    },
+    {
+      "type": "UsageSnapshot"
+    },
+    {
+      "type": "GkeClusterConfig"
+    },
+    {
+      "type": "KubernetesClusterConfig"
+    },
+    {
+      "type": "KubernetesSoftwareConfig"
+    },
+    {
+      "type": "GkeNodePoolTarget"
+    },
+    {
+      "type": "GkeNodePoolConfig",
+      "msgs": [
+        {
+          "type": "GkeNodeConfig"
+        },
+        {
+          "type": "GkeNodePoolAcceleratorConfig"
+        },
+        {
+          "type": "GkeNodePoolAutoscalingConfig"
+        }
+      ]
+    },
+    {
+      "type": "AutotuningConfig"
+    },
+    {
+      "type": "RepositoryConfig"
+    },
+    {
+      "type": "PyPiRepositoryConfig"
+    }
+  ],
+  "go": {
+    "src": "dataproc/apiv1/dataprocpb/shared.pb.go",
+    "pkg": "dataprocpb",
+    "pkg_full": "cloud.google.com/go/dataproc/v2/apiv1/dataprocpb"
+  }
+}
+{
+  "proto": "google/cloud/dataproc/v1/autoscaling_policies",
+  "pkg": "google.cloud.dataproc.v1",
+  "svcs": [
+    {
+      "svc": "AutoscalingPolicyService",
+      "host": "dataproc.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateAutoscalingPolicy",
+          "request": {
+            "type": "CreateAutoscalingPolicyRequest"
+          },
+          "response": {
+            "type": "AutoscalingPolicy"
+          }
+        },
+        {
+          "method": "UpdateAutoscalingPolicy",
+          "request": {
+            "type": "UpdateAutoscalingPolicyRequest"
+          },
+          "response": {
+            "type": "AutoscalingPolicy"
+          }
+        },
+        {
+          "method": "GetAutoscalingPolicy",
+          "request": {
+            "type": "GetAutoscalingPolicyRequest"
+          },
+          "response": {
+            "type": "AutoscalingPolicy"
+          }
+        },
+        {
+          "method": "ListAutoscalingPolicies",
+          "request": {
+            "type": "ListAutoscalingPoliciesRequest"
+          },
+          "response": {
+            "type": "ListAutoscalingPoliciesResponse"
+          }
+        },
+        {
+          "method": "DeleteAutoscalingPolicy",
+          "request": {
+            "type": "DeleteAutoscalingPolicyRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "AutoscalingPolicy"
+    },
+    {
+      "type": "BasicAutoscalingAlgorithm"
+    },
+    {
+      "type": "BasicYarnAutoscalingConfig"
+    },
+    {
+      "type": "InstanceGroupAutoscalingPolicyConfig"
+    },
+    {
+      "type": "CreateAutoscalingPolicyRequest"
+    },
+    {
+      "type": "GetAutoscalingPolicyRequest"
+    },
+    {
+      "type": "UpdateAutoscalingPolicyRequest"
+    },
+    {
+      "type": "DeleteAutoscalingPolicyRequest"
+    },
+    {
+      "type": "ListAutoscalingPoliciesRequest"
+    },
+    {
+      "type": "ListAutoscalingPoliciesResponse"
+    }
+  ],
+  "go": {
+    "src": "dataproc/apiv1/dataprocpb/autoscaling_policies.pb.go",
+    "pkg": "dataprocpb",
+    "pkg_full": "cloud.google.com/go/dataproc/v2/apiv1/dataprocpb"
+  }
+}
+{
+  "proto": "google/cloud/dataproc/v1/node_groups",
+  "pkg": "google.cloud.dataproc.v1",
+  "svcs": [
+    {
+      "svc": "NodeGroupController",
+      "host": "dataproc.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateNodeGroup",
+          "request": {
+            "type": "CreateNodeGroupRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ResizeNodeGroup",
+          "request": {
+            "type": "ResizeNodeGroupRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetNodeGroup",
+          "request": {
+            "type": "GetNodeGroupRequest"
+          },
+          "response": {
+            "type": "NodeGroup"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateNodeGroupRequest"
+    },
+    {
+      "type": "ResizeNodeGroupRequest"
+    },
+    {
+      "type": "GetNodeGroupRequest"
+    }
+  ],
+  "go": {
+    "src": "dataproc/apiv1/dataprocpb/node_groups.pb.go",
+    "pkg": "dataprocpb",
+    "pkg_full": "cloud.google.com/go/dataproc/v2/apiv1/dataprocpb"
+  }
+}
+{
+  "proto": "google/cloud/dataproc/v1/sessions",
+  "pkg": "google.cloud.dataproc.v1",
+  "svcs": [
+    {
+      "svc": "SessionController",
+      "host": "dataproc.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateSession",
+          "request": {
+            "type": "CreateSessionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetSession",
+          "request": {
+            "type": "GetSessionRequest"
+          },
+          "response": {
+            "type": "Session"
+          }
+        },
+        {
+          "method": "ListSessions",
+          "request": {
+            "type": "ListSessionsRequest"
+          },
+          "response": {
+            "type": "ListSessionsResponse"
+          }
+        },
+        {
+          "method": "TerminateSession",
+          "request": {
+            "type": "TerminateSessionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteSession",
+          "request": {
+            "type": "DeleteSessionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateSessionRequest"
+    },
+    {
+      "type": "GetSessionRequest"
+    },
+    {
+      "type": "ListSessionsRequest"
+    },
+    {
+      "type": "ListSessionsResponse"
+    },
+    {
+      "type": "TerminateSessionRequest"
+    },
+    {
+      "type": "DeleteSessionRequest"
+    },
+    {
+      "type": "Session",
+      "msgs": [
+        {
+          "type": "SessionStateHistory"
+        }
+      ]
+    },
+    {
+      "type": "JupyterConfig"
+    }
+  ],
+  "go": {
+    "src": "dataproc/apiv1/dataprocpb/sessions.pb.go",
+    "pkg": "dataprocpb",
+    "pkg_full": "cloud.google.com/go/dataproc/v2/apiv1/dataprocpb"
+  }
+}
+{
+  "proto": "google/cloud/dataproc/v1/jobs",
+  "pkg": "google.cloud.dataproc.v1",
+  "svcs": [
+    {
+      "svc": "JobController",
+      "host": "dataproc.googleapis.com",
+      "rpcs": [
+        {
+          "method": "SubmitJob",
+          "request": {
+            "type": "SubmitJobRequest"
+          },
+          "response": {
+            "type": "Job"
+          }
+        },
+        {
+          "method": "SubmitJobAsOperation",
+          "request": {
+            "type": "SubmitJobRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetJob",
+          "request": {
+            "type": "GetJobRequest"
+          },
+          "response": {
+            "type": "Job"
+          }
+        },
+        {
+          "method": "ListJobs",
+          "request": {
+            "type": "ListJobsRequest"
+          },
+          "response": {
+            "type": "ListJobsResponse"
+          }
+        },
+        {
+          "method": "UpdateJob",
+          "request": {
+            "type": "UpdateJobRequest"
+          },
+          "response": {
+            "type": "Job"
+          }
+        },
+        {
+          "method": "CancelJob",
+          "request": {
+            "type": "CancelJobRequest"
+          },
+          "response": {
+            "type": "Job"
+          }
+        },
+        {
+          "method": "DeleteJob",
+          "request": {
+            "type": "DeleteJobRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "LoggingConfig"
+    },
+    {
+      "type": "HadoopJob"
+    },
+    {
+      "type": "SparkJob"
+    },
+    {
+      "type": "PySparkJob"
+    },
+    {
+      "type": "QueryList"
+    },
+    {
+      "type": "HiveJob"
+    },
+    {
+      "type": "SparkSqlJob"
+    },
+    {
+      "type": "PigJob"
+    },
+    {
+      "type": "SparkRJob"
+    },
+    {
+      "type": "PrestoJob"
+    },
+    {
+      "type": "TrinoJob"
+    },
+    {
+      "type": "JobPlacement"
+    },
+    {
+      "type": "JobStatus"
+    },
+    {
+      "type": "JobReference"
+    },
+    {
+      "type": "YarnApplication"
+    },
+    {
+      "type": "Job"
+    },
+    {
+      "type": "DriverSchedulingConfig"
+    },
+    {
+      "type": "JobScheduling"
+    },
+    {
+      "type": "SubmitJobRequest"
+    },
+    {
+      "type": "JobMetadata"
+    },
+    {
+      "type": "GetJobRequest"
+    },
+    {
+      "type": "ListJobsRequest"
+    },
+    {
+      "type": "UpdateJobRequest"
+    },
+    {
+      "type": "ListJobsResponse"
+    },
+    {
+      "type": "CancelJobRequest"
+    },
+    {
+      "type": "DeleteJobRequest"
+    }
+  ],
+  "go": {
+    "src": "dataproc/apiv1/dataprocpb/jobs.pb.go",
+    "pkg": "dataprocpb",
+    "pkg_full": "cloud.google.com/go/dataproc/v2/apiv1/dataprocpb"
+  }
+}
+{
+  "proto": "google/cloud/dataproc/v1/clusters",
+  "pkg": "google.cloud.dataproc.v1",
+  "svcs": [
+    {
+      "svc": "ClusterController",
+      "host": "dataproc.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateCluster",
+          "request": {
+            "type": "CreateClusterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateCluster",
+          "request": {
+            "type": "UpdateClusterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "StopCluster",
+          "request": {
+            "type": "StopClusterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "StartCluster",
+          "request": {
+            "type": "StartClusterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteCluster",
+          "request": {
+            "type": "DeleteClusterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetCluster",
+          "request": {
+            "type": "GetClusterRequest"
+          },
+          "response": {
+            "type": "Cluster"
+          }
+        },
+        {
+          "method": "ListClusters",
+          "request": {
+            "type": "ListClustersRequest"
+          },
+          "response": {
+            "type": "ListClustersResponse"
+          }
+        },
+        {
+          "method": "DiagnoseCluster",
+          "request": {
+            "type": "DiagnoseClusterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Cluster"
+    },
+    {
+      "type": "ClusterConfig"
+    },
+    {
+      "type": "VirtualClusterConfig"
+    },
+    {
+      "type": "AuxiliaryServicesConfig"
+    },
+    {
+      "type": "EndpointConfig"
+    },
+    {
+      "type": "AutoscalingConfig"
+    },
+    {
+      "type": "EncryptionConfig"
+    },
+    {
+      "type": "GceClusterConfig"
+    },
+    {
+      "type": "NodeGroupAffinity"
+    },
+    {
+      "type": "ShieldedInstanceConfig"
+    },
+    {
+      "type": "ConfidentialInstanceConfig"
+    },
+    {
+      "type": "InstanceGroupConfig"
+    },
+    {
+      "type": "StartupConfig"
+    },
+    {
+      "type": "InstanceReference"
+    },
+    {
+      "type": "ManagedGroupConfig"
+    },
+    {
+      "type": "InstanceFlexibilityPolicy",
+      "msgs": [
+        {
+          "type": "InstanceSelection"
+        },
+        {
+          "type": "InstanceSelectionResult"
+        }
+      ]
+    },
+    {
+      "type": "AcceleratorConfig"
+    },
+    {
+      "type": "DiskConfig"
+    },
+    {
+      "type": "AuxiliaryNodeGroup"
+    },
+    {
+      "type": "NodeGroup"
+    },
+    {
+      "type": "NodeInitializationAction"
+    },
+    {
+      "type": "ClusterStatus"
+    },
+    {
+      "type": "SecurityConfig"
+    },
+    {
+      "type": "KerberosConfig"
+    },
+    {
+      "type": "IdentityConfig"
+    },
+    {
+      "type": "SoftwareConfig"
+    },
+    {
+      "type": "LifecycleConfig"
+    },
+    {
+      "type": "MetastoreConfig"
+    },
+    {
+      "type": "ClusterMetrics"
+    },
+    {
+      "type": "DataprocMetricConfig",
+      "msgs": [
+        {
+          "type": "Metric"
+        }
+      ]
+    },
+    {
+      "type": "CreateClusterRequest"
+    },
+    {
+      "type": "UpdateClusterRequest"
+    },
+    {
+      "type": "StopClusterRequest"
+    },
+    {
+      "type": "StartClusterRequest"
+    },
+    {
+      "type": "DeleteClusterRequest"
+    },
+    {
+      "type": "GetClusterRequest"
+    },
+    {
+      "type": "ListClustersRequest"
+    },
+    {
+      "type": "ListClustersResponse"
+    },
+    {
+      "type": "DiagnoseClusterRequest"
+    },
+    {
+      "type": "DiagnoseClusterResults"
+    },
+    {
+      "type": "ReservationAffinity"
+    }
+  ],
+  "go": {
+    "src": "dataproc/apiv1/dataprocpb/clusters.pb.go",
+    "pkg": "dataprocpb",
+    "pkg_full": "cloud.google.com/go/dataproc/v2/apiv1/dataprocpb"
+  }
+}
+{
+  "proto": "google/cloud/dataproc/v1/workflow_templates",
+  "pkg": "google.cloud.dataproc.v1",
+  "svcs": [
+    {
+      "svc": "WorkflowTemplateService",
+      "host": "dataproc.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateWorkflowTemplate",
+          "request": {
+            "type": "CreateWorkflowTemplateRequest"
+          },
+          "response": {
+            "type": "WorkflowTemplate"
+          }
+        },
+        {
+          "method": "GetWorkflowTemplate",
+          "request": {
+            "type": "GetWorkflowTemplateRequest"
+          },
+          "response": {
+            "type": "WorkflowTemplate"
+          }
+        },
+        {
+          "method": "InstantiateWorkflowTemplate",
+          "request": {
+            "type": "InstantiateWorkflowTemplateRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateWorkflowTemplate",
+          "request": {
+            "type": "UpdateWorkflowTemplateRequest"
+          },
+          "response": {
+            "type": "WorkflowTemplate"
+          }
+        },
+        {
+          "method": "ListWorkflowTemplates",
+          "request": {
+            "type": "ListWorkflowTemplatesRequest"
+          },
+          "response": {
+            "type": "ListWorkflowTemplatesResponse"
+          }
+        },
+        {
+          "method": "DeleteWorkflowTemplate",
+          "request": {
+            "type": "DeleteWorkflowTemplateRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "WorkflowTemplate"
+    },
+    {
+      "type": "WorkflowTemplatePlacement"
+    },
+    {
+      "type": "ManagedCluster"
+    },
+    {
+      "type": "ClusterSelector"
+    },
+    {
+      "type": "OrderedJob"
+    },
+    {
+      "type": "TemplateParameter"
+    },
+    {
+      "type": "ParameterValidation"
+    },
+    {
+      "type": "RegexValidation"
+    },
+    {
+      "type": "ValueValidation"
+    },
+    {
+      "type": "WorkflowMetadata"
+    },
+    {
+      "type": "ClusterOperation"
+    },
+    {
+      "type": "WorkflowGraph"
+    },
+    {
+      "type": "WorkflowNode"
+    },
+    {
+      "type": "CreateWorkflowTemplateRequest"
+    },
+    {
+      "type": "GetWorkflowTemplateRequest"
+    },
+    {
+      "type": "InstantiateWorkflowTemplateRequest"
+    },
+    {
+      "type": "InstantiateInlineWorkflowTemplateRequest"
+    },
+    {
+      "type": "UpdateWorkflowTemplateRequest"
+    },
+    {
+      "type": "ListWorkflowTemplatesRequest"
+    },
+    {
+      "type": "ListWorkflowTemplatesResponse"
+    },
+    {
+      "type": "DeleteWorkflowTemplateRequest"
+    }
+  ],
+  "go": {
+    "src": "dataproc/apiv1/dataprocpb/workflow_templates.pb.go",
+    "pkg": "dataprocpb",
+    "pkg_full": "cloud.google.com/go/dataproc/v2/apiv1/dataprocpb"
+  }
+}

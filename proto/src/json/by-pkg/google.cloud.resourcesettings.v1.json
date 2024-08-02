@@ -1,0 +1,75 @@
+{
+  "proto": "google/cloud/resourcesettings/v1/resource_settings",
+  "pkg": "google.cloud.resourcesettings.v1",
+  "svcs": [
+    {
+      "svc": "ResourceSettingsService",
+      "host": "resourcesettings.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListSettings",
+          "request": {
+            "type": "ListSettingsRequest"
+          },
+          "response": {
+            "type": "ListSettingsResponse"
+          }
+        },
+        {
+          "method": "GetSetting",
+          "request": {
+            "type": "GetSettingRequest"
+          },
+          "response": {
+            "type": "Setting"
+          }
+        },
+        {
+          "method": "UpdateSetting",
+          "request": {
+            "type": "UpdateSettingRequest"
+          },
+          "response": {
+            "type": "Setting"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Setting"
+    },
+    {
+      "type": "SettingMetadata"
+    },
+    {
+      "type": "Value",
+      "msgs": [
+        {
+          "type": "StringSet"
+        },
+        {
+          "type": "EnumValue"
+        }
+      ]
+    },
+    {
+      "type": "ListSettingsRequest"
+    },
+    {
+      "type": "ListSettingsResponse"
+    },
+    {
+      "type": "GetSettingRequest"
+    },
+    {
+      "type": "UpdateSettingRequest"
+    }
+  ],
+  "go": {
+    "src": "resourcesettings/apiv1/resourcesettingspb/resource_settings.pb.go",
+    "pkg": "resourcesettingspb",
+    "pkg_full": "cloud.google.com/go/resourcesettings/apiv1/resourcesettingspb"
+  }
+}

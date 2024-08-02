@@ -1,0 +1,76 @@
+{
+  "proto": "google/cloud/beyondcorp/clientgateways/v1/client_gateways_service",
+  "pkg": "google.cloud.beyondcorp.clientgateways.v1",
+  "svcs": [
+    {
+      "svc": "ClientGatewaysService",
+      "host": "beyondcorp.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListClientGateways",
+          "request": {
+            "type": "ListClientGatewaysRequest"
+          },
+          "response": {
+            "type": "ListClientGatewaysResponse"
+          }
+        },
+        {
+          "method": "GetClientGateway",
+          "request": {
+            "type": "GetClientGatewayRequest"
+          },
+          "response": {
+            "type": "ClientGateway"
+          }
+        },
+        {
+          "method": "CreateClientGateway",
+          "request": {
+            "type": "CreateClientGatewayRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteClientGateway",
+          "request": {
+            "type": "DeleteClientGatewayRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ClientGateway"
+    },
+    {
+      "type": "ListClientGatewaysRequest"
+    },
+    {
+      "type": "ListClientGatewaysResponse"
+    },
+    {
+      "type": "GetClientGatewayRequest"
+    },
+    {
+      "type": "CreateClientGatewayRequest"
+    },
+    {
+      "type": "DeleteClientGatewayRequest"
+    },
+    {
+      "type": "ClientGatewayOperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "beyondcorp/clientgateways/apiv1/clientgatewayspb/client_gateways_service.pb.go",
+    "pkg": "clientgatewayspb",
+    "pkg_full": "cloud.google.com/go/beyondcorp/clientgateways/apiv1/clientgatewayspb"
+  }
+}

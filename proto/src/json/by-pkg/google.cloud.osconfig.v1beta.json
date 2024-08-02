@@ -1,0 +1,446 @@
+{
+  "proto": "google/cloud/osconfig/v1beta/guest_policies",
+  "pkg": "google.cloud.osconfig.v1beta",
+  "msgs": [
+    {
+      "type": "GuestPolicy"
+    },
+    {
+      "type": "Assignment",
+      "msgs": [
+        {
+          "type": "GroupLabel"
+        },
+        {
+          "type": "OsType"
+        }
+      ]
+    },
+    {
+      "type": "Package"
+    },
+    {
+      "type": "AptRepository"
+    },
+    {
+      "type": "YumRepository"
+    },
+    {
+      "type": "ZypperRepository"
+    },
+    {
+      "type": "GooRepository"
+    },
+    {
+      "type": "PackageRepository"
+    },
+    {
+      "type": "SoftwareRecipe",
+      "msgs": [
+        {
+          "type": "Artifact"
+        },
+        {
+          "type": "Remote"
+        },
+        {
+          "type": "Gcs"
+        },
+        {
+          "type": "Step"
+        },
+        {
+          "type": "CopyFile"
+        },
+        {
+          "type": "ExtractArchive"
+        },
+        {
+          "type": "InstallMsi"
+        },
+        {
+          "type": "InstallDpkg"
+        },
+        {
+          "type": "InstallRpm"
+        },
+        {
+          "type": "ExecFile"
+        },
+        {
+          "type": "RunScript"
+        }
+      ]
+    },
+    {
+      "type": "CreateGuestPolicyRequest"
+    },
+    {
+      "type": "GetGuestPolicyRequest"
+    },
+    {
+      "type": "ListGuestPoliciesRequest"
+    },
+    {
+      "type": "ListGuestPoliciesResponse"
+    },
+    {
+      "type": "UpdateGuestPolicyRequest"
+    },
+    {
+      "type": "DeleteGuestPolicyRequest"
+    },
+    {
+      "type": "LookupEffectiveGuestPolicyRequest"
+    },
+    {
+      "type": "EffectiveGuestPolicy",
+      "msgs": [
+        {
+          "type": "SourcedPackage"
+        },
+        {
+          "type": "SourcedPackageRepository"
+        },
+        {
+          "type": "SourcedSoftwareRecipe"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "osconfig/apiv1beta/osconfigpb/guest_policies.pb.go",
+    "pkg": "osconfigpb",
+    "pkg_full": "cloud.google.com/go/osconfig/apiv1beta/osconfigpb"
+  }
+}
+{
+  "proto": "google/cloud/osconfig/v1beta/osconfig_common",
+  "pkg": "google.cloud.osconfig.v1beta",
+  "msgs": [
+    {
+      "type": "FixedOrPercent"
+    }
+  ],
+  "go": {
+    "src": "osconfig/apiv1beta/osconfigpb/osconfig_common.pb.go",
+    "pkg": "osconfigpb",
+    "pkg_full": "cloud.google.com/go/osconfig/apiv1beta/osconfigpb"
+  }
+}
+{
+  "proto": "google/cloud/osconfig/v1beta/patch_deployments",
+  "pkg": "google.cloud.osconfig.v1beta",
+  "msgs": [
+    {
+      "type": "PatchDeployment"
+    },
+    {
+      "type": "OneTimeSchedule"
+    },
+    {
+      "type": "RecurringSchedule"
+    },
+    {
+      "type": "WeeklySchedule"
+    },
+    {
+      "type": "MonthlySchedule"
+    },
+    {
+      "type": "WeekDayOfMonth"
+    },
+    {
+      "type": "CreatePatchDeploymentRequest"
+    },
+    {
+      "type": "GetPatchDeploymentRequest"
+    },
+    {
+      "type": "ListPatchDeploymentsRequest"
+    },
+    {
+      "type": "ListPatchDeploymentsResponse"
+    },
+    {
+      "type": "DeletePatchDeploymentRequest"
+    },
+    {
+      "type": "UpdatePatchDeploymentRequest"
+    },
+    {
+      "type": "PausePatchDeploymentRequest"
+    },
+    {
+      "type": "ResumePatchDeploymentRequest"
+    }
+  ],
+  "go": {
+    "src": "osconfig/apiv1beta/osconfigpb/patch_deployments.pb.go",
+    "pkg": "osconfigpb",
+    "pkg_full": "cloud.google.com/go/osconfig/apiv1beta/osconfigpb"
+  }
+}
+{
+  "proto": "google/cloud/osconfig/v1beta/patch_jobs",
+  "pkg": "google.cloud.osconfig.v1beta",
+  "msgs": [
+    {
+      "type": "ExecutePatchJobRequest"
+    },
+    {
+      "type": "GetPatchJobRequest"
+    },
+    {
+      "type": "ListPatchJobInstanceDetailsRequest"
+    },
+    {
+      "type": "ListPatchJobInstanceDetailsResponse"
+    },
+    {
+      "type": "PatchJobInstanceDetails"
+    },
+    {
+      "type": "ListPatchJobsRequest"
+    },
+    {
+      "type": "ListPatchJobsResponse"
+    },
+    {
+      "type": "PatchJob",
+      "msgs": [
+        {
+          "type": "InstanceDetailsSummary"
+        }
+      ]
+    },
+    {
+      "type": "PatchConfig"
+    },
+    {
+      "type": "Instance"
+    },
+    {
+      "type": "CancelPatchJobRequest"
+    },
+    {
+      "type": "AptSettings"
+    },
+    {
+      "type": "YumSettings"
+    },
+    {
+      "type": "GooSettings"
+    },
+    {
+      "type": "ZypperSettings"
+    },
+    {
+      "type": "WindowsUpdateSettings"
+    },
+    {
+      "type": "ExecStep"
+    },
+    {
+      "type": "ExecStepConfig"
+    },
+    {
+      "type": "GcsObject"
+    },
+    {
+      "type": "PatchInstanceFilter",
+      "msgs": [
+        {
+          "type": "GroupLabel"
+        }
+      ]
+    },
+    {
+      "type": "PatchRollout"
+    }
+  ],
+  "go": {
+    "src": "osconfig/apiv1beta/osconfigpb/patch_jobs.pb.go",
+    "pkg": "osconfigpb",
+    "pkg_full": "cloud.google.com/go/osconfig/apiv1beta/osconfigpb"
+  }
+}
+{
+  "proto": "google/cloud/osconfig/v1beta/osconfig_service",
+  "pkg": "google.cloud.osconfig.v1beta",
+  "svcs": [
+    {
+      "svc": "OsConfigService",
+      "host": "osconfig.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ExecutePatchJob",
+          "request": {
+            "type": "ExecutePatchJobRequest"
+          },
+          "response": {
+            "type": "PatchJob"
+          }
+        },
+        {
+          "method": "GetPatchJob",
+          "request": {
+            "type": "GetPatchJobRequest"
+          },
+          "response": {
+            "type": "PatchJob"
+          }
+        },
+        {
+          "method": "CancelPatchJob",
+          "request": {
+            "type": "CancelPatchJobRequest"
+          },
+          "response": {
+            "type": "PatchJob"
+          }
+        },
+        {
+          "method": "ListPatchJobs",
+          "request": {
+            "type": "ListPatchJobsRequest"
+          },
+          "response": {
+            "type": "ListPatchJobsResponse"
+          }
+        },
+        {
+          "method": "ListPatchJobInstanceDetails",
+          "request": {
+            "type": "ListPatchJobInstanceDetailsRequest"
+          },
+          "response": {
+            "type": "ListPatchJobInstanceDetailsResponse"
+          }
+        },
+        {
+          "method": "CreatePatchDeployment",
+          "request": {
+            "type": "CreatePatchDeploymentRequest"
+          },
+          "response": {
+            "type": "PatchDeployment"
+          }
+        },
+        {
+          "method": "GetPatchDeployment",
+          "request": {
+            "type": "GetPatchDeploymentRequest"
+          },
+          "response": {
+            "type": "PatchDeployment"
+          }
+        },
+        {
+          "method": "ListPatchDeployments",
+          "request": {
+            "type": "ListPatchDeploymentsRequest"
+          },
+          "response": {
+            "type": "ListPatchDeploymentsResponse"
+          }
+        },
+        {
+          "method": "DeletePatchDeployment",
+          "request": {
+            "type": "DeletePatchDeploymentRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "UpdatePatchDeployment",
+          "request": {
+            "type": "UpdatePatchDeploymentRequest"
+          },
+          "response": {
+            "type": "PatchDeployment"
+          }
+        },
+        {
+          "method": "PausePatchDeployment",
+          "request": {
+            "type": "PausePatchDeploymentRequest"
+          },
+          "response": {
+            "type": "PatchDeployment"
+          }
+        },
+        {
+          "method": "ResumePatchDeployment",
+          "request": {
+            "type": "ResumePatchDeploymentRequest"
+          },
+          "response": {
+            "type": "PatchDeployment"
+          }
+        },
+        {
+          "method": "CreateGuestPolicy",
+          "request": {
+            "type": "CreateGuestPolicyRequest"
+          },
+          "response": {
+            "type": "GuestPolicy"
+          }
+        },
+        {
+          "method": "GetGuestPolicy",
+          "request": {
+            "type": "GetGuestPolicyRequest"
+          },
+          "response": {
+            "type": "GuestPolicy"
+          }
+        },
+        {
+          "method": "ListGuestPolicies",
+          "request": {
+            "type": "ListGuestPoliciesRequest"
+          },
+          "response": {
+            "type": "ListGuestPoliciesResponse"
+          }
+        },
+        {
+          "method": "UpdateGuestPolicy",
+          "request": {
+            "type": "UpdateGuestPolicyRequest"
+          },
+          "response": {
+            "type": "GuestPolicy"
+          }
+        },
+        {
+          "method": "DeleteGuestPolicy",
+          "request": {
+            "type": "DeleteGuestPolicyRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "LookupEffectiveGuestPolicy",
+          "request": {
+            "type": "LookupEffectiveGuestPolicyRequest"
+          },
+          "response": {
+            "type": "EffectiveGuestPolicy"
+          }
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "osconfig/apiv1beta/osconfigpb/osconfig_service.pb.go",
+    "pkg": "osconfigpb",
+    "pkg_full": "cloud.google.com/go/osconfig/apiv1beta/osconfigpb"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "proto": "google/actions/sdk/v2/interactionmodel/type/regular_expression_type",
+  "pkg": "google.actions.sdk.v2.interactionmodel.type",
+  "msgs": [
+    {
+      "type": "RegularExpressionType",
+      "msgs": [
+        {
+          "type": "Entity"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/interactionmodel/type/regular_expression_type.pb.go",
+    "pkg": "type",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2/interactionmodel/type"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/interactionmodel/type/free_text_type",
+  "pkg": "google.actions.sdk.v2.interactionmodel.type",
+  "msgs": [
+    {
+      "type": "FreeTextType"
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/interactionmodel/type/free_text_type.pb.go",
+    "pkg": "type",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2/interactionmodel/type"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/interactionmodel/type/entity_display",
+  "pkg": "google.actions.sdk.v2.interactionmodel.type",
+  "msgs": [
+    {
+      "type": "EntityDisplay"
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/interactionmodel/type/entity_display.pb.go",
+    "pkg": "type",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2/interactionmodel/type"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/interactionmodel/type/class_reference",
+  "pkg": "google.actions.sdk.v2.interactionmodel.type",
+  "msgs": [
+    {
+      "type": "ClassReference"
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/interactionmodel/type/class_reference.pb.go",
+    "pkg": "type",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2/interactionmodel/type"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/interactionmodel/type/type",
+  "pkg": "google.actions.sdk.v2.interactionmodel.type",
+  "msgs": [
+    {
+      "type": "Type"
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/interactionmodel/type/type.pb.go",
+    "pkg": "type",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2/interactionmodel/type"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/interactionmodel/type/synonym_type",
+  "pkg": "google.actions.sdk.v2.interactionmodel.type",
+  "msgs": [
+    {
+      "type": "SynonymType",
+      "msgs": [
+        {
+          "type": "Entity"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/interactionmodel/type/synonym_type.pb.go",
+    "pkg": "type",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2/interactionmodel/type"
+  }
+}

@@ -1,0 +1,696 @@
+{
+  "proto": "google/cloud/kms/v1/autokey",
+  "pkg": "google.cloud.kms.v1",
+  "svcs": [
+    {
+      "svc": "Autokey",
+      "host": "cloudkms.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateKeyHandle",
+          "request": {
+            "type": "CreateKeyHandleRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetKeyHandle",
+          "request": {
+            "type": "GetKeyHandleRequest"
+          },
+          "response": {
+            "type": "KeyHandle"
+          }
+        },
+        {
+          "method": "ListKeyHandles",
+          "request": {
+            "type": "ListKeyHandlesRequest"
+          },
+          "response": {
+            "type": "ListKeyHandlesResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateKeyHandleRequest"
+    },
+    {
+      "type": "GetKeyHandleRequest"
+    },
+    {
+      "type": "KeyHandle"
+    },
+    {
+      "type": "CreateKeyHandleMetadata"
+    },
+    {
+      "type": "ListKeyHandlesRequest"
+    },
+    {
+      "type": "ListKeyHandlesResponse"
+    }
+  ],
+  "go": {
+    "src": "kms/apiv1/kmspb/autokey.pb.go",
+    "pkg": "kmspb",
+    "pkg_full": "cloud.google.com/go/kms/apiv1/kmspb"
+  }
+}
+{
+  "proto": "google/cloud/kms/v1/ekm_service",
+  "pkg": "google.cloud.kms.v1",
+  "svcs": [
+    {
+      "svc": "EkmService",
+      "host": "cloudkms.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListEkmConnections",
+          "request": {
+            "type": "ListEkmConnectionsRequest"
+          },
+          "response": {
+            "type": "ListEkmConnectionsResponse"
+          }
+        },
+        {
+          "method": "GetEkmConnection",
+          "request": {
+            "type": "GetEkmConnectionRequest"
+          },
+          "response": {
+            "type": "EkmConnection"
+          }
+        },
+        {
+          "method": "CreateEkmConnection",
+          "request": {
+            "type": "CreateEkmConnectionRequest"
+          },
+          "response": {
+            "type": "EkmConnection"
+          }
+        },
+        {
+          "method": "UpdateEkmConnection",
+          "request": {
+            "type": "UpdateEkmConnectionRequest"
+          },
+          "response": {
+            "type": "EkmConnection"
+          }
+        },
+        {
+          "method": "GetEkmConfig",
+          "request": {
+            "type": "GetEkmConfigRequest"
+          },
+          "response": {
+            "type": "EkmConfig"
+          }
+        },
+        {
+          "method": "UpdateEkmConfig",
+          "request": {
+            "type": "UpdateEkmConfigRequest"
+          },
+          "response": {
+            "type": "EkmConfig"
+          }
+        },
+        {
+          "method": "VerifyConnectivity",
+          "request": {
+            "type": "VerifyConnectivityRequest"
+          },
+          "response": {
+            "type": "VerifyConnectivityResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ListEkmConnectionsRequest"
+    },
+    {
+      "type": "ListEkmConnectionsResponse"
+    },
+    {
+      "type": "GetEkmConnectionRequest"
+    },
+    {
+      "type": "CreateEkmConnectionRequest"
+    },
+    {
+      "type": "UpdateEkmConnectionRequest"
+    },
+    {
+      "type": "GetEkmConfigRequest"
+    },
+    {
+      "type": "UpdateEkmConfigRequest"
+    },
+    {
+      "type": "Certificate"
+    },
+    {
+      "type": "EkmConnection",
+      "msgs": [
+        {
+          "type": "ServiceResolver"
+        }
+      ]
+    },
+    {
+      "type": "EkmConfig"
+    },
+    {
+      "type": "VerifyConnectivityRequest"
+    },
+    {
+      "type": "VerifyConnectivityResponse"
+    }
+  ],
+  "go": {
+    "src": "kms/apiv1/kmspb/ekm_service.pb.go",
+    "pkg": "kmspb",
+    "pkg_full": "cloud.google.com/go/kms/apiv1/kmspb"
+  }
+}
+{
+  "proto": "google/cloud/kms/v1/resources",
+  "pkg": "google.cloud.kms.v1",
+  "msgs": [
+    {
+      "type": "KeyRing"
+    },
+    {
+      "type": "CryptoKey"
+    },
+    {
+      "type": "CryptoKeyVersionTemplate"
+    },
+    {
+      "type": "KeyOperationAttestation",
+      "msgs": [
+        {
+          "type": "CertificateChains"
+        }
+      ]
+    },
+    {
+      "type": "CryptoKeyVersion"
+    },
+    {
+      "type": "PublicKey"
+    },
+    {
+      "type": "ImportJob",
+      "msgs": [
+        {
+          "type": "WrappingPublicKey"
+        }
+      ]
+    },
+    {
+      "type": "ExternalProtectionLevelOptions"
+    },
+    {
+      "type": "KeyAccessJustificationsPolicy"
+    }
+  ],
+  "go": {
+    "src": "kms/apiv1/kmspb/resources.pb.go",
+    "pkg": "kmspb",
+    "pkg_full": "cloud.google.com/go/kms/apiv1/kmspb"
+  }
+}
+{
+  "proto": "google/cloud/kms/v1/autokey_admin",
+  "pkg": "google.cloud.kms.v1",
+  "svcs": [
+    {
+      "svc": "AutokeyAdmin",
+      "host": "cloudkms.googleapis.com",
+      "rpcs": [
+        {
+          "method": "UpdateAutokeyConfig",
+          "request": {
+            "type": "UpdateAutokeyConfigRequest"
+          },
+          "response": {
+            "type": "AutokeyConfig"
+          }
+        },
+        {
+          "method": "GetAutokeyConfig",
+          "request": {
+            "type": "GetAutokeyConfigRequest"
+          },
+          "response": {
+            "type": "AutokeyConfig"
+          }
+        },
+        {
+          "method": "ShowEffectiveAutokeyConfig",
+          "request": {
+            "type": "ShowEffectiveAutokeyConfigRequest"
+          },
+          "response": {
+            "type": "ShowEffectiveAutokeyConfigResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "UpdateAutokeyConfigRequest"
+    },
+    {
+      "type": "GetAutokeyConfigRequest"
+    },
+    {
+      "type": "AutokeyConfig"
+    },
+    {
+      "type": "ShowEffectiveAutokeyConfigRequest"
+    },
+    {
+      "type": "ShowEffectiveAutokeyConfigResponse"
+    }
+  ],
+  "go": {
+    "src": "kms/apiv1/kmspb/autokey_admin.pb.go",
+    "pkg": "kmspb",
+    "pkg_full": "cloud.google.com/go/kms/apiv1/kmspb"
+  }
+}
+{
+  "proto": "google/cloud/kms/v1/service",
+  "pkg": "google.cloud.kms.v1",
+  "svcs": [
+    {
+      "svc": "KeyManagementService",
+      "host": "cloudkms.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListKeyRings",
+          "request": {
+            "type": "ListKeyRingsRequest"
+          },
+          "response": {
+            "type": "ListKeyRingsResponse"
+          }
+        },
+        {
+          "method": "ListCryptoKeys",
+          "request": {
+            "type": "ListCryptoKeysRequest"
+          },
+          "response": {
+            "type": "ListCryptoKeysResponse"
+          }
+        },
+        {
+          "method": "ListCryptoKeyVersions",
+          "request": {
+            "type": "ListCryptoKeyVersionsRequest"
+          },
+          "response": {
+            "type": "ListCryptoKeyVersionsResponse"
+          }
+        },
+        {
+          "method": "ListImportJobs",
+          "request": {
+            "type": "ListImportJobsRequest"
+          },
+          "response": {
+            "type": "ListImportJobsResponse"
+          }
+        },
+        {
+          "method": "GetKeyRing",
+          "request": {
+            "type": "GetKeyRingRequest"
+          },
+          "response": {
+            "type": "KeyRing"
+          }
+        },
+        {
+          "method": "GetCryptoKey",
+          "request": {
+            "type": "GetCryptoKeyRequest"
+          },
+          "response": {
+            "type": "CryptoKey"
+          }
+        },
+        {
+          "method": "GetCryptoKeyVersion",
+          "request": {
+            "type": "GetCryptoKeyVersionRequest"
+          },
+          "response": {
+            "type": "CryptoKeyVersion"
+          }
+        },
+        {
+          "method": "GetPublicKey",
+          "request": {
+            "type": "GetPublicKeyRequest"
+          },
+          "response": {
+            "type": "PublicKey"
+          }
+        },
+        {
+          "method": "GetImportJob",
+          "request": {
+            "type": "GetImportJobRequest"
+          },
+          "response": {
+            "type": "ImportJob"
+          }
+        },
+        {
+          "method": "CreateKeyRing",
+          "request": {
+            "type": "CreateKeyRingRequest"
+          },
+          "response": {
+            "type": "KeyRing"
+          }
+        },
+        {
+          "method": "CreateCryptoKey",
+          "request": {
+            "type": "CreateCryptoKeyRequest"
+          },
+          "response": {
+            "type": "CryptoKey"
+          }
+        },
+        {
+          "method": "CreateCryptoKeyVersion",
+          "request": {
+            "type": "CreateCryptoKeyVersionRequest"
+          },
+          "response": {
+            "type": "CryptoKeyVersion"
+          }
+        },
+        {
+          "method": "ImportCryptoKeyVersion",
+          "request": {
+            "type": "ImportCryptoKeyVersionRequest"
+          },
+          "response": {
+            "type": "CryptoKeyVersion"
+          }
+        },
+        {
+          "method": "CreateImportJob",
+          "request": {
+            "type": "CreateImportJobRequest"
+          },
+          "response": {
+            "type": "ImportJob"
+          }
+        },
+        {
+          "method": "UpdateCryptoKey",
+          "request": {
+            "type": "UpdateCryptoKeyRequest"
+          },
+          "response": {
+            "type": "CryptoKey"
+          }
+        },
+        {
+          "method": "UpdateCryptoKeyVersion",
+          "request": {
+            "type": "UpdateCryptoKeyVersionRequest"
+          },
+          "response": {
+            "type": "CryptoKeyVersion"
+          }
+        },
+        {
+          "method": "UpdateCryptoKeyPrimaryVersion",
+          "request": {
+            "type": "UpdateCryptoKeyPrimaryVersionRequest"
+          },
+          "response": {
+            "type": "CryptoKey"
+          }
+        },
+        {
+          "method": "DestroyCryptoKeyVersion",
+          "request": {
+            "type": "DestroyCryptoKeyVersionRequest"
+          },
+          "response": {
+            "type": "CryptoKeyVersion"
+          }
+        },
+        {
+          "method": "RestoreCryptoKeyVersion",
+          "request": {
+            "type": "RestoreCryptoKeyVersionRequest"
+          },
+          "response": {
+            "type": "CryptoKeyVersion"
+          }
+        },
+        {
+          "method": "Encrypt",
+          "request": {
+            "type": "EncryptRequest"
+          },
+          "response": {
+            "type": "EncryptResponse"
+          }
+        },
+        {
+          "method": "Decrypt",
+          "request": {
+            "type": "DecryptRequest"
+          },
+          "response": {
+            "type": "DecryptResponse"
+          }
+        },
+        {
+          "method": "RawEncrypt",
+          "request": {
+            "type": "RawEncryptRequest"
+          },
+          "response": {
+            "type": "RawEncryptResponse"
+          }
+        },
+        {
+          "method": "RawDecrypt",
+          "request": {
+            "type": "RawDecryptRequest"
+          },
+          "response": {
+            "type": "RawDecryptResponse"
+          }
+        },
+        {
+          "method": "AsymmetricSign",
+          "request": {
+            "type": "AsymmetricSignRequest"
+          },
+          "response": {
+            "type": "AsymmetricSignResponse"
+          }
+        },
+        {
+          "method": "AsymmetricDecrypt",
+          "request": {
+            "type": "AsymmetricDecryptRequest"
+          },
+          "response": {
+            "type": "AsymmetricDecryptResponse"
+          }
+        },
+        {
+          "method": "MacSign",
+          "request": {
+            "type": "MacSignRequest"
+          },
+          "response": {
+            "type": "MacSignResponse"
+          }
+        },
+        {
+          "method": "MacVerify",
+          "request": {
+            "type": "MacVerifyRequest"
+          },
+          "response": {
+            "type": "MacVerifyResponse"
+          }
+        },
+        {
+          "method": "GenerateRandomBytes",
+          "request": {
+            "type": "GenerateRandomBytesRequest"
+          },
+          "response": {
+            "type": "GenerateRandomBytesResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ListKeyRingsRequest"
+    },
+    {
+      "type": "ListCryptoKeysRequest"
+    },
+    {
+      "type": "ListCryptoKeyVersionsRequest"
+    },
+    {
+      "type": "ListImportJobsRequest"
+    },
+    {
+      "type": "ListKeyRingsResponse"
+    },
+    {
+      "type": "ListCryptoKeysResponse"
+    },
+    {
+      "type": "ListCryptoKeyVersionsResponse"
+    },
+    {
+      "type": "ListImportJobsResponse"
+    },
+    {
+      "type": "GetKeyRingRequest"
+    },
+    {
+      "type": "GetCryptoKeyRequest"
+    },
+    {
+      "type": "GetCryptoKeyVersionRequest"
+    },
+    {
+      "type": "GetPublicKeyRequest"
+    },
+    {
+      "type": "GetImportJobRequest"
+    },
+    {
+      "type": "CreateKeyRingRequest"
+    },
+    {
+      "type": "CreateCryptoKeyRequest"
+    },
+    {
+      "type": "CreateCryptoKeyVersionRequest"
+    },
+    {
+      "type": "ImportCryptoKeyVersionRequest"
+    },
+    {
+      "type": "CreateImportJobRequest"
+    },
+    {
+      "type": "UpdateCryptoKeyRequest"
+    },
+    {
+      "type": "UpdateCryptoKeyVersionRequest"
+    },
+    {
+      "type": "UpdateCryptoKeyPrimaryVersionRequest"
+    },
+    {
+      "type": "DestroyCryptoKeyVersionRequest"
+    },
+    {
+      "type": "RestoreCryptoKeyVersionRequest"
+    },
+    {
+      "type": "EncryptRequest"
+    },
+    {
+      "type": "DecryptRequest"
+    },
+    {
+      "type": "RawEncryptRequest"
+    },
+    {
+      "type": "RawDecryptRequest"
+    },
+    {
+      "type": "AsymmetricSignRequest"
+    },
+    {
+      "type": "AsymmetricDecryptRequest"
+    },
+    {
+      "type": "MacSignRequest"
+    },
+    {
+      "type": "MacVerifyRequest"
+    },
+    {
+      "type": "GenerateRandomBytesRequest"
+    },
+    {
+      "type": "EncryptResponse"
+    },
+    {
+      "type": "DecryptResponse"
+    },
+    {
+      "type": "RawEncryptResponse"
+    },
+    {
+      "type": "RawDecryptResponse"
+    },
+    {
+      "type": "AsymmetricSignResponse"
+    },
+    {
+      "type": "AsymmetricDecryptResponse"
+    },
+    {
+      "type": "MacSignResponse"
+    },
+    {
+      "type": "MacVerifyResponse"
+    },
+    {
+      "type": "GenerateRandomBytesResponse"
+    },
+    {
+      "type": "Digest"
+    },
+    {
+      "type": "LocationMetadata"
+    }
+  ],
+  "go": {
+    "src": "kms/apiv1/kmspb/service.pb.go",
+    "pkg": "kmspb",
+    "pkg_full": "cloud.google.com/go/kms/apiv1/kmspb"
+  }
+}

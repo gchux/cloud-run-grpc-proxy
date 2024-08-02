@@ -1,0 +1,467 @@
+{
+  "proto": "google/container/v1alpha1/cluster_service",
+  "pkg": "google.container.v1alpha1",
+  "svcs": [
+    {
+      "svc": "ClusterManager",
+      "rpcs": [
+        {
+          "method": "ListClusters",
+          "request": {
+            "type": "ListClustersRequest"
+          },
+          "response": {
+            "type": "ListClustersResponse"
+          }
+        },
+        {
+          "method": "GetCluster",
+          "request": {
+            "type": "GetClusterRequest"
+          },
+          "response": {
+            "type": "Cluster"
+          }
+        },
+        {
+          "method": "CreateCluster",
+          "request": {
+            "type": "CreateClusterRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "UpdateCluster",
+          "request": {
+            "type": "UpdateClusterRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "UpdateNodePool",
+          "request": {
+            "type": "UpdateNodePoolRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "SetNodePoolAutoscaling",
+          "request": {
+            "type": "SetNodePoolAutoscalingRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "SetLoggingService",
+          "request": {
+            "type": "SetLoggingServiceRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "SetMonitoringService",
+          "request": {
+            "type": "SetMonitoringServiceRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "SetAddonsConfig",
+          "request": {
+            "type": "SetAddonsConfigRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "SetLocations",
+          "request": {
+            "type": "SetLocationsRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "UpdateMaster",
+          "request": {
+            "type": "UpdateMasterRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "SetMasterAuth",
+          "request": {
+            "type": "SetMasterAuthRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "DeleteCluster",
+          "request": {
+            "type": "DeleteClusterRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "ListOperations",
+          "request": {
+            "type": "ListOperationsRequest"
+          },
+          "response": {
+            "type": "ListOperationsResponse"
+          }
+        },
+        {
+          "method": "GetOperation",
+          "request": {
+            "type": "GetOperationRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "CancelOperation",
+          "request": {
+            "type": "CancelOperationRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "GetServerConfig",
+          "request": {
+            "type": "GetServerConfigRequest"
+          },
+          "response": {
+            "type": "ServerConfig"
+          }
+        },
+        {
+          "method": "ListNodePools",
+          "request": {
+            "type": "ListNodePoolsRequest"
+          },
+          "response": {
+            "type": "ListNodePoolsResponse"
+          }
+        },
+        {
+          "method": "GetNodePool",
+          "request": {
+            "type": "GetNodePoolRequest"
+          },
+          "response": {
+            "type": "NodePool"
+          }
+        },
+        {
+          "method": "CreateNodePool",
+          "request": {
+            "type": "CreateNodePoolRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "DeleteNodePool",
+          "request": {
+            "type": "DeleteNodePoolRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "RollbackNodePoolUpgrade",
+          "request": {
+            "type": "RollbackNodePoolUpgradeRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "SetNodePoolManagement",
+          "request": {
+            "type": "SetNodePoolManagementRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "SetLabels",
+          "request": {
+            "type": "SetLabelsRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "SetLegacyAbac",
+          "request": {
+            "type": "SetLegacyAbacRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "StartIPRotation",
+          "request": {
+            "type": "StartIPRotationRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "CompleteIPRotation",
+          "request": {
+            "type": "CompleteIPRotationRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "SetNodePoolSize",
+          "request": {
+            "type": "SetNodePoolSizeRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "SetNetworkPolicy",
+          "request": {
+            "type": "SetNetworkPolicyRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "SetMaintenancePolicy",
+          "request": {
+            "type": "SetMaintenancePolicyRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "NodeConfig"
+    },
+    {
+      "type": "NodeTaint"
+    },
+    {
+      "type": "MasterAuth"
+    },
+    {
+      "type": "ClientCertificateConfig"
+    },
+    {
+      "type": "AddonsConfig"
+    },
+    {
+      "type": "HttpLoadBalancing"
+    },
+    {
+      "type": "HorizontalPodAutoscaling"
+    },
+    {
+      "type": "KubernetesDashboard"
+    },
+    {
+      "type": "NetworkPolicyConfig"
+    },
+    {
+      "type": "MasterAuthorizedNetworksConfig",
+      "msgs": [
+        {
+          "type": "CidrBlock"
+        }
+      ]
+    },
+    {
+      "type": "NetworkPolicy"
+    },
+    {
+      "type": "IPAllocationPolicy"
+    },
+    {
+      "type": "PodSecurityPolicyConfig"
+    },
+    {
+      "type": "Cluster"
+    },
+    {
+      "type": "ClusterUpdate"
+    },
+    {
+      "type": "Operation"
+    },
+    {
+      "type": "CreateClusterRequest"
+    },
+    {
+      "type": "GetClusterRequest"
+    },
+    {
+      "type": "UpdateClusterRequest"
+    },
+    {
+      "type": "UpdateNodePoolRequest"
+    },
+    {
+      "type": "SetNodePoolAutoscalingRequest"
+    },
+    {
+      "type": "SetLoggingServiceRequest"
+    },
+    {
+      "type": "SetMonitoringServiceRequest"
+    },
+    {
+      "type": "SetAddonsConfigRequest"
+    },
+    {
+      "type": "SetLocationsRequest"
+    },
+    {
+      "type": "UpdateMasterRequest"
+    },
+    {
+      "type": "SetMasterAuthRequest"
+    },
+    {
+      "type": "DeleteClusterRequest"
+    },
+    {
+      "type": "ListClustersRequest"
+    },
+    {
+      "type": "ListClustersResponse"
+    },
+    {
+      "type": "GetOperationRequest"
+    },
+    {
+      "type": "ListOperationsRequest"
+    },
+    {
+      "type": "CancelOperationRequest"
+    },
+    {
+      "type": "ListOperationsResponse"
+    },
+    {
+      "type": "GetServerConfigRequest"
+    },
+    {
+      "type": "ServerConfig"
+    },
+    {
+      "type": "CreateNodePoolRequest"
+    },
+    {
+      "type": "DeleteNodePoolRequest"
+    },
+    {
+      "type": "ListNodePoolsRequest"
+    },
+    {
+      "type": "GetNodePoolRequest"
+    },
+    {
+      "type": "NodePool"
+    },
+    {
+      "type": "NodeManagement"
+    },
+    {
+      "type": "AutoUpgradeOptions"
+    },
+    {
+      "type": "MaintenancePolicy"
+    },
+    {
+      "type": "MaintenanceWindow"
+    },
+    {
+      "type": "DailyMaintenanceWindow"
+    },
+    {
+      "type": "SetNodePoolManagementRequest"
+    },
+    {
+      "type": "SetNodePoolSizeRequest"
+    },
+    {
+      "type": "RollbackNodePoolUpgradeRequest"
+    },
+    {
+      "type": "ListNodePoolsResponse"
+    },
+    {
+      "type": "NodePoolAutoscaling"
+    },
+    {
+      "type": "SetLabelsRequest"
+    },
+    {
+      "type": "SetLegacyAbacRequest"
+    },
+    {
+      "type": "StartIPRotationRequest"
+    },
+    {
+      "type": "CompleteIPRotationRequest"
+    },
+    {
+      "type": "AcceleratorConfig"
+    },
+    {
+      "type": "SetNetworkPolicyRequest"
+    },
+    {
+      "type": "SetMaintenancePolicyRequest"
+    }
+  ],
+  "go": {
+    "src": "googleapis/container/v1alpha1/cluster_service.pb.go",
+    "pkg": "container",
+    "pkg_full": "google.golang.org/genproto/googleapis/container/v1alpha1"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "proto": "google/cloud/workstations/logging/v1/platform_logs",
+  "pkg": "google.cloud.workstations.logging.v1",
+  "msgs": [
+    {
+      "type": "WorkstationEvent"
+    },
+    {
+      "type": "VmAssignmentEvent"
+    },
+    {
+      "type": "DiskAssignmentEvent"
+    }
+  ],
+  "go": {
+    "pkg": "loggingpb",
+    "pkg_full": "cloud.google.com/go/workstations/logging/apiv1/loggingpb"
+  }
+}

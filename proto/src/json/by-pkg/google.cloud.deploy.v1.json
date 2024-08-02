@@ -1,0 +1,1109 @@
+{
+  "proto": "google/cloud/deploy/v1/log_enums",
+  "pkg": "google.cloud.deploy.v1",
+  "go": {
+    "src": "deploy/apiv1/deploypb/log_enums.pb.go",
+    "pkg": "deploypb",
+    "pkg_full": "cloud.google.com/go/deploy/apiv1/deploypb"
+  }
+}
+{
+  "proto": "google/cloud/deploy/v1/rollout_notification_payload",
+  "pkg": "google.cloud.deploy.v1",
+  "msgs": [
+    {
+      "type": "RolloutNotificationEvent"
+    }
+  ],
+  "go": {
+    "src": "deploy/apiv1/deploypb/rollout_notification_payload.pb.go",
+    "pkg": "deploypb",
+    "pkg_full": "cloud.google.com/go/deploy/apiv1/deploypb"
+  }
+}
+{
+  "proto": "google/cloud/deploy/v1/cloud_deploy",
+  "pkg": "google.cloud.deploy.v1",
+  "svcs": [
+    {
+      "svc": "CloudDeploy",
+      "host": "clouddeploy.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListDeliveryPipelines",
+          "request": {
+            "type": "ListDeliveryPipelinesRequest"
+          },
+          "response": {
+            "type": "ListDeliveryPipelinesResponse"
+          }
+        },
+        {
+          "method": "GetDeliveryPipeline",
+          "request": {
+            "type": "GetDeliveryPipelineRequest"
+          },
+          "response": {
+            "type": "DeliveryPipeline"
+          }
+        },
+        {
+          "method": "CreateDeliveryPipeline",
+          "request": {
+            "type": "CreateDeliveryPipelineRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateDeliveryPipeline",
+          "request": {
+            "type": "UpdateDeliveryPipelineRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteDeliveryPipeline",
+          "request": {
+            "type": "DeleteDeliveryPipelineRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListTargets",
+          "request": {
+            "type": "ListTargetsRequest"
+          },
+          "response": {
+            "type": "ListTargetsResponse"
+          }
+        },
+        {
+          "method": "RollbackTarget",
+          "request": {
+            "type": "RollbackTargetRequest"
+          },
+          "response": {
+            "type": "RollbackTargetResponse"
+          }
+        },
+        {
+          "method": "GetTarget",
+          "request": {
+            "type": "GetTargetRequest"
+          },
+          "response": {
+            "type": "Target"
+          }
+        },
+        {
+          "method": "CreateTarget",
+          "request": {
+            "type": "CreateTargetRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateTarget",
+          "request": {
+            "type": "UpdateTargetRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteTarget",
+          "request": {
+            "type": "DeleteTargetRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListCustomTargetTypes",
+          "request": {
+            "type": "ListCustomTargetTypesRequest"
+          },
+          "response": {
+            "type": "ListCustomTargetTypesResponse"
+          }
+        },
+        {
+          "method": "GetCustomTargetType",
+          "request": {
+            "type": "GetCustomTargetTypeRequest"
+          },
+          "response": {
+            "type": "CustomTargetType"
+          }
+        },
+        {
+          "method": "CreateCustomTargetType",
+          "request": {
+            "type": "CreateCustomTargetTypeRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateCustomTargetType",
+          "request": {
+            "type": "UpdateCustomTargetTypeRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteCustomTargetType",
+          "request": {
+            "type": "DeleteCustomTargetTypeRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListReleases",
+          "request": {
+            "type": "ListReleasesRequest"
+          },
+          "response": {
+            "type": "ListReleasesResponse"
+          }
+        },
+        {
+          "method": "GetRelease",
+          "request": {
+            "type": "GetReleaseRequest"
+          },
+          "response": {
+            "type": "Release"
+          }
+        },
+        {
+          "method": "CreateRelease",
+          "request": {
+            "type": "CreateReleaseRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "AbandonRelease",
+          "request": {
+            "type": "AbandonReleaseRequest"
+          },
+          "response": {
+            "type": "AbandonReleaseResponse"
+          }
+        },
+        {
+          "method": "CreateDeployPolicy",
+          "request": {
+            "type": "CreateDeployPolicyRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateDeployPolicy",
+          "request": {
+            "type": "UpdateDeployPolicyRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteDeployPolicy",
+          "request": {
+            "type": "DeleteDeployPolicyRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListDeployPolicies",
+          "request": {
+            "type": "ListDeployPoliciesRequest"
+          },
+          "response": {
+            "type": "ListDeployPoliciesResponse"
+          }
+        },
+        {
+          "method": "GetDeployPolicy",
+          "request": {
+            "type": "GetDeployPolicyRequest"
+          },
+          "response": {
+            "type": "DeployPolicy"
+          }
+        },
+        {
+          "method": "ApproveRollout",
+          "request": {
+            "type": "ApproveRolloutRequest"
+          },
+          "response": {
+            "type": "ApproveRolloutResponse"
+          }
+        },
+        {
+          "method": "AdvanceRollout",
+          "request": {
+            "type": "AdvanceRolloutRequest"
+          },
+          "response": {
+            "type": "AdvanceRolloutResponse"
+          }
+        },
+        {
+          "method": "CancelRollout",
+          "request": {
+            "type": "CancelRolloutRequest"
+          },
+          "response": {
+            "type": "CancelRolloutResponse"
+          }
+        },
+        {
+          "method": "ListRollouts",
+          "request": {
+            "type": "ListRolloutsRequest"
+          },
+          "response": {
+            "type": "ListRolloutsResponse"
+          }
+        },
+        {
+          "method": "GetRollout",
+          "request": {
+            "type": "GetRolloutRequest"
+          },
+          "response": {
+            "type": "Rollout"
+          }
+        },
+        {
+          "method": "CreateRollout",
+          "request": {
+            "type": "CreateRolloutRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "IgnoreJob",
+          "request": {
+            "type": "IgnoreJobRequest"
+          },
+          "response": {
+            "type": "IgnoreJobResponse"
+          }
+        },
+        {
+          "method": "RetryJob",
+          "request": {
+            "type": "RetryJobRequest"
+          },
+          "response": {
+            "type": "RetryJobResponse"
+          }
+        },
+        {
+          "method": "ListJobRuns",
+          "request": {
+            "type": "ListJobRunsRequest"
+          },
+          "response": {
+            "type": "ListJobRunsResponse"
+          }
+        },
+        {
+          "method": "GetJobRun",
+          "request": {
+            "type": "GetJobRunRequest"
+          },
+          "response": {
+            "type": "JobRun"
+          }
+        },
+        {
+          "method": "TerminateJobRun",
+          "request": {
+            "type": "TerminateJobRunRequest"
+          },
+          "response": {
+            "type": "TerminateJobRunResponse"
+          }
+        },
+        {
+          "method": "GetConfig",
+          "request": {
+            "type": "GetConfigRequest"
+          },
+          "response": {
+            "type": "Config"
+          }
+        },
+        {
+          "method": "CreateAutomation",
+          "request": {
+            "type": "CreateAutomationRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateAutomation",
+          "request": {
+            "type": "UpdateAutomationRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteAutomation",
+          "request": {
+            "type": "DeleteAutomationRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetAutomation",
+          "request": {
+            "type": "GetAutomationRequest"
+          },
+          "response": {
+            "type": "Automation"
+          }
+        },
+        {
+          "method": "ListAutomations",
+          "request": {
+            "type": "ListAutomationsRequest"
+          },
+          "response": {
+            "type": "ListAutomationsResponse"
+          }
+        },
+        {
+          "method": "GetAutomationRun",
+          "request": {
+            "type": "GetAutomationRunRequest"
+          },
+          "response": {
+            "type": "AutomationRun"
+          }
+        },
+        {
+          "method": "ListAutomationRuns",
+          "request": {
+            "type": "ListAutomationRunsRequest"
+          },
+          "response": {
+            "type": "ListAutomationRunsResponse"
+          }
+        },
+        {
+          "method": "CancelAutomationRun",
+          "request": {
+            "type": "CancelAutomationRunRequest"
+          },
+          "response": {
+            "type": "CancelAutomationRunResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "DeliveryPipeline"
+    },
+    {
+      "type": "SerialPipeline"
+    },
+    {
+      "type": "Stage"
+    },
+    {
+      "type": "DeployParameters"
+    },
+    {
+      "type": "Strategy"
+    },
+    {
+      "type": "Predeploy"
+    },
+    {
+      "type": "Postdeploy"
+    },
+    {
+      "type": "Standard"
+    },
+    {
+      "type": "Canary"
+    },
+    {
+      "type": "CanaryDeployment"
+    },
+    {
+      "type": "CustomCanaryDeployment",
+      "msgs": [
+        {
+          "type": "PhaseConfig"
+        }
+      ]
+    },
+    {
+      "type": "KubernetesConfig",
+      "msgs": [
+        {
+          "type": "GatewayServiceMesh"
+        },
+        {
+          "type": "ServiceNetworking"
+        }
+      ]
+    },
+    {
+      "type": "CloudRunConfig"
+    },
+    {
+      "type": "RuntimeConfig"
+    },
+    {
+      "type": "PipelineReadyCondition"
+    },
+    {
+      "type": "TargetsPresentCondition"
+    },
+    {
+      "type": "TargetsTypeCondition"
+    },
+    {
+      "type": "PipelineCondition"
+    },
+    {
+      "type": "ListDeliveryPipelinesRequest"
+    },
+    {
+      "type": "ListDeliveryPipelinesResponse"
+    },
+    {
+      "type": "GetDeliveryPipelineRequest"
+    },
+    {
+      "type": "CreateDeliveryPipelineRequest"
+    },
+    {
+      "type": "UpdateDeliveryPipelineRequest"
+    },
+    {
+      "type": "DeleteDeliveryPipelineRequest"
+    },
+    {
+      "type": "RollbackTargetConfig"
+    },
+    {
+      "type": "RollbackTargetRequest"
+    },
+    {
+      "type": "RollbackTargetResponse"
+    },
+    {
+      "type": "Target"
+    },
+    {
+      "type": "ExecutionConfig"
+    },
+    {
+      "type": "DefaultPool"
+    },
+    {
+      "type": "PrivatePool"
+    },
+    {
+      "type": "GkeCluster"
+    },
+    {
+      "type": "AnthosCluster"
+    },
+    {
+      "type": "CloudRunLocation"
+    },
+    {
+      "type": "MultiTarget"
+    },
+    {
+      "type": "CustomTarget"
+    },
+    {
+      "type": "ListTargetsRequest"
+    },
+    {
+      "type": "ListTargetsResponse"
+    },
+    {
+      "type": "GetTargetRequest"
+    },
+    {
+      "type": "CreateTargetRequest"
+    },
+    {
+      "type": "UpdateTargetRequest"
+    },
+    {
+      "type": "DeleteTargetRequest"
+    },
+    {
+      "type": "CustomTargetType"
+    },
+    {
+      "type": "CustomTargetSkaffoldActions"
+    },
+    {
+      "type": "SkaffoldModules",
+      "msgs": [
+        {
+          "type": "SkaffoldGitSource"
+        },
+        {
+          "type": "SkaffoldGCSSource"
+        },
+        {
+          "type": "SkaffoldGCBRepoSource"
+        }
+      ]
+    },
+    {
+      "type": "ListCustomTargetTypesRequest"
+    },
+    {
+      "type": "ListCustomTargetTypesResponse"
+    },
+    {
+      "type": "GetCustomTargetTypeRequest"
+    },
+    {
+      "type": "CreateCustomTargetTypeRequest"
+    },
+    {
+      "type": "UpdateCustomTargetTypeRequest"
+    },
+    {
+      "type": "DeleteCustomTargetTypeRequest"
+    },
+    {
+      "type": "DeployPolicy"
+    },
+    {
+      "type": "DeployPolicyResourceSelector"
+    },
+    {
+      "type": "DeliveryPipelineAttribute"
+    },
+    {
+      "type": "TargetAttribute"
+    },
+    {
+      "type": "PolicyRule"
+    },
+    {
+      "type": "RestrictRollout"
+    },
+    {
+      "type": "TimeWindow"
+    },
+    {
+      "type": "Range"
+    },
+    {
+      "type": "PolicyViolation"
+    },
+    {
+      "type": "PolicyViolationDetails"
+    },
+    {
+      "type": "Release",
+      "msgs": [
+        {
+          "type": "TargetRender"
+        },
+        {
+          "type": "ReleaseReadyCondition"
+        },
+        {
+          "type": "SkaffoldSupportedCondition"
+        },
+        {
+          "type": "ReleaseCondition"
+        }
+      ]
+    },
+    {
+      "type": "CreateDeployPolicyRequest"
+    },
+    {
+      "type": "UpdateDeployPolicyRequest"
+    },
+    {
+      "type": "DeleteDeployPolicyRequest"
+    },
+    {
+      "type": "ListDeployPoliciesRequest"
+    },
+    {
+      "type": "ListDeployPoliciesResponse"
+    },
+    {
+      "type": "GetDeployPolicyRequest"
+    },
+    {
+      "type": "BuildArtifact"
+    },
+    {
+      "type": "TargetArtifact",
+      "msgs": [
+        {
+          "type": "PhaseArtifact"
+        }
+      ]
+    },
+    {
+      "type": "DeployArtifact"
+    },
+    {
+      "type": "CloudRunRenderMetadata"
+    },
+    {
+      "type": "RenderMetadata"
+    },
+    {
+      "type": "ListReleasesRequest"
+    },
+    {
+      "type": "ListReleasesResponse"
+    },
+    {
+      "type": "GetReleaseRequest"
+    },
+    {
+      "type": "CreateReleaseRequest"
+    },
+    {
+      "type": "Rollout"
+    },
+    {
+      "type": "Metadata"
+    },
+    {
+      "type": "DeployJobRunMetadata"
+    },
+    {
+      "type": "CloudRunMetadata"
+    },
+    {
+      "type": "CustomTargetDeployMetadata"
+    },
+    {
+      "type": "AutomationRolloutMetadata"
+    },
+    {
+      "type": "CustomMetadata"
+    },
+    {
+      "type": "Phase"
+    },
+    {
+      "type": "DeploymentJobs"
+    },
+    {
+      "type": "ChildRolloutJobs"
+    },
+    {
+      "type": "Job"
+    },
+    {
+      "type": "DeployJob"
+    },
+    {
+      "type": "VerifyJob"
+    },
+    {
+      "type": "PredeployJob"
+    },
+    {
+      "type": "PostdeployJob"
+    },
+    {
+      "type": "CreateChildRolloutJob"
+    },
+    {
+      "type": "AdvanceChildRolloutJob"
+    },
+    {
+      "type": "ListRolloutsRequest"
+    },
+    {
+      "type": "ListRolloutsResponse"
+    },
+    {
+      "type": "GetRolloutRequest"
+    },
+    {
+      "type": "CreateRolloutRequest"
+    },
+    {
+      "type": "OperationMetadata"
+    },
+    {
+      "type": "ApproveRolloutRequest"
+    },
+    {
+      "type": "ApproveRolloutResponse"
+    },
+    {
+      "type": "AdvanceRolloutRequest"
+    },
+    {
+      "type": "AdvanceRolloutResponse"
+    },
+    {
+      "type": "CancelRolloutRequest"
+    },
+    {
+      "type": "CancelRolloutResponse"
+    },
+    {
+      "type": "IgnoreJobRequest"
+    },
+    {
+      "type": "IgnoreJobResponse"
+    },
+    {
+      "type": "RetryJobRequest"
+    },
+    {
+      "type": "RetryJobResponse"
+    },
+    {
+      "type": "AbandonReleaseRequest"
+    },
+    {
+      "type": "AbandonReleaseResponse"
+    },
+    {
+      "type": "JobRun"
+    },
+    {
+      "type": "DeployJobRun"
+    },
+    {
+      "type": "VerifyJobRun"
+    },
+    {
+      "type": "PredeployJobRun"
+    },
+    {
+      "type": "PostdeployJobRun"
+    },
+    {
+      "type": "CreateChildRolloutJobRun"
+    },
+    {
+      "type": "AdvanceChildRolloutJobRun"
+    },
+    {
+      "type": "ListJobRunsRequest"
+    },
+    {
+      "type": "ListJobRunsResponse"
+    },
+    {
+      "type": "GetJobRunRequest"
+    },
+    {
+      "type": "TerminateJobRunRequest"
+    },
+    {
+      "type": "TerminateJobRunResponse"
+    },
+    {
+      "type": "Config"
+    },
+    {
+      "type": "SkaffoldVersion"
+    },
+    {
+      "type": "GetConfigRequest"
+    },
+    {
+      "type": "Automation"
+    },
+    {
+      "type": "AutomationResourceSelector"
+    },
+    {
+      "type": "AutomationRule"
+    },
+    {
+      "type": "PromoteReleaseRule"
+    },
+    {
+      "type": "AdvanceRolloutRule"
+    },
+    {
+      "type": "RepairRolloutRule"
+    },
+    {
+      "type": "RepairMode"
+    },
+    {
+      "type": "Retry"
+    },
+    {
+      "type": "Rollback"
+    },
+    {
+      "type": "AutomationRuleCondition"
+    },
+    {
+      "type": "CreateAutomationRequest"
+    },
+    {
+      "type": "UpdateAutomationRequest"
+    },
+    {
+      "type": "DeleteAutomationRequest"
+    },
+    {
+      "type": "ListAutomationsRequest"
+    },
+    {
+      "type": "ListAutomationsResponse"
+    },
+    {
+      "type": "GetAutomationRequest"
+    },
+    {
+      "type": "AutomationRun"
+    },
+    {
+      "type": "PromoteReleaseOperation"
+    },
+    {
+      "type": "AdvanceRolloutOperation"
+    },
+    {
+      "type": "RepairRolloutOperation"
+    },
+    {
+      "type": "RepairPhase"
+    },
+    {
+      "type": "RetryPhase"
+    },
+    {
+      "type": "RetryAttempt"
+    },
+    {
+      "type": "RollbackAttempt"
+    },
+    {
+      "type": "ListAutomationRunsRequest"
+    },
+    {
+      "type": "ListAutomationRunsResponse"
+    },
+    {
+      "type": "GetAutomationRunRequest"
+    },
+    {
+      "type": "CancelAutomationRunRequest"
+    },
+    {
+      "type": "CancelAutomationRunResponse"
+    }
+  ],
+  "go": {
+    "src": "deploy/apiv1/deploypb/cloud_deploy.pb.go",
+    "pkg": "deploypb",
+    "pkg_full": "cloud.google.com/go/deploy/apiv1/deploypb"
+  }
+}
+{
+  "proto": "google/cloud/deploy/v1/rollout_update_payload",
+  "pkg": "google.cloud.deploy.v1",
+  "msgs": [
+    {
+      "type": "RolloutUpdateEvent"
+    }
+  ],
+  "go": {
+    "src": "deploy/apiv1/deploypb/rollout_update_payload.pb.go",
+    "pkg": "deploypb",
+    "pkg_full": "cloud.google.com/go/deploy/apiv1/deploypb"
+  }
+}
+{
+  "proto": "google/cloud/deploy/v1/jobrun_notification_payload",
+  "pkg": "google.cloud.deploy.v1",
+  "msgs": [
+    {
+      "type": "JobRunNotificationEvent"
+    }
+  ],
+  "go": {
+    "src": "deploy/apiv1/deploypb/jobrun_notification_payload.pb.go",
+    "pkg": "deploypb",
+    "pkg_full": "cloud.google.com/go/deploy/apiv1/deploypb"
+  }
+}
+{
+  "proto": "google/cloud/deploy/v1/release_notification_payload",
+  "pkg": "google.cloud.deploy.v1",
+  "msgs": [
+    {
+      "type": "ReleaseNotificationEvent"
+    }
+  ],
+  "go": {
+    "src": "deploy/apiv1/deploypb/release_notification_payload.pb.go",
+    "pkg": "deploypb",
+    "pkg_full": "cloud.google.com/go/deploy/apiv1/deploypb"
+  }
+}
+{
+  "proto": "google/cloud/deploy/v1/automationrun_payload",
+  "pkg": "google.cloud.deploy.v1",
+  "msgs": [
+    {
+      "type": "AutomationRunEvent"
+    }
+  ],
+  "go": {
+    "src": "deploy/apiv1/deploypb/automationrun_payload.pb.go",
+    "pkg": "deploypb",
+    "pkg_full": "cloud.google.com/go/deploy/apiv1/deploypb"
+  }
+}
+{
+  "proto": "google/cloud/deploy/v1/release_render_payload",
+  "pkg": "google.cloud.deploy.v1",
+  "msgs": [
+    {
+      "type": "ReleaseRenderEvent"
+    }
+  ],
+  "go": {
+    "src": "deploy/apiv1/deploypb/release_render_payload.pb.go",
+    "pkg": "deploypb",
+    "pkg_full": "cloud.google.com/go/deploy/apiv1/deploypb"
+  }
+}
+{
+  "proto": "google/cloud/deploy/v1/deploypolicy_evaluation_payload",
+  "pkg": "google.cloud.deploy.v1",
+  "msgs": [
+    {
+      "type": "DeployPolicyEvaluationEvent"
+    }
+  ],
+  "go": {
+    "src": "deploy/apiv1/deploypb/deploypolicy_evaluation_payload.pb.go",
+    "pkg": "deploypb",
+    "pkg_full": "cloud.google.com/go/deploy/apiv1/deploypb"
+  }
+}
+{
+  "proto": "google/cloud/deploy/v1/automation_payload",
+  "pkg": "google.cloud.deploy.v1",
+  "msgs": [
+    {
+      "type": "AutomationEvent"
+    }
+  ],
+  "go": {
+    "src": "deploy/apiv1/deploypb/automation_payload.pb.go",
+    "pkg": "deploypb",
+    "pkg_full": "cloud.google.com/go/deploy/apiv1/deploypb"
+  }
+}
+{
+  "proto": "google/cloud/deploy/v1/deploypolicy_notification_payload",
+  "pkg": "google.cloud.deploy.v1",
+  "msgs": [
+    {
+      "type": "DeployPolicyNotificationEvent"
+    }
+  ],
+  "go": {
+    "src": "deploy/apiv1/deploypb/deploypolicy_notification_payload.pb.go",
+    "pkg": "deploypb",
+    "pkg_full": "cloud.google.com/go/deploy/apiv1/deploypb"
+  }
+}
+{
+  "proto": "google/cloud/deploy/v1/deliverypipeline_notification_payload",
+  "pkg": "google.cloud.deploy.v1",
+  "msgs": [
+    {
+      "type": "DeliveryPipelineNotificationEvent"
+    }
+  ],
+  "go": {
+    "src": "deploy/apiv1/deploypb/deliverypipeline_notification_payload.pb.go",
+    "pkg": "deploypb",
+    "pkg_full": "cloud.google.com/go/deploy/apiv1/deploypb"
+  }
+}
+{
+  "proto": "google/cloud/deploy/v1/customtargettype_notification_payload",
+  "pkg": "google.cloud.deploy.v1",
+  "msgs": [
+    {
+      "type": "CustomTargetTypeNotificationEvent"
+    }
+  ],
+  "go": {
+    "src": "deploy/apiv1/deploypb/customtargettype_notification_payload.pb.go",
+    "pkg": "deploypb",
+    "pkg_full": "cloud.google.com/go/deploy/apiv1/deploypb"
+  }
+}
+{
+  "proto": "google/cloud/deploy/v1/target_notification_payload",
+  "pkg": "google.cloud.deploy.v1",
+  "msgs": [
+    {
+      "type": "TargetNotificationEvent"
+    }
+  ],
+  "go": {
+    "src": "deploy/apiv1/deploypb/target_notification_payload.pb.go",
+    "pkg": "deploypb",
+    "pkg_full": "cloud.google.com/go/deploy/apiv1/deploypb"
+  }
+}

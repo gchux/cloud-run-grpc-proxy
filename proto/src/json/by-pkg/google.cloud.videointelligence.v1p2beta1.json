@@ -1,0 +1,103 @@
+{
+  "proto": "google/cloud/videointelligence/v1p2beta1/video_intelligence",
+  "pkg": "google.cloud.videointelligence.v1p2beta1",
+  "svcs": [
+    {
+      "svc": "VideoIntelligenceService",
+      "host": "videointelligence.googleapis.com",
+      "rpcs": [
+        {
+          "method": "AnnotateVideo",
+          "request": {
+            "type": "AnnotateVideoRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "AnnotateVideoRequest"
+    },
+    {
+      "type": "VideoContext"
+    },
+    {
+      "type": "LabelDetectionConfig"
+    },
+    {
+      "type": "ShotChangeDetectionConfig"
+    },
+    {
+      "type": "ExplicitContentDetectionConfig"
+    },
+    {
+      "type": "TextDetectionConfig"
+    },
+    {
+      "type": "VideoSegment"
+    },
+    {
+      "type": "LabelSegment"
+    },
+    {
+      "type": "LabelFrame"
+    },
+    {
+      "type": "Entity"
+    },
+    {
+      "type": "LabelAnnotation"
+    },
+    {
+      "type": "ExplicitContentFrame"
+    },
+    {
+      "type": "ExplicitContentAnnotation"
+    },
+    {
+      "type": "NormalizedBoundingBox"
+    },
+    {
+      "type": "VideoAnnotationResults"
+    },
+    {
+      "type": "AnnotateVideoResponse"
+    },
+    {
+      "type": "VideoAnnotationProgress"
+    },
+    {
+      "type": "AnnotateVideoProgress"
+    },
+    {
+      "type": "NormalizedVertex"
+    },
+    {
+      "type": "NormalizedBoundingPoly"
+    },
+    {
+      "type": "TextSegment"
+    },
+    {
+      "type": "TextFrame"
+    },
+    {
+      "type": "TextAnnotation"
+    },
+    {
+      "type": "ObjectTrackingFrame"
+    },
+    {
+      "type": "ObjectTrackingAnnotation"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/videointelligence/v1p2beta1/video_intelligence.pb.go",
+    "pkg": "videointelligencepb",
+    "pkg_full": "cloud.google.com/go/videointelligence/apiv1p2beta1/videointelligencepb"
+  }
+}

@@ -1,0 +1,562 @@
+{
+  "proto": "google/cloud/talent/v4/event",
+  "pkg": "google.cloud.talent.v4",
+  "msgs": [
+    {
+      "type": "ClientEvent"
+    },
+    {
+      "type": "JobEvent"
+    }
+  ],
+  "go": {
+    "src": "talent/apiv4/talentpb/event.pb.go",
+    "pkg": "talentpb",
+    "pkg_full": "cloud.google.com/go/talent/apiv4/talentpb"
+  }
+}
+{
+  "proto": "google/cloud/talent/v4/tenant_service",
+  "pkg": "google.cloud.talent.v4",
+  "svcs": [
+    {
+      "svc": "TenantService",
+      "host": "jobs.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateTenant",
+          "request": {
+            "type": "CreateTenantRequest"
+          },
+          "response": {
+            "type": "Tenant"
+          }
+        },
+        {
+          "method": "GetTenant",
+          "request": {
+            "type": "GetTenantRequest"
+          },
+          "response": {
+            "type": "Tenant"
+          }
+        },
+        {
+          "method": "UpdateTenant",
+          "request": {
+            "type": "UpdateTenantRequest"
+          },
+          "response": {
+            "type": "Tenant"
+          }
+        },
+        {
+          "method": "DeleteTenant",
+          "request": {
+            "type": "DeleteTenantRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListTenants",
+          "request": {
+            "type": "ListTenantsRequest"
+          },
+          "response": {
+            "type": "ListTenantsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateTenantRequest"
+    },
+    {
+      "type": "GetTenantRequest"
+    },
+    {
+      "type": "UpdateTenantRequest"
+    },
+    {
+      "type": "DeleteTenantRequest"
+    },
+    {
+      "type": "ListTenantsRequest"
+    },
+    {
+      "type": "ListTenantsResponse"
+    }
+  ],
+  "go": {
+    "src": "talent/apiv4/talentpb/tenant_service.pb.go",
+    "pkg": "talentpb",
+    "pkg_full": "cloud.google.com/go/talent/apiv4/talentpb"
+  }
+}
+{
+  "proto": "google/cloud/talent/v4/job",
+  "pkg": "google.cloud.talent.v4",
+  "msgs": [
+    {
+      "type": "Job",
+      "msgs": [
+        {
+          "type": "ApplicationInfo"
+        },
+        {
+          "type": "DerivedInfo"
+        },
+        {
+          "type": "ProcessingOptions"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "talent/apiv4/talentpb/job.pb.go",
+    "pkg": "talentpb",
+    "pkg_full": "cloud.google.com/go/talent/apiv4/talentpb"
+  }
+}
+{
+  "proto": "google/cloud/talent/v4/histogram",
+  "pkg": "google.cloud.talent.v4",
+  "msgs": [
+    {
+      "type": "HistogramQuery"
+    },
+    {
+      "type": "HistogramQueryResult"
+    }
+  ],
+  "go": {
+    "src": "talent/apiv4/talentpb/histogram.pb.go",
+    "pkg": "talentpb",
+    "pkg_full": "cloud.google.com/go/talent/apiv4/talentpb"
+  }
+}
+{
+  "proto": "google/cloud/talent/v4/company",
+  "pkg": "google.cloud.talent.v4",
+  "msgs": [
+    {
+      "type": "Company",
+      "msgs": [
+        {
+          "type": "DerivedInfo"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "talent/apiv4/talentpb/company.pb.go",
+    "pkg": "talentpb",
+    "pkg_full": "cloud.google.com/go/talent/apiv4/talentpb"
+  }
+}
+{
+  "proto": "google/cloud/talent/v4/event_service",
+  "pkg": "google.cloud.talent.v4",
+  "svcs": [
+    {
+      "svc": "EventService",
+      "host": "jobs.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateClientEvent",
+          "request": {
+            "type": "CreateClientEventRequest"
+          },
+          "response": {
+            "type": "ClientEvent"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateClientEventRequest"
+    }
+  ],
+  "go": {
+    "src": "talent/apiv4/talentpb/event_service.pb.go",
+    "pkg": "talentpb",
+    "pkg_full": "cloud.google.com/go/talent/apiv4/talentpb"
+  }
+}
+{
+  "proto": "google/cloud/talent/v4/completion_service",
+  "pkg": "google.cloud.talent.v4",
+  "svcs": [
+    {
+      "svc": "Completion",
+      "host": "jobs.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CompleteQuery",
+          "request": {
+            "type": "CompleteQueryRequest"
+          },
+          "response": {
+            "type": "CompleteQueryResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CompleteQueryRequest"
+    },
+    {
+      "type": "CompleteQueryResponse",
+      "msgs": [
+        {
+          "type": "CompletionResult"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "talent/apiv4/talentpb/completion_service.pb.go",
+    "pkg": "talentpb",
+    "pkg_full": "cloud.google.com/go/talent/apiv4/talentpb"
+  }
+}
+{
+  "proto": "google/cloud/talent/v4/common",
+  "pkg": "google.cloud.talent.v4",
+  "msgs": [
+    {
+      "type": "TimestampRange"
+    },
+    {
+      "type": "Location"
+    },
+    {
+      "type": "RequestMetadata"
+    },
+    {
+      "type": "ResponseMetadata"
+    },
+    {
+      "type": "DeviceInfo"
+    },
+    {
+      "type": "CustomAttribute"
+    },
+    {
+      "type": "SpellingCorrection"
+    },
+    {
+      "type": "CompensationInfo",
+      "msgs": [
+        {
+          "type": "CompensationEntry"
+        },
+        {
+          "type": "CompensationRange"
+        }
+      ]
+    },
+    {
+      "type": "BatchOperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "talent/apiv4/talentpb/common.pb.go",
+    "pkg": "talentpb",
+    "pkg_full": "cloud.google.com/go/talent/apiv4/talentpb"
+  }
+}
+{
+  "proto": "google/cloud/talent/v4/tenant",
+  "pkg": "google.cloud.talent.v4",
+  "msgs": [
+    {
+      "type": "Tenant"
+    }
+  ],
+  "go": {
+    "src": "talent/apiv4/talentpb/tenant.pb.go",
+    "pkg": "talentpb",
+    "pkg_full": "cloud.google.com/go/talent/apiv4/talentpb"
+  }
+}
+{
+  "proto": "google/cloud/talent/v4/company_service",
+  "pkg": "google.cloud.talent.v4",
+  "svcs": [
+    {
+      "svc": "CompanyService",
+      "host": "jobs.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateCompany",
+          "request": {
+            "type": "CreateCompanyRequest"
+          },
+          "response": {
+            "type": "Company"
+          }
+        },
+        {
+          "method": "GetCompany",
+          "request": {
+            "type": "GetCompanyRequest"
+          },
+          "response": {
+            "type": "Company"
+          }
+        },
+        {
+          "method": "UpdateCompany",
+          "request": {
+            "type": "UpdateCompanyRequest"
+          },
+          "response": {
+            "type": "Company"
+          }
+        },
+        {
+          "method": "DeleteCompany",
+          "request": {
+            "type": "DeleteCompanyRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListCompanies",
+          "request": {
+            "type": "ListCompaniesRequest"
+          },
+          "response": {
+            "type": "ListCompaniesResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateCompanyRequest"
+    },
+    {
+      "type": "GetCompanyRequest"
+    },
+    {
+      "type": "UpdateCompanyRequest"
+    },
+    {
+      "type": "DeleteCompanyRequest"
+    },
+    {
+      "type": "ListCompaniesRequest"
+    },
+    {
+      "type": "ListCompaniesResponse"
+    }
+  ],
+  "go": {
+    "src": "talent/apiv4/talentpb/company_service.pb.go",
+    "pkg": "talentpb",
+    "pkg_full": "cloud.google.com/go/talent/apiv4/talentpb"
+  }
+}
+{
+  "proto": "google/cloud/talent/v4/job_service",
+  "pkg": "google.cloud.talent.v4",
+  "svcs": [
+    {
+      "svc": "JobService",
+      "host": "jobs.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateJob",
+          "request": {
+            "type": "CreateJobRequest"
+          },
+          "response": {
+            "type": "Job"
+          }
+        },
+        {
+          "method": "BatchCreateJobs",
+          "request": {
+            "type": "BatchCreateJobsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetJob",
+          "request": {
+            "type": "GetJobRequest"
+          },
+          "response": {
+            "type": "Job"
+          }
+        },
+        {
+          "method": "UpdateJob",
+          "request": {
+            "type": "UpdateJobRequest"
+          },
+          "response": {
+            "type": "Job"
+          }
+        },
+        {
+          "method": "BatchUpdateJobs",
+          "request": {
+            "type": "BatchUpdateJobsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteJob",
+          "request": {
+            "type": "DeleteJobRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "BatchDeleteJobs",
+          "request": {
+            "type": "BatchDeleteJobsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListJobs",
+          "request": {
+            "type": "ListJobsRequest"
+          },
+          "response": {
+            "type": "ListJobsResponse"
+          }
+        },
+        {
+          "method": "SearchJobs",
+          "request": {
+            "type": "SearchJobsRequest"
+          },
+          "response": {
+            "type": "SearchJobsResponse"
+          }
+        },
+        {
+          "method": "SearchJobsForAlert",
+          "request": {
+            "type": "SearchJobsRequest"
+          },
+          "response": {
+            "type": "SearchJobsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateJobRequest"
+    },
+    {
+      "type": "GetJobRequest"
+    },
+    {
+      "type": "UpdateJobRequest"
+    },
+    {
+      "type": "DeleteJobRequest"
+    },
+    {
+      "type": "ListJobsRequest"
+    },
+    {
+      "type": "ListJobsResponse"
+    },
+    {
+      "type": "SearchJobsRequest",
+      "msgs": [
+        {
+          "type": "CustomRankingInfo"
+        }
+      ]
+    },
+    {
+      "type": "SearchJobsResponse",
+      "msgs": [
+        {
+          "type": "MatchingJob"
+        },
+        {
+          "type": "CommuteInfo"
+        }
+      ]
+    },
+    {
+      "type": "BatchCreateJobsRequest"
+    },
+    {
+      "type": "BatchUpdateJobsRequest"
+    },
+    {
+      "type": "BatchDeleteJobsRequest"
+    },
+    {
+      "type": "JobResult"
+    },
+    {
+      "type": "BatchCreateJobsResponse"
+    },
+    {
+      "type": "BatchUpdateJobsResponse"
+    },
+    {
+      "type": "BatchDeleteJobsResponse"
+    }
+  ],
+  "go": {
+    "src": "talent/apiv4/talentpb/job_service.pb.go",
+    "pkg": "talentpb",
+    "pkg_full": "cloud.google.com/go/talent/apiv4/talentpb"
+  }
+}
+{
+  "proto": "google/cloud/talent/v4/filters",
+  "pkg": "google.cloud.talent.v4",
+  "msgs": [
+    {
+      "type": "JobQuery"
+    },
+    {
+      "type": "LocationFilter"
+    },
+    {
+      "type": "CompensationFilter"
+    },
+    {
+      "type": "CommuteFilter"
+    }
+  ],
+  "go": {
+    "src": "talent/apiv4/talentpb/filters.pb.go",
+    "pkg": "talentpb",
+    "pkg_full": "cloud.google.com/go/talent/apiv4/talentpb"
+  }
+}

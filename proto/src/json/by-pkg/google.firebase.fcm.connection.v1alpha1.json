@@ -1,0 +1,41 @@
+{
+  "proto": "google/firebase/fcm/connection/v1alpha1/connection_api",
+  "pkg": "google.firebase.fcm.connection.v1alpha1",
+  "svcs": [
+    {
+      "svc": "ConnectionApi",
+      "rpcs": [
+        {
+          "method": "Connect",
+          "request": {
+            "type": "UpstreamRequest",
+            "stream": true
+          },
+          "response": {
+            "type": "DownstreamResponse",
+            "stream": true
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "UpstreamRequest"
+    },
+    {
+      "type": "DownstreamResponse"
+    },
+    {
+      "type": "Ack"
+    },
+    {
+      "type": "Message"
+    }
+  ],
+  "go": {
+    "src": "googleapis/firebase/fcm/connection/v1alpha1/connection_api.pb.go",
+    "pkg": "connection",
+    "pkg_full": "google.golang.org/genproto/googleapis/firebase/fcm/connection/v1alpha1"
+  }
+}

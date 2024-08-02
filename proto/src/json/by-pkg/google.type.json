@@ -1,0 +1,231 @@
+{
+  "proto": "google/type/color",
+  "pkg": "google.type",
+  "msgs": [
+    {
+      "type": "Color"
+    }
+  ],
+  "go": {
+    "src": "googleapis/type/color/color.pb.go",
+    "pkg": "color",
+    "pkg_full": "google.golang.org/genproto/googleapis/type/color"
+  }
+}
+{
+  "proto": "google/type/timeofday",
+  "pkg": "google.type",
+  "msgs": [
+    {
+      "type": "TimeOfDay"
+    }
+  ],
+  "go": {
+    "src": "googleapis/type/timeofday/timeofday.pb.go",
+    "pkg": "timeofday",
+    "pkg_full": "google.golang.org/genproto/googleapis/type/timeofday"
+  }
+}
+{
+  "proto": "google/type/fraction",
+  "pkg": "google.type",
+  "msgs": [
+    {
+      "type": "Fraction"
+    }
+  ],
+  "go": {
+    "src": "googleapis/type/fraction/fraction.pb.go",
+    "pkg": "fraction",
+    "pkg_full": "google.golang.org/genproto/googleapis/type/fraction"
+  }
+}
+{
+  "proto": "google/type/quaternion",
+  "pkg": "google.type",
+  "msgs": [
+    {
+      "type": "Quaternion"
+    }
+  ],
+  "go": {
+    "src": "googleapis/type/quaternion/quaternion.pb.go",
+    "pkg": "quaternion",
+    "pkg_full": "google.golang.org/genproto/googleapis/type/quaternion"
+  }
+}
+{
+  "proto": "google/type/dayofweek",
+  "pkg": "google.type",
+  "go": {
+    "src": "googleapis/type/dayofweek/dayofweek.pb.go",
+    "pkg": "dayofweek",
+    "pkg_full": "google.golang.org/genproto/googleapis/type/dayofweek"
+  }
+}
+{
+  "proto": "google/type/phone_number",
+  "pkg": "google.type",
+  "msgs": [
+    {
+      "type": "PhoneNumber",
+      "msgs": [
+        {
+          "type": "ShortCode"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/type/phone_number/phone_number.pb.go",
+    "pkg": "phone_number",
+    "pkg_full": "google.golang.org/genproto/googleapis/type/phone_number"
+  }
+}
+{
+  "proto": "google/type/localized_text",
+  "pkg": "google.type",
+  "msgs": [
+    {
+      "type": "LocalizedText"
+    }
+  ],
+  "go": {
+    "src": "googleapis/type/localized_text/localized_text.pb.go",
+    "pkg": "localized_text",
+    "pkg_full": "google.golang.org/genproto/googleapis/type/localized_text"
+  }
+}
+{
+  "proto": "google/type/postal_address",
+  "pkg": "google.type",
+  "msgs": [
+    {
+      "type": "PostalAddress"
+    }
+  ],
+  "go": {
+    "src": "googleapis/type/postaladdress/postal_address.pb.go",
+    "pkg": "postaladdress",
+    "pkg_full": "google.golang.org/genproto/googleapis/type/postaladdress"
+  }
+}
+{
+  "proto": "google/type/date",
+  "pkg": "google.type",
+  "msgs": [
+    {
+      "type": "Date"
+    }
+  ],
+  "go": {
+    "src": "googleapis/type/date/date.pb.go",
+    "pkg": "date",
+    "pkg_full": "google.golang.org/genproto/googleapis/type/date"
+  }
+}
+{
+  "proto": "google/type/month",
+  "pkg": "google.type",
+  "go": {
+    "src": "googleapis/type/month/month.pb.go",
+    "pkg": "month",
+    "pkg_full": "google.golang.org/genproto/googleapis/type/month"
+  }
+}
+{
+  "proto": "google/type/latlng",
+  "pkg": "google.type",
+  "msgs": [
+    {
+      "type": "LatLng"
+    }
+  ],
+  "go": {
+    "src": "googleapis/type/latlng/latlng.pb.go",
+    "pkg": "latlng",
+    "pkg_full": "google.golang.org/genproto/googleapis/type/latlng"
+  }
+}
+{
+  "proto": "google/type/money",
+  "pkg": "google.type",
+  "msgs": [
+    {
+      "type": "Money"
+    }
+  ],
+  "go": {
+    "src": "googleapis/type/money/money.pb.go",
+    "pkg": "money",
+    "pkg_full": "google.golang.org/genproto/googleapis/type/money"
+  }
+}
+{
+  "proto": "google/type/calendar_period",
+  "pkg": "google.type",
+  "go": {
+    "src": "googleapis/type/calendarperiod/calendar_period.pb.go",
+    "pkg": "calendarperiod",
+    "pkg_full": "google.golang.org/genproto/googleapis/type/calendarperiod"
+  }
+}
+{
+  "proto": "google/type/datetime",
+  "pkg": "google.type",
+  "msgs": [
+    {
+      "type": "DateTime"
+    },
+    {
+      "type": "TimeZone"
+    }
+  ],
+  "go": {
+    "src": "googleapis/type/datetime/datetime.pb.go",
+    "pkg": "datetime",
+    "pkg_full": "google.golang.org/genproto/googleapis/type/datetime"
+  }
+}
+{
+  "proto": "google/type/decimal",
+  "pkg": "google.type",
+  "msgs": [
+    {
+      "type": "Decimal"
+    }
+  ],
+  "go": {
+    "src": "googleapis/type/decimal/decimal.pb.go",
+    "pkg": "decimal",
+    "pkg_full": "google.golang.org/genproto/googleapis/type/decimal"
+  }
+}
+{
+  "proto": "google/type/expr",
+  "pkg": "google.type",
+  "msgs": [
+    {
+      "type": "Expr"
+    }
+  ],
+  "go": {
+    "src": "googleapis/type/expr/expr.pb.go",
+    "pkg": "expr",
+    "pkg_full": "google.golang.org/genproto/googleapis/type/expr"
+  }
+}
+{
+  "proto": "google/type/interval",
+  "pkg": "google.type",
+  "msgs": [
+    {
+      "type": "Interval"
+    }
+  ],
+  "go": {
+    "src": "googleapis/type/interval/interval.pb.go",
+    "pkg": "interval",
+    "pkg_full": "google.golang.org/genproto/googleapis/type/interval"
+  }
+}

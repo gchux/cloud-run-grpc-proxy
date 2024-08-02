@@ -1,0 +1,2967 @@
+{
+  "proto": "google/cloud/dialogflow/cx/v3beta1/page",
+  "pkg": "google.cloud.dialogflow.cx.v3beta1",
+  "svcs": [
+    {
+      "svc": "Pages",
+      "host": "dialogflow.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListPages",
+          "request": {
+            "type": "ListPagesRequest"
+          },
+          "response": {
+            "type": "ListPagesResponse"
+          }
+        },
+        {
+          "method": "GetPage",
+          "request": {
+            "type": "GetPageRequest"
+          },
+          "response": {
+            "type": "Page"
+          }
+        },
+        {
+          "method": "CreatePage",
+          "request": {
+            "type": "CreatePageRequest"
+          },
+          "response": {
+            "type": "Page"
+          }
+        },
+        {
+          "method": "UpdatePage",
+          "request": {
+            "type": "UpdatePageRequest"
+          },
+          "response": {
+            "type": "Page"
+          }
+        },
+        {
+          "method": "DeletePage",
+          "request": {
+            "type": "DeletePageRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Page"
+    },
+    {
+      "type": "Form",
+      "msgs": [
+        {
+          "type": "Parameter"
+        },
+        {
+          "type": "FillBehavior"
+        }
+      ]
+    },
+    {
+      "type": "EventHandler"
+    },
+    {
+      "type": "TransitionRoute"
+    },
+    {
+      "type": "ListPagesRequest"
+    },
+    {
+      "type": "ListPagesResponse"
+    },
+    {
+      "type": "GetPageRequest"
+    },
+    {
+      "type": "CreatePageRequest"
+    },
+    {
+      "type": "UpdatePageRequest"
+    },
+    {
+      "type": "DeletePageRequest"
+    },
+    {
+      "type": "KnowledgeConnectorSettings"
+    }
+  ],
+  "go": {
+    "src": "dialogflow/cx/apiv3beta1/cxpb/page.pb.go",
+    "pkg": "cxpb",
+    "pkg_full": "cloud.google.com/go/dialogflow/cx/apiv3beta1/cxpb"
+  }
+}
+{
+  "proto": "google/cloud/dialogflow/cx/v3beta1/response_message",
+  "pkg": "google.cloud.dialogflow.cx.v3beta1",
+  "msgs": [
+    {
+      "type": "ResponseMessage",
+      "msgs": [
+        {
+          "type": "Text"
+        },
+        {
+          "type": "LiveAgentHandoff"
+        },
+        {
+          "type": "ConversationSuccess"
+        },
+        {
+          "type": "OutputAudioText"
+        },
+        {
+          "type": "EndInteraction"
+        },
+        {
+          "type": "PlayAudio"
+        },
+        {
+          "type": "MixedAudio"
+        },
+        {
+          "type": "Segment"
+        },
+        {
+          "type": "TelephonyTransferCall"
+        },
+        {
+          "type": "KnowledgeInfoCard"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "dialogflow/cx/apiv3beta1/cxpb/response_message.pb.go",
+    "pkg": "cxpb",
+    "pkg_full": "cloud.google.com/go/dialogflow/cx/apiv3beta1/cxpb"
+  }
+}
+{
+  "proto": "google/cloud/dialogflow/cx/v3beta1/safety_settings",
+  "pkg": "google.cloud.dialogflow.cx.v3beta1",
+  "msgs": [
+    {
+      "type": "SafetySettings",
+      "msgs": [
+        {
+          "type": "Phrase"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "dialogflow/cx/apiv3beta1/cxpb/safety_settings.pb.go",
+    "pkg": "cxpb",
+    "pkg_full": "cloud.google.com/go/dialogflow/cx/apiv3beta1/cxpb"
+  }
+}
+{
+  "proto": "google/cloud/dialogflow/cx/v3beta1/generator",
+  "pkg": "google.cloud.dialogflow.cx.v3beta1",
+  "svcs": [
+    {
+      "svc": "Generators",
+      "host": "dialogflow.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListGenerators",
+          "request": {
+            "type": "ListGeneratorsRequest"
+          },
+          "response": {
+            "type": "ListGeneratorsResponse"
+          }
+        },
+        {
+          "method": "GetGenerator",
+          "request": {
+            "type": "GetGeneratorRequest"
+          },
+          "response": {
+            "type": "Generator"
+          }
+        },
+        {
+          "method": "CreateGenerator",
+          "request": {
+            "type": "CreateGeneratorRequest"
+          },
+          "response": {
+            "type": "Generator"
+          }
+        },
+        {
+          "method": "UpdateGenerator",
+          "request": {
+            "type": "UpdateGeneratorRequest"
+          },
+          "response": {
+            "type": "Generator"
+          }
+        },
+        {
+          "method": "DeleteGenerator",
+          "request": {
+            "type": "DeleteGeneratorRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Generator",
+      "msgs": [
+        {
+          "type": "Placeholder"
+        }
+      ]
+    },
+    {
+      "type": "Phrase"
+    },
+    {
+      "type": "ListGeneratorsRequest"
+    },
+    {
+      "type": "ListGeneratorsResponse"
+    },
+    {
+      "type": "GetGeneratorRequest"
+    },
+    {
+      "type": "CreateGeneratorRequest"
+    },
+    {
+      "type": "UpdateGeneratorRequest"
+    },
+    {
+      "type": "DeleteGeneratorRequest"
+    }
+  ],
+  "go": {
+    "src": "dialogflow/cx/apiv3beta1/cxpb/generator.pb.go",
+    "pkg": "cxpb",
+    "pkg_full": "cloud.google.com/go/dialogflow/cx/apiv3beta1/cxpb"
+  }
+}
+{
+  "proto": "google/cloud/dialogflow/cx/v3beta1/gcs",
+  "pkg": "google.cloud.dialogflow.cx.v3beta1",
+  "msgs": [
+    {
+      "type": "GcsDestination"
+    }
+  ],
+  "go": {
+    "src": "dialogflow/cx/apiv3beta1/cxpb/gcs.pb.go",
+    "pkg": "cxpb",
+    "pkg_full": "cloud.google.com/go/dialogflow/cx/apiv3beta1/cxpb"
+  }
+}
+{
+  "proto": "google/cloud/dialogflow/cx/v3beta1/inline",
+  "pkg": "google.cloud.dialogflow.cx.v3beta1",
+  "msgs": [
+    {
+      "type": "InlineDestination"
+    },
+    {
+      "type": "InlineSource"
+    }
+  ],
+  "go": {
+    "src": "dialogflow/cx/apiv3beta1/cxpb/inline.pb.go",
+    "pkg": "cxpb",
+    "pkg_full": "cloud.google.com/go/dialogflow/cx/apiv3beta1/cxpb"
+  }
+}
+{
+  "proto": "google/cloud/dialogflow/cx/v3beta1/parameter_definition",
+  "pkg": "google.cloud.dialogflow.cx.v3beta1",
+  "msgs": [
+    {
+      "type": "ParameterDefinition"
+    }
+  ],
+  "go": {
+    "src": "dialogflow/cx/apiv3beta1/cxpb/parameter_definition.pb.go",
+    "pkg": "cxpb",
+    "pkg_full": "cloud.google.com/go/dialogflow/cx/apiv3beta1/cxpb"
+  }
+}
+{
+  "proto": "google/cloud/dialogflow/cx/v3beta1/generative_settings",
+  "pkg": "google.cloud.dialogflow.cx.v3beta1",
+  "msgs": [
+    {
+      "type": "GenerativeSettings",
+      "msgs": [
+        {
+          "type": "FallbackSettings"
+        },
+        {
+          "type": "PromptTemplate"
+        },
+        {
+          "type": "KnowledgeConnectorSettings"
+        }
+      ]
+    },
+    {
+      "type": "LlmModelSettings"
+    }
+  ],
+  "go": {
+    "src": "dialogflow/cx/apiv3beta1/cxpb/generative_settings.pb.go",
+    "pkg": "cxpb",
+    "pkg_full": "cloud.google.com/go/dialogflow/cx/apiv3beta1/cxpb"
+  }
+}
+{
+  "proto": "google/cloud/dialogflow/cx/v3beta1/intent",
+  "pkg": "google.cloud.dialogflow.cx.v3beta1",
+  "svcs": [
+    {
+      "svc": "Intents",
+      "host": "dialogflow.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListIntents",
+          "request": {
+            "type": "ListIntentsRequest"
+          },
+          "response": {
+            "type": "ListIntentsResponse"
+          }
+        },
+        {
+          "method": "GetIntent",
+          "request": {
+            "type": "GetIntentRequest"
+          },
+          "response": {
+            "type": "Intent"
+          }
+        },
+        {
+          "method": "CreateIntent",
+          "request": {
+            "type": "CreateIntentRequest"
+          },
+          "response": {
+            "type": "Intent"
+          }
+        },
+        {
+          "method": "UpdateIntent",
+          "request": {
+            "type": "UpdateIntentRequest"
+          },
+          "response": {
+            "type": "Intent"
+          }
+        },
+        {
+          "method": "DeleteIntent",
+          "request": {
+            "type": "DeleteIntentRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ImportIntents",
+          "request": {
+            "type": "ImportIntentsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ExportIntents",
+          "request": {
+            "type": "ExportIntentsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Intent",
+      "msgs": [
+        {
+          "type": "TrainingPhrase"
+        },
+        {
+          "type": "Part"
+        },
+        {
+          "type": "Parameter"
+        }
+      ]
+    },
+    {
+      "type": "ListIntentsRequest"
+    },
+    {
+      "type": "ListIntentsResponse"
+    },
+    {
+      "type": "GetIntentRequest"
+    },
+    {
+      "type": "CreateIntentRequest"
+    },
+    {
+      "type": "UpdateIntentRequest"
+    },
+    {
+      "type": "DeleteIntentRequest"
+    },
+    {
+      "type": "ImportIntentsRequest"
+    },
+    {
+      "type": "ImportIntentsResponse",
+      "msgs": [
+        {
+          "type": "ConflictingResources"
+        }
+      ]
+    },
+    {
+      "type": "ImportIntentsMetadata"
+    },
+    {
+      "type": "ExportIntentsRequest"
+    },
+    {
+      "type": "ExportIntentsResponse"
+    },
+    {
+      "type": "ExportIntentsMetadata"
+    }
+  ],
+  "go": {
+    "src": "dialogflow/cx/apiv3beta1/cxpb/intent.pb.go",
+    "pkg": "cxpb",
+    "pkg_full": "cloud.google.com/go/dialogflow/cx/apiv3beta1/cxpb"
+  }
+}
+{
+  "proto": "google/cloud/dialogflow/cx/v3beta1/changelog",
+  "pkg": "google.cloud.dialogflow.cx.v3beta1",
+  "svcs": [
+    {
+      "svc": "Changelogs",
+      "host": "dialogflow.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListChangelogs",
+          "request": {
+            "type": "ListChangelogsRequest"
+          },
+          "response": {
+            "type": "ListChangelogsResponse"
+          }
+        },
+        {
+          "method": "GetChangelog",
+          "request": {
+            "type": "GetChangelogRequest"
+          },
+          "response": {
+            "type": "Changelog"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ListChangelogsRequest"
+    },
+    {
+      "type": "ListChangelogsResponse"
+    },
+    {
+      "type": "GetChangelogRequest"
+    },
+    {
+      "type": "Changelog"
+    }
+  ],
+  "go": {
+    "src": "dialogflow/cx/apiv3beta1/cxpb/changelog.pb.go",
+    "pkg": "cxpb",
+    "pkg_full": "cloud.google.com/go/dialogflow/cx/apiv3beta1/cxpb"
+  }
+}
+{
+  "proto": "google/cloud/dialogflow/cx/v3beta1/security_settings",
+  "pkg": "google.cloud.dialogflow.cx.v3beta1",
+  "svcs": [
+    {
+      "svc": "SecuritySettingsService",
+      "host": "dialogflow.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateSecuritySettings",
+          "request": {
+            "type": "CreateSecuritySettingsRequest"
+          },
+          "response": {
+            "type": "SecuritySettings"
+          }
+        },
+        {
+          "method": "GetSecuritySettings",
+          "request": {
+            "type": "GetSecuritySettingsRequest"
+          },
+          "response": {
+            "type": "SecuritySettings"
+          }
+        },
+        {
+          "method": "UpdateSecuritySettings",
+          "request": {
+            "type": "UpdateSecuritySettingsRequest"
+          },
+          "response": {
+            "type": "SecuritySettings"
+          }
+        },
+        {
+          "method": "ListSecuritySettings",
+          "request": {
+            "type": "ListSecuritySettingsRequest"
+          },
+          "response": {
+            "type": "ListSecuritySettingsResponse"
+          }
+        },
+        {
+          "method": "DeleteSecuritySettings",
+          "request": {
+            "type": "DeleteSecuritySettingsRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GetSecuritySettingsRequest"
+    },
+    {
+      "type": "UpdateSecuritySettingsRequest"
+    },
+    {
+      "type": "ListSecuritySettingsRequest"
+    },
+    {
+      "type": "ListSecuritySettingsResponse"
+    },
+    {
+      "type": "CreateSecuritySettingsRequest"
+    },
+    {
+      "type": "DeleteSecuritySettingsRequest"
+    },
+    {
+      "type": "SecuritySettings",
+      "msgs": [
+        {
+          "type": "AudioExportSettings"
+        },
+        {
+          "type": "InsightsExportSettings"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "dialogflow/cx/apiv3beta1/cxpb/security_settings.pb.go",
+    "pkg": "cxpb",
+    "pkg_full": "cloud.google.com/go/dialogflow/cx/apiv3beta1/cxpb"
+  }
+}
+{
+  "proto": "google/cloud/dialogflow/cx/v3beta1/import_strategy",
+  "pkg": "google.cloud.dialogflow.cx.v3beta1",
+  "go": {
+    "src": "dialogflow/cx/apiv3beta1/cxpb/import_strategy.pb.go",
+    "pkg": "cxpb",
+    "pkg_full": "cloud.google.com/go/dialogflow/cx/apiv3beta1/cxpb"
+  }
+}
+{
+  "proto": "google/cloud/dialogflow/cx/v3beta1/data_store_connection",
+  "pkg": "google.cloud.dialogflow.cx.v3beta1",
+  "msgs": [
+    {
+      "type": "DataStoreConnection"
+    },
+    {
+      "type": "DataStoreConnectionSignals",
+      "msgs": [
+        {
+          "type": "RewriterModelCallSignals"
+        },
+        {
+          "type": "SearchSnippet"
+        },
+        {
+          "type": "AnswerGenerationModelCallSignals"
+        },
+        {
+          "type": "AnswerPart"
+        },
+        {
+          "type": "CitedSnippet"
+        },
+        {
+          "type": "GroundingSignals"
+        },
+        {
+          "type": "SafetySignals"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "dialogflow/cx/apiv3beta1/cxpb/data_store_connection.pb.go",
+    "pkg": "cxpb",
+    "pkg_full": "cloud.google.com/go/dialogflow/cx/apiv3beta1/cxpb"
+  }
+}
+{
+  "proto": "google/cloud/dialogflow/cx/v3beta1/conversation_history",
+  "pkg": "google.cloud.dialogflow.cx.v3beta1",
+  "svcs": [
+    {
+      "svc": "ConversationHistory",
+      "host": "dialogflow.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListConversations",
+          "request": {
+            "type": "ListConversationsRequest"
+          },
+          "response": {
+            "type": "ListConversationsResponse"
+          }
+        },
+        {
+          "method": "GetConversation",
+          "request": {
+            "type": "GetConversationRequest"
+          },
+          "response": {
+            "type": "Conversation"
+          }
+        },
+        {
+          "method": "DeleteConversation",
+          "request": {
+            "type": "DeleteConversationRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GetConversationRequest"
+    },
+    {
+      "type": "DeleteConversationRequest"
+    },
+    {
+      "type": "ListConversationsRequest"
+    },
+    {
+      "type": "ListConversationsResponse"
+    },
+    {
+      "type": "Conversation",
+      "msgs": [
+        {
+          "type": "Metrics"
+        },
+        {
+          "type": "QueryInputCount"
+        },
+        {
+          "type": "MatchTypeCount"
+        },
+        {
+          "type": "Interaction"
+        },
+        {
+          "type": "MissingTransition"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "dialogflow/cx/apiv3beta1/cxpb/conversation_history.pb.go",
+    "pkg": "cxpb",
+    "pkg_full": "cloud.google.com/go/dialogflow/cx/apiv3beta1/cxpb"
+  }
+}
+{
+  "proto": "google/cloud/dialogflow/cx/v3beta1/environment",
+  "pkg": "google.cloud.dialogflow.cx.v3beta1",
+  "svcs": [
+    {
+      "svc": "Environments",
+      "host": "dialogflow.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListEnvironments",
+          "request": {
+            "type": "ListEnvironmentsRequest"
+          },
+          "response": {
+            "type": "ListEnvironmentsResponse"
+          }
+        },
+        {
+          "method": "GetEnvironment",
+          "request": {
+            "type": "GetEnvironmentRequest"
+          },
+          "response": {
+            "type": "Environment"
+          }
+        },
+        {
+          "method": "CreateEnvironment",
+          "request": {
+            "type": "CreateEnvironmentRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateEnvironment",
+          "request": {
+            "type": "UpdateEnvironmentRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteEnvironment",
+          "request": {
+            "type": "DeleteEnvironmentRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "LookupEnvironmentHistory",
+          "request": {
+            "type": "LookupEnvironmentHistoryRequest"
+          },
+          "response": {
+            "type": "LookupEnvironmentHistoryResponse"
+          }
+        },
+        {
+          "method": "RunContinuousTest",
+          "request": {
+            "type": "RunContinuousTestRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListContinuousTestResults",
+          "request": {
+            "type": "ListContinuousTestResultsRequest"
+          },
+          "response": {
+            "type": "ListContinuousTestResultsResponse"
+          }
+        },
+        {
+          "method": "DeployFlow",
+          "request": {
+            "type": "DeployFlowRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Environment",
+      "msgs": [
+        {
+          "type": "VersionConfig"
+        },
+        {
+          "type": "TestCasesConfig"
+        },
+        {
+          "type": "WebhookConfig"
+        }
+      ]
+    },
+    {
+      "type": "ListEnvironmentsRequest"
+    },
+    {
+      "type": "ListEnvironmentsResponse"
+    },
+    {
+      "type": "GetEnvironmentRequest"
+    },
+    {
+      "type": "CreateEnvironmentRequest"
+    },
+    {
+      "type": "UpdateEnvironmentRequest"
+    },
+    {
+      "type": "DeleteEnvironmentRequest"
+    },
+    {
+      "type": "LookupEnvironmentHistoryRequest"
+    },
+    {
+      "type": "LookupEnvironmentHistoryResponse"
+    },
+    {
+      "type": "ContinuousTestResult"
+    },
+    {
+      "type": "RunContinuousTestRequest"
+    },
+    {
+      "type": "RunContinuousTestResponse"
+    },
+    {
+      "type": "RunContinuousTestMetadata"
+    },
+    {
+      "type": "ListContinuousTestResultsRequest"
+    },
+    {
+      "type": "ListContinuousTestResultsResponse"
+    },
+    {
+      "type": "DeployFlowRequest"
+    },
+    {
+      "type": "DeployFlowResponse"
+    },
+    {
+      "type": "DeployFlowMetadata"
+    }
+  ],
+  "go": {
+    "src": "dialogflow/cx/apiv3beta1/cxpb/environment.pb.go",
+    "pkg": "cxpb",
+    "pkg_full": "cloud.google.com/go/dialogflow/cx/apiv3beta1/cxpb"
+  }
+}
+{
+  "proto": "google/cloud/dialogflow/cx/v3beta1/transition_route_group",
+  "pkg": "google.cloud.dialogflow.cx.v3beta1",
+  "svcs": [
+    {
+      "svc": "TransitionRouteGroups",
+      "host": "dialogflow.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListTransitionRouteGroups",
+          "request": {
+            "type": "ListTransitionRouteGroupsRequest"
+          },
+          "response": {
+            "type": "ListTransitionRouteGroupsResponse"
+          }
+        },
+        {
+          "method": "GetTransitionRouteGroup",
+          "request": {
+            "type": "GetTransitionRouteGroupRequest"
+          },
+          "response": {
+            "type": "TransitionRouteGroup"
+          }
+        },
+        {
+          "method": "CreateTransitionRouteGroup",
+          "request": {
+            "type": "CreateTransitionRouteGroupRequest"
+          },
+          "response": {
+            "type": "TransitionRouteGroup"
+          }
+        },
+        {
+          "method": "UpdateTransitionRouteGroup",
+          "request": {
+            "type": "UpdateTransitionRouteGroupRequest"
+          },
+          "response": {
+            "type": "TransitionRouteGroup"
+          }
+        },
+        {
+          "method": "DeleteTransitionRouteGroup",
+          "request": {
+            "type": "DeleteTransitionRouteGroupRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "TransitionRouteGroup"
+    },
+    {
+      "type": "ListTransitionRouteGroupsRequest"
+    },
+    {
+      "type": "ListTransitionRouteGroupsResponse"
+    },
+    {
+      "type": "GetTransitionRouteGroupRequest"
+    },
+    {
+      "type": "CreateTransitionRouteGroupRequest"
+    },
+    {
+      "type": "UpdateTransitionRouteGroupRequest"
+    },
+    {
+      "type": "DeleteTransitionRouteGroupRequest"
+    }
+  ],
+  "go": {
+    "src": "dialogflow/cx/apiv3beta1/cxpb/transition_route_group.pb.go",
+    "pkg": "cxpb",
+    "pkg_full": "cloud.google.com/go/dialogflow/cx/apiv3beta1/cxpb"
+  }
+}
+{
+  "proto": "google/cloud/dialogflow/cx/v3beta1/webhook",
+  "pkg": "google.cloud.dialogflow.cx.v3beta1",
+  "svcs": [
+    {
+      "svc": "Webhooks",
+      "host": "dialogflow.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListWebhooks",
+          "request": {
+            "type": "ListWebhooksRequest"
+          },
+          "response": {
+            "type": "ListWebhooksResponse"
+          }
+        },
+        {
+          "method": "GetWebhook",
+          "request": {
+            "type": "GetWebhookRequest"
+          },
+          "response": {
+            "type": "Webhook"
+          }
+        },
+        {
+          "method": "CreateWebhook",
+          "request": {
+            "type": "CreateWebhookRequest"
+          },
+          "response": {
+            "type": "Webhook"
+          }
+        },
+        {
+          "method": "UpdateWebhook",
+          "request": {
+            "type": "UpdateWebhookRequest"
+          },
+          "response": {
+            "type": "Webhook"
+          }
+        },
+        {
+          "method": "DeleteWebhook",
+          "request": {
+            "type": "DeleteWebhookRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Webhook",
+      "msgs": [
+        {
+          "type": "GenericWebService"
+        },
+        {
+          "type": "OAuthConfig"
+        },
+        {
+          "type": "ServiceDirectoryConfig"
+        }
+      ]
+    },
+    {
+      "type": "ListWebhooksRequest"
+    },
+    {
+      "type": "ListWebhooksResponse"
+    },
+    {
+      "type": "GetWebhookRequest"
+    },
+    {
+      "type": "CreateWebhookRequest"
+    },
+    {
+      "type": "UpdateWebhookRequest"
+    },
+    {
+      "type": "DeleteWebhookRequest"
+    },
+    {
+      "type": "WebhookRequest",
+      "msgs": [
+        {
+          "type": "FulfillmentInfo"
+        },
+        {
+          "type": "IntentInfo"
+        },
+        {
+          "type": "IntentParameterValue"
+        },
+        {
+          "type": "SentimentAnalysisResult"
+        }
+      ]
+    },
+    {
+      "type": "WebhookResponse",
+      "msgs": [
+        {
+          "type": "FulfillmentResponse"
+        }
+      ]
+    },
+    {
+      "type": "PageInfo",
+      "msgs": [
+        {
+          "type": "FormInfo"
+        },
+        {
+          "type": "ParameterInfo"
+        }
+      ]
+    },
+    {
+      "type": "SessionInfo"
+    },
+    {
+      "type": "LanguageInfo"
+    }
+  ],
+  "go": {
+    "src": "dialogflow/cx/apiv3beta1/cxpb/webhook.pb.go",
+    "pkg": "cxpb",
+    "pkg_full": "cloud.google.com/go/dialogflow/cx/apiv3beta1/cxpb"
+  }
+}
+{
+  "proto": "google/cloud/dialogflow/cx/v3beta1/advanced_settings",
+  "pkg": "google.cloud.dialogflow.cx.v3beta1",
+  "msgs": [
+    {
+      "type": "AdvancedSettings",
+      "msgs": [
+        {
+          "type": "SpeechSettings"
+        },
+        {
+          "type": "DtmfSettings"
+        },
+        {
+          "type": "LoggingSettings"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "dialogflow/cx/apiv3beta1/cxpb/advanced_settings.pb.go",
+    "pkg": "cxpb",
+    "pkg_full": "cloud.google.com/go/dialogflow/cx/apiv3beta1/cxpb"
+  }
+}
+{
+  "proto": "google/cloud/dialogflow/cx/v3beta1/agent",
+  "pkg": "google.cloud.dialogflow.cx.v3beta1",
+  "svcs": [
+    {
+      "svc": "Agents",
+      "host": "dialogflow.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListAgents",
+          "request": {
+            "type": "ListAgentsRequest"
+          },
+          "response": {
+            "type": "ListAgentsResponse"
+          }
+        },
+        {
+          "method": "GetAgent",
+          "request": {
+            "type": "GetAgentRequest"
+          },
+          "response": {
+            "type": "Agent"
+          }
+        },
+        {
+          "method": "CreateAgent",
+          "request": {
+            "type": "CreateAgentRequest"
+          },
+          "response": {
+            "type": "Agent"
+          }
+        },
+        {
+          "method": "UpdateAgent",
+          "request": {
+            "type": "UpdateAgentRequest"
+          },
+          "response": {
+            "type": "Agent"
+          }
+        },
+        {
+          "method": "DeleteAgent",
+          "request": {
+            "type": "DeleteAgentRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ExportAgent",
+          "request": {
+            "type": "ExportAgentRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "RestoreAgent",
+          "request": {
+            "type": "RestoreAgentRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ValidateAgent",
+          "request": {
+            "type": "ValidateAgentRequest"
+          },
+          "response": {
+            "type": "AgentValidationResult"
+          }
+        },
+        {
+          "method": "GetAgentValidationResult",
+          "request": {
+            "type": "GetAgentValidationResultRequest"
+          },
+          "response": {
+            "type": "AgentValidationResult"
+          }
+        },
+        {
+          "method": "GetGenerativeSettings",
+          "request": {
+            "type": "GetGenerativeSettingsRequest"
+          },
+          "response": {
+            "type": "GenerativeSettings"
+          }
+        },
+        {
+          "method": "UpdateGenerativeSettings",
+          "request": {
+            "type": "UpdateGenerativeSettingsRequest"
+          },
+          "response": {
+            "type": "GenerativeSettings"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "SpeechToTextSettings"
+    },
+    {
+      "type": "Agent",
+      "msgs": [
+        {
+          "type": "GitIntegrationSettings"
+        },
+        {
+          "type": "GithubSettings"
+        },
+        {
+          "type": "GenAppBuilderSettings"
+        },
+        {
+          "type": "AnswerFeedbackSettings"
+        },
+        {
+          "type": "PersonalizationSettings"
+        }
+      ]
+    },
+    {
+      "type": "ListAgentsRequest"
+    },
+    {
+      "type": "ListAgentsResponse"
+    },
+    {
+      "type": "GetAgentRequest"
+    },
+    {
+      "type": "CreateAgentRequest"
+    },
+    {
+      "type": "UpdateAgentRequest"
+    },
+    {
+      "type": "DeleteAgentRequest"
+    },
+    {
+      "type": "ExportAgentRequest",
+      "msgs": [
+        {
+          "type": "GitDestination"
+        }
+      ]
+    },
+    {
+      "type": "ExportAgentResponse"
+    },
+    {
+      "type": "RestoreAgentRequest",
+      "msgs": [
+        {
+          "type": "GitSource"
+        }
+      ]
+    },
+    {
+      "type": "ValidateAgentRequest"
+    },
+    {
+      "type": "GetAgentValidationResultRequest"
+    },
+    {
+      "type": "AgentValidationResult"
+    },
+    {
+      "type": "GetGenerativeSettingsRequest"
+    },
+    {
+      "type": "UpdateGenerativeSettingsRequest"
+    }
+  ],
+  "go": {
+    "src": "dialogflow/cx/apiv3beta1/cxpb/agent.pb.go",
+    "pkg": "cxpb",
+    "pkg_full": "cloud.google.com/go/dialogflow/cx/apiv3beta1/cxpb"
+  }
+}
+{
+  "proto": "google/cloud/dialogflow/cx/v3beta1/version",
+  "pkg": "google.cloud.dialogflow.cx.v3beta1",
+  "svcs": [
+    {
+      "svc": "Versions",
+      "host": "dialogflow.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListVersions",
+          "request": {
+            "type": "ListVersionsRequest"
+          },
+          "response": {
+            "type": "ListVersionsResponse"
+          }
+        },
+        {
+          "method": "GetVersion",
+          "request": {
+            "type": "GetVersionRequest"
+          },
+          "response": {
+            "type": "Version"
+          }
+        },
+        {
+          "method": "CreateVersion",
+          "request": {
+            "type": "CreateVersionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateVersion",
+          "request": {
+            "type": "UpdateVersionRequest"
+          },
+          "response": {
+            "type": "Version"
+          }
+        },
+        {
+          "method": "DeleteVersion",
+          "request": {
+            "type": "DeleteVersionRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "LoadVersion",
+          "request": {
+            "type": "LoadVersionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CompareVersions",
+          "request": {
+            "type": "CompareVersionsRequest"
+          },
+          "response": {
+            "type": "CompareVersionsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateVersionOperationMetadata"
+    },
+    {
+      "type": "Version"
+    },
+    {
+      "type": "ListVersionsRequest"
+    },
+    {
+      "type": "ListVersionsResponse"
+    },
+    {
+      "type": "GetVersionRequest"
+    },
+    {
+      "type": "CreateVersionRequest"
+    },
+    {
+      "type": "UpdateVersionRequest"
+    },
+    {
+      "type": "DeleteVersionRequest"
+    },
+    {
+      "type": "LoadVersionRequest"
+    },
+    {
+      "type": "CompareVersionsRequest"
+    },
+    {
+      "type": "CompareVersionsResponse"
+    }
+  ],
+  "go": {
+    "src": "dialogflow/cx/apiv3beta1/cxpb/version.pb.go",
+    "pkg": "cxpb",
+    "pkg_full": "cloud.google.com/go/dialogflow/cx/apiv3beta1/cxpb"
+  }
+}
+{
+  "proto": "google/cloud/dialogflow/cx/v3beta1/fulfillment",
+  "pkg": "google.cloud.dialogflow.cx.v3beta1",
+  "msgs": [
+    {
+      "type": "Fulfillment",
+      "msgs": [
+        {
+          "type": "SetParameterAction"
+        },
+        {
+          "type": "ConditionalCases"
+        },
+        {
+          "type": "Case"
+        },
+        {
+          "type": "CaseContent"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "dialogflow/cx/apiv3beta1/cxpb/fulfillment.pb.go",
+    "pkg": "cxpb",
+    "pkg_full": "cloud.google.com/go/dialogflow/cx/apiv3beta1/cxpb"
+  }
+}
+{
+  "proto": "google/cloud/dialogflow/cx/v3beta1/session",
+  "pkg": "google.cloud.dialogflow.cx.v3beta1",
+  "svcs": [
+    {
+      "svc": "Sessions",
+      "host": "dialogflow.googleapis.com",
+      "rpcs": [
+        {
+          "method": "DetectIntent",
+          "request": {
+            "type": "DetectIntentRequest"
+          },
+          "response": {
+            "type": "DetectIntentResponse"
+          }
+        },
+        {
+          "method": "ServerStreamingDetectIntent",
+          "request": {
+            "type": "DetectIntentRequest"
+          },
+          "response": {
+            "type": "DetectIntentResponse",
+            "stream": true
+          }
+        },
+        {
+          "method": "StreamingDetectIntent",
+          "request": {
+            "type": "StreamingDetectIntentRequest",
+            "stream": true
+          },
+          "response": {
+            "type": "StreamingDetectIntentResponse",
+            "stream": true
+          }
+        },
+        {
+          "method": "MatchIntent",
+          "request": {
+            "type": "MatchIntentRequest"
+          },
+          "response": {
+            "type": "MatchIntentResponse"
+          }
+        },
+        {
+          "method": "FulfillIntent",
+          "request": {
+            "type": "FulfillIntentRequest"
+          },
+          "response": {
+            "type": "FulfillIntentResponse"
+          }
+        },
+        {
+          "method": "SubmitAnswerFeedback",
+          "request": {
+            "type": "SubmitAnswerFeedbackRequest"
+          },
+          "response": {
+            "type": "AnswerFeedback"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "AnswerFeedback",
+      "msgs": [
+        {
+          "type": "RatingReason"
+        }
+      ]
+    },
+    {
+      "type": "SubmitAnswerFeedbackRequest"
+    },
+    {
+      "type": "DetectIntentRequest"
+    },
+    {
+      "type": "DetectIntentResponse"
+    },
+    {
+      "type": "StreamingDetectIntentRequest"
+    },
+    {
+      "type": "CloudConversationDebuggingInfo"
+    },
+    {
+      "type": "StreamingDetectIntentResponse"
+    },
+    {
+      "type": "StreamingRecognitionResult"
+    },
+    {
+      "type": "QueryParameters"
+    },
+    {
+      "type": "SearchConfig"
+    },
+    {
+      "type": "BoostSpec",
+      "msgs": [
+        {
+          "type": "ConditionBoostSpec"
+        }
+      ]
+    },
+    {
+      "type": "BoostSpecs"
+    },
+    {
+      "type": "FilterSpecs"
+    },
+    {
+      "type": "QueryInput"
+    },
+    {
+      "type": "GenerativeInfo"
+    },
+    {
+      "type": "QueryResult"
+    },
+    {
+      "type": "TextInput"
+    },
+    {
+      "type": "IntentInput"
+    },
+    {
+      "type": "AudioInput"
+    },
+    {
+      "type": "EventInput"
+    },
+    {
+      "type": "DtmfInput"
+    },
+    {
+      "type": "Match"
+    },
+    {
+      "type": "MatchIntentRequest"
+    },
+    {
+      "type": "MatchIntentResponse"
+    },
+    {
+      "type": "FulfillIntentRequest"
+    },
+    {
+      "type": "FulfillIntentResponse"
+    },
+    {
+      "type": "SentimentAnalysisResult"
+    }
+  ],
+  "go": {
+    "src": "dialogflow/cx/apiv3beta1/cxpb/session.pb.go",
+    "pkg": "cxpb",
+    "pkg_full": "cloud.google.com/go/dialogflow/cx/apiv3beta1/cxpb"
+  }
+}
+{
+  "proto": "google/cloud/dialogflow/cx/v3beta1/validation_message",
+  "pkg": "google.cloud.dialogflow.cx.v3beta1",
+  "msgs": [
+    {
+      "type": "ValidationMessage"
+    },
+    {
+      "type": "ResourceName"
+    }
+  ],
+  "go": {
+    "src": "dialogflow/cx/apiv3beta1/cxpb/validation_message.pb.go",
+    "pkg": "cxpb",
+    "pkg_full": "cloud.google.com/go/dialogflow/cx/apiv3beta1/cxpb"
+  }
+}
+{
+  "proto": "google/cloud/dialogflow/cx/v3beta1/tool_call",
+  "pkg": "google.cloud.dialogflow.cx.v3beta1",
+  "msgs": [
+    {
+      "type": "ToolCall"
+    },
+    {
+      "type": "ToolCallResult",
+      "msgs": [
+        {
+          "type": "Error"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "dialogflow/cx/apiv3beta1/cxpb/tool_call.pb.go",
+    "pkg": "cxpb",
+    "pkg_full": "cloud.google.com/go/dialogflow/cx/apiv3beta1/cxpb"
+  }
+}
+{
+  "proto": "google/cloud/dialogflow/cx/v3beta1/example",
+  "pkg": "google.cloud.dialogflow.cx.v3beta1",
+  "svcs": [
+    {
+      "svc": "Examples",
+      "host": "dialogflow.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateExample",
+          "request": {
+            "type": "CreateExampleRequest"
+          },
+          "response": {
+            "type": "Example"
+          }
+        },
+        {
+          "method": "DeleteExample",
+          "request": {
+            "type": "DeleteExampleRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListExamples",
+          "request": {
+            "type": "ListExamplesRequest"
+          },
+          "response": {
+            "type": "ListExamplesResponse"
+          }
+        },
+        {
+          "method": "GetExample",
+          "request": {
+            "type": "GetExampleRequest"
+          },
+          "response": {
+            "type": "Example"
+          }
+        },
+        {
+          "method": "UpdateExample",
+          "request": {
+            "type": "UpdateExampleRequest"
+          },
+          "response": {
+            "type": "Example"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateExampleRequest"
+    },
+    {
+      "type": "DeleteExampleRequest"
+    },
+    {
+      "type": "ListExamplesRequest"
+    },
+    {
+      "type": "ListExamplesResponse"
+    },
+    {
+      "type": "GetExampleRequest"
+    },
+    {
+      "type": "UpdateExampleRequest"
+    },
+    {
+      "type": "Example"
+    },
+    {
+      "type": "PlaybookInput"
+    },
+    {
+      "type": "PlaybookOutput"
+    },
+    {
+      "type": "Action"
+    },
+    {
+      "type": "UserUtterance"
+    },
+    {
+      "type": "AgentUtterance"
+    },
+    {
+      "type": "ToolUse"
+    },
+    {
+      "type": "PlaybookInvocation"
+    },
+    {
+      "type": "FlowInvocation"
+    }
+  ],
+  "go": {
+    "src": "dialogflow/cx/apiv3beta1/cxpb/example.pb.go",
+    "pkg": "cxpb",
+    "pkg_full": "cloud.google.com/go/dialogflow/cx/apiv3beta1/cxpb"
+  }
+}
+{
+  "proto": "google/cloud/dialogflow/cx/v3beta1/session_entity_type",
+  "pkg": "google.cloud.dialogflow.cx.v3beta1",
+  "svcs": [
+    {
+      "svc": "SessionEntityTypes",
+      "host": "dialogflow.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListSessionEntityTypes",
+          "request": {
+            "type": "ListSessionEntityTypesRequest"
+          },
+          "response": {
+            "type": "ListSessionEntityTypesResponse"
+          }
+        },
+        {
+          "method": "GetSessionEntityType",
+          "request": {
+            "type": "GetSessionEntityTypeRequest"
+          },
+          "response": {
+            "type": "SessionEntityType"
+          }
+        },
+        {
+          "method": "CreateSessionEntityType",
+          "request": {
+            "type": "CreateSessionEntityTypeRequest"
+          },
+          "response": {
+            "type": "SessionEntityType"
+          }
+        },
+        {
+          "method": "UpdateSessionEntityType",
+          "request": {
+            "type": "UpdateSessionEntityTypeRequest"
+          },
+          "response": {
+            "type": "SessionEntityType"
+          }
+        },
+        {
+          "method": "DeleteSessionEntityType",
+          "request": {
+            "type": "DeleteSessionEntityTypeRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "SessionEntityType"
+    },
+    {
+      "type": "ListSessionEntityTypesRequest"
+    },
+    {
+      "type": "ListSessionEntityTypesResponse"
+    },
+    {
+      "type": "GetSessionEntityTypeRequest"
+    },
+    {
+      "type": "CreateSessionEntityTypeRequest"
+    },
+    {
+      "type": "UpdateSessionEntityTypeRequest"
+    },
+    {
+      "type": "DeleteSessionEntityTypeRequest"
+    }
+  ],
+  "go": {
+    "src": "dialogflow/cx/apiv3beta1/cxpb/session_entity_type.pb.go",
+    "pkg": "cxpb",
+    "pkg_full": "cloud.google.com/go/dialogflow/cx/apiv3beta1/cxpb"
+  }
+}
+{
+  "proto": "google/cloud/dialogflow/cx/v3beta1/playbook",
+  "pkg": "google.cloud.dialogflow.cx.v3beta1",
+  "svcs": [
+    {
+      "svc": "Playbooks",
+      "host": "dialogflow.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreatePlaybook",
+          "request": {
+            "type": "CreatePlaybookRequest"
+          },
+          "response": {
+            "type": "Playbook"
+          }
+        },
+        {
+          "method": "DeletePlaybook",
+          "request": {
+            "type": "DeletePlaybookRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListPlaybooks",
+          "request": {
+            "type": "ListPlaybooksRequest"
+          },
+          "response": {
+            "type": "ListPlaybooksResponse"
+          }
+        },
+        {
+          "method": "GetPlaybook",
+          "request": {
+            "type": "GetPlaybookRequest"
+          },
+          "response": {
+            "type": "Playbook"
+          }
+        },
+        {
+          "method": "UpdatePlaybook",
+          "request": {
+            "type": "UpdatePlaybookRequest"
+          },
+          "response": {
+            "type": "Playbook"
+          }
+        },
+        {
+          "method": "CreatePlaybookVersion",
+          "request": {
+            "type": "CreatePlaybookVersionRequest"
+          },
+          "response": {
+            "type": "PlaybookVersion"
+          }
+        },
+        {
+          "method": "GetPlaybookVersion",
+          "request": {
+            "type": "GetPlaybookVersionRequest"
+          },
+          "response": {
+            "type": "PlaybookVersion"
+          }
+        },
+        {
+          "method": "ListPlaybookVersions",
+          "request": {
+            "type": "ListPlaybookVersionsRequest"
+          },
+          "response": {
+            "type": "ListPlaybookVersionsResponse"
+          }
+        },
+        {
+          "method": "DeletePlaybookVersion",
+          "request": {
+            "type": "DeletePlaybookVersionRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreatePlaybookRequest"
+    },
+    {
+      "type": "DeletePlaybookRequest"
+    },
+    {
+      "type": "ListPlaybooksRequest"
+    },
+    {
+      "type": "ListPlaybooksResponse"
+    },
+    {
+      "type": "GetPlaybookRequest"
+    },
+    {
+      "type": "UpdatePlaybookRequest"
+    },
+    {
+      "type": "Playbook",
+      "msgs": [
+        {
+          "type": "Step"
+        },
+        {
+          "type": "Instruction"
+        }
+      ]
+    },
+    {
+      "type": "CreatePlaybookVersionRequest"
+    },
+    {
+      "type": "PlaybookVersion"
+    },
+    {
+      "type": "GetPlaybookVersionRequest"
+    },
+    {
+      "type": "ListPlaybookVersionsRequest"
+    },
+    {
+      "type": "ListPlaybookVersionsResponse"
+    },
+    {
+      "type": "DeletePlaybookVersionRequest"
+    }
+  ],
+  "go": {
+    "src": "dialogflow/cx/apiv3beta1/cxpb/playbook.pb.go",
+    "pkg": "cxpb",
+    "pkg_full": "cloud.google.com/go/dialogflow/cx/apiv3beta1/cxpb"
+  }
+}
+{
+  "proto": "google/cloud/dialogflow/cx/v3beta1/flow",
+  "pkg": "google.cloud.dialogflow.cx.v3beta1",
+  "svcs": [
+    {
+      "svc": "Flows",
+      "host": "dialogflow.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateFlow",
+          "request": {
+            "type": "CreateFlowRequest"
+          },
+          "response": {
+            "type": "Flow"
+          }
+        },
+        {
+          "method": "DeleteFlow",
+          "request": {
+            "type": "DeleteFlowRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListFlows",
+          "request": {
+            "type": "ListFlowsRequest"
+          },
+          "response": {
+            "type": "ListFlowsResponse"
+          }
+        },
+        {
+          "method": "GetFlow",
+          "request": {
+            "type": "GetFlowRequest"
+          },
+          "response": {
+            "type": "Flow"
+          }
+        },
+        {
+          "method": "UpdateFlow",
+          "request": {
+            "type": "UpdateFlowRequest"
+          },
+          "response": {
+            "type": "Flow"
+          }
+        },
+        {
+          "method": "TrainFlow",
+          "request": {
+            "type": "TrainFlowRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ValidateFlow",
+          "request": {
+            "type": "ValidateFlowRequest"
+          },
+          "response": {
+            "type": "FlowValidationResult"
+          }
+        },
+        {
+          "method": "GetFlowValidationResult",
+          "request": {
+            "type": "GetFlowValidationResultRequest"
+          },
+          "response": {
+            "type": "FlowValidationResult"
+          }
+        },
+        {
+          "method": "ImportFlow",
+          "request": {
+            "type": "ImportFlowRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ExportFlow",
+          "request": {
+            "type": "ExportFlowRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "NluSettings"
+    },
+    {
+      "type": "Flow",
+      "msgs": [
+        {
+          "type": "MultiLanguageSettings"
+        }
+      ]
+    },
+    {
+      "type": "CreateFlowRequest"
+    },
+    {
+      "type": "DeleteFlowRequest"
+    },
+    {
+      "type": "ListFlowsRequest"
+    },
+    {
+      "type": "ListFlowsResponse"
+    },
+    {
+      "type": "GetFlowRequest"
+    },
+    {
+      "type": "UpdateFlowRequest"
+    },
+    {
+      "type": "TrainFlowRequest"
+    },
+    {
+      "type": "ValidateFlowRequest"
+    },
+    {
+      "type": "GetFlowValidationResultRequest"
+    },
+    {
+      "type": "FlowValidationResult"
+    },
+    {
+      "type": "ImportFlowRequest"
+    },
+    {
+      "type": "FlowImportStrategy"
+    },
+    {
+      "type": "ImportFlowResponse"
+    },
+    {
+      "type": "ExportFlowRequest"
+    },
+    {
+      "type": "ExportFlowResponse"
+    }
+  ],
+  "go": {
+    "src": "dialogflow/cx/apiv3beta1/cxpb/flow.pb.go",
+    "pkg": "cxpb",
+    "pkg_full": "cloud.google.com/go/dialogflow/cx/apiv3beta1/cxpb"
+  }
+}
+{
+  "proto": "google/cloud/dialogflow/cx/v3beta1/experiment",
+  "pkg": "google.cloud.dialogflow.cx.v3beta1",
+  "svcs": [
+    {
+      "svc": "Experiments",
+      "host": "dialogflow.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListExperiments",
+          "request": {
+            "type": "ListExperimentsRequest"
+          },
+          "response": {
+            "type": "ListExperimentsResponse"
+          }
+        },
+        {
+          "method": "GetExperiment",
+          "request": {
+            "type": "GetExperimentRequest"
+          },
+          "response": {
+            "type": "Experiment"
+          }
+        },
+        {
+          "method": "CreateExperiment",
+          "request": {
+            "type": "CreateExperimentRequest"
+          },
+          "response": {
+            "type": "Experiment"
+          }
+        },
+        {
+          "method": "UpdateExperiment",
+          "request": {
+            "type": "UpdateExperimentRequest"
+          },
+          "response": {
+            "type": "Experiment"
+          }
+        },
+        {
+          "method": "DeleteExperiment",
+          "request": {
+            "type": "DeleteExperimentRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "StartExperiment",
+          "request": {
+            "type": "StartExperimentRequest"
+          },
+          "response": {
+            "type": "Experiment"
+          }
+        },
+        {
+          "method": "StopExperiment",
+          "request": {
+            "type": "StopExperimentRequest"
+          },
+          "response": {
+            "type": "Experiment"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Experiment",
+      "msgs": [
+        {
+          "type": "Definition"
+        },
+        {
+          "type": "Result"
+        },
+        {
+          "type": "ConfidenceInterval"
+        },
+        {
+          "type": "Metric"
+        },
+        {
+          "type": "VersionMetrics"
+        }
+      ]
+    },
+    {
+      "type": "VersionVariants",
+      "msgs": [
+        {
+          "type": "Variant"
+        }
+      ]
+    },
+    {
+      "type": "RolloutConfig",
+      "msgs": [
+        {
+          "type": "RolloutStep"
+        }
+      ]
+    },
+    {
+      "type": "RolloutState"
+    },
+    {
+      "type": "VariantsHistory"
+    },
+    {
+      "type": "ListExperimentsRequest"
+    },
+    {
+      "type": "ListExperimentsResponse"
+    },
+    {
+      "type": "GetExperimentRequest"
+    },
+    {
+      "type": "CreateExperimentRequest"
+    },
+    {
+      "type": "UpdateExperimentRequest"
+    },
+    {
+      "type": "DeleteExperimentRequest"
+    },
+    {
+      "type": "StartExperimentRequest"
+    },
+    {
+      "type": "StopExperimentRequest"
+    }
+  ],
+  "go": {
+    "src": "dialogflow/cx/apiv3beta1/cxpb/experiment.pb.go",
+    "pkg": "cxpb",
+    "pkg_full": "cloud.google.com/go/dialogflow/cx/apiv3beta1/cxpb"
+  }
+}
+{
+  "proto": "google/cloud/dialogflow/cx/v3beta1/test_case",
+  "pkg": "google.cloud.dialogflow.cx.v3beta1",
+  "svcs": [
+    {
+      "svc": "TestCases",
+      "host": "dialogflow.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListTestCases",
+          "request": {
+            "type": "ListTestCasesRequest"
+          },
+          "response": {
+            "type": "ListTestCasesResponse"
+          }
+        },
+        {
+          "method": "BatchDeleteTestCases",
+          "request": {
+            "type": "BatchDeleteTestCasesRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "GetTestCase",
+          "request": {
+            "type": "GetTestCaseRequest"
+          },
+          "response": {
+            "type": "TestCase"
+          }
+        },
+        {
+          "method": "CreateTestCase",
+          "request": {
+            "type": "CreateTestCaseRequest"
+          },
+          "response": {
+            "type": "TestCase"
+          }
+        },
+        {
+          "method": "UpdateTestCase",
+          "request": {
+            "type": "UpdateTestCaseRequest"
+          },
+          "response": {
+            "type": "TestCase"
+          }
+        },
+        {
+          "method": "RunTestCase",
+          "request": {
+            "type": "RunTestCaseRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "BatchRunTestCases",
+          "request": {
+            "type": "BatchRunTestCasesRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CalculateCoverage",
+          "request": {
+            "type": "CalculateCoverageRequest"
+          },
+          "response": {
+            "type": "CalculateCoverageResponse"
+          }
+        },
+        {
+          "method": "ImportTestCases",
+          "request": {
+            "type": "ImportTestCasesRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ExportTestCases",
+          "request": {
+            "type": "ExportTestCasesRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListTestCaseResults",
+          "request": {
+            "type": "ListTestCaseResultsRequest"
+          },
+          "response": {
+            "type": "ListTestCaseResultsResponse"
+          }
+        },
+        {
+          "method": "GetTestCaseResult",
+          "request": {
+            "type": "GetTestCaseResultRequest"
+          },
+          "response": {
+            "type": "TestCaseResult"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "TestCase"
+    },
+    {
+      "type": "TestCaseResult"
+    },
+    {
+      "type": "TestConfig"
+    },
+    {
+      "type": "ConversationTurn",
+      "msgs": [
+        {
+          "type": "UserInput"
+        },
+        {
+          "type": "VirtualAgentOutput"
+        }
+      ]
+    },
+    {
+      "type": "TestRunDifference"
+    },
+    {
+      "type": "TransitionCoverage",
+      "msgs": [
+        {
+          "type": "TransitionNode"
+        },
+        {
+          "type": "Transition"
+        }
+      ]
+    },
+    {
+      "type": "TransitionRouteGroupCoverage",
+      "msgs": [
+        {
+          "type": "Coverage"
+        },
+        {
+          "type": "Transition"
+        }
+      ]
+    },
+    {
+      "type": "IntentCoverage",
+      "msgs": [
+        {
+          "type": "Intent"
+        }
+      ]
+    },
+    {
+      "type": "CalculateCoverageRequest"
+    },
+    {
+      "type": "CalculateCoverageResponse"
+    },
+    {
+      "type": "ListTestCasesRequest"
+    },
+    {
+      "type": "ListTestCasesResponse"
+    },
+    {
+      "type": "BatchDeleteTestCasesRequest"
+    },
+    {
+      "type": "CreateTestCaseRequest"
+    },
+    {
+      "type": "UpdateTestCaseRequest"
+    },
+    {
+      "type": "GetTestCaseRequest"
+    },
+    {
+      "type": "RunTestCaseRequest"
+    },
+    {
+      "type": "RunTestCaseResponse"
+    },
+    {
+      "type": "RunTestCaseMetadata"
+    },
+    {
+      "type": "BatchRunTestCasesRequest"
+    },
+    {
+      "type": "BatchRunTestCasesResponse"
+    },
+    {
+      "type": "BatchRunTestCasesMetadata"
+    },
+    {
+      "type": "TestError"
+    },
+    {
+      "type": "ImportTestCasesRequest"
+    },
+    {
+      "type": "ImportTestCasesResponse"
+    },
+    {
+      "type": "ImportTestCasesMetadata"
+    },
+    {
+      "type": "TestCaseError"
+    },
+    {
+      "type": "ExportTestCasesRequest"
+    },
+    {
+      "type": "ExportTestCasesResponse"
+    },
+    {
+      "type": "ExportTestCasesMetadata"
+    },
+    {
+      "type": "ListTestCaseResultsRequest"
+    },
+    {
+      "type": "ListTestCaseResultsResponse"
+    },
+    {
+      "type": "GetTestCaseResultRequest"
+    }
+  ],
+  "go": {
+    "src": "dialogflow/cx/apiv3beta1/cxpb/test_case.pb.go",
+    "pkg": "cxpb",
+    "pkg_full": "cloud.google.com/go/dialogflow/cx/apiv3beta1/cxpb"
+  }
+}
+{
+  "proto": "google/cloud/dialogflow/cx/v3beta1/entity_type",
+  "pkg": "google.cloud.dialogflow.cx.v3beta1",
+  "svcs": [
+    {
+      "svc": "EntityTypes",
+      "host": "dialogflow.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetEntityType",
+          "request": {
+            "type": "GetEntityTypeRequest"
+          },
+          "response": {
+            "type": "EntityType"
+          }
+        },
+        {
+          "method": "CreateEntityType",
+          "request": {
+            "type": "CreateEntityTypeRequest"
+          },
+          "response": {
+            "type": "EntityType"
+          }
+        },
+        {
+          "method": "UpdateEntityType",
+          "request": {
+            "type": "UpdateEntityTypeRequest"
+          },
+          "response": {
+            "type": "EntityType"
+          }
+        },
+        {
+          "method": "DeleteEntityType",
+          "request": {
+            "type": "DeleteEntityTypeRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListEntityTypes",
+          "request": {
+            "type": "ListEntityTypesRequest"
+          },
+          "response": {
+            "type": "ListEntityTypesResponse"
+          }
+        },
+        {
+          "method": "ExportEntityTypes",
+          "request": {
+            "type": "ExportEntityTypesRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ImportEntityTypes",
+          "request": {
+            "type": "ImportEntityTypesRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "EntityType",
+      "msgs": [
+        {
+          "type": "Entity"
+        },
+        {
+          "type": "ExcludedPhrase"
+        }
+      ]
+    },
+    {
+      "type": "ExportEntityTypesRequest"
+    },
+    {
+      "type": "ExportEntityTypesResponse"
+    },
+    {
+      "type": "ExportEntityTypesMetadata"
+    },
+    {
+      "type": "ImportEntityTypesRequest"
+    },
+    {
+      "type": "ImportEntityTypesResponse",
+      "msgs": [
+        {
+          "type": "ConflictingResources"
+        }
+      ]
+    },
+    {
+      "type": "ImportEntityTypesMetadata"
+    },
+    {
+      "type": "ListEntityTypesRequest"
+    },
+    {
+      "type": "ListEntityTypesResponse"
+    },
+    {
+      "type": "GetEntityTypeRequest"
+    },
+    {
+      "type": "CreateEntityTypeRequest"
+    },
+    {
+      "type": "UpdateEntityTypeRequest"
+    },
+    {
+      "type": "DeleteEntityTypeRequest"
+    }
+  ],
+  "go": {
+    "src": "dialogflow/cx/apiv3beta1/cxpb/entity_type.pb.go",
+    "pkg": "cxpb",
+    "pkg_full": "cloud.google.com/go/dialogflow/cx/apiv3beta1/cxpb"
+  }
+}
+{
+  "proto": "google/cloud/dialogflow/cx/v3beta1/tool",
+  "pkg": "google.cloud.dialogflow.cx.v3beta1",
+  "svcs": [
+    {
+      "svc": "Tools",
+      "host": "dialogflow.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateTool",
+          "request": {
+            "type": "CreateToolRequest"
+          },
+          "response": {
+            "type": "Tool"
+          }
+        },
+        {
+          "method": "ListTools",
+          "request": {
+            "type": "ListToolsRequest"
+          },
+          "response": {
+            "type": "ListToolsResponse"
+          }
+        },
+        {
+          "method": "ExportTools",
+          "request": {
+            "type": "ExportToolsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetTool",
+          "request": {
+            "type": "GetToolRequest"
+          },
+          "response": {
+            "type": "Tool"
+          }
+        },
+        {
+          "method": "UpdateTool",
+          "request": {
+            "type": "UpdateToolRequest"
+          },
+          "response": {
+            "type": "Tool"
+          }
+        },
+        {
+          "method": "DeleteTool",
+          "request": {
+            "type": "DeleteToolRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateToolRequest"
+    },
+    {
+      "type": "ListToolsRequest"
+    },
+    {
+      "type": "ListToolsResponse"
+    },
+    {
+      "type": "GetToolRequest"
+    },
+    {
+      "type": "ExportToolsRequest"
+    },
+    {
+      "type": "ExportToolsResponse"
+    },
+    {
+      "type": "UpdateToolRequest"
+    },
+    {
+      "type": "DeleteToolRequest"
+    },
+    {
+      "type": "Tool",
+      "msgs": [
+        {
+          "type": "OpenApiTool"
+        },
+        {
+          "type": "DataStoreTool"
+        },
+        {
+          "type": "FallbackPrompt"
+        },
+        {
+          "type": "ExtensionTool"
+        },
+        {
+          "type": "FunctionTool"
+        },
+        {
+          "type": "Authentication"
+        },
+        {
+          "type": "ApiKeyConfig"
+        },
+        {
+          "type": "OAuthConfig"
+        },
+        {
+          "type": "ServiceAgentAuthConfig"
+        },
+        {
+          "type": "TLSConfig"
+        },
+        {
+          "type": "CACert"
+        },
+        {
+          "type": "ServiceDirectoryConfig"
+        }
+      ]
+    },
+    {
+      "type": "ExportToolsMetadata"
+    }
+  ],
+  "go": {
+    "src": "dialogflow/cx/apiv3beta1/cxpb/tool.pb.go",
+    "pkg": "cxpb",
+    "pkg_full": "cloud.google.com/go/dialogflow/cx/apiv3beta1/cxpb"
+  }
+}
+{
+  "proto": "google/cloud/dialogflow/cx/v3beta1/deployment",
+  "pkg": "google.cloud.dialogflow.cx.v3beta1",
+  "svcs": [
+    {
+      "svc": "Deployments",
+      "host": "dialogflow.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListDeployments",
+          "request": {
+            "type": "ListDeploymentsRequest"
+          },
+          "response": {
+            "type": "ListDeploymentsResponse"
+          }
+        },
+        {
+          "method": "GetDeployment",
+          "request": {
+            "type": "GetDeploymentRequest"
+          },
+          "response": {
+            "type": "Deployment"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Deployment",
+      "msgs": [
+        {
+          "type": "Result"
+        }
+      ]
+    },
+    {
+      "type": "ListDeploymentsRequest"
+    },
+    {
+      "type": "ListDeploymentsResponse"
+    },
+    {
+      "type": "GetDeploymentRequest"
+    }
+  ],
+  "go": {
+    "src": "dialogflow/cx/apiv3beta1/cxpb/deployment.pb.go",
+    "pkg": "cxpb",
+    "pkg_full": "cloud.google.com/go/dialogflow/cx/apiv3beta1/cxpb"
+  }
+}
+{
+  "proto": "google/cloud/dialogflow/cx/v3beta1/audio_config",
+  "pkg": "google.cloud.dialogflow.cx.v3beta1",
+  "msgs": [
+    {
+      "type": "SpeechWordInfo"
+    },
+    {
+      "type": "BargeInConfig"
+    },
+    {
+      "type": "InputAudioConfig"
+    },
+    {
+      "type": "VoiceSelectionParams"
+    },
+    {
+      "type": "SynthesizeSpeechConfig"
+    },
+    {
+      "type": "OutputAudioConfig"
+    },
+    {
+      "type": "TextToSpeechSettings"
+    }
+  ],
+  "go": {
+    "src": "dialogflow/cx/apiv3beta1/cxpb/audio_config.pb.go",
+    "pkg": "cxpb",
+    "pkg_full": "cloud.google.com/go/dialogflow/cx/apiv3beta1/cxpb"
+  }
+}

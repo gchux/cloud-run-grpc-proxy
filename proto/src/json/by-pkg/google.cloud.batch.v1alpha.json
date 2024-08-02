@@ -1,0 +1,396 @@
+{
+  "proto": "google/cloud/batch/v1alpha/volume",
+  "pkg": "google.cloud.batch.v1alpha",
+  "msgs": [
+    {
+      "type": "Volume"
+    },
+    {
+      "type": "NFS"
+    },
+    {
+      "type": "PD"
+    },
+    {
+      "type": "GCS"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/batch/v1alpha/volume.pb.go",
+    "pkg": "batchpb",
+    "pkg_full": "cloud.google.com/go/batch/apiv1alpha/batchpb"
+  }
+}
+{
+  "proto": "google/cloud/batch/v1alpha/batch",
+  "pkg": "google.cloud.batch.v1alpha",
+  "svcs": [
+    {
+      "svc": "BatchService",
+      "host": "batch.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateJob",
+          "request": {
+            "type": "CreateJobRequest"
+          },
+          "response": {
+            "type": "Job"
+          }
+        },
+        {
+          "method": "GetJob",
+          "request": {
+            "type": "GetJobRequest"
+          },
+          "response": {
+            "type": "Job"
+          }
+        },
+        {
+          "method": "DeleteJob",
+          "request": {
+            "type": "DeleteJobRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateJob",
+          "request": {
+            "type": "UpdateJobRequest"
+          },
+          "response": {
+            "type": "Job"
+          }
+        },
+        {
+          "method": "ListJobs",
+          "request": {
+            "type": "ListJobsRequest"
+          },
+          "response": {
+            "type": "ListJobsResponse"
+          }
+        },
+        {
+          "method": "GetTask",
+          "request": {
+            "type": "GetTaskRequest"
+          },
+          "response": {
+            "type": "Task"
+          }
+        },
+        {
+          "method": "ListTasks",
+          "request": {
+            "type": "ListTasksRequest"
+          },
+          "response": {
+            "type": "ListTasksResponse"
+          }
+        },
+        {
+          "method": "CreateResourceAllowance",
+          "request": {
+            "type": "CreateResourceAllowanceRequest"
+          },
+          "response": {
+            "type": "ResourceAllowance"
+          }
+        },
+        {
+          "method": "GetResourceAllowance",
+          "request": {
+            "type": "GetResourceAllowanceRequest"
+          },
+          "response": {
+            "type": "ResourceAllowance"
+          }
+        },
+        {
+          "method": "DeleteResourceAllowance",
+          "request": {
+            "type": "DeleteResourceAllowanceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListResourceAllowances",
+          "request": {
+            "type": "ListResourceAllowancesRequest"
+          },
+          "response": {
+            "type": "ListResourceAllowancesResponse"
+          }
+        },
+        {
+          "method": "UpdateResourceAllowance",
+          "request": {
+            "type": "UpdateResourceAllowanceRequest"
+          },
+          "response": {
+            "type": "ResourceAllowance"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateJobRequest"
+    },
+    {
+      "type": "GetJobRequest"
+    },
+    {
+      "type": "DeleteJobRequest"
+    },
+    {
+      "type": "UpdateJobRequest"
+    },
+    {
+      "type": "ListJobsRequest"
+    },
+    {
+      "type": "ListJobsResponse"
+    },
+    {
+      "type": "ListTasksRequest"
+    },
+    {
+      "type": "ListTasksResponse"
+    },
+    {
+      "type": "GetTaskRequest"
+    },
+    {
+      "type": "CreateResourceAllowanceRequest"
+    },
+    {
+      "type": "GetResourceAllowanceRequest"
+    },
+    {
+      "type": "DeleteResourceAllowanceRequest"
+    },
+    {
+      "type": "ListResourceAllowancesRequest"
+    },
+    {
+      "type": "ListResourceAllowancesResponse"
+    },
+    {
+      "type": "UpdateResourceAllowanceRequest"
+    },
+    {
+      "type": "OperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/batch/v1alpha/batch.pb.go",
+    "pkg": "batchpb",
+    "pkg_full": "cloud.google.com/go/batch/apiv1alpha/batchpb"
+  }
+}
+{
+  "proto": "google/cloud/batch/v1alpha/resource_allowance",
+  "pkg": "google.cloud.batch.v1alpha",
+  "msgs": [
+    {
+      "type": "ResourceAllowance"
+    },
+    {
+      "type": "UsageResourceAllowance"
+    },
+    {
+      "type": "UsageResourceAllowanceSpec",
+      "msgs": [
+        {
+          "type": "Limit"
+        }
+      ]
+    },
+    {
+      "type": "UsageResourceAllowanceStatus",
+      "msgs": [
+        {
+          "type": "LimitStatus"
+        },
+        {
+          "type": "PeriodConsumption"
+        },
+        {
+          "type": "ConsumptionReport"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "pkg": "batchpb",
+    "pkg_full": "cloud.google.com/go/batch/apiv1alpha/batchpb"
+  }
+}
+{
+  "proto": "google/cloud/batch/v1alpha/notification",
+  "pkg": "google.cloud.batch.v1alpha",
+  "msgs": [
+    {
+      "type": "Notification"
+    }
+  ],
+  "go": {
+    "pkg": "batchpb",
+    "pkg_full": "cloud.google.com/go/batch/apiv1alpha/batchpb"
+  }
+}
+{
+  "proto": "google/cloud/batch/v1alpha/task",
+  "pkg": "google.cloud.batch.v1alpha",
+  "msgs": [
+    {
+      "type": "ComputeResource"
+    },
+    {
+      "type": "StatusEvent"
+    },
+    {
+      "type": "TaskExecution"
+    },
+    {
+      "type": "TaskStatus"
+    },
+    {
+      "type": "TaskResourceUsage"
+    },
+    {
+      "type": "Runnable",
+      "msgs": [
+        {
+          "type": "Container"
+        },
+        {
+          "type": "Script"
+        },
+        {
+          "type": "Barrier"
+        }
+      ]
+    },
+    {
+      "type": "TaskSpec"
+    },
+    {
+      "type": "LifecyclePolicy",
+      "msgs": [
+        {
+          "type": "ActionCondition"
+        }
+      ]
+    },
+    {
+      "type": "Task"
+    },
+    {
+      "type": "Environment",
+      "msgs": [
+        {
+          "type": "KMSEnvMap"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/batch/v1alpha/task.pb.go",
+    "pkg": "batchpb",
+    "pkg_full": "cloud.google.com/go/batch/apiv1alpha/batchpb"
+  }
+}
+{
+  "proto": "google/cloud/batch/v1alpha/job",
+  "pkg": "google.cloud.batch.v1alpha",
+  "msgs": [
+    {
+      "type": "Job"
+    },
+    {
+      "type": "LogsPolicy",
+      "msgs": [
+        {
+          "type": "CloudLoggingOption"
+        }
+      ]
+    },
+    {
+      "type": "JobDependency"
+    },
+    {
+      "type": "JobStatus",
+      "msgs": [
+        {
+          "type": "InstanceStatus"
+        },
+        {
+          "type": "TaskGroupStatus"
+        }
+      ]
+    },
+    {
+      "type": "ResourceUsage"
+    },
+    {
+      "type": "JobNotification",
+      "msgs": [
+        {
+          "type": "Message"
+        }
+      ]
+    },
+    {
+      "type": "AllocationPolicy",
+      "msgs": [
+        {
+          "type": "LocationPolicy"
+        },
+        {
+          "type": "Disk"
+        },
+        {
+          "type": "AttachedDisk"
+        },
+        {
+          "type": "Accelerator"
+        },
+        {
+          "type": "InstancePolicy"
+        },
+        {
+          "type": "InstancePolicyOrTemplate"
+        },
+        {
+          "type": "NetworkInterface"
+        },
+        {
+          "type": "NetworkPolicy"
+        },
+        {
+          "type": "PlacementPolicy"
+        }
+      ]
+    },
+    {
+      "type": "TaskGroup"
+    },
+    {
+      "type": "ServiceAccount"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/batch/v1alpha/job.pb.go",
+    "pkg": "batchpb",
+    "pkg_full": "cloud.google.com/go/batch/apiv1alpha/batchpb"
+  }
+}

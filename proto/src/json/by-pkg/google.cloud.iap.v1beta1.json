@@ -1,0 +1,44 @@
+{
+  "proto": "google/cloud/iap/v1beta1/service",
+  "pkg": "google.cloud.iap.v1beta1",
+  "svcs": [
+    {
+      "svc": "IdentityAwareProxyAdminV1Beta1",
+      "host": "iap.googleapis.com",
+      "rpcs": [
+        {
+          "method": "SetIamPolicy",
+          "request": {
+            "type": "google.iam.v1.SetIamPolicyRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.Policy"
+          }
+        },
+        {
+          "method": "GetIamPolicy",
+          "request": {
+            "type": "google.iam.v1.GetIamPolicyRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.Policy"
+          }
+        },
+        {
+          "method": "TestIamPermissions",
+          "request": {
+            "type": "google.iam.v1.TestIamPermissionsRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.TestIamPermissionsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/iap/v1beta1/service.pb.go",
+    "pkg": "iappb",
+    "pkg_full": "cloud.google.com/go/iap/apiv1beta1/iappb"
+  }
+}

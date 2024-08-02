@@ -1,0 +1,91 @@
+{
+  "proto": "google/cloud/videointelligence/v1beta2/video_intelligence",
+  "pkg": "google.cloud.videointelligence.v1beta2",
+  "svcs": [
+    {
+      "svc": "VideoIntelligenceService",
+      "host": "videointelligence.googleapis.com",
+      "rpcs": [
+        {
+          "method": "AnnotateVideo",
+          "request": {
+            "type": "AnnotateVideoRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "AnnotateVideoRequest"
+    },
+    {
+      "type": "VideoContext"
+    },
+    {
+      "type": "LabelDetectionConfig"
+    },
+    {
+      "type": "ShotChangeDetectionConfig"
+    },
+    {
+      "type": "ExplicitContentDetectionConfig"
+    },
+    {
+      "type": "FaceDetectionConfig"
+    },
+    {
+      "type": "VideoSegment"
+    },
+    {
+      "type": "LabelSegment"
+    },
+    {
+      "type": "LabelFrame"
+    },
+    {
+      "type": "Entity"
+    },
+    {
+      "type": "LabelAnnotation"
+    },
+    {
+      "type": "ExplicitContentFrame"
+    },
+    {
+      "type": "ExplicitContentAnnotation"
+    },
+    {
+      "type": "NormalizedBoundingBox"
+    },
+    {
+      "type": "FaceSegment"
+    },
+    {
+      "type": "FaceFrame"
+    },
+    {
+      "type": "FaceAnnotation"
+    },
+    {
+      "type": "VideoAnnotationResults"
+    },
+    {
+      "type": "AnnotateVideoResponse"
+    },
+    {
+      "type": "VideoAnnotationProgress"
+    },
+    {
+      "type": "AnnotateVideoProgress"
+    }
+  ],
+  "go": {
+    "src": "videointelligence/apiv1beta2/videointelligencepb/video_intelligence.pb.go",
+    "pkg": "videointelligencepb",
+    "pkg_full": "cloud.google.com/go/videointelligence/apiv1beta2/videointelligencepb"
+  }
+}

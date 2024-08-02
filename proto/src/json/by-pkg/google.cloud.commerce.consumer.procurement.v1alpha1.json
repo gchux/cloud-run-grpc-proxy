@@ -1,0 +1,95 @@
+{
+  "proto": "google/cloud/commerce/consumer/procurement/v1alpha1/order",
+  "pkg": "google.cloud.commerce.consumer.procurement.v1alpha1",
+  "msgs": [
+    {
+      "type": "Order"
+    },
+    {
+      "type": "LineItem"
+    },
+    {
+      "type": "LineItemChange"
+    },
+    {
+      "type": "LineItemInfo"
+    },
+    {
+      "type": "Parameter",
+      "msgs": [
+        {
+          "type": "Value"
+        }
+      ]
+    },
+    {
+      "type": "Subscription"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/commerce/consumer/procurement/v1alpha1/order.pb.go",
+    "pkg": "procurementpb",
+    "pkg_full": "cloud.google.com/go/commerce/consumer/procurement/apiv1alpha1/procurementpb"
+  }
+}
+{
+  "proto": "google/cloud/commerce/consumer/procurement/v1alpha1/procurement_service",
+  "pkg": "google.cloud.commerce.consumer.procurement.v1alpha1",
+  "svcs": [
+    {
+      "svc": "ConsumerProcurementService",
+      "host": "cloudcommerceconsumerprocurement.googleapis.com",
+      "rpcs": [
+        {
+          "method": "PlaceOrder",
+          "request": {
+            "type": "PlaceOrderRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetOrder",
+          "request": {
+            "type": "GetOrderRequest"
+          },
+          "response": {
+            "type": "Order"
+          }
+        },
+        {
+          "method": "ListOrders",
+          "request": {
+            "type": "ListOrdersRequest"
+          },
+          "response": {
+            "type": "ListOrdersResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "PlaceOrderRequest"
+    },
+    {
+      "type": "PlaceOrderMetadata"
+    },
+    {
+      "type": "GetOrderRequest"
+    },
+    {
+      "type": "ListOrdersRequest"
+    },
+    {
+      "type": "ListOrdersResponse"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/commerce/consumer/procurement/v1alpha1/procurement_service.pb.go",
+    "pkg": "procurementpb",
+    "pkg_full": "cloud.google.com/go/commerce/consumer/procurement/apiv1alpha1/procurementpb"
+  }
+}

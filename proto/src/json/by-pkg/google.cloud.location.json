@@ -1,0 +1,49 @@
+{
+  "proto": "google/cloud/location/locations",
+  "pkg": "google.cloud.location",
+  "svcs": [
+    {
+      "svc": "Locations",
+      "host": "cloud.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListLocations",
+          "request": {
+            "type": "ListLocationsRequest"
+          },
+          "response": {
+            "type": "ListLocationsResponse"
+          }
+        },
+        {
+          "method": "GetLocation",
+          "request": {
+            "type": "GetLocationRequest"
+          },
+          "response": {
+            "type": "Location"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ListLocationsRequest"
+    },
+    {
+      "type": "ListLocationsResponse"
+    },
+    {
+      "type": "GetLocationRequest"
+    },
+    {
+      "type": "Location"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/location/locations.pb.go",
+    "pkg": "location",
+    "pkg_full": "google.golang.org/genproto/googleapis/cloud/location"
+  }
+}

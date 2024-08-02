@@ -1,0 +1,305 @@
+{
+  "proto": "google/cloud/websecurityscanner/v1alpha/scan_run",
+  "pkg": "google.cloud.websecurityscanner.v1alpha",
+  "msgs": [
+    {
+      "type": "ScanRun"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/websecurityscanner/v1alpha/scan_run.pb.go",
+    "pkg": "websecurityscannerpb",
+    "pkg_full": "cloud.google.com/go/websecurityscanner/apiv1alpha/websecurityscannerpb"
+  }
+}
+{
+  "proto": "google/cloud/websecurityscanner/v1alpha/web_security_scanner",
+  "pkg": "google.cloud.websecurityscanner.v1alpha",
+  "svcs": [
+    {
+      "svc": "WebSecurityScanner",
+      "host": "websecurityscanner.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateScanConfig",
+          "request": {
+            "type": "CreateScanConfigRequest"
+          },
+          "response": {
+            "type": "ScanConfig"
+          }
+        },
+        {
+          "method": "DeleteScanConfig",
+          "request": {
+            "type": "DeleteScanConfigRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "GetScanConfig",
+          "request": {
+            "type": "GetScanConfigRequest"
+          },
+          "response": {
+            "type": "ScanConfig"
+          }
+        },
+        {
+          "method": "ListScanConfigs",
+          "request": {
+            "type": "ListScanConfigsRequest"
+          },
+          "response": {
+            "type": "ListScanConfigsResponse"
+          }
+        },
+        {
+          "method": "UpdateScanConfig",
+          "request": {
+            "type": "UpdateScanConfigRequest"
+          },
+          "response": {
+            "type": "ScanConfig"
+          }
+        },
+        {
+          "method": "StartScanRun",
+          "request": {
+            "type": "StartScanRunRequest"
+          },
+          "response": {
+            "type": "ScanRun"
+          }
+        },
+        {
+          "method": "GetScanRun",
+          "request": {
+            "type": "GetScanRunRequest"
+          },
+          "response": {
+            "type": "ScanRun"
+          }
+        },
+        {
+          "method": "ListScanRuns",
+          "request": {
+            "type": "ListScanRunsRequest"
+          },
+          "response": {
+            "type": "ListScanRunsResponse"
+          }
+        },
+        {
+          "method": "StopScanRun",
+          "request": {
+            "type": "StopScanRunRequest"
+          },
+          "response": {
+            "type": "ScanRun"
+          }
+        },
+        {
+          "method": "ListCrawledUrls",
+          "request": {
+            "type": "ListCrawledUrlsRequest"
+          },
+          "response": {
+            "type": "ListCrawledUrlsResponse"
+          }
+        },
+        {
+          "method": "GetFinding",
+          "request": {
+            "type": "GetFindingRequest"
+          },
+          "response": {
+            "type": "Finding"
+          }
+        },
+        {
+          "method": "ListFindings",
+          "request": {
+            "type": "ListFindingsRequest"
+          },
+          "response": {
+            "type": "ListFindingsResponse"
+          }
+        },
+        {
+          "method": "ListFindingTypeStats",
+          "request": {
+            "type": "ListFindingTypeStatsRequest"
+          },
+          "response": {
+            "type": "ListFindingTypeStatsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateScanConfigRequest"
+    },
+    {
+      "type": "DeleteScanConfigRequest"
+    },
+    {
+      "type": "GetScanConfigRequest"
+    },
+    {
+      "type": "ListScanConfigsRequest"
+    },
+    {
+      "type": "UpdateScanConfigRequest"
+    },
+    {
+      "type": "ListScanConfigsResponse"
+    },
+    {
+      "type": "StartScanRunRequest"
+    },
+    {
+      "type": "GetScanRunRequest"
+    },
+    {
+      "type": "ListScanRunsRequest"
+    },
+    {
+      "type": "ListScanRunsResponse"
+    },
+    {
+      "type": "StopScanRunRequest"
+    },
+    {
+      "type": "ListCrawledUrlsRequest"
+    },
+    {
+      "type": "ListCrawledUrlsResponse"
+    },
+    {
+      "type": "GetFindingRequest"
+    },
+    {
+      "type": "ListFindingsRequest"
+    },
+    {
+      "type": "ListFindingsResponse"
+    },
+    {
+      "type": "ListFindingTypeStatsRequest"
+    },
+    {
+      "type": "ListFindingTypeStatsResponse"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/websecurityscanner/v1alpha/web_security_scanner.pb.go",
+    "pkg": "websecurityscannerpb",
+    "pkg_full": "cloud.google.com/go/websecurityscanner/apiv1alpha/websecurityscannerpb"
+  }
+}
+{
+  "proto": "google/cloud/websecurityscanner/v1alpha/crawled_url",
+  "pkg": "google.cloud.websecurityscanner.v1alpha",
+  "msgs": [
+    {
+      "type": "CrawledUrl"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/websecurityscanner/v1alpha/crawled_url.pb.go",
+    "pkg": "websecurityscannerpb",
+    "pkg_full": "cloud.google.com/go/websecurityscanner/apiv1alpha/websecurityscannerpb"
+  }
+}
+{
+  "proto": "google/cloud/websecurityscanner/v1alpha/finding",
+  "pkg": "google.cloud.websecurityscanner.v1alpha",
+  "msgs": [
+    {
+      "type": "Finding"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/websecurityscanner/v1alpha/finding.pb.go",
+    "pkg": "websecurityscannerpb",
+    "pkg_full": "cloud.google.com/go/websecurityscanner/apiv1alpha/websecurityscannerpb"
+  }
+}
+{
+  "proto": "google/cloud/websecurityscanner/v1alpha/finding_type_stats",
+  "pkg": "google.cloud.websecurityscanner.v1alpha",
+  "msgs": [
+    {
+      "type": "FindingTypeStats"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/websecurityscanner/v1alpha/finding_type_stats.pb.go",
+    "pkg": "websecurityscannerpb",
+    "pkg_full": "cloud.google.com/go/websecurityscanner/apiv1alpha/websecurityscannerpb"
+  }
+}
+{
+  "proto": "google/cloud/websecurityscanner/v1alpha/scan_config",
+  "pkg": "google.cloud.websecurityscanner.v1alpha",
+  "msgs": [
+    {
+      "type": "ScanConfig",
+      "msgs": [
+        {
+          "type": "Authentication"
+        },
+        {
+          "type": "GoogleAccount"
+        },
+        {
+          "type": "CustomAccount"
+        },
+        {
+          "type": "Schedule"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/websecurityscanner/v1alpha/scan_config.pb.go",
+    "pkg": "websecurityscannerpb",
+    "pkg_full": "cloud.google.com/go/websecurityscanner/apiv1alpha/websecurityscannerpb"
+  }
+}
+{
+  "proto": "google/cloud/websecurityscanner/v1alpha/finding_addon",
+  "pkg": "google.cloud.websecurityscanner.v1alpha",
+  "msgs": [
+    {
+      "type": "OutdatedLibrary"
+    },
+    {
+      "type": "ViolatingResource"
+    },
+    {
+      "type": "VulnerableParameters"
+    },
+    {
+      "type": "VulnerableHeaders",
+      "msgs": [
+        {
+          "type": "Header"
+        }
+      ]
+    },
+    {
+      "type": "Xss"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/websecurityscanner/v1alpha/finding_addon.pb.go",
+    "pkg": "websecurityscannerpb",
+    "pkg_full": "cloud.google.com/go/websecurityscanner/apiv1alpha/websecurityscannerpb"
+  }
+}

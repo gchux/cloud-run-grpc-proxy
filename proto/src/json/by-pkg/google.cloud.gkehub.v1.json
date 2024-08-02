@@ -1,0 +1,242 @@
+{
+  "proto": "google/cloud/gkehub/v1/feature",
+  "pkg": "google.cloud.gkehub.v1",
+  "msgs": [
+    {
+      "type": "Feature"
+    },
+    {
+      "type": "FeatureResourceState"
+    },
+    {
+      "type": "FeatureState"
+    },
+    {
+      "type": "CommonFeatureSpec"
+    },
+    {
+      "type": "CommonFeatureState"
+    },
+    {
+      "type": "MembershipFeatureSpec"
+    },
+    {
+      "type": "MembershipFeatureState"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/gkehub/v1/feature.pb.go",
+    "pkg": "gkehubpb",
+    "pkg_full": "cloud.google.com/go/gkehub/apiv1/gkehubpb"
+  }
+}
+{
+  "proto": "google/cloud/gkehub/v1/service",
+  "pkg": "google.cloud.gkehub.v1",
+  "svcs": [
+    {
+      "svc": "GkeHub",
+      "host": "gkehub.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListMemberships",
+          "request": {
+            "type": "ListMembershipsRequest"
+          },
+          "response": {
+            "type": "ListMembershipsResponse"
+          }
+        },
+        {
+          "method": "ListFeatures",
+          "request": {
+            "type": "ListFeaturesRequest"
+          },
+          "response": {
+            "type": "ListFeaturesResponse"
+          }
+        },
+        {
+          "method": "GetMembership",
+          "request": {
+            "type": "GetMembershipRequest"
+          },
+          "response": {
+            "type": "Membership"
+          }
+        },
+        {
+          "method": "GetFeature",
+          "request": {
+            "type": "GetFeatureRequest"
+          },
+          "response": {
+            "type": "Feature"
+          }
+        },
+        {
+          "method": "CreateMembership",
+          "request": {
+            "type": "CreateMembershipRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CreateFeature",
+          "request": {
+            "type": "CreateFeatureRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteMembership",
+          "request": {
+            "type": "DeleteMembershipRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteFeature",
+          "request": {
+            "type": "DeleteFeatureRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateMembership",
+          "request": {
+            "type": "UpdateMembershipRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateFeature",
+          "request": {
+            "type": "UpdateFeatureRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GenerateConnectManifest",
+          "request": {
+            "type": "GenerateConnectManifestRequest"
+          },
+          "response": {
+            "type": "GenerateConnectManifestResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ListMembershipsRequest"
+    },
+    {
+      "type": "ListMembershipsResponse"
+    },
+    {
+      "type": "GetMembershipRequest"
+    },
+    {
+      "type": "CreateMembershipRequest"
+    },
+    {
+      "type": "DeleteMembershipRequest"
+    },
+    {
+      "type": "UpdateMembershipRequest"
+    },
+    {
+      "type": "GenerateConnectManifestRequest"
+    },
+    {
+      "type": "GenerateConnectManifestResponse"
+    },
+    {
+      "type": "ConnectAgentResource"
+    },
+    {
+      "type": "TypeMeta"
+    },
+    {
+      "type": "ListFeaturesRequest"
+    },
+    {
+      "type": "ListFeaturesResponse"
+    },
+    {
+      "type": "GetFeatureRequest"
+    },
+    {
+      "type": "CreateFeatureRequest"
+    },
+    {
+      "type": "DeleteFeatureRequest"
+    },
+    {
+      "type": "UpdateFeatureRequest"
+    },
+    {
+      "type": "OperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/gkehub/v1/service.pb.go",
+    "pkg": "gkehubpb",
+    "pkg_full": "cloud.google.com/go/gkehub/apiv1/gkehubpb"
+  }
+}
+{
+  "proto": "google/cloud/gkehub/v1/membership",
+  "pkg": "google.cloud.gkehub.v1",
+  "msgs": [
+    {
+      "type": "Membership"
+    },
+    {
+      "type": "MembershipEndpoint"
+    },
+    {
+      "type": "KubernetesResource"
+    },
+    {
+      "type": "ResourceOptions"
+    },
+    {
+      "type": "ResourceManifest"
+    },
+    {
+      "type": "GkeCluster"
+    },
+    {
+      "type": "KubernetesMetadata"
+    },
+    {
+      "type": "MonitoringConfig"
+    },
+    {
+      "type": "MembershipState"
+    },
+    {
+      "type": "Authority"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/gkehub/v1/membership.pb.go",
+    "pkg": "gkehubpb",
+    "pkg_full": "cloud.google.com/go/gkehub/apiv1/gkehubpb"
+  }
+}

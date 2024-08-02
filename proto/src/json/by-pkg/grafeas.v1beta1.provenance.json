@@ -1,0 +1,29 @@
+{
+  "proto": "google/devtools/containeranalysis/v1beta1/provenance/provenance",
+  "pkg": "grafeas.v1beta1.provenance",
+  "msgs": [
+    {
+      "type": "BuildProvenance"
+    },
+    {
+      "type": "Source"
+    },
+    {
+      "type": "FileHashes"
+    },
+    {
+      "type": "Hash"
+    },
+    {
+      "type": "Command"
+    },
+    {
+      "type": "Artifact"
+    }
+  ],
+  "go": {
+    "src": "googleapis/devtools/containeranalysis/v1beta1/provenance/provenance.pb.go",
+    "pkg": "containeranalysispb",
+    "pkg_full": "cloud.google.com/go/containeranalysis/apiv1beta1/containeranalysispb"
+  }
+}

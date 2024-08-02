@@ -1,0 +1,267 @@
+{
+  "proto": "google/cloud/bigquery/migration/v2alpha/assessment_task",
+  "pkg": "google.cloud.bigquery.migration.v2alpha",
+  "msgs": [
+    {
+      "type": "AssessmentTaskDetails"
+    },
+    {
+      "type": "AssessmentOrchestrationResultDetails"
+    }
+  ],
+  "go": {
+    "src": "bigquery/migration/apiv2alpha/migrationpb/assessment_task.pb.go",
+    "pkg": "migrationpb",
+    "pkg_full": "cloud.google.com/go/bigquery/migration/apiv2alpha/migrationpb"
+  }
+}
+{
+  "proto": "google/cloud/bigquery/migration/v2alpha/translation_task",
+  "pkg": "google.cloud.bigquery.migration.v2alpha",
+  "msgs": [
+    {
+      "type": "TranslationFileMapping"
+    },
+    {
+      "type": "TranslationTaskDetails"
+    },
+    {
+      "type": "Filter"
+    },
+    {
+      "type": "IdentifierSettings"
+    },
+    {
+      "type": "TeradataOptions"
+    },
+    {
+      "type": "BteqOptions"
+    },
+    {
+      "type": "DatasetReference"
+    }
+  ],
+  "go": {
+    "src": "bigquery/migration/apiv2alpha/migrationpb/translation_task.pb.go",
+    "pkg": "migrationpb",
+    "pkg_full": "cloud.google.com/go/bigquery/migration/apiv2alpha/migrationpb"
+  }
+}
+{
+  "proto": "google/cloud/bigquery/migration/v2alpha/migration_metrics",
+  "pkg": "google.cloud.bigquery.migration.v2alpha",
+  "msgs": [
+    {
+      "type": "TimeSeries"
+    },
+    {
+      "type": "Point"
+    },
+    {
+      "type": "TimeInterval"
+    },
+    {
+      "type": "TypedValue"
+    }
+  ],
+  "go": {
+    "src": "bigquery/migration/apiv2alpha/migrationpb/migration_metrics.pb.go",
+    "pkg": "migrationpb",
+    "pkg_full": "cloud.google.com/go/bigquery/migration/apiv2alpha/migrationpb"
+  }
+}
+{
+  "proto": "google/cloud/bigquery/migration/v2alpha/translation_service",
+  "pkg": "google.cloud.bigquery.migration.v2alpha",
+  "svcs": [
+    {
+      "svc": "SqlTranslationService",
+      "host": "bigquerymigration.googleapis.com",
+      "rpcs": [
+        {
+          "method": "TranslateQuery",
+          "request": {
+            "type": "TranslateQueryRequest"
+          },
+          "response": {
+            "type": "TranslateQueryResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "TranslateQueryRequest"
+    },
+    {
+      "type": "TranslateQueryResponse"
+    },
+    {
+      "type": "SqlTranslationErrorDetail"
+    },
+    {
+      "type": "SqlTranslationError"
+    },
+    {
+      "type": "SqlTranslationWarning"
+    }
+  ],
+  "go": {
+    "src": "bigquery/migration/apiv2alpha/migrationpb/translation_service.pb.go",
+    "pkg": "migrationpb",
+    "pkg_full": "cloud.google.com/go/bigquery/migration/apiv2alpha/migrationpb"
+  }
+}
+{
+  "proto": "google/cloud/bigquery/migration/v2alpha/migration_service",
+  "pkg": "google.cloud.bigquery.migration.v2alpha",
+  "svcs": [
+    {
+      "svc": "MigrationService",
+      "host": "bigquerymigration.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateMigrationWorkflow",
+          "request": {
+            "type": "CreateMigrationWorkflowRequest"
+          },
+          "response": {
+            "type": "MigrationWorkflow"
+          }
+        },
+        {
+          "method": "GetMigrationWorkflow",
+          "request": {
+            "type": "GetMigrationWorkflowRequest"
+          },
+          "response": {
+            "type": "MigrationWorkflow"
+          }
+        },
+        {
+          "method": "ListMigrationWorkflows",
+          "request": {
+            "type": "ListMigrationWorkflowsRequest"
+          },
+          "response": {
+            "type": "ListMigrationWorkflowsResponse"
+          }
+        },
+        {
+          "method": "DeleteMigrationWorkflow",
+          "request": {
+            "type": "DeleteMigrationWorkflowRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "StartMigrationWorkflow",
+          "request": {
+            "type": "StartMigrationWorkflowRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "GetMigrationSubtask",
+          "request": {
+            "type": "GetMigrationSubtaskRequest"
+          },
+          "response": {
+            "type": "MigrationSubtask"
+          }
+        },
+        {
+          "method": "ListMigrationSubtasks",
+          "request": {
+            "type": "ListMigrationSubtasksRequest"
+          },
+          "response": {
+            "type": "ListMigrationSubtasksResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateMigrationWorkflowRequest"
+    },
+    {
+      "type": "GetMigrationWorkflowRequest"
+    },
+    {
+      "type": "ListMigrationWorkflowsRequest"
+    },
+    {
+      "type": "ListMigrationWorkflowsResponse"
+    },
+    {
+      "type": "DeleteMigrationWorkflowRequest"
+    },
+    {
+      "type": "StartMigrationWorkflowRequest"
+    },
+    {
+      "type": "GetMigrationSubtaskRequest"
+    },
+    {
+      "type": "ListMigrationSubtasksRequest"
+    },
+    {
+      "type": "ListMigrationSubtasksResponse"
+    }
+  ],
+  "go": {
+    "src": "bigquery/migration/apiv2alpha/migrationpb/migration_service.pb.go",
+    "pkg": "migrationpb",
+    "pkg_full": "cloud.google.com/go/bigquery/migration/apiv2alpha/migrationpb"
+  }
+}
+{
+  "proto": "google/cloud/bigquery/migration/v2alpha/migration_error_details",
+  "pkg": "google.cloud.bigquery.migration.v2alpha",
+  "msgs": [
+    {
+      "type": "ResourceErrorDetail"
+    },
+    {
+      "type": "ErrorDetail"
+    },
+    {
+      "type": "ErrorLocation"
+    }
+  ],
+  "go": {
+    "src": "bigquery/migration/apiv2alpha/migrationpb/migration_error_details.pb.go",
+    "pkg": "migrationpb",
+    "pkg_full": "cloud.google.com/go/bigquery/migration/apiv2alpha/migrationpb"
+  }
+}
+{
+  "proto": "google/cloud/bigquery/migration/v2alpha/migration_entities",
+  "pkg": "google.cloud.bigquery.migration.v2alpha",
+  "msgs": [
+    {
+      "type": "MigrationWorkflow"
+    },
+    {
+      "type": "MigrationTask"
+    },
+    {
+      "type": "MigrationSubtask"
+    },
+    {
+      "type": "MigrationTaskOrchestrationResult"
+    }
+  ],
+  "go": {
+    "src": "bigquery/migration/apiv2alpha/migrationpb/migration_entities.pb.go",
+    "pkg": "migrationpb",
+    "pkg_full": "cloud.google.com/go/bigquery/migration/apiv2alpha/migrationpb"
+  }
+}

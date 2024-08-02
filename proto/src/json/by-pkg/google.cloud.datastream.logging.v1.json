@@ -1,0 +1,19 @@
+{
+  "proto": "google/cloud/datastream/logging/v1/datastream_logs",
+  "pkg": "google.cloud.datastream.logging.v1",
+  "msgs": [
+    {
+      "type": "StreamActivityLogEntry",
+      "msgs": [
+        {
+          "type": "StreamStateChange"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/datastream/logging/v1/datastream_logs.pb.go",
+    "pkg": "loggingpb",
+    "pkg_full": "cloud.google.com/go/datastream/logging/apiv1/loggingpb"
+  }
+}

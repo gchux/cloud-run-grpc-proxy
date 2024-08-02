@@ -1,0 +1,139 @@
+{
+  "proto": "google/cloud/identitytoolkit/v2/authentication_service",
+  "pkg": "google.cloud.identitytoolkit.v2",
+  "svcs": [
+    {
+      "svc": "AuthenticationService",
+      "host": "identitytoolkit.googleapis.com",
+      "rpcs": [
+        {
+          "method": "FinalizeMfaSignIn",
+          "request": {
+            "type": "FinalizeMfaSignInRequest"
+          },
+          "response": {
+            "type": "FinalizeMfaSignInResponse"
+          }
+        },
+        {
+          "method": "StartMfaSignIn",
+          "request": {
+            "type": "StartMfaSignInRequest"
+          },
+          "response": {
+            "type": "StartMfaSignInResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "FinalizeMfaSignInRequest"
+    },
+    {
+      "type": "FinalizeMfaSignInResponse"
+    },
+    {
+      "type": "StartMfaSignInRequest"
+    },
+    {
+      "type": "StartMfaSignInResponse"
+    }
+  ],
+  "go": {
+    "src": "identitytoolkit/apiv2/identitytoolkitpb/authentication_service.pb.go",
+    "pkg": "identitytoolkitpb",
+    "pkg_full": "cloud.google.com/go/identitytoolkit/apiv2/identitytoolkitpb"
+  }
+}
+{
+  "proto": "google/cloud/identitytoolkit/v2/mfa_info",
+  "pkg": "google.cloud.identitytoolkit.v2",
+  "msgs": [
+    {
+      "type": "AutoRetrievalInfo"
+    },
+    {
+      "type": "StartMfaPhoneRequestInfo"
+    },
+    {
+      "type": "StartMfaPhoneResponseInfo"
+    },
+    {
+      "type": "FinalizeMfaPhoneRequestInfo"
+    },
+    {
+      "type": "FinalizeMfaPhoneResponseInfo"
+    }
+  ],
+  "go": {
+    "src": "identitytoolkit/apiv2/identitytoolkitpb/mfa_info.pb.go",
+    "pkg": "identitytoolkitpb",
+    "pkg_full": "cloud.google.com/go/identitytoolkit/apiv2/identitytoolkitpb"
+  }
+}
+{
+  "proto": "google/cloud/identitytoolkit/v2/account_management_service",
+  "pkg": "google.cloud.identitytoolkit.v2",
+  "svcs": [
+    {
+      "svc": "AccountManagementService",
+      "host": "identitytoolkit.googleapis.com",
+      "rpcs": [
+        {
+          "method": "FinalizeMfaEnrollment",
+          "request": {
+            "type": "FinalizeMfaEnrollmentRequest"
+          },
+          "response": {
+            "type": "FinalizeMfaEnrollmentResponse"
+          }
+        },
+        {
+          "method": "StartMfaEnrollment",
+          "request": {
+            "type": "StartMfaEnrollmentRequest"
+          },
+          "response": {
+            "type": "StartMfaEnrollmentResponse"
+          }
+        },
+        {
+          "method": "WithdrawMfa",
+          "request": {
+            "type": "WithdrawMfaRequest"
+          },
+          "response": {
+            "type": "WithdrawMfaResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "FinalizeMfaEnrollmentRequest"
+    },
+    {
+      "type": "FinalizeMfaEnrollmentResponse"
+    },
+    {
+      "type": "StartMfaEnrollmentRequest"
+    },
+    {
+      "type": "StartMfaEnrollmentResponse"
+    },
+    {
+      "type": "WithdrawMfaRequest"
+    },
+    {
+      "type": "WithdrawMfaResponse"
+    }
+  ],
+  "go": {
+    "src": "identitytoolkit/apiv2/identitytoolkitpb/account_management_service.pb.go",
+    "pkg": "identitytoolkitpb",
+    "pkg_full": "cloud.google.com/go/identitytoolkit/apiv2/identitytoolkitpb"
+  }
+}

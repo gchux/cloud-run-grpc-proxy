@@ -1,0 +1,812 @@
+{
+  "proto": "google/cloud/baremetalsolution/v2/osimage",
+  "pkg": "google.cloud.baremetalsolution.v2",
+  "msgs": [
+    {
+      "type": "OSImage"
+    },
+    {
+      "type": "ListOSImagesRequest"
+    },
+    {
+      "type": "ListOSImagesResponse"
+    }
+  ],
+  "go": {
+    "src": "baremetalsolution/apiv2/baremetalsolutionpb/osimage.pb.go",
+    "pkg": "baremetalsolutionpb",
+    "pkg_full": "cloud.google.com/go/baremetalsolution/apiv2/baremetalsolutionpb"
+  }
+}
+{
+  "proto": "google/cloud/baremetalsolution/v2/common",
+  "pkg": "google.cloud.baremetalsolution.v2",
+  "go": {
+    "src": "baremetalsolution/apiv2/baremetalsolutionpb/common.pb.go",
+    "pkg": "baremetalsolutionpb",
+    "pkg_full": "cloud.google.com/go/baremetalsolution/apiv2/baremetalsolutionpb"
+  }
+}
+{
+  "proto": "google/cloud/baremetalsolution/v2/network",
+  "pkg": "google.cloud.baremetalsolution.v2",
+  "msgs": [
+    {
+      "type": "Network"
+    },
+    {
+      "type": "NetworkAddressReservation"
+    },
+    {
+      "type": "VRF",
+      "msgs": [
+        {
+          "type": "QosPolicy"
+        },
+        {
+          "type": "VlanAttachment"
+        }
+      ]
+    },
+    {
+      "type": "LogicalInterface",
+      "msgs": [
+        {
+          "type": "LogicalNetworkInterface"
+        }
+      ]
+    },
+    {
+      "type": "GetNetworkRequest"
+    },
+    {
+      "type": "ListNetworksRequest"
+    },
+    {
+      "type": "ListNetworksResponse"
+    },
+    {
+      "type": "UpdateNetworkRequest"
+    },
+    {
+      "type": "NetworkUsage"
+    },
+    {
+      "type": "ListNetworkUsageRequest"
+    },
+    {
+      "type": "ListNetworkUsageResponse"
+    },
+    {
+      "type": "NetworkMountPoint"
+    },
+    {
+      "type": "RenameNetworkRequest"
+    }
+  ],
+  "go": {
+    "src": "baremetalsolution/apiv2/baremetalsolutionpb/network.pb.go",
+    "pkg": "baremetalsolutionpb",
+    "pkg_full": "cloud.google.com/go/baremetalsolution/apiv2/baremetalsolutionpb"
+  }
+}
+{
+  "proto": "google/cloud/baremetalsolution/v2/lun",
+  "pkg": "google.cloud.baremetalsolution.v2",
+  "msgs": [
+    {
+      "type": "Lun"
+    },
+    {
+      "type": "GetLunRequest"
+    },
+    {
+      "type": "ListLunsRequest"
+    },
+    {
+      "type": "ListLunsResponse"
+    },
+    {
+      "type": "EvictLunRequest"
+    }
+  ],
+  "go": {
+    "src": "baremetalsolution/apiv2/baremetalsolutionpb/lun.pb.go",
+    "pkg": "baremetalsolutionpb",
+    "pkg_full": "cloud.google.com/go/baremetalsolution/apiv2/baremetalsolutionpb"
+  }
+}
+{
+  "proto": "google/cloud/baremetalsolution/v2/provisioning",
+  "pkg": "google.cloud.baremetalsolution.v2",
+  "msgs": [
+    {
+      "type": "ProvisioningConfig"
+    },
+    {
+      "type": "SubmitProvisioningConfigRequest"
+    },
+    {
+      "type": "SubmitProvisioningConfigResponse"
+    },
+    {
+      "type": "ProvisioningQuota"
+    },
+    {
+      "type": "ListProvisioningQuotasRequest"
+    },
+    {
+      "type": "ListProvisioningQuotasResponse"
+    },
+    {
+      "type": "InstanceConfig",
+      "msgs": [
+        {
+          "type": "NetworkAddress"
+        }
+      ]
+    },
+    {
+      "type": "VolumeConfig",
+      "msgs": [
+        {
+          "type": "LunRange"
+        },
+        {
+          "type": "NfsExport"
+        }
+      ]
+    },
+    {
+      "type": "NetworkConfig",
+      "msgs": [
+        {
+          "type": "IntakeVlanAttachment"
+        }
+      ]
+    },
+    {
+      "type": "InstanceQuota"
+    },
+    {
+      "type": "GetProvisioningConfigRequest"
+    },
+    {
+      "type": "CreateProvisioningConfigRequest"
+    },
+    {
+      "type": "UpdateProvisioningConfigRequest"
+    }
+  ],
+  "go": {
+    "src": "baremetalsolution/apiv2/baremetalsolutionpb/provisioning.pb.go",
+    "pkg": "baremetalsolutionpb",
+    "pkg_full": "cloud.google.com/go/baremetalsolution/apiv2/baremetalsolutionpb"
+  }
+}
+{
+  "proto": "google/cloud/baremetalsolution/v2/instance",
+  "pkg": "google.cloud.baremetalsolution.v2",
+  "msgs": [
+    {
+      "type": "Instance"
+    },
+    {
+      "type": "GetInstanceRequest"
+    },
+    {
+      "type": "ListInstancesRequest"
+    },
+    {
+      "type": "ListInstancesResponse"
+    },
+    {
+      "type": "UpdateInstanceRequest"
+    },
+    {
+      "type": "RenameInstanceRequest"
+    },
+    {
+      "type": "ResetInstanceRequest"
+    },
+    {
+      "type": "StartInstanceRequest"
+    },
+    {
+      "type": "StartInstanceResponse"
+    },
+    {
+      "type": "StopInstanceRequest"
+    },
+    {
+      "type": "StopInstanceResponse"
+    },
+    {
+      "type": "EnableInteractiveSerialConsoleRequest"
+    },
+    {
+      "type": "EnableInteractiveSerialConsoleResponse"
+    },
+    {
+      "type": "DisableInteractiveSerialConsoleRequest"
+    },
+    {
+      "type": "DisableInteractiveSerialConsoleResponse"
+    },
+    {
+      "type": "DetachLunRequest"
+    },
+    {
+      "type": "ServerNetworkTemplate",
+      "msgs": [
+        {
+          "type": "LogicalInterface"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "baremetalsolution/apiv2/baremetalsolutionpb/instance.pb.go",
+    "pkg": "baremetalsolutionpb",
+    "pkg_full": "cloud.google.com/go/baremetalsolution/apiv2/baremetalsolutionpb"
+  }
+}
+{
+  "proto": "google/cloud/baremetalsolution/v2/nfs_share",
+  "pkg": "google.cloud.baremetalsolution.v2",
+  "msgs": [
+    {
+      "type": "NfsShare",
+      "msgs": [
+        {
+          "type": "AllowedClient"
+        }
+      ]
+    },
+    {
+      "type": "GetNfsShareRequest"
+    },
+    {
+      "type": "ListNfsSharesRequest"
+    },
+    {
+      "type": "ListNfsSharesResponse"
+    },
+    {
+      "type": "UpdateNfsShareRequest"
+    },
+    {
+      "type": "RenameNfsShareRequest"
+    },
+    {
+      "type": "CreateNfsShareRequest"
+    },
+    {
+      "type": "DeleteNfsShareRequest"
+    }
+  ],
+  "go": {
+    "src": "baremetalsolution/apiv2/baremetalsolutionpb/nfs_share.pb.go",
+    "pkg": "baremetalsolutionpb",
+    "pkg_full": "cloud.google.com/go/baremetalsolution/apiv2/baremetalsolutionpb"
+  }
+}
+{
+  "proto": "google/cloud/baremetalsolution/v2/ssh_key",
+  "pkg": "google.cloud.baremetalsolution.v2",
+  "msgs": [
+    {
+      "type": "SSHKey"
+    },
+    {
+      "type": "ListSSHKeysRequest"
+    },
+    {
+      "type": "ListSSHKeysResponse"
+    },
+    {
+      "type": "CreateSSHKeyRequest"
+    },
+    {
+      "type": "DeleteSSHKeyRequest"
+    }
+  ],
+  "go": {
+    "src": "baremetalsolution/apiv2/baremetalsolutionpb/ssh_key.pb.go",
+    "pkg": "baremetalsolutionpb",
+    "pkg_full": "cloud.google.com/go/baremetalsolution/apiv2/baremetalsolutionpb"
+  }
+}
+{
+  "proto": "google/cloud/baremetalsolution/v2/baremetalsolution",
+  "pkg": "google.cloud.baremetalsolution.v2",
+  "svcs": [
+    {
+      "svc": "BareMetalSolution",
+      "host": "baremetalsolution.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListInstances",
+          "request": {
+            "type": "ListInstancesRequest"
+          },
+          "response": {
+            "type": "ListInstancesResponse"
+          }
+        },
+        {
+          "method": "GetInstance",
+          "request": {
+            "type": "GetInstanceRequest"
+          },
+          "response": {
+            "type": "Instance"
+          }
+        },
+        {
+          "method": "UpdateInstance",
+          "request": {
+            "type": "UpdateInstanceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "RenameInstance",
+          "request": {
+            "type": "RenameInstanceRequest"
+          },
+          "response": {
+            "type": "Instance"
+          }
+        },
+        {
+          "method": "ResetInstance",
+          "request": {
+            "type": "ResetInstanceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "StartInstance",
+          "request": {
+            "type": "StartInstanceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "StopInstance",
+          "request": {
+            "type": "StopInstanceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "EnableInteractiveSerialConsole",
+          "request": {
+            "type": "EnableInteractiveSerialConsoleRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DisableInteractiveSerialConsole",
+          "request": {
+            "type": "DisableInteractiveSerialConsoleRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DetachLun",
+          "request": {
+            "type": "DetachLunRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListSSHKeys",
+          "request": {
+            "type": "ListSSHKeysRequest"
+          },
+          "response": {
+            "type": "ListSSHKeysResponse"
+          }
+        },
+        {
+          "method": "CreateSSHKey",
+          "request": {
+            "type": "CreateSSHKeyRequest"
+          },
+          "response": {
+            "type": "SSHKey"
+          }
+        },
+        {
+          "method": "DeleteSSHKey",
+          "request": {
+            "type": "DeleteSSHKeyRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListVolumes",
+          "request": {
+            "type": "ListVolumesRequest"
+          },
+          "response": {
+            "type": "ListVolumesResponse"
+          }
+        },
+        {
+          "method": "GetVolume",
+          "request": {
+            "type": "GetVolumeRequest"
+          },
+          "response": {
+            "type": "Volume"
+          }
+        },
+        {
+          "method": "UpdateVolume",
+          "request": {
+            "type": "UpdateVolumeRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "RenameVolume",
+          "request": {
+            "type": "RenameVolumeRequest"
+          },
+          "response": {
+            "type": "Volume"
+          }
+        },
+        {
+          "method": "EvictVolume",
+          "request": {
+            "type": "EvictVolumeRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ResizeVolume",
+          "request": {
+            "type": "ResizeVolumeRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListNetworks",
+          "request": {
+            "type": "ListNetworksRequest"
+          },
+          "response": {
+            "type": "ListNetworksResponse"
+          }
+        },
+        {
+          "method": "ListNetworkUsage",
+          "request": {
+            "type": "ListNetworkUsageRequest"
+          },
+          "response": {
+            "type": "ListNetworkUsageResponse"
+          }
+        },
+        {
+          "method": "GetNetwork",
+          "request": {
+            "type": "GetNetworkRequest"
+          },
+          "response": {
+            "type": "Network"
+          }
+        },
+        {
+          "method": "UpdateNetwork",
+          "request": {
+            "type": "UpdateNetworkRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CreateVolumeSnapshot",
+          "request": {
+            "type": "CreateVolumeSnapshotRequest"
+          },
+          "response": {
+            "type": "VolumeSnapshot"
+          }
+        },
+        {
+          "method": "RestoreVolumeSnapshot",
+          "request": {
+            "type": "RestoreVolumeSnapshotRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteVolumeSnapshot",
+          "request": {
+            "type": "DeleteVolumeSnapshotRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "GetVolumeSnapshot",
+          "request": {
+            "type": "GetVolumeSnapshotRequest"
+          },
+          "response": {
+            "type": "VolumeSnapshot"
+          }
+        },
+        {
+          "method": "ListVolumeSnapshots",
+          "request": {
+            "type": "ListVolumeSnapshotsRequest"
+          },
+          "response": {
+            "type": "ListVolumeSnapshotsResponse"
+          }
+        },
+        {
+          "method": "GetLun",
+          "request": {
+            "type": "GetLunRequest"
+          },
+          "response": {
+            "type": "Lun"
+          }
+        },
+        {
+          "method": "ListLuns",
+          "request": {
+            "type": "ListLunsRequest"
+          },
+          "response": {
+            "type": "ListLunsResponse"
+          }
+        },
+        {
+          "method": "EvictLun",
+          "request": {
+            "type": "EvictLunRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetNfsShare",
+          "request": {
+            "type": "GetNfsShareRequest"
+          },
+          "response": {
+            "type": "NfsShare"
+          }
+        },
+        {
+          "method": "ListNfsShares",
+          "request": {
+            "type": "ListNfsSharesRequest"
+          },
+          "response": {
+            "type": "ListNfsSharesResponse"
+          }
+        },
+        {
+          "method": "UpdateNfsShare",
+          "request": {
+            "type": "UpdateNfsShareRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CreateNfsShare",
+          "request": {
+            "type": "CreateNfsShareRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "RenameNfsShare",
+          "request": {
+            "type": "RenameNfsShareRequest"
+          },
+          "response": {
+            "type": "NfsShare"
+          }
+        },
+        {
+          "method": "DeleteNfsShare",
+          "request": {
+            "type": "DeleteNfsShareRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListProvisioningQuotas",
+          "request": {
+            "type": "ListProvisioningQuotasRequest"
+          },
+          "response": {
+            "type": "ListProvisioningQuotasResponse"
+          }
+        },
+        {
+          "method": "SubmitProvisioningConfig",
+          "request": {
+            "type": "SubmitProvisioningConfigRequest"
+          },
+          "response": {
+            "type": "SubmitProvisioningConfigResponse"
+          }
+        },
+        {
+          "method": "GetProvisioningConfig",
+          "request": {
+            "type": "GetProvisioningConfigRequest"
+          },
+          "response": {
+            "type": "ProvisioningConfig"
+          }
+        },
+        {
+          "method": "CreateProvisioningConfig",
+          "request": {
+            "type": "CreateProvisioningConfigRequest"
+          },
+          "response": {
+            "type": "ProvisioningConfig"
+          }
+        },
+        {
+          "method": "UpdateProvisioningConfig",
+          "request": {
+            "type": "UpdateProvisioningConfigRequest"
+          },
+          "response": {
+            "type": "ProvisioningConfig"
+          }
+        },
+        {
+          "method": "RenameNetwork",
+          "request": {
+            "type": "RenameNetworkRequest"
+          },
+          "response": {
+            "type": "Network"
+          }
+        },
+        {
+          "method": "ListOSImages",
+          "request": {
+            "type": "ListOSImagesRequest"
+          },
+          "response": {
+            "type": "ListOSImagesResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "OperationMetadata"
+    },
+    {
+      "type": "ResetInstanceResponse"
+    }
+  ],
+  "go": {
+    "src": "baremetalsolution/apiv2/baremetalsolutionpb/baremetalsolution.pb.go",
+    "pkg": "baremetalsolutionpb",
+    "pkg_full": "cloud.google.com/go/baremetalsolution/apiv2/baremetalsolutionpb"
+  }
+}
+{
+  "proto": "google/cloud/baremetalsolution/v2/volume",
+  "pkg": "google.cloud.baremetalsolution.v2",
+  "msgs": [
+    {
+      "type": "Volume",
+      "msgs": [
+        {
+          "type": "SnapshotReservationDetail"
+        }
+      ]
+    },
+    {
+      "type": "GetVolumeRequest"
+    },
+    {
+      "type": "ListVolumesRequest"
+    },
+    {
+      "type": "ListVolumesResponse"
+    },
+    {
+      "type": "UpdateVolumeRequest"
+    },
+    {
+      "type": "RenameVolumeRequest"
+    },
+    {
+      "type": "EvictVolumeRequest"
+    },
+    {
+      "type": "ResizeVolumeRequest"
+    }
+  ],
+  "go": {
+    "src": "baremetalsolution/apiv2/baremetalsolutionpb/volume.pb.go",
+    "pkg": "baremetalsolutionpb",
+    "pkg_full": "cloud.google.com/go/baremetalsolution/apiv2/baremetalsolutionpb"
+  }
+}
+{
+  "proto": "google/cloud/baremetalsolution/v2/volume_snapshot",
+  "pkg": "google.cloud.baremetalsolution.v2",
+  "msgs": [
+    {
+      "type": "VolumeSnapshot"
+    },
+    {
+      "type": "GetVolumeSnapshotRequest"
+    },
+    {
+      "type": "ListVolumeSnapshotsRequest"
+    },
+    {
+      "type": "ListVolumeSnapshotsResponse"
+    },
+    {
+      "type": "DeleteVolumeSnapshotRequest"
+    },
+    {
+      "type": "CreateVolumeSnapshotRequest"
+    },
+    {
+      "type": "RestoreVolumeSnapshotRequest"
+    }
+  ],
+  "go": {
+    "src": "baremetalsolution/apiv2/baremetalsolutionpb/volume_snapshot.pb.go",
+    "pkg": "baremetalsolutionpb",
+    "pkg_full": "cloud.google.com/go/baremetalsolution/apiv2/baremetalsolutionpb"
+  }
+}

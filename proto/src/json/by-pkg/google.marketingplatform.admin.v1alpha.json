@@ -1,0 +1,100 @@
+{
+  "proto": "google/marketingplatform/admin/v1alpha/marketingplatform_admin",
+  "pkg": "google.marketingplatform.admin.v1alpha",
+  "svcs": [
+    {
+      "svc": "MarketingplatformAdminService",
+      "host": "marketingplatformadmin.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetOrganization",
+          "request": {
+            "type": "GetOrganizationRequest"
+          },
+          "response": {
+            "type": "Organization"
+          }
+        },
+        {
+          "method": "ListAnalyticsAccountLinks",
+          "request": {
+            "type": "ListAnalyticsAccountLinksRequest"
+          },
+          "response": {
+            "type": "ListAnalyticsAccountLinksResponse"
+          }
+        },
+        {
+          "method": "CreateAnalyticsAccountLink",
+          "request": {
+            "type": "CreateAnalyticsAccountLinkRequest"
+          },
+          "response": {
+            "type": "AnalyticsAccountLink"
+          }
+        },
+        {
+          "method": "DeleteAnalyticsAccountLink",
+          "request": {
+            "type": "DeleteAnalyticsAccountLinkRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "SetPropertyServiceLevel",
+          "request": {
+            "type": "SetPropertyServiceLevelRequest"
+          },
+          "response": {
+            "type": "SetPropertyServiceLevelResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GetOrganizationRequest"
+    },
+    {
+      "type": "ListAnalyticsAccountLinksRequest"
+    },
+    {
+      "type": "ListAnalyticsAccountLinksResponse"
+    },
+    {
+      "type": "CreateAnalyticsAccountLinkRequest"
+    },
+    {
+      "type": "DeleteAnalyticsAccountLinkRequest"
+    },
+    {
+      "type": "SetPropertyServiceLevelRequest"
+    },
+    {
+      "type": "SetPropertyServiceLevelResponse"
+    }
+  ],
+  "go": {
+    "pkg": "admin",
+    "pkg_full": "google.golang.org/genproto/googleapis/marketingplatform/admin/v1alpha"
+  }
+}
+{
+  "proto": "google/marketingplatform/admin/v1alpha/resources",
+  "pkg": "google.marketingplatform.admin.v1alpha",
+  "msgs": [
+    {
+      "type": "Organization"
+    },
+    {
+      "type": "AnalyticsAccountLink"
+    }
+  ],
+  "go": {
+    "pkg": "admin",
+    "pkg_full": "google.golang.org/genproto/googleapis/marketingplatform/admin/v1alpha"
+  }
+}

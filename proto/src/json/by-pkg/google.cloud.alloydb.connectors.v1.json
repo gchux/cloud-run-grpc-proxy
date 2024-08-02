@@ -1,0 +1,17 @@
+{
+  "proto": "google/cloud/alloydb/connectors/v1/resources",
+  "pkg": "google.cloud.alloydb.connectors.v1",
+  "msgs": [
+    {
+      "type": "MetadataExchangeRequest"
+    },
+    {
+      "type": "MetadataExchangeResponse"
+    }
+  ],
+  "go": {
+    "src": "alloydb/connectors/apiv1/connectorspb/resources.pb.go",
+    "pkg": "connectorspb",
+    "pkg_full": "cloud.google.com/go/alloydb/connectors/apiv1/connectorspb"
+  }
+}

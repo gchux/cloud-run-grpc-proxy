@@ -1,0 +1,8077 @@
+{
+  "proto": "google/cloud/aiplatform/v1beta1/feature_registry_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "FeatureRegistryService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateFeatureGroup",
+          "request": {
+            "type": "CreateFeatureGroupRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetFeatureGroup",
+          "request": {
+            "type": "GetFeatureGroupRequest"
+          },
+          "response": {
+            "type": "FeatureGroup"
+          }
+        },
+        {
+          "method": "ListFeatureGroups",
+          "request": {
+            "type": "ListFeatureGroupsRequest"
+          },
+          "response": {
+            "type": "ListFeatureGroupsResponse"
+          }
+        },
+        {
+          "method": "UpdateFeatureGroup",
+          "request": {
+            "type": "UpdateFeatureGroupRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteFeatureGroup",
+          "request": {
+            "type": "DeleteFeatureGroupRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CreateFeature",
+          "request": {
+            "type": "CreateFeatureRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetFeature",
+          "request": {
+            "type": "GetFeatureRequest"
+          },
+          "response": {
+            "type": "Feature"
+          }
+        },
+        {
+          "method": "ListFeatures",
+          "request": {
+            "type": "ListFeaturesRequest"
+          },
+          "response": {
+            "type": "ListFeaturesResponse"
+          }
+        },
+        {
+          "method": "UpdateFeature",
+          "request": {
+            "type": "UpdateFeatureRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteFeature",
+          "request": {
+            "type": "DeleteFeatureRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateFeatureGroupRequest"
+    },
+    {
+      "type": "GetFeatureGroupRequest"
+    },
+    {
+      "type": "ListFeatureGroupsRequest"
+    },
+    {
+      "type": "ListFeatureGroupsResponse"
+    },
+    {
+      "type": "UpdateFeatureGroupRequest"
+    },
+    {
+      "type": "DeleteFeatureGroupRequest"
+    },
+    {
+      "type": "CreateFeatureGroupOperationMetadata"
+    },
+    {
+      "type": "UpdateFeatureGroupOperationMetadata"
+    },
+    {
+      "type": "CreateRegistryFeatureOperationMetadata"
+    },
+    {
+      "type": "UpdateFeatureOperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/feature_registry_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/evaluation_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "EvaluationService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "EvaluateInstances",
+          "request": {
+            "type": "EvaluateInstancesRequest"
+          },
+          "response": {
+            "type": "EvaluateInstancesResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "EvaluateInstancesRequest"
+    },
+    {
+      "type": "EvaluateInstancesResponse"
+    },
+    {
+      "type": "ExactMatchInput"
+    },
+    {
+      "type": "ExactMatchInstance"
+    },
+    {
+      "type": "ExactMatchSpec"
+    },
+    {
+      "type": "ExactMatchResults"
+    },
+    {
+      "type": "ExactMatchMetricValue"
+    },
+    {
+      "type": "BleuInput"
+    },
+    {
+      "type": "BleuInstance"
+    },
+    {
+      "type": "BleuSpec"
+    },
+    {
+      "type": "BleuResults"
+    },
+    {
+      "type": "BleuMetricValue"
+    },
+    {
+      "type": "RougeInput"
+    },
+    {
+      "type": "RougeInstance"
+    },
+    {
+      "type": "RougeSpec"
+    },
+    {
+      "type": "RougeResults"
+    },
+    {
+      "type": "RougeMetricValue"
+    },
+    {
+      "type": "CoherenceInput"
+    },
+    {
+      "type": "CoherenceInstance"
+    },
+    {
+      "type": "CoherenceSpec"
+    },
+    {
+      "type": "CoherenceResult"
+    },
+    {
+      "type": "FluencyInput"
+    },
+    {
+      "type": "FluencyInstance"
+    },
+    {
+      "type": "FluencySpec"
+    },
+    {
+      "type": "FluencyResult"
+    },
+    {
+      "type": "SafetyInput"
+    },
+    {
+      "type": "SafetyInstance"
+    },
+    {
+      "type": "SafetySpec"
+    },
+    {
+      "type": "SafetyResult"
+    },
+    {
+      "type": "GroundednessInput"
+    },
+    {
+      "type": "GroundednessInstance"
+    },
+    {
+      "type": "GroundednessSpec"
+    },
+    {
+      "type": "GroundednessResult"
+    },
+    {
+      "type": "FulfillmentInput"
+    },
+    {
+      "type": "FulfillmentInstance"
+    },
+    {
+      "type": "FulfillmentSpec"
+    },
+    {
+      "type": "FulfillmentResult"
+    },
+    {
+      "type": "SummarizationQualityInput"
+    },
+    {
+      "type": "SummarizationQualityInstance"
+    },
+    {
+      "type": "SummarizationQualitySpec"
+    },
+    {
+      "type": "SummarizationQualityResult"
+    },
+    {
+      "type": "PairwiseSummarizationQualityInput"
+    },
+    {
+      "type": "PairwiseSummarizationQualityInstance"
+    },
+    {
+      "type": "PairwiseSummarizationQualitySpec"
+    },
+    {
+      "type": "PairwiseSummarizationQualityResult"
+    },
+    {
+      "type": "SummarizationHelpfulnessInput"
+    },
+    {
+      "type": "SummarizationHelpfulnessInstance"
+    },
+    {
+      "type": "SummarizationHelpfulnessSpec"
+    },
+    {
+      "type": "SummarizationHelpfulnessResult"
+    },
+    {
+      "type": "SummarizationVerbosityInput"
+    },
+    {
+      "type": "SummarizationVerbosityInstance"
+    },
+    {
+      "type": "SummarizationVerbositySpec"
+    },
+    {
+      "type": "SummarizationVerbosityResult"
+    },
+    {
+      "type": "QuestionAnsweringQualityInput"
+    },
+    {
+      "type": "QuestionAnsweringQualityInstance"
+    },
+    {
+      "type": "QuestionAnsweringQualitySpec"
+    },
+    {
+      "type": "QuestionAnsweringQualityResult"
+    },
+    {
+      "type": "PairwiseQuestionAnsweringQualityInput"
+    },
+    {
+      "type": "PairwiseQuestionAnsweringQualityInstance"
+    },
+    {
+      "type": "PairwiseQuestionAnsweringQualitySpec"
+    },
+    {
+      "type": "PairwiseQuestionAnsweringQualityResult"
+    },
+    {
+      "type": "QuestionAnsweringRelevanceInput"
+    },
+    {
+      "type": "QuestionAnsweringRelevanceInstance"
+    },
+    {
+      "type": "QuestionAnsweringRelevanceSpec"
+    },
+    {
+      "type": "QuestionAnsweringRelevanceResult"
+    },
+    {
+      "type": "QuestionAnsweringHelpfulnessInput"
+    },
+    {
+      "type": "QuestionAnsweringHelpfulnessInstance"
+    },
+    {
+      "type": "QuestionAnsweringHelpfulnessSpec"
+    },
+    {
+      "type": "QuestionAnsweringHelpfulnessResult"
+    },
+    {
+      "type": "QuestionAnsweringCorrectnessInput"
+    },
+    {
+      "type": "QuestionAnsweringCorrectnessInstance"
+    },
+    {
+      "type": "QuestionAnsweringCorrectnessSpec"
+    },
+    {
+      "type": "QuestionAnsweringCorrectnessResult"
+    },
+    {
+      "type": "ToolCallValidInput"
+    },
+    {
+      "type": "ToolCallValidSpec"
+    },
+    {
+      "type": "ToolCallValidInstance"
+    },
+    {
+      "type": "ToolCallValidResults"
+    },
+    {
+      "type": "ToolCallValidMetricValue"
+    },
+    {
+      "type": "ToolNameMatchInput"
+    },
+    {
+      "type": "ToolNameMatchSpec"
+    },
+    {
+      "type": "ToolNameMatchInstance"
+    },
+    {
+      "type": "ToolNameMatchResults"
+    },
+    {
+      "type": "ToolNameMatchMetricValue"
+    },
+    {
+      "type": "ToolParameterKeyMatchInput"
+    },
+    {
+      "type": "ToolParameterKeyMatchSpec"
+    },
+    {
+      "type": "ToolParameterKeyMatchInstance"
+    },
+    {
+      "type": "ToolParameterKeyMatchResults"
+    },
+    {
+      "type": "ToolParameterKeyMatchMetricValue"
+    },
+    {
+      "type": "ToolParameterKVMatchInput"
+    },
+    {
+      "type": "ToolParameterKVMatchSpec"
+    },
+    {
+      "type": "ToolParameterKVMatchInstance"
+    },
+    {
+      "type": "ToolParameterKVMatchResults"
+    },
+    {
+      "type": "ToolParameterKVMatchMetricValue"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/evaluation_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/pipeline_job",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "PipelineJob",
+      "msgs": [
+        {
+          "type": "RuntimeConfig"
+        },
+        {
+          "type": "InputArtifact"
+        }
+      ]
+    },
+    {
+      "type": "PipelineTemplateMetadata"
+    },
+    {
+      "type": "PipelineJobDetail"
+    },
+    {
+      "type": "PipelineTaskDetail",
+      "msgs": [
+        {
+          "type": "PipelineTaskStatus"
+        },
+        {
+          "type": "ArtifactList"
+        }
+      ]
+    },
+    {
+      "type": "PipelineTaskExecutorDetail",
+      "msgs": [
+        {
+          "type": "ContainerDetail"
+        },
+        {
+          "type": "CustomJobDetail"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/pipeline_job.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/batch_prediction_job",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "BatchPredictionJob",
+      "msgs": [
+        {
+          "type": "InputConfig"
+        },
+        {
+          "type": "InstanceConfig"
+        },
+        {
+          "type": "OutputConfig"
+        },
+        {
+          "type": "OutputInfo"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/batch_prediction_job.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/operation",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "GenericOperationMetadata"
+    },
+    {
+      "type": "DeleteOperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/operation.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/artifact",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "Artifact"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/artifact.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/lineage_subgraph",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "LineageSubgraph"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/lineage_subgraph.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/model_garden_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "ModelGardenService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetPublisherModel",
+          "request": {
+            "type": "GetPublisherModelRequest"
+          },
+          "response": {
+            "type": "PublisherModel"
+          }
+        },
+        {
+          "method": "ListPublisherModels",
+          "request": {
+            "type": "ListPublisherModelsRequest"
+          },
+          "response": {
+            "type": "ListPublisherModelsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GetPublisherModelRequest"
+    },
+    {
+      "type": "ListPublisherModelsRequest"
+    },
+    {
+      "type": "ListPublisherModelsResponse"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/model_garden_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/value",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "Value"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/value.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/cached_content",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "CachedContent"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/cached_content.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/specialist_pool_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "SpecialistPoolService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateSpecialistPool",
+          "request": {
+            "type": "CreateSpecialistPoolRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetSpecialistPool",
+          "request": {
+            "type": "GetSpecialistPoolRequest"
+          },
+          "response": {
+            "type": "SpecialistPool"
+          }
+        },
+        {
+          "method": "ListSpecialistPools",
+          "request": {
+            "type": "ListSpecialistPoolsRequest"
+          },
+          "response": {
+            "type": "ListSpecialistPoolsResponse"
+          }
+        },
+        {
+          "method": "DeleteSpecialistPool",
+          "request": {
+            "type": "DeleteSpecialistPoolRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateSpecialistPool",
+          "request": {
+            "type": "UpdateSpecialistPoolRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateSpecialistPoolRequest"
+    },
+    {
+      "type": "CreateSpecialistPoolOperationMetadata"
+    },
+    {
+      "type": "GetSpecialistPoolRequest"
+    },
+    {
+      "type": "ListSpecialistPoolsRequest"
+    },
+    {
+      "type": "ListSpecialistPoolsResponse"
+    },
+    {
+      "type": "DeleteSpecialistPoolRequest"
+    },
+    {
+      "type": "UpdateSpecialistPoolRequest"
+    },
+    {
+      "type": "UpdateSpecialistPoolOperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/specialist_pool_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/encryption_spec",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "EncryptionSpec"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/encryption_spec.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/execution",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "Execution"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/execution.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/gen_ai_cache_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "GenAiCacheService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateCachedContent",
+          "request": {
+            "type": "CreateCachedContentRequest"
+          },
+          "response": {
+            "type": "CachedContent"
+          }
+        },
+        {
+          "method": "GetCachedContent",
+          "request": {
+            "type": "GetCachedContentRequest"
+          },
+          "response": {
+            "type": "CachedContent"
+          }
+        },
+        {
+          "method": "UpdateCachedContent",
+          "request": {
+            "type": "UpdateCachedContentRequest"
+          },
+          "response": {
+            "type": "CachedContent"
+          }
+        },
+        {
+          "method": "DeleteCachedContent",
+          "request": {
+            "type": "DeleteCachedContentRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListCachedContents",
+          "request": {
+            "type": "ListCachedContentsRequest"
+          },
+          "response": {
+            "type": "ListCachedContentsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateCachedContentRequest"
+    },
+    {
+      "type": "GetCachedContentRequest"
+    },
+    {
+      "type": "UpdateCachedContentRequest"
+    },
+    {
+      "type": "DeleteCachedContentRequest"
+    },
+    {
+      "type": "ListCachedContentsRequest"
+    },
+    {
+      "type": "ListCachedContentsResponse"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/gen_ai_cache_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/tuning_job",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "TuningJob"
+    },
+    {
+      "type": "TunedModel"
+    },
+    {
+      "type": "SupervisedTuningDatasetDistribution",
+      "msgs": [
+        {
+          "type": "DatasetBucket"
+        }
+      ]
+    },
+    {
+      "type": "SupervisedTuningDataStats"
+    },
+    {
+      "type": "TuningDataStats"
+    },
+    {
+      "type": "SupervisedHyperParameters"
+    },
+    {
+      "type": "SupervisedTuningSpec"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/tuning_job.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/match_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "MatchService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "FindNeighbors",
+          "request": {
+            "type": "FindNeighborsRequest"
+          },
+          "response": {
+            "type": "FindNeighborsResponse"
+          }
+        },
+        {
+          "method": "ReadIndexDatapoints",
+          "request": {
+            "type": "ReadIndexDatapointsRequest"
+          },
+          "response": {
+            "type": "ReadIndexDatapointsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "FindNeighborsRequest",
+      "msgs": [
+        {
+          "type": "Query"
+        },
+        {
+          "type": "RRF"
+        }
+      ]
+    },
+    {
+      "type": "FindNeighborsResponse",
+      "msgs": [
+        {
+          "type": "Neighbor"
+        },
+        {
+          "type": "NearestNeighbors"
+        }
+      ]
+    },
+    {
+      "type": "ReadIndexDatapointsRequest"
+    },
+    {
+      "type": "ReadIndexDatapointsResponse"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/match_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/extension_execution_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "ExtensionExecutionService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ExecuteExtension",
+          "request": {
+            "type": "ExecuteExtensionRequest"
+          },
+          "response": {
+            "type": "ExecuteExtensionResponse"
+          }
+        },
+        {
+          "method": "QueryExtension",
+          "request": {
+            "type": "QueryExtensionRequest"
+          },
+          "response": {
+            "type": "QueryExtensionResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ExecuteExtensionRequest"
+    },
+    {
+      "type": "ExecuteExtensionResponse"
+    },
+    {
+      "type": "QueryExtensionRequest"
+    },
+    {
+      "type": "QueryExtensionResponse"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/extension_execution_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/model_evaluation_slice",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "ModelEvaluationSlice",
+      "msgs": [
+        {
+          "type": "Slice"
+        },
+        {
+          "type": "SliceSpec"
+        },
+        {
+          "type": "SliceConfig"
+        },
+        {
+          "type": "Range"
+        },
+        {
+          "type": "Value"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/model_evaluation_slice.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/persistent_resource_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "PersistentResourceService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreatePersistentResource",
+          "request": {
+            "type": "CreatePersistentResourceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetPersistentResource",
+          "request": {
+            "type": "GetPersistentResourceRequest"
+          },
+          "response": {
+            "type": "PersistentResource"
+          }
+        },
+        {
+          "method": "ListPersistentResources",
+          "request": {
+            "type": "ListPersistentResourcesRequest"
+          },
+          "response": {
+            "type": "ListPersistentResourcesResponse"
+          }
+        },
+        {
+          "method": "DeletePersistentResource",
+          "request": {
+            "type": "DeletePersistentResourceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdatePersistentResource",
+          "request": {
+            "type": "UpdatePersistentResourceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "RebootPersistentResource",
+          "request": {
+            "type": "RebootPersistentResourceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreatePersistentResourceRequest"
+    },
+    {
+      "type": "CreatePersistentResourceOperationMetadata"
+    },
+    {
+      "type": "UpdatePersistentResourceOperationMetadata"
+    },
+    {
+      "type": "RebootPersistentResourceOperationMetadata"
+    },
+    {
+      "type": "GetPersistentResourceRequest"
+    },
+    {
+      "type": "ListPersistentResourcesRequest"
+    },
+    {
+      "type": "ListPersistentResourcesResponse"
+    },
+    {
+      "type": "DeletePersistentResourceRequest"
+    },
+    {
+      "type": "UpdatePersistentResourceRequest"
+    },
+    {
+      "type": "RebootPersistentResourceRequest"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/persistent_resource_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/prediction_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "PredictionService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "Predict",
+          "request": {
+            "type": "PredictRequest"
+          },
+          "response": {
+            "type": "PredictResponse"
+          }
+        },
+        {
+          "method": "RawPredict",
+          "request": {
+            "type": "RawPredictRequest"
+          },
+          "response": {
+            "type": "google.api.HttpBody"
+          }
+        },
+        {
+          "method": "StreamRawPredict",
+          "request": {
+            "type": "StreamRawPredictRequest"
+          },
+          "response": {
+            "type": "google.api.HttpBody",
+            "stream": true
+          }
+        },
+        {
+          "method": "DirectPredict",
+          "request": {
+            "type": "DirectPredictRequest"
+          },
+          "response": {
+            "type": "DirectPredictResponse"
+          }
+        },
+        {
+          "method": "DirectRawPredict",
+          "request": {
+            "type": "DirectRawPredictRequest"
+          },
+          "response": {
+            "type": "DirectRawPredictResponse"
+          }
+        },
+        {
+          "method": "StreamDirectPredict",
+          "request": {
+            "type": "StreamDirectPredictRequest",
+            "stream": true
+          },
+          "response": {
+            "type": "StreamDirectPredictResponse",
+            "stream": true
+          }
+        },
+        {
+          "method": "StreamDirectRawPredict",
+          "request": {
+            "type": "StreamDirectRawPredictRequest",
+            "stream": true
+          },
+          "response": {
+            "type": "StreamDirectRawPredictResponse",
+            "stream": true
+          }
+        },
+        {
+          "method": "StreamingPredict",
+          "request": {
+            "type": "StreamingPredictRequest",
+            "stream": true
+          },
+          "response": {
+            "type": "StreamingPredictResponse",
+            "stream": true
+          }
+        },
+        {
+          "method": "ServerStreamingPredict",
+          "request": {
+            "type": "StreamingPredictRequest"
+          },
+          "response": {
+            "type": "StreamingPredictResponse",
+            "stream": true
+          }
+        },
+        {
+          "method": "StreamingRawPredict",
+          "request": {
+            "type": "StreamingRawPredictRequest",
+            "stream": true
+          },
+          "response": {
+            "type": "StreamingRawPredictResponse",
+            "stream": true
+          }
+        },
+        {
+          "method": "Explain",
+          "request": {
+            "type": "ExplainRequest"
+          },
+          "response": {
+            "type": "ExplainResponse"
+          }
+        },
+        {
+          "method": "CountTokens",
+          "request": {
+            "type": "CountTokensRequest"
+          },
+          "response": {
+            "type": "CountTokensResponse"
+          }
+        },
+        {
+          "method": "GenerateContent",
+          "request": {
+            "type": "GenerateContentRequest"
+          },
+          "response": {
+            "type": "GenerateContentResponse"
+          }
+        },
+        {
+          "method": "StreamGenerateContent",
+          "request": {
+            "type": "GenerateContentRequest"
+          },
+          "response": {
+            "type": "GenerateContentResponse",
+            "stream": true
+          }
+        },
+        {
+          "method": "ChatCompletions",
+          "request": {
+            "type": "ChatCompletionsRequest"
+          },
+          "response": {
+            "type": "google.api.HttpBody",
+            "stream": true
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "PredictRequest"
+    },
+    {
+      "type": "PredictResponse"
+    },
+    {
+      "type": "RawPredictRequest"
+    },
+    {
+      "type": "StreamRawPredictRequest"
+    },
+    {
+      "type": "DirectPredictRequest"
+    },
+    {
+      "type": "DirectPredictResponse"
+    },
+    {
+      "type": "DirectRawPredictRequest"
+    },
+    {
+      "type": "DirectRawPredictResponse"
+    },
+    {
+      "type": "StreamDirectPredictRequest"
+    },
+    {
+      "type": "StreamDirectPredictResponse"
+    },
+    {
+      "type": "StreamDirectRawPredictRequest"
+    },
+    {
+      "type": "StreamDirectRawPredictResponse"
+    },
+    {
+      "type": "StreamingPredictRequest"
+    },
+    {
+      "type": "StreamingPredictResponse"
+    },
+    {
+      "type": "StreamingRawPredictRequest"
+    },
+    {
+      "type": "StreamingRawPredictResponse"
+    },
+    {
+      "type": "ExplainRequest"
+    },
+    {
+      "type": "ExplainResponse",
+      "msgs": [
+        {
+          "type": "ConcurrentExplanation"
+        }
+      ]
+    },
+    {
+      "type": "CountTokensRequest"
+    },
+    {
+      "type": "CountTokensResponse"
+    },
+    {
+      "type": "GenerateContentRequest"
+    },
+    {
+      "type": "GenerateContentResponse",
+      "msgs": [
+        {
+          "type": "PromptFeedback"
+        },
+        {
+          "type": "UsageMetadata"
+        }
+      ]
+    },
+    {
+      "type": "ChatCompletionsRequest"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/prediction_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/feature_online_store_admin_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "FeatureOnlineStoreAdminService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateFeatureOnlineStore",
+          "request": {
+            "type": "CreateFeatureOnlineStoreRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetFeatureOnlineStore",
+          "request": {
+            "type": "GetFeatureOnlineStoreRequest"
+          },
+          "response": {
+            "type": "FeatureOnlineStore"
+          }
+        },
+        {
+          "method": "ListFeatureOnlineStores",
+          "request": {
+            "type": "ListFeatureOnlineStoresRequest"
+          },
+          "response": {
+            "type": "ListFeatureOnlineStoresResponse"
+          }
+        },
+        {
+          "method": "UpdateFeatureOnlineStore",
+          "request": {
+            "type": "UpdateFeatureOnlineStoreRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteFeatureOnlineStore",
+          "request": {
+            "type": "DeleteFeatureOnlineStoreRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CreateFeatureView",
+          "request": {
+            "type": "CreateFeatureViewRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetFeatureView",
+          "request": {
+            "type": "GetFeatureViewRequest"
+          },
+          "response": {
+            "type": "FeatureView"
+          }
+        },
+        {
+          "method": "ListFeatureViews",
+          "request": {
+            "type": "ListFeatureViewsRequest"
+          },
+          "response": {
+            "type": "ListFeatureViewsResponse"
+          }
+        },
+        {
+          "method": "UpdateFeatureView",
+          "request": {
+            "type": "UpdateFeatureViewRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteFeatureView",
+          "request": {
+            "type": "DeleteFeatureViewRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "SyncFeatureView",
+          "request": {
+            "type": "SyncFeatureViewRequest"
+          },
+          "response": {
+            "type": "SyncFeatureViewResponse"
+          }
+        },
+        {
+          "method": "GetFeatureViewSync",
+          "request": {
+            "type": "GetFeatureViewSyncRequest"
+          },
+          "response": {
+            "type": "FeatureViewSync"
+          }
+        },
+        {
+          "method": "ListFeatureViewSyncs",
+          "request": {
+            "type": "ListFeatureViewSyncsRequest"
+          },
+          "response": {
+            "type": "ListFeatureViewSyncsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateFeatureOnlineStoreRequest"
+    },
+    {
+      "type": "GetFeatureOnlineStoreRequest"
+    },
+    {
+      "type": "ListFeatureOnlineStoresRequest"
+    },
+    {
+      "type": "ListFeatureOnlineStoresResponse"
+    },
+    {
+      "type": "UpdateFeatureOnlineStoreRequest"
+    },
+    {
+      "type": "DeleteFeatureOnlineStoreRequest"
+    },
+    {
+      "type": "CreateFeatureViewRequest"
+    },
+    {
+      "type": "GetFeatureViewRequest"
+    },
+    {
+      "type": "ListFeatureViewsRequest"
+    },
+    {
+      "type": "ListFeatureViewsResponse"
+    },
+    {
+      "type": "UpdateFeatureViewRequest"
+    },
+    {
+      "type": "DeleteFeatureViewRequest"
+    },
+    {
+      "type": "CreateFeatureOnlineStoreOperationMetadata"
+    },
+    {
+      "type": "UpdateFeatureOnlineStoreOperationMetadata"
+    },
+    {
+      "type": "CreateFeatureViewOperationMetadata"
+    },
+    {
+      "type": "UpdateFeatureViewOperationMetadata"
+    },
+    {
+      "type": "SyncFeatureViewRequest"
+    },
+    {
+      "type": "SyncFeatureViewResponse"
+    },
+    {
+      "type": "GetFeatureViewSyncRequest"
+    },
+    {
+      "type": "ListFeatureViewSyncsRequest"
+    },
+    {
+      "type": "ListFeatureViewSyncsResponse"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/feature_online_store_admin_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/io",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "AvroSource"
+    },
+    {
+      "type": "CsvSource"
+    },
+    {
+      "type": "GcsSource"
+    },
+    {
+      "type": "GcsDestination"
+    },
+    {
+      "type": "BigQuerySource"
+    },
+    {
+      "type": "BigQueryDestination"
+    },
+    {
+      "type": "CsvDestination"
+    },
+    {
+      "type": "TFRecordDestination"
+    },
+    {
+      "type": "ContainerRegistryDestination"
+    },
+    {
+      "type": "GoogleDriveSource",
+      "msgs": [
+        {
+          "type": "ResourceId"
+        }
+      ]
+    },
+    {
+      "type": "DirectUploadSource"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/io.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/metadata_schema",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "MetadataSchema"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/metadata_schema.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/explanation",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "Explanation"
+    },
+    {
+      "type": "ModelExplanation"
+    },
+    {
+      "type": "Attribution"
+    },
+    {
+      "type": "Neighbor"
+    },
+    {
+      "type": "ExplanationSpec"
+    },
+    {
+      "type": "ExplanationParameters"
+    },
+    {
+      "type": "SampledShapleyAttribution"
+    },
+    {
+      "type": "IntegratedGradientsAttribution"
+    },
+    {
+      "type": "XraiAttribution"
+    },
+    {
+      "type": "SmoothGradConfig"
+    },
+    {
+      "type": "FeatureNoiseSigma",
+      "msgs": [
+        {
+          "type": "NoiseSigmaForFeature"
+        }
+      ]
+    },
+    {
+      "type": "BlurBaselineConfig"
+    },
+    {
+      "type": "Examples",
+      "msgs": [
+        {
+          "type": "ExampleGcsSource"
+        }
+      ]
+    },
+    {
+      "type": "Presets"
+    },
+    {
+      "type": "ExplanationSpecOverride"
+    },
+    {
+      "type": "ExplanationMetadataOverride",
+      "msgs": [
+        {
+          "type": "InputMetadataOverride"
+        }
+      ]
+    },
+    {
+      "type": "ExamplesOverride"
+    },
+    {
+      "type": "ExamplesRestrictionsNamespace"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/explanation.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/extension_registry_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "ExtensionRegistryService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ImportExtension",
+          "request": {
+            "type": "ImportExtensionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetExtension",
+          "request": {
+            "type": "GetExtensionRequest"
+          },
+          "response": {
+            "type": "Extension"
+          }
+        },
+        {
+          "method": "ListExtensions",
+          "request": {
+            "type": "ListExtensionsRequest"
+          },
+          "response": {
+            "type": "ListExtensionsResponse"
+          }
+        },
+        {
+          "method": "UpdateExtension",
+          "request": {
+            "type": "UpdateExtensionRequest"
+          },
+          "response": {
+            "type": "Extension"
+          }
+        },
+        {
+          "method": "DeleteExtension",
+          "request": {
+            "type": "DeleteExtensionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ImportExtensionRequest"
+    },
+    {
+      "type": "ImportExtensionOperationMetadata"
+    },
+    {
+      "type": "GetExtensionRequest"
+    },
+    {
+      "type": "UpdateExtensionRequest"
+    },
+    {
+      "type": "ListExtensionsRequest"
+    },
+    {
+      "type": "ListExtensionsResponse"
+    },
+    {
+      "type": "DeleteExtensionRequest"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/extension_registry_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/notebook_idle_shutdown_config",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "NotebookIdleShutdownConfig"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/notebook_idle_shutdown_config.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/annotation",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "Annotation"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/annotation.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/event",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "Event"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/event.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/custom_job",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "CustomJob"
+    },
+    {
+      "type": "CustomJobSpec"
+    },
+    {
+      "type": "WorkerPoolSpec"
+    },
+    {
+      "type": "ContainerSpec"
+    },
+    {
+      "type": "PythonPackageSpec"
+    },
+    {
+      "type": "Scheduling"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/custom_job.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/vertex_rag_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "VertexRagService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "RetrieveContexts",
+          "request": {
+            "type": "RetrieveContextsRequest"
+          },
+          "response": {
+            "type": "RetrieveContextsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "RagQuery"
+    },
+    {
+      "type": "RetrieveContextsRequest",
+      "msgs": [
+        {
+          "type": "VertexRagStore"
+        },
+        {
+          "type": "RagResource"
+        }
+      ]
+    },
+    {
+      "type": "RagContexts",
+      "msgs": [
+        {
+          "type": "Context"
+        }
+      ]
+    },
+    {
+      "type": "RetrieveContextsResponse"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/vertex_rag_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/pipeline_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "PipelineService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateTrainingPipeline",
+          "request": {
+            "type": "CreateTrainingPipelineRequest"
+          },
+          "response": {
+            "type": "TrainingPipeline"
+          }
+        },
+        {
+          "method": "GetTrainingPipeline",
+          "request": {
+            "type": "GetTrainingPipelineRequest"
+          },
+          "response": {
+            "type": "TrainingPipeline"
+          }
+        },
+        {
+          "method": "ListTrainingPipelines",
+          "request": {
+            "type": "ListTrainingPipelinesRequest"
+          },
+          "response": {
+            "type": "ListTrainingPipelinesResponse"
+          }
+        },
+        {
+          "method": "DeleteTrainingPipeline",
+          "request": {
+            "type": "DeleteTrainingPipelineRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CancelTrainingPipeline",
+          "request": {
+            "type": "CancelTrainingPipelineRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "CreatePipelineJob",
+          "request": {
+            "type": "CreatePipelineJobRequest"
+          },
+          "response": {
+            "type": "PipelineJob"
+          }
+        },
+        {
+          "method": "GetPipelineJob",
+          "request": {
+            "type": "GetPipelineJobRequest"
+          },
+          "response": {
+            "type": "PipelineJob"
+          }
+        },
+        {
+          "method": "ListPipelineJobs",
+          "request": {
+            "type": "ListPipelineJobsRequest"
+          },
+          "response": {
+            "type": "ListPipelineJobsResponse"
+          }
+        },
+        {
+          "method": "DeletePipelineJob",
+          "request": {
+            "type": "DeletePipelineJobRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "BatchDeletePipelineJobs",
+          "request": {
+            "type": "BatchDeletePipelineJobsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CancelPipelineJob",
+          "request": {
+            "type": "CancelPipelineJobRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "BatchCancelPipelineJobs",
+          "request": {
+            "type": "BatchCancelPipelineJobsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "BatchCancelPipelineJobsOperationMetadata"
+    },
+    {
+      "type": "CreateTrainingPipelineRequest"
+    },
+    {
+      "type": "GetTrainingPipelineRequest"
+    },
+    {
+      "type": "ListTrainingPipelinesRequest"
+    },
+    {
+      "type": "ListTrainingPipelinesResponse"
+    },
+    {
+      "type": "DeleteTrainingPipelineRequest"
+    },
+    {
+      "type": "CancelTrainingPipelineRequest"
+    },
+    {
+      "type": "CreatePipelineJobRequest"
+    },
+    {
+      "type": "GetPipelineJobRequest"
+    },
+    {
+      "type": "ListPipelineJobsRequest"
+    },
+    {
+      "type": "ListPipelineJobsResponse"
+    },
+    {
+      "type": "DeletePipelineJobRequest"
+    },
+    {
+      "type": "BatchDeletePipelineJobsRequest"
+    },
+    {
+      "type": "BatchDeletePipelineJobsResponse"
+    },
+    {
+      "type": "CancelPipelineJobRequest"
+    },
+    {
+      "type": "BatchCancelPipelineJobsRequest"
+    },
+    {
+      "type": "BatchCancelPipelineJobsResponse"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/pipeline_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/index_endpoint_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "IndexEndpointService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateIndexEndpoint",
+          "request": {
+            "type": "CreateIndexEndpointRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetIndexEndpoint",
+          "request": {
+            "type": "GetIndexEndpointRequest"
+          },
+          "response": {
+            "type": "IndexEndpoint"
+          }
+        },
+        {
+          "method": "ListIndexEndpoints",
+          "request": {
+            "type": "ListIndexEndpointsRequest"
+          },
+          "response": {
+            "type": "ListIndexEndpointsResponse"
+          }
+        },
+        {
+          "method": "UpdateIndexEndpoint",
+          "request": {
+            "type": "UpdateIndexEndpointRequest"
+          },
+          "response": {
+            "type": "IndexEndpoint"
+          }
+        },
+        {
+          "method": "DeleteIndexEndpoint",
+          "request": {
+            "type": "DeleteIndexEndpointRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeployIndex",
+          "request": {
+            "type": "DeployIndexRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UndeployIndex",
+          "request": {
+            "type": "UndeployIndexRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "MutateDeployedIndex",
+          "request": {
+            "type": "MutateDeployedIndexRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateIndexEndpointRequest"
+    },
+    {
+      "type": "CreateIndexEndpointOperationMetadata"
+    },
+    {
+      "type": "GetIndexEndpointRequest"
+    },
+    {
+      "type": "ListIndexEndpointsRequest"
+    },
+    {
+      "type": "ListIndexEndpointsResponse"
+    },
+    {
+      "type": "UpdateIndexEndpointRequest"
+    },
+    {
+      "type": "DeleteIndexEndpointRequest"
+    },
+    {
+      "type": "DeployIndexRequest"
+    },
+    {
+      "type": "DeployIndexResponse"
+    },
+    {
+      "type": "DeployIndexOperationMetadata"
+    },
+    {
+      "type": "UndeployIndexRequest"
+    },
+    {
+      "type": "UndeployIndexResponse"
+    },
+    {
+      "type": "UndeployIndexOperationMetadata"
+    },
+    {
+      "type": "MutateDeployedIndexRequest"
+    },
+    {
+      "type": "MutateDeployedIndexResponse"
+    },
+    {
+      "type": "MutateDeployedIndexOperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/index_endpoint_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/deployed_model_ref",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "DeployedModelRef"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/deployed_model_ref.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/types",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "BoolArray"
+    },
+    {
+      "type": "DoubleArray"
+    },
+    {
+      "type": "Int64Array"
+    },
+    {
+      "type": "StringArray"
+    },
+    {
+      "type": "Tensor"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/types.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/manual_batch_tuning_parameters",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "ManualBatchTuningParameters"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/manual_batch_tuning_parameters.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/service_networking",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "PrivateServiceConnectConfig"
+    },
+    {
+      "type": "PscAutomatedEndpoints"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/service_networking.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/index_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "IndexService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateIndex",
+          "request": {
+            "type": "CreateIndexRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetIndex",
+          "request": {
+            "type": "GetIndexRequest"
+          },
+          "response": {
+            "type": "Index"
+          }
+        },
+        {
+          "method": "ListIndexes",
+          "request": {
+            "type": "ListIndexesRequest"
+          },
+          "response": {
+            "type": "ListIndexesResponse"
+          }
+        },
+        {
+          "method": "UpdateIndex",
+          "request": {
+            "type": "UpdateIndexRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteIndex",
+          "request": {
+            "type": "DeleteIndexRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpsertDatapoints",
+          "request": {
+            "type": "UpsertDatapointsRequest"
+          },
+          "response": {
+            "type": "UpsertDatapointsResponse"
+          }
+        },
+        {
+          "method": "RemoveDatapoints",
+          "request": {
+            "type": "RemoveDatapointsRequest"
+          },
+          "response": {
+            "type": "RemoveDatapointsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateIndexRequest"
+    },
+    {
+      "type": "CreateIndexOperationMetadata"
+    },
+    {
+      "type": "GetIndexRequest"
+    },
+    {
+      "type": "ListIndexesRequest"
+    },
+    {
+      "type": "ListIndexesResponse"
+    },
+    {
+      "type": "UpdateIndexRequest"
+    },
+    {
+      "type": "UpdateIndexOperationMetadata"
+    },
+    {
+      "type": "DeleteIndexRequest"
+    },
+    {
+      "type": "UpsertDatapointsRequest"
+    },
+    {
+      "type": "UpsertDatapointsResponse"
+    },
+    {
+      "type": "RemoveDatapointsRequest"
+    },
+    {
+      "type": "RemoveDatapointsResponse"
+    },
+    {
+      "type": "NearestNeighborSearchOperationMetadata",
+      "msgs": [
+        {
+          "type": "RecordError"
+        },
+        {
+          "type": "ContentValidationStats"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/index_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/model_monitor",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "ModelMonitor",
+      "msgs": [
+        {
+          "type": "ModelMonitoringTarget"
+        },
+        {
+          "type": "VertexModelSource"
+        }
+      ]
+    },
+    {
+      "type": "ModelMonitoringSchema",
+      "msgs": [
+        {
+          "type": "FieldSchema"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/model_monitor.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/schedule_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "ScheduleService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateSchedule",
+          "request": {
+            "type": "CreateScheduleRequest"
+          },
+          "response": {
+            "type": "Schedule"
+          }
+        },
+        {
+          "method": "DeleteSchedule",
+          "request": {
+            "type": "DeleteScheduleRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetSchedule",
+          "request": {
+            "type": "GetScheduleRequest"
+          },
+          "response": {
+            "type": "Schedule"
+          }
+        },
+        {
+          "method": "ListSchedules",
+          "request": {
+            "type": "ListSchedulesRequest"
+          },
+          "response": {
+            "type": "ListSchedulesResponse"
+          }
+        },
+        {
+          "method": "PauseSchedule",
+          "request": {
+            "type": "PauseScheduleRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ResumeSchedule",
+          "request": {
+            "type": "ResumeScheduleRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "UpdateSchedule",
+          "request": {
+            "type": "UpdateScheduleRequest"
+          },
+          "response": {
+            "type": "Schedule"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateScheduleRequest"
+    },
+    {
+      "type": "GetScheduleRequest"
+    },
+    {
+      "type": "ListSchedulesRequest"
+    },
+    {
+      "type": "ListSchedulesResponse"
+    },
+    {
+      "type": "DeleteScheduleRequest"
+    },
+    {
+      "type": "PauseScheduleRequest"
+    },
+    {
+      "type": "ResumeScheduleRequest"
+    },
+    {
+      "type": "UpdateScheduleRequest"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/schedule_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/model_evaluation",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "ModelEvaluation",
+      "msgs": [
+        {
+          "type": "ModelEvaluationExplanationSpec"
+        },
+        {
+          "type": "BiasConfig"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/model_evaluation.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/pipeline_failure_policy",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/pipeline_failure_policy.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/saved_query",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "SavedQuery"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/saved_query.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/tensorboard_run",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "TensorboardRun"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/tensorboard_run.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/model_deployment_monitoring_job",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "ModelDeploymentMonitoringJob",
+      "msgs": [
+        {
+          "type": "LatestMonitoringPipelineMetadata"
+        }
+      ]
+    },
+    {
+      "type": "ModelDeploymentMonitoringBigQueryTable"
+    },
+    {
+      "type": "ModelDeploymentMonitoringObjectiveConfig"
+    },
+    {
+      "type": "ModelDeploymentMonitoringScheduleConfig"
+    },
+    {
+      "type": "ModelMonitoringStatsAnomalies",
+      "msgs": [
+        {
+          "type": "FeatureHistoricStatsAnomalies"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/model_deployment_monitoring_job.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/dataset_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "DatasetService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateDataset",
+          "request": {
+            "type": "CreateDatasetRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetDataset",
+          "request": {
+            "type": "GetDatasetRequest"
+          },
+          "response": {
+            "type": "Dataset"
+          }
+        },
+        {
+          "method": "UpdateDataset",
+          "request": {
+            "type": "UpdateDatasetRequest"
+          },
+          "response": {
+            "type": "Dataset"
+          }
+        },
+        {
+          "method": "ListDatasets",
+          "request": {
+            "type": "ListDatasetsRequest"
+          },
+          "response": {
+            "type": "ListDatasetsResponse"
+          }
+        },
+        {
+          "method": "DeleteDataset",
+          "request": {
+            "type": "DeleteDatasetRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ImportData",
+          "request": {
+            "type": "ImportDataRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ExportData",
+          "request": {
+            "type": "ExportDataRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CreateDatasetVersion",
+          "request": {
+            "type": "CreateDatasetVersionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateDatasetVersion",
+          "request": {
+            "type": "UpdateDatasetVersionRequest"
+          },
+          "response": {
+            "type": "DatasetVersion"
+          }
+        },
+        {
+          "method": "DeleteDatasetVersion",
+          "request": {
+            "type": "DeleteDatasetVersionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetDatasetVersion",
+          "request": {
+            "type": "GetDatasetVersionRequest"
+          },
+          "response": {
+            "type": "DatasetVersion"
+          }
+        },
+        {
+          "method": "ListDatasetVersions",
+          "request": {
+            "type": "ListDatasetVersionsRequest"
+          },
+          "response": {
+            "type": "ListDatasetVersionsResponse"
+          }
+        },
+        {
+          "method": "RestoreDatasetVersion",
+          "request": {
+            "type": "RestoreDatasetVersionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListDataItems",
+          "request": {
+            "type": "ListDataItemsRequest"
+          },
+          "response": {
+            "type": "ListDataItemsResponse"
+          }
+        },
+        {
+          "method": "SearchDataItems",
+          "request": {
+            "type": "SearchDataItemsRequest"
+          },
+          "response": {
+            "type": "SearchDataItemsResponse"
+          }
+        },
+        {
+          "method": "ListSavedQueries",
+          "request": {
+            "type": "ListSavedQueriesRequest"
+          },
+          "response": {
+            "type": "ListSavedQueriesResponse"
+          }
+        },
+        {
+          "method": "DeleteSavedQuery",
+          "request": {
+            "type": "DeleteSavedQueryRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetAnnotationSpec",
+          "request": {
+            "type": "GetAnnotationSpecRequest"
+          },
+          "response": {
+            "type": "AnnotationSpec"
+          }
+        },
+        {
+          "method": "ListAnnotations",
+          "request": {
+            "type": "ListAnnotationsRequest"
+          },
+          "response": {
+            "type": "ListAnnotationsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateDatasetRequest"
+    },
+    {
+      "type": "CreateDatasetOperationMetadata"
+    },
+    {
+      "type": "GetDatasetRequest"
+    },
+    {
+      "type": "UpdateDatasetRequest"
+    },
+    {
+      "type": "UpdateDatasetVersionRequest"
+    },
+    {
+      "type": "ListDatasetsRequest"
+    },
+    {
+      "type": "ListDatasetsResponse"
+    },
+    {
+      "type": "DeleteDatasetRequest"
+    },
+    {
+      "type": "ImportDataRequest"
+    },
+    {
+      "type": "ImportDataResponse"
+    },
+    {
+      "type": "ImportDataOperationMetadata"
+    },
+    {
+      "type": "ExportDataRequest"
+    },
+    {
+      "type": "ExportDataResponse"
+    },
+    {
+      "type": "ExportDataOperationMetadata"
+    },
+    {
+      "type": "CreateDatasetVersionRequest"
+    },
+    {
+      "type": "CreateDatasetVersionOperationMetadata"
+    },
+    {
+      "type": "DeleteDatasetVersionRequest"
+    },
+    {
+      "type": "GetDatasetVersionRequest"
+    },
+    {
+      "type": "ListDatasetVersionsRequest"
+    },
+    {
+      "type": "ListDatasetVersionsResponse"
+    },
+    {
+      "type": "RestoreDatasetVersionRequest"
+    },
+    {
+      "type": "RestoreDatasetVersionOperationMetadata"
+    },
+    {
+      "type": "ListDataItemsRequest"
+    },
+    {
+      "type": "ListDataItemsResponse"
+    },
+    {
+      "type": "SearchDataItemsRequest",
+      "msgs": [
+        {
+          "type": "OrderByAnnotation"
+        }
+      ]
+    },
+    {
+      "type": "SearchDataItemsResponse"
+    },
+    {
+      "type": "DataItemView"
+    },
+    {
+      "type": "ListSavedQueriesRequest"
+    },
+    {
+      "type": "ListSavedQueriesResponse"
+    },
+    {
+      "type": "DeleteSavedQueryRequest"
+    },
+    {
+      "type": "GetAnnotationSpecRequest"
+    },
+    {
+      "type": "ListAnnotationsRequest"
+    },
+    {
+      "type": "ListAnnotationsResponse"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/dataset_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/feature_view",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "FeatureView",
+      "msgs": [
+        {
+          "type": "BigQuerySource"
+        },
+        {
+          "type": "SyncConfig"
+        },
+        {
+          "type": "VectorSearchConfig"
+        },
+        {
+          "type": "BruteForceConfig"
+        },
+        {
+          "type": "TreeAHConfig"
+        },
+        {
+          "type": "IndexConfig"
+        },
+        {
+          "type": "BruteForceConfig"
+        },
+        {
+          "type": "TreeAHConfig"
+        },
+        {
+          "type": "FeatureRegistrySource"
+        },
+        {
+          "type": "FeatureGroup"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/feature_view.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/training_pipeline",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "TrainingPipeline"
+    },
+    {
+      "type": "InputDataConfig"
+    },
+    {
+      "type": "FractionSplit"
+    },
+    {
+      "type": "FilterSplit"
+    },
+    {
+      "type": "PredefinedSplit"
+    },
+    {
+      "type": "TimestampSplit"
+    },
+    {
+      "type": "StratifiedSplit"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/training_pipeline.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/completion_stats",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "CompletionStats"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/completion_stats.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/study",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "Study"
+    },
+    {
+      "type": "Trial",
+      "msgs": [
+        {
+          "type": "Parameter"
+        }
+      ]
+    },
+    {
+      "type": "TrialContext"
+    },
+    {
+      "type": "StudyTimeConstraint"
+    },
+    {
+      "type": "StudySpec",
+      "msgs": [
+        {
+          "type": "MetricSpec"
+        },
+        {
+          "type": "SafetyMetricConfig"
+        },
+        {
+          "type": "ParameterSpec"
+        },
+        {
+          "type": "DoubleValueSpec"
+        },
+        {
+          "type": "IntegerValueSpec"
+        },
+        {
+          "type": "CategoricalValueSpec"
+        },
+        {
+          "type": "DiscreteValueSpec"
+        },
+        {
+          "type": "ConditionalParameterSpec"
+        },
+        {
+          "type": "DiscreteValueCondition"
+        },
+        {
+          "type": "IntValueCondition"
+        },
+        {
+          "type": "CategoricalValueCondition"
+        },
+        {
+          "type": "DecayCurveAutomatedStoppingSpec"
+        },
+        {
+          "type": "MedianAutomatedStoppingSpec"
+        },
+        {
+          "type": "ConvexAutomatedStoppingSpec"
+        },
+        {
+          "type": "ConvexStopConfig"
+        },
+        {
+          "type": "TransferLearningConfig"
+        },
+        {
+          "type": "StudyStoppingConfig"
+        }
+      ]
+    },
+    {
+      "type": "Measurement",
+      "msgs": [
+        {
+          "type": "Metric"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/study.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/metadata_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "MetadataService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateMetadataStore",
+          "request": {
+            "type": "CreateMetadataStoreRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetMetadataStore",
+          "request": {
+            "type": "GetMetadataStoreRequest"
+          },
+          "response": {
+            "type": "MetadataStore"
+          }
+        },
+        {
+          "method": "ListMetadataStores",
+          "request": {
+            "type": "ListMetadataStoresRequest"
+          },
+          "response": {
+            "type": "ListMetadataStoresResponse"
+          }
+        },
+        {
+          "method": "DeleteMetadataStore",
+          "request": {
+            "type": "DeleteMetadataStoreRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CreateArtifact",
+          "request": {
+            "type": "CreateArtifactRequest"
+          },
+          "response": {
+            "type": "Artifact"
+          }
+        },
+        {
+          "method": "GetArtifact",
+          "request": {
+            "type": "GetArtifactRequest"
+          },
+          "response": {
+            "type": "Artifact"
+          }
+        },
+        {
+          "method": "ListArtifacts",
+          "request": {
+            "type": "ListArtifactsRequest"
+          },
+          "response": {
+            "type": "ListArtifactsResponse"
+          }
+        },
+        {
+          "method": "UpdateArtifact",
+          "request": {
+            "type": "UpdateArtifactRequest"
+          },
+          "response": {
+            "type": "Artifact"
+          }
+        },
+        {
+          "method": "DeleteArtifact",
+          "request": {
+            "type": "DeleteArtifactRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "PurgeArtifacts",
+          "request": {
+            "type": "PurgeArtifactsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CreateContext",
+          "request": {
+            "type": "CreateContextRequest"
+          },
+          "response": {
+            "type": "Context"
+          }
+        },
+        {
+          "method": "GetContext",
+          "request": {
+            "type": "GetContextRequest"
+          },
+          "response": {
+            "type": "Context"
+          }
+        },
+        {
+          "method": "ListContexts",
+          "request": {
+            "type": "ListContextsRequest"
+          },
+          "response": {
+            "type": "ListContextsResponse"
+          }
+        },
+        {
+          "method": "UpdateContext",
+          "request": {
+            "type": "UpdateContextRequest"
+          },
+          "response": {
+            "type": "Context"
+          }
+        },
+        {
+          "method": "DeleteContext",
+          "request": {
+            "type": "DeleteContextRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "PurgeContexts",
+          "request": {
+            "type": "PurgeContextsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "AddContextArtifactsAndExecutions",
+          "request": {
+            "type": "AddContextArtifactsAndExecutionsRequest"
+          },
+          "response": {
+            "type": "AddContextArtifactsAndExecutionsResponse"
+          }
+        },
+        {
+          "method": "AddContextChildren",
+          "request": {
+            "type": "AddContextChildrenRequest"
+          },
+          "response": {
+            "type": "AddContextChildrenResponse"
+          }
+        },
+        {
+          "method": "RemoveContextChildren",
+          "request": {
+            "type": "RemoveContextChildrenRequest"
+          },
+          "response": {
+            "type": "RemoveContextChildrenResponse"
+          }
+        },
+        {
+          "method": "QueryContextLineageSubgraph",
+          "request": {
+            "type": "QueryContextLineageSubgraphRequest"
+          },
+          "response": {
+            "type": "LineageSubgraph"
+          }
+        },
+        {
+          "method": "CreateExecution",
+          "request": {
+            "type": "CreateExecutionRequest"
+          },
+          "response": {
+            "type": "Execution"
+          }
+        },
+        {
+          "method": "GetExecution",
+          "request": {
+            "type": "GetExecutionRequest"
+          },
+          "response": {
+            "type": "Execution"
+          }
+        },
+        {
+          "method": "ListExecutions",
+          "request": {
+            "type": "ListExecutionsRequest"
+          },
+          "response": {
+            "type": "ListExecutionsResponse"
+          }
+        },
+        {
+          "method": "UpdateExecution",
+          "request": {
+            "type": "UpdateExecutionRequest"
+          },
+          "response": {
+            "type": "Execution"
+          }
+        },
+        {
+          "method": "DeleteExecution",
+          "request": {
+            "type": "DeleteExecutionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "PurgeExecutions",
+          "request": {
+            "type": "PurgeExecutionsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "AddExecutionEvents",
+          "request": {
+            "type": "AddExecutionEventsRequest"
+          },
+          "response": {
+            "type": "AddExecutionEventsResponse"
+          }
+        },
+        {
+          "method": "QueryExecutionInputsAndOutputs",
+          "request": {
+            "type": "QueryExecutionInputsAndOutputsRequest"
+          },
+          "response": {
+            "type": "LineageSubgraph"
+          }
+        },
+        {
+          "method": "CreateMetadataSchema",
+          "request": {
+            "type": "CreateMetadataSchemaRequest"
+          },
+          "response": {
+            "type": "MetadataSchema"
+          }
+        },
+        {
+          "method": "GetMetadataSchema",
+          "request": {
+            "type": "GetMetadataSchemaRequest"
+          },
+          "response": {
+            "type": "MetadataSchema"
+          }
+        },
+        {
+          "method": "ListMetadataSchemas",
+          "request": {
+            "type": "ListMetadataSchemasRequest"
+          },
+          "response": {
+            "type": "ListMetadataSchemasResponse"
+          }
+        },
+        {
+          "method": "QueryArtifactLineageSubgraph",
+          "request": {
+            "type": "QueryArtifactLineageSubgraphRequest"
+          },
+          "response": {
+            "type": "LineageSubgraph"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateMetadataStoreRequest"
+    },
+    {
+      "type": "CreateMetadataStoreOperationMetadata"
+    },
+    {
+      "type": "GetMetadataStoreRequest"
+    },
+    {
+      "type": "ListMetadataStoresRequest"
+    },
+    {
+      "type": "ListMetadataStoresResponse"
+    },
+    {
+      "type": "DeleteMetadataStoreRequest"
+    },
+    {
+      "type": "DeleteMetadataStoreOperationMetadata"
+    },
+    {
+      "type": "CreateArtifactRequest"
+    },
+    {
+      "type": "GetArtifactRequest"
+    },
+    {
+      "type": "ListArtifactsRequest"
+    },
+    {
+      "type": "ListArtifactsResponse"
+    },
+    {
+      "type": "UpdateArtifactRequest"
+    },
+    {
+      "type": "DeleteArtifactRequest"
+    },
+    {
+      "type": "PurgeArtifactsRequest"
+    },
+    {
+      "type": "PurgeArtifactsResponse"
+    },
+    {
+      "type": "PurgeArtifactsMetadata"
+    },
+    {
+      "type": "CreateContextRequest"
+    },
+    {
+      "type": "GetContextRequest"
+    },
+    {
+      "type": "ListContextsRequest"
+    },
+    {
+      "type": "ListContextsResponse"
+    },
+    {
+      "type": "UpdateContextRequest"
+    },
+    {
+      "type": "DeleteContextRequest"
+    },
+    {
+      "type": "PurgeContextsRequest"
+    },
+    {
+      "type": "PurgeContextsResponse"
+    },
+    {
+      "type": "PurgeContextsMetadata"
+    },
+    {
+      "type": "AddContextArtifactsAndExecutionsRequest"
+    },
+    {
+      "type": "AddContextArtifactsAndExecutionsResponse"
+    },
+    {
+      "type": "AddContextChildrenRequest"
+    },
+    {
+      "type": "AddContextChildrenResponse"
+    },
+    {
+      "type": "RemoveContextChildrenRequest"
+    },
+    {
+      "type": "RemoveContextChildrenResponse"
+    },
+    {
+      "type": "QueryContextLineageSubgraphRequest"
+    },
+    {
+      "type": "CreateExecutionRequest"
+    },
+    {
+      "type": "GetExecutionRequest"
+    },
+    {
+      "type": "ListExecutionsRequest"
+    },
+    {
+      "type": "ListExecutionsResponse"
+    },
+    {
+      "type": "UpdateExecutionRequest"
+    },
+    {
+      "type": "DeleteExecutionRequest"
+    },
+    {
+      "type": "PurgeExecutionsRequest"
+    },
+    {
+      "type": "PurgeExecutionsResponse"
+    },
+    {
+      "type": "PurgeExecutionsMetadata"
+    },
+    {
+      "type": "AddExecutionEventsRequest"
+    },
+    {
+      "type": "AddExecutionEventsResponse"
+    },
+    {
+      "type": "QueryExecutionInputsAndOutputsRequest"
+    },
+    {
+      "type": "CreateMetadataSchemaRequest"
+    },
+    {
+      "type": "GetMetadataSchemaRequest"
+    },
+    {
+      "type": "ListMetadataSchemasRequest"
+    },
+    {
+      "type": "ListMetadataSchemasResponse"
+    },
+    {
+      "type": "QueryArtifactLineageSubgraphRequest"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/metadata_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/featurestore_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "FeaturestoreService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateFeaturestore",
+          "request": {
+            "type": "CreateFeaturestoreRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetFeaturestore",
+          "request": {
+            "type": "GetFeaturestoreRequest"
+          },
+          "response": {
+            "type": "Featurestore"
+          }
+        },
+        {
+          "method": "ListFeaturestores",
+          "request": {
+            "type": "ListFeaturestoresRequest"
+          },
+          "response": {
+            "type": "ListFeaturestoresResponse"
+          }
+        },
+        {
+          "method": "UpdateFeaturestore",
+          "request": {
+            "type": "UpdateFeaturestoreRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteFeaturestore",
+          "request": {
+            "type": "DeleteFeaturestoreRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CreateEntityType",
+          "request": {
+            "type": "CreateEntityTypeRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetEntityType",
+          "request": {
+            "type": "GetEntityTypeRequest"
+          },
+          "response": {
+            "type": "EntityType"
+          }
+        },
+        {
+          "method": "ListEntityTypes",
+          "request": {
+            "type": "ListEntityTypesRequest"
+          },
+          "response": {
+            "type": "ListEntityTypesResponse"
+          }
+        },
+        {
+          "method": "UpdateEntityType",
+          "request": {
+            "type": "UpdateEntityTypeRequest"
+          },
+          "response": {
+            "type": "EntityType"
+          }
+        },
+        {
+          "method": "DeleteEntityType",
+          "request": {
+            "type": "DeleteEntityTypeRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CreateFeature",
+          "request": {
+            "type": "CreateFeatureRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "BatchCreateFeatures",
+          "request": {
+            "type": "BatchCreateFeaturesRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetFeature",
+          "request": {
+            "type": "GetFeatureRequest"
+          },
+          "response": {
+            "type": "Feature"
+          }
+        },
+        {
+          "method": "ListFeatures",
+          "request": {
+            "type": "ListFeaturesRequest"
+          },
+          "response": {
+            "type": "ListFeaturesResponse"
+          }
+        },
+        {
+          "method": "UpdateFeature",
+          "request": {
+            "type": "UpdateFeatureRequest"
+          },
+          "response": {
+            "type": "Feature"
+          }
+        },
+        {
+          "method": "DeleteFeature",
+          "request": {
+            "type": "DeleteFeatureRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ImportFeatureValues",
+          "request": {
+            "type": "ImportFeatureValuesRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "BatchReadFeatureValues",
+          "request": {
+            "type": "BatchReadFeatureValuesRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ExportFeatureValues",
+          "request": {
+            "type": "ExportFeatureValuesRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteFeatureValues",
+          "request": {
+            "type": "DeleteFeatureValuesRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "SearchFeatures",
+          "request": {
+            "type": "SearchFeaturesRequest"
+          },
+          "response": {
+            "type": "SearchFeaturesResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateFeaturestoreRequest"
+    },
+    {
+      "type": "GetFeaturestoreRequest"
+    },
+    {
+      "type": "ListFeaturestoresRequest"
+    },
+    {
+      "type": "ListFeaturestoresResponse"
+    },
+    {
+      "type": "UpdateFeaturestoreRequest"
+    },
+    {
+      "type": "DeleteFeaturestoreRequest"
+    },
+    {
+      "type": "ImportFeatureValuesRequest",
+      "msgs": [
+        {
+          "type": "FeatureSpec"
+        }
+      ]
+    },
+    {
+      "type": "ImportFeatureValuesResponse"
+    },
+    {
+      "type": "BatchReadFeatureValuesRequest",
+      "msgs": [
+        {
+          "type": "PassThroughField"
+        },
+        {
+          "type": "EntityTypeSpec"
+        }
+      ]
+    },
+    {
+      "type": "ExportFeatureValuesRequest",
+      "msgs": [
+        {
+          "type": "SnapshotExport"
+        },
+        {
+          "type": "FullExport"
+        }
+      ]
+    },
+    {
+      "type": "DestinationFeatureSetting"
+    },
+    {
+      "type": "FeatureValueDestination"
+    },
+    {
+      "type": "ExportFeatureValuesResponse"
+    },
+    {
+      "type": "BatchReadFeatureValuesResponse"
+    },
+    {
+      "type": "CreateEntityTypeRequest"
+    },
+    {
+      "type": "GetEntityTypeRequest"
+    },
+    {
+      "type": "ListEntityTypesRequest"
+    },
+    {
+      "type": "ListEntityTypesResponse"
+    },
+    {
+      "type": "UpdateEntityTypeRequest"
+    },
+    {
+      "type": "DeleteEntityTypeRequest"
+    },
+    {
+      "type": "CreateFeatureRequest"
+    },
+    {
+      "type": "BatchCreateFeaturesRequest"
+    },
+    {
+      "type": "BatchCreateFeaturesResponse"
+    },
+    {
+      "type": "GetFeatureRequest"
+    },
+    {
+      "type": "ListFeaturesRequest"
+    },
+    {
+      "type": "ListFeaturesResponse"
+    },
+    {
+      "type": "SearchFeaturesRequest"
+    },
+    {
+      "type": "SearchFeaturesResponse"
+    },
+    {
+      "type": "UpdateFeatureRequest"
+    },
+    {
+      "type": "DeleteFeatureRequest"
+    },
+    {
+      "type": "CreateFeaturestoreOperationMetadata"
+    },
+    {
+      "type": "UpdateFeaturestoreOperationMetadata"
+    },
+    {
+      "type": "ImportFeatureValuesOperationMetadata"
+    },
+    {
+      "type": "ExportFeatureValuesOperationMetadata"
+    },
+    {
+      "type": "BatchReadFeatureValuesOperationMetadata"
+    },
+    {
+      "type": "DeleteFeatureValuesOperationMetadata"
+    },
+    {
+      "type": "CreateEntityTypeOperationMetadata"
+    },
+    {
+      "type": "CreateFeatureOperationMetadata"
+    },
+    {
+      "type": "BatchCreateFeaturesOperationMetadata"
+    },
+    {
+      "type": "DeleteFeatureValuesRequest",
+      "msgs": [
+        {
+          "type": "SelectEntity"
+        },
+        {
+          "type": "SelectTimeRangeAndFeature"
+        }
+      ]
+    },
+    {
+      "type": "DeleteFeatureValuesResponse",
+      "msgs": [
+        {
+          "type": "SelectEntity"
+        },
+        {
+          "type": "SelectTimeRangeAndFeature"
+        }
+      ]
+    },
+    {
+      "type": "EntityIdSelector"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/featurestore_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/persistent_resource",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "PersistentResource"
+    },
+    {
+      "type": "ResourcePool",
+      "msgs": [
+        {
+          "type": "AutoscalingSpec"
+        }
+      ]
+    },
+    {
+      "type": "ResourceRuntimeSpec"
+    },
+    {
+      "type": "RaySpec"
+    },
+    {
+      "type": "ResourceRuntime"
+    },
+    {
+      "type": "ServiceAccountSpec"
+    },
+    {
+      "type": "RayMetricSpec"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/persistent_resource.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/model_monitoring_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "ModelMonitoringService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateModelMonitor",
+          "request": {
+            "type": "CreateModelMonitorRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateModelMonitor",
+          "request": {
+            "type": "UpdateModelMonitorRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetModelMonitor",
+          "request": {
+            "type": "GetModelMonitorRequest"
+          },
+          "response": {
+            "type": "ModelMonitor"
+          }
+        },
+        {
+          "method": "ListModelMonitors",
+          "request": {
+            "type": "ListModelMonitorsRequest"
+          },
+          "response": {
+            "type": "ListModelMonitorsResponse"
+          }
+        },
+        {
+          "method": "DeleteModelMonitor",
+          "request": {
+            "type": "DeleteModelMonitorRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CreateModelMonitoringJob",
+          "request": {
+            "type": "CreateModelMonitoringJobRequest"
+          },
+          "response": {
+            "type": "ModelMonitoringJob"
+          }
+        },
+        {
+          "method": "GetModelMonitoringJob",
+          "request": {
+            "type": "GetModelMonitoringJobRequest"
+          },
+          "response": {
+            "type": "ModelMonitoringJob"
+          }
+        },
+        {
+          "method": "ListModelMonitoringJobs",
+          "request": {
+            "type": "ListModelMonitoringJobsRequest"
+          },
+          "response": {
+            "type": "ListModelMonitoringJobsResponse"
+          }
+        },
+        {
+          "method": "DeleteModelMonitoringJob",
+          "request": {
+            "type": "DeleteModelMonitoringJobRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "SearchModelMonitoringStats",
+          "request": {
+            "type": "SearchModelMonitoringStatsRequest"
+          },
+          "response": {
+            "type": "SearchModelMonitoringStatsResponse"
+          }
+        },
+        {
+          "method": "SearchModelMonitoringAlerts",
+          "request": {
+            "type": "SearchModelMonitoringAlertsRequest"
+          },
+          "response": {
+            "type": "SearchModelMonitoringAlertsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateModelMonitorRequest"
+    },
+    {
+      "type": "CreateModelMonitorOperationMetadata"
+    },
+    {
+      "type": "UpdateModelMonitorRequest"
+    },
+    {
+      "type": "UpdateModelMonitorOperationMetadata"
+    },
+    {
+      "type": "GetModelMonitorRequest"
+    },
+    {
+      "type": "ListModelMonitorsRequest"
+    },
+    {
+      "type": "ListModelMonitorsResponse"
+    },
+    {
+      "type": "DeleteModelMonitorRequest"
+    },
+    {
+      "type": "CreateModelMonitoringJobRequest"
+    },
+    {
+      "type": "GetModelMonitoringJobRequest"
+    },
+    {
+      "type": "ListModelMonitoringJobsRequest"
+    },
+    {
+      "type": "ListModelMonitoringJobsResponse"
+    },
+    {
+      "type": "DeleteModelMonitoringJobRequest"
+    },
+    {
+      "type": "SearchModelMonitoringStatsRequest"
+    },
+    {
+      "type": "SearchModelMonitoringStatsResponse"
+    },
+    {
+      "type": "SearchModelMonitoringAlertsRequest"
+    },
+    {
+      "type": "SearchModelMonitoringAlertsResponse"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/model_monitoring_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/model_monitoring_spec",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "ModelMonitoringSpec"
+    },
+    {
+      "type": "ModelMonitoringObjectiveSpec",
+      "msgs": [
+        {
+          "type": "DataDriftSpec"
+        },
+        {
+          "type": "FeatureAttributionSpec"
+        },
+        {
+          "type": "TabularObjective"
+        }
+      ]
+    },
+    {
+      "type": "ModelMonitoringOutputSpec"
+    },
+    {
+      "type": "ModelMonitoringInput",
+      "msgs": [
+        {
+          "type": "ModelMonitoringDataset"
+        },
+        {
+          "type": "ModelMonitoringGcsSource"
+        },
+        {
+          "type": "ModelMonitoringBigQuerySource"
+        },
+        {
+          "type": "BatchPredictionOutput"
+        },
+        {
+          "type": "VertexEndpointLogs"
+        },
+        {
+          "type": "TimeOffset"
+        }
+      ]
+    },
+    {
+      "type": "ModelMonitoringNotificationSpec",
+      "msgs": [
+        {
+          "type": "EmailConfig"
+        },
+        {
+          "type": "NotificationChannelConfig"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/model_monitoring_spec.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/index",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "Index"
+    },
+    {
+      "type": "IndexDatapoint",
+      "msgs": [
+        {
+          "type": "SparseEmbedding"
+        },
+        {
+          "type": "Restriction"
+        },
+        {
+          "type": "NumericRestriction"
+        },
+        {
+          "type": "CrowdingTag"
+        }
+      ]
+    },
+    {
+      "type": "IndexStats"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/index.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/evaluated_annotation",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "EvaluatedAnnotation"
+    },
+    {
+      "type": "EvaluatedAnnotationExplanation"
+    },
+    {
+      "type": "ErrorAnalysisAnnotation",
+      "msgs": [
+        {
+          "type": "AttributedItem"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/evaluated_annotation.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/feature_selector",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "IdMatcher"
+    },
+    {
+      "type": "FeatureSelector"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/feature_selector.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/migration_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "MigrationService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "SearchMigratableResources",
+          "request": {
+            "type": "SearchMigratableResourcesRequest"
+          },
+          "response": {
+            "type": "SearchMigratableResourcesResponse"
+          }
+        },
+        {
+          "method": "BatchMigrateResources",
+          "request": {
+            "type": "BatchMigrateResourcesRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "SearchMigratableResourcesRequest"
+    },
+    {
+      "type": "SearchMigratableResourcesResponse"
+    },
+    {
+      "type": "BatchMigrateResourcesRequest"
+    },
+    {
+      "type": "MigrateResourceRequest",
+      "msgs": [
+        {
+          "type": "MigrateMlEngineModelVersionConfig"
+        },
+        {
+          "type": "MigrateAutomlModelConfig"
+        },
+        {
+          "type": "MigrateAutomlDatasetConfig"
+        },
+        {
+          "type": "MigrateDataLabelingDatasetConfig"
+        },
+        {
+          "type": "MigrateDataLabelingAnnotatedDatasetConfig"
+        }
+      ]
+    },
+    {
+      "type": "BatchMigrateResourcesResponse"
+    },
+    {
+      "type": "MigrateResourceResponse"
+    },
+    {
+      "type": "BatchMigrateResourcesOperationMetadata",
+      "msgs": [
+        {
+          "type": "PartialResult"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/migration_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/entity_type",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "EntityType"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/entity_type.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/annotation_spec",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "AnnotationSpec"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/annotation_spec.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/openapi",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "Schema"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/openapi.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/endpoint_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "EndpointService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateEndpoint",
+          "request": {
+            "type": "CreateEndpointRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetEndpoint",
+          "request": {
+            "type": "GetEndpointRequest"
+          },
+          "response": {
+            "type": "Endpoint"
+          }
+        },
+        {
+          "method": "ListEndpoints",
+          "request": {
+            "type": "ListEndpointsRequest"
+          },
+          "response": {
+            "type": "ListEndpointsResponse"
+          }
+        },
+        {
+          "method": "UpdateEndpoint",
+          "request": {
+            "type": "UpdateEndpointRequest"
+          },
+          "response": {
+            "type": "Endpoint"
+          }
+        },
+        {
+          "method": "DeleteEndpoint",
+          "request": {
+            "type": "DeleteEndpointRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeployModel",
+          "request": {
+            "type": "DeployModelRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UndeployModel",
+          "request": {
+            "type": "UndeployModelRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "MutateDeployedModel",
+          "request": {
+            "type": "MutateDeployedModelRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateEndpointRequest"
+    },
+    {
+      "type": "CreateEndpointOperationMetadata"
+    },
+    {
+      "type": "GetEndpointRequest"
+    },
+    {
+      "type": "ListEndpointsRequest"
+    },
+    {
+      "type": "ListEndpointsResponse"
+    },
+    {
+      "type": "UpdateEndpointRequest"
+    },
+    {
+      "type": "DeleteEndpointRequest"
+    },
+    {
+      "type": "DeployModelRequest"
+    },
+    {
+      "type": "DeployModelResponse"
+    },
+    {
+      "type": "DeployModelOperationMetadata"
+    },
+    {
+      "type": "UndeployModelRequest"
+    },
+    {
+      "type": "UndeployModelResponse"
+    },
+    {
+      "type": "UndeployModelOperationMetadata"
+    },
+    {
+      "type": "MutateDeployedModelRequest"
+    },
+    {
+      "type": "MutateDeployedModelResponse"
+    },
+    {
+      "type": "MutateDeployedModelOperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/endpoint_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/notebook_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "NotebookService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateNotebookRuntimeTemplate",
+          "request": {
+            "type": "CreateNotebookRuntimeTemplateRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetNotebookRuntimeTemplate",
+          "request": {
+            "type": "GetNotebookRuntimeTemplateRequest"
+          },
+          "response": {
+            "type": "NotebookRuntimeTemplate"
+          }
+        },
+        {
+          "method": "ListNotebookRuntimeTemplates",
+          "request": {
+            "type": "ListNotebookRuntimeTemplatesRequest"
+          },
+          "response": {
+            "type": "ListNotebookRuntimeTemplatesResponse"
+          }
+        },
+        {
+          "method": "DeleteNotebookRuntimeTemplate",
+          "request": {
+            "type": "DeleteNotebookRuntimeTemplateRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateNotebookRuntimeTemplate",
+          "request": {
+            "type": "UpdateNotebookRuntimeTemplateRequest"
+          },
+          "response": {
+            "type": "NotebookRuntimeTemplate"
+          }
+        },
+        {
+          "method": "AssignNotebookRuntime",
+          "request": {
+            "type": "AssignNotebookRuntimeRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetNotebookRuntime",
+          "request": {
+            "type": "GetNotebookRuntimeRequest"
+          },
+          "response": {
+            "type": "NotebookRuntime"
+          }
+        },
+        {
+          "method": "ListNotebookRuntimes",
+          "request": {
+            "type": "ListNotebookRuntimesRequest"
+          },
+          "response": {
+            "type": "ListNotebookRuntimesResponse"
+          }
+        },
+        {
+          "method": "DeleteNotebookRuntime",
+          "request": {
+            "type": "DeleteNotebookRuntimeRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpgradeNotebookRuntime",
+          "request": {
+            "type": "UpgradeNotebookRuntimeRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "StartNotebookRuntime",
+          "request": {
+            "type": "StartNotebookRuntimeRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CreateNotebookExecutionJob",
+          "request": {
+            "type": "CreateNotebookExecutionJobRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetNotebookExecutionJob",
+          "request": {
+            "type": "GetNotebookExecutionJobRequest"
+          },
+          "response": {
+            "type": "NotebookExecutionJob"
+          }
+        },
+        {
+          "method": "ListNotebookExecutionJobs",
+          "request": {
+            "type": "ListNotebookExecutionJobsRequest"
+          },
+          "response": {
+            "type": "ListNotebookExecutionJobsResponse"
+          }
+        },
+        {
+          "method": "DeleteNotebookExecutionJob",
+          "request": {
+            "type": "DeleteNotebookExecutionJobRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateNotebookRuntimeTemplateRequest"
+    },
+    {
+      "type": "CreateNotebookRuntimeTemplateOperationMetadata"
+    },
+    {
+      "type": "GetNotebookRuntimeTemplateRequest"
+    },
+    {
+      "type": "ListNotebookRuntimeTemplatesRequest"
+    },
+    {
+      "type": "ListNotebookRuntimeTemplatesResponse"
+    },
+    {
+      "type": "DeleteNotebookRuntimeTemplateRequest"
+    },
+    {
+      "type": "UpdateNotebookRuntimeTemplateRequest"
+    },
+    {
+      "type": "AssignNotebookRuntimeRequest"
+    },
+    {
+      "type": "AssignNotebookRuntimeOperationMetadata"
+    },
+    {
+      "type": "GetNotebookRuntimeRequest"
+    },
+    {
+      "type": "ListNotebookRuntimesRequest"
+    },
+    {
+      "type": "ListNotebookRuntimesResponse"
+    },
+    {
+      "type": "DeleteNotebookRuntimeRequest"
+    },
+    {
+      "type": "UpgradeNotebookRuntimeRequest"
+    },
+    {
+      "type": "UpgradeNotebookRuntimeOperationMetadata"
+    },
+    {
+      "type": "UpgradeNotebookRuntimeResponse"
+    },
+    {
+      "type": "StartNotebookRuntimeRequest"
+    },
+    {
+      "type": "StartNotebookRuntimeOperationMetadata"
+    },
+    {
+      "type": "StartNotebookRuntimeResponse"
+    },
+    {
+      "type": "CreateNotebookExecutionJobRequest"
+    },
+    {
+      "type": "CreateNotebookExecutionJobOperationMetadata"
+    },
+    {
+      "type": "GetNotebookExecutionJobRequest"
+    },
+    {
+      "type": "ListNotebookExecutionJobsRequest"
+    },
+    {
+      "type": "ListNotebookExecutionJobsResponse"
+    },
+    {
+      "type": "DeleteNotebookExecutionJobRequest"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/notebook_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/explanation_metadata",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "ExplanationMetadata",
+      "msgs": [
+        {
+          "type": "InputMetadata"
+        },
+        {
+          "type": "FeatureValueDomain"
+        },
+        {
+          "type": "Visualization"
+        },
+        {
+          "type": "OutputMetadata"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/explanation_metadata.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/job_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "JobService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateCustomJob",
+          "request": {
+            "type": "CreateCustomJobRequest"
+          },
+          "response": {
+            "type": "CustomJob"
+          }
+        },
+        {
+          "method": "GetCustomJob",
+          "request": {
+            "type": "GetCustomJobRequest"
+          },
+          "response": {
+            "type": "CustomJob"
+          }
+        },
+        {
+          "method": "ListCustomJobs",
+          "request": {
+            "type": "ListCustomJobsRequest"
+          },
+          "response": {
+            "type": "ListCustomJobsResponse"
+          }
+        },
+        {
+          "method": "DeleteCustomJob",
+          "request": {
+            "type": "DeleteCustomJobRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CancelCustomJob",
+          "request": {
+            "type": "CancelCustomJobRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "CreateDataLabelingJob",
+          "request": {
+            "type": "CreateDataLabelingJobRequest"
+          },
+          "response": {
+            "type": "DataLabelingJob"
+          }
+        },
+        {
+          "method": "GetDataLabelingJob",
+          "request": {
+            "type": "GetDataLabelingJobRequest"
+          },
+          "response": {
+            "type": "DataLabelingJob"
+          }
+        },
+        {
+          "method": "ListDataLabelingJobs",
+          "request": {
+            "type": "ListDataLabelingJobsRequest"
+          },
+          "response": {
+            "type": "ListDataLabelingJobsResponse"
+          }
+        },
+        {
+          "method": "DeleteDataLabelingJob",
+          "request": {
+            "type": "DeleteDataLabelingJobRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CancelDataLabelingJob",
+          "request": {
+            "type": "CancelDataLabelingJobRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "CreateHyperparameterTuningJob",
+          "request": {
+            "type": "CreateHyperparameterTuningJobRequest"
+          },
+          "response": {
+            "type": "HyperparameterTuningJob"
+          }
+        },
+        {
+          "method": "GetHyperparameterTuningJob",
+          "request": {
+            "type": "GetHyperparameterTuningJobRequest"
+          },
+          "response": {
+            "type": "HyperparameterTuningJob"
+          }
+        },
+        {
+          "method": "ListHyperparameterTuningJobs",
+          "request": {
+            "type": "ListHyperparameterTuningJobsRequest"
+          },
+          "response": {
+            "type": "ListHyperparameterTuningJobsResponse"
+          }
+        },
+        {
+          "method": "DeleteHyperparameterTuningJob",
+          "request": {
+            "type": "DeleteHyperparameterTuningJobRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CancelHyperparameterTuningJob",
+          "request": {
+            "type": "CancelHyperparameterTuningJobRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "CreateNasJob",
+          "request": {
+            "type": "CreateNasJobRequest"
+          },
+          "response": {
+            "type": "NasJob"
+          }
+        },
+        {
+          "method": "GetNasJob",
+          "request": {
+            "type": "GetNasJobRequest"
+          },
+          "response": {
+            "type": "NasJob"
+          }
+        },
+        {
+          "method": "ListNasJobs",
+          "request": {
+            "type": "ListNasJobsRequest"
+          },
+          "response": {
+            "type": "ListNasJobsResponse"
+          }
+        },
+        {
+          "method": "DeleteNasJob",
+          "request": {
+            "type": "DeleteNasJobRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CancelNasJob",
+          "request": {
+            "type": "CancelNasJobRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "GetNasTrialDetail",
+          "request": {
+            "type": "GetNasTrialDetailRequest"
+          },
+          "response": {
+            "type": "NasTrialDetail"
+          }
+        },
+        {
+          "method": "ListNasTrialDetails",
+          "request": {
+            "type": "ListNasTrialDetailsRequest"
+          },
+          "response": {
+            "type": "ListNasTrialDetailsResponse"
+          }
+        },
+        {
+          "method": "CreateBatchPredictionJob",
+          "request": {
+            "type": "CreateBatchPredictionJobRequest"
+          },
+          "response": {
+            "type": "BatchPredictionJob"
+          }
+        },
+        {
+          "method": "GetBatchPredictionJob",
+          "request": {
+            "type": "GetBatchPredictionJobRequest"
+          },
+          "response": {
+            "type": "BatchPredictionJob"
+          }
+        },
+        {
+          "method": "ListBatchPredictionJobs",
+          "request": {
+            "type": "ListBatchPredictionJobsRequest"
+          },
+          "response": {
+            "type": "ListBatchPredictionJobsResponse"
+          }
+        },
+        {
+          "method": "DeleteBatchPredictionJob",
+          "request": {
+            "type": "DeleteBatchPredictionJobRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CancelBatchPredictionJob",
+          "request": {
+            "type": "CancelBatchPredictionJobRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "GetModelDeploymentMonitoringJob",
+          "request": {
+            "type": "GetModelDeploymentMonitoringJobRequest"
+          },
+          "response": {
+            "type": "ModelDeploymentMonitoringJob"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateCustomJobRequest"
+    },
+    {
+      "type": "GetCustomJobRequest"
+    },
+    {
+      "type": "ListCustomJobsRequest"
+    },
+    {
+      "type": "ListCustomJobsResponse"
+    },
+    {
+      "type": "DeleteCustomJobRequest"
+    },
+    {
+      "type": "CancelCustomJobRequest"
+    },
+    {
+      "type": "CreateDataLabelingJobRequest"
+    },
+    {
+      "type": "GetDataLabelingJobRequest"
+    },
+    {
+      "type": "ListDataLabelingJobsRequest"
+    },
+    {
+      "type": "ListDataLabelingJobsResponse"
+    },
+    {
+      "type": "DeleteDataLabelingJobRequest"
+    },
+    {
+      "type": "CancelDataLabelingJobRequest"
+    },
+    {
+      "type": "CreateHyperparameterTuningJobRequest"
+    },
+    {
+      "type": "GetHyperparameterTuningJobRequest"
+    },
+    {
+      "type": "ListHyperparameterTuningJobsRequest"
+    },
+    {
+      "type": "ListHyperparameterTuningJobsResponse"
+    },
+    {
+      "type": "DeleteHyperparameterTuningJobRequest"
+    },
+    {
+      "type": "CancelHyperparameterTuningJobRequest"
+    },
+    {
+      "type": "CreateNasJobRequest"
+    },
+    {
+      "type": "GetNasJobRequest"
+    },
+    {
+      "type": "ListNasJobsRequest"
+    },
+    {
+      "type": "ListNasJobsResponse"
+    },
+    {
+      "type": "DeleteNasJobRequest"
+    },
+    {
+      "type": "CancelNasJobRequest"
+    },
+    {
+      "type": "GetNasTrialDetailRequest"
+    },
+    {
+      "type": "ListNasTrialDetailsRequest"
+    },
+    {
+      "type": "ListNasTrialDetailsResponse"
+    },
+    {
+      "type": "CreateBatchPredictionJobRequest"
+    },
+    {
+      "type": "GetBatchPredictionJobRequest"
+    },
+    {
+      "type": "ListBatchPredictionJobsRequest"
+    },
+    {
+      "type": "ListBatchPredictionJobsResponse"
+    },
+    {
+      "type": "DeleteBatchPredictionJobRequest"
+    },
+    {
+      "type": "CancelBatchPredictionJobRequest"
+    },
+    {
+      "type": "CreateModelDeploymentMonitoringJobRequest"
+    },
+    {
+      "type": "SearchModelDeploymentMonitoringStatsAnomaliesRequest",
+      "msgs": [
+        {
+          "type": "StatsAnomaliesObjective"
+        }
+      ]
+    },
+    {
+      "type": "SearchModelDeploymentMonitoringStatsAnomaliesResponse"
+    },
+    {
+      "type": "GetModelDeploymentMonitoringJobRequest"
+    },
+    {
+      "type": "ListModelDeploymentMonitoringJobsRequest"
+    },
+    {
+      "type": "ListModelDeploymentMonitoringJobsResponse"
+    },
+    {
+      "type": "UpdateModelDeploymentMonitoringJobRequest"
+    },
+    {
+      "type": "DeleteModelDeploymentMonitoringJobRequest"
+    },
+    {
+      "type": "PauseModelDeploymentMonitoringJobRequest"
+    },
+    {
+      "type": "ResumeModelDeploymentMonitoringJobRequest"
+    },
+    {
+      "type": "UpdateModelDeploymentMonitoringJobOperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/job_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/migratable_resource",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "MigratableResource",
+      "msgs": [
+        {
+          "type": "MlEngineModelVersion"
+        },
+        {
+          "type": "AutomlModel"
+        },
+        {
+          "type": "AutomlDataset"
+        },
+        {
+          "type": "DataLabelingDataset"
+        },
+        {
+          "type": "DataLabelingAnnotatedDataset"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/migratable_resource.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/publisher_model",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "PublisherModel",
+      "msgs": [
+        {
+          "type": "ResourceReference"
+        },
+        {
+          "type": "Parent"
+        },
+        {
+          "type": "Documentation"
+        },
+        {
+          "type": "CallToAction"
+        },
+        {
+          "type": "RegionalResourceReferences"
+        },
+        {
+          "type": "ViewRestApi"
+        },
+        {
+          "type": "OpenNotebooks"
+        },
+        {
+          "type": "OpenFineTuningPipelines"
+        },
+        {
+          "type": "Deploy"
+        },
+        {
+          "type": "DeployMetadata"
+        },
+        {
+          "type": "DeployGke"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/publisher_model.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/reasoning_engine",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "ReasoningEngineSpec",
+      "msgs": [
+        {
+          "type": "PackageSpec"
+        }
+      ]
+    },
+    {
+      "type": "ReasoningEngine"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/reasoning_engine.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/reasoning_engine_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "ReasoningEngineService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateReasoningEngine",
+          "request": {
+            "type": "CreateReasoningEngineRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetReasoningEngine",
+          "request": {
+            "type": "GetReasoningEngineRequest"
+          },
+          "response": {
+            "type": "ReasoningEngine"
+          }
+        },
+        {
+          "method": "ListReasoningEngines",
+          "request": {
+            "type": "ListReasoningEnginesRequest"
+          },
+          "response": {
+            "type": "ListReasoningEnginesResponse"
+          }
+        },
+        {
+          "method": "UpdateReasoningEngine",
+          "request": {
+            "type": "UpdateReasoningEngineRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteReasoningEngine",
+          "request": {
+            "type": "DeleteReasoningEngineRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateReasoningEngineRequest"
+    },
+    {
+      "type": "CreateReasoningEngineOperationMetadata"
+    },
+    {
+      "type": "GetReasoningEngineRequest"
+    },
+    {
+      "type": "UpdateReasoningEngineRequest"
+    },
+    {
+      "type": "UpdateReasoningEngineOperationMetadata"
+    },
+    {
+      "type": "ListReasoningEnginesRequest"
+    },
+    {
+      "type": "ListReasoningEnginesResponse"
+    },
+    {
+      "type": "DeleteReasoningEngineRequest"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/reasoning_engine_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/tensorboard",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "Tensorboard"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/tensorboard.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/model_monitoring",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "ModelMonitoringConfig"
+    },
+    {
+      "type": "ModelMonitoringObjectiveConfig",
+      "msgs": [
+        {
+          "type": "TrainingDataset"
+        },
+        {
+          "type": "TrainingPredictionSkewDetectionConfig"
+        },
+        {
+          "type": "PredictionDriftDetectionConfig"
+        },
+        {
+          "type": "ExplanationConfig"
+        },
+        {
+          "type": "ExplanationBaseline"
+        }
+      ]
+    },
+    {
+      "type": "ModelMonitoringAlertConfig",
+      "msgs": [
+        {
+          "type": "EmailAlertConfig"
+        }
+      ]
+    },
+    {
+      "type": "ThresholdConfig"
+    },
+    {
+      "type": "SamplingStrategy",
+      "msgs": [
+        {
+          "type": "RandomSampleConfig"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/model_monitoring.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/tool",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "Tool"
+    },
+    {
+      "type": "ToolUseExample",
+      "msgs": [
+        {
+          "type": "ExtensionOperation"
+        }
+      ]
+    },
+    {
+      "type": "FunctionDeclaration"
+    },
+    {
+      "type": "FunctionCall"
+    },
+    {
+      "type": "FunctionResponse"
+    },
+    {
+      "type": "Retrieval"
+    },
+    {
+      "type": "VertexRagStore",
+      "msgs": [
+        {
+          "type": "RagResource"
+        }
+      ]
+    },
+    {
+      "type": "VertexAISearch"
+    },
+    {
+      "type": "GoogleSearchRetrieval"
+    },
+    {
+      "type": "ToolConfig"
+    },
+    {
+      "type": "FunctionCallingConfig"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/tool.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/feature_online_store",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "FeatureOnlineStore",
+      "msgs": [
+        {
+          "type": "Bigtable"
+        },
+        {
+          "type": "AutoScaling"
+        },
+        {
+          "type": "Optimized"
+        },
+        {
+          "type": "DedicatedServingEndpoint"
+        },
+        {
+          "type": "EmbeddingManagement"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/feature_online_store.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/content",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "Content"
+    },
+    {
+      "type": "Part"
+    },
+    {
+      "type": "Blob"
+    },
+    {
+      "type": "FileData"
+    },
+    {
+      "type": "VideoMetadata"
+    },
+    {
+      "type": "GenerationConfig"
+    },
+    {
+      "type": "SafetySetting"
+    },
+    {
+      "type": "SafetyRating"
+    },
+    {
+      "type": "CitationMetadata"
+    },
+    {
+      "type": "Citation"
+    },
+    {
+      "type": "Candidate"
+    },
+    {
+      "type": "Segment"
+    },
+    {
+      "type": "GroundingChunk",
+      "msgs": [
+        {
+          "type": "Web"
+        },
+        {
+          "type": "RetrievedContext"
+        }
+      ]
+    },
+    {
+      "type": "GroundingSupport"
+    },
+    {
+      "type": "GroundingAttribution",
+      "msgs": [
+        {
+          "type": "Web"
+        },
+        {
+          "type": "RetrievedContext"
+        }
+      ]
+    },
+    {
+      "type": "GroundingMetadata"
+    },
+    {
+      "type": "SearchEntryPoint"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/content.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/tensorboard_data",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "TimeSeriesData"
+    },
+    {
+      "type": "TimeSeriesDataPoint"
+    },
+    {
+      "type": "Scalar"
+    },
+    {
+      "type": "TensorboardTensor"
+    },
+    {
+      "type": "TensorboardBlobSequence"
+    },
+    {
+      "type": "TensorboardBlob"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/tensorboard_data.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/pipeline_state",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/pipeline_state.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/tensorboard_time_series",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "TensorboardTimeSeries",
+      "msgs": [
+        {
+          "type": "Metadata"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/tensorboard_time_series.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/hyperparameter_tuning_job",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "HyperparameterTuningJob"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/hyperparameter_tuning_job.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/llm_utility_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "LlmUtilityService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ComputeTokens",
+          "request": {
+            "type": "ComputeTokensRequest"
+          },
+          "response": {
+            "type": "ComputeTokensResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ComputeTokensRequest"
+    },
+    {
+      "type": "TokensInfo"
+    },
+    {
+      "type": "ComputeTokensResponse"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/llm_utility_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/genai_tuning_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "GenAiTuningService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateTuningJob",
+          "request": {
+            "type": "CreateTuningJobRequest"
+          },
+          "response": {
+            "type": "TuningJob"
+          }
+        },
+        {
+          "method": "GetTuningJob",
+          "request": {
+            "type": "GetTuningJobRequest"
+          },
+          "response": {
+            "type": "TuningJob"
+          }
+        },
+        {
+          "method": "ListTuningJobs",
+          "request": {
+            "type": "ListTuningJobsRequest"
+          },
+          "response": {
+            "type": "ListTuningJobsResponse"
+          }
+        },
+        {
+          "method": "CancelTuningJob",
+          "request": {
+            "type": "CancelTuningJobRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateTuningJobRequest"
+    },
+    {
+      "type": "GetTuningJobRequest"
+    },
+    {
+      "type": "ListTuningJobsRequest"
+    },
+    {
+      "type": "ListTuningJobsResponse"
+    },
+    {
+      "type": "CancelTuningJobRequest"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/genai_tuning_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/feature_monitoring_stats",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "FeatureStatsAnomaly"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/feature_monitoring_stats.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/vertex_rag_data",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "RagEmbeddingModelConfig",
+      "msgs": [
+        {
+          "type": "VertexPredictionEndpoint"
+        }
+      ]
+    },
+    {
+      "type": "RagCorpus"
+    },
+    {
+      "type": "RagFile"
+    },
+    {
+      "type": "RagFileChunkingConfig"
+    },
+    {
+      "type": "UploadRagFileConfig"
+    },
+    {
+      "type": "ImportRagFilesConfig"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/vertex_rag_data.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/env_var",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "EnvVar"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/env_var.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/tensorboard_experiment",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "TensorboardExperiment"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/tensorboard_experiment.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/notebook_euc_config",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "NotebookEucConfig"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/notebook_euc_config.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/endpoint",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "Endpoint"
+    },
+    {
+      "type": "DeployedModel"
+    },
+    {
+      "type": "PrivateEndpoints"
+    },
+    {
+      "type": "PredictRequestResponseLoggingConfig"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/endpoint.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/model",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "Model",
+      "msgs": [
+        {
+          "type": "ExportFormat"
+        },
+        {
+          "type": "OriginalModelInfo"
+        },
+        {
+          "type": "BaseModelSource"
+        }
+      ]
+    },
+    {
+      "type": "LargeModelReference"
+    },
+    {
+      "type": "ModelGardenSource"
+    },
+    {
+      "type": "GenieSource"
+    },
+    {
+      "type": "PredictSchemata"
+    },
+    {
+      "type": "ModelContainerSpec"
+    },
+    {
+      "type": "Port"
+    },
+    {
+      "type": "ModelSourceInfo"
+    },
+    {
+      "type": "Probe",
+      "msgs": [
+        {
+          "type": "ExecAction"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/model.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/job_state",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/job_state.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/model_monitoring_job",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "ModelMonitoringJob"
+    },
+    {
+      "type": "ModelMonitoringJobExecutionDetail",
+      "msgs": [
+        {
+          "type": "ProcessedDataset"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/model_monitoring_job.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/deployed_index_ref",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "DeployedIndexRef"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/deployed_index_ref.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/dataset",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "Dataset"
+    },
+    {
+      "type": "ImportDataConfig"
+    },
+    {
+      "type": "ExportDataConfig"
+    },
+    {
+      "type": "ExportFractionSplit"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/dataset.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/feature_group",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "FeatureGroup",
+      "msgs": [
+        {
+          "type": "BigQuery"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/feature_group.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/metadata_store",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "MetadataStore",
+      "msgs": [
+        {
+          "type": "MetadataStoreState"
+        },
+        {
+          "type": "DataplexConfig"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/metadata_store.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/schedule",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "Schedule",
+      "msgs": [
+        {
+          "type": "RunResponse"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/schedule.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/data_item",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "DataItem"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/data_item.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/model_monitoring_stats",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "ModelMonitoringStats"
+    },
+    {
+      "type": "ModelMonitoringStatsDataPoint",
+      "msgs": [
+        {
+          "type": "TypedValue"
+        },
+        {
+          "type": "DistributionDataValue"
+        }
+      ]
+    },
+    {
+      "type": "ModelMonitoringTabularStats"
+    },
+    {
+      "type": "SearchModelMonitoringStatsFilter",
+      "msgs": [
+        {
+          "type": "TabularStatsFilter"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/model_monitoring_stats.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/dataset_version",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "DatasetVersion"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/dataset_version.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/data_labeling_job",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "DataLabelingJob"
+    },
+    {
+      "type": "ActiveLearningConfig"
+    },
+    {
+      "type": "SampleConfig"
+    },
+    {
+      "type": "TrainingConfig"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/data_labeling_job.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/tensorboard_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "TensorboardService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateTensorboard",
+          "request": {
+            "type": "CreateTensorboardRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetTensorboard",
+          "request": {
+            "type": "GetTensorboardRequest"
+          },
+          "response": {
+            "type": "Tensorboard"
+          }
+        },
+        {
+          "method": "UpdateTensorboard",
+          "request": {
+            "type": "UpdateTensorboardRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListTensorboards",
+          "request": {
+            "type": "ListTensorboardsRequest"
+          },
+          "response": {
+            "type": "ListTensorboardsResponse"
+          }
+        },
+        {
+          "method": "DeleteTensorboard",
+          "request": {
+            "type": "DeleteTensorboardRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ReadTensorboardUsage",
+          "request": {
+            "type": "ReadTensorboardUsageRequest"
+          },
+          "response": {
+            "type": "ReadTensorboardUsageResponse"
+          }
+        },
+        {
+          "method": "ReadTensorboardSize",
+          "request": {
+            "type": "ReadTensorboardSizeRequest"
+          },
+          "response": {
+            "type": "ReadTensorboardSizeResponse"
+          }
+        },
+        {
+          "method": "CreateTensorboardExperiment",
+          "request": {
+            "type": "CreateTensorboardExperimentRequest"
+          },
+          "response": {
+            "type": "TensorboardExperiment"
+          }
+        },
+        {
+          "method": "GetTensorboardExperiment",
+          "request": {
+            "type": "GetTensorboardExperimentRequest"
+          },
+          "response": {
+            "type": "TensorboardExperiment"
+          }
+        },
+        {
+          "method": "UpdateTensorboardExperiment",
+          "request": {
+            "type": "UpdateTensorboardExperimentRequest"
+          },
+          "response": {
+            "type": "TensorboardExperiment"
+          }
+        },
+        {
+          "method": "ListTensorboardExperiments",
+          "request": {
+            "type": "ListTensorboardExperimentsRequest"
+          },
+          "response": {
+            "type": "ListTensorboardExperimentsResponse"
+          }
+        },
+        {
+          "method": "DeleteTensorboardExperiment",
+          "request": {
+            "type": "DeleteTensorboardExperimentRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CreateTensorboardRun",
+          "request": {
+            "type": "CreateTensorboardRunRequest"
+          },
+          "response": {
+            "type": "TensorboardRun"
+          }
+        },
+        {
+          "method": "BatchCreateTensorboardRuns",
+          "request": {
+            "type": "BatchCreateTensorboardRunsRequest"
+          },
+          "response": {
+            "type": "BatchCreateTensorboardRunsResponse"
+          }
+        },
+        {
+          "method": "GetTensorboardRun",
+          "request": {
+            "type": "GetTensorboardRunRequest"
+          },
+          "response": {
+            "type": "TensorboardRun"
+          }
+        },
+        {
+          "method": "UpdateTensorboardRun",
+          "request": {
+            "type": "UpdateTensorboardRunRequest"
+          },
+          "response": {
+            "type": "TensorboardRun"
+          }
+        },
+        {
+          "method": "ListTensorboardRuns",
+          "request": {
+            "type": "ListTensorboardRunsRequest"
+          },
+          "response": {
+            "type": "ListTensorboardRunsResponse"
+          }
+        },
+        {
+          "method": "DeleteTensorboardRun",
+          "request": {
+            "type": "DeleteTensorboardRunRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "BatchCreateTensorboardTimeSeries",
+          "request": {
+            "type": "BatchCreateTensorboardTimeSeriesRequest"
+          },
+          "response": {
+            "type": "BatchCreateTensorboardTimeSeriesResponse"
+          }
+        },
+        {
+          "method": "CreateTensorboardTimeSeries",
+          "request": {
+            "type": "CreateTensorboardTimeSeriesRequest"
+          },
+          "response": {
+            "type": "TensorboardTimeSeries"
+          }
+        },
+        {
+          "method": "GetTensorboardTimeSeries",
+          "request": {
+            "type": "GetTensorboardTimeSeriesRequest"
+          },
+          "response": {
+            "type": "TensorboardTimeSeries"
+          }
+        },
+        {
+          "method": "UpdateTensorboardTimeSeries",
+          "request": {
+            "type": "UpdateTensorboardTimeSeriesRequest"
+          },
+          "response": {
+            "type": "TensorboardTimeSeries"
+          }
+        },
+        {
+          "method": "ListTensorboardTimeSeries",
+          "request": {
+            "type": "ListTensorboardTimeSeriesRequest"
+          },
+          "response": {
+            "type": "ListTensorboardTimeSeriesResponse"
+          }
+        },
+        {
+          "method": "DeleteTensorboardTimeSeries",
+          "request": {
+            "type": "DeleteTensorboardTimeSeriesRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ReadTensorboardTimeSeriesData",
+          "request": {
+            "type": "ReadTensorboardTimeSeriesDataRequest"
+          },
+          "response": {
+            "type": "ReadTensorboardTimeSeriesDataResponse"
+          }
+        },
+        {
+          "method": "ReadTensorboardBlobData",
+          "request": {
+            "type": "ReadTensorboardBlobDataRequest"
+          },
+          "response": {
+            "type": "ReadTensorboardBlobDataResponse",
+            "stream": true
+          }
+        },
+        {
+          "method": "WriteTensorboardExperimentData",
+          "request": {
+            "type": "WriteTensorboardExperimentDataRequest"
+          },
+          "response": {
+            "type": "WriteTensorboardExperimentDataResponse"
+          }
+        },
+        {
+          "method": "WriteTensorboardRunData",
+          "request": {
+            "type": "WriteTensorboardRunDataRequest"
+          },
+          "response": {
+            "type": "WriteTensorboardRunDataResponse"
+          }
+        },
+        {
+          "method": "ExportTensorboardTimeSeriesData",
+          "request": {
+            "type": "ExportTensorboardTimeSeriesDataRequest"
+          },
+          "response": {
+            "type": "ExportTensorboardTimeSeriesDataResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateTensorboardRequest"
+    },
+    {
+      "type": "GetTensorboardRequest"
+    },
+    {
+      "type": "ListTensorboardsRequest"
+    },
+    {
+      "type": "ListTensorboardsResponse"
+    },
+    {
+      "type": "UpdateTensorboardRequest"
+    },
+    {
+      "type": "DeleteTensorboardRequest"
+    },
+    {
+      "type": "ReadTensorboardUsageRequest"
+    },
+    {
+      "type": "ReadTensorboardUsageResponse",
+      "msgs": [
+        {
+          "type": "PerUserUsageData"
+        },
+        {
+          "type": "PerMonthUsageData"
+        }
+      ]
+    },
+    {
+      "type": "ReadTensorboardSizeRequest"
+    },
+    {
+      "type": "ReadTensorboardSizeResponse"
+    },
+    {
+      "type": "CreateTensorboardExperimentRequest"
+    },
+    {
+      "type": "GetTensorboardExperimentRequest"
+    },
+    {
+      "type": "ListTensorboardExperimentsRequest"
+    },
+    {
+      "type": "ListTensorboardExperimentsResponse"
+    },
+    {
+      "type": "UpdateTensorboardExperimentRequest"
+    },
+    {
+      "type": "DeleteTensorboardExperimentRequest"
+    },
+    {
+      "type": "BatchCreateTensorboardRunsRequest"
+    },
+    {
+      "type": "BatchCreateTensorboardRunsResponse"
+    },
+    {
+      "type": "CreateTensorboardRunRequest"
+    },
+    {
+      "type": "GetTensorboardRunRequest"
+    },
+    {
+      "type": "ReadTensorboardBlobDataRequest"
+    },
+    {
+      "type": "ReadTensorboardBlobDataResponse"
+    },
+    {
+      "type": "ListTensorboardRunsRequest"
+    },
+    {
+      "type": "ListTensorboardRunsResponse"
+    },
+    {
+      "type": "UpdateTensorboardRunRequest"
+    },
+    {
+      "type": "DeleteTensorboardRunRequest"
+    },
+    {
+      "type": "BatchCreateTensorboardTimeSeriesRequest"
+    },
+    {
+      "type": "BatchCreateTensorboardTimeSeriesResponse"
+    },
+    {
+      "type": "CreateTensorboardTimeSeriesRequest"
+    },
+    {
+      "type": "GetTensorboardTimeSeriesRequest"
+    },
+    {
+      "type": "ListTensorboardTimeSeriesRequest"
+    },
+    {
+      "type": "ListTensorboardTimeSeriesResponse"
+    },
+    {
+      "type": "UpdateTensorboardTimeSeriesRequest"
+    },
+    {
+      "type": "DeleteTensorboardTimeSeriesRequest"
+    },
+    {
+      "type": "BatchReadTensorboardTimeSeriesDataRequest"
+    },
+    {
+      "type": "BatchReadTensorboardTimeSeriesDataResponse"
+    },
+    {
+      "type": "ReadTensorboardTimeSeriesDataRequest"
+    },
+    {
+      "type": "ReadTensorboardTimeSeriesDataResponse"
+    },
+    {
+      "type": "WriteTensorboardExperimentDataRequest"
+    },
+    {
+      "type": "WriteTensorboardExperimentDataResponse"
+    },
+    {
+      "type": "WriteTensorboardRunDataRequest"
+    },
+    {
+      "type": "WriteTensorboardRunDataResponse"
+    },
+    {
+      "type": "ExportTensorboardTimeSeriesDataRequest"
+    },
+    {
+      "type": "ExportTensorboardTimeSeriesDataResponse"
+    },
+    {
+      "type": "CreateTensorboardOperationMetadata"
+    },
+    {
+      "type": "UpdateTensorboardOperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/tensorboard_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/network_spec",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "NetworkSpec"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/network_spec.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/user_action_reference",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "UserActionReference"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/user_action_reference.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/context",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "Context"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/context.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/featurestore",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "Featurestore",
+      "msgs": [
+        {
+          "type": "OnlineServingConfig"
+        },
+        {
+          "type": "Scaling"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/featurestore.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/specialist_pool",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "SpecialistPool"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/specialist_pool.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/feature_view_sync",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "FeatureViewSync",
+      "msgs": [
+        {
+          "type": "SyncSummary"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/feature_view_sync.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/extension",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "Extension"
+    },
+    {
+      "type": "ExtensionManifest",
+      "msgs": [
+        {
+          "type": "ApiSpec"
+        }
+      ]
+    },
+    {
+      "type": "ExtensionOperation"
+    },
+    {
+      "type": "AuthConfig",
+      "msgs": [
+        {
+          "type": "ApiKeyConfig"
+        },
+        {
+          "type": "HttpBasicAuthConfig"
+        },
+        {
+          "type": "GoogleServiceAccountConfig"
+        },
+        {
+          "type": "OauthConfig"
+        },
+        {
+          "type": "OidcConfig"
+        }
+      ]
+    },
+    {
+      "type": "RuntimeConfig",
+      "msgs": [
+        {
+          "type": "CodeInterpreterRuntimeConfig"
+        },
+        {
+          "type": "VertexAISearchRuntimeConfig"
+        }
+      ]
+    },
+    {
+      "type": "ExtensionPrivateServiceConnectConfig"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/extension.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/featurestore_monitoring",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "FeaturestoreMonitoringConfig",
+      "msgs": [
+        {
+          "type": "SnapshotAnalysis"
+        },
+        {
+          "type": "ImportFeaturesAnalysis"
+        },
+        {
+          "type": "ThresholdConfig"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/featurestore_monitoring.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/accelerator_type",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/accelerator_type.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/notebook_runtime_template_ref",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "NotebookRuntimeTemplateRef"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/notebook_runtime_template_ref.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/vizier_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "VizierService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateStudy",
+          "request": {
+            "type": "CreateStudyRequest"
+          },
+          "response": {
+            "type": "Study"
+          }
+        },
+        {
+          "method": "GetStudy",
+          "request": {
+            "type": "GetStudyRequest"
+          },
+          "response": {
+            "type": "Study"
+          }
+        },
+        {
+          "method": "ListStudies",
+          "request": {
+            "type": "ListStudiesRequest"
+          },
+          "response": {
+            "type": "ListStudiesResponse"
+          }
+        },
+        {
+          "method": "DeleteStudy",
+          "request": {
+            "type": "DeleteStudyRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "LookupStudy",
+          "request": {
+            "type": "LookupStudyRequest"
+          },
+          "response": {
+            "type": "Study"
+          }
+        },
+        {
+          "method": "SuggestTrials",
+          "request": {
+            "type": "SuggestTrialsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CreateTrial",
+          "request": {
+            "type": "CreateTrialRequest"
+          },
+          "response": {
+            "type": "Trial"
+          }
+        },
+        {
+          "method": "GetTrial",
+          "request": {
+            "type": "GetTrialRequest"
+          },
+          "response": {
+            "type": "Trial"
+          }
+        },
+        {
+          "method": "ListTrials",
+          "request": {
+            "type": "ListTrialsRequest"
+          },
+          "response": {
+            "type": "ListTrialsResponse"
+          }
+        },
+        {
+          "method": "AddTrialMeasurement",
+          "request": {
+            "type": "AddTrialMeasurementRequest"
+          },
+          "response": {
+            "type": "Trial"
+          }
+        },
+        {
+          "method": "CompleteTrial",
+          "request": {
+            "type": "CompleteTrialRequest"
+          },
+          "response": {
+            "type": "Trial"
+          }
+        },
+        {
+          "method": "DeleteTrial",
+          "request": {
+            "type": "DeleteTrialRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "CheckTrialEarlyStoppingState",
+          "request": {
+            "type": "CheckTrialEarlyStoppingStateRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "StopTrial",
+          "request": {
+            "type": "StopTrialRequest"
+          },
+          "response": {
+            "type": "Trial"
+          }
+        },
+        {
+          "method": "ListOptimalTrials",
+          "request": {
+            "type": "ListOptimalTrialsRequest"
+          },
+          "response": {
+            "type": "ListOptimalTrialsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GetStudyRequest"
+    },
+    {
+      "type": "CreateStudyRequest"
+    },
+    {
+      "type": "ListStudiesRequest"
+    },
+    {
+      "type": "ListStudiesResponse"
+    },
+    {
+      "type": "DeleteStudyRequest"
+    },
+    {
+      "type": "LookupStudyRequest"
+    },
+    {
+      "type": "SuggestTrialsRequest"
+    },
+    {
+      "type": "SuggestTrialsResponse"
+    },
+    {
+      "type": "SuggestTrialsMetadata"
+    },
+    {
+      "type": "CreateTrialRequest"
+    },
+    {
+      "type": "GetTrialRequest"
+    },
+    {
+      "type": "ListTrialsRequest"
+    },
+    {
+      "type": "ListTrialsResponse"
+    },
+    {
+      "type": "AddTrialMeasurementRequest"
+    },
+    {
+      "type": "CompleteTrialRequest"
+    },
+    {
+      "type": "DeleteTrialRequest"
+    },
+    {
+      "type": "CheckTrialEarlyStoppingStateRequest"
+    },
+    {
+      "type": "CheckTrialEarlyStoppingStateResponse"
+    },
+    {
+      "type": "CheckTrialEarlyStoppingStateMetatdata"
+    },
+    {
+      "type": "StopTrialRequest"
+    },
+    {
+      "type": "ListOptimalTrialsRequest"
+    },
+    {
+      "type": "ListOptimalTrialsResponse"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/vizier_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/deployment_resource_pool",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "DeploymentResourcePool"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/deployment_resource_pool.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/reasoning_engine_execution_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "ReasoningEngineExecutionService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "QueryReasoningEngine",
+          "request": {
+            "type": "QueryReasoningEngineRequest"
+          },
+          "response": {
+            "type": "QueryReasoningEngineResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "QueryReasoningEngineRequest"
+    },
+    {
+      "type": "QueryReasoningEngineResponse"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/reasoning_engine_execution_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/model_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "ModelService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "UploadModel",
+          "request": {
+            "type": "UploadModelRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetModel",
+          "request": {
+            "type": "GetModelRequest"
+          },
+          "response": {
+            "type": "Model"
+          }
+        },
+        {
+          "method": "ListModels",
+          "request": {
+            "type": "ListModelsRequest"
+          },
+          "response": {
+            "type": "ListModelsResponse"
+          }
+        },
+        {
+          "method": "ListModelVersions",
+          "request": {
+            "type": "ListModelVersionsRequest"
+          },
+          "response": {
+            "type": "ListModelVersionsResponse"
+          }
+        },
+        {
+          "method": "UpdateModel",
+          "request": {
+            "type": "UpdateModelRequest"
+          },
+          "response": {
+            "type": "Model"
+          }
+        },
+        {
+          "method": "UpdateExplanationDataset",
+          "request": {
+            "type": "UpdateExplanationDatasetRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteModel",
+          "request": {
+            "type": "DeleteModelRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteModelVersion",
+          "request": {
+            "type": "DeleteModelVersionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "MergeVersionAliases",
+          "request": {
+            "type": "MergeVersionAliasesRequest"
+          },
+          "response": {
+            "type": "Model"
+          }
+        },
+        {
+          "method": "ExportModel",
+          "request": {
+            "type": "ExportModelRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CopyModel",
+          "request": {
+            "type": "CopyModelRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ImportModelEvaluation",
+          "request": {
+            "type": "ImportModelEvaluationRequest"
+          },
+          "response": {
+            "type": "ModelEvaluation"
+          }
+        },
+        {
+          "method": "BatchImportModelEvaluationSlices",
+          "request": {
+            "type": "BatchImportModelEvaluationSlicesRequest"
+          },
+          "response": {
+            "type": "BatchImportModelEvaluationSlicesResponse"
+          }
+        },
+        {
+          "method": "BatchImportEvaluatedAnnotations",
+          "request": {
+            "type": "BatchImportEvaluatedAnnotationsRequest"
+          },
+          "response": {
+            "type": "BatchImportEvaluatedAnnotationsResponse"
+          }
+        },
+        {
+          "method": "GetModelEvaluation",
+          "request": {
+            "type": "GetModelEvaluationRequest"
+          },
+          "response": {
+            "type": "ModelEvaluation"
+          }
+        },
+        {
+          "method": "ListModelEvaluations",
+          "request": {
+            "type": "ListModelEvaluationsRequest"
+          },
+          "response": {
+            "type": "ListModelEvaluationsResponse"
+          }
+        },
+        {
+          "method": "GetModelEvaluationSlice",
+          "request": {
+            "type": "GetModelEvaluationSliceRequest"
+          },
+          "response": {
+            "type": "ModelEvaluationSlice"
+          }
+        },
+        {
+          "method": "ListModelEvaluationSlices",
+          "request": {
+            "type": "ListModelEvaluationSlicesRequest"
+          },
+          "response": {
+            "type": "ListModelEvaluationSlicesResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "UploadModelRequest"
+    },
+    {
+      "type": "UploadModelOperationMetadata"
+    },
+    {
+      "type": "UploadModelResponse"
+    },
+    {
+      "type": "GetModelRequest"
+    },
+    {
+      "type": "ListModelsRequest"
+    },
+    {
+      "type": "ListModelsResponse"
+    },
+    {
+      "type": "ListModelVersionsRequest"
+    },
+    {
+      "type": "ListModelVersionsResponse"
+    },
+    {
+      "type": "UpdateModelRequest"
+    },
+    {
+      "type": "UpdateExplanationDatasetRequest"
+    },
+    {
+      "type": "UpdateExplanationDatasetOperationMetadata"
+    },
+    {
+      "type": "DeleteModelRequest"
+    },
+    {
+      "type": "DeleteModelVersionRequest"
+    },
+    {
+      "type": "MergeVersionAliasesRequest"
+    },
+    {
+      "type": "ExportModelRequest",
+      "msgs": [
+        {
+          "type": "OutputConfig"
+        }
+      ]
+    },
+    {
+      "type": "ExportModelOperationMetadata",
+      "msgs": [
+        {
+          "type": "OutputInfo"
+        }
+      ]
+    },
+    {
+      "type": "UpdateExplanationDatasetResponse"
+    },
+    {
+      "type": "ExportModelResponse"
+    },
+    {
+      "type": "CopyModelRequest"
+    },
+    {
+      "type": "CopyModelOperationMetadata"
+    },
+    {
+      "type": "CopyModelResponse"
+    },
+    {
+      "type": "ImportModelEvaluationRequest"
+    },
+    {
+      "type": "BatchImportModelEvaluationSlicesRequest"
+    },
+    {
+      "type": "BatchImportModelEvaluationSlicesResponse"
+    },
+    {
+      "type": "BatchImportEvaluatedAnnotationsRequest"
+    },
+    {
+      "type": "BatchImportEvaluatedAnnotationsResponse"
+    },
+    {
+      "type": "GetModelEvaluationRequest"
+    },
+    {
+      "type": "ListModelEvaluationsRequest"
+    },
+    {
+      "type": "ListModelEvaluationsResponse"
+    },
+    {
+      "type": "GetModelEvaluationSliceRequest"
+    },
+    {
+      "type": "ListModelEvaluationSlicesRequest"
+    },
+    {
+      "type": "ListModelEvaluationSlicesResponse"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/model_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/nas_job",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "NasJob"
+    },
+    {
+      "type": "NasTrialDetail"
+    },
+    {
+      "type": "NasJobSpec",
+      "msgs": [
+        {
+          "type": "MultiTrialAlgorithmSpec"
+        },
+        {
+          "type": "MetricSpec"
+        },
+        {
+          "type": "SearchTrialSpec"
+        },
+        {
+          "type": "TrainTrialSpec"
+        }
+      ]
+    },
+    {
+      "type": "NasJobOutput",
+      "msgs": [
+        {
+          "type": "MultiTrialJobOutput"
+        }
+      ]
+    },
+    {
+      "type": "NasTrial"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/nas_job.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/notebook_runtime",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "NotebookRuntimeTemplate"
+    },
+    {
+      "type": "NotebookRuntime"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/notebook_runtime.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/feature",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "Feature",
+      "msgs": [
+        {
+          "type": "MonitoringStatsAnomaly"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/feature.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/deployment_resource_pool_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "DeploymentResourcePoolService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateDeploymentResourcePool",
+          "request": {
+            "type": "CreateDeploymentResourcePoolRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetDeploymentResourcePool",
+          "request": {
+            "type": "GetDeploymentResourcePoolRequest"
+          },
+          "response": {
+            "type": "DeploymentResourcePool"
+          }
+        },
+        {
+          "method": "ListDeploymentResourcePools",
+          "request": {
+            "type": "ListDeploymentResourcePoolsRequest"
+          },
+          "response": {
+            "type": "ListDeploymentResourcePoolsResponse"
+          }
+        },
+        {
+          "method": "UpdateDeploymentResourcePool",
+          "request": {
+            "type": "UpdateDeploymentResourcePoolRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteDeploymentResourcePool",
+          "request": {
+            "type": "DeleteDeploymentResourcePoolRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "QueryDeployedModels",
+          "request": {
+            "type": "QueryDeployedModelsRequest"
+          },
+          "response": {
+            "type": "QueryDeployedModelsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateDeploymentResourcePoolRequest"
+    },
+    {
+      "type": "CreateDeploymentResourcePoolOperationMetadata"
+    },
+    {
+      "type": "GetDeploymentResourcePoolRequest"
+    },
+    {
+      "type": "ListDeploymentResourcePoolsRequest"
+    },
+    {
+      "type": "ListDeploymentResourcePoolsResponse"
+    },
+    {
+      "type": "UpdateDeploymentResourcePoolRequest"
+    },
+    {
+      "type": "UpdateDeploymentResourcePoolOperationMetadata"
+    },
+    {
+      "type": "DeleteDeploymentResourcePoolRequest"
+    },
+    {
+      "type": "QueryDeployedModelsRequest"
+    },
+    {
+      "type": "QueryDeployedModelsResponse"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/deployment_resource_pool_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/index_endpoint",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "IndexEndpoint"
+    },
+    {
+      "type": "DeployedIndex"
+    },
+    {
+      "type": "DeployedIndexAuthConfig",
+      "msgs": [
+        {
+          "type": "AuthProvider"
+        }
+      ]
+    },
+    {
+      "type": "IndexPrivateEndpoints"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/index_endpoint.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/vertex_rag_data_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "VertexRagDataService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateRagCorpus",
+          "request": {
+            "type": "CreateRagCorpusRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetRagCorpus",
+          "request": {
+            "type": "GetRagCorpusRequest"
+          },
+          "response": {
+            "type": "RagCorpus"
+          }
+        },
+        {
+          "method": "ListRagCorpora",
+          "request": {
+            "type": "ListRagCorporaRequest"
+          },
+          "response": {
+            "type": "ListRagCorporaResponse"
+          }
+        },
+        {
+          "method": "DeleteRagCorpus",
+          "request": {
+            "type": "DeleteRagCorpusRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UploadRagFile",
+          "request": {
+            "type": "UploadRagFileRequest"
+          },
+          "response": {
+            "type": "UploadRagFileResponse"
+          }
+        },
+        {
+          "method": "ImportRagFiles",
+          "request": {
+            "type": "ImportRagFilesRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetRagFile",
+          "request": {
+            "type": "GetRagFileRequest"
+          },
+          "response": {
+            "type": "RagFile"
+          }
+        },
+        {
+          "method": "ListRagFiles",
+          "request": {
+            "type": "ListRagFilesRequest"
+          },
+          "response": {
+            "type": "ListRagFilesResponse"
+          }
+        },
+        {
+          "method": "DeleteRagFile",
+          "request": {
+            "type": "DeleteRagFileRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateRagCorpusRequest"
+    },
+    {
+      "type": "GetRagCorpusRequest"
+    },
+    {
+      "type": "ListRagCorporaRequest"
+    },
+    {
+      "type": "ListRagCorporaResponse"
+    },
+    {
+      "type": "DeleteRagCorpusRequest"
+    },
+    {
+      "type": "UploadRagFileRequest"
+    },
+    {
+      "type": "UploadRagFileResponse"
+    },
+    {
+      "type": "ImportRagFilesRequest"
+    },
+    {
+      "type": "ImportRagFilesResponse"
+    },
+    {
+      "type": "GetRagFileRequest"
+    },
+    {
+      "type": "ListRagFilesRequest"
+    },
+    {
+      "type": "ListRagFilesResponse"
+    },
+    {
+      "type": "DeleteRagFileRequest"
+    },
+    {
+      "type": "CreateRagCorpusOperationMetadata"
+    },
+    {
+      "type": "ImportRagFilesOperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/vertex_rag_data_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/feature_online_store_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "FeatureOnlineStoreService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "FetchFeatureValues",
+          "request": {
+            "type": "FetchFeatureValuesRequest"
+          },
+          "response": {
+            "type": "FetchFeatureValuesResponse"
+          }
+        },
+        {
+          "method": "StreamingFetchFeatureValues",
+          "request": {
+            "type": "StreamingFetchFeatureValuesRequest",
+            "stream": true
+          },
+          "response": {
+            "type": "StreamingFetchFeatureValuesResponse",
+            "stream": true
+          }
+        },
+        {
+          "method": "SearchNearestEntities",
+          "request": {
+            "type": "SearchNearestEntitiesRequest"
+          },
+          "response": {
+            "type": "SearchNearestEntitiesResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "FeatureViewDataKey",
+      "msgs": [
+        {
+          "type": "CompositeKey"
+        }
+      ]
+    },
+    {
+      "type": "FetchFeatureValuesRequest"
+    },
+    {
+      "type": "FetchFeatureValuesResponse",
+      "msgs": [
+        {
+          "type": "FeatureNameValuePairList"
+        },
+        {
+          "type": "FeatureNameValuePair"
+        }
+      ]
+    },
+    {
+      "type": "StreamingFetchFeatureValuesRequest"
+    },
+    {
+      "type": "StreamingFetchFeatureValuesResponse"
+    },
+    {
+      "type": "NearestNeighborQuery",
+      "msgs": [
+        {
+          "type": "Embedding"
+        },
+        {
+          "type": "StringFilter"
+        },
+        {
+          "type": "Parameters"
+        }
+      ]
+    },
+    {
+      "type": "SearchNearestEntitiesRequest"
+    },
+    {
+      "type": "NearestNeighbors",
+      "msgs": [
+        {
+          "type": "Neighbor"
+        }
+      ]
+    },
+    {
+      "type": "SearchNearestEntitiesResponse"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/feature_online_store_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/notebook_execution_job",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "NotebookExecutionJob",
+      "msgs": [
+        {
+          "type": "DataformRepositorySource"
+        },
+        {
+          "type": "GcsNotebookSource"
+        },
+        {
+          "type": "DirectNotebookSource"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/notebook_execution_job.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/unmanaged_container_model",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "UnmanagedContainerModel"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/unmanaged_container_model.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/machine_resources",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "MachineSpec"
+    },
+    {
+      "type": "DedicatedResources"
+    },
+    {
+      "type": "AutomaticResources"
+    },
+    {
+      "type": "BatchDedicatedResources"
+    },
+    {
+      "type": "ResourcesConsumed"
+    },
+    {
+      "type": "DiskSpec"
+    },
+    {
+      "type": "PersistentDiskSpec"
+    },
+    {
+      "type": "NfsMount"
+    },
+    {
+      "type": "AutoscalingMetricSpec"
+    },
+    {
+      "type": "ShieldedVmConfig"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/machine_resources.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/featurestore_online_service",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "svcs": [
+    {
+      "svc": "FeaturestoreOnlineServingService",
+      "host": "aiplatform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ReadFeatureValues",
+          "request": {
+            "type": "ReadFeatureValuesRequest"
+          },
+          "response": {
+            "type": "ReadFeatureValuesResponse"
+          }
+        },
+        {
+          "method": "StreamingReadFeatureValues",
+          "request": {
+            "type": "StreamingReadFeatureValuesRequest"
+          },
+          "response": {
+            "type": "ReadFeatureValuesResponse",
+            "stream": true
+          }
+        },
+        {
+          "method": "WriteFeatureValues",
+          "request": {
+            "type": "WriteFeatureValuesRequest"
+          },
+          "response": {
+            "type": "WriteFeatureValuesResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "WriteFeatureValuesRequest"
+    },
+    {
+      "type": "WriteFeatureValuesPayload"
+    },
+    {
+      "type": "WriteFeatureValuesResponse"
+    },
+    {
+      "type": "ReadFeatureValuesRequest"
+    },
+    {
+      "type": "ReadFeatureValuesResponse",
+      "msgs": [
+        {
+          "type": "FeatureDescriptor"
+        },
+        {
+          "type": "Header"
+        },
+        {
+          "type": "EntityView"
+        },
+        {
+          "type": "Data"
+        }
+      ]
+    },
+    {
+      "type": "StreamingReadFeatureValuesRequest"
+    },
+    {
+      "type": "FeatureValue",
+      "msgs": [
+        {
+          "type": "Metadata"
+        }
+      ]
+    },
+    {
+      "type": "StructValue"
+    },
+    {
+      "type": "StructFieldValue"
+    },
+    {
+      "type": "FeatureValueList"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/featurestore_online_service.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/model_monitoring_alert",
+  "pkg": "google.cloud.aiplatform.v1beta1",
+  "msgs": [
+    {
+      "type": "ModelMonitoringAlertCondition"
+    },
+    {
+      "type": "ModelMonitoringAnomaly",
+      "msgs": [
+        {
+          "type": "TabularAnomaly"
+        }
+      ]
+    },
+    {
+      "type": "ModelMonitoringAlert"
+    }
+  ],
+  "go": {
+    "src": "aiplatform/apiv1beta1/aiplatformpb/model_monitoring_alert.pb.go",
+    "pkg": "aiplatformpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/aiplatformpb"
+  }
+}

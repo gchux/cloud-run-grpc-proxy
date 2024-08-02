@@ -1,0 +1,552 @@
+{
+  "proto": "google/cloud/apigeeregistry/v1/provisioning_service",
+  "pkg": "google.cloud.apigeeregistry.v1",
+  "svcs": [
+    {
+      "svc": "Provisioning",
+      "host": "apigeeregistry.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateInstance",
+          "request": {
+            "type": "CreateInstanceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteInstance",
+          "request": {
+            "type": "DeleteInstanceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetInstance",
+          "request": {
+            "type": "GetInstanceRequest"
+          },
+          "response": {
+            "type": "Instance"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateInstanceRequest"
+    },
+    {
+      "type": "DeleteInstanceRequest"
+    },
+    {
+      "type": "GetInstanceRequest"
+    },
+    {
+      "type": "OperationMetadata"
+    },
+    {
+      "type": "Instance",
+      "msgs": [
+        {
+          "type": "Config"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "apigeeregistry/apiv1/apigeeregistrypb/provisioning_service.pb.go",
+    "pkg": "apigeeregistrypb",
+    "pkg_full": "cloud.google.com/go/apigeeregistry/apiv1/apigeeregistrypb"
+  }
+}
+{
+  "proto": "google/cloud/apigeeregistry/v1/registry_service",
+  "pkg": "google.cloud.apigeeregistry.v1",
+  "svcs": [
+    {
+      "svc": "Registry",
+      "host": "apigeeregistry.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListApis",
+          "request": {
+            "type": "ListApisRequest"
+          },
+          "response": {
+            "type": "ListApisResponse"
+          }
+        },
+        {
+          "method": "GetApi",
+          "request": {
+            "type": "GetApiRequest"
+          },
+          "response": {
+            "type": "Api"
+          }
+        },
+        {
+          "method": "CreateApi",
+          "request": {
+            "type": "CreateApiRequest"
+          },
+          "response": {
+            "type": "Api"
+          }
+        },
+        {
+          "method": "UpdateApi",
+          "request": {
+            "type": "UpdateApiRequest"
+          },
+          "response": {
+            "type": "Api"
+          }
+        },
+        {
+          "method": "DeleteApi",
+          "request": {
+            "type": "DeleteApiRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListApiVersions",
+          "request": {
+            "type": "ListApiVersionsRequest"
+          },
+          "response": {
+            "type": "ListApiVersionsResponse"
+          }
+        },
+        {
+          "method": "GetApiVersion",
+          "request": {
+            "type": "GetApiVersionRequest"
+          },
+          "response": {
+            "type": "ApiVersion"
+          }
+        },
+        {
+          "method": "CreateApiVersion",
+          "request": {
+            "type": "CreateApiVersionRequest"
+          },
+          "response": {
+            "type": "ApiVersion"
+          }
+        },
+        {
+          "method": "UpdateApiVersion",
+          "request": {
+            "type": "UpdateApiVersionRequest"
+          },
+          "response": {
+            "type": "ApiVersion"
+          }
+        },
+        {
+          "method": "DeleteApiVersion",
+          "request": {
+            "type": "DeleteApiVersionRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListApiSpecs",
+          "request": {
+            "type": "ListApiSpecsRequest"
+          },
+          "response": {
+            "type": "ListApiSpecsResponse"
+          }
+        },
+        {
+          "method": "GetApiSpec",
+          "request": {
+            "type": "GetApiSpecRequest"
+          },
+          "response": {
+            "type": "ApiSpec"
+          }
+        },
+        {
+          "method": "GetApiSpecContents",
+          "request": {
+            "type": "GetApiSpecContentsRequest"
+          },
+          "response": {
+            "type": "google.api.HttpBody"
+          }
+        },
+        {
+          "method": "CreateApiSpec",
+          "request": {
+            "type": "CreateApiSpecRequest"
+          },
+          "response": {
+            "type": "ApiSpec"
+          }
+        },
+        {
+          "method": "UpdateApiSpec",
+          "request": {
+            "type": "UpdateApiSpecRequest"
+          },
+          "response": {
+            "type": "ApiSpec"
+          }
+        },
+        {
+          "method": "DeleteApiSpec",
+          "request": {
+            "type": "DeleteApiSpecRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "TagApiSpecRevision",
+          "request": {
+            "type": "TagApiSpecRevisionRequest"
+          },
+          "response": {
+            "type": "ApiSpec"
+          }
+        },
+        {
+          "method": "ListApiSpecRevisions",
+          "request": {
+            "type": "ListApiSpecRevisionsRequest"
+          },
+          "response": {
+            "type": "ListApiSpecRevisionsResponse"
+          }
+        },
+        {
+          "method": "RollbackApiSpec",
+          "request": {
+            "type": "RollbackApiSpecRequest"
+          },
+          "response": {
+            "type": "ApiSpec"
+          }
+        },
+        {
+          "method": "DeleteApiSpecRevision",
+          "request": {
+            "type": "DeleteApiSpecRevisionRequest"
+          },
+          "response": {
+            "type": "ApiSpec"
+          }
+        },
+        {
+          "method": "ListApiDeployments",
+          "request": {
+            "type": "ListApiDeploymentsRequest"
+          },
+          "response": {
+            "type": "ListApiDeploymentsResponse"
+          }
+        },
+        {
+          "method": "GetApiDeployment",
+          "request": {
+            "type": "GetApiDeploymentRequest"
+          },
+          "response": {
+            "type": "ApiDeployment"
+          }
+        },
+        {
+          "method": "CreateApiDeployment",
+          "request": {
+            "type": "CreateApiDeploymentRequest"
+          },
+          "response": {
+            "type": "ApiDeployment"
+          }
+        },
+        {
+          "method": "UpdateApiDeployment",
+          "request": {
+            "type": "UpdateApiDeploymentRequest"
+          },
+          "response": {
+            "type": "ApiDeployment"
+          }
+        },
+        {
+          "method": "DeleteApiDeployment",
+          "request": {
+            "type": "DeleteApiDeploymentRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "TagApiDeploymentRevision",
+          "request": {
+            "type": "TagApiDeploymentRevisionRequest"
+          },
+          "response": {
+            "type": "ApiDeployment"
+          }
+        },
+        {
+          "method": "ListApiDeploymentRevisions",
+          "request": {
+            "type": "ListApiDeploymentRevisionsRequest"
+          },
+          "response": {
+            "type": "ListApiDeploymentRevisionsResponse"
+          }
+        },
+        {
+          "method": "RollbackApiDeployment",
+          "request": {
+            "type": "RollbackApiDeploymentRequest"
+          },
+          "response": {
+            "type": "ApiDeployment"
+          }
+        },
+        {
+          "method": "DeleteApiDeploymentRevision",
+          "request": {
+            "type": "DeleteApiDeploymentRevisionRequest"
+          },
+          "response": {
+            "type": "ApiDeployment"
+          }
+        },
+        {
+          "method": "ListArtifacts",
+          "request": {
+            "type": "ListArtifactsRequest"
+          },
+          "response": {
+            "type": "ListArtifactsResponse"
+          }
+        },
+        {
+          "method": "GetArtifact",
+          "request": {
+            "type": "GetArtifactRequest"
+          },
+          "response": {
+            "type": "Artifact"
+          }
+        },
+        {
+          "method": "GetArtifactContents",
+          "request": {
+            "type": "GetArtifactContentsRequest"
+          },
+          "response": {
+            "type": "google.api.HttpBody"
+          }
+        },
+        {
+          "method": "CreateArtifact",
+          "request": {
+            "type": "CreateArtifactRequest"
+          },
+          "response": {
+            "type": "Artifact"
+          }
+        },
+        {
+          "method": "ReplaceArtifact",
+          "request": {
+            "type": "ReplaceArtifactRequest"
+          },
+          "response": {
+            "type": "Artifact"
+          }
+        },
+        {
+          "method": "DeleteArtifact",
+          "request": {
+            "type": "DeleteArtifactRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ListApisRequest"
+    },
+    {
+      "type": "ListApisResponse"
+    },
+    {
+      "type": "GetApiRequest"
+    },
+    {
+      "type": "CreateApiRequest"
+    },
+    {
+      "type": "UpdateApiRequest"
+    },
+    {
+      "type": "DeleteApiRequest"
+    },
+    {
+      "type": "ListApiVersionsRequest"
+    },
+    {
+      "type": "ListApiVersionsResponse"
+    },
+    {
+      "type": "GetApiVersionRequest"
+    },
+    {
+      "type": "CreateApiVersionRequest"
+    },
+    {
+      "type": "UpdateApiVersionRequest"
+    },
+    {
+      "type": "DeleteApiVersionRequest"
+    },
+    {
+      "type": "ListApiSpecsRequest"
+    },
+    {
+      "type": "ListApiSpecsResponse"
+    },
+    {
+      "type": "GetApiSpecRequest"
+    },
+    {
+      "type": "GetApiSpecContentsRequest"
+    },
+    {
+      "type": "CreateApiSpecRequest"
+    },
+    {
+      "type": "UpdateApiSpecRequest"
+    },
+    {
+      "type": "DeleteApiSpecRequest"
+    },
+    {
+      "type": "TagApiSpecRevisionRequest"
+    },
+    {
+      "type": "ListApiSpecRevisionsRequest"
+    },
+    {
+      "type": "ListApiSpecRevisionsResponse"
+    },
+    {
+      "type": "RollbackApiSpecRequest"
+    },
+    {
+      "type": "DeleteApiSpecRevisionRequest"
+    },
+    {
+      "type": "ListApiDeploymentsRequest"
+    },
+    {
+      "type": "ListApiDeploymentsResponse"
+    },
+    {
+      "type": "GetApiDeploymentRequest"
+    },
+    {
+      "type": "CreateApiDeploymentRequest"
+    },
+    {
+      "type": "UpdateApiDeploymentRequest"
+    },
+    {
+      "type": "DeleteApiDeploymentRequest"
+    },
+    {
+      "type": "TagApiDeploymentRevisionRequest"
+    },
+    {
+      "type": "ListApiDeploymentRevisionsRequest"
+    },
+    {
+      "type": "ListApiDeploymentRevisionsResponse"
+    },
+    {
+      "type": "RollbackApiDeploymentRequest"
+    },
+    {
+      "type": "DeleteApiDeploymentRevisionRequest"
+    },
+    {
+      "type": "ListArtifactsRequest"
+    },
+    {
+      "type": "ListArtifactsResponse"
+    },
+    {
+      "type": "GetArtifactRequest"
+    },
+    {
+      "type": "GetArtifactContentsRequest"
+    },
+    {
+      "type": "CreateArtifactRequest"
+    },
+    {
+      "type": "ReplaceArtifactRequest"
+    },
+    {
+      "type": "DeleteArtifactRequest"
+    }
+  ],
+  "go": {
+    "src": "apigeeregistry/apiv1/apigeeregistrypb/registry_service.pb.go",
+    "pkg": "apigeeregistrypb",
+    "pkg_full": "cloud.google.com/go/apigeeregistry/apiv1/apigeeregistrypb"
+  }
+}
+{
+  "proto": "google/cloud/apigeeregistry/v1/registry_models",
+  "pkg": "google.cloud.apigeeregistry.v1",
+  "msgs": [
+    {
+      "type": "Api"
+    },
+    {
+      "type": "ApiVersion"
+    },
+    {
+      "type": "ApiSpec"
+    },
+    {
+      "type": "ApiDeployment"
+    },
+    {
+      "type": "Artifact"
+    }
+  ],
+  "go": {
+    "src": "apigeeregistry/apiv1/apigeeregistrypb/registry_models.pb.go",
+    "pkg": "apigeeregistrypb",
+    "pkg_full": "cloud.google.com/go/apigeeregistry/apiv1/apigeeregistrypb"
+  }
+}

@@ -1,0 +1,963 @@
+{
+  "proto": "google/devtools/resultstore/v2/resultstore_upload",
+  "pkg": "google.devtools.resultstore.v2",
+  "svcs": [
+    {
+      "svc": "ResultStoreUpload",
+      "host": "resultstore.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateInvocation",
+          "request": {
+            "type": "CreateInvocationRequest"
+          },
+          "response": {
+            "type": "Invocation"
+          }
+        },
+        {
+          "method": "UpdateInvocation",
+          "request": {
+            "type": "UpdateInvocationRequest"
+          },
+          "response": {
+            "type": "Invocation"
+          }
+        },
+        {
+          "method": "MergeInvocation",
+          "request": {
+            "type": "MergeInvocationRequest"
+          },
+          "response": {
+            "type": "Invocation"
+          }
+        },
+        {
+          "method": "TouchInvocation",
+          "request": {
+            "type": "TouchInvocationRequest"
+          },
+          "response": {
+            "type": "TouchInvocationResponse"
+          }
+        },
+        {
+          "method": "FinalizeInvocation",
+          "request": {
+            "type": "FinalizeInvocationRequest"
+          },
+          "response": {
+            "type": "FinalizeInvocationResponse"
+          }
+        },
+        {
+          "method": "DeleteInvocation",
+          "request": {
+            "type": "DeleteInvocationRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "CreateTarget",
+          "request": {
+            "type": "CreateTargetRequest"
+          },
+          "response": {
+            "type": "Target"
+          }
+        },
+        {
+          "method": "UpdateTarget",
+          "request": {
+            "type": "UpdateTargetRequest"
+          },
+          "response": {
+            "type": "Target"
+          }
+        },
+        {
+          "method": "MergeTarget",
+          "request": {
+            "type": "MergeTargetRequest"
+          },
+          "response": {
+            "type": "Target"
+          }
+        },
+        {
+          "method": "FinalizeTarget",
+          "request": {
+            "type": "FinalizeTargetRequest"
+          },
+          "response": {
+            "type": "FinalizeTargetResponse"
+          }
+        },
+        {
+          "method": "CreateConfiguredTarget",
+          "request": {
+            "type": "CreateConfiguredTargetRequest"
+          },
+          "response": {
+            "type": "ConfiguredTarget"
+          }
+        },
+        {
+          "method": "UpdateConfiguredTarget",
+          "request": {
+            "type": "UpdateConfiguredTargetRequest"
+          },
+          "response": {
+            "type": "ConfiguredTarget"
+          }
+        },
+        {
+          "method": "MergeConfiguredTarget",
+          "request": {
+            "type": "MergeConfiguredTargetRequest"
+          },
+          "response": {
+            "type": "ConfiguredTarget"
+          }
+        },
+        {
+          "method": "FinalizeConfiguredTarget",
+          "request": {
+            "type": "FinalizeConfiguredTargetRequest"
+          },
+          "response": {
+            "type": "FinalizeConfiguredTargetResponse"
+          }
+        },
+        {
+          "method": "CreateAction",
+          "request": {
+            "type": "CreateActionRequest"
+          },
+          "response": {
+            "type": "Action"
+          }
+        },
+        {
+          "method": "UpdateAction",
+          "request": {
+            "type": "UpdateActionRequest"
+          },
+          "response": {
+            "type": "Action"
+          }
+        },
+        {
+          "method": "MergeAction",
+          "request": {
+            "type": "MergeActionRequest"
+          },
+          "response": {
+            "type": "Action"
+          }
+        },
+        {
+          "method": "CreateConfiguration",
+          "request": {
+            "type": "CreateConfigurationRequest"
+          },
+          "response": {
+            "type": "Configuration"
+          }
+        },
+        {
+          "method": "UpdateConfiguration",
+          "request": {
+            "type": "UpdateConfigurationRequest"
+          },
+          "response": {
+            "type": "Configuration"
+          }
+        },
+        {
+          "method": "CreateFileSet",
+          "request": {
+            "type": "CreateFileSetRequest"
+          },
+          "response": {
+            "type": "FileSet"
+          }
+        },
+        {
+          "method": "UpdateFileSet",
+          "request": {
+            "type": "UpdateFileSetRequest"
+          },
+          "response": {
+            "type": "FileSet"
+          }
+        },
+        {
+          "method": "MergeFileSet",
+          "request": {
+            "type": "MergeFileSetRequest"
+          },
+          "response": {
+            "type": "FileSet"
+          }
+        },
+        {
+          "method": "UploadBatch",
+          "request": {
+            "type": "UploadBatchRequest"
+          },
+          "response": {
+            "type": "UploadBatchResponse"
+          }
+        },
+        {
+          "method": "GetInvocationUploadMetadata",
+          "request": {
+            "type": "GetInvocationUploadMetadataRequest"
+          },
+          "response": {
+            "type": "UploadMetadata"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateInvocationRequest"
+    },
+    {
+      "type": "UpdateInvocationRequest"
+    },
+    {
+      "type": "MergeInvocationRequest"
+    },
+    {
+      "type": "TouchInvocationRequest"
+    },
+    {
+      "type": "TouchInvocationResponse"
+    },
+    {
+      "type": "DeleteInvocationRequest"
+    },
+    {
+      "type": "FinalizeInvocationRequest"
+    },
+    {
+      "type": "FinalizeInvocationResponse"
+    },
+    {
+      "type": "CreateTargetRequest"
+    },
+    {
+      "type": "UpdateTargetRequest"
+    },
+    {
+      "type": "MergeTargetRequest"
+    },
+    {
+      "type": "FinalizeTargetRequest"
+    },
+    {
+      "type": "FinalizeTargetResponse"
+    },
+    {
+      "type": "CreateConfiguredTargetRequest"
+    },
+    {
+      "type": "UpdateConfiguredTargetRequest"
+    },
+    {
+      "type": "MergeConfiguredTargetRequest"
+    },
+    {
+      "type": "FinalizeConfiguredTargetRequest"
+    },
+    {
+      "type": "FinalizeConfiguredTargetResponse"
+    },
+    {
+      "type": "CreateActionRequest"
+    },
+    {
+      "type": "UpdateActionRequest"
+    },
+    {
+      "type": "MergeActionRequest"
+    },
+    {
+      "type": "CreateConfigurationRequest"
+    },
+    {
+      "type": "UpdateConfigurationRequest"
+    },
+    {
+      "type": "CreateFileSetRequest"
+    },
+    {
+      "type": "UpdateFileSetRequest"
+    },
+    {
+      "type": "MergeFileSetRequest"
+    },
+    {
+      "type": "UploadBatchRequest"
+    },
+    {
+      "type": "UploadBatchResponse"
+    },
+    {
+      "type": "UploadRequest",
+      "msgs": [
+        {
+          "type": "Id"
+        }
+      ]
+    },
+    {
+      "type": "GetInvocationUploadMetadataRequest"
+    }
+  ],
+  "go": {
+    "src": "googleapis/devtools/resultstore/v2/resultstore_upload.pb.go",
+    "pkg": "resultstore",
+    "pkg_full": "google.golang.org/genproto/googleapis/devtools/resultstore/v2"
+  }
+}
+{
+  "proto": "google/devtools/resultstore/v2/file_set",
+  "pkg": "google.devtools.resultstore.v2",
+  "msgs": [
+    {
+      "type": "FileSet",
+      "msgs": [
+        {
+          "type": "Id"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/devtools/resultstore/v2/file_set.pb.go",
+    "pkg": "resultstore",
+    "pkg_full": "google.golang.org/genproto/googleapis/devtools/resultstore/v2"
+  }
+}
+{
+  "proto": "google/devtools/resultstore/v2/coverage_summary",
+  "pkg": "google.devtools.resultstore.v2",
+  "msgs": [
+    {
+      "type": "LineCoverageSummary"
+    },
+    {
+      "type": "BranchCoverageSummary"
+    },
+    {
+      "type": "LanguageCoverageSummary"
+    }
+  ],
+  "go": {
+    "src": "googleapis/devtools/resultstore/v2/coverage_summary.pb.go",
+    "pkg": "resultstore",
+    "pkg_full": "google.golang.org/genproto/googleapis/devtools/resultstore/v2"
+  }
+}
+{
+  "proto": "google/devtools/resultstore/v2/upload_metadata",
+  "pkg": "google.devtools.resultstore.v2",
+  "msgs": [
+    {
+      "type": "UploadMetadata"
+    }
+  ],
+  "go": {
+    "src": "googleapis/devtools/resultstore/v2/upload_metadata.pb.go",
+    "pkg": "resultstore",
+    "pkg_full": "google.golang.org/genproto/googleapis/devtools/resultstore/v2"
+  }
+}
+{
+  "proto": "google/devtools/resultstore/v2/test_suite",
+  "pkg": "google.devtools.resultstore.v2",
+  "msgs": [
+    {
+      "type": "TestSuite"
+    },
+    {
+      "type": "Test"
+    },
+    {
+      "type": "TestCase"
+    },
+    {
+      "type": "TestFailure"
+    },
+    {
+      "type": "TestError"
+    }
+  ],
+  "go": {
+    "src": "googleapis/devtools/resultstore/v2/test_suite.pb.go",
+    "pkg": "resultstore",
+    "pkg_full": "google.golang.org/genproto/googleapis/devtools/resultstore/v2"
+  }
+}
+{
+  "proto": "google/devtools/resultstore/v2/invocation",
+  "pkg": "google.devtools.resultstore.v2",
+  "msgs": [
+    {
+      "type": "Invocation",
+      "msgs": [
+        {
+          "type": "Id"
+        }
+      ]
+    },
+    {
+      "type": "WorkspaceContext"
+    },
+    {
+      "type": "WorkspaceInfo"
+    },
+    {
+      "type": "CommandLine"
+    },
+    {
+      "type": "InvocationAttributes"
+    },
+    {
+      "type": "InvocationContext"
+    }
+  ],
+  "go": {
+    "src": "googleapis/devtools/resultstore/v2/invocation.pb.go",
+    "pkg": "resultstore",
+    "pkg_full": "google.golang.org/genproto/googleapis/devtools/resultstore/v2"
+  }
+}
+{
+  "proto": "google/devtools/resultstore/v2/common",
+  "pkg": "google.devtools.resultstore.v2",
+  "msgs": [
+    {
+      "type": "StatusAttributes"
+    },
+    {
+      "type": "Property"
+    },
+    {
+      "type": "Timing"
+    },
+    {
+      "type": "Dependency",
+      "msgs": [
+        {
+          "type": "Id"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/devtools/resultstore/v2/common.pb.go",
+    "pkg": "resultstore",
+    "pkg_full": "google.golang.org/genproto/googleapis/devtools/resultstore/v2"
+  }
+}
+{
+  "proto": "google/devtools/resultstore/v2/file",
+  "pkg": "google.devtools.resultstore.v2",
+  "msgs": [
+    {
+      "type": "File"
+    },
+    {
+      "type": "ArchiveEntry"
+    }
+  ],
+  "go": {
+    "src": "googleapis/devtools/resultstore/v2/file.pb.go",
+    "pkg": "resultstore",
+    "pkg_full": "google.golang.org/genproto/googleapis/devtools/resultstore/v2"
+  }
+}
+{
+  "proto": "google/devtools/resultstore/v2/download_metadata",
+  "pkg": "google.devtools.resultstore.v2",
+  "msgs": [
+    {
+      "type": "DownloadMetadata"
+    }
+  ],
+  "go": {
+    "src": "googleapis/devtools/resultstore/v2/download_metadata.pb.go",
+    "pkg": "resultstore",
+    "pkg_full": "google.golang.org/genproto/googleapis/devtools/resultstore/v2"
+  }
+}
+{
+  "proto": "google/devtools/resultstore/v2/configured_target",
+  "pkg": "google.devtools.resultstore.v2",
+  "msgs": [
+    {
+      "type": "ConfiguredTarget",
+      "msgs": [
+        {
+          "type": "Id"
+        }
+      ]
+    },
+    {
+      "type": "ConfiguredTestAttributes"
+    }
+  ],
+  "go": {
+    "src": "googleapis/devtools/resultstore/v2/configured_target.pb.go",
+    "pkg": "resultstore",
+    "pkg_full": "google.golang.org/genproto/googleapis/devtools/resultstore/v2"
+  }
+}
+{
+  "proto": "google/devtools/resultstore/v2/file_processing_error",
+  "pkg": "google.devtools.resultstore.v2",
+  "msgs": [
+    {
+      "type": "FileProcessingErrors"
+    },
+    {
+      "type": "FileProcessingError"
+    }
+  ],
+  "go": {
+    "src": "googleapis/devtools/resultstore/v2/file_processing_error.pb.go",
+    "pkg": "resultstore",
+    "pkg_full": "google.golang.org/genproto/googleapis/devtools/resultstore/v2"
+  }
+}
+{
+  "proto": "google/devtools/resultstore/v2/resultstore_file_download",
+  "pkg": "google.devtools.resultstore.v2",
+  "svcs": [
+    {
+      "svc": "ResultStoreFileDownload",
+      "host": "resultstore.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetFile",
+          "request": {
+            "type": "GetFileRequest"
+          },
+          "response": {
+            "type": "GetFileResponse",
+            "stream": true
+          }
+        },
+        {
+          "method": "GetFileTail",
+          "request": {
+            "type": "GetFileTailRequest"
+          },
+          "response": {
+            "type": "GetFileTailResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GetFileRequest"
+    },
+    {
+      "type": "GetFileResponse"
+    },
+    {
+      "type": "GetFileTailRequest"
+    },
+    {
+      "type": "GetFileTailResponse"
+    }
+  ],
+  "go": {
+    "src": "googleapis/devtools/resultstore/v2/resultstore_file_download.pb.go",
+    "pkg": "resultstore",
+    "pkg_full": "google.golang.org/genproto/googleapis/devtools/resultstore/v2"
+  }
+}
+{
+  "proto": "google/devtools/resultstore/v2/configuration",
+  "pkg": "google.devtools.resultstore.v2",
+  "msgs": [
+    {
+      "type": "Configuration",
+      "msgs": [
+        {
+          "type": "Id"
+        }
+      ]
+    },
+    {
+      "type": "ConfigurationAttributes"
+    }
+  ],
+  "go": {
+    "src": "googleapis/devtools/resultstore/v2/configuration.pb.go",
+    "pkg": "resultstore",
+    "pkg_full": "google.golang.org/genproto/googleapis/devtools/resultstore/v2"
+  }
+}
+{
+  "proto": "google/devtools/resultstore/v2/resultstore_download",
+  "pkg": "google.devtools.resultstore.v2",
+  "svcs": [
+    {
+      "svc": "ResultStoreDownload",
+      "host": "resultstore.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ExportInvocation",
+          "request": {
+            "type": "ExportInvocationRequest"
+          },
+          "response": {
+            "type": "ExportInvocationResponse"
+          }
+        },
+        {
+          "method": "GetInvocation",
+          "request": {
+            "type": "GetInvocationRequest"
+          },
+          "response": {
+            "type": "Invocation"
+          }
+        },
+        {
+          "method": "SearchInvocations",
+          "request": {
+            "type": "SearchInvocationsRequest"
+          },
+          "response": {
+            "type": "SearchInvocationsResponse"
+          }
+        },
+        {
+          "method": "GetInvocationDownloadMetadata",
+          "request": {
+            "type": "GetInvocationDownloadMetadataRequest"
+          },
+          "response": {
+            "type": "DownloadMetadata"
+          }
+        },
+        {
+          "method": "GetConfiguration",
+          "request": {
+            "type": "GetConfigurationRequest"
+          },
+          "response": {
+            "type": "Configuration"
+          }
+        },
+        {
+          "method": "ListConfigurations",
+          "request": {
+            "type": "ListConfigurationsRequest"
+          },
+          "response": {
+            "type": "ListConfigurationsResponse"
+          }
+        },
+        {
+          "method": "GetTarget",
+          "request": {
+            "type": "GetTargetRequest"
+          },
+          "response": {
+            "type": "Target"
+          }
+        },
+        {
+          "method": "ListTargets",
+          "request": {
+            "type": "ListTargetsRequest"
+          },
+          "response": {
+            "type": "ListTargetsResponse"
+          }
+        },
+        {
+          "method": "GetConfiguredTarget",
+          "request": {
+            "type": "GetConfiguredTargetRequest"
+          },
+          "response": {
+            "type": "ConfiguredTarget"
+          }
+        },
+        {
+          "method": "ListConfiguredTargets",
+          "request": {
+            "type": "ListConfiguredTargetsRequest"
+          },
+          "response": {
+            "type": "ListConfiguredTargetsResponse"
+          }
+        },
+        {
+          "method": "SearchConfiguredTargets",
+          "request": {
+            "type": "SearchConfiguredTargetsRequest"
+          },
+          "response": {
+            "type": "SearchConfiguredTargetsResponse"
+          }
+        },
+        {
+          "method": "GetAction",
+          "request": {
+            "type": "GetActionRequest"
+          },
+          "response": {
+            "type": "Action"
+          }
+        },
+        {
+          "method": "ListActions",
+          "request": {
+            "type": "ListActionsRequest"
+          },
+          "response": {
+            "type": "ListActionsResponse"
+          }
+        },
+        {
+          "method": "BatchListActions",
+          "request": {
+            "type": "BatchListActionsRequest"
+          },
+          "response": {
+            "type": "BatchListActionsResponse"
+          }
+        },
+        {
+          "method": "GetFileSet",
+          "request": {
+            "type": "GetFileSetRequest"
+          },
+          "response": {
+            "type": "FileSet"
+          }
+        },
+        {
+          "method": "ListFileSets",
+          "request": {
+            "type": "ListFileSetsRequest"
+          },
+          "response": {
+            "type": "ListFileSetsResponse"
+          }
+        },
+        {
+          "method": "TraverseFileSets",
+          "request": {
+            "type": "TraverseFileSetsRequest"
+          },
+          "response": {
+            "type": "TraverseFileSetsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GetInvocationRequest"
+    },
+    {
+      "type": "SearchInvocationsRequest"
+    },
+    {
+      "type": "SearchInvocationsResponse"
+    },
+    {
+      "type": "ExportInvocationRequest"
+    },
+    {
+      "type": "ExportInvocationResponse"
+    },
+    {
+      "type": "GetInvocationDownloadMetadataRequest"
+    },
+    {
+      "type": "GetConfigurationRequest"
+    },
+    {
+      "type": "ListConfigurationsRequest"
+    },
+    {
+      "type": "ListConfigurationsResponse"
+    },
+    {
+      "type": "GetTargetRequest"
+    },
+    {
+      "type": "ListTargetsRequest"
+    },
+    {
+      "type": "ListTargetsResponse"
+    },
+    {
+      "type": "GetConfiguredTargetRequest"
+    },
+    {
+      "type": "ListConfiguredTargetsRequest"
+    },
+    {
+      "type": "ListConfiguredTargetsResponse"
+    },
+    {
+      "type": "SearchConfiguredTargetsRequest"
+    },
+    {
+      "type": "SearchConfiguredTargetsResponse"
+    },
+    {
+      "type": "GetActionRequest"
+    },
+    {
+      "type": "ListActionsRequest"
+    },
+    {
+      "type": "ListActionsResponse"
+    },
+    {
+      "type": "BatchListActionsRequest"
+    },
+    {
+      "type": "BatchListActionsResponse"
+    },
+    {
+      "type": "GetFileSetRequest"
+    },
+    {
+      "type": "ListFileSetsRequest"
+    },
+    {
+      "type": "ListFileSetsResponse"
+    },
+    {
+      "type": "TraverseFileSetsRequest"
+    },
+    {
+      "type": "TraverseFileSetsResponse"
+    }
+  ],
+  "go": {
+    "src": "googleapis/devtools/resultstore/v2/resultstore_download.pb.go",
+    "pkg": "resultstore",
+    "pkg_full": "google.golang.org/genproto/googleapis/devtools/resultstore/v2"
+  }
+}
+{
+  "proto": "google/devtools/resultstore/v2/action",
+  "pkg": "google.devtools.resultstore.v2",
+  "msgs": [
+    {
+      "type": "Action",
+      "msgs": [
+        {
+          "type": "Id"
+        }
+      ]
+    },
+    {
+      "type": "BuildAction"
+    },
+    {
+      "type": "TestAction"
+    },
+    {
+      "type": "ActionAttributes"
+    },
+    {
+      "type": "InputFileInfo"
+    },
+    {
+      "type": "LocalTestTiming"
+    },
+    {
+      "type": "RemoteTestAttemptTiming"
+    },
+    {
+      "type": "RemoteTestTiming"
+    },
+    {
+      "type": "TestTiming"
+    },
+    {
+      "type": "TestWarning"
+    }
+  ],
+  "go": {
+    "src": "googleapis/devtools/resultstore/v2/action.pb.go",
+    "pkg": "resultstore",
+    "pkg_full": "google.golang.org/genproto/googleapis/devtools/resultstore/v2"
+  }
+}
+{
+  "proto": "google/devtools/resultstore/v2/target",
+  "pkg": "google.devtools.resultstore.v2",
+  "msgs": [
+    {
+      "type": "Target",
+      "msgs": [
+        {
+          "type": "Id"
+        }
+      ]
+    },
+    {
+      "type": "TargetAttributes"
+    },
+    {
+      "type": "TestAttributes"
+    }
+  ],
+  "go": {
+    "src": "googleapis/devtools/resultstore/v2/target.pb.go",
+    "pkg": "resultstore",
+    "pkg_full": "google.golang.org/genproto/googleapis/devtools/resultstore/v2"
+  }
+}
+{
+  "proto": "google/devtools/resultstore/v2/coverage",
+  "pkg": "google.devtools.resultstore.v2",
+  "msgs": [
+    {
+      "type": "LineCoverage"
+    },
+    {
+      "type": "BranchCoverage"
+    },
+    {
+      "type": "FileCoverage"
+    },
+    {
+      "type": "ActionCoverage"
+    },
+    {
+      "type": "AggregateCoverage"
+    }
+  ],
+  "go": {
+    "src": "googleapis/devtools/resultstore/v2/coverage.pb.go",
+    "pkg": "resultstore",
+    "pkg_full": "google.golang.org/genproto/googleapis/devtools/resultstore/v2"
+  }
+}

@@ -1,0 +1,536 @@
+{
+  "proto": "google/cloud/vision/v1p3beta1/text_annotation",
+  "pkg": "google.cloud.vision.v1p3beta1",
+  "msgs": [
+    {
+      "type": "TextAnnotation",
+      "msgs": [
+        {
+          "type": "DetectedLanguage"
+        },
+        {
+          "type": "DetectedBreak"
+        },
+        {
+          "type": "TextProperty"
+        }
+      ]
+    },
+    {
+      "type": "Page"
+    },
+    {
+      "type": "Block"
+    },
+    {
+      "type": "Paragraph"
+    },
+    {
+      "type": "Word"
+    },
+    {
+      "type": "Symbol"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/vision/v1p3beta1/text_annotation.pb.go",
+    "pkg": "visionpb",
+    "pkg_full": "cloud.google.com/go/vision/apiv1p3beta1/visionpb"
+  }
+}
+{
+  "proto": "google/cloud/vision/v1p3beta1/product_search",
+  "pkg": "google.cloud.vision.v1p3beta1",
+  "msgs": [
+    {
+      "type": "ProductSearchParams"
+    },
+    {
+      "type": "ProductSearchResults",
+      "msgs": [
+        {
+          "type": "Result"
+        },
+        {
+          "type": "ObjectAnnotation"
+        },
+        {
+          "type": "GroupedResult"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/vision/v1p3beta1/product_search.pb.go",
+    "pkg": "visionpb",
+    "pkg_full": "cloud.google.com/go/vision/apiv1p3beta1/visionpb"
+  }
+}
+{
+  "proto": "google/cloud/vision/v1p3beta1/product_search_service",
+  "pkg": "google.cloud.vision.v1p3beta1",
+  "svcs": [
+    {
+      "svc": "ProductSearch",
+      "host": "vision.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateProductSet",
+          "request": {
+            "type": "CreateProductSetRequest"
+          },
+          "response": {
+            "type": "ProductSet"
+          }
+        },
+        {
+          "method": "ListProductSets",
+          "request": {
+            "type": "ListProductSetsRequest"
+          },
+          "response": {
+            "type": "ListProductSetsResponse"
+          }
+        },
+        {
+          "method": "GetProductSet",
+          "request": {
+            "type": "GetProductSetRequest"
+          },
+          "response": {
+            "type": "ProductSet"
+          }
+        },
+        {
+          "method": "UpdateProductSet",
+          "request": {
+            "type": "UpdateProductSetRequest"
+          },
+          "response": {
+            "type": "ProductSet"
+          }
+        },
+        {
+          "method": "DeleteProductSet",
+          "request": {
+            "type": "DeleteProductSetRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "CreateProduct",
+          "request": {
+            "type": "CreateProductRequest"
+          },
+          "response": {
+            "type": "Product"
+          }
+        },
+        {
+          "method": "ListProducts",
+          "request": {
+            "type": "ListProductsRequest"
+          },
+          "response": {
+            "type": "ListProductsResponse"
+          }
+        },
+        {
+          "method": "GetProduct",
+          "request": {
+            "type": "GetProductRequest"
+          },
+          "response": {
+            "type": "Product"
+          }
+        },
+        {
+          "method": "UpdateProduct",
+          "request": {
+            "type": "UpdateProductRequest"
+          },
+          "response": {
+            "type": "Product"
+          }
+        },
+        {
+          "method": "DeleteProduct",
+          "request": {
+            "type": "DeleteProductRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "CreateReferenceImage",
+          "request": {
+            "type": "CreateReferenceImageRequest"
+          },
+          "response": {
+            "type": "ReferenceImage"
+          }
+        },
+        {
+          "method": "DeleteReferenceImage",
+          "request": {
+            "type": "DeleteReferenceImageRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListReferenceImages",
+          "request": {
+            "type": "ListReferenceImagesRequest"
+          },
+          "response": {
+            "type": "ListReferenceImagesResponse"
+          }
+        },
+        {
+          "method": "GetReferenceImage",
+          "request": {
+            "type": "GetReferenceImageRequest"
+          },
+          "response": {
+            "type": "ReferenceImage"
+          }
+        },
+        {
+          "method": "AddProductToProductSet",
+          "request": {
+            "type": "AddProductToProductSetRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "RemoveProductFromProductSet",
+          "request": {
+            "type": "RemoveProductFromProductSetRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListProductsInProductSet",
+          "request": {
+            "type": "ListProductsInProductSetRequest"
+          },
+          "response": {
+            "type": "ListProductsInProductSetResponse"
+          }
+        },
+        {
+          "method": "ImportProductSets",
+          "request": {
+            "type": "ImportProductSetsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Product",
+      "msgs": [
+        {
+          "type": "KeyValue"
+        }
+      ]
+    },
+    {
+      "type": "ProductSet"
+    },
+    {
+      "type": "ReferenceImage"
+    },
+    {
+      "type": "CreateProductRequest"
+    },
+    {
+      "type": "ListProductsRequest"
+    },
+    {
+      "type": "ListProductsResponse"
+    },
+    {
+      "type": "GetProductRequest"
+    },
+    {
+      "type": "UpdateProductRequest"
+    },
+    {
+      "type": "DeleteProductRequest"
+    },
+    {
+      "type": "CreateProductSetRequest"
+    },
+    {
+      "type": "ListProductSetsRequest"
+    },
+    {
+      "type": "ListProductSetsResponse"
+    },
+    {
+      "type": "GetProductSetRequest"
+    },
+    {
+      "type": "UpdateProductSetRequest"
+    },
+    {
+      "type": "DeleteProductSetRequest"
+    },
+    {
+      "type": "CreateReferenceImageRequest"
+    },
+    {
+      "type": "ListReferenceImagesRequest"
+    },
+    {
+      "type": "ListReferenceImagesResponse"
+    },
+    {
+      "type": "GetReferenceImageRequest"
+    },
+    {
+      "type": "DeleteReferenceImageRequest"
+    },
+    {
+      "type": "AddProductToProductSetRequest"
+    },
+    {
+      "type": "RemoveProductFromProductSetRequest"
+    },
+    {
+      "type": "ListProductsInProductSetRequest"
+    },
+    {
+      "type": "ListProductsInProductSetResponse"
+    },
+    {
+      "type": "ImportProductSetsGcsSource"
+    },
+    {
+      "type": "ImportProductSetsInputConfig"
+    },
+    {
+      "type": "ImportProductSetsRequest"
+    },
+    {
+      "type": "ImportProductSetsResponse"
+    },
+    {
+      "type": "BatchOperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/vision/v1p3beta1/product_search_service.pb.go",
+    "pkg": "visionpb",
+    "pkg_full": "cloud.google.com/go/vision/apiv1p3beta1/visionpb"
+  }
+}
+{
+  "proto": "google/cloud/vision/v1p3beta1/web_detection",
+  "pkg": "google.cloud.vision.v1p3beta1",
+  "msgs": [
+    {
+      "type": "WebDetection",
+      "msgs": [
+        {
+          "type": "WebEntity"
+        },
+        {
+          "type": "WebImage"
+        },
+        {
+          "type": "WebPage"
+        },
+        {
+          "type": "WebLabel"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/vision/v1p3beta1/web_detection.pb.go",
+    "pkg": "visionpb",
+    "pkg_full": "cloud.google.com/go/vision/apiv1p3beta1/visionpb"
+  }
+}
+{
+  "proto": "google/cloud/vision/v1p3beta1/image_annotator",
+  "pkg": "google.cloud.vision.v1p3beta1",
+  "svcs": [
+    {
+      "svc": "ImageAnnotator",
+      "host": "vision.googleapis.com",
+      "rpcs": [
+        {
+          "method": "BatchAnnotateImages",
+          "request": {
+            "type": "BatchAnnotateImagesRequest"
+          },
+          "response": {
+            "type": "BatchAnnotateImagesResponse"
+          }
+        },
+        {
+          "method": "AsyncBatchAnnotateFiles",
+          "request": {
+            "type": "AsyncBatchAnnotateFilesRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Feature"
+    },
+    {
+      "type": "ImageSource"
+    },
+    {
+      "type": "Image"
+    },
+    {
+      "type": "FaceAnnotation",
+      "msgs": [
+        {
+          "type": "Landmark"
+        }
+      ]
+    },
+    {
+      "type": "LocationInfo"
+    },
+    {
+      "type": "Property"
+    },
+    {
+      "type": "EntityAnnotation"
+    },
+    {
+      "type": "LocalizedObjectAnnotation"
+    },
+    {
+      "type": "SafeSearchAnnotation"
+    },
+    {
+      "type": "LatLongRect"
+    },
+    {
+      "type": "ColorInfo"
+    },
+    {
+      "type": "DominantColorsAnnotation"
+    },
+    {
+      "type": "ImageProperties"
+    },
+    {
+      "type": "CropHint"
+    },
+    {
+      "type": "CropHintsAnnotation"
+    },
+    {
+      "type": "CropHintsParams"
+    },
+    {
+      "type": "WebDetectionParams"
+    },
+    {
+      "type": "TextDetectionParams"
+    },
+    {
+      "type": "ImageContext"
+    },
+    {
+      "type": "AnnotateImageRequest"
+    },
+    {
+      "type": "ImageAnnotationContext"
+    },
+    {
+      "type": "AnnotateImageResponse"
+    },
+    {
+      "type": "AnnotateFileResponse"
+    },
+    {
+      "type": "BatchAnnotateImagesRequest"
+    },
+    {
+      "type": "BatchAnnotateImagesResponse"
+    },
+    {
+      "type": "AsyncAnnotateFileRequest"
+    },
+    {
+      "type": "AsyncAnnotateFileResponse"
+    },
+    {
+      "type": "AsyncBatchAnnotateFilesRequest"
+    },
+    {
+      "type": "AsyncBatchAnnotateFilesResponse"
+    },
+    {
+      "type": "InputConfig"
+    },
+    {
+      "type": "OutputConfig"
+    },
+    {
+      "type": "GcsSource"
+    },
+    {
+      "type": "GcsDestination"
+    },
+    {
+      "type": "OperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/vision/v1p3beta1/image_annotator.pb.go",
+    "pkg": "visionpb",
+    "pkg_full": "cloud.google.com/go/vision/apiv1p3beta1/visionpb"
+  }
+}
+{
+  "proto": "google/cloud/vision/v1p3beta1/geometry",
+  "pkg": "google.cloud.vision.v1p3beta1",
+  "msgs": [
+    {
+      "type": "Vertex"
+    },
+    {
+      "type": "NormalizedVertex"
+    },
+    {
+      "type": "BoundingPoly"
+    },
+    {
+      "type": "Position"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/vision/v1p3beta1/geometry.pb.go",
+    "pkg": "visionpb",
+    "pkg_full": "cloud.google.com/go/vision/apiv1p3beta1/visionpb"
+  }
+}

@@ -1,0 +1,598 @@
+{
+  "proto": "google/api/visibility",
+  "pkg": "google.api",
+  "msgs": [
+    {
+      "type": "Visibility"
+    },
+    {
+      "type": "VisibilityRule"
+    }
+  ],
+  "go": {
+    "src": "googleapis/api/visibility/visibility.pb.go",
+    "pkg": "visibility",
+    "pkg_full": "google.golang.org/genproto/googleapis/api/visibility"
+  }
+}
+{
+  "proto": "google/api/usage",
+  "pkg": "google.api",
+  "msgs": [
+    {
+      "type": "Usage"
+    },
+    {
+      "type": "UsageRule"
+    }
+  ],
+  "go": {
+    "src": "googleapis/api/serviceconfig/usage.pb.go",
+    "pkg": "serviceconfig",
+    "pkg_full": "google.golang.org/genproto/googleapis/api/serviceconfig"
+  }
+}
+{
+  "proto": "google/api/billing",
+  "pkg": "google.api",
+  "msgs": [
+    {
+      "type": "Billing",
+      "msgs": [
+        {
+          "type": "BillingDestination"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/api/serviceconfig/billing.pb.go",
+    "pkg": "serviceconfig",
+    "pkg_full": "google.golang.org/genproto/googleapis/api/serviceconfig"
+  }
+}
+{
+  "proto": "google/api/auth",
+  "pkg": "google.api",
+  "msgs": [
+    {
+      "type": "Authentication"
+    },
+    {
+      "type": "AuthenticationRule"
+    },
+    {
+      "type": "JwtLocation"
+    },
+    {
+      "type": "AuthProvider"
+    },
+    {
+      "type": "OAuthRequirements"
+    },
+    {
+      "type": "AuthRequirement"
+    }
+  ],
+  "go": {
+    "src": "googleapis/api/serviceconfig/auth.pb.go",
+    "pkg": "serviceconfig",
+    "pkg_full": "google.golang.org/genproto/googleapis/api/serviceconfig"
+  }
+}
+{
+  "proto": "google/api/policy",
+  "pkg": "google.api",
+  "msgs": [
+    {
+      "type": "FieldPolicy"
+    },
+    {
+      "type": "MethodPolicy"
+    }
+  ],
+  "go": {
+    "src": "googleapis/api/serviceconfig/policy.pb.go",
+    "pkg": "serviceconfig",
+    "pkg_full": "google.golang.org/genproto/googleapis/api/serviceconfig"
+  }
+}
+{
+  "proto": "google/api/endpoint",
+  "pkg": "google.api",
+  "msgs": [
+    {
+      "type": "Endpoint"
+    }
+  ],
+  "go": {
+    "src": "googleapis/api/serviceconfig/endpoint.pb.go",
+    "pkg": "serviceconfig",
+    "pkg_full": "google.golang.org/genproto/googleapis/api/serviceconfig"
+  }
+}
+{
+  "proto": "google/api/launch_stage",
+  "pkg": "google.api",
+  "go": {
+    "src": "googleapis/api/launch_stage.pb.go",
+    "pkg": "api",
+    "pkg_full": "google.golang.org/genproto/googleapis/api"
+  }
+}
+{
+  "proto": "google/api/metric",
+  "pkg": "google.api",
+  "msgs": [
+    {
+      "type": "MetricDescriptor",
+      "msgs": [
+        {
+          "type": "MetricDescriptorMetadata"
+        }
+      ]
+    },
+    {
+      "type": "Metric"
+    }
+  ],
+  "go": {
+    "src": "googleapis/api/metric/metric.pb.go",
+    "pkg": "metric",
+    "pkg_full": "google.golang.org/genproto/googleapis/api/metric"
+  }
+}
+{
+  "proto": "google/api/client",
+  "pkg": "google.api",
+  "msgs": [
+    {
+      "type": "CommonLanguageSettings"
+    },
+    {
+      "type": "ClientLibrarySettings"
+    },
+    {
+      "type": "Publishing"
+    },
+    {
+      "type": "JavaSettings"
+    },
+    {
+      "type": "CppSettings"
+    },
+    {
+      "type": "PhpSettings"
+    },
+    {
+      "type": "PythonSettings"
+    },
+    {
+      "type": "NodeSettings"
+    },
+    {
+      "type": "DotnetSettings"
+    },
+    {
+      "type": "RubySettings"
+    },
+    {
+      "type": "GoSettings"
+    },
+    {
+      "type": "MethodSettings",
+      "msgs": [
+        {
+          "type": "LongRunning"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/api/annotations/client.pb.go",
+    "pkg": "annotations",
+    "pkg_full": "google.golang.org/genproto/googleapis/api/annotations"
+  }
+}
+{
+  "proto": "google/api/documentation",
+  "pkg": "google.api",
+  "msgs": [
+    {
+      "type": "Documentation"
+    },
+    {
+      "type": "DocumentationRule"
+    },
+    {
+      "type": "Page"
+    }
+  ],
+  "go": {
+    "src": "googleapis/api/serviceconfig/documentation.pb.go",
+    "pkg": "serviceconfig",
+    "pkg_full": "google.golang.org/genproto/googleapis/api/serviceconfig"
+  }
+}
+{
+  "proto": "google/api/consumer",
+  "pkg": "google.api",
+  "msgs": [
+    {
+      "type": "ProjectProperties"
+    },
+    {
+      "type": "Property"
+    }
+  ],
+  "go": {
+    "src": "googleapis/api/serviceconfig/consumer.pb.go",
+    "pkg": "serviceconfig",
+    "pkg_full": "google.golang.org/genproto/googleapis/api/serviceconfig"
+  }
+}
+{
+  "proto": "google/api/quota",
+  "pkg": "google.api",
+  "msgs": [
+    {
+      "type": "Quota"
+    },
+    {
+      "type": "MetricRule"
+    },
+    {
+      "type": "QuotaLimit"
+    }
+  ],
+  "go": {
+    "src": "googleapis/api/serviceconfig/quota.pb.go",
+    "pkg": "serviceconfig",
+    "pkg_full": "google.golang.org/genproto/googleapis/api/serviceconfig"
+  }
+}
+{
+  "proto": "google/api/error_reason",
+  "pkg": "google.api",
+  "go": {
+    "src": "googleapis/api/error_reason/error_reason.pb.go",
+    "pkg": "error_reason",
+    "pkg_full": "google.golang.org/genproto/googleapis/api/error_reason"
+  }
+}
+{
+  "proto": "google/api/label",
+  "pkg": "google.api",
+  "msgs": [
+    {
+      "type": "LabelDescriptor"
+    }
+  ],
+  "go": {
+    "src": "googleapis/api/label/label.pb.go",
+    "pkg": "label",
+    "pkg_full": "google.golang.org/genproto/googleapis/api/label"
+  }
+}
+{
+  "proto": "google/api/field_info",
+  "pkg": "google.api",
+  "msgs": [
+    {
+      "type": "FieldInfo"
+    },
+    {
+      "type": "TypeReference"
+    }
+  ],
+  "go": {
+    "src": "googleapis/api/annotations/field_info.pb.go",
+    "pkg": "annotations",
+    "pkg_full": "google.golang.org/genproto/googleapis/api/annotations"
+  }
+}
+{
+  "proto": "google/api/monitored_resource",
+  "pkg": "google.api",
+  "msgs": [
+    {
+      "type": "MonitoredResourceDescriptor"
+    },
+    {
+      "type": "MonitoredResource"
+    },
+    {
+      "type": "MonitoredResourceMetadata"
+    }
+  ],
+  "go": {
+    "src": "googleapis/api/monitoredres/monitored_resource.pb.go",
+    "pkg": "monitoredres",
+    "pkg_full": "google.golang.org/genproto/googleapis/api/monitoredres"
+  }
+}
+{
+  "proto": "google/api/log",
+  "pkg": "google.api",
+  "msgs": [
+    {
+      "type": "LogDescriptor"
+    }
+  ],
+  "go": {
+    "src": "googleapis/api/serviceconfig/log.pb.go",
+    "pkg": "serviceconfig",
+    "pkg_full": "google.golang.org/genproto/googleapis/api/serviceconfig"
+  }
+}
+{
+  "proto": "google/api/field_behavior",
+  "pkg": "google.api",
+  "go": {
+    "src": "googleapis/api/annotations/field_behavior.pb.go",
+    "pkg": "annotations",
+    "pkg_full": "google.golang.org/genproto/googleapis/api/annotations"
+  }
+}
+{
+  "proto": "google/api/backend",
+  "pkg": "google.api",
+  "msgs": [
+    {
+      "type": "Backend"
+    },
+    {
+      "type": "BackendRule"
+    }
+  ],
+  "go": {
+    "src": "googleapis/api/serviceconfig/backend.pb.go",
+    "pkg": "serviceconfig",
+    "pkg_full": "google.golang.org/genproto/googleapis/api/serviceconfig"
+  }
+}
+{
+  "proto": "google/api/service",
+  "pkg": "google.api",
+  "msgs": [
+    {
+      "type": "Service"
+    }
+  ],
+  "go": {
+    "src": "googleapis/api/serviceconfig/service.pb.go",
+    "pkg": "serviceconfig",
+    "pkg_full": "google.golang.org/genproto/googleapis/api/serviceconfig"
+  }
+}
+{
+  "proto": "google/api/logging",
+  "pkg": "google.api",
+  "msgs": [
+    {
+      "type": "Logging",
+      "msgs": [
+        {
+          "type": "LoggingDestination"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/api/serviceconfig/logging.pb.go",
+    "pkg": "serviceconfig",
+    "pkg_full": "google.golang.org/genproto/googleapis/api/serviceconfig"
+  }
+}
+{
+  "proto": "google/api/monitoring",
+  "pkg": "google.api",
+  "msgs": [
+    {
+      "type": "Monitoring",
+      "msgs": [
+        {
+          "type": "MonitoringDestination"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/api/serviceconfig/monitoring.pb.go",
+    "pkg": "serviceconfig",
+    "pkg_full": "google.golang.org/genproto/googleapis/api/serviceconfig"
+  }
+}
+{
+  "proto": "google/api/system_parameter",
+  "pkg": "google.api",
+  "msgs": [
+    {
+      "type": "SystemParameters"
+    },
+    {
+      "type": "SystemParameterRule"
+    },
+    {
+      "type": "SystemParameter"
+    }
+  ],
+  "go": {
+    "src": "googleapis/api/serviceconfig/system_parameter.pb.go",
+    "pkg": "serviceconfig",
+    "pkg_full": "google.golang.org/genproto/googleapis/api/serviceconfig"
+  }
+}
+{
+  "proto": "google/api/resource",
+  "pkg": "google.api",
+  "msgs": [
+    {
+      "type": "ResourceDescriptor"
+    },
+    {
+      "type": "ResourceReference"
+    }
+  ],
+  "go": {
+    "src": "googleapis/api/annotations/resource.pb.go",
+    "pkg": "annotations",
+    "pkg_full": "google.golang.org/genproto/googleapis/api/annotations"
+  }
+}
+{
+  "proto": "google/api/config_change",
+  "pkg": "google.api",
+  "msgs": [
+    {
+      "type": "ConfigChange"
+    },
+    {
+      "type": "Advice"
+    }
+  ],
+  "go": {
+    "src": "googleapis/api/configchange/config_change.pb.go",
+    "pkg": "configchange",
+    "pkg_full": "google.golang.org/genproto/googleapis/api/configchange"
+  }
+}
+{
+  "proto": "google/api/httpbody",
+  "pkg": "google.api",
+  "msgs": [
+    {
+      "type": "HttpBody"
+    }
+  ],
+  "go": {
+    "src": "googleapis/api/httpbody/httpbody.pb.go",
+    "pkg": "httpbody",
+    "pkg_full": "google.golang.org/genproto/googleapis/api/httpbody"
+  }
+}
+{
+  "proto": "google/api/context",
+  "pkg": "google.api",
+  "msgs": [
+    {
+      "type": "Context"
+    },
+    {
+      "type": "ContextRule"
+    }
+  ],
+  "go": {
+    "src": "googleapis/api/serviceconfig/context.pb.go",
+    "pkg": "serviceconfig",
+    "pkg_full": "google.golang.org/genproto/googleapis/api/serviceconfig"
+  }
+}
+{
+  "proto": "google/api/distribution",
+  "pkg": "google.api",
+  "msgs": [
+    {
+      "type": "Distribution",
+      "msgs": [
+        {
+          "type": "Range"
+        },
+        {
+          "type": "BucketOptions"
+        },
+        {
+          "type": "Linear"
+        },
+        {
+          "type": "Exponential"
+        },
+        {
+          "type": "Explicit"
+        },
+        {
+          "type": "Exemplar"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/api/distribution/distribution.pb.go",
+    "pkg": "distribution",
+    "pkg_full": "google.golang.org/genproto/googleapis/api/distribution"
+  }
+}
+{
+  "proto": "google/api/annotations",
+  "pkg": "google.api",
+  "go": {
+    "src": "googleapis/api/annotations/annotations.pb.go",
+    "pkg": "annotations",
+    "pkg_full": "google.golang.org/genproto/googleapis/api/annotations"
+  }
+}
+{
+  "proto": "google/api/source_info",
+  "pkg": "google.api",
+  "msgs": [
+    {
+      "type": "SourceInfo"
+    }
+  ],
+  "go": {
+    "src": "googleapis/api/serviceconfig/source_info.pb.go",
+    "pkg": "serviceconfig",
+    "pkg_full": "google.golang.org/genproto/googleapis/api/serviceconfig"
+  }
+}
+{
+  "proto": "google/api/routing",
+  "pkg": "google.api",
+  "msgs": [
+    {
+      "type": "RoutingRule"
+    },
+    {
+      "type": "RoutingParameter"
+    }
+  ],
+  "go": {
+    "src": "googleapis/api/annotations/routing.pb.go",
+    "pkg": "annotations",
+    "pkg_full": "google.golang.org/genproto/googleapis/api/annotations"
+  }
+}
+{
+  "proto": "google/api/control",
+  "pkg": "google.api",
+  "msgs": [
+    {
+      "type": "Control"
+    }
+  ],
+  "go": {
+    "src": "googleapis/api/serviceconfig/control.pb.go",
+    "pkg": "serviceconfig",
+    "pkg_full": "google.golang.org/genproto/googleapis/api/serviceconfig"
+  }
+}
+{
+  "proto": "google/api/http",
+  "pkg": "google.api",
+  "msgs": [
+    {
+      "type": "Http"
+    },
+    {
+      "type": "HttpRule"
+    },
+    {
+      "type": "CustomHttpPattern"
+    }
+  ],
+  "go": {
+    "src": "googleapis/api/annotations/http.pb.go",
+    "pkg": "annotations",
+    "pkg_full": "google.golang.org/genproto/googleapis/api/annotations"
+  }
+}

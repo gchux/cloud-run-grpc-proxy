@@ -1,0 +1,13 @@
+{
+  "proto": "google/cloud/servicehealth/logging/v1/event_log",
+  "pkg": "google.cloud.servicehealth.logging.v1",
+  "msgs": [
+    {
+      "type": "EventLog"
+    }
+  ],
+  "go": {
+    "pkg": "loggingpb",
+    "pkg_full": "cloud.google.com/go/servicehealth/logging/apiv1/loggingpb"
+  }
+}

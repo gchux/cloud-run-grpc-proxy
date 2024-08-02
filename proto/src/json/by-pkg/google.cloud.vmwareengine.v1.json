@@ -1,0 +1,1068 @@
+{
+  "proto": "google/cloud/vmwareengine/v1/vmwareengine",
+  "pkg": "google.cloud.vmwareengine.v1",
+  "svcs": [
+    {
+      "svc": "VmwareEngine",
+      "host": "vmwareengine.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListPrivateClouds",
+          "request": {
+            "type": "ListPrivateCloudsRequest"
+          },
+          "response": {
+            "type": "ListPrivateCloudsResponse"
+          }
+        },
+        {
+          "method": "GetPrivateCloud",
+          "request": {
+            "type": "GetPrivateCloudRequest"
+          },
+          "response": {
+            "type": "PrivateCloud"
+          }
+        },
+        {
+          "method": "CreatePrivateCloud",
+          "request": {
+            "type": "CreatePrivateCloudRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdatePrivateCloud",
+          "request": {
+            "type": "UpdatePrivateCloudRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeletePrivateCloud",
+          "request": {
+            "type": "DeletePrivateCloudRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UndeletePrivateCloud",
+          "request": {
+            "type": "UndeletePrivateCloudRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListClusters",
+          "request": {
+            "type": "ListClustersRequest"
+          },
+          "response": {
+            "type": "ListClustersResponse"
+          }
+        },
+        {
+          "method": "GetCluster",
+          "request": {
+            "type": "GetClusterRequest"
+          },
+          "response": {
+            "type": "Cluster"
+          }
+        },
+        {
+          "method": "CreateCluster",
+          "request": {
+            "type": "CreateClusterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateCluster",
+          "request": {
+            "type": "UpdateClusterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteCluster",
+          "request": {
+            "type": "DeleteClusterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListNodes",
+          "request": {
+            "type": "ListNodesRequest"
+          },
+          "response": {
+            "type": "ListNodesResponse"
+          }
+        },
+        {
+          "method": "GetNode",
+          "request": {
+            "type": "GetNodeRequest"
+          },
+          "response": {
+            "type": "Node"
+          }
+        },
+        {
+          "method": "ListExternalAddresses",
+          "request": {
+            "type": "ListExternalAddressesRequest"
+          },
+          "response": {
+            "type": "ListExternalAddressesResponse"
+          }
+        },
+        {
+          "method": "GetExternalAddress",
+          "request": {
+            "type": "GetExternalAddressRequest"
+          },
+          "response": {
+            "type": "ExternalAddress"
+          }
+        },
+        {
+          "method": "CreateExternalAddress",
+          "request": {
+            "type": "CreateExternalAddressRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateExternalAddress",
+          "request": {
+            "type": "UpdateExternalAddressRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteExternalAddress",
+          "request": {
+            "type": "DeleteExternalAddressRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListSubnets",
+          "request": {
+            "type": "ListSubnetsRequest"
+          },
+          "response": {
+            "type": "ListSubnetsResponse"
+          }
+        },
+        {
+          "method": "GetSubnet",
+          "request": {
+            "type": "GetSubnetRequest"
+          },
+          "response": {
+            "type": "Subnet"
+          }
+        },
+        {
+          "method": "UpdateSubnet",
+          "request": {
+            "type": "UpdateSubnetRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListExternalAccessRules",
+          "request": {
+            "type": "ListExternalAccessRulesRequest"
+          },
+          "response": {
+            "type": "ListExternalAccessRulesResponse"
+          }
+        },
+        {
+          "method": "GetExternalAccessRule",
+          "request": {
+            "type": "GetExternalAccessRuleRequest"
+          },
+          "response": {
+            "type": "ExternalAccessRule"
+          }
+        },
+        {
+          "method": "CreateExternalAccessRule",
+          "request": {
+            "type": "CreateExternalAccessRuleRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateExternalAccessRule",
+          "request": {
+            "type": "UpdateExternalAccessRuleRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteExternalAccessRule",
+          "request": {
+            "type": "DeleteExternalAccessRuleRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListLoggingServers",
+          "request": {
+            "type": "ListLoggingServersRequest"
+          },
+          "response": {
+            "type": "ListLoggingServersResponse"
+          }
+        },
+        {
+          "method": "GetLoggingServer",
+          "request": {
+            "type": "GetLoggingServerRequest"
+          },
+          "response": {
+            "type": "LoggingServer"
+          }
+        },
+        {
+          "method": "CreateLoggingServer",
+          "request": {
+            "type": "CreateLoggingServerRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateLoggingServer",
+          "request": {
+            "type": "UpdateLoggingServerRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteLoggingServer",
+          "request": {
+            "type": "DeleteLoggingServerRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListNodeTypes",
+          "request": {
+            "type": "ListNodeTypesRequest"
+          },
+          "response": {
+            "type": "ListNodeTypesResponse"
+          }
+        },
+        {
+          "method": "GetNodeType",
+          "request": {
+            "type": "GetNodeTypeRequest"
+          },
+          "response": {
+            "type": "NodeType"
+          }
+        },
+        {
+          "method": "ShowNsxCredentials",
+          "request": {
+            "type": "ShowNsxCredentialsRequest"
+          },
+          "response": {
+            "type": "Credentials"
+          }
+        },
+        {
+          "method": "ShowVcenterCredentials",
+          "request": {
+            "type": "ShowVcenterCredentialsRequest"
+          },
+          "response": {
+            "type": "Credentials"
+          }
+        },
+        {
+          "method": "ResetNsxCredentials",
+          "request": {
+            "type": "ResetNsxCredentialsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ResetVcenterCredentials",
+          "request": {
+            "type": "ResetVcenterCredentialsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetDnsForwarding",
+          "request": {
+            "type": "GetDnsForwardingRequest"
+          },
+          "response": {
+            "type": "DnsForwarding"
+          }
+        },
+        {
+          "method": "UpdateDnsForwarding",
+          "request": {
+            "type": "UpdateDnsForwardingRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetNetworkPeering",
+          "request": {
+            "type": "GetNetworkPeeringRequest"
+          },
+          "response": {
+            "type": "NetworkPeering"
+          }
+        },
+        {
+          "method": "ListNetworkPeerings",
+          "request": {
+            "type": "ListNetworkPeeringsRequest"
+          },
+          "response": {
+            "type": "ListNetworkPeeringsResponse"
+          }
+        },
+        {
+          "method": "CreateNetworkPeering",
+          "request": {
+            "type": "CreateNetworkPeeringRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteNetworkPeering",
+          "request": {
+            "type": "DeleteNetworkPeeringRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateNetworkPeering",
+          "request": {
+            "type": "UpdateNetworkPeeringRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListPeeringRoutes",
+          "request": {
+            "type": "ListPeeringRoutesRequest"
+          },
+          "response": {
+            "type": "ListPeeringRoutesResponse"
+          }
+        },
+        {
+          "method": "CreateHcxActivationKey",
+          "request": {
+            "type": "CreateHcxActivationKeyRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListHcxActivationKeys",
+          "request": {
+            "type": "ListHcxActivationKeysRequest"
+          },
+          "response": {
+            "type": "ListHcxActivationKeysResponse"
+          }
+        },
+        {
+          "method": "GetHcxActivationKey",
+          "request": {
+            "type": "GetHcxActivationKeyRequest"
+          },
+          "response": {
+            "type": "HcxActivationKey"
+          }
+        },
+        {
+          "method": "GetNetworkPolicy",
+          "request": {
+            "type": "GetNetworkPolicyRequest"
+          },
+          "response": {
+            "type": "NetworkPolicy"
+          }
+        },
+        {
+          "method": "ListNetworkPolicies",
+          "request": {
+            "type": "ListNetworkPoliciesRequest"
+          },
+          "response": {
+            "type": "ListNetworkPoliciesResponse"
+          }
+        },
+        {
+          "method": "CreateNetworkPolicy",
+          "request": {
+            "type": "CreateNetworkPolicyRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateNetworkPolicy",
+          "request": {
+            "type": "UpdateNetworkPolicyRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteNetworkPolicy",
+          "request": {
+            "type": "DeleteNetworkPolicyRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListManagementDnsZoneBindings",
+          "request": {
+            "type": "ListManagementDnsZoneBindingsRequest"
+          },
+          "response": {
+            "type": "ListManagementDnsZoneBindingsResponse"
+          }
+        },
+        {
+          "method": "GetManagementDnsZoneBinding",
+          "request": {
+            "type": "GetManagementDnsZoneBindingRequest"
+          },
+          "response": {
+            "type": "ManagementDnsZoneBinding"
+          }
+        },
+        {
+          "method": "CreateManagementDnsZoneBinding",
+          "request": {
+            "type": "CreateManagementDnsZoneBindingRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateManagementDnsZoneBinding",
+          "request": {
+            "type": "UpdateManagementDnsZoneBindingRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteManagementDnsZoneBinding",
+          "request": {
+            "type": "DeleteManagementDnsZoneBindingRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "RepairManagementDnsZoneBinding",
+          "request": {
+            "type": "RepairManagementDnsZoneBindingRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CreateVmwareEngineNetwork",
+          "request": {
+            "type": "CreateVmwareEngineNetworkRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateVmwareEngineNetwork",
+          "request": {
+            "type": "UpdateVmwareEngineNetworkRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteVmwareEngineNetwork",
+          "request": {
+            "type": "DeleteVmwareEngineNetworkRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetVmwareEngineNetwork",
+          "request": {
+            "type": "GetVmwareEngineNetworkRequest"
+          },
+          "response": {
+            "type": "VmwareEngineNetwork"
+          }
+        },
+        {
+          "method": "ListVmwareEngineNetworks",
+          "request": {
+            "type": "ListVmwareEngineNetworksRequest"
+          },
+          "response": {
+            "type": "ListVmwareEngineNetworksResponse"
+          }
+        },
+        {
+          "method": "CreatePrivateConnection",
+          "request": {
+            "type": "CreatePrivateConnectionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetPrivateConnection",
+          "request": {
+            "type": "GetPrivateConnectionRequest"
+          },
+          "response": {
+            "type": "PrivateConnection"
+          }
+        },
+        {
+          "method": "ListPrivateConnections",
+          "request": {
+            "type": "ListPrivateConnectionsRequest"
+          },
+          "response": {
+            "type": "ListPrivateConnectionsResponse"
+          }
+        },
+        {
+          "method": "UpdatePrivateConnection",
+          "request": {
+            "type": "UpdatePrivateConnectionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeletePrivateConnection",
+          "request": {
+            "type": "DeletePrivateConnectionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GrantDnsBindPermission",
+          "request": {
+            "type": "GrantDnsBindPermissionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetDnsBindPermission",
+          "request": {
+            "type": "GetDnsBindPermissionRequest"
+          },
+          "response": {
+            "type": "DnsBindPermission"
+          }
+        },
+        {
+          "method": "RevokeDnsBindPermission",
+          "request": {
+            "type": "RevokeDnsBindPermissionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ListPrivateCloudsRequest"
+    },
+    {
+      "type": "ListPrivateCloudsResponse"
+    },
+    {
+      "type": "GetPrivateCloudRequest"
+    },
+    {
+      "type": "CreatePrivateCloudRequest"
+    },
+    {
+      "type": "UpdatePrivateCloudRequest"
+    },
+    {
+      "type": "DeletePrivateCloudRequest"
+    },
+    {
+      "type": "UndeletePrivateCloudRequest"
+    },
+    {
+      "type": "ListClustersRequest"
+    },
+    {
+      "type": "ListClustersResponse"
+    },
+    {
+      "type": "GetClusterRequest"
+    },
+    {
+      "type": "CreateClusterRequest"
+    },
+    {
+      "type": "UpdateClusterRequest"
+    },
+    {
+      "type": "DeleteClusterRequest"
+    },
+    {
+      "type": "ListNodesRequest"
+    },
+    {
+      "type": "ListNodesResponse"
+    },
+    {
+      "type": "GetNodeRequest"
+    },
+    {
+      "type": "ListExternalAddressesRequest"
+    },
+    {
+      "type": "ListExternalAddressesResponse"
+    },
+    {
+      "type": "FetchNetworkPolicyExternalAddressesRequest"
+    },
+    {
+      "type": "FetchNetworkPolicyExternalAddressesResponse"
+    },
+    {
+      "type": "GetExternalAddressRequest"
+    },
+    {
+      "type": "CreateExternalAddressRequest"
+    },
+    {
+      "type": "UpdateExternalAddressRequest"
+    },
+    {
+      "type": "DeleteExternalAddressRequest"
+    },
+    {
+      "type": "ListSubnetsRequest"
+    },
+    {
+      "type": "ListSubnetsResponse"
+    },
+    {
+      "type": "GetSubnetRequest"
+    },
+    {
+      "type": "UpdateSubnetRequest"
+    },
+    {
+      "type": "ListExternalAccessRulesRequest"
+    },
+    {
+      "type": "ListExternalAccessRulesResponse"
+    },
+    {
+      "type": "GetExternalAccessRuleRequest"
+    },
+    {
+      "type": "CreateExternalAccessRuleRequest"
+    },
+    {
+      "type": "UpdateExternalAccessRuleRequest"
+    },
+    {
+      "type": "DeleteExternalAccessRuleRequest"
+    },
+    {
+      "type": "ListLoggingServersRequest"
+    },
+    {
+      "type": "ListLoggingServersResponse"
+    },
+    {
+      "type": "GetLoggingServerRequest"
+    },
+    {
+      "type": "CreateLoggingServerRequest"
+    },
+    {
+      "type": "UpdateLoggingServerRequest"
+    },
+    {
+      "type": "DeleteLoggingServerRequest"
+    },
+    {
+      "type": "OperationMetadata"
+    },
+    {
+      "type": "ListNodeTypesRequest"
+    },
+    {
+      "type": "ListNodeTypesResponse"
+    },
+    {
+      "type": "GetNodeTypeRequest"
+    },
+    {
+      "type": "ShowNsxCredentialsRequest"
+    },
+    {
+      "type": "ShowVcenterCredentialsRequest"
+    },
+    {
+      "type": "ResetNsxCredentialsRequest"
+    },
+    {
+      "type": "ResetVcenterCredentialsRequest"
+    },
+    {
+      "type": "ListHcxActivationKeysResponse"
+    },
+    {
+      "type": "ListHcxActivationKeysRequest"
+    },
+    {
+      "type": "GetHcxActivationKeyRequest"
+    },
+    {
+      "type": "CreateHcxActivationKeyRequest"
+    },
+    {
+      "type": "GetDnsForwardingRequest"
+    },
+    {
+      "type": "UpdateDnsForwardingRequest"
+    },
+    {
+      "type": "CreateNetworkPeeringRequest"
+    },
+    {
+      "type": "DeleteNetworkPeeringRequest"
+    },
+    {
+      "type": "GetNetworkPeeringRequest"
+    },
+    {
+      "type": "ListNetworkPeeringsRequest"
+    },
+    {
+      "type": "UpdateNetworkPeeringRequest"
+    },
+    {
+      "type": "ListNetworkPeeringsResponse"
+    },
+    {
+      "type": "ListPeeringRoutesRequest"
+    },
+    {
+      "type": "ListPeeringRoutesResponse"
+    },
+    {
+      "type": "ListNetworkPoliciesRequest"
+    },
+    {
+      "type": "ListNetworkPoliciesResponse"
+    },
+    {
+      "type": "GetNetworkPolicyRequest"
+    },
+    {
+      "type": "UpdateNetworkPolicyRequest"
+    },
+    {
+      "type": "CreateNetworkPolicyRequest"
+    },
+    {
+      "type": "DeleteNetworkPolicyRequest"
+    },
+    {
+      "type": "ListManagementDnsZoneBindingsRequest"
+    },
+    {
+      "type": "ListManagementDnsZoneBindingsResponse"
+    },
+    {
+      "type": "GetManagementDnsZoneBindingRequest"
+    },
+    {
+      "type": "CreateManagementDnsZoneBindingRequest"
+    },
+    {
+      "type": "UpdateManagementDnsZoneBindingRequest"
+    },
+    {
+      "type": "DeleteManagementDnsZoneBindingRequest"
+    },
+    {
+      "type": "RepairManagementDnsZoneBindingRequest"
+    },
+    {
+      "type": "CreateVmwareEngineNetworkRequest"
+    },
+    {
+      "type": "UpdateVmwareEngineNetworkRequest"
+    },
+    {
+      "type": "DeleteVmwareEngineNetworkRequest"
+    },
+    {
+      "type": "GetVmwareEngineNetworkRequest"
+    },
+    {
+      "type": "ListVmwareEngineNetworksRequest"
+    },
+    {
+      "type": "ListVmwareEngineNetworksResponse"
+    },
+    {
+      "type": "CreatePrivateConnectionRequest"
+    },
+    {
+      "type": "GetPrivateConnectionRequest"
+    },
+    {
+      "type": "ListPrivateConnectionsRequest"
+    },
+    {
+      "type": "ListPrivateConnectionsResponse"
+    },
+    {
+      "type": "UpdatePrivateConnectionRequest"
+    },
+    {
+      "type": "DeletePrivateConnectionRequest"
+    },
+    {
+      "type": "ListPrivateConnectionPeeringRoutesRequest"
+    },
+    {
+      "type": "ListPrivateConnectionPeeringRoutesResponse"
+    },
+    {
+      "type": "GrantDnsBindPermissionRequest"
+    },
+    {
+      "type": "RevokeDnsBindPermissionRequest"
+    },
+    {
+      "type": "GetDnsBindPermissionRequest"
+    }
+  ],
+  "go": {
+    "src": "vmwareengine/apiv1/vmwareenginepb/vmwareengine.pb.go",
+    "pkg": "vmwareenginepb",
+    "pkg_full": "cloud.google.com/go/vmwareengine/apiv1/vmwareenginepb"
+  }
+}
+{
+  "proto": "google/cloud/vmwareengine/v1/vmwareengine_resources",
+  "pkg": "google.cloud.vmwareengine.v1",
+  "msgs": [
+    {
+      "type": "NetworkConfig"
+    },
+    {
+      "type": "NodeTypeConfig"
+    },
+    {
+      "type": "StretchedClusterConfig"
+    },
+    {
+      "type": "PrivateCloud",
+      "msgs": [
+        {
+          "type": "ManagementCluster"
+        }
+      ]
+    },
+    {
+      "type": "Cluster"
+    },
+    {
+      "type": "Node"
+    },
+    {
+      "type": "ExternalAddress"
+    },
+    {
+      "type": "Subnet"
+    },
+    {
+      "type": "ExternalAccessRule",
+      "msgs": [
+        {
+          "type": "IpRange"
+        }
+      ]
+    },
+    {
+      "type": "LoggingServer"
+    },
+    {
+      "type": "NodeType"
+    },
+    {
+      "type": "Credentials"
+    },
+    {
+      "type": "HcxActivationKey"
+    },
+    {
+      "type": "Hcx"
+    },
+    {
+      "type": "Nsx"
+    },
+    {
+      "type": "Vcenter"
+    },
+    {
+      "type": "AutoscalingSettings",
+      "msgs": [
+        {
+          "type": "Thresholds"
+        },
+        {
+          "type": "AutoscalingPolicy"
+        }
+      ]
+    },
+    {
+      "type": "DnsForwarding",
+      "msgs": [
+        {
+          "type": "ForwardingRule"
+        }
+      ]
+    },
+    {
+      "type": "NetworkPeering"
+    },
+    {
+      "type": "PeeringRoute"
+    },
+    {
+      "type": "NetworkPolicy",
+      "msgs": [
+        {
+          "type": "NetworkService"
+        }
+      ]
+    },
+    {
+      "type": "ManagementDnsZoneBinding"
+    },
+    {
+      "type": "VmwareEngineNetwork",
+      "msgs": [
+        {
+          "type": "VpcNetwork"
+        }
+      ]
+    },
+    {
+      "type": "PrivateConnection"
+    },
+    {
+      "type": "LocationMetadata"
+    },
+    {
+      "type": "DnsBindPermission"
+    },
+    {
+      "type": "Principal"
+    }
+  ],
+  "go": {
+    "src": "vmwareengine/apiv1/vmwareenginepb/vmwareengine_resources.pb.go",
+    "pkg": "vmwareenginepb",
+    "pkg_full": "cloud.google.com/go/vmwareengine/apiv1/vmwareenginepb"
+  }
+}

@@ -1,0 +1,179 @@
+{
+  "proto": "google/cloud/assuredworkloads/v1/assuredworkloads",
+  "pkg": "google.cloud.assuredworkloads.v1",
+  "svcs": [
+    {
+      "svc": "AssuredWorkloadsService",
+      "host": "assuredworkloads.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateWorkload",
+          "request": {
+            "type": "CreateWorkloadRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateWorkload",
+          "request": {
+            "type": "UpdateWorkloadRequest"
+          },
+          "response": {
+            "type": "Workload"
+          }
+        },
+        {
+          "method": "RestrictAllowedResources",
+          "request": {
+            "type": "RestrictAllowedResourcesRequest"
+          },
+          "response": {
+            "type": "RestrictAllowedResourcesResponse"
+          }
+        },
+        {
+          "method": "DeleteWorkload",
+          "request": {
+            "type": "DeleteWorkloadRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "GetWorkload",
+          "request": {
+            "type": "GetWorkloadRequest"
+          },
+          "response": {
+            "type": "Workload"
+          }
+        },
+        {
+          "method": "ListWorkloads",
+          "request": {
+            "type": "ListWorkloadsRequest"
+          },
+          "response": {
+            "type": "ListWorkloadsResponse"
+          }
+        },
+        {
+          "method": "ListViolations",
+          "request": {
+            "type": "ListViolationsRequest"
+          },
+          "response": {
+            "type": "ListViolationsResponse"
+          }
+        },
+        {
+          "method": "GetViolation",
+          "request": {
+            "type": "GetViolationRequest"
+          },
+          "response": {
+            "type": "Violation"
+          }
+        },
+        {
+          "method": "AcknowledgeViolation",
+          "request": {
+            "type": "AcknowledgeViolationRequest"
+          },
+          "response": {
+            "type": "AcknowledgeViolationResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateWorkloadRequest"
+    },
+    {
+      "type": "UpdateWorkloadRequest"
+    },
+    {
+      "type": "DeleteWorkloadRequest"
+    },
+    {
+      "type": "GetWorkloadRequest"
+    },
+    {
+      "type": "ListWorkloadsRequest"
+    },
+    {
+      "type": "ListWorkloadsResponse"
+    },
+    {
+      "type": "Workload",
+      "msgs": [
+        {
+          "type": "ResourceInfo"
+        },
+        {
+          "type": "KMSSettings"
+        },
+        {
+          "type": "ResourceSettings"
+        },
+        {
+          "type": "SaaEnrollmentResponse"
+        }
+      ]
+    },
+    {
+      "type": "CreateWorkloadOperationMetadata"
+    },
+    {
+      "type": "RestrictAllowedResourcesRequest"
+    },
+    {
+      "type": "RestrictAllowedResourcesResponse"
+    },
+    {
+      "type": "AcknowledgeViolationRequest"
+    },
+    {
+      "type": "AcknowledgeViolationResponse"
+    },
+    {
+      "type": "TimeWindow"
+    },
+    {
+      "type": "ListViolationsRequest"
+    },
+    {
+      "type": "ListViolationsResponse"
+    },
+    {
+      "type": "GetViolationRequest"
+    },
+    {
+      "type": "Violation",
+      "msgs": [
+        {
+          "type": "Remediation"
+        },
+        {
+          "type": "Instructions"
+        },
+        {
+          "type": "Gcloud"
+        },
+        {
+          "type": "Console"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "assuredworkloads/apiv1/assuredworkloadspb/assuredworkloads.pb.go",
+    "pkg": "assuredworkloadspb",
+    "pkg_full": "cloud.google.com/go/assuredworkloads/apiv1/assuredworkloadspb"
+  }
+}

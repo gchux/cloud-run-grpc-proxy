@@ -1,0 +1,225 @@
+{
+  "proto": "google/cloud/bigquery/dataexchange/v1beta1/dataexchange",
+  "pkg": "google.cloud.bigquery.dataexchange.v1beta1",
+  "svcs": [
+    {
+      "svc": "AnalyticsHubService",
+      "host": "analyticshub.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListDataExchanges",
+          "request": {
+            "type": "ListDataExchangesRequest"
+          },
+          "response": {
+            "type": "ListDataExchangesResponse"
+          }
+        },
+        {
+          "method": "ListOrgDataExchanges",
+          "request": {
+            "type": "ListOrgDataExchangesRequest"
+          },
+          "response": {
+            "type": "ListOrgDataExchangesResponse"
+          }
+        },
+        {
+          "method": "GetDataExchange",
+          "request": {
+            "type": "GetDataExchangeRequest"
+          },
+          "response": {
+            "type": "DataExchange"
+          }
+        },
+        {
+          "method": "CreateDataExchange",
+          "request": {
+            "type": "CreateDataExchangeRequest"
+          },
+          "response": {
+            "type": "DataExchange"
+          }
+        },
+        {
+          "method": "UpdateDataExchange",
+          "request": {
+            "type": "UpdateDataExchangeRequest"
+          },
+          "response": {
+            "type": "DataExchange"
+          }
+        },
+        {
+          "method": "DeleteDataExchange",
+          "request": {
+            "type": "DeleteDataExchangeRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListListings",
+          "request": {
+            "type": "ListListingsRequest"
+          },
+          "response": {
+            "type": "ListListingsResponse"
+          }
+        },
+        {
+          "method": "GetListing",
+          "request": {
+            "type": "GetListingRequest"
+          },
+          "response": {
+            "type": "Listing"
+          }
+        },
+        {
+          "method": "CreateListing",
+          "request": {
+            "type": "CreateListingRequest"
+          },
+          "response": {
+            "type": "Listing"
+          }
+        },
+        {
+          "method": "UpdateListing",
+          "request": {
+            "type": "UpdateListingRequest"
+          },
+          "response": {
+            "type": "Listing"
+          }
+        },
+        {
+          "method": "DeleteListing",
+          "request": {
+            "type": "DeleteListingRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "SubscribeListing",
+          "request": {
+            "type": "SubscribeListingRequest"
+          },
+          "response": {
+            "type": "SubscribeListingResponse"
+          }
+        },
+        {
+          "method": "GetIamPolicy",
+          "request": {
+            "type": "google.iam.v1.GetIamPolicyRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.Policy"
+          }
+        },
+        {
+          "method": "SetIamPolicy",
+          "request": {
+            "type": "google.iam.v1.SetIamPolicyRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.Policy"
+          }
+        },
+        {
+          "method": "TestIamPermissions",
+          "request": {
+            "type": "google.iam.v1.TestIamPermissionsRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.TestIamPermissionsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "DataExchange"
+    },
+    {
+      "type": "DataProvider"
+    },
+    {
+      "type": "Publisher"
+    },
+    {
+      "type": "DestinationDatasetReference"
+    },
+    {
+      "type": "DestinationDataset"
+    },
+    {
+      "type": "Listing",
+      "msgs": [
+        {
+          "type": "BigQueryDatasetSource"
+        }
+      ]
+    },
+    {
+      "type": "ListDataExchangesRequest"
+    },
+    {
+      "type": "ListDataExchangesResponse"
+    },
+    {
+      "type": "ListOrgDataExchangesRequest"
+    },
+    {
+      "type": "ListOrgDataExchangesResponse"
+    },
+    {
+      "type": "GetDataExchangeRequest"
+    },
+    {
+      "type": "CreateDataExchangeRequest"
+    },
+    {
+      "type": "UpdateDataExchangeRequest"
+    },
+    {
+      "type": "DeleteDataExchangeRequest"
+    },
+    {
+      "type": "ListListingsRequest"
+    },
+    {
+      "type": "ListListingsResponse"
+    },
+    {
+      "type": "GetListingRequest"
+    },
+    {
+      "type": "CreateListingRequest"
+    },
+    {
+      "type": "UpdateListingRequest"
+    },
+    {
+      "type": "DeleteListingRequest"
+    },
+    {
+      "type": "SubscribeListingRequest"
+    },
+    {
+      "type": "SubscribeListingResponse"
+    }
+  ],
+  "go": {
+    "src": "bigquery/dataexchange/apiv1beta1/dataexchangepb/dataexchange.pb.go",
+    "pkg": "dataexchangepb",
+    "pkg_full": "cloud.google.com/go/bigquery/dataexchange/apiv1beta1/dataexchangepb"
+  }
+}

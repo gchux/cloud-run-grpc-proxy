@@ -1,0 +1,117 @@
+{
+  "proto": "google/cloud/gkehub/v1beta/feature",
+  "pkg": "google.cloud.gkehub.v1beta",
+  "msgs": [
+    {
+      "type": "Feature"
+    },
+    {
+      "type": "FeatureResourceState"
+    },
+    {
+      "type": "FeatureState"
+    },
+    {
+      "type": "CommonFeatureSpec"
+    },
+    {
+      "type": "CommonFeatureState"
+    },
+    {
+      "type": "MembershipFeatureSpec"
+    },
+    {
+      "type": "MembershipFeatureState"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/gkehub/v1beta/feature.pb.go",
+    "pkg": "gkehubpb",
+    "pkg_full": "cloud.google.com/go/gkehub/apiv1beta/gkehubpb"
+  }
+}
+{
+  "proto": "google/cloud/gkehub/v1beta/service",
+  "pkg": "google.cloud.gkehub.v1beta",
+  "svcs": [
+    {
+      "svc": "GkeHub",
+      "host": "gkehub.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListFeatures",
+          "request": {
+            "type": "ListFeaturesRequest"
+          },
+          "response": {
+            "type": "ListFeaturesResponse"
+          }
+        },
+        {
+          "method": "GetFeature",
+          "request": {
+            "type": "GetFeatureRequest"
+          },
+          "response": {
+            "type": "Feature"
+          }
+        },
+        {
+          "method": "CreateFeature",
+          "request": {
+            "type": "CreateFeatureRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteFeature",
+          "request": {
+            "type": "DeleteFeatureRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateFeature",
+          "request": {
+            "type": "UpdateFeatureRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ListFeaturesRequest"
+    },
+    {
+      "type": "ListFeaturesResponse"
+    },
+    {
+      "type": "GetFeatureRequest"
+    },
+    {
+      "type": "CreateFeatureRequest"
+    },
+    {
+      "type": "DeleteFeatureRequest"
+    },
+    {
+      "type": "UpdateFeatureRequest"
+    },
+    {
+      "type": "OperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/gkehub/v1beta/service.pb.go",
+    "pkg": "gkehubpb",
+    "pkg_full": "cloud.google.com/go/gkehub/apiv1beta/gkehubpb"
+  }
+}

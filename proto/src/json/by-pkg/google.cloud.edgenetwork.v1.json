@@ -1,0 +1,443 @@
+{
+  "proto": "google/cloud/edgenetwork/v1/resources",
+  "pkg": "google.cloud.edgenetwork.v1",
+  "msgs": [
+    {
+      "type": "Zone"
+    },
+    {
+      "type": "Network"
+    },
+    {
+      "type": "Subnet"
+    },
+    {
+      "type": "Interconnect"
+    },
+    {
+      "type": "InterconnectAttachment"
+    },
+    {
+      "type": "Router",
+      "msgs": [
+        {
+          "type": "Interface"
+        },
+        {
+          "type": "BgpPeer"
+        },
+        {
+          "type": "Bgp"
+        }
+      ]
+    },
+    {
+      "type": "LinkLayerAddress"
+    },
+    {
+      "type": "SubnetStatus"
+    },
+    {
+      "type": "InterconnectDiagnostics",
+      "msgs": [
+        {
+          "type": "LinkStatus"
+        },
+        {
+          "type": "PacketCounts"
+        },
+        {
+          "type": "LinkLACPStatus"
+        },
+        {
+          "type": "LinkLLDPStatus"
+        }
+      ]
+    },
+    {
+      "type": "RouterStatus",
+      "msgs": [
+        {
+          "type": "BgpPeerStatus"
+        },
+        {
+          "type": "PrefixCounter"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "edgenetwork/apiv1/edgenetworkpb/resources.pb.go",
+    "pkg": "edgenetworkpb",
+    "pkg_full": "cloud.google.com/go/edgenetwork/apiv1/edgenetworkpb"
+  }
+}
+{
+  "proto": "google/cloud/edgenetwork/v1/service",
+  "pkg": "google.cloud.edgenetwork.v1",
+  "svcs": [
+    {
+      "svc": "EdgeNetwork",
+      "host": "edgenetwork.googleapis.com",
+      "rpcs": [
+        {
+          "method": "InitializeZone",
+          "request": {
+            "type": "InitializeZoneRequest"
+          },
+          "response": {
+            "type": "InitializeZoneResponse"
+          }
+        },
+        {
+          "method": "ListZones",
+          "request": {
+            "type": "ListZonesRequest"
+          },
+          "response": {
+            "type": "ListZonesResponse"
+          }
+        },
+        {
+          "method": "GetZone",
+          "request": {
+            "type": "GetZoneRequest"
+          },
+          "response": {
+            "type": "Zone"
+          }
+        },
+        {
+          "method": "ListNetworks",
+          "request": {
+            "type": "ListNetworksRequest"
+          },
+          "response": {
+            "type": "ListNetworksResponse"
+          }
+        },
+        {
+          "method": "GetNetwork",
+          "request": {
+            "type": "GetNetworkRequest"
+          },
+          "response": {
+            "type": "Network"
+          }
+        },
+        {
+          "method": "DiagnoseNetwork",
+          "request": {
+            "type": "DiagnoseNetworkRequest"
+          },
+          "response": {
+            "type": "DiagnoseNetworkResponse"
+          }
+        },
+        {
+          "method": "CreateNetwork",
+          "request": {
+            "type": "CreateNetworkRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteNetwork",
+          "request": {
+            "type": "DeleteNetworkRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListSubnets",
+          "request": {
+            "type": "ListSubnetsRequest"
+          },
+          "response": {
+            "type": "ListSubnetsResponse"
+          }
+        },
+        {
+          "method": "GetSubnet",
+          "request": {
+            "type": "GetSubnetRequest"
+          },
+          "response": {
+            "type": "Subnet"
+          }
+        },
+        {
+          "method": "CreateSubnet",
+          "request": {
+            "type": "CreateSubnetRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateSubnet",
+          "request": {
+            "type": "UpdateSubnetRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteSubnet",
+          "request": {
+            "type": "DeleteSubnetRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListInterconnects",
+          "request": {
+            "type": "ListInterconnectsRequest"
+          },
+          "response": {
+            "type": "ListInterconnectsResponse"
+          }
+        },
+        {
+          "method": "GetInterconnect",
+          "request": {
+            "type": "GetInterconnectRequest"
+          },
+          "response": {
+            "type": "Interconnect"
+          }
+        },
+        {
+          "method": "DiagnoseInterconnect",
+          "request": {
+            "type": "DiagnoseInterconnectRequest"
+          },
+          "response": {
+            "type": "DiagnoseInterconnectResponse"
+          }
+        },
+        {
+          "method": "ListInterconnectAttachments",
+          "request": {
+            "type": "ListInterconnectAttachmentsRequest"
+          },
+          "response": {
+            "type": "ListInterconnectAttachmentsResponse"
+          }
+        },
+        {
+          "method": "GetInterconnectAttachment",
+          "request": {
+            "type": "GetInterconnectAttachmentRequest"
+          },
+          "response": {
+            "type": "InterconnectAttachment"
+          }
+        },
+        {
+          "method": "CreateInterconnectAttachment",
+          "request": {
+            "type": "CreateInterconnectAttachmentRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteInterconnectAttachment",
+          "request": {
+            "type": "DeleteInterconnectAttachmentRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListRouters",
+          "request": {
+            "type": "ListRoutersRequest"
+          },
+          "response": {
+            "type": "ListRoutersResponse"
+          }
+        },
+        {
+          "method": "GetRouter",
+          "request": {
+            "type": "GetRouterRequest"
+          },
+          "response": {
+            "type": "Router"
+          }
+        },
+        {
+          "method": "DiagnoseRouter",
+          "request": {
+            "type": "DiagnoseRouterRequest"
+          },
+          "response": {
+            "type": "DiagnoseRouterResponse"
+          }
+        },
+        {
+          "method": "CreateRouter",
+          "request": {
+            "type": "CreateRouterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateRouter",
+          "request": {
+            "type": "UpdateRouterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteRouter",
+          "request": {
+            "type": "DeleteRouterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ListZonesRequest"
+    },
+    {
+      "type": "ListZonesResponse"
+    },
+    {
+      "type": "GetZoneRequest"
+    },
+    {
+      "type": "ListNetworksRequest"
+    },
+    {
+      "type": "ListNetworksResponse"
+    },
+    {
+      "type": "GetNetworkRequest"
+    },
+    {
+      "type": "CreateNetworkRequest"
+    },
+    {
+      "type": "DeleteNetworkRequest"
+    },
+    {
+      "type": "ListSubnetsRequest"
+    },
+    {
+      "type": "ListSubnetsResponse"
+    },
+    {
+      "type": "GetSubnetRequest"
+    },
+    {
+      "type": "CreateSubnetRequest"
+    },
+    {
+      "type": "UpdateSubnetRequest"
+    },
+    {
+      "type": "DeleteSubnetRequest"
+    },
+    {
+      "type": "ListInterconnectsRequest"
+    },
+    {
+      "type": "ListInterconnectsResponse"
+    },
+    {
+      "type": "GetInterconnectRequest"
+    },
+    {
+      "type": "ListInterconnectAttachmentsRequest"
+    },
+    {
+      "type": "ListInterconnectAttachmentsResponse"
+    },
+    {
+      "type": "GetInterconnectAttachmentRequest"
+    },
+    {
+      "type": "CreateInterconnectAttachmentRequest"
+    },
+    {
+      "type": "DeleteInterconnectAttachmentRequest"
+    },
+    {
+      "type": "ListRoutersRequest"
+    },
+    {
+      "type": "ListRoutersResponse"
+    },
+    {
+      "type": "GetRouterRequest"
+    },
+    {
+      "type": "CreateRouterRequest"
+    },
+    {
+      "type": "UpdateRouterRequest"
+    },
+    {
+      "type": "DeleteRouterRequest"
+    },
+    {
+      "type": "OperationMetadata"
+    },
+    {
+      "type": "DiagnoseNetworkRequest"
+    },
+    {
+      "type": "DiagnoseNetworkResponse",
+      "msgs": [
+        {
+          "type": "NetworkStatus"
+        }
+      ]
+    },
+    {
+      "type": "DiagnoseInterconnectRequest"
+    },
+    {
+      "type": "DiagnoseInterconnectResponse"
+    },
+    {
+      "type": "DiagnoseRouterRequest"
+    },
+    {
+      "type": "DiagnoseRouterResponse"
+    },
+    {
+      "type": "InitializeZoneRequest"
+    },
+    {
+      "type": "InitializeZoneResponse"
+    }
+  ],
+  "go": {
+    "src": "edgenetwork/apiv1/edgenetworkpb/service.pb.go",
+    "pkg": "edgenetworkpb",
+    "pkg_full": "cloud.google.com/go/edgenetwork/apiv1/edgenetworkpb"
+  }
+}

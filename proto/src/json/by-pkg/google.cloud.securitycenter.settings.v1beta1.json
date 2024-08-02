@@ -1,0 +1,290 @@
+{
+  "proto": "google/cloud/securitycenter/settings/v1beta1/sink_settings",
+  "pkg": "google.cloud.securitycenter.settings.v1beta1",
+  "msgs": [
+    {
+      "type": "SinkSettings"
+    }
+  ],
+  "go": {
+    "src": "securitycenter/settings/apiv1beta1/settingspb/sink_settings.pb.go",
+    "pkg": "settingspb",
+    "pkg_full": "cloud.google.com/go/securitycenter/settings/apiv1beta1/settingspb"
+  }
+}
+{
+  "proto": "google/cloud/securitycenter/settings/v1beta1/detector",
+  "pkg": "google.cloud.securitycenter.settings.v1beta1",
+  "msgs": [
+    {
+      "type": "Detector"
+    }
+  ],
+  "go": {
+    "src": "securitycenter/settings/apiv1beta1/settingspb/detector.pb.go",
+    "pkg": "settingspb",
+    "pkg_full": "cloud.google.com/go/securitycenter/settings/apiv1beta1/settingspb"
+  }
+}
+{
+  "proto": "google/cloud/securitycenter/settings/v1beta1/billing_settings",
+  "pkg": "google.cloud.securitycenter.settings.v1beta1",
+  "msgs": [
+    {
+      "type": "BillingSettings"
+    }
+  ],
+  "go": {
+    "src": "securitycenter/settings/apiv1beta1/settingspb/billing_settings.pb.go",
+    "pkg": "settingspb",
+    "pkg_full": "cloud.google.com/go/securitycenter/settings/apiv1beta1/settingspb"
+  }
+}
+{
+  "proto": "google/cloud/securitycenter/settings/v1beta1/component_settings",
+  "pkg": "google.cloud.securitycenter.settings.v1beta1",
+  "msgs": [
+    {
+      "type": "ComponentSettings",
+      "msgs": [
+        {
+          "type": "DetectorSettings"
+        }
+      ]
+    },
+    {
+      "type": "WebSecurityScanner"
+    },
+    {
+      "type": "ContainerThreatDetectionSettings"
+    },
+    {
+      "type": "EventThreatDetectionSettings"
+    },
+    {
+      "type": "SecurityHealthAnalyticsSettings",
+      "msgs": [
+        {
+          "type": "NonOrgIamMemberSettings"
+        },
+        {
+          "type": "AdminServiceAccountSettings"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "securitycenter/settings/apiv1beta1/settingspb/component_settings.pb.go",
+    "pkg": "settingspb",
+    "pkg_full": "cloud.google.com/go/securitycenter/settings/apiv1beta1/settingspb"
+  }
+}
+{
+  "proto": "google/cloud/securitycenter/settings/v1beta1/securitycenter_settings_service",
+  "pkg": "google.cloud.securitycenter.settings.v1beta1",
+  "svcs": [
+    {
+      "svc": "SecurityCenterSettingsService",
+      "host": "securitycenter.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetServiceAccount",
+          "request": {
+            "type": "GetServiceAccountRequest"
+          },
+          "response": {
+            "type": "ServiceAccount"
+          }
+        },
+        {
+          "method": "GetSettings",
+          "request": {
+            "type": "GetSettingsRequest"
+          },
+          "response": {
+            "type": "Settings"
+          }
+        },
+        {
+          "method": "UpdateSettings",
+          "request": {
+            "type": "UpdateSettingsRequest"
+          },
+          "response": {
+            "type": "Settings"
+          }
+        },
+        {
+          "method": "ResetSettings",
+          "request": {
+            "type": "ResetSettingsRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "BatchGetSettings",
+          "request": {
+            "type": "BatchGetSettingsRequest"
+          },
+          "response": {
+            "type": "BatchGetSettingsResponse"
+          }
+        },
+        {
+          "method": "CalculateEffectiveSettings",
+          "request": {
+            "type": "CalculateEffectiveSettingsRequest"
+          },
+          "response": {
+            "type": "Settings"
+          }
+        },
+        {
+          "method": "BatchCalculateEffectiveSettings",
+          "request": {
+            "type": "BatchCalculateEffectiveSettingsRequest"
+          },
+          "response": {
+            "type": "BatchCalculateEffectiveSettingsResponse"
+          }
+        },
+        {
+          "method": "GetComponentSettings",
+          "request": {
+            "type": "GetComponentSettingsRequest"
+          },
+          "response": {
+            "type": "ComponentSettings"
+          }
+        },
+        {
+          "method": "UpdateComponentSettings",
+          "request": {
+            "type": "UpdateComponentSettingsRequest"
+          },
+          "response": {
+            "type": "ComponentSettings"
+          }
+        },
+        {
+          "method": "ResetComponentSettings",
+          "request": {
+            "type": "ResetComponentSettingsRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "CalculateEffectiveComponentSettings",
+          "request": {
+            "type": "CalculateEffectiveComponentSettingsRequest"
+          },
+          "response": {
+            "type": "ComponentSettings"
+          }
+        },
+        {
+          "method": "ListDetectors",
+          "request": {
+            "type": "ListDetectorsRequest"
+          },
+          "response": {
+            "type": "ListDetectorsResponse"
+          }
+        },
+        {
+          "method": "ListComponents",
+          "request": {
+            "type": "ListComponentsRequest"
+          },
+          "response": {
+            "type": "ListComponentsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GetServiceAccountRequest"
+    },
+    {
+      "type": "ServiceAccount"
+    },
+    {
+      "type": "GetSettingsRequest"
+    },
+    {
+      "type": "UpdateSettingsRequest"
+    },
+    {
+      "type": "ResetSettingsRequest"
+    },
+    {
+      "type": "BatchGetSettingsRequest"
+    },
+    {
+      "type": "BatchGetSettingsResponse"
+    },
+    {
+      "type": "CalculateEffectiveSettingsRequest"
+    },
+    {
+      "type": "BatchCalculateEffectiveSettingsRequest"
+    },
+    {
+      "type": "BatchCalculateEffectiveSettingsResponse"
+    },
+    {
+      "type": "GetComponentSettingsRequest"
+    },
+    {
+      "type": "UpdateComponentSettingsRequest"
+    },
+    {
+      "type": "ResetComponentSettingsRequest"
+    },
+    {
+      "type": "CalculateEffectiveComponentSettingsRequest"
+    },
+    {
+      "type": "ListDetectorsRequest"
+    },
+    {
+      "type": "ListDetectorsResponse"
+    },
+    {
+      "type": "ListComponentsRequest"
+    },
+    {
+      "type": "ListComponentsResponse"
+    }
+  ],
+  "go": {
+    "src": "securitycenter/settings/apiv1beta1/settingspb/securitycenter_settings_service.pb.go",
+    "pkg": "settingspb",
+    "pkg_full": "cloud.google.com/go/securitycenter/settings/apiv1beta1/settingspb"
+  }
+}
+{
+  "proto": "google/cloud/securitycenter/settings/v1beta1/settings",
+  "pkg": "google.cloud.securitycenter.settings.v1beta1",
+  "msgs": [
+    {
+      "type": "Settings",
+      "msgs": [
+        {
+          "type": "DetectorGroupSettings"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "securitycenter/settings/apiv1beta1/settingspb/settings.pb.go",
+    "pkg": "settingspb",
+    "pkg_full": "cloud.google.com/go/securitycenter/settings/apiv1beta1/settingspb"
+  }
+}

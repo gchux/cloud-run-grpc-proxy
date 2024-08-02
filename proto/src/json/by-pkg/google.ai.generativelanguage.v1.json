@@ -1,0 +1,220 @@
+{
+  "proto": "google/ai/generativelanguage/v1/model_service",
+  "pkg": "google.ai.generativelanguage.v1",
+  "svcs": [
+    {
+      "svc": "ModelService",
+      "host": "generativelanguage.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetModel",
+          "request": {
+            "type": "GetModelRequest"
+          },
+          "response": {
+            "type": "Model"
+          }
+        },
+        {
+          "method": "ListModels",
+          "request": {
+            "type": "ListModelsRequest"
+          },
+          "response": {
+            "type": "ListModelsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GetModelRequest"
+    },
+    {
+      "type": "ListModelsRequest"
+    },
+    {
+      "type": "ListModelsResponse"
+    }
+  ],
+  "go": {
+    "src": "ai/generativelanguage/apiv1/generativelanguagepb/model_service.pb.go",
+    "pkg": "generativelanguagepb",
+    "pkg_full": "cloud.google.com/go/ai/generativelanguage/apiv1/generativelanguagepb"
+  }
+}
+{
+  "proto": "google/ai/generativelanguage/v1/generative_service",
+  "pkg": "google.ai.generativelanguage.v1",
+  "svcs": [
+    {
+      "svc": "GenerativeService",
+      "host": "generativelanguage.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GenerateContent",
+          "request": {
+            "type": "GenerateContentRequest"
+          },
+          "response": {
+            "type": "GenerateContentResponse"
+          }
+        },
+        {
+          "method": "StreamGenerateContent",
+          "request": {
+            "type": "GenerateContentRequest"
+          },
+          "response": {
+            "type": "GenerateContentResponse",
+            "stream": true
+          }
+        },
+        {
+          "method": "EmbedContent",
+          "request": {
+            "type": "EmbedContentRequest"
+          },
+          "response": {
+            "type": "EmbedContentResponse"
+          }
+        },
+        {
+          "method": "BatchEmbedContents",
+          "request": {
+            "type": "BatchEmbedContentsRequest"
+          },
+          "response": {
+            "type": "BatchEmbedContentsResponse"
+          }
+        },
+        {
+          "method": "CountTokens",
+          "request": {
+            "type": "CountTokensRequest"
+          },
+          "response": {
+            "type": "CountTokensResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GenerateContentRequest"
+    },
+    {
+      "type": "GenerationConfig"
+    },
+    {
+      "type": "GenerateContentResponse",
+      "msgs": [
+        {
+          "type": "PromptFeedback"
+        },
+        {
+          "type": "UsageMetadata"
+        }
+      ]
+    },
+    {
+      "type": "Candidate"
+    },
+    {
+      "type": "EmbedContentRequest"
+    },
+    {
+      "type": "ContentEmbedding"
+    },
+    {
+      "type": "EmbedContentResponse"
+    },
+    {
+      "type": "BatchEmbedContentsRequest"
+    },
+    {
+      "type": "BatchEmbedContentsResponse"
+    },
+    {
+      "type": "CountTokensRequest"
+    },
+    {
+      "type": "CountTokensResponse"
+    }
+  ],
+  "go": {
+    "src": "ai/generativelanguage/apiv1/generativelanguagepb/generative_service.pb.go",
+    "pkg": "generativelanguagepb",
+    "pkg_full": "cloud.google.com/go/ai/generativelanguage/apiv1/generativelanguagepb"
+  }
+}
+{
+  "proto": "google/ai/generativelanguage/v1/citation",
+  "pkg": "google.ai.generativelanguage.v1",
+  "msgs": [
+    {
+      "type": "CitationMetadata"
+    },
+    {
+      "type": "CitationSource"
+    }
+  ],
+  "go": {
+    "src": "ai/generativelanguage/apiv1/generativelanguagepb/citation.pb.go",
+    "pkg": "generativelanguagepb",
+    "pkg_full": "cloud.google.com/go/ai/generativelanguage/apiv1/generativelanguagepb"
+  }
+}
+{
+  "proto": "google/ai/generativelanguage/v1/model",
+  "pkg": "google.ai.generativelanguage.v1",
+  "msgs": [
+    {
+      "type": "Model"
+    }
+  ],
+  "go": {
+    "src": "ai/generativelanguage/apiv1/generativelanguagepb/model.pb.go",
+    "pkg": "generativelanguagepb",
+    "pkg_full": "cloud.google.com/go/ai/generativelanguage/apiv1/generativelanguagepb"
+  }
+}
+{
+  "proto": "google/ai/generativelanguage/v1/safety",
+  "pkg": "google.ai.generativelanguage.v1",
+  "msgs": [
+    {
+      "type": "SafetyRating"
+    },
+    {
+      "type": "SafetySetting"
+    }
+  ],
+  "go": {
+    "src": "ai/generativelanguage/apiv1/generativelanguagepb/safety.pb.go",
+    "pkg": "generativelanguagepb",
+    "pkg_full": "cloud.google.com/go/ai/generativelanguage/apiv1/generativelanguagepb"
+  }
+}
+{
+  "proto": "google/ai/generativelanguage/v1/content",
+  "pkg": "google.ai.generativelanguage.v1",
+  "msgs": [
+    {
+      "type": "Content"
+    },
+    {
+      "type": "Part"
+    },
+    {
+      "type": "Blob"
+    }
+  ],
+  "go": {
+    "src": "ai/generativelanguage/apiv1/generativelanguagepb/content.pb.go",
+    "pkg": "generativelanguagepb",
+    "pkg_full": "cloud.google.com/go/ai/generativelanguage/apiv1/generativelanguagepb"
+  }
+}

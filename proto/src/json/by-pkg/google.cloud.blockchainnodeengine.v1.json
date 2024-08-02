@@ -1,0 +1,107 @@
+{
+  "proto": "google/cloud/blockchainnodeengine/v1/blockchainnodeengine",
+  "pkg": "google.cloud.blockchainnodeengine.v1",
+  "svcs": [
+    {
+      "svc": "BlockchainNodeEngine",
+      "host": "blockchainnodeengine.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListBlockchainNodes",
+          "request": {
+            "type": "ListBlockchainNodesRequest"
+          },
+          "response": {
+            "type": "ListBlockchainNodesResponse"
+          }
+        },
+        {
+          "method": "GetBlockchainNode",
+          "request": {
+            "type": "GetBlockchainNodeRequest"
+          },
+          "response": {
+            "type": "BlockchainNode"
+          }
+        },
+        {
+          "method": "CreateBlockchainNode",
+          "request": {
+            "type": "CreateBlockchainNodeRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateBlockchainNode",
+          "request": {
+            "type": "UpdateBlockchainNodeRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteBlockchainNode",
+          "request": {
+            "type": "DeleteBlockchainNodeRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "BlockchainNode",
+      "msgs": [
+        {
+          "type": "ConnectionInfo"
+        },
+        {
+          "type": "EndpointInfo"
+        },
+        {
+          "type": "EthereumDetails"
+        },
+        {
+          "type": "GethDetails"
+        },
+        {
+          "type": "EthereumEndpoints"
+        },
+        {
+          "type": "ValidatorConfig"
+        }
+      ]
+    },
+    {
+      "type": "ListBlockchainNodesRequest"
+    },
+    {
+      "type": "ListBlockchainNodesResponse"
+    },
+    {
+      "type": "GetBlockchainNodeRequest"
+    },
+    {
+      "type": "CreateBlockchainNodeRequest"
+    },
+    {
+      "type": "UpdateBlockchainNodeRequest"
+    },
+    {
+      "type": "DeleteBlockchainNodeRequest"
+    },
+    {
+      "type": "OperationMetadata"
+    }
+  ],
+  "go": {
+    "pkg": "blockchainnodeenginepb",
+    "pkg_full": "cloud.google.com/go/blockchainnodeengine/apiv1/blockchainnodeenginepb"
+  }
+}

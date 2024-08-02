@@ -1,0 +1,388 @@
+{
+  "proto": "google/maps/routing/v2/toll_info",
+  "pkg": "google.maps.routing.v2",
+  "msgs": [
+    {
+      "type": "TollInfo"
+    }
+  ],
+  "go": {
+    "src": "maps/routing/apiv2/routingpb/toll_info.pb.go",
+    "pkg": "routingpb",
+    "pkg_full": "cloud.google.com/go/maps/routing/apiv2/routingpb"
+  }
+}
+{
+  "proto": "google/maps/routing/v2/maneuver",
+  "pkg": "google.maps.routing.v2",
+  "go": {
+    "src": "maps/routing/apiv2/routingpb/maneuver.pb.go",
+    "pkg": "routingpb",
+    "pkg_full": "cloud.google.com/go/maps/routing/apiv2/routingpb"
+  }
+}
+{
+  "proto": "google/maps/routing/v2/route_travel_mode",
+  "pkg": "google.maps.routing.v2",
+  "go": {
+    "src": "maps/routing/apiv2/routingpb/route_travel_mode.pb.go",
+    "pkg": "routingpb",
+    "pkg_full": "cloud.google.com/go/maps/routing/apiv2/routingpb"
+  }
+}
+{
+  "proto": "google/maps/routing/v2/geocoding_results",
+  "pkg": "google.maps.routing.v2",
+  "msgs": [
+    {
+      "type": "GeocodingResults"
+    },
+    {
+      "type": "GeocodedWaypoint"
+    }
+  ],
+  "go": {
+    "src": "maps/routing/apiv2/routingpb/geocoding_results.pb.go",
+    "pkg": "routingpb",
+    "pkg_full": "cloud.google.com/go/maps/routing/apiv2/routingpb"
+  }
+}
+{
+  "proto": "google/maps/routing/v2/route_label",
+  "pkg": "google.maps.routing.v2",
+  "go": {
+    "src": "maps/routing/apiv2/routingpb/route_label.pb.go",
+    "pkg": "routingpb",
+    "pkg_full": "cloud.google.com/go/maps/routing/apiv2/routingpb"
+  }
+}
+{
+  "proto": "google/maps/routing/v2/units",
+  "pkg": "google.maps.routing.v2",
+  "go": {
+    "src": "maps/routing/apiv2/routingpb/units.pb.go",
+    "pkg": "routingpb",
+    "pkg_full": "cloud.google.com/go/maps/routing/apiv2/routingpb"
+  }
+}
+{
+  "proto": "google/maps/routing/v2/location",
+  "pkg": "google.maps.routing.v2",
+  "msgs": [
+    {
+      "type": "Location"
+    }
+  ],
+  "go": {
+    "src": "maps/routing/apiv2/routingpb/location.pb.go",
+    "pkg": "routingpb",
+    "pkg_full": "cloud.google.com/go/maps/routing/apiv2/routingpb"
+  }
+}
+{
+  "proto": "google/maps/routing/v2/waypoint",
+  "pkg": "google.maps.routing.v2",
+  "msgs": [
+    {
+      "type": "Waypoint"
+    }
+  ],
+  "go": {
+    "src": "maps/routing/apiv2/routingpb/waypoint.pb.go",
+    "pkg": "routingpb",
+    "pkg_full": "cloud.google.com/go/maps/routing/apiv2/routingpb"
+  }
+}
+{
+  "proto": "google/maps/routing/v2/polyline",
+  "pkg": "google.maps.routing.v2",
+  "msgs": [
+    {
+      "type": "Polyline"
+    }
+  ],
+  "go": {
+    "src": "maps/routing/apiv2/routingpb/polyline.pb.go",
+    "pkg": "routingpb",
+    "pkg_full": "cloud.google.com/go/maps/routing/apiv2/routingpb"
+  }
+}
+{
+  "proto": "google/maps/routing/v2/localized_time",
+  "pkg": "google.maps.routing.v2",
+  "msgs": [
+    {
+      "type": "LocalizedTime"
+    }
+  ],
+  "go": {
+    "src": "maps/routing/apiv2/routingpb/localized_time.pb.go",
+    "pkg": "routingpb",
+    "pkg_full": "cloud.google.com/go/maps/routing/apiv2/routingpb"
+  }
+}
+{
+  "proto": "google/maps/routing/v2/route",
+  "pkg": "google.maps.routing.v2",
+  "msgs": [
+    {
+      "type": "Route",
+      "msgs": [
+        {
+          "type": "RouteLocalizedValues"
+        }
+      ]
+    },
+    {
+      "type": "RouteTravelAdvisory"
+    },
+    {
+      "type": "RouteLegTravelAdvisory"
+    },
+    {
+      "type": "RouteLegStepTravelAdvisory"
+    },
+    {
+      "type": "RouteLeg",
+      "msgs": [
+        {
+          "type": "RouteLegLocalizedValues"
+        },
+        {
+          "type": "StepsOverview"
+        },
+        {
+          "type": "MultiModalSegment"
+        }
+      ]
+    },
+    {
+      "type": "RouteLegStep",
+      "msgs": [
+        {
+          "type": "RouteLegStepLocalizedValues"
+        }
+      ]
+    },
+    {
+      "type": "RouteLegStepTransitDetails",
+      "msgs": [
+        {
+          "type": "TransitStopDetails"
+        },
+        {
+          "type": "TransitDetailsLocalizedValues"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "maps/routing/apiv2/routingpb/route.pb.go",
+    "pkg": "routingpb",
+    "pkg_full": "cloud.google.com/go/maps/routing/apiv2/routingpb"
+  }
+}
+{
+  "proto": "google/maps/routing/v2/routes_service",
+  "pkg": "google.maps.routing.v2",
+  "svcs": [
+    {
+      "svc": "Routes",
+      "host": "routes.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ComputeRoutes",
+          "request": {
+            "type": "ComputeRoutesRequest"
+          },
+          "response": {
+            "type": "ComputeRoutesResponse"
+          }
+        },
+        {
+          "method": "ComputeRouteMatrix",
+          "request": {
+            "type": "ComputeRouteMatrixRequest"
+          },
+          "response": {
+            "type": "RouteMatrixElement",
+            "stream": true
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ComputeRoutesRequest"
+    },
+    {
+      "type": "ComputeRoutesResponse"
+    },
+    {
+      "type": "ComputeRouteMatrixRequest"
+    },
+    {
+      "type": "RouteMatrixOrigin"
+    },
+    {
+      "type": "RouteMatrixDestination"
+    },
+    {
+      "type": "RouteMatrixElement",
+      "msgs": [
+        {
+          "type": "LocalizedValues"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "maps/routing/apiv2/routingpb/routes_service.pb.go",
+    "pkg": "routingpb",
+    "pkg_full": "cloud.google.com/go/maps/routing/apiv2/routingpb"
+  }
+}
+{
+  "proto": "google/maps/routing/v2/navigation_instruction",
+  "pkg": "google.maps.routing.v2",
+  "msgs": [
+    {
+      "type": "NavigationInstruction"
+    }
+  ],
+  "go": {
+    "src": "maps/routing/apiv2/routingpb/navigation_instruction.pb.go",
+    "pkg": "routingpb",
+    "pkg_full": "cloud.google.com/go/maps/routing/apiv2/routingpb"
+  }
+}
+{
+  "proto": "google/maps/routing/v2/speed_reading_interval",
+  "pkg": "google.maps.routing.v2",
+  "msgs": [
+    {
+      "type": "SpeedReadingInterval"
+    }
+  ],
+  "go": {
+    "src": "maps/routing/apiv2/routingpb/speed_reading_interval.pb.go",
+    "pkg": "routingpb",
+    "pkg_full": "cloud.google.com/go/maps/routing/apiv2/routingpb"
+  }
+}
+{
+  "proto": "google/maps/routing/v2/toll_passes",
+  "pkg": "google.maps.routing.v2",
+  "go": {
+    "src": "maps/routing/apiv2/routingpb/toll_passes.pb.go",
+    "pkg": "routingpb",
+    "pkg_full": "cloud.google.com/go/maps/routing/apiv2/routingpb"
+  }
+}
+{
+  "proto": "google/maps/routing/v2/transit",
+  "pkg": "google.maps.routing.v2",
+  "msgs": [
+    {
+      "type": "TransitAgency"
+    },
+    {
+      "type": "TransitLine"
+    },
+    {
+      "type": "TransitStop"
+    },
+    {
+      "type": "TransitVehicle"
+    }
+  ],
+  "go": {
+    "src": "maps/routing/apiv2/routingpb/transit.pb.go",
+    "pkg": "routingpb",
+    "pkg_full": "cloud.google.com/go/maps/routing/apiv2/routingpb"
+  }
+}
+{
+  "proto": "google/maps/routing/v2/route_modifiers",
+  "pkg": "google.maps.routing.v2",
+  "msgs": [
+    {
+      "type": "RouteModifiers"
+    }
+  ],
+  "go": {
+    "src": "maps/routing/apiv2/routingpb/route_modifiers.pb.go",
+    "pkg": "routingpb",
+    "pkg_full": "cloud.google.com/go/maps/routing/apiv2/routingpb"
+  }
+}
+{
+  "proto": "google/maps/routing/v2/vehicle_emission_type",
+  "pkg": "google.maps.routing.v2",
+  "go": {
+    "src": "maps/routing/apiv2/routingpb/vehicle_emission_type.pb.go",
+    "pkg": "routingpb",
+    "pkg_full": "cloud.google.com/go/maps/routing/apiv2/routingpb"
+  }
+}
+{
+  "proto": "google/maps/routing/v2/fallback_info",
+  "pkg": "google.maps.routing.v2",
+  "msgs": [
+    {
+      "type": "FallbackInfo"
+    }
+  ],
+  "go": {
+    "src": "maps/routing/apiv2/routingpb/fallback_info.pb.go",
+    "pkg": "routingpb",
+    "pkg_full": "cloud.google.com/go/maps/routing/apiv2/routingpb"
+  }
+}
+{
+  "proto": "google/maps/routing/v2/vehicle_info",
+  "pkg": "google.maps.routing.v2",
+  "msgs": [
+    {
+      "type": "VehicleInfo"
+    }
+  ],
+  "go": {
+    "src": "maps/routing/apiv2/routingpb/vehicle_info.pb.go",
+    "pkg": "routingpb",
+    "pkg_full": "cloud.google.com/go/maps/routing/apiv2/routingpb"
+  }
+}
+{
+  "proto": "google/maps/routing/v2/transit_preferences",
+  "pkg": "google.maps.routing.v2",
+  "msgs": [
+    {
+      "type": "TransitPreferences"
+    }
+  ],
+  "go": {
+    "src": "maps/routing/apiv2/routingpb/transit_preferences.pb.go",
+    "pkg": "routingpb",
+    "pkg_full": "cloud.google.com/go/maps/routing/apiv2/routingpb"
+  }
+}
+{
+  "proto": "google/maps/routing/v2/traffic_model",
+  "pkg": "google.maps.routing.v2",
+  "go": {
+    "src": "maps/routing/apiv2/routingpb/traffic_model.pb.go",
+    "pkg": "routingpb",
+    "pkg_full": "cloud.google.com/go/maps/routing/apiv2/routingpb"
+  }
+}
+{
+  "proto": "google/maps/routing/v2/routing_preference",
+  "pkg": "google.maps.routing.v2",
+  "go": {
+    "src": "maps/routing/apiv2/routingpb/routing_preference.pb.go",
+    "pkg": "routingpb",
+    "pkg_full": "cloud.google.com/go/maps/routing/apiv2/routingpb"
+  }
+}

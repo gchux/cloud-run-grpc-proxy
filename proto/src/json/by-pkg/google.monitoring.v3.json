@@ -1,0 +1,1154 @@
+{
+  "proto": "google/monitoring/v3/mutation_record",
+  "pkg": "google.monitoring.v3",
+  "msgs": [
+    {
+      "type": "MutationRecord"
+    }
+  ],
+  "go": {
+    "src": "monitoring/apiv3/v2/monitoringpb/mutation_record.pb.go",
+    "pkg": "monitoringpb",
+    "pkg_full": "cloud.google.com/go/monitoring/apiv3/v2/monitoringpb"
+  }
+}
+{
+  "proto": "google/monitoring/v3/uptime",
+  "pkg": "google.monitoring.v3",
+  "msgs": [
+    {
+      "type": "InternalChecker"
+    },
+    {
+      "type": "SyntheticMonitorTarget",
+      "msgs": [
+        {
+          "type": "CloudFunctionV2Target"
+        }
+      ]
+    },
+    {
+      "type": "UptimeCheckConfig",
+      "msgs": [
+        {
+          "type": "ResourceGroup"
+        },
+        {
+          "type": "PingConfig"
+        },
+        {
+          "type": "HttpCheck"
+        },
+        {
+          "type": "BasicAuthentication"
+        },
+        {
+          "type": "ResponseStatusCode"
+        },
+        {
+          "type": "ServiceAgentAuthentication"
+        },
+        {
+          "type": "TcpCheck"
+        },
+        {
+          "type": "ContentMatcher"
+        },
+        {
+          "type": "JsonPathMatcher"
+        }
+      ]
+    },
+    {
+      "type": "UptimeCheckIp"
+    }
+  ],
+  "go": {
+    "src": "monitoring/apiv3/v2/monitoringpb/uptime.pb.go",
+    "pkg": "monitoringpb",
+    "pkg_full": "cloud.google.com/go/monitoring/apiv3/v2/monitoringpb"
+  }
+}
+{
+  "proto": "google/monitoring/v3/query_service",
+  "pkg": "google.monitoring.v3",
+  "svcs": [
+    {
+      "svc": "QueryService",
+      "host": "monitoring.googleapis.com",
+      "rpcs": [
+        {
+          "method": "QueryTimeSeries",
+          "request": {
+            "type": "QueryTimeSeriesRequest"
+          },
+          "response": {
+            "type": "QueryTimeSeriesResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "monitoring/apiv3/v2/monitoringpb/query_service.pb.go",
+    "pkg": "monitoringpb",
+    "pkg_full": "cloud.google.com/go/monitoring/apiv3/v2/monitoringpb"
+  }
+}
+{
+  "proto": "google/monitoring/v3/notification_service",
+  "pkg": "google.monitoring.v3",
+  "svcs": [
+    {
+      "svc": "NotificationChannelService",
+      "host": "monitoring.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetNotificationChannelDescriptor",
+          "request": {
+            "type": "GetNotificationChannelDescriptorRequest"
+          },
+          "response": {
+            "type": "NotificationChannelDescriptor"
+          }
+        },
+        {
+          "method": "ListNotificationChannels",
+          "request": {
+            "type": "ListNotificationChannelsRequest"
+          },
+          "response": {
+            "type": "ListNotificationChannelsResponse"
+          }
+        },
+        {
+          "method": "GetNotificationChannel",
+          "request": {
+            "type": "GetNotificationChannelRequest"
+          },
+          "response": {
+            "type": "NotificationChannel"
+          }
+        },
+        {
+          "method": "CreateNotificationChannel",
+          "request": {
+            "type": "CreateNotificationChannelRequest"
+          },
+          "response": {
+            "type": "NotificationChannel"
+          }
+        },
+        {
+          "method": "UpdateNotificationChannel",
+          "request": {
+            "type": "UpdateNotificationChannelRequest"
+          },
+          "response": {
+            "type": "NotificationChannel"
+          }
+        },
+        {
+          "method": "DeleteNotificationChannel",
+          "request": {
+            "type": "DeleteNotificationChannelRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "VerifyNotificationChannel",
+          "request": {
+            "type": "VerifyNotificationChannelRequest"
+          },
+          "response": {
+            "type": "NotificationChannel"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ListNotificationChannelDescriptorsRequest"
+    },
+    {
+      "type": "ListNotificationChannelDescriptorsResponse"
+    },
+    {
+      "type": "GetNotificationChannelDescriptorRequest"
+    },
+    {
+      "type": "CreateNotificationChannelRequest"
+    },
+    {
+      "type": "ListNotificationChannelsRequest"
+    },
+    {
+      "type": "ListNotificationChannelsResponse"
+    },
+    {
+      "type": "GetNotificationChannelRequest"
+    },
+    {
+      "type": "UpdateNotificationChannelRequest"
+    },
+    {
+      "type": "DeleteNotificationChannelRequest"
+    },
+    {
+      "type": "SendNotificationChannelVerificationCodeRequest"
+    },
+    {
+      "type": "GetNotificationChannelVerificationCodeRequest"
+    },
+    {
+      "type": "GetNotificationChannelVerificationCodeResponse"
+    },
+    {
+      "type": "VerifyNotificationChannelRequest"
+    }
+  ],
+  "go": {
+    "src": "monitoring/apiv3/v2/monitoringpb/notification_service.pb.go",
+    "pkg": "monitoringpb",
+    "pkg_full": "cloud.google.com/go/monitoring/apiv3/v2/monitoringpb"
+  }
+}
+{
+  "proto": "google/monitoring/v3/alert_service",
+  "pkg": "google.monitoring.v3",
+  "svcs": [
+    {
+      "svc": "AlertPolicyService",
+      "host": "monitoring.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListAlertPolicies",
+          "request": {
+            "type": "ListAlertPoliciesRequest"
+          },
+          "response": {
+            "type": "ListAlertPoliciesResponse"
+          }
+        },
+        {
+          "method": "GetAlertPolicy",
+          "request": {
+            "type": "GetAlertPolicyRequest"
+          },
+          "response": {
+            "type": "AlertPolicy"
+          }
+        },
+        {
+          "method": "CreateAlertPolicy",
+          "request": {
+            "type": "CreateAlertPolicyRequest"
+          },
+          "response": {
+            "type": "AlertPolicy"
+          }
+        },
+        {
+          "method": "DeleteAlertPolicy",
+          "request": {
+            "type": "DeleteAlertPolicyRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "UpdateAlertPolicy",
+          "request": {
+            "type": "UpdateAlertPolicyRequest"
+          },
+          "response": {
+            "type": "AlertPolicy"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateAlertPolicyRequest"
+    },
+    {
+      "type": "GetAlertPolicyRequest"
+    },
+    {
+      "type": "ListAlertPoliciesRequest"
+    },
+    {
+      "type": "ListAlertPoliciesResponse"
+    },
+    {
+      "type": "UpdateAlertPolicyRequest"
+    },
+    {
+      "type": "DeleteAlertPolicyRequest"
+    }
+  ],
+  "go": {
+    "src": "monitoring/apiv3/v2/monitoringpb/alert_service.pb.go",
+    "pkg": "monitoringpb",
+    "pkg_full": "cloud.google.com/go/monitoring/apiv3/v2/monitoringpb"
+  }
+}
+{
+  "proto": "google/monitoring/v3/group_service",
+  "pkg": "google.monitoring.v3",
+  "svcs": [
+    {
+      "svc": "GroupService",
+      "host": "monitoring.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListGroups",
+          "request": {
+            "type": "ListGroupsRequest"
+          },
+          "response": {
+            "type": "ListGroupsResponse"
+          }
+        },
+        {
+          "method": "GetGroup",
+          "request": {
+            "type": "GetGroupRequest"
+          },
+          "response": {
+            "type": "Group"
+          }
+        },
+        {
+          "method": "CreateGroup",
+          "request": {
+            "type": "CreateGroupRequest"
+          },
+          "response": {
+            "type": "Group"
+          }
+        },
+        {
+          "method": "UpdateGroup",
+          "request": {
+            "type": "UpdateGroupRequest"
+          },
+          "response": {
+            "type": "Group"
+          }
+        },
+        {
+          "method": "DeleteGroup",
+          "request": {
+            "type": "DeleteGroupRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListGroupMembers",
+          "request": {
+            "type": "ListGroupMembersRequest"
+          },
+          "response": {
+            "type": "ListGroupMembersResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ListGroupsRequest"
+    },
+    {
+      "type": "ListGroupsResponse"
+    },
+    {
+      "type": "GetGroupRequest"
+    },
+    {
+      "type": "CreateGroupRequest"
+    },
+    {
+      "type": "UpdateGroupRequest"
+    },
+    {
+      "type": "DeleteGroupRequest"
+    },
+    {
+      "type": "ListGroupMembersRequest"
+    },
+    {
+      "type": "ListGroupMembersResponse"
+    }
+  ],
+  "go": {
+    "src": "monitoring/apiv3/v2/monitoringpb/group_service.pb.go",
+    "pkg": "monitoringpb",
+    "pkg_full": "cloud.google.com/go/monitoring/apiv3/v2/monitoringpb"
+  }
+}
+{
+  "proto": "google/monitoring/v3/span_context",
+  "pkg": "google.monitoring.v3",
+  "msgs": [
+    {
+      "type": "SpanContext"
+    }
+  ],
+  "go": {
+    "src": "monitoring/apiv3/v2/monitoringpb/span_context.pb.go",
+    "pkg": "monitoringpb",
+    "pkg_full": "cloud.google.com/go/monitoring/apiv3/v2/monitoringpb"
+  }
+}
+{
+  "proto": "google/monitoring/v3/alert",
+  "pkg": "google.monitoring.v3",
+  "msgs": [
+    {
+      "type": "AlertPolicy",
+      "msgs": [
+        {
+          "type": "Documentation"
+        },
+        {
+          "type": "Link"
+        },
+        {
+          "type": "Condition"
+        },
+        {
+          "type": "Trigger"
+        },
+        {
+          "type": "MetricThreshold"
+        },
+        {
+          "type": "ForecastOptions"
+        },
+        {
+          "type": "MetricAbsence"
+        },
+        {
+          "type": "LogMatch"
+        },
+        {
+          "type": "MonitoringQueryLanguageCondition"
+        },
+        {
+          "type": "PrometheusQueryLanguageCondition"
+        },
+        {
+          "type": "AlertStrategy"
+        },
+        {
+          "type": "NotificationRateLimit"
+        },
+        {
+          "type": "NotificationChannelStrategy"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "monitoring/apiv3/v2/monitoringpb/alert.pb.go",
+    "pkg": "monitoringpb",
+    "pkg_full": "cloud.google.com/go/monitoring/apiv3/v2/monitoringpb"
+  }
+}
+{
+  "proto": "google/monitoring/v3/notification",
+  "pkg": "google.monitoring.v3",
+  "msgs": [
+    {
+      "type": "NotificationChannelDescriptor"
+    },
+    {
+      "type": "NotificationChannel"
+    }
+  ],
+  "go": {
+    "src": "monitoring/apiv3/v2/monitoringpb/notification.pb.go",
+    "pkg": "monitoringpb",
+    "pkg_full": "cloud.google.com/go/monitoring/apiv3/v2/monitoringpb"
+  }
+}
+{
+  "proto": "google/monitoring/v3/service_service",
+  "pkg": "google.monitoring.v3",
+  "svcs": [
+    {
+      "svc": "ServiceMonitoringService",
+      "host": "monitoring.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateService",
+          "request": {
+            "type": "CreateServiceRequest"
+          },
+          "response": {
+            "type": "Service"
+          }
+        },
+        {
+          "method": "GetService",
+          "request": {
+            "type": "GetServiceRequest"
+          },
+          "response": {
+            "type": "Service"
+          }
+        },
+        {
+          "method": "ListServices",
+          "request": {
+            "type": "ListServicesRequest"
+          },
+          "response": {
+            "type": "ListServicesResponse"
+          }
+        },
+        {
+          "method": "UpdateService",
+          "request": {
+            "type": "UpdateServiceRequest"
+          },
+          "response": {
+            "type": "Service"
+          }
+        },
+        {
+          "method": "DeleteService",
+          "request": {
+            "type": "DeleteServiceRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "CreateServiceLevelObjective",
+          "request": {
+            "type": "CreateServiceLevelObjectiveRequest"
+          },
+          "response": {
+            "type": "ServiceLevelObjective"
+          }
+        },
+        {
+          "method": "GetServiceLevelObjective",
+          "request": {
+            "type": "GetServiceLevelObjectiveRequest"
+          },
+          "response": {
+            "type": "ServiceLevelObjective"
+          }
+        },
+        {
+          "method": "ListServiceLevelObjectives",
+          "request": {
+            "type": "ListServiceLevelObjectivesRequest"
+          },
+          "response": {
+            "type": "ListServiceLevelObjectivesResponse"
+          }
+        },
+        {
+          "method": "UpdateServiceLevelObjective",
+          "request": {
+            "type": "UpdateServiceLevelObjectiveRequest"
+          },
+          "response": {
+            "type": "ServiceLevelObjective"
+          }
+        },
+        {
+          "method": "DeleteServiceLevelObjective",
+          "request": {
+            "type": "DeleteServiceLevelObjectiveRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateServiceRequest"
+    },
+    {
+      "type": "GetServiceRequest"
+    },
+    {
+      "type": "ListServicesRequest"
+    },
+    {
+      "type": "ListServicesResponse"
+    },
+    {
+      "type": "UpdateServiceRequest"
+    },
+    {
+      "type": "DeleteServiceRequest"
+    },
+    {
+      "type": "CreateServiceLevelObjectiveRequest"
+    },
+    {
+      "type": "GetServiceLevelObjectiveRequest"
+    },
+    {
+      "type": "ListServiceLevelObjectivesRequest"
+    },
+    {
+      "type": "ListServiceLevelObjectivesResponse"
+    },
+    {
+      "type": "UpdateServiceLevelObjectiveRequest"
+    },
+    {
+      "type": "DeleteServiceLevelObjectiveRequest"
+    }
+  ],
+  "go": {
+    "src": "monitoring/apiv3/v2/monitoringpb/service_service.pb.go",
+    "pkg": "monitoringpb",
+    "pkg_full": "cloud.google.com/go/monitoring/apiv3/v2/monitoringpb"
+  }
+}
+{
+  "proto": "google/monitoring/v3/metric",
+  "pkg": "google.monitoring.v3",
+  "msgs": [
+    {
+      "type": "Point"
+    },
+    {
+      "type": "TimeSeries"
+    },
+    {
+      "type": "TimeSeriesDescriptor",
+      "msgs": [
+        {
+          "type": "ValueDescriptor"
+        }
+      ]
+    },
+    {
+      "type": "TimeSeriesData",
+      "msgs": [
+        {
+          "type": "PointData"
+        }
+      ]
+    },
+    {
+      "type": "LabelValue"
+    },
+    {
+      "type": "QueryError"
+    },
+    {
+      "type": "TextLocator",
+      "msgs": [
+        {
+          "type": "Position"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "monitoring/apiv3/v2/monitoringpb/metric.pb.go",
+    "pkg": "monitoringpb",
+    "pkg_full": "cloud.google.com/go/monitoring/apiv3/v2/monitoringpb"
+  }
+}
+{
+  "proto": "google/monitoring/v3/service",
+  "pkg": "google.monitoring.v3",
+  "msgs": [
+    {
+      "type": "Service",
+      "msgs": [
+        {
+          "type": "Custom"
+        },
+        {
+          "type": "AppEngine"
+        },
+        {
+          "type": "CloudEndpoints"
+        },
+        {
+          "type": "ClusterIstio"
+        },
+        {
+          "type": "MeshIstio"
+        },
+        {
+          "type": "IstioCanonicalService"
+        },
+        {
+          "type": "CloudRun"
+        },
+        {
+          "type": "GkeNamespace"
+        },
+        {
+          "type": "GkeWorkload"
+        },
+        {
+          "type": "GkeService"
+        },
+        {
+          "type": "BasicService"
+        },
+        {
+          "type": "Telemetry"
+        }
+      ]
+    },
+    {
+      "type": "ServiceLevelObjective"
+    },
+    {
+      "type": "ServiceLevelIndicator"
+    },
+    {
+      "type": "BasicSli",
+      "msgs": [
+        {
+          "type": "AvailabilityCriteria"
+        },
+        {
+          "type": "LatencyCriteria"
+        }
+      ]
+    },
+    {
+      "type": "Range"
+    },
+    {
+      "type": "RequestBasedSli"
+    },
+    {
+      "type": "TimeSeriesRatio"
+    },
+    {
+      "type": "DistributionCut"
+    },
+    {
+      "type": "WindowsBasedSli",
+      "msgs": [
+        {
+          "type": "PerformanceThreshold"
+        },
+        {
+          "type": "MetricRange"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "monitoring/apiv3/v2/monitoringpb/service.pb.go",
+    "pkg": "monitoringpb",
+    "pkg_full": "cloud.google.com/go/monitoring/apiv3/v2/monitoringpb"
+  }
+}
+{
+  "proto": "google/monitoring/v3/snooze",
+  "pkg": "google.monitoring.v3",
+  "msgs": [
+    {
+      "type": "Snooze",
+      "msgs": [
+        {
+          "type": "Criteria"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "monitoring/apiv3/v2/monitoringpb/snooze.pb.go",
+    "pkg": "monitoringpb",
+    "pkg_full": "cloud.google.com/go/monitoring/apiv3/v2/monitoringpb"
+  }
+}
+{
+  "proto": "google/monitoring/v3/common",
+  "pkg": "google.monitoring.v3",
+  "msgs": [
+    {
+      "type": "TypedValue"
+    },
+    {
+      "type": "TimeInterval"
+    },
+    {
+      "type": "Aggregation"
+    }
+  ],
+  "go": {
+    "src": "monitoring/apiv3/v2/monitoringpb/common.pb.go",
+    "pkg": "monitoringpb",
+    "pkg_full": "cloud.google.com/go/monitoring/apiv3/v2/monitoringpb"
+  }
+}
+{
+  "proto": "google/monitoring/v3/uptime_service",
+  "pkg": "google.monitoring.v3",
+  "svcs": [
+    {
+      "svc": "UptimeCheckService",
+      "host": "monitoring.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListUptimeCheckConfigs",
+          "request": {
+            "type": "ListUptimeCheckConfigsRequest"
+          },
+          "response": {
+            "type": "ListUptimeCheckConfigsResponse"
+          }
+        },
+        {
+          "method": "GetUptimeCheckConfig",
+          "request": {
+            "type": "GetUptimeCheckConfigRequest"
+          },
+          "response": {
+            "type": "UptimeCheckConfig"
+          }
+        },
+        {
+          "method": "CreateUptimeCheckConfig",
+          "request": {
+            "type": "CreateUptimeCheckConfigRequest"
+          },
+          "response": {
+            "type": "UptimeCheckConfig"
+          }
+        },
+        {
+          "method": "UpdateUptimeCheckConfig",
+          "request": {
+            "type": "UpdateUptimeCheckConfigRequest"
+          },
+          "response": {
+            "type": "UptimeCheckConfig"
+          }
+        },
+        {
+          "method": "DeleteUptimeCheckConfig",
+          "request": {
+            "type": "DeleteUptimeCheckConfigRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListUptimeCheckIps",
+          "request": {
+            "type": "ListUptimeCheckIpsRequest"
+          },
+          "response": {
+            "type": "ListUptimeCheckIpsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ListUptimeCheckConfigsRequest"
+    },
+    {
+      "type": "ListUptimeCheckConfigsResponse"
+    },
+    {
+      "type": "GetUptimeCheckConfigRequest"
+    },
+    {
+      "type": "CreateUptimeCheckConfigRequest"
+    },
+    {
+      "type": "UpdateUptimeCheckConfigRequest"
+    },
+    {
+      "type": "DeleteUptimeCheckConfigRequest"
+    },
+    {
+      "type": "ListUptimeCheckIpsRequest"
+    },
+    {
+      "type": "ListUptimeCheckIpsResponse"
+    }
+  ],
+  "go": {
+    "src": "monitoring/apiv3/v2/monitoringpb/uptime_service.pb.go",
+    "pkg": "monitoringpb",
+    "pkg_full": "cloud.google.com/go/monitoring/apiv3/v2/monitoringpb"
+  }
+}
+{
+  "proto": "google/monitoring/v3/dropped_labels",
+  "pkg": "google.monitoring.v3",
+  "msgs": [
+    {
+      "type": "DroppedLabels"
+    }
+  ],
+  "go": {
+    "src": "monitoring/apiv3/v2/monitoringpb/dropped_labels.pb.go",
+    "pkg": "monitoringpb",
+    "pkg_full": "cloud.google.com/go/monitoring/apiv3/v2/monitoringpb"
+  }
+}
+{
+  "proto": "google/monitoring/v3/group",
+  "pkg": "google.monitoring.v3",
+  "msgs": [
+    {
+      "type": "Group"
+    }
+  ],
+  "go": {
+    "src": "monitoring/apiv3/v2/monitoringpb/group.pb.go",
+    "pkg": "monitoringpb",
+    "pkg_full": "cloud.google.com/go/monitoring/apiv3/v2/monitoringpb"
+  }
+}
+{
+  "proto": "google/monitoring/v3/snooze_service",
+  "pkg": "google.monitoring.v3",
+  "svcs": [
+    {
+      "svc": "SnoozeService",
+      "host": "monitoring.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateSnooze",
+          "request": {
+            "type": "CreateSnoozeRequest"
+          },
+          "response": {
+            "type": "Snooze"
+          }
+        },
+        {
+          "method": "ListSnoozes",
+          "request": {
+            "type": "ListSnoozesRequest"
+          },
+          "response": {
+            "type": "ListSnoozesResponse"
+          }
+        },
+        {
+          "method": "GetSnooze",
+          "request": {
+            "type": "GetSnoozeRequest"
+          },
+          "response": {
+            "type": "Snooze"
+          }
+        },
+        {
+          "method": "UpdateSnooze",
+          "request": {
+            "type": "UpdateSnoozeRequest"
+          },
+          "response": {
+            "type": "Snooze"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateSnoozeRequest"
+    },
+    {
+      "type": "ListSnoozesRequest"
+    },
+    {
+      "type": "ListSnoozesResponse"
+    },
+    {
+      "type": "GetSnoozeRequest"
+    },
+    {
+      "type": "UpdateSnoozeRequest"
+    }
+  ],
+  "go": {
+    "src": "monitoring/apiv3/v2/monitoringpb/snooze_service.pb.go",
+    "pkg": "monitoringpb",
+    "pkg_full": "cloud.google.com/go/monitoring/apiv3/v2/monitoringpb"
+  }
+}
+{
+  "proto": "google/monitoring/v3/metric_service",
+  "pkg": "google.monitoring.v3",
+  "svcs": [
+    {
+      "svc": "MetricService",
+      "host": "monitoring.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListMonitoredResourceDescriptors",
+          "request": {
+            "type": "ListMonitoredResourceDescriptorsRequest"
+          },
+          "response": {
+            "type": "ListMonitoredResourceDescriptorsResponse"
+          }
+        },
+        {
+          "method": "GetMonitoredResourceDescriptor",
+          "request": {
+            "type": "GetMonitoredResourceDescriptorRequest"
+          },
+          "response": {
+            "type": "google.api.MonitoredResourceDescriptor"
+          }
+        },
+        {
+          "method": "ListMetricDescriptors",
+          "request": {
+            "type": "ListMetricDescriptorsRequest"
+          },
+          "response": {
+            "type": "ListMetricDescriptorsResponse"
+          }
+        },
+        {
+          "method": "GetMetricDescriptor",
+          "request": {
+            "type": "GetMetricDescriptorRequest"
+          },
+          "response": {
+            "type": "google.api.MetricDescriptor"
+          }
+        },
+        {
+          "method": "CreateMetricDescriptor",
+          "request": {
+            "type": "CreateMetricDescriptorRequest"
+          },
+          "response": {
+            "type": "google.api.MetricDescriptor"
+          }
+        },
+        {
+          "method": "DeleteMetricDescriptor",
+          "request": {
+            "type": "DeleteMetricDescriptorRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListTimeSeries",
+          "request": {
+            "type": "ListTimeSeriesRequest"
+          },
+          "response": {
+            "type": "ListTimeSeriesResponse"
+          }
+        },
+        {
+          "method": "CreateTimeSeries",
+          "request": {
+            "type": "CreateTimeSeriesRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "CreateServiceTimeSeries",
+          "request": {
+            "type": "CreateTimeSeriesRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ListMonitoredResourceDescriptorsRequest"
+    },
+    {
+      "type": "ListMonitoredResourceDescriptorsResponse"
+    },
+    {
+      "type": "GetMonitoredResourceDescriptorRequest"
+    },
+    {
+      "type": "ListMetricDescriptorsRequest"
+    },
+    {
+      "type": "ListMetricDescriptorsResponse"
+    },
+    {
+      "type": "GetMetricDescriptorRequest"
+    },
+    {
+      "type": "CreateMetricDescriptorRequest"
+    },
+    {
+      "type": "DeleteMetricDescriptorRequest"
+    },
+    {
+      "type": "ListTimeSeriesRequest"
+    },
+    {
+      "type": "ListTimeSeriesResponse"
+    },
+    {
+      "type": "CreateTimeSeriesRequest"
+    },
+    {
+      "type": "CreateTimeSeriesError"
+    },
+    {
+      "type": "CreateTimeSeriesSummary",
+      "msgs": [
+        {
+          "type": "Error"
+        }
+      ]
+    },
+    {
+      "type": "QueryTimeSeriesRequest"
+    },
+    {
+      "type": "QueryTimeSeriesResponse"
+    },
+    {
+      "type": "QueryErrorList"
+    }
+  ],
+  "go": {
+    "src": "monitoring/apiv3/v2/monitoringpb/metric_service.pb.go",
+    "pkg": "monitoringpb",
+    "pkg_full": "cloud.google.com/go/monitoring/apiv3/v2/monitoringpb"
+  }
+}

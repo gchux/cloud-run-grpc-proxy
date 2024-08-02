@@ -1,0 +1,681 @@
+{
+  "proto": "google/logging/v2/logging",
+  "pkg": "google.logging.v2",
+  "svcs": [
+    {
+      "svc": "LoggingServiceV2",
+      "host": "logging.googleapis.com",
+      "rpcs": [
+        {
+          "method": "DeleteLog",
+          "request": {
+            "type": "DeleteLogRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "WriteLogEntries",
+          "request": {
+            "type": "WriteLogEntriesRequest"
+          },
+          "response": {
+            "type": "WriteLogEntriesResponse"
+          }
+        },
+        {
+          "method": "ListLogEntries",
+          "request": {
+            "type": "ListLogEntriesRequest"
+          },
+          "response": {
+            "type": "ListLogEntriesResponse"
+          }
+        },
+        {
+          "method": "ListMonitoredResourceDescriptors",
+          "request": {
+            "type": "ListMonitoredResourceDescriptorsRequest"
+          },
+          "response": {
+            "type": "ListMonitoredResourceDescriptorsResponse"
+          }
+        },
+        {
+          "method": "ListLogs",
+          "request": {
+            "type": "ListLogsRequest"
+          },
+          "response": {
+            "type": "ListLogsResponse"
+          }
+        },
+        {
+          "method": "TailLogEntries",
+          "request": {
+            "type": "TailLogEntriesRequest",
+            "stream": true
+          },
+          "response": {
+            "type": "TailLogEntriesResponse",
+            "stream": true
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "DeleteLogRequest"
+    },
+    {
+      "type": "WriteLogEntriesRequest"
+    },
+    {
+      "type": "WriteLogEntriesResponse"
+    },
+    {
+      "type": "WriteLogEntriesPartialErrors"
+    },
+    {
+      "type": "ListLogEntriesRequest"
+    },
+    {
+      "type": "ListLogEntriesResponse"
+    },
+    {
+      "type": "ListMonitoredResourceDescriptorsRequest"
+    },
+    {
+      "type": "ListMonitoredResourceDescriptorsResponse"
+    },
+    {
+      "type": "ListLogsRequest"
+    },
+    {
+      "type": "ListLogsResponse"
+    },
+    {
+      "type": "TailLogEntriesRequest"
+    },
+    {
+      "type": "TailLogEntriesResponse",
+      "msgs": [
+        {
+          "type": "SuppressionInfo"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "logging/apiv2/loggingpb/logging.pb.go",
+    "pkg": "loggingpb",
+    "pkg_full": "cloud.google.com/go/logging/apiv2/loggingpb"
+  }
+}
+{
+  "proto": "google/logging/v2/logging_metrics",
+  "pkg": "google.logging.v2",
+  "svcs": [
+    {
+      "svc": "MetricsServiceV2",
+      "host": "logging.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListLogMetrics",
+          "request": {
+            "type": "ListLogMetricsRequest"
+          },
+          "response": {
+            "type": "ListLogMetricsResponse"
+          }
+        },
+        {
+          "method": "GetLogMetric",
+          "request": {
+            "type": "GetLogMetricRequest"
+          },
+          "response": {
+            "type": "LogMetric"
+          }
+        },
+        {
+          "method": "CreateLogMetric",
+          "request": {
+            "type": "CreateLogMetricRequest"
+          },
+          "response": {
+            "type": "LogMetric"
+          }
+        },
+        {
+          "method": "UpdateLogMetric",
+          "request": {
+            "type": "UpdateLogMetricRequest"
+          },
+          "response": {
+            "type": "LogMetric"
+          }
+        },
+        {
+          "method": "DeleteLogMetric",
+          "request": {
+            "type": "DeleteLogMetricRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "LogMetric"
+    },
+    {
+      "type": "ListLogMetricsRequest"
+    },
+    {
+      "type": "ListLogMetricsResponse"
+    },
+    {
+      "type": "GetLogMetricRequest"
+    },
+    {
+      "type": "CreateLogMetricRequest"
+    },
+    {
+      "type": "UpdateLogMetricRequest"
+    },
+    {
+      "type": "DeleteLogMetricRequest"
+    }
+  ],
+  "go": {
+    "src": "logging/apiv2/loggingpb/logging_metrics.pb.go",
+    "pkg": "loggingpb",
+    "pkg_full": "cloud.google.com/go/logging/apiv2/loggingpb"
+  }
+}
+{
+  "proto": "google/logging/v2/logging_config",
+  "pkg": "google.logging.v2",
+  "svcs": [
+    {
+      "svc": "ConfigServiceV2",
+      "host": "logging.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListBuckets",
+          "request": {
+            "type": "ListBucketsRequest"
+          },
+          "response": {
+            "type": "ListBucketsResponse"
+          }
+        },
+        {
+          "method": "GetBucket",
+          "request": {
+            "type": "GetBucketRequest"
+          },
+          "response": {
+            "type": "LogBucket"
+          }
+        },
+        {
+          "method": "CreateBucketAsync",
+          "request": {
+            "type": "CreateBucketRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateBucketAsync",
+          "request": {
+            "type": "UpdateBucketRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CreateBucket",
+          "request": {
+            "type": "CreateBucketRequest"
+          },
+          "response": {
+            "type": "LogBucket"
+          }
+        },
+        {
+          "method": "UpdateBucket",
+          "request": {
+            "type": "UpdateBucketRequest"
+          },
+          "response": {
+            "type": "LogBucket"
+          }
+        },
+        {
+          "method": "DeleteBucket",
+          "request": {
+            "type": "DeleteBucketRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "UndeleteBucket",
+          "request": {
+            "type": "UndeleteBucketRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListViews",
+          "request": {
+            "type": "ListViewsRequest"
+          },
+          "response": {
+            "type": "ListViewsResponse"
+          }
+        },
+        {
+          "method": "GetView",
+          "request": {
+            "type": "GetViewRequest"
+          },
+          "response": {
+            "type": "LogView"
+          }
+        },
+        {
+          "method": "CreateView",
+          "request": {
+            "type": "CreateViewRequest"
+          },
+          "response": {
+            "type": "LogView"
+          }
+        },
+        {
+          "method": "UpdateView",
+          "request": {
+            "type": "UpdateViewRequest"
+          },
+          "response": {
+            "type": "LogView"
+          }
+        },
+        {
+          "method": "DeleteView",
+          "request": {
+            "type": "DeleteViewRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListSinks",
+          "request": {
+            "type": "ListSinksRequest"
+          },
+          "response": {
+            "type": "ListSinksResponse"
+          }
+        },
+        {
+          "method": "GetSink",
+          "request": {
+            "type": "GetSinkRequest"
+          },
+          "response": {
+            "type": "LogSink"
+          }
+        },
+        {
+          "method": "CreateSink",
+          "request": {
+            "type": "CreateSinkRequest"
+          },
+          "response": {
+            "type": "LogSink"
+          }
+        },
+        {
+          "method": "UpdateSink",
+          "request": {
+            "type": "UpdateSinkRequest"
+          },
+          "response": {
+            "type": "LogSink"
+          }
+        },
+        {
+          "method": "DeleteSink",
+          "request": {
+            "type": "DeleteSinkRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "CreateLink",
+          "request": {
+            "type": "CreateLinkRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteLink",
+          "request": {
+            "type": "DeleteLinkRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListLinks",
+          "request": {
+            "type": "ListLinksRequest"
+          },
+          "response": {
+            "type": "ListLinksResponse"
+          }
+        },
+        {
+          "method": "GetLink",
+          "request": {
+            "type": "GetLinkRequest"
+          },
+          "response": {
+            "type": "Link"
+          }
+        },
+        {
+          "method": "ListExclusions",
+          "request": {
+            "type": "ListExclusionsRequest"
+          },
+          "response": {
+            "type": "ListExclusionsResponse"
+          }
+        },
+        {
+          "method": "GetExclusion",
+          "request": {
+            "type": "GetExclusionRequest"
+          },
+          "response": {
+            "type": "LogExclusion"
+          }
+        },
+        {
+          "method": "CreateExclusion",
+          "request": {
+            "type": "CreateExclusionRequest"
+          },
+          "response": {
+            "type": "LogExclusion"
+          }
+        },
+        {
+          "method": "UpdateExclusion",
+          "request": {
+            "type": "UpdateExclusionRequest"
+          },
+          "response": {
+            "type": "LogExclusion"
+          }
+        },
+        {
+          "method": "DeleteExclusion",
+          "request": {
+            "type": "DeleteExclusionRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "GetCmekSettings",
+          "request": {
+            "type": "GetCmekSettingsRequest"
+          },
+          "response": {
+            "type": "CmekSettings"
+          }
+        },
+        {
+          "method": "UpdateCmekSettings",
+          "request": {
+            "type": "UpdateCmekSettingsRequest"
+          },
+          "response": {
+            "type": "CmekSettings"
+          }
+        },
+        {
+          "method": "GetSettings",
+          "request": {
+            "type": "GetSettingsRequest"
+          },
+          "response": {
+            "type": "Settings"
+          }
+        },
+        {
+          "method": "UpdateSettings",
+          "request": {
+            "type": "UpdateSettingsRequest"
+          },
+          "response": {
+            "type": "Settings"
+          }
+        },
+        {
+          "method": "CopyLogEntries",
+          "request": {
+            "type": "CopyLogEntriesRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "IndexConfig"
+    },
+    {
+      "type": "LogBucket"
+    },
+    {
+      "type": "LogView"
+    },
+    {
+      "type": "LogSink"
+    },
+    {
+      "type": "BigQueryDataset"
+    },
+    {
+      "type": "Link"
+    },
+    {
+      "type": "BigQueryOptions"
+    },
+    {
+      "type": "ListBucketsRequest"
+    },
+    {
+      "type": "ListBucketsResponse"
+    },
+    {
+      "type": "CreateBucketRequest"
+    },
+    {
+      "type": "UpdateBucketRequest"
+    },
+    {
+      "type": "GetBucketRequest"
+    },
+    {
+      "type": "DeleteBucketRequest"
+    },
+    {
+      "type": "UndeleteBucketRequest"
+    },
+    {
+      "type": "ListViewsRequest"
+    },
+    {
+      "type": "ListViewsResponse"
+    },
+    {
+      "type": "CreateViewRequest"
+    },
+    {
+      "type": "UpdateViewRequest"
+    },
+    {
+      "type": "GetViewRequest"
+    },
+    {
+      "type": "DeleteViewRequest"
+    },
+    {
+      "type": "ListSinksRequest"
+    },
+    {
+      "type": "ListSinksResponse"
+    },
+    {
+      "type": "GetSinkRequest"
+    },
+    {
+      "type": "CreateSinkRequest"
+    },
+    {
+      "type": "UpdateSinkRequest"
+    },
+    {
+      "type": "DeleteSinkRequest"
+    },
+    {
+      "type": "CreateLinkRequest"
+    },
+    {
+      "type": "DeleteLinkRequest"
+    },
+    {
+      "type": "ListLinksRequest"
+    },
+    {
+      "type": "ListLinksResponse"
+    },
+    {
+      "type": "GetLinkRequest"
+    },
+    {
+      "type": "LogExclusion"
+    },
+    {
+      "type": "ListExclusionsRequest"
+    },
+    {
+      "type": "ListExclusionsResponse"
+    },
+    {
+      "type": "GetExclusionRequest"
+    },
+    {
+      "type": "CreateExclusionRequest"
+    },
+    {
+      "type": "UpdateExclusionRequest"
+    },
+    {
+      "type": "DeleteExclusionRequest"
+    },
+    {
+      "type": "GetCmekSettingsRequest"
+    },
+    {
+      "type": "UpdateCmekSettingsRequest"
+    },
+    {
+      "type": "CmekSettings"
+    },
+    {
+      "type": "GetSettingsRequest"
+    },
+    {
+      "type": "UpdateSettingsRequest"
+    },
+    {
+      "type": "Settings"
+    },
+    {
+      "type": "CopyLogEntriesRequest"
+    },
+    {
+      "type": "CopyLogEntriesMetadata"
+    },
+    {
+      "type": "CopyLogEntriesResponse"
+    },
+    {
+      "type": "BucketMetadata"
+    },
+    {
+      "type": "LinkMetadata"
+    },
+    {
+      "type": "LocationMetadata"
+    }
+  ],
+  "go": {
+    "src": "logging/apiv2/loggingpb/logging_config.pb.go",
+    "pkg": "loggingpb",
+    "pkg_full": "cloud.google.com/go/logging/apiv2/loggingpb"
+  }
+}
+{
+  "proto": "google/logging/v2/log_entry",
+  "pkg": "google.logging.v2",
+  "msgs": [
+    {
+      "type": "LogEntry"
+    },
+    {
+      "type": "LogEntryOperation"
+    },
+    {
+      "type": "LogEntrySourceLocation"
+    },
+    {
+      "type": "LogSplit"
+    }
+  ],
+  "go": {
+    "src": "logging/apiv2/loggingpb/log_entry.pb.go",
+    "pkg": "loggingpb",
+    "pkg_full": "cloud.google.com/go/logging/apiv2/loggingpb"
+  }
+}

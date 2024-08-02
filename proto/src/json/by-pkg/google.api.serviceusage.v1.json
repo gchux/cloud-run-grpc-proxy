@@ -1,0 +1,131 @@
+{
+  "proto": "google/api/serviceusage/v1/resources",
+  "pkg": "google.api.serviceusage.v1",
+  "msgs": [
+    {
+      "type": "Service"
+    },
+    {
+      "type": "ServiceConfig"
+    },
+    {
+      "type": "OperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "serviceusage/apiv1/serviceusagepb/resources.pb.go",
+    "pkg": "serviceusagepb",
+    "pkg_full": "cloud.google.com/go/serviceusage/apiv1/serviceusagepb"
+  }
+}
+{
+  "proto": "google/api/serviceusage/v1/serviceusage",
+  "pkg": "google.api.serviceusage.v1",
+  "svcs": [
+    {
+      "svc": "ServiceUsage",
+      "host": "serviceusage.googleapis.com",
+      "rpcs": [
+        {
+          "method": "EnableService",
+          "request": {
+            "type": "EnableServiceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DisableService",
+          "request": {
+            "type": "DisableServiceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetService",
+          "request": {
+            "type": "GetServiceRequest"
+          },
+          "response": {
+            "type": "Service"
+          }
+        },
+        {
+          "method": "ListServices",
+          "request": {
+            "type": "ListServicesRequest"
+          },
+          "response": {
+            "type": "ListServicesResponse"
+          }
+        },
+        {
+          "method": "BatchEnableServices",
+          "request": {
+            "type": "BatchEnableServicesRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "BatchGetServices",
+          "request": {
+            "type": "BatchGetServicesRequest"
+          },
+          "response": {
+            "type": "BatchGetServicesResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "EnableServiceRequest"
+    },
+    {
+      "type": "EnableServiceResponse"
+    },
+    {
+      "type": "DisableServiceRequest"
+    },
+    {
+      "type": "DisableServiceResponse"
+    },
+    {
+      "type": "GetServiceRequest"
+    },
+    {
+      "type": "ListServicesRequest"
+    },
+    {
+      "type": "ListServicesResponse"
+    },
+    {
+      "type": "BatchEnableServicesRequest"
+    },
+    {
+      "type": "BatchEnableServicesResponse",
+      "msgs": [
+        {
+          "type": "EnableFailure"
+        }
+      ]
+    },
+    {
+      "type": "BatchGetServicesRequest"
+    },
+    {
+      "type": "BatchGetServicesResponse"
+    }
+  ],
+  "go": {
+    "src": "serviceusage/apiv1/serviceusagepb/serviceusage.pb.go",
+    "pkg": "serviceusagepb",
+    "pkg_full": "cloud.google.com/go/serviceusage/apiv1/serviceusagepb"
+  }
+}

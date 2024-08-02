@@ -1,0 +1,136 @@
+{
+  "proto": "google/maps/mapsplatformdatasets/v1/dataset",
+  "pkg": "google.maps.mapsplatformdatasets.v1",
+  "msgs": [
+    {
+      "type": "Dataset"
+    },
+    {
+      "type": "Status"
+    }
+  ],
+  "go": {
+    "pkg": "mapsplatformdatasetspb",
+    "pkg_full": "cloud.google.com/go/maps/mapsplatformdatasets/apiv1/mapsplatformdatasetspb"
+  }
+}
+{
+  "proto": "google/maps/mapsplatformdatasets/v1/maps_platform_datasets",
+  "pkg": "google.maps.mapsplatformdatasets.v1",
+  "msgs": [
+    {
+      "type": "CreateDatasetRequest"
+    },
+    {
+      "type": "UpdateDatasetMetadataRequest"
+    },
+    {
+      "type": "GetDatasetRequest"
+    },
+    {
+      "type": "ListDatasetsRequest"
+    },
+    {
+      "type": "ListDatasetsResponse"
+    },
+    {
+      "type": "FetchDatasetErrorsRequest"
+    },
+    {
+      "type": "FetchDatasetErrorsResponse"
+    },
+    {
+      "type": "DeleteDatasetRequest"
+    }
+  ],
+  "go": {
+    "pkg": "mapsplatformdatasetspb",
+    "pkg_full": "cloud.google.com/go/maps/mapsplatformdatasets/apiv1/mapsplatformdatasetspb"
+  }
+}
+{
+  "proto": "google/maps/mapsplatformdatasets/v1/maps_platform_datasets_service",
+  "pkg": "google.maps.mapsplatformdatasets.v1",
+  "svcs": [
+    {
+      "svc": "MapsPlatformDatasets",
+      "host": "mapsplatformdatasets.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateDataset",
+          "request": {
+            "type": "CreateDatasetRequest"
+          },
+          "response": {
+            "type": "Dataset"
+          }
+        },
+        {
+          "method": "UpdateDatasetMetadata",
+          "request": {
+            "type": "UpdateDatasetMetadataRequest"
+          },
+          "response": {
+            "type": "Dataset"
+          }
+        },
+        {
+          "method": "GetDataset",
+          "request": {
+            "type": "GetDatasetRequest"
+          },
+          "response": {
+            "type": "Dataset"
+          }
+        },
+        {
+          "method": "FetchDatasetErrors",
+          "request": {
+            "type": "FetchDatasetErrorsRequest"
+          },
+          "response": {
+            "type": "FetchDatasetErrorsResponse"
+          }
+        },
+        {
+          "method": "ListDatasets",
+          "request": {
+            "type": "ListDatasetsRequest"
+          },
+          "response": {
+            "type": "ListDatasetsResponse"
+          }
+        },
+        {
+          "method": "DeleteDataset",
+          "request": {
+            "type": "DeleteDatasetRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "go": {
+    "pkg": "mapsplatformdatasetspb",
+    "pkg_full": "cloud.google.com/go/maps/mapsplatformdatasets/apiv1/mapsplatformdatasetspb"
+  }
+}
+{
+  "proto": "google/maps/mapsplatformdatasets/v1/data_source",
+  "pkg": "google.maps.mapsplatformdatasets.v1",
+  "msgs": [
+    {
+      "type": "LocalFileSource"
+    },
+    {
+      "type": "GcsSource"
+    }
+  ],
+  "go": {
+    "pkg": "mapsplatformdatasetspb",
+    "pkg_full": "cloud.google.com/go/maps/mapsplatformdatasets/apiv1/mapsplatformdatasetspb"
+  }
+}

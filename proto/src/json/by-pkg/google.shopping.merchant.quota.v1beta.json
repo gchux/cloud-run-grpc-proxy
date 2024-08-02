@@ -1,0 +1,40 @@
+{
+  "proto": "google/shopping/merchant/quota/v1beta/quota",
+  "pkg": "google.shopping.merchant.quota.v1beta",
+  "svcs": [
+    {
+      "svc": "QuotaService",
+      "host": "merchantapi.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListQuotaGroups",
+          "request": {
+            "type": "ListQuotaGroupsRequest"
+          },
+          "response": {
+            "type": "ListQuotaGroupsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "QuotaGroup"
+    },
+    {
+      "type": "MethodDetails"
+    },
+    {
+      "type": "ListQuotaGroupsRequest"
+    },
+    {
+      "type": "ListQuotaGroupsResponse"
+    }
+  ],
+  "go": {
+    "src": "shopping/merchant/quota/apiv1beta/quotapb/quota.pb.go",
+    "pkg": "quotapb",
+    "pkg_full": "cloud.google.com/go/shopping/merchant/quota/apiv1beta/quotapb"
+  }
+}

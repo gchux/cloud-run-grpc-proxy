@@ -1,0 +1,197 @@
+{
+  "proto": "google/cloud/enterpriseknowledgegraph/v1/job_state",
+  "pkg": "google.cloud.enterpriseknowledgegraph.v1",
+  "go": {
+    "src": "googleapis/cloud/enterpriseknowledgegraph/v1/job_state.pb.go",
+    "pkg": "enterpriseknowledgegraphpb",
+    "pkg_full": "cloud.google.com/go/enterpriseknowledgegraph/apiv1/enterpriseknowledgegraphpb"
+  }
+}
+{
+  "proto": "google/cloud/enterpriseknowledgegraph/v1/operation_metadata",
+  "pkg": "google.cloud.enterpriseknowledgegraph.v1",
+  "msgs": [
+    {
+      "type": "CommonOperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/enterpriseknowledgegraph/v1/operation_metadata.pb.go",
+    "pkg": "enterpriseknowledgegraphpb",
+    "pkg_full": "cloud.google.com/go/enterpriseknowledgegraph/apiv1/enterpriseknowledgegraphpb"
+  }
+}
+{
+  "proto": "google/cloud/enterpriseknowledgegraph/v1/service",
+  "pkg": "google.cloud.enterpriseknowledgegraph.v1",
+  "svcs": [
+    {
+      "svc": "EnterpriseKnowledgeGraphService",
+      "host": "enterpriseknowledgegraph.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateEntityReconciliationJob",
+          "request": {
+            "type": "CreateEntityReconciliationJobRequest"
+          },
+          "response": {
+            "type": "EntityReconciliationJob"
+          }
+        },
+        {
+          "method": "GetEntityReconciliationJob",
+          "request": {
+            "type": "GetEntityReconciliationJobRequest"
+          },
+          "response": {
+            "type": "EntityReconciliationJob"
+          }
+        },
+        {
+          "method": "ListEntityReconciliationJobs",
+          "request": {
+            "type": "ListEntityReconciliationJobsRequest"
+          },
+          "response": {
+            "type": "ListEntityReconciliationJobsResponse"
+          }
+        },
+        {
+          "method": "CancelEntityReconciliationJob",
+          "request": {
+            "type": "CancelEntityReconciliationJobRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "DeleteEntityReconciliationJob",
+          "request": {
+            "type": "DeleteEntityReconciliationJobRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "Lookup",
+          "request": {
+            "type": "LookupRequest"
+          },
+          "response": {
+            "type": "LookupResponse"
+          }
+        },
+        {
+          "method": "Search",
+          "request": {
+            "type": "SearchRequest"
+          },
+          "response": {
+            "type": "SearchResponse"
+          }
+        },
+        {
+          "method": "LookupPublicKg",
+          "request": {
+            "type": "LookupPublicKgRequest"
+          },
+          "response": {
+            "type": "LookupPublicKgResponse"
+          }
+        },
+        {
+          "method": "SearchPublicKg",
+          "request": {
+            "type": "SearchPublicKgRequest"
+          },
+          "response": {
+            "type": "SearchPublicKgResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "InputConfig"
+    },
+    {
+      "type": "BigQueryInputConfig"
+    },
+    {
+      "type": "OutputConfig"
+    },
+    {
+      "type": "ReconConfig",
+      "msgs": [
+        {
+          "type": "Options"
+        },
+        {
+          "type": "ModelConfig"
+        }
+      ]
+    },
+    {
+      "type": "ConnectedComponentsConfig"
+    },
+    {
+      "type": "AffinityClusteringConfig"
+    },
+    {
+      "type": "DeleteOperationMetadata"
+    },
+    {
+      "type": "CreateEntityReconciliationJobRequest"
+    },
+    {
+      "type": "GetEntityReconciliationJobRequest"
+    },
+    {
+      "type": "ListEntityReconciliationJobsRequest"
+    },
+    {
+      "type": "ListEntityReconciliationJobsResponse"
+    },
+    {
+      "type": "CancelEntityReconciliationJobRequest"
+    },
+    {
+      "type": "DeleteEntityReconciliationJobRequest"
+    },
+    {
+      "type": "EntityReconciliationJob"
+    },
+    {
+      "type": "LookupRequest"
+    },
+    {
+      "type": "LookupResponse"
+    },
+    {
+      "type": "SearchRequest"
+    },
+    {
+      "type": "SearchResponse"
+    },
+    {
+      "type": "LookupPublicKgRequest"
+    },
+    {
+      "type": "LookupPublicKgResponse"
+    },
+    {
+      "type": "SearchPublicKgRequest"
+    },
+    {
+      "type": "SearchPublicKgResponse"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/enterpriseknowledgegraph/v1/service.pb.go",
+    "pkg": "enterpriseknowledgegraphpb",
+    "pkg_full": "cloud.google.com/go/enterpriseknowledgegraph/apiv1/enterpriseknowledgegraphpb"
+  }
+}

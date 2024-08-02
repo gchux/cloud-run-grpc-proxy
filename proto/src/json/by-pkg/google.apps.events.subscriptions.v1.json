@@ -1,0 +1,126 @@
+{
+  "proto": "google/apps/events/subscriptions/v1/subscription_resource",
+  "pkg": "google.apps.events.subscriptions.v1",
+  "msgs": [
+    {
+      "type": "Subscription"
+    },
+    {
+      "type": "PayloadOptions"
+    },
+    {
+      "type": "NotificationEndpoint"
+    }
+  ],
+  "go": {
+    "src": "apps/events/subscriptions/apiv1/subscriptionspb/subscription_resource.pb.go",
+    "pkg": "subscriptionspb",
+    "pkg_full": "cloud.google.com/go/apps/events/subscriptions/apiv1/subscriptionspb"
+  }
+}
+{
+  "proto": "google/apps/events/subscriptions/v1/subscriptions_service",
+  "pkg": "google.apps.events.subscriptions.v1",
+  "svcs": [
+    {
+      "svc": "SubscriptionsService",
+      "host": "workspaceevents.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateSubscription",
+          "request": {
+            "type": "CreateSubscriptionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteSubscription",
+          "request": {
+            "type": "DeleteSubscriptionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetSubscription",
+          "request": {
+            "type": "GetSubscriptionRequest"
+          },
+          "response": {
+            "type": "Subscription"
+          }
+        },
+        {
+          "method": "ListSubscriptions",
+          "request": {
+            "type": "ListSubscriptionsRequest"
+          },
+          "response": {
+            "type": "ListSubscriptionsResponse"
+          }
+        },
+        {
+          "method": "UpdateSubscription",
+          "request": {
+            "type": "UpdateSubscriptionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ReactivateSubscription",
+          "request": {
+            "type": "ReactivateSubscriptionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateSubscriptionRequest"
+    },
+    {
+      "type": "DeleteSubscriptionRequest"
+    },
+    {
+      "type": "GetSubscriptionRequest"
+    },
+    {
+      "type": "UpdateSubscriptionRequest"
+    },
+    {
+      "type": "ReactivateSubscriptionRequest"
+    },
+    {
+      "type": "ListSubscriptionsRequest"
+    },
+    {
+      "type": "ListSubscriptionsResponse"
+    },
+    {
+      "type": "UpdateSubscriptionMetadata"
+    },
+    {
+      "type": "CreateSubscriptionMetadata"
+    },
+    {
+      "type": "DeleteSubscriptionMetadata"
+    },
+    {
+      "type": "ReactivateSubscriptionMetadata"
+    }
+  ],
+  "go": {
+    "src": "apps/events/subscriptions/apiv1/subscriptionspb/subscriptions_service.pb.go",
+    "pkg": "subscriptionspb",
+    "pkg_full": "cloud.google.com/go/apps/events/subscriptions/apiv1/subscriptionspb"
+  }
+}

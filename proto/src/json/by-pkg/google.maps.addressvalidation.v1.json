@@ -1,0 +1,123 @@
+{
+  "proto": "google/maps/addressvalidation/v1/address",
+  "pkg": "google.maps.addressvalidation.v1",
+  "msgs": [
+    {
+      "type": "Address"
+    },
+    {
+      "type": "AddressComponent"
+    },
+    {
+      "type": "ComponentName"
+    }
+  ],
+  "go": {
+    "src": "maps/addressvalidation/apiv1/addressvalidationpb/address.pb.go",
+    "pkg": "addressvalidationpb",
+    "pkg_full": "cloud.google.com/go/maps/addressvalidation/apiv1/addressvalidationpb"
+  }
+}
+{
+  "proto": "google/maps/addressvalidation/v1/address_validation_service",
+  "pkg": "google.maps.addressvalidation.v1",
+  "svcs": [
+    {
+      "svc": "AddressValidation",
+      "host": "addressvalidation.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ValidateAddress",
+          "request": {
+            "type": "ValidateAddressRequest"
+          },
+          "response": {
+            "type": "ValidateAddressResponse"
+          }
+        },
+        {
+          "method": "ProvideValidationFeedback",
+          "request": {
+            "type": "ProvideValidationFeedbackRequest"
+          },
+          "response": {
+            "type": "ProvideValidationFeedbackResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ValidateAddressRequest"
+    },
+    {
+      "type": "ValidateAddressResponse"
+    },
+    {
+      "type": "ProvideValidationFeedbackRequest"
+    },
+    {
+      "type": "ProvideValidationFeedbackResponse"
+    },
+    {
+      "type": "ValidationResult"
+    },
+    {
+      "type": "Verdict"
+    }
+  ],
+  "go": {
+    "src": "maps/addressvalidation/apiv1/addressvalidationpb/address_validation_service.pb.go",
+    "pkg": "addressvalidationpb",
+    "pkg_full": "cloud.google.com/go/maps/addressvalidation/apiv1/addressvalidationpb"
+  }
+}
+{
+  "proto": "google/maps/addressvalidation/v1/usps_data",
+  "pkg": "google.maps.addressvalidation.v1",
+  "msgs": [
+    {
+      "type": "UspsAddress"
+    },
+    {
+      "type": "UspsData"
+    }
+  ],
+  "go": {
+    "src": "maps/addressvalidation/apiv1/addressvalidationpb/usps_data.pb.go",
+    "pkg": "addressvalidationpb",
+    "pkg_full": "cloud.google.com/go/maps/addressvalidation/apiv1/addressvalidationpb"
+  }
+}
+{
+  "proto": "google/maps/addressvalidation/v1/geocode",
+  "pkg": "google.maps.addressvalidation.v1",
+  "msgs": [
+    {
+      "type": "Geocode"
+    },
+    {
+      "type": "PlusCode"
+    }
+  ],
+  "go": {
+    "src": "maps/addressvalidation/apiv1/addressvalidationpb/geocode.pb.go",
+    "pkg": "addressvalidationpb",
+    "pkg_full": "cloud.google.com/go/maps/addressvalidation/apiv1/addressvalidationpb"
+  }
+}
+{
+  "proto": "google/maps/addressvalidation/v1/metadata",
+  "pkg": "google.maps.addressvalidation.v1",
+  "msgs": [
+    {
+      "type": "AddressMetadata"
+    }
+  ],
+  "go": {
+    "src": "maps/addressvalidation/apiv1/addressvalidationpb/metadata.pb.go",
+    "pkg": "addressvalidationpb",
+    "pkg_full": "cloud.google.com/go/maps/addressvalidation/apiv1/addressvalidationpb"
+  }
+}

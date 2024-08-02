@@ -1,0 +1,955 @@
+{
+  "proto": "google/genomics/v1/cigar",
+  "pkg": "google.genomics.v1",
+  "msgs": [
+    {
+      "type": "CigarUnit"
+    }
+  ],
+  "go": {
+    "src": "googleapis/genomics/v1/cigar.pb.go",
+    "pkg": "genomics",
+    "pkg_full": "google.golang.org/genproto/googleapis/genomics/v1"
+  }
+}
+{
+  "proto": "google/genomics/v1/reads",
+  "pkg": "google.genomics.v1",
+  "svcs": [
+    {
+      "svc": "StreamingReadService",
+      "rpcs": [
+        {
+          "method": "StreamReads",
+          "request": {
+            "type": "StreamReadsRequest"
+          },
+          "response": {
+            "type": "StreamReadsResponse",
+            "stream": true
+          }
+        }
+      ]
+    },
+    {
+      "svc": "ReadServiceV1",
+      "rpcs": [
+        {
+          "method": "ImportReadGroupSets",
+          "request": {
+            "type": "ImportReadGroupSetsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ExportReadGroupSet",
+          "request": {
+            "type": "ExportReadGroupSetRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "SearchReadGroupSets",
+          "request": {
+            "type": "SearchReadGroupSetsRequest"
+          },
+          "response": {
+            "type": "SearchReadGroupSetsResponse"
+          }
+        },
+        {
+          "method": "UpdateReadGroupSet",
+          "request": {
+            "type": "UpdateReadGroupSetRequest"
+          },
+          "response": {
+            "type": "ReadGroupSet"
+          }
+        },
+        {
+          "method": "DeleteReadGroupSet",
+          "request": {
+            "type": "DeleteReadGroupSetRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "GetReadGroupSet",
+          "request": {
+            "type": "GetReadGroupSetRequest"
+          },
+          "response": {
+            "type": "ReadGroupSet"
+          }
+        },
+        {
+          "method": "ListCoverageBuckets",
+          "request": {
+            "type": "ListCoverageBucketsRequest"
+          },
+          "response": {
+            "type": "ListCoverageBucketsResponse"
+          }
+        },
+        {
+          "method": "SearchReads",
+          "request": {
+            "type": "SearchReadsRequest"
+          },
+          "response": {
+            "type": "SearchReadsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "SearchReadGroupSetsRequest"
+    },
+    {
+      "type": "SearchReadGroupSetsResponse"
+    },
+    {
+      "type": "ImportReadGroupSetsRequest"
+    },
+    {
+      "type": "ImportReadGroupSetsResponse"
+    },
+    {
+      "type": "ExportReadGroupSetRequest"
+    },
+    {
+      "type": "UpdateReadGroupSetRequest"
+    },
+    {
+      "type": "DeleteReadGroupSetRequest"
+    },
+    {
+      "type": "GetReadGroupSetRequest"
+    },
+    {
+      "type": "ListCoverageBucketsRequest"
+    },
+    {
+      "type": "CoverageBucket"
+    },
+    {
+      "type": "ListCoverageBucketsResponse"
+    },
+    {
+      "type": "SearchReadsRequest"
+    },
+    {
+      "type": "SearchReadsResponse"
+    },
+    {
+      "type": "StreamReadsRequest"
+    },
+    {
+      "type": "StreamReadsResponse"
+    }
+  ],
+  "go": {
+    "src": "googleapis/genomics/v1/reads.pb.go",
+    "pkg": "genomics",
+    "pkg_full": "google.golang.org/genproto/googleapis/genomics/v1"
+  }
+}
+{
+  "proto": "google/genomics/v1/operations",
+  "pkg": "google.genomics.v1",
+  "msgs": [
+    {
+      "type": "OperationMetadata"
+    },
+    {
+      "type": "OperationEvent"
+    }
+  ],
+  "go": {
+    "src": "googleapis/genomics/v1/operations.pb.go",
+    "pkg": "genomics",
+    "pkg_full": "google.golang.org/genproto/googleapis/genomics/v1"
+  }
+}
+{
+  "proto": "google/genomics/v1/variants",
+  "pkg": "google.genomics.v1",
+  "svcs": [
+    {
+      "svc": "StreamingVariantService",
+      "rpcs": [
+        {
+          "method": "StreamVariants",
+          "request": {
+            "type": "StreamVariantsRequest"
+          },
+          "response": {
+            "type": "StreamVariantsResponse",
+            "stream": true
+          }
+        }
+      ]
+    },
+    {
+      "svc": "VariantServiceV1",
+      "rpcs": [
+        {
+          "method": "ImportVariants",
+          "request": {
+            "type": "ImportVariantsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CreateVariantSet",
+          "request": {
+            "type": "CreateVariantSetRequest"
+          },
+          "response": {
+            "type": "VariantSet"
+          }
+        },
+        {
+          "method": "ExportVariantSet",
+          "request": {
+            "type": "ExportVariantSetRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetVariantSet",
+          "request": {
+            "type": "GetVariantSetRequest"
+          },
+          "response": {
+            "type": "VariantSet"
+          }
+        },
+        {
+          "method": "SearchVariantSets",
+          "request": {
+            "type": "SearchVariantSetsRequest"
+          },
+          "response": {
+            "type": "SearchVariantSetsResponse"
+          }
+        },
+        {
+          "method": "DeleteVariantSet",
+          "request": {
+            "type": "DeleteVariantSetRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "UpdateVariantSet",
+          "request": {
+            "type": "UpdateVariantSetRequest"
+          },
+          "response": {
+            "type": "VariantSet"
+          }
+        },
+        {
+          "method": "SearchVariants",
+          "request": {
+            "type": "SearchVariantsRequest"
+          },
+          "response": {
+            "type": "SearchVariantsResponse"
+          }
+        },
+        {
+          "method": "CreateVariant",
+          "request": {
+            "type": "CreateVariantRequest"
+          },
+          "response": {
+            "type": "Variant"
+          }
+        },
+        {
+          "method": "UpdateVariant",
+          "request": {
+            "type": "UpdateVariantRequest"
+          },
+          "response": {
+            "type": "Variant"
+          }
+        },
+        {
+          "method": "DeleteVariant",
+          "request": {
+            "type": "DeleteVariantRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "GetVariant",
+          "request": {
+            "type": "GetVariantRequest"
+          },
+          "response": {
+            "type": "Variant"
+          }
+        },
+        {
+          "method": "MergeVariants",
+          "request": {
+            "type": "MergeVariantsRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "SearchCallSets",
+          "request": {
+            "type": "SearchCallSetsRequest"
+          },
+          "response": {
+            "type": "SearchCallSetsResponse"
+          }
+        },
+        {
+          "method": "CreateCallSet",
+          "request": {
+            "type": "CreateCallSetRequest"
+          },
+          "response": {
+            "type": "CallSet"
+          }
+        },
+        {
+          "method": "UpdateCallSet",
+          "request": {
+            "type": "UpdateCallSetRequest"
+          },
+          "response": {
+            "type": "CallSet"
+          }
+        },
+        {
+          "method": "DeleteCallSet",
+          "request": {
+            "type": "DeleteCallSetRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "GetCallSet",
+          "request": {
+            "type": "GetCallSetRequest"
+          },
+          "response": {
+            "type": "CallSet"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "VariantSetMetadata"
+    },
+    {
+      "type": "VariantSet"
+    },
+    {
+      "type": "Variant"
+    },
+    {
+      "type": "VariantCall"
+    },
+    {
+      "type": "CallSet"
+    },
+    {
+      "type": "ReferenceBound"
+    },
+    {
+      "type": "ImportVariantsRequest"
+    },
+    {
+      "type": "ImportVariantsResponse"
+    },
+    {
+      "type": "CreateVariantSetRequest"
+    },
+    {
+      "type": "ExportVariantSetRequest"
+    },
+    {
+      "type": "GetVariantSetRequest"
+    },
+    {
+      "type": "SearchVariantSetsRequest"
+    },
+    {
+      "type": "SearchVariantSetsResponse"
+    },
+    {
+      "type": "DeleteVariantSetRequest"
+    },
+    {
+      "type": "UpdateVariantSetRequest"
+    },
+    {
+      "type": "SearchVariantsRequest"
+    },
+    {
+      "type": "SearchVariantsResponse"
+    },
+    {
+      "type": "CreateVariantRequest"
+    },
+    {
+      "type": "UpdateVariantRequest"
+    },
+    {
+      "type": "DeleteVariantRequest"
+    },
+    {
+      "type": "GetVariantRequest"
+    },
+    {
+      "type": "MergeVariantsRequest"
+    },
+    {
+      "type": "SearchCallSetsRequest"
+    },
+    {
+      "type": "SearchCallSetsResponse"
+    },
+    {
+      "type": "CreateCallSetRequest"
+    },
+    {
+      "type": "UpdateCallSetRequest"
+    },
+    {
+      "type": "DeleteCallSetRequest"
+    },
+    {
+      "type": "GetCallSetRequest"
+    },
+    {
+      "type": "StreamVariantsRequest"
+    },
+    {
+      "type": "StreamVariantsResponse"
+    }
+  ],
+  "go": {
+    "src": "googleapis/genomics/v1/variants.pb.go",
+    "pkg": "genomics",
+    "pkg_full": "google.golang.org/genproto/googleapis/genomics/v1"
+  }
+}
+{
+  "proto": "google/genomics/v1/annotations",
+  "pkg": "google.genomics.v1",
+  "svcs": [
+    {
+      "svc": "AnnotationServiceV1",
+      "rpcs": [
+        {
+          "method": "CreateAnnotationSet",
+          "request": {
+            "type": "CreateAnnotationSetRequest"
+          },
+          "response": {
+            "type": "AnnotationSet"
+          }
+        },
+        {
+          "method": "GetAnnotationSet",
+          "request": {
+            "type": "GetAnnotationSetRequest"
+          },
+          "response": {
+            "type": "AnnotationSet"
+          }
+        },
+        {
+          "method": "UpdateAnnotationSet",
+          "request": {
+            "type": "UpdateAnnotationSetRequest"
+          },
+          "response": {
+            "type": "AnnotationSet"
+          }
+        },
+        {
+          "method": "DeleteAnnotationSet",
+          "request": {
+            "type": "DeleteAnnotationSetRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "SearchAnnotationSets",
+          "request": {
+            "type": "SearchAnnotationSetsRequest"
+          },
+          "response": {
+            "type": "SearchAnnotationSetsResponse"
+          }
+        },
+        {
+          "method": "CreateAnnotation",
+          "request": {
+            "type": "CreateAnnotationRequest"
+          },
+          "response": {
+            "type": "Annotation"
+          }
+        },
+        {
+          "method": "BatchCreateAnnotations",
+          "request": {
+            "type": "BatchCreateAnnotationsRequest"
+          },
+          "response": {
+            "type": "BatchCreateAnnotationsResponse"
+          }
+        },
+        {
+          "method": "GetAnnotation",
+          "request": {
+            "type": "GetAnnotationRequest"
+          },
+          "response": {
+            "type": "Annotation"
+          }
+        },
+        {
+          "method": "UpdateAnnotation",
+          "request": {
+            "type": "UpdateAnnotationRequest"
+          },
+          "response": {
+            "type": "Annotation"
+          }
+        },
+        {
+          "method": "DeleteAnnotation",
+          "request": {
+            "type": "DeleteAnnotationRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "SearchAnnotations",
+          "request": {
+            "type": "SearchAnnotationsRequest"
+          },
+          "response": {
+            "type": "SearchAnnotationsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "AnnotationSet"
+    },
+    {
+      "type": "Annotation"
+    },
+    {
+      "type": "VariantAnnotation",
+      "msgs": [
+        {
+          "type": "ClinicalCondition"
+        }
+      ]
+    },
+    {
+      "type": "Transcript",
+      "msgs": [
+        {
+          "type": "Exon"
+        },
+        {
+          "type": "CodingSequence"
+        }
+      ]
+    },
+    {
+      "type": "ExternalId"
+    },
+    {
+      "type": "CreateAnnotationSetRequest"
+    },
+    {
+      "type": "GetAnnotationSetRequest"
+    },
+    {
+      "type": "UpdateAnnotationSetRequest"
+    },
+    {
+      "type": "DeleteAnnotationSetRequest"
+    },
+    {
+      "type": "SearchAnnotationSetsRequest"
+    },
+    {
+      "type": "SearchAnnotationSetsResponse"
+    },
+    {
+      "type": "CreateAnnotationRequest"
+    },
+    {
+      "type": "BatchCreateAnnotationsRequest"
+    },
+    {
+      "type": "BatchCreateAnnotationsResponse",
+      "msgs": [
+        {
+          "type": "Entry"
+        }
+      ]
+    },
+    {
+      "type": "GetAnnotationRequest"
+    },
+    {
+      "type": "UpdateAnnotationRequest"
+    },
+    {
+      "type": "DeleteAnnotationRequest"
+    },
+    {
+      "type": "SearchAnnotationsRequest"
+    },
+    {
+      "type": "SearchAnnotationsResponse"
+    }
+  ],
+  "go": {
+    "src": "googleapis/genomics/v1/annotations.pb.go",
+    "pkg": "genomics",
+    "pkg_full": "google.golang.org/genproto/googleapis/genomics/v1"
+  }
+}
+{
+  "proto": "google/genomics/v1/range",
+  "pkg": "google.genomics.v1",
+  "msgs": [
+    {
+      "type": "Range"
+    }
+  ],
+  "go": {
+    "src": "googleapis/genomics/v1/range.pb.go",
+    "pkg": "genomics",
+    "pkg_full": "google.golang.org/genproto/googleapis/genomics/v1"
+  }
+}
+{
+  "proto": "google/genomics/v1/datasets",
+  "pkg": "google.genomics.v1",
+  "svcs": [
+    {
+      "svc": "DatasetServiceV1",
+      "rpcs": [
+        {
+          "method": "ListDatasets",
+          "request": {
+            "type": "ListDatasetsRequest"
+          },
+          "response": {
+            "type": "ListDatasetsResponse"
+          }
+        },
+        {
+          "method": "CreateDataset",
+          "request": {
+            "type": "CreateDatasetRequest"
+          },
+          "response": {
+            "type": "Dataset"
+          }
+        },
+        {
+          "method": "GetDataset",
+          "request": {
+            "type": "GetDatasetRequest"
+          },
+          "response": {
+            "type": "Dataset"
+          }
+        },
+        {
+          "method": "UpdateDataset",
+          "request": {
+            "type": "UpdateDatasetRequest"
+          },
+          "response": {
+            "type": "Dataset"
+          }
+        },
+        {
+          "method": "DeleteDataset",
+          "request": {
+            "type": "DeleteDatasetRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "UndeleteDataset",
+          "request": {
+            "type": "UndeleteDatasetRequest"
+          },
+          "response": {
+            "type": "Dataset"
+          }
+        },
+        {
+          "method": "SetIamPolicy",
+          "request": {
+            "type": "google.iam.v1.SetIamPolicyRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.Policy"
+          }
+        },
+        {
+          "method": "GetIamPolicy",
+          "request": {
+            "type": "google.iam.v1.GetIamPolicyRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.Policy"
+          }
+        },
+        {
+          "method": "TestIamPermissions",
+          "request": {
+            "type": "google.iam.v1.TestIamPermissionsRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.TestIamPermissionsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Dataset"
+    },
+    {
+      "type": "ListDatasetsRequest"
+    },
+    {
+      "type": "ListDatasetsResponse"
+    },
+    {
+      "type": "CreateDatasetRequest"
+    },
+    {
+      "type": "UpdateDatasetRequest"
+    },
+    {
+      "type": "DeleteDatasetRequest"
+    },
+    {
+      "type": "UndeleteDatasetRequest"
+    },
+    {
+      "type": "GetDatasetRequest"
+    }
+  ],
+  "go": {
+    "src": "googleapis/genomics/v1/datasets.pb.go",
+    "pkg": "genomics",
+    "pkg_full": "google.golang.org/genproto/googleapis/genomics/v1"
+  }
+}
+{
+  "proto": "google/genomics/v1/references",
+  "pkg": "google.genomics.v1",
+  "svcs": [
+    {
+      "svc": "ReferenceServiceV1",
+      "rpcs": [
+        {
+          "method": "SearchReferenceSets",
+          "request": {
+            "type": "SearchReferenceSetsRequest"
+          },
+          "response": {
+            "type": "SearchReferenceSetsResponse"
+          }
+        },
+        {
+          "method": "GetReferenceSet",
+          "request": {
+            "type": "GetReferenceSetRequest"
+          },
+          "response": {
+            "type": "ReferenceSet"
+          }
+        },
+        {
+          "method": "SearchReferences",
+          "request": {
+            "type": "SearchReferencesRequest"
+          },
+          "response": {
+            "type": "SearchReferencesResponse"
+          }
+        },
+        {
+          "method": "GetReference",
+          "request": {
+            "type": "GetReferenceRequest"
+          },
+          "response": {
+            "type": "Reference"
+          }
+        },
+        {
+          "method": "ListBases",
+          "request": {
+            "type": "ListBasesRequest"
+          },
+          "response": {
+            "type": "ListBasesResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Reference"
+    },
+    {
+      "type": "ReferenceSet"
+    },
+    {
+      "type": "SearchReferenceSetsRequest"
+    },
+    {
+      "type": "SearchReferenceSetsResponse"
+    },
+    {
+      "type": "GetReferenceSetRequest"
+    },
+    {
+      "type": "SearchReferencesRequest"
+    },
+    {
+      "type": "SearchReferencesResponse"
+    },
+    {
+      "type": "GetReferenceRequest"
+    },
+    {
+      "type": "ListBasesRequest"
+    },
+    {
+      "type": "ListBasesResponse"
+    }
+  ],
+  "go": {
+    "src": "googleapis/genomics/v1/references.pb.go",
+    "pkg": "genomics",
+    "pkg_full": "google.golang.org/genproto/googleapis/genomics/v1"
+  }
+}
+{
+  "proto": "google/genomics/v1/readgroup",
+  "pkg": "google.genomics.v1",
+  "msgs": [
+    {
+      "type": "ReadGroup",
+      "msgs": [
+        {
+          "type": "Experiment"
+        },
+        {
+          "type": "Program"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/genomics/v1/readgroup.pb.go",
+    "pkg": "genomics",
+    "pkg_full": "google.golang.org/genproto/googleapis/genomics/v1"
+  }
+}
+{
+  "proto": "google/genomics/v1/position",
+  "pkg": "google.genomics.v1",
+  "msgs": [
+    {
+      "type": "Position"
+    }
+  ],
+  "go": {
+    "src": "googleapis/genomics/v1/position.pb.go",
+    "pkg": "genomics",
+    "pkg_full": "google.golang.org/genproto/googleapis/genomics/v1"
+  }
+}
+{
+  "proto": "google/genomics/v1/readgroupset",
+  "pkg": "google.genomics.v1",
+  "msgs": [
+    {
+      "type": "ReadGroupSet"
+    }
+  ],
+  "go": {
+    "src": "googleapis/genomics/v1/readgroupset.pb.go",
+    "pkg": "genomics",
+    "pkg_full": "google.golang.org/genproto/googleapis/genomics/v1"
+  }
+}
+{
+  "proto": "google/genomics/v1/readalignment",
+  "pkg": "google.genomics.v1",
+  "msgs": [
+    {
+      "type": "LinearAlignment"
+    },
+    {
+      "type": "Read"
+    }
+  ],
+  "go": {
+    "src": "googleapis/genomics/v1/readalignment.pb.go",
+    "pkg": "genomics",
+    "pkg_full": "google.golang.org/genproto/googleapis/genomics/v1"
+  }
+}

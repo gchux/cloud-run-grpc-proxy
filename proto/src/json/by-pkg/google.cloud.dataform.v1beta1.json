@@ -1,0 +1,808 @@
+{
+  "proto": "google/cloud/dataform/v1beta1/dataform",
+  "pkg": "google.cloud.dataform.v1beta1",
+  "svcs": [
+    {
+      "svc": "Dataform",
+      "host": "dataform.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListRepositories",
+          "request": {
+            "type": "ListRepositoriesRequest"
+          },
+          "response": {
+            "type": "ListRepositoriesResponse"
+          }
+        },
+        {
+          "method": "GetRepository",
+          "request": {
+            "type": "GetRepositoryRequest"
+          },
+          "response": {
+            "type": "Repository"
+          }
+        },
+        {
+          "method": "CreateRepository",
+          "request": {
+            "type": "CreateRepositoryRequest"
+          },
+          "response": {
+            "type": "Repository"
+          }
+        },
+        {
+          "method": "UpdateRepository",
+          "request": {
+            "type": "UpdateRepositoryRequest"
+          },
+          "response": {
+            "type": "Repository"
+          }
+        },
+        {
+          "method": "DeleteRepository",
+          "request": {
+            "type": "DeleteRepositoryRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "CommitRepositoryChanges",
+          "request": {
+            "type": "CommitRepositoryChangesRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ReadRepositoryFile",
+          "request": {
+            "type": "ReadRepositoryFileRequest"
+          },
+          "response": {
+            "type": "ReadRepositoryFileResponse"
+          }
+        },
+        {
+          "method": "QueryRepositoryDirectoryContents",
+          "request": {
+            "type": "QueryRepositoryDirectoryContentsRequest"
+          },
+          "response": {
+            "type": "QueryRepositoryDirectoryContentsResponse"
+          }
+        },
+        {
+          "method": "FetchRepositoryHistory",
+          "request": {
+            "type": "FetchRepositoryHistoryRequest"
+          },
+          "response": {
+            "type": "FetchRepositoryHistoryResponse"
+          }
+        },
+        {
+          "method": "FetchRemoteBranches",
+          "request": {
+            "type": "FetchRemoteBranchesRequest"
+          },
+          "response": {
+            "type": "FetchRemoteBranchesResponse"
+          }
+        },
+        {
+          "method": "ListWorkspaces",
+          "request": {
+            "type": "ListWorkspacesRequest"
+          },
+          "response": {
+            "type": "ListWorkspacesResponse"
+          }
+        },
+        {
+          "method": "GetWorkspace",
+          "request": {
+            "type": "GetWorkspaceRequest"
+          },
+          "response": {
+            "type": "Workspace"
+          }
+        },
+        {
+          "method": "CreateWorkspace",
+          "request": {
+            "type": "CreateWorkspaceRequest"
+          },
+          "response": {
+            "type": "Workspace"
+          }
+        },
+        {
+          "method": "DeleteWorkspace",
+          "request": {
+            "type": "DeleteWorkspaceRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "InstallNpmPackages",
+          "request": {
+            "type": "InstallNpmPackagesRequest"
+          },
+          "response": {
+            "type": "InstallNpmPackagesResponse"
+          }
+        },
+        {
+          "method": "PullGitCommits",
+          "request": {
+            "type": "PullGitCommitsRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "PushGitCommits",
+          "request": {
+            "type": "PushGitCommitsRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "FetchFileGitStatuses",
+          "request": {
+            "type": "FetchFileGitStatusesRequest"
+          },
+          "response": {
+            "type": "FetchFileGitStatusesResponse"
+          }
+        },
+        {
+          "method": "FetchGitAheadBehind",
+          "request": {
+            "type": "FetchGitAheadBehindRequest"
+          },
+          "response": {
+            "type": "FetchGitAheadBehindResponse"
+          }
+        },
+        {
+          "method": "CommitWorkspaceChanges",
+          "request": {
+            "type": "CommitWorkspaceChangesRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ResetWorkspaceChanges",
+          "request": {
+            "type": "ResetWorkspaceChangesRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "FetchFileDiff",
+          "request": {
+            "type": "FetchFileDiffRequest"
+          },
+          "response": {
+            "type": "FetchFileDiffResponse"
+          }
+        },
+        {
+          "method": "QueryDirectoryContents",
+          "request": {
+            "type": "QueryDirectoryContentsRequest"
+          },
+          "response": {
+            "type": "QueryDirectoryContentsResponse"
+          }
+        },
+        {
+          "method": "MakeDirectory",
+          "request": {
+            "type": "MakeDirectoryRequest"
+          },
+          "response": {
+            "type": "MakeDirectoryResponse"
+          }
+        },
+        {
+          "method": "RemoveDirectory",
+          "request": {
+            "type": "RemoveDirectoryRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "MoveDirectory",
+          "request": {
+            "type": "MoveDirectoryRequest"
+          },
+          "response": {
+            "type": "MoveDirectoryResponse"
+          }
+        },
+        {
+          "method": "ReadFile",
+          "request": {
+            "type": "ReadFileRequest"
+          },
+          "response": {
+            "type": "ReadFileResponse"
+          }
+        },
+        {
+          "method": "RemoveFile",
+          "request": {
+            "type": "RemoveFileRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "MoveFile",
+          "request": {
+            "type": "MoveFileRequest"
+          },
+          "response": {
+            "type": "MoveFileResponse"
+          }
+        },
+        {
+          "method": "WriteFile",
+          "request": {
+            "type": "WriteFileRequest"
+          },
+          "response": {
+            "type": "WriteFileResponse"
+          }
+        },
+        {
+          "method": "ListReleaseConfigs",
+          "request": {
+            "type": "ListReleaseConfigsRequest"
+          },
+          "response": {
+            "type": "ListReleaseConfigsResponse"
+          }
+        },
+        {
+          "method": "GetReleaseConfig",
+          "request": {
+            "type": "GetReleaseConfigRequest"
+          },
+          "response": {
+            "type": "ReleaseConfig"
+          }
+        },
+        {
+          "method": "CreateReleaseConfig",
+          "request": {
+            "type": "CreateReleaseConfigRequest"
+          },
+          "response": {
+            "type": "ReleaseConfig"
+          }
+        },
+        {
+          "method": "UpdateReleaseConfig",
+          "request": {
+            "type": "UpdateReleaseConfigRequest"
+          },
+          "response": {
+            "type": "ReleaseConfig"
+          }
+        },
+        {
+          "method": "DeleteReleaseConfig",
+          "request": {
+            "type": "DeleteReleaseConfigRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListCompilationResults",
+          "request": {
+            "type": "ListCompilationResultsRequest"
+          },
+          "response": {
+            "type": "ListCompilationResultsResponse"
+          }
+        },
+        {
+          "method": "GetCompilationResult",
+          "request": {
+            "type": "GetCompilationResultRequest"
+          },
+          "response": {
+            "type": "CompilationResult"
+          }
+        },
+        {
+          "method": "CreateCompilationResult",
+          "request": {
+            "type": "CreateCompilationResultRequest"
+          },
+          "response": {
+            "type": "CompilationResult"
+          }
+        },
+        {
+          "method": "QueryCompilationResultActions",
+          "request": {
+            "type": "QueryCompilationResultActionsRequest"
+          },
+          "response": {
+            "type": "QueryCompilationResultActionsResponse"
+          }
+        },
+        {
+          "method": "ListWorkflowConfigs",
+          "request": {
+            "type": "ListWorkflowConfigsRequest"
+          },
+          "response": {
+            "type": "ListWorkflowConfigsResponse"
+          }
+        },
+        {
+          "method": "GetWorkflowConfig",
+          "request": {
+            "type": "GetWorkflowConfigRequest"
+          },
+          "response": {
+            "type": "WorkflowConfig"
+          }
+        },
+        {
+          "method": "CreateWorkflowConfig",
+          "request": {
+            "type": "CreateWorkflowConfigRequest"
+          },
+          "response": {
+            "type": "WorkflowConfig"
+          }
+        },
+        {
+          "method": "UpdateWorkflowConfig",
+          "request": {
+            "type": "UpdateWorkflowConfigRequest"
+          },
+          "response": {
+            "type": "WorkflowConfig"
+          }
+        },
+        {
+          "method": "DeleteWorkflowConfig",
+          "request": {
+            "type": "DeleteWorkflowConfigRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListWorkflowInvocations",
+          "request": {
+            "type": "ListWorkflowInvocationsRequest"
+          },
+          "response": {
+            "type": "ListWorkflowInvocationsResponse"
+          }
+        },
+        {
+          "method": "GetWorkflowInvocation",
+          "request": {
+            "type": "GetWorkflowInvocationRequest"
+          },
+          "response": {
+            "type": "WorkflowInvocation"
+          }
+        },
+        {
+          "method": "CreateWorkflowInvocation",
+          "request": {
+            "type": "CreateWorkflowInvocationRequest"
+          },
+          "response": {
+            "type": "WorkflowInvocation"
+          }
+        },
+        {
+          "method": "DeleteWorkflowInvocation",
+          "request": {
+            "type": "DeleteWorkflowInvocationRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "CancelWorkflowInvocation",
+          "request": {
+            "type": "CancelWorkflowInvocationRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "QueryWorkflowInvocationActions",
+          "request": {
+            "type": "QueryWorkflowInvocationActionsRequest"
+          },
+          "response": {
+            "type": "QueryWorkflowInvocationActionsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Repository",
+      "msgs": [
+        {
+          "type": "GitRemoteSettings"
+        },
+        {
+          "type": "SshAuthenticationConfig"
+        },
+        {
+          "type": "WorkspaceCompilationOverrides"
+        }
+      ]
+    },
+    {
+      "type": "ListRepositoriesRequest"
+    },
+    {
+      "type": "ListRepositoriesResponse"
+    },
+    {
+      "type": "GetRepositoryRequest"
+    },
+    {
+      "type": "CreateRepositoryRequest"
+    },
+    {
+      "type": "UpdateRepositoryRequest"
+    },
+    {
+      "type": "DeleteRepositoryRequest"
+    },
+    {
+      "type": "CommitRepositoryChangesRequest",
+      "msgs": [
+        {
+          "type": "FileOperation"
+        },
+        {
+          "type": "WriteFile"
+        },
+        {
+          "type": "DeleteFile"
+        }
+      ]
+    },
+    {
+      "type": "ReadRepositoryFileRequest"
+    },
+    {
+      "type": "ReadRepositoryFileResponse"
+    },
+    {
+      "type": "QueryRepositoryDirectoryContentsRequest"
+    },
+    {
+      "type": "QueryRepositoryDirectoryContentsResponse"
+    },
+    {
+      "type": "FetchRepositoryHistoryRequest"
+    },
+    {
+      "type": "FetchRepositoryHistoryResponse"
+    },
+    {
+      "type": "CommitLogEntry"
+    },
+    {
+      "type": "CommitMetadata"
+    },
+    {
+      "type": "ComputeRepositoryAccessTokenStatusRequest"
+    },
+    {
+      "type": "ComputeRepositoryAccessTokenStatusResponse"
+    },
+    {
+      "type": "FetchRemoteBranchesRequest"
+    },
+    {
+      "type": "FetchRemoteBranchesResponse"
+    },
+    {
+      "type": "Workspace"
+    },
+    {
+      "type": "ListWorkspacesRequest"
+    },
+    {
+      "type": "ListWorkspacesResponse"
+    },
+    {
+      "type": "GetWorkspaceRequest"
+    },
+    {
+      "type": "CreateWorkspaceRequest"
+    },
+    {
+      "type": "DeleteWorkspaceRequest"
+    },
+    {
+      "type": "CommitAuthor"
+    },
+    {
+      "type": "PullGitCommitsRequest"
+    },
+    {
+      "type": "PushGitCommitsRequest"
+    },
+    {
+      "type": "FetchFileGitStatusesRequest"
+    },
+    {
+      "type": "FetchFileGitStatusesResponse",
+      "msgs": [
+        {
+          "type": "UncommittedFileChange"
+        }
+      ]
+    },
+    {
+      "type": "FetchGitAheadBehindRequest"
+    },
+    {
+      "type": "FetchGitAheadBehindResponse"
+    },
+    {
+      "type": "CommitWorkspaceChangesRequest"
+    },
+    {
+      "type": "ResetWorkspaceChangesRequest"
+    },
+    {
+      "type": "FetchFileDiffRequest"
+    },
+    {
+      "type": "FetchFileDiffResponse"
+    },
+    {
+      "type": "QueryDirectoryContentsRequest"
+    },
+    {
+      "type": "QueryDirectoryContentsResponse"
+    },
+    {
+      "type": "DirectoryEntry"
+    },
+    {
+      "type": "MakeDirectoryRequest"
+    },
+    {
+      "type": "MakeDirectoryResponse"
+    },
+    {
+      "type": "RemoveDirectoryRequest"
+    },
+    {
+      "type": "MoveDirectoryRequest"
+    },
+    {
+      "type": "MoveDirectoryResponse"
+    },
+    {
+      "type": "ReadFileRequest"
+    },
+    {
+      "type": "ReadFileResponse"
+    },
+    {
+      "type": "RemoveFileRequest"
+    },
+    {
+      "type": "MoveFileRequest"
+    },
+    {
+      "type": "MoveFileResponse"
+    },
+    {
+      "type": "WriteFileRequest"
+    },
+    {
+      "type": "WriteFileResponse"
+    },
+    {
+      "type": "InstallNpmPackagesRequest"
+    },
+    {
+      "type": "InstallNpmPackagesResponse"
+    },
+    {
+      "type": "ReleaseConfig",
+      "msgs": [
+        {
+          "type": "ScheduledReleaseRecord"
+        }
+      ]
+    },
+    {
+      "type": "ListReleaseConfigsRequest"
+    },
+    {
+      "type": "ListReleaseConfigsResponse"
+    },
+    {
+      "type": "GetReleaseConfigRequest"
+    },
+    {
+      "type": "CreateReleaseConfigRequest"
+    },
+    {
+      "type": "UpdateReleaseConfigRequest"
+    },
+    {
+      "type": "DeleteReleaseConfigRequest"
+    },
+    {
+      "type": "CompilationResult",
+      "msgs": [
+        {
+          "type": "CompilationError"
+        }
+      ]
+    },
+    {
+      "type": "CodeCompilationConfig"
+    },
+    {
+      "type": "ListCompilationResultsRequest"
+    },
+    {
+      "type": "ListCompilationResultsResponse"
+    },
+    {
+      "type": "GetCompilationResultRequest"
+    },
+    {
+      "type": "CreateCompilationResultRequest"
+    },
+    {
+      "type": "Target"
+    },
+    {
+      "type": "RelationDescriptor",
+      "msgs": [
+        {
+          "type": "ColumnDescriptor"
+        }
+      ]
+    },
+    {
+      "type": "CompilationResultAction",
+      "msgs": [
+        {
+          "type": "Relation"
+        },
+        {
+          "type": "IncrementalTableConfig"
+        },
+        {
+          "type": "Operations"
+        },
+        {
+          "type": "Assertion"
+        },
+        {
+          "type": "Declaration"
+        }
+      ]
+    },
+    {
+      "type": "QueryCompilationResultActionsRequest"
+    },
+    {
+      "type": "QueryCompilationResultActionsResponse"
+    },
+    {
+      "type": "WorkflowConfig",
+      "msgs": [
+        {
+          "type": "ScheduledExecutionRecord"
+        }
+      ]
+    },
+    {
+      "type": "InvocationConfig"
+    },
+    {
+      "type": "ListWorkflowConfigsRequest"
+    },
+    {
+      "type": "ListWorkflowConfigsResponse"
+    },
+    {
+      "type": "GetWorkflowConfigRequest"
+    },
+    {
+      "type": "CreateWorkflowConfigRequest"
+    },
+    {
+      "type": "UpdateWorkflowConfigRequest"
+    },
+    {
+      "type": "DeleteWorkflowConfigRequest"
+    },
+    {
+      "type": "WorkflowInvocation"
+    },
+    {
+      "type": "ListWorkflowInvocationsRequest"
+    },
+    {
+      "type": "ListWorkflowInvocationsResponse"
+    },
+    {
+      "type": "GetWorkflowInvocationRequest"
+    },
+    {
+      "type": "CreateWorkflowInvocationRequest"
+    },
+    {
+      "type": "DeleteWorkflowInvocationRequest"
+    },
+    {
+      "type": "CancelWorkflowInvocationRequest"
+    },
+    {
+      "type": "WorkflowInvocationAction",
+      "msgs": [
+        {
+          "type": "BigQueryAction"
+        }
+      ]
+    },
+    {
+      "type": "QueryWorkflowInvocationActionsRequest"
+    },
+    {
+      "type": "QueryWorkflowInvocationActionsResponse"
+    }
+  ],
+  "go": {
+    "src": "dataform/apiv1beta1/dataformpb/dataform.pb.go",
+    "pkg": "dataformpb",
+    "pkg_full": "cloud.google.com/go/dataform/apiv1beta1/dataformpb"
+  }
+}

@@ -1,0 +1,330 @@
+{
+  "proto": "google/storage/v1/storage",
+  "pkg": "google.storage.v1",
+  "msgs": [
+    {
+      "type": "DeleteBucketAccessControlRequest"
+    },
+    {
+      "type": "GetBucketAccessControlRequest"
+    },
+    {
+      "type": "InsertBucketAccessControlRequest"
+    },
+    {
+      "type": "ListBucketAccessControlsRequest"
+    },
+    {
+      "type": "PatchBucketAccessControlRequest"
+    },
+    {
+      "type": "UpdateBucketAccessControlRequest"
+    },
+    {
+      "type": "DeleteBucketRequest"
+    },
+    {
+      "type": "GetBucketRequest"
+    },
+    {
+      "type": "InsertBucketRequest"
+    },
+    {
+      "type": "ListChannelsRequest"
+    },
+    {
+      "type": "ListBucketsRequest"
+    },
+    {
+      "type": "LockRetentionPolicyRequest"
+    },
+    {
+      "type": "PatchBucketRequest"
+    },
+    {
+      "type": "UpdateBucketRequest"
+    },
+    {
+      "type": "StopChannelRequest"
+    },
+    {
+      "type": "DeleteDefaultObjectAccessControlRequest"
+    },
+    {
+      "type": "GetDefaultObjectAccessControlRequest"
+    },
+    {
+      "type": "InsertDefaultObjectAccessControlRequest"
+    },
+    {
+      "type": "ListDefaultObjectAccessControlsRequest"
+    },
+    {
+      "type": "PatchDefaultObjectAccessControlRequest"
+    },
+    {
+      "type": "UpdateDefaultObjectAccessControlRequest"
+    },
+    {
+      "type": "DeleteNotificationRequest"
+    },
+    {
+      "type": "GetNotificationRequest"
+    },
+    {
+      "type": "InsertNotificationRequest"
+    },
+    {
+      "type": "ListNotificationsRequest"
+    },
+    {
+      "type": "DeleteObjectAccessControlRequest"
+    },
+    {
+      "type": "GetObjectAccessControlRequest"
+    },
+    {
+      "type": "InsertObjectAccessControlRequest"
+    },
+    {
+      "type": "ListObjectAccessControlsRequest"
+    },
+    {
+      "type": "PatchObjectAccessControlRequest"
+    },
+    {
+      "type": "UpdateObjectAccessControlRequest"
+    },
+    {
+      "type": "ComposeObjectRequest",
+      "msgs": [
+        {
+          "type": "SourceObjects"
+        },
+        {
+          "type": "ObjectPreconditions"
+        }
+      ]
+    },
+    {
+      "type": "CopyObjectRequest"
+    },
+    {
+      "type": "DeleteObjectRequest"
+    },
+    {
+      "type": "GetObjectMediaRequest"
+    },
+    {
+      "type": "GetObjectRequest"
+    },
+    {
+      "type": "GetObjectMediaResponse"
+    },
+    {
+      "type": "InsertObjectSpec"
+    },
+    {
+      "type": "InsertObjectRequest"
+    },
+    {
+      "type": "ListObjectsRequest"
+    },
+    {
+      "type": "QueryWriteStatusRequest"
+    },
+    {
+      "type": "QueryWriteStatusResponse"
+    },
+    {
+      "type": "RewriteObjectRequest"
+    },
+    {
+      "type": "RewriteResponse"
+    },
+    {
+      "type": "StartResumableWriteRequest"
+    },
+    {
+      "type": "StartResumableWriteResponse"
+    },
+    {
+      "type": "PatchObjectRequest"
+    },
+    {
+      "type": "UpdateObjectRequest"
+    },
+    {
+      "type": "WatchAllObjectsRequest"
+    },
+    {
+      "type": "GetProjectServiceAccountRequest"
+    },
+    {
+      "type": "CreateHmacKeyRequest"
+    },
+    {
+      "type": "CreateHmacKeyResponse"
+    },
+    {
+      "type": "DeleteHmacKeyRequest"
+    },
+    {
+      "type": "GetHmacKeyRequest"
+    },
+    {
+      "type": "ListHmacKeysRequest"
+    },
+    {
+      "type": "ListHmacKeysResponse"
+    },
+    {
+      "type": "UpdateHmacKeyRequest"
+    },
+    {
+      "type": "GetIamPolicyRequest"
+    },
+    {
+      "type": "SetIamPolicyRequest"
+    },
+    {
+      "type": "TestIamPermissionsRequest"
+    },
+    {
+      "type": "CommonObjectRequestParams"
+    },
+    {
+      "type": "CommonRequestParams"
+    }
+  ],
+  "go": {
+    "src": "googleapis/storage/v1/storage.pb.go",
+    "pkg": "storage",
+    "pkg_full": "google.golang.org/genproto/googleapis/storage/v1"
+  }
+}
+{
+  "proto": "google/storage/v1/storage_resources",
+  "pkg": "google.storage.v1",
+  "msgs": [
+    {
+      "type": "Bucket",
+      "msgs": [
+        {
+          "type": "Billing"
+        },
+        {
+          "type": "Cors"
+        },
+        {
+          "type": "Encryption"
+        },
+        {
+          "type": "IamConfiguration"
+        },
+        {
+          "type": "UniformBucketLevelAccess"
+        },
+        {
+          "type": "Lifecycle"
+        },
+        {
+          "type": "Rule"
+        },
+        {
+          "type": "Action"
+        },
+        {
+          "type": "Condition"
+        },
+        {
+          "type": "Logging"
+        },
+        {
+          "type": "RetentionPolicy"
+        },
+        {
+          "type": "Versioning"
+        },
+        {
+          "type": "Website"
+        },
+        {
+          "type": "Autoclass"
+        }
+      ]
+    },
+    {
+      "type": "BucketAccessControl"
+    },
+    {
+      "type": "ListBucketAccessControlsResponse"
+    },
+    {
+      "type": "ListBucketsResponse"
+    },
+    {
+      "type": "Channel"
+    },
+    {
+      "type": "ListChannelsResponse",
+      "msgs": [
+        {
+          "type": "Items"
+        }
+      ]
+    },
+    {
+      "type": "ChecksummedData"
+    },
+    {
+      "type": "ObjectChecksums"
+    },
+    {
+      "type": "CommonEnums"
+    },
+    {
+      "type": "ContentRange"
+    },
+    {
+      "type": "HmacKeyMetadata"
+    },
+    {
+      "type": "Notification"
+    },
+    {
+      "type": "ListNotificationsResponse"
+    },
+    {
+      "type": "Object",
+      "msgs": [
+        {
+          "type": "CustomerEncryption"
+        }
+      ]
+    },
+    {
+      "type": "ObjectAccessControl"
+    },
+    {
+      "type": "ListObjectAccessControlsResponse"
+    },
+    {
+      "type": "ListObjectsResponse"
+    },
+    {
+      "type": "ProjectTeam"
+    },
+    {
+      "type": "ServiceAccount"
+    },
+    {
+      "type": "Owner"
+    }
+  ],
+  "go": {
+    "src": "googleapis/storage/v1/storage_resources.pb.go",
+    "pkg": "storage",
+    "pkg_full": "google.golang.org/genproto/googleapis/storage/v1"
+  }
+}

@@ -1,0 +1,232 @@
+{
+  "proto": "google/cloud/vision/v1p2beta1/image_annotator",
+  "pkg": "google.cloud.vision.v1p2beta1",
+  "svcs": [
+    {
+      "svc": "ImageAnnotator",
+      "host": "vision.googleapis.com",
+      "rpcs": [
+        {
+          "method": "BatchAnnotateImages",
+          "request": {
+            "type": "BatchAnnotateImagesRequest"
+          },
+          "response": {
+            "type": "BatchAnnotateImagesResponse"
+          }
+        },
+        {
+          "method": "AsyncBatchAnnotateFiles",
+          "request": {
+            "type": "AsyncBatchAnnotateFilesRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Feature"
+    },
+    {
+      "type": "ImageSource"
+    },
+    {
+      "type": "Image"
+    },
+    {
+      "type": "FaceAnnotation",
+      "msgs": [
+        {
+          "type": "Landmark"
+        }
+      ]
+    },
+    {
+      "type": "LocationInfo"
+    },
+    {
+      "type": "Property"
+    },
+    {
+      "type": "EntityAnnotation"
+    },
+    {
+      "type": "SafeSearchAnnotation"
+    },
+    {
+      "type": "LatLongRect"
+    },
+    {
+      "type": "ColorInfo"
+    },
+    {
+      "type": "DominantColorsAnnotation"
+    },
+    {
+      "type": "ImageProperties"
+    },
+    {
+      "type": "CropHint"
+    },
+    {
+      "type": "CropHintsAnnotation"
+    },
+    {
+      "type": "CropHintsParams"
+    },
+    {
+      "type": "WebDetectionParams"
+    },
+    {
+      "type": "TextDetectionParams"
+    },
+    {
+      "type": "ImageContext"
+    },
+    {
+      "type": "AnnotateImageRequest"
+    },
+    {
+      "type": "ImageAnnotationContext"
+    },
+    {
+      "type": "AnnotateImageResponse"
+    },
+    {
+      "type": "AnnotateFileResponse"
+    },
+    {
+      "type": "BatchAnnotateImagesRequest"
+    },
+    {
+      "type": "BatchAnnotateImagesResponse"
+    },
+    {
+      "type": "AsyncAnnotateFileRequest"
+    },
+    {
+      "type": "AsyncAnnotateFileResponse"
+    },
+    {
+      "type": "AsyncBatchAnnotateFilesRequest"
+    },
+    {
+      "type": "AsyncBatchAnnotateFilesResponse"
+    },
+    {
+      "type": "InputConfig"
+    },
+    {
+      "type": "OutputConfig"
+    },
+    {
+      "type": "GcsSource"
+    },
+    {
+      "type": "GcsDestination"
+    },
+    {
+      "type": "OperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/vision/v1p2beta1/image_annotator.pb.go",
+    "pkg": "visionpb",
+    "pkg_full": "cloud.google.com/go/vision/apiv1p2beta1/visionpb"
+  }
+}
+{
+  "proto": "google/cloud/vision/v1p2beta1/web_detection",
+  "pkg": "google.cloud.vision.v1p2beta1",
+  "msgs": [
+    {
+      "type": "WebDetection",
+      "msgs": [
+        {
+          "type": "WebEntity"
+        },
+        {
+          "type": "WebImage"
+        },
+        {
+          "type": "WebPage"
+        },
+        {
+          "type": "WebLabel"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/vision/v1p2beta1/web_detection.pb.go",
+    "pkg": "visionpb",
+    "pkg_full": "cloud.google.com/go/vision/apiv1p2beta1/visionpb"
+  }
+}
+{
+  "proto": "google/cloud/vision/v1p2beta1/geometry",
+  "pkg": "google.cloud.vision.v1p2beta1",
+  "msgs": [
+    {
+      "type": "Vertex"
+    },
+    {
+      "type": "NormalizedVertex"
+    },
+    {
+      "type": "BoundingPoly"
+    },
+    {
+      "type": "Position"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/vision/v1p2beta1/geometry.pb.go",
+    "pkg": "visionpb",
+    "pkg_full": "cloud.google.com/go/vision/apiv1p2beta1/visionpb"
+  }
+}
+{
+  "proto": "google/cloud/vision/v1p2beta1/text_annotation",
+  "pkg": "google.cloud.vision.v1p2beta1",
+  "msgs": [
+    {
+      "type": "TextAnnotation",
+      "msgs": [
+        {
+          "type": "DetectedLanguage"
+        },
+        {
+          "type": "DetectedBreak"
+        },
+        {
+          "type": "TextProperty"
+        }
+      ]
+    },
+    {
+      "type": "Page"
+    },
+    {
+      "type": "Block"
+    },
+    {
+      "type": "Paragraph"
+    },
+    {
+      "type": "Word"
+    },
+    {
+      "type": "Symbol"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/vision/v1p2beta1/text_annotation.pb.go",
+    "pkg": "visionpb",
+    "pkg_full": "cloud.google.com/go/vision/apiv1p2beta1/visionpb"
+  }
+}

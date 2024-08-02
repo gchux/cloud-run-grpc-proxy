@@ -1,0 +1,378 @@
+{
+  "proto": "google/cloud/tasks/v2beta2/queue",
+  "pkg": "google.cloud.tasks.v2beta2",
+  "msgs": [
+    {
+      "type": "Queue"
+    },
+    {
+      "type": "RateLimits"
+    },
+    {
+      "type": "RetryConfig"
+    },
+    {
+      "type": "QueueStats"
+    }
+  ],
+  "go": {
+    "src": "cloudtasks/apiv2beta2/cloudtaskspb/queue.pb.go",
+    "pkg": "cloudtaskspb",
+    "pkg_full": "cloud.google.com/go/cloudtasks/apiv2beta2/cloudtaskspb"
+  }
+}
+{
+  "proto": "google/cloud/tasks/v2beta2/target",
+  "pkg": "google.cloud.tasks.v2beta2",
+  "msgs": [
+    {
+      "type": "PullTarget"
+    },
+    {
+      "type": "PullMessage"
+    },
+    {
+      "type": "AppEngineHttpTarget"
+    },
+    {
+      "type": "AppEngineHttpRequest"
+    },
+    {
+      "type": "AppEngineRouting"
+    },
+    {
+      "type": "HttpRequest"
+    },
+    {
+      "type": "PathOverride"
+    },
+    {
+      "type": "QueryOverride"
+    },
+    {
+      "type": "UriOverride"
+    },
+    {
+      "type": "HttpTarget",
+      "msgs": [
+        {
+          "type": "Header"
+        },
+        {
+          "type": "HeaderOverride"
+        }
+      ]
+    },
+    {
+      "type": "OAuthToken"
+    },
+    {
+      "type": "OidcToken"
+    }
+  ],
+  "go": {
+    "src": "cloudtasks/apiv2beta2/cloudtaskspb/target.pb.go",
+    "pkg": "cloudtaskspb",
+    "pkg_full": "cloud.google.com/go/cloudtasks/apiv2beta2/cloudtaskspb"
+  }
+}
+{
+  "proto": "google/cloud/tasks/v2beta2/task",
+  "pkg": "google.cloud.tasks.v2beta2",
+  "msgs": [
+    {
+      "type": "Task"
+    },
+    {
+      "type": "TaskStatus"
+    },
+    {
+      "type": "AttemptStatus"
+    }
+  ],
+  "go": {
+    "src": "cloudtasks/apiv2beta2/cloudtaskspb/task.pb.go",
+    "pkg": "cloudtaskspb",
+    "pkg_full": "cloud.google.com/go/cloudtasks/apiv2beta2/cloudtaskspb"
+  }
+}
+{
+  "proto": "google/cloud/tasks/v2beta2/cloudtasks",
+  "pkg": "google.cloud.tasks.v2beta2",
+  "svcs": [
+    {
+      "svc": "CloudTasks",
+      "host": "cloudtasks.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListQueues",
+          "request": {
+            "type": "ListQueuesRequest"
+          },
+          "response": {
+            "type": "ListQueuesResponse"
+          }
+        },
+        {
+          "method": "GetQueue",
+          "request": {
+            "type": "GetQueueRequest"
+          },
+          "response": {
+            "type": "Queue"
+          }
+        },
+        {
+          "method": "CreateQueue",
+          "request": {
+            "type": "CreateQueueRequest"
+          },
+          "response": {
+            "type": "Queue"
+          }
+        },
+        {
+          "method": "UpdateQueue",
+          "request": {
+            "type": "UpdateQueueRequest"
+          },
+          "response": {
+            "type": "Queue"
+          }
+        },
+        {
+          "method": "DeleteQueue",
+          "request": {
+            "type": "DeleteQueueRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "PurgeQueue",
+          "request": {
+            "type": "PurgeQueueRequest"
+          },
+          "response": {
+            "type": "Queue"
+          }
+        },
+        {
+          "method": "PauseQueue",
+          "request": {
+            "type": "PauseQueueRequest"
+          },
+          "response": {
+            "type": "Queue"
+          }
+        },
+        {
+          "method": "ResumeQueue",
+          "request": {
+            "type": "ResumeQueueRequest"
+          },
+          "response": {
+            "type": "Queue"
+          }
+        },
+        {
+          "method": "UploadQueueYaml",
+          "request": {
+            "type": "UploadQueueYamlRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "GetIamPolicy",
+          "request": {
+            "type": "google.iam.v1.GetIamPolicyRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.Policy"
+          }
+        },
+        {
+          "method": "SetIamPolicy",
+          "request": {
+            "type": "google.iam.v1.SetIamPolicyRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.Policy"
+          }
+        },
+        {
+          "method": "TestIamPermissions",
+          "request": {
+            "type": "google.iam.v1.TestIamPermissionsRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.TestIamPermissionsResponse"
+          }
+        },
+        {
+          "method": "ListTasks",
+          "request": {
+            "type": "ListTasksRequest"
+          },
+          "response": {
+            "type": "ListTasksResponse"
+          }
+        },
+        {
+          "method": "GetTask",
+          "request": {
+            "type": "GetTaskRequest"
+          },
+          "response": {
+            "type": "Task"
+          }
+        },
+        {
+          "method": "CreateTask",
+          "request": {
+            "type": "CreateTaskRequest"
+          },
+          "response": {
+            "type": "Task"
+          }
+        },
+        {
+          "method": "DeleteTask",
+          "request": {
+            "type": "DeleteTaskRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "LeaseTasks",
+          "request": {
+            "type": "LeaseTasksRequest"
+          },
+          "response": {
+            "type": "LeaseTasksResponse"
+          }
+        },
+        {
+          "method": "AcknowledgeTask",
+          "request": {
+            "type": "AcknowledgeTaskRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "RenewLease",
+          "request": {
+            "type": "RenewLeaseRequest"
+          },
+          "response": {
+            "type": "Task"
+          }
+        },
+        {
+          "method": "CancelLease",
+          "request": {
+            "type": "CancelLeaseRequest"
+          },
+          "response": {
+            "type": "Task"
+          }
+        },
+        {
+          "method": "RunTask",
+          "request": {
+            "type": "RunTaskRequest"
+          },
+          "response": {
+            "type": "Task"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ListQueuesRequest"
+    },
+    {
+      "type": "ListQueuesResponse"
+    },
+    {
+      "type": "GetQueueRequest"
+    },
+    {
+      "type": "CreateQueueRequest"
+    },
+    {
+      "type": "UpdateQueueRequest"
+    },
+    {
+      "type": "DeleteQueueRequest"
+    },
+    {
+      "type": "PurgeQueueRequest"
+    },
+    {
+      "type": "PauseQueueRequest"
+    },
+    {
+      "type": "ResumeQueueRequest"
+    },
+    {
+      "type": "UploadQueueYamlRequest"
+    },
+    {
+      "type": "ListTasksRequest"
+    },
+    {
+      "type": "ListTasksResponse"
+    },
+    {
+      "type": "GetTaskRequest"
+    },
+    {
+      "type": "CreateTaskRequest"
+    },
+    {
+      "type": "DeleteTaskRequest"
+    },
+    {
+      "type": "LeaseTasksRequest"
+    },
+    {
+      "type": "LeaseTasksResponse"
+    },
+    {
+      "type": "AcknowledgeTaskRequest"
+    },
+    {
+      "type": "RenewLeaseRequest"
+    },
+    {
+      "type": "CancelLeaseRequest"
+    },
+    {
+      "type": "RunTaskRequest"
+    }
+  ],
+  "go": {
+    "src": "cloudtasks/apiv2beta2/cloudtaskspb/cloudtasks.pb.go",
+    "pkg": "cloudtaskspb",
+    "pkg_full": "cloud.google.com/go/cloudtasks/apiv2beta2/cloudtaskspb"
+  }
+}
+{
+  "proto": "google/cloud/tasks/v2beta2/old_target",
+  "pkg": "google.cloud.tasks.v2beta2",
+  "go": {
+    "src": "cloudtasks/apiv2beta2/cloudtaskspb/old_target.pb.go",
+    "pkg": "cloudtaskspb",
+    "pkg_full": "cloud.google.com/go/cloudtasks/apiv2beta2/cloudtaskspb"
+  }
+}

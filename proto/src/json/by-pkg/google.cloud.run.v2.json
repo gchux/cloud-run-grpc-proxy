@@ -1,0 +1,616 @@
+{
+  "proto": "google/cloud/run/v2/status",
+  "pkg": "google.cloud.run.v2",
+  "msgs": [
+    {
+      "type": "RevisionScalingStatus"
+    }
+  ],
+  "go": {
+    "src": "run/apiv2/runpb/status.pb.go",
+    "pkg": "runpb",
+    "pkg_full": "cloud.google.com/go/run/apiv2/runpb"
+  }
+}
+{
+  "proto": "google/cloud/run/v2/job",
+  "pkg": "google.cloud.run.v2",
+  "svcs": [
+    {
+      "svc": "Jobs",
+      "host": "run.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateJob",
+          "request": {
+            "type": "CreateJobRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetJob",
+          "request": {
+            "type": "GetJobRequest"
+          },
+          "response": {
+            "type": "Job"
+          }
+        },
+        {
+          "method": "ListJobs",
+          "request": {
+            "type": "ListJobsRequest"
+          },
+          "response": {
+            "type": "ListJobsResponse"
+          }
+        },
+        {
+          "method": "UpdateJob",
+          "request": {
+            "type": "UpdateJobRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteJob",
+          "request": {
+            "type": "DeleteJobRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "RunJob",
+          "request": {
+            "type": "RunJobRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetIamPolicy",
+          "request": {
+            "type": "google.iam.v1.GetIamPolicyRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.Policy"
+          }
+        },
+        {
+          "method": "SetIamPolicy",
+          "request": {
+            "type": "google.iam.v1.SetIamPolicyRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.Policy"
+          }
+        },
+        {
+          "method": "TestIamPermissions",
+          "request": {
+            "type": "google.iam.v1.TestIamPermissionsRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.TestIamPermissionsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateJobRequest"
+    },
+    {
+      "type": "GetJobRequest"
+    },
+    {
+      "type": "UpdateJobRequest"
+    },
+    {
+      "type": "ListJobsRequest"
+    },
+    {
+      "type": "ListJobsResponse"
+    },
+    {
+      "type": "DeleteJobRequest"
+    },
+    {
+      "type": "RunJobRequest",
+      "msgs": [
+        {
+          "type": "Overrides"
+        },
+        {
+          "type": "ContainerOverride"
+        }
+      ]
+    },
+    {
+      "type": "Job"
+    },
+    {
+      "type": "ExecutionReference"
+    }
+  ],
+  "go": {
+    "src": "run/apiv2/runpb/job.pb.go",
+    "pkg": "runpb",
+    "pkg_full": "cloud.google.com/go/run/apiv2/runpb"
+  }
+}
+{
+  "proto": "google/cloud/run/v2/traffic_target",
+  "pkg": "google.cloud.run.v2",
+  "msgs": [
+    {
+      "type": "TrafficTarget"
+    },
+    {
+      "type": "TrafficTargetStatus"
+    }
+  ],
+  "go": {
+    "src": "run/apiv2/runpb/traffic_target.pb.go",
+    "pkg": "runpb",
+    "pkg_full": "cloud.google.com/go/run/apiv2/runpb"
+  }
+}
+{
+  "proto": "google/cloud/run/v2/vendor_settings",
+  "pkg": "google.cloud.run.v2",
+  "msgs": [
+    {
+      "type": "VpcAccess",
+      "msgs": [
+        {
+          "type": "NetworkInterface"
+        }
+      ]
+    },
+    {
+      "type": "BinaryAuthorization"
+    },
+    {
+      "type": "RevisionScaling"
+    },
+    {
+      "type": "ServiceScaling"
+    }
+  ],
+  "go": {
+    "src": "run/apiv2/runpb/vendor_settings.pb.go",
+    "pkg": "runpb",
+    "pkg_full": "cloud.google.com/go/run/apiv2/runpb"
+  }
+}
+{
+  "proto": "google/cloud/run/v2/execution_template",
+  "pkg": "google.cloud.run.v2",
+  "msgs": [
+    {
+      "type": "ExecutionTemplate"
+    }
+  ],
+  "go": {
+    "src": "run/apiv2/runpb/execution_template.pb.go",
+    "pkg": "runpb",
+    "pkg_full": "cloud.google.com/go/run/apiv2/runpb"
+  }
+}
+{
+  "proto": "google/cloud/run/v2/k8s.min",
+  "pkg": "google.cloud.run.v2",
+  "msgs": [
+    {
+      "type": "Container"
+    },
+    {
+      "type": "ResourceRequirements"
+    },
+    {
+      "type": "EnvVar"
+    },
+    {
+      "type": "EnvVarSource"
+    },
+    {
+      "type": "SecretKeySelector"
+    },
+    {
+      "type": "ContainerPort"
+    },
+    {
+      "type": "VolumeMount"
+    },
+    {
+      "type": "Volume"
+    },
+    {
+      "type": "SecretVolumeSource"
+    },
+    {
+      "type": "VersionToPath"
+    },
+    {
+      "type": "CloudSqlInstance"
+    },
+    {
+      "type": "EmptyDirVolumeSource"
+    },
+    {
+      "type": "NFSVolumeSource"
+    },
+    {
+      "type": "GCSVolumeSource"
+    },
+    {
+      "type": "Probe"
+    },
+    {
+      "type": "HTTPGetAction"
+    },
+    {
+      "type": "HTTPHeader"
+    },
+    {
+      "type": "TCPSocketAction"
+    },
+    {
+      "type": "GRPCAction"
+    }
+  ],
+  "go": {
+    "src": "run/apiv2/runpb/k8s.min.pb.go",
+    "pkg": "runpb",
+    "pkg_full": "cloud.google.com/go/run/apiv2/runpb"
+  }
+}
+{
+  "proto": "google/cloud/run/v2/revision",
+  "pkg": "google.cloud.run.v2",
+  "svcs": [
+    {
+      "svc": "Revisions",
+      "host": "run.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetRevision",
+          "request": {
+            "type": "GetRevisionRequest"
+          },
+          "response": {
+            "type": "Revision"
+          }
+        },
+        {
+          "method": "ListRevisions",
+          "request": {
+            "type": "ListRevisionsRequest"
+          },
+          "response": {
+            "type": "ListRevisionsResponse"
+          }
+        },
+        {
+          "method": "DeleteRevision",
+          "request": {
+            "type": "DeleteRevisionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GetRevisionRequest"
+    },
+    {
+      "type": "ListRevisionsRequest"
+    },
+    {
+      "type": "ListRevisionsResponse"
+    },
+    {
+      "type": "DeleteRevisionRequest"
+    },
+    {
+      "type": "Revision"
+    }
+  ],
+  "go": {
+    "src": "run/apiv2/runpb/revision.pb.go",
+    "pkg": "runpb",
+    "pkg_full": "cloud.google.com/go/run/apiv2/runpb"
+  }
+}
+{
+  "proto": "google/cloud/run/v2/condition",
+  "pkg": "google.cloud.run.v2",
+  "msgs": [
+    {
+      "type": "Condition"
+    }
+  ],
+  "go": {
+    "src": "run/apiv2/runpb/condition.pb.go",
+    "pkg": "runpb",
+    "pkg_full": "cloud.google.com/go/run/apiv2/runpb"
+  }
+}
+{
+  "proto": "google/cloud/run/v2/revision_template",
+  "pkg": "google.cloud.run.v2",
+  "msgs": [
+    {
+      "type": "RevisionTemplate"
+    }
+  ],
+  "go": {
+    "src": "run/apiv2/runpb/revision_template.pb.go",
+    "pkg": "runpb",
+    "pkg_full": "cloud.google.com/go/run/apiv2/runpb"
+  }
+}
+{
+  "proto": "google/cloud/run/v2/task",
+  "pkg": "google.cloud.run.v2",
+  "svcs": [
+    {
+      "svc": "Tasks",
+      "host": "run.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetTask",
+          "request": {
+            "type": "GetTaskRequest"
+          },
+          "response": {
+            "type": "Task"
+          }
+        },
+        {
+          "method": "ListTasks",
+          "request": {
+            "type": "ListTasksRequest"
+          },
+          "response": {
+            "type": "ListTasksResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GetTaskRequest"
+    },
+    {
+      "type": "ListTasksRequest"
+    },
+    {
+      "type": "ListTasksResponse"
+    },
+    {
+      "type": "Task"
+    },
+    {
+      "type": "TaskAttemptResult"
+    }
+  ],
+  "go": {
+    "src": "run/apiv2/runpb/task.pb.go",
+    "pkg": "runpb",
+    "pkg_full": "cloud.google.com/go/run/apiv2/runpb"
+  }
+}
+{
+  "proto": "google/cloud/run/v2/execution",
+  "pkg": "google.cloud.run.v2",
+  "svcs": [
+    {
+      "svc": "Executions",
+      "host": "run.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetExecution",
+          "request": {
+            "type": "GetExecutionRequest"
+          },
+          "response": {
+            "type": "Execution"
+          }
+        },
+        {
+          "method": "ListExecutions",
+          "request": {
+            "type": "ListExecutionsRequest"
+          },
+          "response": {
+            "type": "ListExecutionsResponse"
+          }
+        },
+        {
+          "method": "DeleteExecution",
+          "request": {
+            "type": "DeleteExecutionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CancelExecution",
+          "request": {
+            "type": "CancelExecutionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GetExecutionRequest"
+    },
+    {
+      "type": "ListExecutionsRequest"
+    },
+    {
+      "type": "ListExecutionsResponse"
+    },
+    {
+      "type": "DeleteExecutionRequest"
+    },
+    {
+      "type": "CancelExecutionRequest"
+    },
+    {
+      "type": "Execution"
+    }
+  ],
+  "go": {
+    "src": "run/apiv2/runpb/execution.pb.go",
+    "pkg": "runpb",
+    "pkg_full": "cloud.google.com/go/run/apiv2/runpb"
+  }
+}
+{
+  "proto": "google/cloud/run/v2/service",
+  "pkg": "google.cloud.run.v2",
+  "svcs": [
+    {
+      "svc": "Services",
+      "host": "run.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateService",
+          "request": {
+            "type": "CreateServiceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetService",
+          "request": {
+            "type": "GetServiceRequest"
+          },
+          "response": {
+            "type": "Service"
+          }
+        },
+        {
+          "method": "ListServices",
+          "request": {
+            "type": "ListServicesRequest"
+          },
+          "response": {
+            "type": "ListServicesResponse"
+          }
+        },
+        {
+          "method": "UpdateService",
+          "request": {
+            "type": "UpdateServiceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteService",
+          "request": {
+            "type": "DeleteServiceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetIamPolicy",
+          "request": {
+            "type": "google.iam.v1.GetIamPolicyRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.Policy"
+          }
+        },
+        {
+          "method": "SetIamPolicy",
+          "request": {
+            "type": "google.iam.v1.SetIamPolicyRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.Policy"
+          }
+        },
+        {
+          "method": "TestIamPermissions",
+          "request": {
+            "type": "google.iam.v1.TestIamPermissionsRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.TestIamPermissionsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateServiceRequest"
+    },
+    {
+      "type": "UpdateServiceRequest"
+    },
+    {
+      "type": "ListServicesRequest"
+    },
+    {
+      "type": "ListServicesResponse"
+    },
+    {
+      "type": "GetServiceRequest"
+    },
+    {
+      "type": "DeleteServiceRequest"
+    },
+    {
+      "type": "Service"
+    }
+  ],
+  "go": {
+    "src": "run/apiv2/runpb/service.pb.go",
+    "pkg": "runpb",
+    "pkg_full": "cloud.google.com/go/run/apiv2/runpb"
+  }
+}
+{
+  "proto": "google/cloud/run/v2/task_template",
+  "pkg": "google.cloud.run.v2",
+  "msgs": [
+    {
+      "type": "TaskTemplate"
+    }
+  ],
+  "go": {
+    "src": "run/apiv2/runpb/task_template.pb.go",
+    "pkg": "runpb",
+    "pkg_full": "cloud.google.com/go/run/apiv2/runpb"
+  }
+}

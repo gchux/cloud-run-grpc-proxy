@@ -1,0 +1,1342 @@
+{
+  "proto": "google/cloud/retail/v2beta/promotion",
+  "pkg": "google.cloud.retail.v2beta",
+  "msgs": [
+    {
+      "type": "Promotion"
+    }
+  ],
+  "go": {
+    "src": "retail/apiv2beta/retailpb/promotion.pb.go",
+    "pkg": "retailpb",
+    "pkg_full": "cloud.google.com/go/retail/apiv2beta/retailpb"
+  }
+}
+{
+  "proto": "google/cloud/retail/v2beta/user_event_service",
+  "pkg": "google.cloud.retail.v2beta",
+  "svcs": [
+    {
+      "svc": "UserEventService",
+      "host": "retail.googleapis.com",
+      "rpcs": [
+        {
+          "method": "WriteUserEvent",
+          "request": {
+            "type": "WriteUserEventRequest"
+          },
+          "response": {
+            "type": "UserEvent"
+          }
+        },
+        {
+          "method": "CollectUserEvent",
+          "request": {
+            "type": "CollectUserEventRequest"
+          },
+          "response": {
+            "type": "google.api.HttpBody"
+          }
+        },
+        {
+          "method": "PurgeUserEvents",
+          "request": {
+            "type": "PurgeUserEventsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ImportUserEvents",
+          "request": {
+            "type": "ImportUserEventsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "RejoinUserEvents",
+          "request": {
+            "type": "RejoinUserEventsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "WriteUserEventRequest"
+    },
+    {
+      "type": "CollectUserEventRequest"
+    },
+    {
+      "type": "RejoinUserEventsRequest"
+    },
+    {
+      "type": "RejoinUserEventsResponse"
+    },
+    {
+      "type": "RejoinUserEventsMetadata"
+    }
+  ],
+  "go": {
+    "src": "retail/apiv2beta/retailpb/user_event_service.pb.go",
+    "pkg": "retailpb",
+    "pkg_full": "cloud.google.com/go/retail/apiv2beta/retailpb"
+  }
+}
+{
+  "proto": "google/cloud/retail/v2beta/catalog",
+  "pkg": "google.cloud.retail.v2beta",
+  "msgs": [
+    {
+      "type": "ProductLevelConfig"
+    },
+    {
+      "type": "CatalogAttribute",
+      "msgs": [
+        {
+          "type": "FacetConfig"
+        },
+        {
+          "type": "IgnoredFacetValues"
+        },
+        {
+          "type": "MergedFacetValue"
+        },
+        {
+          "type": "MergedFacet"
+        },
+        {
+          "type": "RerankConfig"
+        }
+      ]
+    },
+    {
+      "type": "AttributesConfig"
+    },
+    {
+      "type": "CompletionConfig"
+    },
+    {
+      "type": "MerchantCenterLink"
+    },
+    {
+      "type": "MerchantCenterFeedFilter"
+    },
+    {
+      "type": "MerchantCenterLinkingConfig"
+    },
+    {
+      "type": "Catalog"
+    }
+  ],
+  "go": {
+    "src": "retail/apiv2beta/retailpb/catalog.pb.go",
+    "pkg": "retailpb",
+    "pkg_full": "cloud.google.com/go/retail/apiv2beta/retailpb"
+  }
+}
+{
+  "proto": "google/cloud/retail/v2beta/search_service",
+  "pkg": "google.cloud.retail.v2beta",
+  "svcs": [
+    {
+      "svc": "SearchService",
+      "host": "retail.googleapis.com",
+      "rpcs": [
+        {
+          "method": "Search",
+          "request": {
+            "type": "SearchRequest"
+          },
+          "response": {
+            "type": "SearchResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "SearchRequest",
+      "msgs": [
+        {
+          "type": "FacetSpec"
+        },
+        {
+          "type": "FacetKey"
+        },
+        {
+          "type": "DynamicFacetSpec"
+        },
+        {
+          "type": "BoostSpec"
+        },
+        {
+          "type": "ConditionBoostSpec"
+        },
+        {
+          "type": "QueryExpansionSpec"
+        },
+        {
+          "type": "PersonalizationSpec"
+        },
+        {
+          "type": "SpellCorrectionSpec"
+        }
+      ]
+    },
+    {
+      "type": "SearchResponse",
+      "msgs": [
+        {
+          "type": "SearchResult"
+        },
+        {
+          "type": "Facet"
+        },
+        {
+          "type": "FacetValue"
+        },
+        {
+          "type": "QueryExpansionInfo"
+        }
+      ]
+    },
+    {
+      "type": "ExperimentInfo",
+      "msgs": [
+        {
+          "type": "ServingConfigExperiment"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "retail/apiv2beta/retailpb/search_service.pb.go",
+    "pkg": "retailpb",
+    "pkg_full": "cloud.google.com/go/retail/apiv2beta/retailpb"
+  }
+}
+{
+  "proto": "google/cloud/retail/v2beta/catalog_service",
+  "pkg": "google.cloud.retail.v2beta",
+  "svcs": [
+    {
+      "svc": "CatalogService",
+      "host": "retail.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListCatalogs",
+          "request": {
+            "type": "ListCatalogsRequest"
+          },
+          "response": {
+            "type": "ListCatalogsResponse"
+          }
+        },
+        {
+          "method": "UpdateCatalog",
+          "request": {
+            "type": "UpdateCatalogRequest"
+          },
+          "response": {
+            "type": "Catalog"
+          }
+        },
+        {
+          "method": "SetDefaultBranch",
+          "request": {
+            "type": "SetDefaultBranchRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "GetDefaultBranch",
+          "request": {
+            "type": "GetDefaultBranchRequest"
+          },
+          "response": {
+            "type": "GetDefaultBranchResponse"
+          }
+        },
+        {
+          "method": "GetCompletionConfig",
+          "request": {
+            "type": "GetCompletionConfigRequest"
+          },
+          "response": {
+            "type": "CompletionConfig"
+          }
+        },
+        {
+          "method": "UpdateCompletionConfig",
+          "request": {
+            "type": "UpdateCompletionConfigRequest"
+          },
+          "response": {
+            "type": "CompletionConfig"
+          }
+        },
+        {
+          "method": "GetAttributesConfig",
+          "request": {
+            "type": "GetAttributesConfigRequest"
+          },
+          "response": {
+            "type": "AttributesConfig"
+          }
+        },
+        {
+          "method": "UpdateAttributesConfig",
+          "request": {
+            "type": "UpdateAttributesConfigRequest"
+          },
+          "response": {
+            "type": "AttributesConfig"
+          }
+        },
+        {
+          "method": "AddCatalogAttribute",
+          "request": {
+            "type": "AddCatalogAttributeRequest"
+          },
+          "response": {
+            "type": "AttributesConfig"
+          }
+        },
+        {
+          "method": "RemoveCatalogAttribute",
+          "request": {
+            "type": "RemoveCatalogAttributeRequest"
+          },
+          "response": {
+            "type": "AttributesConfig"
+          }
+        },
+        {
+          "method": "BatchRemoveCatalogAttributes",
+          "request": {
+            "type": "BatchRemoveCatalogAttributesRequest"
+          },
+          "response": {
+            "type": "BatchRemoveCatalogAttributesResponse"
+          }
+        },
+        {
+          "method": "ReplaceCatalogAttribute",
+          "request": {
+            "type": "ReplaceCatalogAttributeRequest"
+          },
+          "response": {
+            "type": "AttributesConfig"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ListCatalogsRequest"
+    },
+    {
+      "type": "ListCatalogsResponse"
+    },
+    {
+      "type": "UpdateCatalogRequest"
+    },
+    {
+      "type": "SetDefaultBranchRequest"
+    },
+    {
+      "type": "GetDefaultBranchRequest"
+    },
+    {
+      "type": "GetDefaultBranchResponse"
+    },
+    {
+      "type": "GetCompletionConfigRequest"
+    },
+    {
+      "type": "UpdateCompletionConfigRequest"
+    },
+    {
+      "type": "GetAttributesConfigRequest"
+    },
+    {
+      "type": "UpdateAttributesConfigRequest"
+    },
+    {
+      "type": "AddCatalogAttributeRequest"
+    },
+    {
+      "type": "RemoveCatalogAttributeRequest"
+    },
+    {
+      "type": "BatchRemoveCatalogAttributesRequest"
+    },
+    {
+      "type": "BatchRemoveCatalogAttributesResponse"
+    },
+    {
+      "type": "ReplaceCatalogAttributeRequest"
+    }
+  ],
+  "go": {
+    "src": "retail/apiv2beta/retailpb/catalog_service.pb.go",
+    "pkg": "retailpb",
+    "pkg_full": "cloud.google.com/go/retail/apiv2beta/retailpb"
+  }
+}
+{
+  "proto": "google/cloud/retail/v2beta/serving_config",
+  "pkg": "google.cloud.retail.v2beta",
+  "msgs": [
+    {
+      "type": "ServingConfig"
+    }
+  ],
+  "go": {
+    "src": "retail/apiv2beta/retailpb/serving_config.pb.go",
+    "pkg": "retailpb",
+    "pkg_full": "cloud.google.com/go/retail/apiv2beta/retailpb"
+  }
+}
+{
+  "proto": "google/cloud/retail/v2beta/product",
+  "pkg": "google.cloud.retail.v2beta",
+  "msgs": [
+    {
+      "type": "Product"
+    }
+  ],
+  "go": {
+    "src": "retail/apiv2beta/retailpb/product.pb.go",
+    "pkg": "retailpb",
+    "pkg_full": "cloud.google.com/go/retail/apiv2beta/retailpb"
+  }
+}
+{
+  "proto": "google/cloud/retail/v2beta/model_service",
+  "pkg": "google.cloud.retail.v2beta",
+  "svcs": [
+    {
+      "svc": "ModelService",
+      "host": "retail.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateModel",
+          "request": {
+            "type": "CreateModelRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetModel",
+          "request": {
+            "type": "GetModelRequest"
+          },
+          "response": {
+            "type": "Model"
+          }
+        },
+        {
+          "method": "PauseModel",
+          "request": {
+            "type": "PauseModelRequest"
+          },
+          "response": {
+            "type": "Model"
+          }
+        },
+        {
+          "method": "ResumeModel",
+          "request": {
+            "type": "ResumeModelRequest"
+          },
+          "response": {
+            "type": "Model"
+          }
+        },
+        {
+          "method": "DeleteModel",
+          "request": {
+            "type": "DeleteModelRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListModels",
+          "request": {
+            "type": "ListModelsRequest"
+          },
+          "response": {
+            "type": "ListModelsResponse"
+          }
+        },
+        {
+          "method": "UpdateModel",
+          "request": {
+            "type": "UpdateModelRequest"
+          },
+          "response": {
+            "type": "Model"
+          }
+        },
+        {
+          "method": "TuneModel",
+          "request": {
+            "type": "TuneModelRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateModelRequest"
+    },
+    {
+      "type": "UpdateModelRequest"
+    },
+    {
+      "type": "GetModelRequest"
+    },
+    {
+      "type": "PauseModelRequest"
+    },
+    {
+      "type": "ResumeModelRequest"
+    },
+    {
+      "type": "ListModelsRequest"
+    },
+    {
+      "type": "DeleteModelRequest"
+    },
+    {
+      "type": "ListModelsResponse"
+    },
+    {
+      "type": "TuneModelRequest"
+    },
+    {
+      "type": "CreateModelMetadata"
+    },
+    {
+      "type": "TuneModelMetadata"
+    },
+    {
+      "type": "TuneModelResponse"
+    }
+  ],
+  "go": {
+    "src": "retail/apiv2beta/retailpb/model_service.pb.go",
+    "pkg": "retailpb",
+    "pkg_full": "cloud.google.com/go/retail/apiv2beta/retailpb"
+  }
+}
+{
+  "proto": "google/cloud/retail/v2beta/user_event",
+  "pkg": "google.cloud.retail.v2beta",
+  "msgs": [
+    {
+      "type": "UserEvent"
+    },
+    {
+      "type": "ProductDetail"
+    },
+    {
+      "type": "CompletionDetail"
+    },
+    {
+      "type": "PurchaseTransaction"
+    }
+  ],
+  "go": {
+    "src": "retail/apiv2beta/retailpb/user_event.pb.go",
+    "pkg": "retailpb",
+    "pkg_full": "cloud.google.com/go/retail/apiv2beta/retailpb"
+  }
+}
+{
+  "proto": "google/cloud/retail/v2beta/product_service",
+  "pkg": "google.cloud.retail.v2beta",
+  "svcs": [
+    {
+      "svc": "ProductService",
+      "host": "retail.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateProduct",
+          "request": {
+            "type": "CreateProductRequest"
+          },
+          "response": {
+            "type": "Product"
+          }
+        },
+        {
+          "method": "GetProduct",
+          "request": {
+            "type": "GetProductRequest"
+          },
+          "response": {
+            "type": "Product"
+          }
+        },
+        {
+          "method": "ListProducts",
+          "request": {
+            "type": "ListProductsRequest"
+          },
+          "response": {
+            "type": "ListProductsResponse"
+          }
+        },
+        {
+          "method": "UpdateProduct",
+          "request": {
+            "type": "UpdateProductRequest"
+          },
+          "response": {
+            "type": "Product"
+          }
+        },
+        {
+          "method": "DeleteProduct",
+          "request": {
+            "type": "DeleteProductRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "PurgeProducts",
+          "request": {
+            "type": "PurgeProductsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ImportProducts",
+          "request": {
+            "type": "ImportProductsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "SetInventory",
+          "request": {
+            "type": "SetInventoryRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "AddFulfillmentPlaces",
+          "request": {
+            "type": "AddFulfillmentPlacesRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "RemoveFulfillmentPlaces",
+          "request": {
+            "type": "RemoveFulfillmentPlacesRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "AddLocalInventories",
+          "request": {
+            "type": "AddLocalInventoriesRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "RemoveLocalInventories",
+          "request": {
+            "type": "RemoveLocalInventoriesRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateProductRequest"
+    },
+    {
+      "type": "GetProductRequest"
+    },
+    {
+      "type": "UpdateProductRequest"
+    },
+    {
+      "type": "DeleteProductRequest"
+    },
+    {
+      "type": "ListProductsRequest"
+    },
+    {
+      "type": "ListProductsResponse"
+    },
+    {
+      "type": "SetInventoryRequest"
+    },
+    {
+      "type": "SetInventoryMetadata"
+    },
+    {
+      "type": "SetInventoryResponse"
+    },
+    {
+      "type": "AddFulfillmentPlacesRequest"
+    },
+    {
+      "type": "AddFulfillmentPlacesMetadata"
+    },
+    {
+      "type": "AddFulfillmentPlacesResponse"
+    },
+    {
+      "type": "AddLocalInventoriesRequest"
+    },
+    {
+      "type": "AddLocalInventoriesMetadata"
+    },
+    {
+      "type": "AddLocalInventoriesResponse"
+    },
+    {
+      "type": "RemoveLocalInventoriesRequest"
+    },
+    {
+      "type": "RemoveLocalInventoriesMetadata"
+    },
+    {
+      "type": "RemoveLocalInventoriesResponse"
+    },
+    {
+      "type": "RemoveFulfillmentPlacesRequest"
+    },
+    {
+      "type": "RemoveFulfillmentPlacesMetadata"
+    },
+    {
+      "type": "RemoveFulfillmentPlacesResponse"
+    }
+  ],
+  "go": {
+    "src": "retail/apiv2beta/retailpb/product_service.pb.go",
+    "pkg": "retailpb",
+    "pkg_full": "cloud.google.com/go/retail/apiv2beta/retailpb"
+  }
+}
+{
+  "proto": "google/cloud/retail/v2beta/purge_config",
+  "pkg": "google.cloud.retail.v2beta",
+  "msgs": [
+    {
+      "type": "PurgeMetadata"
+    },
+    {
+      "type": "PurgeProductsMetadata"
+    },
+    {
+      "type": "PurgeProductsRequest"
+    },
+    {
+      "type": "PurgeProductsResponse"
+    },
+    {
+      "type": "PurgeUserEventsRequest"
+    },
+    {
+      "type": "PurgeUserEventsResponse"
+    }
+  ],
+  "go": {
+    "src": "retail/apiv2beta/retailpb/purge_config.pb.go",
+    "pkg": "retailpb",
+    "pkg_full": "cloud.google.com/go/retail/apiv2beta/retailpb"
+  }
+}
+{
+  "proto": "google/cloud/retail/v2beta/export_config",
+  "pkg": "google.cloud.retail.v2beta",
+  "msgs": [
+    {
+      "type": "OutputConfig",
+      "msgs": [
+        {
+          "type": "GcsDestination"
+        },
+        {
+          "type": "BigQueryDestination"
+        }
+      ]
+    },
+    {
+      "type": "ExportErrorsConfig"
+    },
+    {
+      "type": "ExportAnalyticsMetricsRequest"
+    },
+    {
+      "type": "ExportMetadata"
+    },
+    {
+      "type": "ExportProductsResponse"
+    },
+    {
+      "type": "ExportUserEventsResponse"
+    },
+    {
+      "type": "ExportAnalyticsMetricsResponse"
+    },
+    {
+      "type": "OutputResult"
+    },
+    {
+      "type": "BigQueryOutputResult"
+    },
+    {
+      "type": "GcsOutputResult"
+    }
+  ],
+  "go": {
+    "src": "retail/apiv2beta/retailpb/export_config.pb.go",
+    "pkg": "retailpb",
+    "pkg_full": "cloud.google.com/go/retail/apiv2beta/retailpb"
+  }
+}
+{
+  "proto": "google/cloud/retail/v2beta/prediction_service",
+  "pkg": "google.cloud.retail.v2beta",
+  "svcs": [
+    {
+      "svc": "PredictionService",
+      "host": "retail.googleapis.com",
+      "rpcs": [
+        {
+          "method": "Predict",
+          "request": {
+            "type": "PredictRequest"
+          },
+          "response": {
+            "type": "PredictResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "PredictRequest"
+    },
+    {
+      "type": "PredictResponse",
+      "msgs": [
+        {
+          "type": "PredictionResult"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "retail/apiv2beta/retailpb/prediction_service.pb.go",
+    "pkg": "retailpb",
+    "pkg_full": "cloud.google.com/go/retail/apiv2beta/retailpb"
+  }
+}
+{
+  "proto": "google/cloud/retail/v2beta/analytics_service",
+  "pkg": "google.cloud.retail.v2beta",
+  "svcs": [
+    {
+      "svc": "AnalyticsService",
+      "host": "retail.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ExportAnalyticsMetrics",
+          "request": {
+            "type": "ExportAnalyticsMetricsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "retail/apiv2beta/retailpb/analytics_service.pb.go",
+    "pkg": "retailpb",
+    "pkg_full": "cloud.google.com/go/retail/apiv2beta/retailpb"
+  }
+}
+{
+  "proto": "google/cloud/retail/v2beta/common",
+  "pkg": "google.cloud.retail.v2beta",
+  "msgs": [
+    {
+      "type": "Condition",
+      "msgs": [
+        {
+          "type": "QueryTerm"
+        },
+        {
+          "type": "TimeRange"
+        }
+      ]
+    },
+    {
+      "type": "Rule",
+      "msgs": [
+        {
+          "type": "BoostAction"
+        },
+        {
+          "type": "FilterAction"
+        },
+        {
+          "type": "RedirectAction"
+        },
+        {
+          "type": "TwowaySynonymsAction"
+        },
+        {
+          "type": "OnewaySynonymsAction"
+        },
+        {
+          "type": "DoNotAssociateAction"
+        },
+        {
+          "type": "ReplacementAction"
+        },
+        {
+          "type": "IgnoreAction"
+        },
+        {
+          "type": "ForceReturnFacetAction"
+        },
+        {
+          "type": "FacetPositionAdjustment"
+        },
+        {
+          "type": "RemoveFacetAction"
+        }
+      ]
+    },
+    {
+      "type": "Audience"
+    },
+    {
+      "type": "ColorInfo"
+    },
+    {
+      "type": "CustomAttribute"
+    },
+    {
+      "type": "FulfillmentInfo"
+    },
+    {
+      "type": "Image"
+    },
+    {
+      "type": "Interval"
+    },
+    {
+      "type": "PriceInfo",
+      "msgs": [
+        {
+          "type": "PriceRange"
+        }
+      ]
+    },
+    {
+      "type": "Rating"
+    },
+    {
+      "type": "UserInfo"
+    },
+    {
+      "type": "LocalInventory"
+    }
+  ],
+  "go": {
+    "src": "retail/apiv2beta/retailpb/common.pb.go",
+    "pkg": "retailpb",
+    "pkg_full": "cloud.google.com/go/retail/apiv2beta/retailpb"
+  }
+}
+{
+  "proto": "google/cloud/retail/v2beta/model",
+  "pkg": "google.cloud.retail.v2beta",
+  "msgs": [
+    {
+      "type": "Model",
+      "msgs": [
+        {
+          "type": "ServingConfigList"
+        },
+        {
+          "type": "FrequentlyBoughtTogetherFeaturesConfig"
+        },
+        {
+          "type": "ModelFeaturesConfig"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "retail/apiv2beta/retailpb/model.pb.go",
+    "pkg": "retailpb",
+    "pkg_full": "cloud.google.com/go/retail/apiv2beta/retailpb"
+  }
+}
+{
+  "proto": "google/cloud/retail/v2beta/serving_config_service",
+  "pkg": "google.cloud.retail.v2beta",
+  "svcs": [
+    {
+      "svc": "ServingConfigService",
+      "host": "retail.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateServingConfig",
+          "request": {
+            "type": "CreateServingConfigRequest"
+          },
+          "response": {
+            "type": "ServingConfig"
+          }
+        },
+        {
+          "method": "DeleteServingConfig",
+          "request": {
+            "type": "DeleteServingConfigRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "UpdateServingConfig",
+          "request": {
+            "type": "UpdateServingConfigRequest"
+          },
+          "response": {
+            "type": "ServingConfig"
+          }
+        },
+        {
+          "method": "GetServingConfig",
+          "request": {
+            "type": "GetServingConfigRequest"
+          },
+          "response": {
+            "type": "ServingConfig"
+          }
+        },
+        {
+          "method": "ListServingConfigs",
+          "request": {
+            "type": "ListServingConfigsRequest"
+          },
+          "response": {
+            "type": "ListServingConfigsResponse"
+          }
+        },
+        {
+          "method": "AddControl",
+          "request": {
+            "type": "AddControlRequest"
+          },
+          "response": {
+            "type": "ServingConfig"
+          }
+        },
+        {
+          "method": "RemoveControl",
+          "request": {
+            "type": "RemoveControlRequest"
+          },
+          "response": {
+            "type": "ServingConfig"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateServingConfigRequest"
+    },
+    {
+      "type": "UpdateServingConfigRequest"
+    },
+    {
+      "type": "DeleteServingConfigRequest"
+    },
+    {
+      "type": "GetServingConfigRequest"
+    },
+    {
+      "type": "ListServingConfigsRequest"
+    },
+    {
+      "type": "ListServingConfigsResponse"
+    },
+    {
+      "type": "AddControlRequest"
+    },
+    {
+      "type": "RemoveControlRequest"
+    }
+  ],
+  "go": {
+    "src": "retail/apiv2beta/retailpb/serving_config_service.pb.go",
+    "pkg": "retailpb",
+    "pkg_full": "cloud.google.com/go/retail/apiv2beta/retailpb"
+  }
+}
+{
+  "proto": "google/cloud/retail/v2beta/completion_service",
+  "pkg": "google.cloud.retail.v2beta",
+  "svcs": [
+    {
+      "svc": "CompletionService",
+      "host": "retail.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CompleteQuery",
+          "request": {
+            "type": "CompleteQueryRequest"
+          },
+          "response": {
+            "type": "CompleteQueryResponse"
+          }
+        },
+        {
+          "method": "ImportCompletionData",
+          "request": {
+            "type": "ImportCompletionDataRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CompleteQueryRequest"
+    },
+    {
+      "type": "CompleteQueryResponse",
+      "msgs": [
+        {
+          "type": "CompletionResult"
+        },
+        {
+          "type": "RecentSearchResult"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "retail/apiv2beta/retailpb/completion_service.pb.go",
+    "pkg": "retailpb",
+    "pkg_full": "cloud.google.com/go/retail/apiv2beta/retailpb"
+  }
+}
+{
+  "proto": "google/cloud/retail/v2beta/import_config",
+  "pkg": "google.cloud.retail.v2beta",
+  "msgs": [
+    {
+      "type": "GcsSource"
+    },
+    {
+      "type": "BigQuerySource"
+    },
+    {
+      "type": "ProductInlineSource"
+    },
+    {
+      "type": "UserEventInlineSource"
+    },
+    {
+      "type": "ImportErrorsConfig"
+    },
+    {
+      "type": "ImportProductsRequest"
+    },
+    {
+      "type": "ImportUserEventsRequest"
+    },
+    {
+      "type": "ImportCompletionDataRequest"
+    },
+    {
+      "type": "ProductInputConfig"
+    },
+    {
+      "type": "UserEventInputConfig"
+    },
+    {
+      "type": "CompletionDataInputConfig"
+    },
+    {
+      "type": "ImportMetadata"
+    },
+    {
+      "type": "ImportProductsResponse"
+    },
+    {
+      "type": "ImportUserEventsResponse"
+    },
+    {
+      "type": "UserEventImportSummary"
+    },
+    {
+      "type": "ImportCompletionDataResponse"
+    }
+  ],
+  "go": {
+    "src": "retail/apiv2beta/retailpb/import_config.pb.go",
+    "pkg": "retailpb",
+    "pkg_full": "cloud.google.com/go/retail/apiv2beta/retailpb"
+  }
+}
+{
+  "proto": "google/cloud/retail/v2beta/control",
+  "pkg": "google.cloud.retail.v2beta",
+  "msgs": [
+    {
+      "type": "Control"
+    }
+  ],
+  "go": {
+    "src": "retail/apiv2beta/retailpb/control.pb.go",
+    "pkg": "retailpb",
+    "pkg_full": "cloud.google.com/go/retail/apiv2beta/retailpb"
+  }
+}
+{
+  "proto": "google/cloud/retail/v2beta/control_service",
+  "pkg": "google.cloud.retail.v2beta",
+  "svcs": [
+    {
+      "svc": "ControlService",
+      "host": "retail.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateControl",
+          "request": {
+            "type": "CreateControlRequest"
+          },
+          "response": {
+            "type": "Control"
+          }
+        },
+        {
+          "method": "DeleteControl",
+          "request": {
+            "type": "DeleteControlRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "UpdateControl",
+          "request": {
+            "type": "UpdateControlRequest"
+          },
+          "response": {
+            "type": "Control"
+          }
+        },
+        {
+          "method": "GetControl",
+          "request": {
+            "type": "GetControlRequest"
+          },
+          "response": {
+            "type": "Control"
+          }
+        },
+        {
+          "method": "ListControls",
+          "request": {
+            "type": "ListControlsRequest"
+          },
+          "response": {
+            "type": "ListControlsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateControlRequest"
+    },
+    {
+      "type": "UpdateControlRequest"
+    },
+    {
+      "type": "DeleteControlRequest"
+    },
+    {
+      "type": "GetControlRequest"
+    },
+    {
+      "type": "ListControlsRequest"
+    },
+    {
+      "type": "ListControlsResponse"
+    }
+  ],
+  "go": {
+    "src": "retail/apiv2beta/retailpb/control_service.pb.go",
+    "pkg": "retailpb",
+    "pkg_full": "cloud.google.com/go/retail/apiv2beta/retailpb"
+  }
+}

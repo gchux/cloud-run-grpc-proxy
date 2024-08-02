@@ -1,0 +1,54 @@
+{
+  "proto": "google/apps/script/type/addon_widget_set",
+  "pkg": "google.apps.script.type",
+  "msgs": [
+    {
+      "type": "AddOnWidgetSet"
+    }
+  ],
+  "go": {
+    "src": "googleapis/apps/script/type/addon_widget_set.pb.go",
+    "pkg": "type",
+    "pkg_full": "google.golang.org/genproto/googleapis/apps/script/type"
+  }
+}
+{
+  "proto": "google/apps/script/type/script_manifest",
+  "pkg": "google.apps.script.type",
+  "msgs": [
+    {
+      "type": "CommonAddOnManifest"
+    },
+    {
+      "type": "LayoutProperties"
+    },
+    {
+      "type": "HttpOptions"
+    }
+  ],
+  "go": {
+    "src": "googleapis/apps/script/type/script_manifest.pb.go",
+    "pkg": "type",
+    "pkg_full": "google.golang.org/genproto/googleapis/apps/script/type"
+  }
+}
+{
+  "proto": "google/apps/script/type/extension_point",
+  "pkg": "google.apps.script.type",
+  "msgs": [
+    {
+      "type": "MenuItemExtensionPoint"
+    },
+    {
+      "type": "HomepageExtensionPoint"
+    },
+    {
+      "type": "UniversalActionExtensionPoint"
+    }
+  ],
+  "go": {
+    "src": "googleapis/apps/script/type/extension_point.pb.go",
+    "pkg": "type",
+    "pkg_full": "google.golang.org/genproto/googleapis/apps/script/type"
+  }
+}

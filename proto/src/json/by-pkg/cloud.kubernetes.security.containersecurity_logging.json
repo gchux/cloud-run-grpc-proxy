@@ -1,0 +1,17 @@
+{
+  "proto": "google/cloud/kubernetes/security/containersecurity_logging/logging",
+  "pkg": "cloud.kubernetes.security.containersecurity_logging",
+  "msgs": [
+    {
+      "type": "Vulnerability"
+    },
+    {
+      "type": "Finding"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/kubernetes/security/containersecurity_logging/logging.pb.go",
+    "pkg": "containersecurity_loggingpb",
+    "pkg_full": "cloud.google.com/go/cloud/kubernetes/security/containersecurity_logging/containersecurity_loggingpb"
+  }
+}

@@ -1,0 +1,491 @@
+{
+  "proto": "google/firestore/admin/v1/field",
+  "pkg": "google.firestore.admin.v1",
+  "msgs": [
+    {
+      "type": "Field",
+      "msgs": [
+        {
+          "type": "IndexConfig"
+        },
+        {
+          "type": "TtlConfig"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "firestore/apiv1/admin/adminpb/field.pb.go",
+    "pkg": "adminpb",
+    "pkg_full": "cloud.google.com/go/firestore/apiv1/admin/adminpb"
+  }
+}
+{
+  "proto": "google/firestore/admin/v1/database",
+  "pkg": "google.firestore.admin.v1",
+  "msgs": [
+    {
+      "type": "Database"
+    }
+  ],
+  "go": {
+    "src": "firestore/apiv1/admin/adminpb/database.pb.go",
+    "pkg": "adminpb",
+    "pkg_full": "cloud.google.com/go/firestore/apiv1/admin/adminpb"
+  }
+}
+{
+  "proto": "google/firestore/admin/v1/firestore_admin",
+  "pkg": "google.firestore.admin.v1",
+  "svcs": [
+    {
+      "svc": "FirestoreAdmin",
+      "host": "firestore.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateIndex",
+          "request": {
+            "type": "CreateIndexRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListIndexes",
+          "request": {
+            "type": "ListIndexesRequest"
+          },
+          "response": {
+            "type": "ListIndexesResponse"
+          }
+        },
+        {
+          "method": "GetIndex",
+          "request": {
+            "type": "GetIndexRequest"
+          },
+          "response": {
+            "type": "Index"
+          }
+        },
+        {
+          "method": "DeleteIndex",
+          "request": {
+            "type": "DeleteIndexRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "GetField",
+          "request": {
+            "type": "GetFieldRequest"
+          },
+          "response": {
+            "type": "Field"
+          }
+        },
+        {
+          "method": "UpdateField",
+          "request": {
+            "type": "UpdateFieldRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListFields",
+          "request": {
+            "type": "ListFieldsRequest"
+          },
+          "response": {
+            "type": "ListFieldsResponse"
+          }
+        },
+        {
+          "method": "ExportDocuments",
+          "request": {
+            "type": "ExportDocumentsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ImportDocuments",
+          "request": {
+            "type": "ImportDocumentsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "BulkDeleteDocuments",
+          "request": {
+            "type": "BulkDeleteDocumentsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CreateDatabase",
+          "request": {
+            "type": "CreateDatabaseRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetDatabase",
+          "request": {
+            "type": "GetDatabaseRequest"
+          },
+          "response": {
+            "type": "Database"
+          }
+        },
+        {
+          "method": "ListDatabases",
+          "request": {
+            "type": "ListDatabasesRequest"
+          },
+          "response": {
+            "type": "ListDatabasesResponse"
+          }
+        },
+        {
+          "method": "UpdateDatabase",
+          "request": {
+            "type": "UpdateDatabaseRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteDatabase",
+          "request": {
+            "type": "DeleteDatabaseRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetBackup",
+          "request": {
+            "type": "GetBackupRequest"
+          },
+          "response": {
+            "type": "Backup"
+          }
+        },
+        {
+          "method": "ListBackups",
+          "request": {
+            "type": "ListBackupsRequest"
+          },
+          "response": {
+            "type": "ListBackupsResponse"
+          }
+        },
+        {
+          "method": "DeleteBackup",
+          "request": {
+            "type": "DeleteBackupRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "RestoreDatabase",
+          "request": {
+            "type": "RestoreDatabaseRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CreateBackupSchedule",
+          "request": {
+            "type": "CreateBackupScheduleRequest"
+          },
+          "response": {
+            "type": "BackupSchedule"
+          }
+        },
+        {
+          "method": "GetBackupSchedule",
+          "request": {
+            "type": "GetBackupScheduleRequest"
+          },
+          "response": {
+            "type": "BackupSchedule"
+          }
+        },
+        {
+          "method": "ListBackupSchedules",
+          "request": {
+            "type": "ListBackupSchedulesRequest"
+          },
+          "response": {
+            "type": "ListBackupSchedulesResponse"
+          }
+        },
+        {
+          "method": "UpdateBackupSchedule",
+          "request": {
+            "type": "UpdateBackupScheduleRequest"
+          },
+          "response": {
+            "type": "BackupSchedule"
+          }
+        },
+        {
+          "method": "DeleteBackupSchedule",
+          "request": {
+            "type": "DeleteBackupScheduleRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ListDatabasesRequest"
+    },
+    {
+      "type": "CreateDatabaseRequest"
+    },
+    {
+      "type": "CreateDatabaseMetadata"
+    },
+    {
+      "type": "ListDatabasesResponse"
+    },
+    {
+      "type": "GetDatabaseRequest"
+    },
+    {
+      "type": "UpdateDatabaseRequest"
+    },
+    {
+      "type": "UpdateDatabaseMetadata"
+    },
+    {
+      "type": "DeleteDatabaseRequest"
+    },
+    {
+      "type": "DeleteDatabaseMetadata"
+    },
+    {
+      "type": "CreateBackupScheduleRequest"
+    },
+    {
+      "type": "GetBackupScheduleRequest"
+    },
+    {
+      "type": "UpdateBackupScheduleRequest"
+    },
+    {
+      "type": "ListBackupSchedulesRequest"
+    },
+    {
+      "type": "ListBackupSchedulesResponse"
+    },
+    {
+      "type": "DeleteBackupScheduleRequest"
+    },
+    {
+      "type": "CreateIndexRequest"
+    },
+    {
+      "type": "ListIndexesRequest"
+    },
+    {
+      "type": "ListIndexesResponse"
+    },
+    {
+      "type": "GetIndexRequest"
+    },
+    {
+      "type": "DeleteIndexRequest"
+    },
+    {
+      "type": "UpdateFieldRequest"
+    },
+    {
+      "type": "GetFieldRequest"
+    },
+    {
+      "type": "ListFieldsRequest"
+    },
+    {
+      "type": "ListFieldsResponse"
+    },
+    {
+      "type": "ExportDocumentsRequest"
+    },
+    {
+      "type": "ImportDocumentsRequest"
+    },
+    {
+      "type": "BulkDeleteDocumentsRequest"
+    },
+    {
+      "type": "BulkDeleteDocumentsResponse"
+    },
+    {
+      "type": "GetBackupRequest"
+    },
+    {
+      "type": "ListBackupsRequest"
+    },
+    {
+      "type": "ListBackupsResponse"
+    },
+    {
+      "type": "DeleteBackupRequest"
+    },
+    {
+      "type": "RestoreDatabaseRequest"
+    }
+  ],
+  "go": {
+    "src": "firestore/apiv1/admin/adminpb/firestore_admin.pb.go",
+    "pkg": "adminpb",
+    "pkg_full": "cloud.google.com/go/firestore/apiv1/admin/adminpb"
+  }
+}
+{
+  "proto": "google/firestore/admin/v1/backup",
+  "pkg": "google.firestore.admin.v1",
+  "msgs": [
+    {
+      "type": "Backup",
+      "msgs": [
+        {
+          "type": "Stats"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "firestore/apiv1/admin/adminpb/backup.pb.go",
+    "pkg": "adminpb",
+    "pkg_full": "cloud.google.com/go/firestore/apiv1/admin/adminpb"
+  }
+}
+{
+  "proto": "google/firestore/admin/v1/index",
+  "pkg": "google.firestore.admin.v1",
+  "msgs": [
+    {
+      "type": "Index",
+      "msgs": [
+        {
+          "type": "IndexField"
+        },
+        {
+          "type": "VectorConfig"
+        },
+        {
+          "type": "FlatIndex"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "firestore/apiv1/admin/adminpb/index.pb.go",
+    "pkg": "adminpb",
+    "pkg_full": "cloud.google.com/go/firestore/apiv1/admin/adminpb"
+  }
+}
+{
+  "proto": "google/firestore/admin/v1/operation",
+  "pkg": "google.firestore.admin.v1",
+  "msgs": [
+    {
+      "type": "IndexOperationMetadata"
+    },
+    {
+      "type": "FieldOperationMetadata",
+      "msgs": [
+        {
+          "type": "IndexConfigDelta"
+        },
+        {
+          "type": "TtlConfigDelta"
+        }
+      ]
+    },
+    {
+      "type": "ExportDocumentsMetadata"
+    },
+    {
+      "type": "ImportDocumentsMetadata"
+    },
+    {
+      "type": "BulkDeleteDocumentsMetadata"
+    },
+    {
+      "type": "ExportDocumentsResponse"
+    },
+    {
+      "type": "RestoreDatabaseMetadata"
+    },
+    {
+      "type": "Progress"
+    }
+  ],
+  "go": {
+    "src": "firestore/apiv1/admin/adminpb/operation.pb.go",
+    "pkg": "adminpb",
+    "pkg_full": "cloud.google.com/go/firestore/apiv1/admin/adminpb"
+  }
+}
+{
+  "proto": "google/firestore/admin/v1/location",
+  "pkg": "google.firestore.admin.v1",
+  "msgs": [
+    {
+      "type": "LocationMetadata"
+    }
+  ],
+  "go": {
+    "src": "firestore/apiv1/admin/adminpb/location.pb.go",
+    "pkg": "adminpb",
+    "pkg_full": "cloud.google.com/go/firestore/apiv1/admin/adminpb"
+  }
+}
+{
+  "proto": "google/firestore/admin/v1/schedule",
+  "pkg": "google.firestore.admin.v1",
+  "msgs": [
+    {
+      "type": "BackupSchedule"
+    },
+    {
+      "type": "DailyRecurrence"
+    },
+    {
+      "type": "WeeklyRecurrence"
+    }
+  ],
+  "go": {
+    "src": "firestore/apiv1/admin/adminpb/schedule.pb.go",
+    "pkg": "adminpb",
+    "pkg_full": "cloud.google.com/go/firestore/apiv1/admin/adminpb"
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "proto": "google/actions/sdk/v2/interactionmodel/prompt/content/static_link_prompt",
+  "pkg": "google.actions.sdk.v2.interactionmodel.prompt",
+  "msgs": [
+    {
+      "type": "StaticLinkPrompt"
+    },
+    {
+      "type": "OpenUrl"
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/interactionmodel/prompt/static_link_prompt.pb.go",
+    "pkg": "prompt",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2/interactionmodel/prompt"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/interactionmodel/prompt/content/static_collection_prompt",
+  "pkg": "google.actions.sdk.v2.interactionmodel.prompt",
+  "msgs": [
+    {
+      "type": "StaticCollectionPrompt",
+      "msgs": [
+        {
+          "type": "CollectionItem"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/interactionmodel/prompt/static_collection_prompt.pb.go",
+    "pkg": "prompt",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2/interactionmodel/prompt"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/interactionmodel/prompt/content/static_list_prompt",
+  "pkg": "google.actions.sdk.v2.interactionmodel.prompt",
+  "msgs": [
+    {
+      "type": "StaticListPrompt",
+      "msgs": [
+        {
+          "type": "ListItem"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/interactionmodel/prompt/static_list_prompt.pb.go",
+    "pkg": "prompt",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2/interactionmodel/prompt"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/interactionmodel/prompt/content/static_collection_browse_prompt",
+  "pkg": "google.actions.sdk.v2.interactionmodel.prompt",
+  "msgs": [
+    {
+      "type": "StaticCollectionBrowsePrompt",
+      "msgs": [
+        {
+          "type": "CollectionBrowseItem"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/interactionmodel/prompt/static_collection_browse_prompt.pb.go",
+    "pkg": "prompt",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2/interactionmodel/prompt"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/interactionmodel/prompt/content/static_table_prompt",
+  "pkg": "google.actions.sdk.v2.interactionmodel.prompt",
+  "msgs": [
+    {
+      "type": "StaticTablePrompt"
+    },
+    {
+      "type": "TableColumn"
+    },
+    {
+      "type": "TableCell"
+    },
+    {
+      "type": "TableRow"
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/interactionmodel/prompt/static_table_prompt.pb.go",
+    "pkg": "prompt",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2/interactionmodel/prompt"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/interactionmodel/prompt/suggestion",
+  "pkg": "google.actions.sdk.v2.interactionmodel.prompt",
+  "msgs": [
+    {
+      "type": "Suggestion"
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/interactionmodel/prompt/suggestion.pb.go",
+    "pkg": "prompt",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2/interactionmodel/prompt"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/interactionmodel/prompt/content/static_media_prompt",
+  "pkg": "google.actions.sdk.v2.interactionmodel.prompt",
+  "msgs": [
+    {
+      "type": "StaticMediaPrompt"
+    },
+    {
+      "type": "MediaObject"
+    },
+    {
+      "type": "MediaImage"
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/interactionmodel/prompt/static_media_prompt.pb.go",
+    "pkg": "prompt",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2/interactionmodel/prompt"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/interactionmodel/prompt/static_simple_prompt",
+  "pkg": "google.actions.sdk.v2.interactionmodel.prompt",
+  "msgs": [
+    {
+      "type": "StaticSimplePrompt",
+      "msgs": [
+        {
+          "type": "Variant"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/interactionmodel/prompt/static_simple_prompt.pb.go",
+    "pkg": "prompt",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2/interactionmodel/prompt"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/interactionmodel/prompt/content/static_canvas_prompt",
+  "pkg": "google.actions.sdk.v2.interactionmodel.prompt",
+  "msgs": [
+    {
+      "type": "StaticCanvasPrompt"
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/interactionmodel/prompt/static_canvas_prompt.pb.go",
+    "pkg": "prompt",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2/interactionmodel/prompt"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/interactionmodel/prompt/surface_capabilities",
+  "pkg": "google.actions.sdk.v2.interactionmodel.prompt",
+  "msgs": [
+    {
+      "type": "SurfaceCapabilities"
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/interactionmodel/prompt/surface_capabilities.pb.go",
+    "pkg": "prompt",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2/interactionmodel/prompt"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/interactionmodel/prompt/content/static_image_prompt",
+  "pkg": "google.actions.sdk.v2.interactionmodel.prompt",
+  "msgs": [
+    {
+      "type": "StaticImagePrompt"
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/interactionmodel/prompt/static_image_prompt.pb.go",
+    "pkg": "prompt",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2/interactionmodel/prompt"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/interactionmodel/prompt/static_prompt",
+  "pkg": "google.actions.sdk.v2.interactionmodel.prompt",
+  "msgs": [
+    {
+      "type": "StaticPrompt",
+      "msgs": [
+        {
+          "type": "StaticPromptCandidate"
+        },
+        {
+          "type": "StaticPromptResponse"
+        },
+        {
+          "type": "Selector"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/interactionmodel/prompt/static_prompt.pb.go",
+    "pkg": "prompt",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2/interactionmodel/prompt"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/interactionmodel/prompt/content/static_content_prompt",
+  "pkg": "google.actions.sdk.v2.interactionmodel.prompt",
+  "msgs": [
+    {
+      "type": "StaticContentPrompt"
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/interactionmodel/prompt/static_content_prompt.pb.go",
+    "pkg": "prompt",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2/interactionmodel/prompt"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/interactionmodel/prompt/content/static_card_prompt",
+  "pkg": "google.actions.sdk.v2.interactionmodel.prompt",
+  "msgs": [
+    {
+      "type": "StaticCardPrompt"
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/interactionmodel/prompt/static_card_prompt.pb.go",
+    "pkg": "prompt",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2/interactionmodel/prompt"
+  }
+}

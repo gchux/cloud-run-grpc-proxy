@@ -1,0 +1,2382 @@
+{
+  "proto": "google/cloud/discoveryengine/v1beta/site_search_engine_service",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "svcs": [
+    {
+      "svc": "SiteSearchEngineService",
+      "host": "discoveryengine.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetSiteSearchEngine",
+          "request": {
+            "type": "GetSiteSearchEngineRequest"
+          },
+          "response": {
+            "type": "SiteSearchEngine"
+          }
+        },
+        {
+          "method": "CreateTargetSite",
+          "request": {
+            "type": "CreateTargetSiteRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "BatchCreateTargetSites",
+          "request": {
+            "type": "BatchCreateTargetSitesRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetTargetSite",
+          "request": {
+            "type": "GetTargetSiteRequest"
+          },
+          "response": {
+            "type": "TargetSite"
+          }
+        },
+        {
+          "method": "UpdateTargetSite",
+          "request": {
+            "type": "UpdateTargetSiteRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteTargetSite",
+          "request": {
+            "type": "DeleteTargetSiteRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListTargetSites",
+          "request": {
+            "type": "ListTargetSitesRequest"
+          },
+          "response": {
+            "type": "ListTargetSitesResponse"
+          }
+        },
+        {
+          "method": "EnableAdvancedSiteSearch",
+          "request": {
+            "type": "EnableAdvancedSiteSearchRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DisableAdvancedSiteSearch",
+          "request": {
+            "type": "DisableAdvancedSiteSearchRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "RecrawlUris",
+          "request": {
+            "type": "RecrawlUrisRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "BatchVerifyTargetSites",
+          "request": {
+            "type": "BatchVerifyTargetSitesRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "FetchDomainVerificationStatus",
+          "request": {
+            "type": "FetchDomainVerificationStatusRequest"
+          },
+          "response": {
+            "type": "FetchDomainVerificationStatusResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GetSiteSearchEngineRequest"
+    },
+    {
+      "type": "CreateTargetSiteRequest"
+    },
+    {
+      "type": "CreateTargetSiteMetadata"
+    },
+    {
+      "type": "BatchCreateTargetSitesRequest"
+    },
+    {
+      "type": "GetTargetSiteRequest"
+    },
+    {
+      "type": "UpdateTargetSiteRequest"
+    },
+    {
+      "type": "UpdateTargetSiteMetadata"
+    },
+    {
+      "type": "DeleteTargetSiteRequest"
+    },
+    {
+      "type": "DeleteTargetSiteMetadata"
+    },
+    {
+      "type": "ListTargetSitesRequest"
+    },
+    {
+      "type": "ListTargetSitesResponse"
+    },
+    {
+      "type": "BatchCreateTargetSiteMetadata"
+    },
+    {
+      "type": "BatchCreateTargetSitesResponse"
+    },
+    {
+      "type": "EnableAdvancedSiteSearchRequest"
+    },
+    {
+      "type": "EnableAdvancedSiteSearchResponse"
+    },
+    {
+      "type": "EnableAdvancedSiteSearchMetadata"
+    },
+    {
+      "type": "DisableAdvancedSiteSearchRequest"
+    },
+    {
+      "type": "DisableAdvancedSiteSearchResponse"
+    },
+    {
+      "type": "DisableAdvancedSiteSearchMetadata"
+    },
+    {
+      "type": "RecrawlUrisRequest"
+    },
+    {
+      "type": "RecrawlUrisResponse",
+      "msgs": [
+        {
+          "type": "FailureInfo"
+        },
+        {
+          "type": "FailureReason"
+        }
+      ]
+    },
+    {
+      "type": "RecrawlUrisMetadata"
+    },
+    {
+      "type": "BatchVerifyTargetSitesRequest"
+    },
+    {
+      "type": "BatchVerifyTargetSitesResponse"
+    },
+    {
+      "type": "BatchVerifyTargetSitesMetadata"
+    },
+    {
+      "type": "FetchDomainVerificationStatusRequest"
+    },
+    {
+      "type": "FetchDomainVerificationStatusResponse"
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/site_search_engine_service.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/project_service",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "svcs": [
+    {
+      "svc": "ProjectService",
+      "host": "discoveryengine.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ProvisionProject",
+          "request": {
+            "type": "ProvisionProjectRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ProvisionProjectRequest"
+    },
+    {
+      "type": "ProvisionProjectMetadata"
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/project_service.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/data_store",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "msgs": [
+    {
+      "type": "DataStore"
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/data_store.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/rank_service",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "svcs": [
+    {
+      "svc": "RankService",
+      "host": "discoveryengine.googleapis.com",
+      "rpcs": [
+        {
+          "method": "Rank",
+          "request": {
+            "type": "RankRequest"
+          },
+          "response": {
+            "type": "RankResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "RankingRecord"
+    },
+    {
+      "type": "RankRequest"
+    },
+    {
+      "type": "RankResponse"
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/rank_service.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/recommendation_service",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "svcs": [
+    {
+      "svc": "RecommendationService",
+      "host": "discoveryengine.googleapis.com",
+      "rpcs": [
+        {
+          "method": "Recommend",
+          "request": {
+            "type": "RecommendRequest"
+          },
+          "response": {
+            "type": "RecommendResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "RecommendRequest"
+    },
+    {
+      "type": "RecommendResponse",
+      "msgs": [
+        {
+          "type": "RecommendationResult"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/recommendation_service.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/document_processing_config",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "msgs": [
+    {
+      "type": "DocumentProcessingConfig",
+      "msgs": [
+        {
+          "type": "ChunkingConfig"
+        },
+        {
+          "type": "LayoutBasedChunkingConfig"
+        },
+        {
+          "type": "ParsingConfig"
+        },
+        {
+          "type": "DigitalParsingConfig"
+        },
+        {
+          "type": "OcrParsingConfig"
+        },
+        {
+          "type": "LayoutParsingConfig"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/document_processing_config.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/evaluation_service",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "svcs": [
+    {
+      "svc": "EvaluationService",
+      "host": "discoveryengine.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetEvaluation",
+          "request": {
+            "type": "GetEvaluationRequest"
+          },
+          "response": {
+            "type": "Evaluation"
+          }
+        },
+        {
+          "method": "ListEvaluations",
+          "request": {
+            "type": "ListEvaluationsRequest"
+          },
+          "response": {
+            "type": "ListEvaluationsResponse"
+          }
+        },
+        {
+          "method": "CreateEvaluation",
+          "request": {
+            "type": "CreateEvaluationRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListEvaluationResults",
+          "request": {
+            "type": "ListEvaluationResultsRequest"
+          },
+          "response": {
+            "type": "ListEvaluationResultsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GetEvaluationRequest"
+    },
+    {
+      "type": "ListEvaluationsRequest"
+    },
+    {
+      "type": "ListEvaluationsResponse"
+    },
+    {
+      "type": "CreateEvaluationRequest"
+    },
+    {
+      "type": "CreateEvaluationMetadata"
+    },
+    {
+      "type": "ListEvaluationResultsRequest"
+    },
+    {
+      "type": "ListEvaluationResultsResponse",
+      "msgs": [
+        {
+          "type": "EvaluationResult"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/evaluation_service.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/sample_query",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "msgs": [
+    {
+      "type": "SampleQuery",
+      "msgs": [
+        {
+          "type": "QueryEntry"
+        },
+        {
+          "type": "Target"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/sample_query.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/search_service",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "svcs": [
+    {
+      "svc": "SearchService",
+      "host": "discoveryengine.googleapis.com",
+      "rpcs": [
+        {
+          "method": "Search",
+          "request": {
+            "type": "SearchRequest"
+          },
+          "response": {
+            "type": "SearchResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "SearchRequest",
+      "msgs": [
+        {
+          "type": "ImageQuery"
+        },
+        {
+          "type": "DataStoreSpec"
+        },
+        {
+          "type": "FacetSpec"
+        },
+        {
+          "type": "FacetKey"
+        },
+        {
+          "type": "BoostSpec"
+        },
+        {
+          "type": "ConditionBoostSpec"
+        },
+        {
+          "type": "BoostControlSpec"
+        },
+        {
+          "type": "ControlPoint"
+        },
+        {
+          "type": "QueryExpansionSpec"
+        },
+        {
+          "type": "SpellCorrectionSpec"
+        },
+        {
+          "type": "ContentSearchSpec"
+        },
+        {
+          "type": "SnippetSpec"
+        },
+        {
+          "type": "SummarySpec"
+        },
+        {
+          "type": "ModelPromptSpec"
+        },
+        {
+          "type": "ModelSpec"
+        },
+        {
+          "type": "ExtractiveContentSpec"
+        },
+        {
+          "type": "ChunkSpec"
+        },
+        {
+          "type": "EmbeddingSpec"
+        },
+        {
+          "type": "EmbeddingVector"
+        }
+      ]
+    },
+    {
+      "type": "SearchResponse",
+      "msgs": [
+        {
+          "type": "SearchResult"
+        },
+        {
+          "type": "Facet"
+        },
+        {
+          "type": "FacetValue"
+        },
+        {
+          "type": "GuidedSearchResult"
+        },
+        {
+          "type": "RefinementAttribute"
+        },
+        {
+          "type": "Summary"
+        },
+        {
+          "type": "SafetyAttributes"
+        },
+        {
+          "type": "CitationMetadata"
+        },
+        {
+          "type": "Citation"
+        },
+        {
+          "type": "CitationSource"
+        },
+        {
+          "type": "Reference"
+        },
+        {
+          "type": "ChunkContent"
+        },
+        {
+          "type": "SummaryWithMetadata"
+        },
+        {
+          "type": "GeoSearchDebugInfo"
+        },
+        {
+          "type": "QueryExpansionInfo"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/search_service.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/conversational_search_service",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "svcs": [
+    {
+      "svc": "ConversationalSearchService",
+      "host": "discoveryengine.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ConverseConversation",
+          "request": {
+            "type": "ConverseConversationRequest"
+          },
+          "response": {
+            "type": "ConverseConversationResponse"
+          }
+        },
+        {
+          "method": "CreateConversation",
+          "request": {
+            "type": "CreateConversationRequest"
+          },
+          "response": {
+            "type": "Conversation"
+          }
+        },
+        {
+          "method": "DeleteConversation",
+          "request": {
+            "type": "DeleteConversationRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "UpdateConversation",
+          "request": {
+            "type": "UpdateConversationRequest"
+          },
+          "response": {
+            "type": "Conversation"
+          }
+        },
+        {
+          "method": "GetConversation",
+          "request": {
+            "type": "GetConversationRequest"
+          },
+          "response": {
+            "type": "Conversation"
+          }
+        },
+        {
+          "method": "ListConversations",
+          "request": {
+            "type": "ListConversationsRequest"
+          },
+          "response": {
+            "type": "ListConversationsResponse"
+          }
+        },
+        {
+          "method": "AnswerQuery",
+          "request": {
+            "type": "AnswerQueryRequest"
+          },
+          "response": {
+            "type": "AnswerQueryResponse"
+          }
+        },
+        {
+          "method": "GetAnswer",
+          "request": {
+            "type": "GetAnswerRequest"
+          },
+          "response": {
+            "type": "Answer"
+          }
+        },
+        {
+          "method": "CreateSession",
+          "request": {
+            "type": "CreateSessionRequest"
+          },
+          "response": {
+            "type": "Session"
+          }
+        },
+        {
+          "method": "DeleteSession",
+          "request": {
+            "type": "DeleteSessionRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "UpdateSession",
+          "request": {
+            "type": "UpdateSessionRequest"
+          },
+          "response": {
+            "type": "Session"
+          }
+        },
+        {
+          "method": "GetSession",
+          "request": {
+            "type": "GetSessionRequest"
+          },
+          "response": {
+            "type": "Session"
+          }
+        },
+        {
+          "method": "ListSessions",
+          "request": {
+            "type": "ListSessionsRequest"
+          },
+          "response": {
+            "type": "ListSessionsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ConverseConversationRequest"
+    },
+    {
+      "type": "ConverseConversationResponse"
+    },
+    {
+      "type": "CreateConversationRequest"
+    },
+    {
+      "type": "UpdateConversationRequest"
+    },
+    {
+      "type": "DeleteConversationRequest"
+    },
+    {
+      "type": "GetConversationRequest"
+    },
+    {
+      "type": "ListConversationsRequest"
+    },
+    {
+      "type": "ListConversationsResponse"
+    },
+    {
+      "type": "AnswerQueryRequest",
+      "msgs": [
+        {
+          "type": "SafetySpec"
+        },
+        {
+          "type": "RelatedQuestionsSpec"
+        },
+        {
+          "type": "AnswerGenerationSpec"
+        },
+        {
+          "type": "ModelSpec"
+        },
+        {
+          "type": "PromptSpec"
+        },
+        {
+          "type": "SearchSpec"
+        },
+        {
+          "type": "SearchParams"
+        },
+        {
+          "type": "SearchResultList"
+        },
+        {
+          "type": "SearchResult"
+        },
+        {
+          "type": "UnstructuredDocumentInfo"
+        },
+        {
+          "type": "DocumentContext"
+        },
+        {
+          "type": "ExtractiveSegment"
+        },
+        {
+          "type": "ExtractiveAnswer"
+        },
+        {
+          "type": "ChunkInfo"
+        },
+        {
+          "type": "QueryUnderstandingSpec"
+        },
+        {
+          "type": "QueryClassificationSpec"
+        },
+        {
+          "type": "QueryRephraserSpec"
+        }
+      ]
+    },
+    {
+      "type": "AnswerQueryResponse"
+    },
+    {
+      "type": "GetAnswerRequest"
+    },
+    {
+      "type": "CreateSessionRequest"
+    },
+    {
+      "type": "UpdateSessionRequest"
+    },
+    {
+      "type": "DeleteSessionRequest"
+    },
+    {
+      "type": "GetSessionRequest"
+    },
+    {
+      "type": "ListSessionsRequest"
+    },
+    {
+      "type": "ListSessionsResponse"
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/conversational_search_service.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/document_service",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "svcs": [
+    {
+      "svc": "DocumentService",
+      "host": "discoveryengine.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetDocument",
+          "request": {
+            "type": "GetDocumentRequest"
+          },
+          "response": {
+            "type": "Document"
+          }
+        },
+        {
+          "method": "ListDocuments",
+          "request": {
+            "type": "ListDocumentsRequest"
+          },
+          "response": {
+            "type": "ListDocumentsResponse"
+          }
+        },
+        {
+          "method": "CreateDocument",
+          "request": {
+            "type": "CreateDocumentRequest"
+          },
+          "response": {
+            "type": "Document"
+          }
+        },
+        {
+          "method": "UpdateDocument",
+          "request": {
+            "type": "UpdateDocumentRequest"
+          },
+          "response": {
+            "type": "Document"
+          }
+        },
+        {
+          "method": "DeleteDocument",
+          "request": {
+            "type": "DeleteDocumentRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ImportDocuments",
+          "request": {
+            "type": "ImportDocumentsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "PurgeDocuments",
+          "request": {
+            "type": "PurgeDocumentsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GetDocumentRequest"
+    },
+    {
+      "type": "ListDocumentsRequest"
+    },
+    {
+      "type": "ListDocumentsResponse"
+    },
+    {
+      "type": "CreateDocumentRequest"
+    },
+    {
+      "type": "UpdateDocumentRequest"
+    },
+    {
+      "type": "DeleteDocumentRequest"
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/document_service.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/conversation",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "msgs": [
+    {
+      "type": "Conversation"
+    },
+    {
+      "type": "Reply",
+      "msgs": [
+        {
+          "type": "Reference"
+        }
+      ]
+    },
+    {
+      "type": "ConversationContext"
+    },
+    {
+      "type": "TextInput"
+    },
+    {
+      "type": "ConversationMessage"
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/conversation.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/document",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "msgs": [
+    {
+      "type": "Document",
+      "msgs": [
+        {
+          "type": "Content"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/document.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/grounding",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "msgs": [
+    {
+      "type": "GroundingFact"
+    },
+    {
+      "type": "FactChunk"
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/grounding.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/search_tuning_service",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "svcs": [
+    {
+      "svc": "SearchTuningService",
+      "host": "discoveryengine.googleapis.com",
+      "rpcs": [
+        {
+          "method": "TrainCustomModel",
+          "request": {
+            "type": "TrainCustomModelRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListCustomModels",
+          "request": {
+            "type": "ListCustomModelsRequest"
+          },
+          "response": {
+            "type": "ListCustomModelsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ListCustomModelsRequest"
+    },
+    {
+      "type": "ListCustomModelsResponse"
+    },
+    {
+      "type": "TrainCustomModelRequest",
+      "msgs": [
+        {
+          "type": "GcsTrainingInput"
+        }
+      ]
+    },
+    {
+      "type": "TrainCustomModelResponse"
+    },
+    {
+      "type": "TrainCustomModelMetadata"
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/search_tuning_service.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/serving_config",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "msgs": [
+    {
+      "type": "ServingConfig",
+      "msgs": [
+        {
+          "type": "MediaConfig"
+        },
+        {
+          "type": "GenericConfig"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/serving_config.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/chunk",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "msgs": [
+    {
+      "type": "Chunk",
+      "msgs": [
+        {
+          "type": "DocumentMetadata"
+        },
+        {
+          "type": "PageSpan"
+        },
+        {
+          "type": "ChunkMetadata"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/chunk.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/engine_service",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "svcs": [
+    {
+      "svc": "EngineService",
+      "host": "discoveryengine.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateEngine",
+          "request": {
+            "type": "CreateEngineRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteEngine",
+          "request": {
+            "type": "DeleteEngineRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateEngine",
+          "request": {
+            "type": "UpdateEngineRequest"
+          },
+          "response": {
+            "type": "Engine"
+          }
+        },
+        {
+          "method": "GetEngine",
+          "request": {
+            "type": "GetEngineRequest"
+          },
+          "response": {
+            "type": "Engine"
+          }
+        },
+        {
+          "method": "ListEngines",
+          "request": {
+            "type": "ListEnginesRequest"
+          },
+          "response": {
+            "type": "ListEnginesResponse"
+          }
+        },
+        {
+          "method": "PauseEngine",
+          "request": {
+            "type": "PauseEngineRequest"
+          },
+          "response": {
+            "type": "Engine"
+          }
+        },
+        {
+          "method": "ResumeEngine",
+          "request": {
+            "type": "ResumeEngineRequest"
+          },
+          "response": {
+            "type": "Engine"
+          }
+        },
+        {
+          "method": "TuneEngine",
+          "request": {
+            "type": "TuneEngineRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateEngineRequest"
+    },
+    {
+      "type": "CreateEngineMetadata"
+    },
+    {
+      "type": "DeleteEngineRequest"
+    },
+    {
+      "type": "DeleteEngineMetadata"
+    },
+    {
+      "type": "GetEngineRequest"
+    },
+    {
+      "type": "ListEnginesRequest"
+    },
+    {
+      "type": "ListEnginesResponse"
+    },
+    {
+      "type": "UpdateEngineRequest"
+    },
+    {
+      "type": "PauseEngineRequest"
+    },
+    {
+      "type": "ResumeEngineRequest"
+    },
+    {
+      "type": "TuneEngineRequest"
+    },
+    {
+      "type": "TuneEngineMetadata"
+    },
+    {
+      "type": "TuneEngineResponse"
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/engine_service.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/import_config",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "msgs": [
+    {
+      "type": "GcsSource"
+    },
+    {
+      "type": "BigQuerySource"
+    },
+    {
+      "type": "SpannerSource"
+    },
+    {
+      "type": "BigtableOptions",
+      "msgs": [
+        {
+          "type": "BigtableColumnFamily"
+        },
+        {
+          "type": "BigtableColumn"
+        }
+      ]
+    },
+    {
+      "type": "BigtableSource"
+    },
+    {
+      "type": "FhirStoreSource"
+    },
+    {
+      "type": "CloudSqlSource"
+    },
+    {
+      "type": "FirestoreSource"
+    },
+    {
+      "type": "ImportErrorConfig"
+    },
+    {
+      "type": "ImportUserEventsRequest",
+      "msgs": [
+        {
+          "type": "InlineSource"
+        }
+      ]
+    },
+    {
+      "type": "ImportUserEventsResponse"
+    },
+    {
+      "type": "ImportUserEventsMetadata"
+    },
+    {
+      "type": "ImportDocumentsMetadata"
+    },
+    {
+      "type": "ImportDocumentsRequest",
+      "msgs": [
+        {
+          "type": "InlineSource"
+        }
+      ]
+    },
+    {
+      "type": "ImportDocumentsResponse"
+    },
+    {
+      "type": "ImportSuggestionDenyListEntriesRequest",
+      "msgs": [
+        {
+          "type": "InlineSource"
+        }
+      ]
+    },
+    {
+      "type": "ImportSuggestionDenyListEntriesResponse"
+    },
+    {
+      "type": "ImportSuggestionDenyListEntriesMetadata"
+    },
+    {
+      "type": "ImportSampleQueriesRequest",
+      "msgs": [
+        {
+          "type": "InlineSource"
+        }
+      ]
+    },
+    {
+      "type": "ImportSampleQueriesResponse"
+    },
+    {
+      "type": "ImportSampleQueriesMetadata"
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/import_config.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/custom_tuning_model",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "msgs": [
+    {
+      "type": "CustomTuningModel"
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/custom_tuning_model.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/control_service",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "svcs": [
+    {
+      "svc": "ControlService",
+      "host": "discoveryengine.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateControl",
+          "request": {
+            "type": "CreateControlRequest"
+          },
+          "response": {
+            "type": "Control"
+          }
+        },
+        {
+          "method": "DeleteControl",
+          "request": {
+            "type": "DeleteControlRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "UpdateControl",
+          "request": {
+            "type": "UpdateControlRequest"
+          },
+          "response": {
+            "type": "Control"
+          }
+        },
+        {
+          "method": "GetControl",
+          "request": {
+            "type": "GetControlRequest"
+          },
+          "response": {
+            "type": "Control"
+          }
+        },
+        {
+          "method": "ListControls",
+          "request": {
+            "type": "ListControlsRequest"
+          },
+          "response": {
+            "type": "ListControlsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateControlRequest"
+    },
+    {
+      "type": "UpdateControlRequest"
+    },
+    {
+      "type": "DeleteControlRequest"
+    },
+    {
+      "type": "GetControlRequest"
+    },
+    {
+      "type": "ListControlsRequest"
+    },
+    {
+      "type": "ListControlsResponse"
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/control_service.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/data_store_service",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "svcs": [
+    {
+      "svc": "DataStoreService",
+      "host": "discoveryengine.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateDataStore",
+          "request": {
+            "type": "CreateDataStoreRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetDataStore",
+          "request": {
+            "type": "GetDataStoreRequest"
+          },
+          "response": {
+            "type": "DataStore"
+          }
+        },
+        {
+          "method": "ListDataStores",
+          "request": {
+            "type": "ListDataStoresRequest"
+          },
+          "response": {
+            "type": "ListDataStoresResponse"
+          }
+        },
+        {
+          "method": "DeleteDataStore",
+          "request": {
+            "type": "DeleteDataStoreRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateDataStore",
+          "request": {
+            "type": "UpdateDataStoreRequest"
+          },
+          "response": {
+            "type": "DataStore"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateDataStoreRequest"
+    },
+    {
+      "type": "GetDataStoreRequest"
+    },
+    {
+      "type": "CreateDataStoreMetadata"
+    },
+    {
+      "type": "ListDataStoresRequest"
+    },
+    {
+      "type": "ListDataStoresResponse"
+    },
+    {
+      "type": "DeleteDataStoreRequest"
+    },
+    {
+      "type": "UpdateDataStoreRequest"
+    },
+    {
+      "type": "DeleteDataStoreMetadata"
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/data_store_service.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/project",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "msgs": [
+    {
+      "type": "Project",
+      "msgs": [
+        {
+          "type": "ServiceTerms"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/project.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/serving_config_service",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "svcs": [
+    {
+      "svc": "ServingConfigService",
+      "host": "discoveryengine.googleapis.com",
+      "rpcs": [
+        {
+          "method": "UpdateServingConfig",
+          "request": {
+            "type": "UpdateServingConfigRequest"
+          },
+          "response": {
+            "type": "ServingConfig"
+          }
+        },
+        {
+          "method": "GetServingConfig",
+          "request": {
+            "type": "GetServingConfigRequest"
+          },
+          "response": {
+            "type": "ServingConfig"
+          }
+        },
+        {
+          "method": "ListServingConfigs",
+          "request": {
+            "type": "ListServingConfigsRequest"
+          },
+          "response": {
+            "type": "ListServingConfigsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "UpdateServingConfigRequest"
+    },
+    {
+      "type": "GetServingConfigRequest"
+    },
+    {
+      "type": "ListServingConfigsRequest"
+    },
+    {
+      "type": "ListServingConfigsResponse"
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/serving_config_service.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/schema_service",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "svcs": [
+    {
+      "svc": "SchemaService",
+      "host": "discoveryengine.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetSchema",
+          "request": {
+            "type": "GetSchemaRequest"
+          },
+          "response": {
+            "type": "Schema"
+          }
+        },
+        {
+          "method": "ListSchemas",
+          "request": {
+            "type": "ListSchemasRequest"
+          },
+          "response": {
+            "type": "ListSchemasResponse"
+          }
+        },
+        {
+          "method": "CreateSchema",
+          "request": {
+            "type": "CreateSchemaRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateSchema",
+          "request": {
+            "type": "UpdateSchemaRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteSchema",
+          "request": {
+            "type": "DeleteSchemaRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GetSchemaRequest"
+    },
+    {
+      "type": "ListSchemasRequest"
+    },
+    {
+      "type": "ListSchemasResponse"
+    },
+    {
+      "type": "CreateSchemaRequest"
+    },
+    {
+      "type": "UpdateSchemaRequest"
+    },
+    {
+      "type": "DeleteSchemaRequest"
+    },
+    {
+      "type": "CreateSchemaMetadata"
+    },
+    {
+      "type": "UpdateSchemaMetadata"
+    },
+    {
+      "type": "DeleteSchemaMetadata"
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/schema_service.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/site_search_engine",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "msgs": [
+    {
+      "type": "SiteSearchEngine"
+    },
+    {
+      "type": "TargetSite",
+      "msgs": [
+        {
+          "type": "FailureReason"
+        },
+        {
+          "type": "QuotaFailure"
+        }
+      ]
+    },
+    {
+      "type": "SiteVerificationInfo"
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/site_search_engine.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/engine",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "msgs": [
+    {
+      "type": "Engine",
+      "msgs": [
+        {
+          "type": "SearchEngineConfig"
+        },
+        {
+          "type": "ChatEngineConfig"
+        },
+        {
+          "type": "AgentCreationConfig"
+        },
+        {
+          "type": "CommonConfig"
+        },
+        {
+          "type": "ChatEngineMetadata"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/engine.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/evaluation",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "msgs": [
+    {
+      "type": "Evaluation",
+      "msgs": [
+        {
+          "type": "EvaluationSpec"
+        },
+        {
+          "type": "QuerySetSpec"
+        }
+      ]
+    },
+    {
+      "type": "QualityMetrics",
+      "msgs": [
+        {
+          "type": "TopkMetrics"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/evaluation.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/session",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "msgs": [
+    {
+      "type": "Session",
+      "msgs": [
+        {
+          "type": "Turn"
+        }
+      ]
+    },
+    {
+      "type": "Query"
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/session.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/common",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "msgs": [
+    {
+      "type": "Interval"
+    },
+    {
+      "type": "CustomAttribute"
+    },
+    {
+      "type": "UserInfo"
+    },
+    {
+      "type": "EmbeddingConfig"
+    },
+    {
+      "type": "DoubleList"
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/common.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/user_event",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "msgs": [
+    {
+      "type": "UserEvent"
+    },
+    {
+      "type": "PageInfo"
+    },
+    {
+      "type": "SearchInfo"
+    },
+    {
+      "type": "CompletionInfo"
+    },
+    {
+      "type": "TransactionInfo"
+    },
+    {
+      "type": "DocumentInfo"
+    },
+    {
+      "type": "PanelInfo"
+    },
+    {
+      "type": "MediaInfo"
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/user_event.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/user_event_service",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "svcs": [
+    {
+      "svc": "UserEventService",
+      "host": "discoveryengine.googleapis.com",
+      "rpcs": [
+        {
+          "method": "WriteUserEvent",
+          "request": {
+            "type": "WriteUserEventRequest"
+          },
+          "response": {
+            "type": "UserEvent"
+          }
+        },
+        {
+          "method": "CollectUserEvent",
+          "request": {
+            "type": "CollectUserEventRequest"
+          },
+          "response": {
+            "type": "google.api.HttpBody"
+          }
+        },
+        {
+          "method": "ImportUserEvents",
+          "request": {
+            "type": "ImportUserEventsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "WriteUserEventRequest"
+    },
+    {
+      "type": "CollectUserEventRequest"
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/user_event_service.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/purge_config",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "msgs": [
+    {
+      "type": "PurgeDocumentsRequest"
+    },
+    {
+      "type": "PurgeDocumentsResponse"
+    },
+    {
+      "type": "PurgeDocumentsMetadata"
+    },
+    {
+      "type": "PurgeSuggestionDenyListEntriesRequest"
+    },
+    {
+      "type": "PurgeSuggestionDenyListEntriesResponse"
+    },
+    {
+      "type": "PurgeSuggestionDenyListEntriesMetadata"
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/purge_config.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/sample_query_set",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "msgs": [
+    {
+      "type": "SampleQuerySet"
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/sample_query_set.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/schema",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "msgs": [
+    {
+      "type": "Schema"
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/schema.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/answer",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "msgs": [
+    {
+      "type": "Answer",
+      "msgs": [
+        {
+          "type": "Citation"
+        },
+        {
+          "type": "CitationSource"
+        },
+        {
+          "type": "Reference"
+        },
+        {
+          "type": "UnstructuredDocumentInfo"
+        },
+        {
+          "type": "ChunkContent"
+        },
+        {
+          "type": "ChunkInfo"
+        },
+        {
+          "type": "DocumentMetadata"
+        },
+        {
+          "type": "Step"
+        },
+        {
+          "type": "Action"
+        },
+        {
+          "type": "SearchAction"
+        },
+        {
+          "type": "Observation"
+        },
+        {
+          "type": "SearchResult"
+        },
+        {
+          "type": "SnippetInfo"
+        },
+        {
+          "type": "ChunkInfo"
+        },
+        {
+          "type": "QueryUnderstandingInfo"
+        },
+        {
+          "type": "QueryClassificationInfo"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/answer.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/control",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "msgs": [
+    {
+      "type": "Condition",
+      "msgs": [
+        {
+          "type": "QueryTerm"
+        },
+        {
+          "type": "TimeRange"
+        }
+      ]
+    },
+    {
+      "type": "Control",
+      "msgs": [
+        {
+          "type": "BoostAction"
+        },
+        {
+          "type": "FilterAction"
+        },
+        {
+          "type": "RedirectAction"
+        },
+        {
+          "type": "SynonymsAction"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/control.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/completion_service",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "svcs": [
+    {
+      "svc": "CompletionService",
+      "host": "discoveryengine.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CompleteQuery",
+          "request": {
+            "type": "CompleteQueryRequest"
+          },
+          "response": {
+            "type": "CompleteQueryResponse"
+          }
+        },
+        {
+          "method": "ImportSuggestionDenyListEntries",
+          "request": {
+            "type": "ImportSuggestionDenyListEntriesRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "PurgeSuggestionDenyListEntries",
+          "request": {
+            "type": "PurgeSuggestionDenyListEntriesRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CompleteQueryRequest"
+    },
+    {
+      "type": "CompleteQueryResponse",
+      "msgs": [
+        {
+          "type": "QuerySuggestion"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/completion_service.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/completion",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "msgs": [
+    {
+      "type": "SuggestionDenyListEntry"
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/completion.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/sample_query_service",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "svcs": [
+    {
+      "svc": "SampleQueryService",
+      "host": "discoveryengine.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetSampleQuery",
+          "request": {
+            "type": "GetSampleQueryRequest"
+          },
+          "response": {
+            "type": "SampleQuery"
+          }
+        },
+        {
+          "method": "ListSampleQueries",
+          "request": {
+            "type": "ListSampleQueriesRequest"
+          },
+          "response": {
+            "type": "ListSampleQueriesResponse"
+          }
+        },
+        {
+          "method": "CreateSampleQuery",
+          "request": {
+            "type": "CreateSampleQueryRequest"
+          },
+          "response": {
+            "type": "SampleQuery"
+          }
+        },
+        {
+          "method": "UpdateSampleQuery",
+          "request": {
+            "type": "UpdateSampleQueryRequest"
+          },
+          "response": {
+            "type": "SampleQuery"
+          }
+        },
+        {
+          "method": "DeleteSampleQuery",
+          "request": {
+            "type": "DeleteSampleQueryRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ImportSampleQueries",
+          "request": {
+            "type": "ImportSampleQueriesRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GetSampleQueryRequest"
+    },
+    {
+      "type": "ListSampleQueriesRequest"
+    },
+    {
+      "type": "ListSampleQueriesResponse"
+    },
+    {
+      "type": "CreateSampleQueryRequest"
+    },
+    {
+      "type": "UpdateSampleQueryRequest"
+    },
+    {
+      "type": "DeleteSampleQueryRequest"
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/sample_query_service.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/sample_query_set_service",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "svcs": [
+    {
+      "svc": "SampleQuerySetService",
+      "host": "discoveryengine.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetSampleQuerySet",
+          "request": {
+            "type": "GetSampleQuerySetRequest"
+          },
+          "response": {
+            "type": "SampleQuerySet"
+          }
+        },
+        {
+          "method": "ListSampleQuerySets",
+          "request": {
+            "type": "ListSampleQuerySetsRequest"
+          },
+          "response": {
+            "type": "ListSampleQuerySetsResponse"
+          }
+        },
+        {
+          "method": "CreateSampleQuerySet",
+          "request": {
+            "type": "CreateSampleQuerySetRequest"
+          },
+          "response": {
+            "type": "SampleQuerySet"
+          }
+        },
+        {
+          "method": "UpdateSampleQuerySet",
+          "request": {
+            "type": "UpdateSampleQuerySetRequest"
+          },
+          "response": {
+            "type": "SampleQuerySet"
+          }
+        },
+        {
+          "method": "DeleteSampleQuerySet",
+          "request": {
+            "type": "DeleteSampleQuerySetRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GetSampleQuerySetRequest"
+    },
+    {
+      "type": "ListSampleQuerySetsRequest"
+    },
+    {
+      "type": "ListSampleQuerySetsResponse"
+    },
+    {
+      "type": "CreateSampleQuerySetRequest"
+    },
+    {
+      "type": "UpdateSampleQuerySetRequest"
+    },
+    {
+      "type": "DeleteSampleQuerySetRequest"
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/sample_query_set_service.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}
+{
+  "proto": "google/cloud/discoveryengine/v1beta/grounded_generation_service",
+  "pkg": "google.cloud.discoveryengine.v1beta",
+  "svcs": [
+    {
+      "svc": "GroundedGenerationService",
+      "host": "discoveryengine.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CheckGrounding",
+          "request": {
+            "type": "CheckGroundingRequest"
+          },
+          "response": {
+            "type": "CheckGroundingResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CheckGroundingSpec"
+    },
+    {
+      "type": "CheckGroundingRequest"
+    },
+    {
+      "type": "CheckGroundingResponse",
+      "msgs": [
+        {
+          "type": "Claim"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "discoveryengine/apiv1beta/discoveryenginepb/grounded_generation_service.pb.go",
+    "pkg": "discoveryenginepb",
+    "pkg_full": "cloud.google.com/go/discoveryengine/apiv1beta/discoveryenginepb"
+  }
+}

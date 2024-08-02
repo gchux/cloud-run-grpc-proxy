@@ -1,0 +1,521 @@
+{
+  "proto": "google/cloud/orchestration/airflow/service/v1beta1/environments",
+  "pkg": "google.cloud.orchestration.airflow.service.v1beta1",
+  "svcs": [
+    {
+      "svc": "Environments",
+      "host": "composer.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateEnvironment",
+          "request": {
+            "type": "CreateEnvironmentRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetEnvironment",
+          "request": {
+            "type": "GetEnvironmentRequest"
+          },
+          "response": {
+            "type": "Environment"
+          }
+        },
+        {
+          "method": "ListEnvironments",
+          "request": {
+            "type": "ListEnvironmentsRequest"
+          },
+          "response": {
+            "type": "ListEnvironmentsResponse"
+          }
+        },
+        {
+          "method": "UpdateEnvironment",
+          "request": {
+            "type": "UpdateEnvironmentRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteEnvironment",
+          "request": {
+            "type": "DeleteEnvironmentRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "RestartWebServer",
+          "request": {
+            "type": "RestartWebServerRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CheckUpgrade",
+          "request": {
+            "type": "CheckUpgradeRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ExecuteAirflowCommand",
+          "request": {
+            "type": "ExecuteAirflowCommandRequest"
+          },
+          "response": {
+            "type": "ExecuteAirflowCommandResponse"
+          }
+        },
+        {
+          "method": "StopAirflowCommand",
+          "request": {
+            "type": "StopAirflowCommandRequest"
+          },
+          "response": {
+            "type": "StopAirflowCommandResponse"
+          }
+        },
+        {
+          "method": "PollAirflowCommand",
+          "request": {
+            "type": "PollAirflowCommandRequest"
+          },
+          "response": {
+            "type": "PollAirflowCommandResponse"
+          }
+        },
+        {
+          "method": "ListWorkloads",
+          "request": {
+            "type": "ListWorkloadsRequest"
+          },
+          "response": {
+            "type": "ListWorkloadsResponse"
+          }
+        },
+        {
+          "method": "CreateUserWorkloadsSecret",
+          "request": {
+            "type": "CreateUserWorkloadsSecretRequest"
+          },
+          "response": {
+            "type": "UserWorkloadsSecret"
+          }
+        },
+        {
+          "method": "GetUserWorkloadsSecret",
+          "request": {
+            "type": "GetUserWorkloadsSecretRequest"
+          },
+          "response": {
+            "type": "UserWorkloadsSecret"
+          }
+        },
+        {
+          "method": "ListUserWorkloadsSecrets",
+          "request": {
+            "type": "ListUserWorkloadsSecretsRequest"
+          },
+          "response": {
+            "type": "ListUserWorkloadsSecretsResponse"
+          }
+        },
+        {
+          "method": "UpdateUserWorkloadsSecret",
+          "request": {
+            "type": "UpdateUserWorkloadsSecretRequest"
+          },
+          "response": {
+            "type": "UserWorkloadsSecret"
+          }
+        },
+        {
+          "method": "DeleteUserWorkloadsSecret",
+          "request": {
+            "type": "DeleteUserWorkloadsSecretRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "CreateUserWorkloadsConfigMap",
+          "request": {
+            "type": "CreateUserWorkloadsConfigMapRequest"
+          },
+          "response": {
+            "type": "UserWorkloadsConfigMap"
+          }
+        },
+        {
+          "method": "GetUserWorkloadsConfigMap",
+          "request": {
+            "type": "GetUserWorkloadsConfigMapRequest"
+          },
+          "response": {
+            "type": "UserWorkloadsConfigMap"
+          }
+        },
+        {
+          "method": "ListUserWorkloadsConfigMaps",
+          "request": {
+            "type": "ListUserWorkloadsConfigMapsRequest"
+          },
+          "response": {
+            "type": "ListUserWorkloadsConfigMapsResponse"
+          }
+        },
+        {
+          "method": "UpdateUserWorkloadsConfigMap",
+          "request": {
+            "type": "UpdateUserWorkloadsConfigMapRequest"
+          },
+          "response": {
+            "type": "UserWorkloadsConfigMap"
+          }
+        },
+        {
+          "method": "DeleteUserWorkloadsConfigMap",
+          "request": {
+            "type": "DeleteUserWorkloadsConfigMapRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "SaveSnapshot",
+          "request": {
+            "type": "SaveSnapshotRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "LoadSnapshot",
+          "request": {
+            "type": "LoadSnapshotRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DatabaseFailover",
+          "request": {
+            "type": "DatabaseFailoverRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "FetchDatabaseProperties",
+          "request": {
+            "type": "FetchDatabasePropertiesRequest"
+          },
+          "response": {
+            "type": "FetchDatabasePropertiesResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateEnvironmentRequest"
+    },
+    {
+      "type": "GetEnvironmentRequest"
+    },
+    {
+      "type": "ListEnvironmentsRequest"
+    },
+    {
+      "type": "ListEnvironmentsResponse"
+    },
+    {
+      "type": "DeleteEnvironmentRequest"
+    },
+    {
+      "type": "UpdateEnvironmentRequest"
+    },
+    {
+      "type": "RestartWebServerRequest"
+    },
+    {
+      "type": "ExecuteAirflowCommandRequest"
+    },
+    {
+      "type": "ExecuteAirflowCommandResponse"
+    },
+    {
+      "type": "StopAirflowCommandRequest"
+    },
+    {
+      "type": "StopAirflowCommandResponse"
+    },
+    {
+      "type": "PollAirflowCommandRequest"
+    },
+    {
+      "type": "PollAirflowCommandResponse",
+      "msgs": [
+        {
+          "type": "Line"
+        },
+        {
+          "type": "ExitInfo"
+        }
+      ]
+    },
+    {
+      "type": "CreateUserWorkloadsSecretRequest"
+    },
+    {
+      "type": "GetUserWorkloadsSecretRequest"
+    },
+    {
+      "type": "ListUserWorkloadsSecretsRequest"
+    },
+    {
+      "type": "UpdateUserWorkloadsSecretRequest"
+    },
+    {
+      "type": "DeleteUserWorkloadsSecretRequest"
+    },
+    {
+      "type": "CreateUserWorkloadsConfigMapRequest"
+    },
+    {
+      "type": "GetUserWorkloadsConfigMapRequest"
+    },
+    {
+      "type": "ListUserWorkloadsConfigMapsRequest"
+    },
+    {
+      "type": "UpdateUserWorkloadsConfigMapRequest"
+    },
+    {
+      "type": "DeleteUserWorkloadsConfigMapRequest"
+    },
+    {
+      "type": "UserWorkloadsSecret"
+    },
+    {
+      "type": "ListUserWorkloadsSecretsResponse"
+    },
+    {
+      "type": "UserWorkloadsConfigMap"
+    },
+    {
+      "type": "ListUserWorkloadsConfigMapsResponse"
+    },
+    {
+      "type": "ListWorkloadsRequest"
+    },
+    {
+      "type": "ListWorkloadsResponse",
+      "msgs": [
+        {
+          "type": "ComposerWorkload"
+        },
+        {
+          "type": "ComposerWorkloadStatus"
+        }
+      ]
+    },
+    {
+      "type": "SaveSnapshotRequest"
+    },
+    {
+      "type": "SaveSnapshotResponse"
+    },
+    {
+      "type": "LoadSnapshotRequest"
+    },
+    {
+      "type": "LoadSnapshotResponse"
+    },
+    {
+      "type": "DatabaseFailoverRequest"
+    },
+    {
+      "type": "DatabaseFailoverResponse"
+    },
+    {
+      "type": "FetchDatabasePropertiesRequest"
+    },
+    {
+      "type": "FetchDatabasePropertiesResponse"
+    },
+    {
+      "type": "EnvironmentConfig"
+    },
+    {
+      "type": "WebServerNetworkAccessControl",
+      "msgs": [
+        {
+          "type": "AllowedIpRange"
+        }
+      ]
+    },
+    {
+      "type": "SoftwareConfig"
+    },
+    {
+      "type": "IPAllocationPolicy"
+    },
+    {
+      "type": "NodeConfig"
+    },
+    {
+      "type": "PrivateClusterConfig"
+    },
+    {
+      "type": "NetworkingConfig"
+    },
+    {
+      "type": "PrivateEnvironmentConfig"
+    },
+    {
+      "type": "DatabaseConfig"
+    },
+    {
+      "type": "WebServerConfig"
+    },
+    {
+      "type": "EncryptionConfig"
+    },
+    {
+      "type": "MaintenanceWindow"
+    },
+    {
+      "type": "WorkloadsConfig",
+      "msgs": [
+        {
+          "type": "SchedulerResource"
+        },
+        {
+          "type": "WebServerResource"
+        },
+        {
+          "type": "WorkerResource"
+        },
+        {
+          "type": "TriggererResource"
+        },
+        {
+          "type": "DagProcessorResource"
+        }
+      ]
+    },
+    {
+      "type": "DataRetentionConfig"
+    },
+    {
+      "type": "TaskLogsRetentionConfig"
+    },
+    {
+      "type": "AirflowMetadataRetentionPolicyConfig"
+    },
+    {
+      "type": "StorageConfig"
+    },
+    {
+      "type": "RecoveryConfig"
+    },
+    {
+      "type": "ScheduledSnapshotsConfig"
+    },
+    {
+      "type": "MasterAuthorizedNetworksConfig",
+      "msgs": [
+        {
+          "type": "CidrBlock"
+        }
+      ]
+    },
+    {
+      "type": "CloudDataLineageIntegration"
+    },
+    {
+      "type": "Environment"
+    },
+    {
+      "type": "CheckUpgradeRequest"
+    },
+    {
+      "type": "CheckUpgradeResponse"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/orchestration/airflow/service/v1beta1/environments.pb.go",
+    "pkg": "servicepb",
+    "pkg_full": "cloud.google.com/go/orchestration/airflow/service/apiv1beta1/servicepb"
+  }
+}
+{
+  "proto": "google/cloud/orchestration/airflow/service/v1beta1/image_versions",
+  "pkg": "google.cloud.orchestration.airflow.service.v1beta1",
+  "svcs": [
+    {
+      "svc": "ImageVersions",
+      "host": "composer.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListImageVersions",
+          "request": {
+            "type": "ListImageVersionsRequest"
+          },
+          "response": {
+            "type": "ListImageVersionsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ListImageVersionsRequest"
+    },
+    {
+      "type": "ListImageVersionsResponse"
+    },
+    {
+      "type": "ImageVersion"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/orchestration/airflow/service/v1beta1/image_versions.pb.go",
+    "pkg": "servicepb",
+    "pkg_full": "cloud.google.com/go/orchestration/airflow/service/apiv1beta1/servicepb"
+  }
+}
+{
+  "proto": "google/cloud/orchestration/airflow/service/v1beta1/operations",
+  "pkg": "google.cloud.orchestration.airflow.service.v1beta1",
+  "msgs": [
+    {
+      "type": "OperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/orchestration/airflow/service/v1beta1/operations.pb.go",
+    "pkg": "servicepb",
+    "pkg_full": "cloud.google.com/go/orchestration/airflow/service/apiv1beta1/servicepb"
+  }
+}

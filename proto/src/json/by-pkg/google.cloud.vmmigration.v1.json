@@ -1,0 +1,762 @@
+{
+  "proto": "google/cloud/vmmigration/v1/vmmigration",
+  "pkg": "google.cloud.vmmigration.v1",
+  "svcs": [
+    {
+      "svc": "VmMigration",
+      "host": "vmmigration.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListSources",
+          "request": {
+            "type": "ListSourcesRequest"
+          },
+          "response": {
+            "type": "ListSourcesResponse"
+          }
+        },
+        {
+          "method": "GetSource",
+          "request": {
+            "type": "GetSourceRequest"
+          },
+          "response": {
+            "type": "Source"
+          }
+        },
+        {
+          "method": "CreateSource",
+          "request": {
+            "type": "CreateSourceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateSource",
+          "request": {
+            "type": "UpdateSourceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteSource",
+          "request": {
+            "type": "DeleteSourceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "FetchInventory",
+          "request": {
+            "type": "FetchInventoryRequest"
+          },
+          "response": {
+            "type": "FetchInventoryResponse"
+          }
+        },
+        {
+          "method": "ListUtilizationReports",
+          "request": {
+            "type": "ListUtilizationReportsRequest"
+          },
+          "response": {
+            "type": "ListUtilizationReportsResponse"
+          }
+        },
+        {
+          "method": "GetUtilizationReport",
+          "request": {
+            "type": "GetUtilizationReportRequest"
+          },
+          "response": {
+            "type": "UtilizationReport"
+          }
+        },
+        {
+          "method": "CreateUtilizationReport",
+          "request": {
+            "type": "CreateUtilizationReportRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteUtilizationReport",
+          "request": {
+            "type": "DeleteUtilizationReportRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListDatacenterConnectors",
+          "request": {
+            "type": "ListDatacenterConnectorsRequest"
+          },
+          "response": {
+            "type": "ListDatacenterConnectorsResponse"
+          }
+        },
+        {
+          "method": "GetDatacenterConnector",
+          "request": {
+            "type": "GetDatacenterConnectorRequest"
+          },
+          "response": {
+            "type": "DatacenterConnector"
+          }
+        },
+        {
+          "method": "CreateDatacenterConnector",
+          "request": {
+            "type": "CreateDatacenterConnectorRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteDatacenterConnector",
+          "request": {
+            "type": "DeleteDatacenterConnectorRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpgradeAppliance",
+          "request": {
+            "type": "UpgradeApplianceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CreateMigratingVm",
+          "request": {
+            "type": "CreateMigratingVmRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListMigratingVms",
+          "request": {
+            "type": "ListMigratingVmsRequest"
+          },
+          "response": {
+            "type": "ListMigratingVmsResponse"
+          }
+        },
+        {
+          "method": "GetMigratingVm",
+          "request": {
+            "type": "GetMigratingVmRequest"
+          },
+          "response": {
+            "type": "MigratingVm"
+          }
+        },
+        {
+          "method": "UpdateMigratingVm",
+          "request": {
+            "type": "UpdateMigratingVmRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteMigratingVm",
+          "request": {
+            "type": "DeleteMigratingVmRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "StartMigration",
+          "request": {
+            "type": "StartMigrationRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ResumeMigration",
+          "request": {
+            "type": "ResumeMigrationRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "PauseMigration",
+          "request": {
+            "type": "PauseMigrationRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "FinalizeMigration",
+          "request": {
+            "type": "FinalizeMigrationRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CreateCloneJob",
+          "request": {
+            "type": "CreateCloneJobRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CancelCloneJob",
+          "request": {
+            "type": "CancelCloneJobRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListCloneJobs",
+          "request": {
+            "type": "ListCloneJobsRequest"
+          },
+          "response": {
+            "type": "ListCloneJobsResponse"
+          }
+        },
+        {
+          "method": "GetCloneJob",
+          "request": {
+            "type": "GetCloneJobRequest"
+          },
+          "response": {
+            "type": "CloneJob"
+          }
+        },
+        {
+          "method": "CreateCutoverJob",
+          "request": {
+            "type": "CreateCutoverJobRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CancelCutoverJob",
+          "request": {
+            "type": "CancelCutoverJobRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListCutoverJobs",
+          "request": {
+            "type": "ListCutoverJobsRequest"
+          },
+          "response": {
+            "type": "ListCutoverJobsResponse"
+          }
+        },
+        {
+          "method": "GetCutoverJob",
+          "request": {
+            "type": "GetCutoverJobRequest"
+          },
+          "response": {
+            "type": "CutoverJob"
+          }
+        },
+        {
+          "method": "ListGroups",
+          "request": {
+            "type": "ListGroupsRequest"
+          },
+          "response": {
+            "type": "ListGroupsResponse"
+          }
+        },
+        {
+          "method": "GetGroup",
+          "request": {
+            "type": "GetGroupRequest"
+          },
+          "response": {
+            "type": "Group"
+          }
+        },
+        {
+          "method": "CreateGroup",
+          "request": {
+            "type": "CreateGroupRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateGroup",
+          "request": {
+            "type": "UpdateGroupRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteGroup",
+          "request": {
+            "type": "DeleteGroupRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "AddGroupMigration",
+          "request": {
+            "type": "AddGroupMigrationRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "RemoveGroupMigration",
+          "request": {
+            "type": "RemoveGroupMigrationRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListTargetProjects",
+          "request": {
+            "type": "ListTargetProjectsRequest"
+          },
+          "response": {
+            "type": "ListTargetProjectsResponse"
+          }
+        },
+        {
+          "method": "GetTargetProject",
+          "request": {
+            "type": "GetTargetProjectRequest"
+          },
+          "response": {
+            "type": "TargetProject"
+          }
+        },
+        {
+          "method": "CreateTargetProject",
+          "request": {
+            "type": "CreateTargetProjectRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateTargetProject",
+          "request": {
+            "type": "UpdateTargetProjectRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteTargetProject",
+          "request": {
+            "type": "DeleteTargetProjectRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListReplicationCycles",
+          "request": {
+            "type": "ListReplicationCyclesRequest"
+          },
+          "response": {
+            "type": "ListReplicationCyclesResponse"
+          }
+        },
+        {
+          "method": "GetReplicationCycle",
+          "request": {
+            "type": "GetReplicationCycleRequest"
+          },
+          "response": {
+            "type": "ReplicationCycle"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ReplicationCycle"
+    },
+    {
+      "type": "CycleStep"
+    },
+    {
+      "type": "InitializingReplicationStep"
+    },
+    {
+      "type": "ReplicatingStep"
+    },
+    {
+      "type": "PostProcessingStep"
+    },
+    {
+      "type": "ReplicationSync"
+    },
+    {
+      "type": "MigratingVm"
+    },
+    {
+      "type": "CloneJob"
+    },
+    {
+      "type": "CloneStep"
+    },
+    {
+      "type": "AdaptingOSStep"
+    },
+    {
+      "type": "PreparingVMDisksStep"
+    },
+    {
+      "type": "InstantiatingMigratedVMStep"
+    },
+    {
+      "type": "CutoverJob"
+    },
+    {
+      "type": "CutoverStep"
+    },
+    {
+      "type": "ShuttingDownSourceVMStep"
+    },
+    {
+      "type": "CreateCloneJobRequest"
+    },
+    {
+      "type": "CancelCloneJobRequest"
+    },
+    {
+      "type": "CancelCloneJobResponse"
+    },
+    {
+      "type": "ListCloneJobsRequest"
+    },
+    {
+      "type": "ListCloneJobsResponse"
+    },
+    {
+      "type": "GetCloneJobRequest"
+    },
+    {
+      "type": "Source"
+    },
+    {
+      "type": "VmwareSourceDetails"
+    },
+    {
+      "type": "AwsSourceDetails",
+      "msgs": [
+        {
+          "type": "AccessKeyCredentials"
+        },
+        {
+          "type": "Tag"
+        }
+      ]
+    },
+    {
+      "type": "DatacenterConnector"
+    },
+    {
+      "type": "UpgradeStatus"
+    },
+    {
+      "type": "AvailableUpdates"
+    },
+    {
+      "type": "ApplianceVersion"
+    },
+    {
+      "type": "ListSourcesRequest"
+    },
+    {
+      "type": "ListSourcesResponse"
+    },
+    {
+      "type": "GetSourceRequest"
+    },
+    {
+      "type": "CreateSourceRequest"
+    },
+    {
+      "type": "UpdateSourceRequest"
+    },
+    {
+      "type": "DeleteSourceRequest"
+    },
+    {
+      "type": "FetchInventoryRequest"
+    },
+    {
+      "type": "VmwareVmDetails"
+    },
+    {
+      "type": "AwsVmDetails"
+    },
+    {
+      "type": "AwsSecurityGroup"
+    },
+    {
+      "type": "VmwareVmsDetails"
+    },
+    {
+      "type": "AwsVmsDetails"
+    },
+    {
+      "type": "FetchInventoryResponse"
+    },
+    {
+      "type": "UtilizationReport"
+    },
+    {
+      "type": "VmUtilizationInfo"
+    },
+    {
+      "type": "VmUtilizationMetrics"
+    },
+    {
+      "type": "ListUtilizationReportsRequest"
+    },
+    {
+      "type": "ListUtilizationReportsResponse"
+    },
+    {
+      "type": "GetUtilizationReportRequest"
+    },
+    {
+      "type": "CreateUtilizationReportRequest"
+    },
+    {
+      "type": "DeleteUtilizationReportRequest"
+    },
+    {
+      "type": "ListDatacenterConnectorsResponse"
+    },
+    {
+      "type": "GetDatacenterConnectorRequest"
+    },
+    {
+      "type": "CreateDatacenterConnectorRequest"
+    },
+    {
+      "type": "DeleteDatacenterConnectorRequest"
+    },
+    {
+      "type": "UpgradeApplianceRequest"
+    },
+    {
+      "type": "UpgradeApplianceResponse"
+    },
+    {
+      "type": "ListDatacenterConnectorsRequest"
+    },
+    {
+      "type": "ComputeEngineTargetDefaults"
+    },
+    {
+      "type": "ComputeEngineTargetDetails"
+    },
+    {
+      "type": "NetworkInterface"
+    },
+    {
+      "type": "AppliedLicense"
+    },
+    {
+      "type": "SchedulingNodeAffinity"
+    },
+    {
+      "type": "ComputeScheduling"
+    },
+    {
+      "type": "SchedulePolicy"
+    },
+    {
+      "type": "CreateMigratingVmRequest"
+    },
+    {
+      "type": "ListMigratingVmsRequest"
+    },
+    {
+      "type": "ListMigratingVmsResponse"
+    },
+    {
+      "type": "GetMigratingVmRequest"
+    },
+    {
+      "type": "UpdateMigratingVmRequest"
+    },
+    {
+      "type": "DeleteMigratingVmRequest"
+    },
+    {
+      "type": "StartMigrationRequest"
+    },
+    {
+      "type": "StartMigrationResponse"
+    },
+    {
+      "type": "PauseMigrationRequest"
+    },
+    {
+      "type": "PauseMigrationResponse"
+    },
+    {
+      "type": "ResumeMigrationRequest"
+    },
+    {
+      "type": "ResumeMigrationResponse"
+    },
+    {
+      "type": "FinalizeMigrationRequest"
+    },
+    {
+      "type": "FinalizeMigrationResponse"
+    },
+    {
+      "type": "TargetProject"
+    },
+    {
+      "type": "GetTargetProjectRequest"
+    },
+    {
+      "type": "ListTargetProjectsRequest"
+    },
+    {
+      "type": "ListTargetProjectsResponse"
+    },
+    {
+      "type": "CreateTargetProjectRequest"
+    },
+    {
+      "type": "UpdateTargetProjectRequest"
+    },
+    {
+      "type": "DeleteTargetProjectRequest"
+    },
+    {
+      "type": "Group"
+    },
+    {
+      "type": "ListGroupsRequest"
+    },
+    {
+      "type": "ListGroupsResponse"
+    },
+    {
+      "type": "GetGroupRequest"
+    },
+    {
+      "type": "CreateGroupRequest"
+    },
+    {
+      "type": "UpdateGroupRequest"
+    },
+    {
+      "type": "DeleteGroupRequest"
+    },
+    {
+      "type": "AddGroupMigrationRequest"
+    },
+    {
+      "type": "AddGroupMigrationResponse"
+    },
+    {
+      "type": "RemoveGroupMigrationRequest"
+    },
+    {
+      "type": "RemoveGroupMigrationResponse"
+    },
+    {
+      "type": "CreateCutoverJobRequest"
+    },
+    {
+      "type": "CancelCutoverJobRequest"
+    },
+    {
+      "type": "CancelCutoverJobResponse"
+    },
+    {
+      "type": "ListCutoverJobsRequest"
+    },
+    {
+      "type": "ListCutoverJobsResponse"
+    },
+    {
+      "type": "GetCutoverJobRequest"
+    },
+    {
+      "type": "OperationMetadata"
+    },
+    {
+      "type": "MigrationError"
+    },
+    {
+      "type": "AwsSourceVmDetails"
+    },
+    {
+      "type": "ListReplicationCyclesRequest"
+    },
+    {
+      "type": "ListReplicationCyclesResponse"
+    },
+    {
+      "type": "GetReplicationCycleRequest"
+    }
+  ],
+  "go": {
+    "src": "vmmigration/apiv1/vmmigrationpb/vmmigration.pb.go",
+    "pkg": "vmmigrationpb",
+    "pkg_full": "cloud.google.com/go/vmmigration/apiv1/vmmigrationpb"
+  }
+}

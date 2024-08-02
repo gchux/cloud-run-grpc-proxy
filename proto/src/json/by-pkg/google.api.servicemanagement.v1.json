@@ -1,0 +1,244 @@
+{
+  "proto": "google/api/servicemanagement/v1/servicemanager",
+  "pkg": "google.api.servicemanagement.v1",
+  "svcs": [
+    {
+      "svc": "ServiceManager",
+      "host": "servicemanagement.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListServices",
+          "request": {
+            "type": "ListServicesRequest"
+          },
+          "response": {
+            "type": "ListServicesResponse"
+          }
+        },
+        {
+          "method": "GetService",
+          "request": {
+            "type": "GetServiceRequest"
+          },
+          "response": {
+            "type": "ManagedService"
+          }
+        },
+        {
+          "method": "CreateService",
+          "request": {
+            "type": "CreateServiceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteService",
+          "request": {
+            "type": "DeleteServiceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UndeleteService",
+          "request": {
+            "type": "UndeleteServiceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListServiceConfigs",
+          "request": {
+            "type": "ListServiceConfigsRequest"
+          },
+          "response": {
+            "type": "ListServiceConfigsResponse"
+          }
+        },
+        {
+          "method": "GetServiceConfig",
+          "request": {
+            "type": "GetServiceConfigRequest"
+          },
+          "response": {
+            "type": "google.api.Service"
+          }
+        },
+        {
+          "method": "CreateServiceConfig",
+          "request": {
+            "type": "CreateServiceConfigRequest"
+          },
+          "response": {
+            "type": "google.api.Service"
+          }
+        },
+        {
+          "method": "SubmitConfigSource",
+          "request": {
+            "type": "SubmitConfigSourceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListServiceRollouts",
+          "request": {
+            "type": "ListServiceRolloutsRequest"
+          },
+          "response": {
+            "type": "ListServiceRolloutsResponse"
+          }
+        },
+        {
+          "method": "GetServiceRollout",
+          "request": {
+            "type": "GetServiceRolloutRequest"
+          },
+          "response": {
+            "type": "Rollout"
+          }
+        },
+        {
+          "method": "CreateServiceRollout",
+          "request": {
+            "type": "CreateServiceRolloutRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GenerateConfigReport",
+          "request": {
+            "type": "GenerateConfigReportRequest"
+          },
+          "response": {
+            "type": "GenerateConfigReportResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ListServicesRequest"
+    },
+    {
+      "type": "ListServicesResponse"
+    },
+    {
+      "type": "GetServiceRequest"
+    },
+    {
+      "type": "CreateServiceRequest"
+    },
+    {
+      "type": "DeleteServiceRequest"
+    },
+    {
+      "type": "UndeleteServiceRequest"
+    },
+    {
+      "type": "UndeleteServiceResponse"
+    },
+    {
+      "type": "GetServiceConfigRequest"
+    },
+    {
+      "type": "ListServiceConfigsRequest"
+    },
+    {
+      "type": "ListServiceConfigsResponse"
+    },
+    {
+      "type": "CreateServiceConfigRequest"
+    },
+    {
+      "type": "SubmitConfigSourceRequest"
+    },
+    {
+      "type": "SubmitConfigSourceResponse"
+    },
+    {
+      "type": "CreateServiceRolloutRequest"
+    },
+    {
+      "type": "ListServiceRolloutsRequest"
+    },
+    {
+      "type": "ListServiceRolloutsResponse"
+    },
+    {
+      "type": "GetServiceRolloutRequest"
+    },
+    {
+      "type": "EnableServiceResponse"
+    },
+    {
+      "type": "GenerateConfigReportRequest"
+    },
+    {
+      "type": "GenerateConfigReportResponse"
+    }
+  ],
+  "go": {
+    "src": "servicemanagement/apiv1/servicemanagementpb/servicemanager.pb.go",
+    "pkg": "servicemanagementpb",
+    "pkg_full": "cloud.google.com/go/servicemanagement/apiv1/servicemanagementpb"
+  }
+}
+{
+  "proto": "google/api/servicemanagement/v1/resources",
+  "pkg": "google.api.servicemanagement.v1",
+  "msgs": [
+    {
+      "type": "ManagedService"
+    },
+    {
+      "type": "OperationMetadata",
+      "msgs": [
+        {
+          "type": "Step"
+        }
+      ]
+    },
+    {
+      "type": "Diagnostic"
+    },
+    {
+      "type": "ConfigSource"
+    },
+    {
+      "type": "ConfigFile"
+    },
+    {
+      "type": "ConfigRef"
+    },
+    {
+      "type": "ChangeReport"
+    },
+    {
+      "type": "Rollout",
+      "msgs": [
+        {
+          "type": "TrafficPercentStrategy"
+        },
+        {
+          "type": "DeleteServiceStrategy"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "servicemanagement/apiv1/servicemanagementpb/resources.pb.go",
+    "pkg": "servicemanagementpb",
+    "pkg_full": "cloud.google.com/go/servicemanagement/apiv1/servicemanagementpb"
+  }
+}

@@ -1,0 +1,254 @@
+{
+  "proto": "google/maps/fleetengine/delivery/v1/tasks",
+  "pkg": "maps.fleetengine.delivery.v1",
+  "msgs": [
+    {
+      "type": "Task",
+      "msgs": [
+        {
+          "type": "JourneySharingInfo"
+        }
+      ]
+    },
+    {
+      "type": "TaskTrackingViewConfig",
+      "msgs": [
+        {
+          "type": "VisibilityOption"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "maps/fleetengine/delivery/apiv1/deliverypb/tasks.pb.go",
+    "pkg": "deliverypb",
+    "pkg_full": "cloud.google.com/go/maps/fleetengine/delivery/apiv1/deliverypb"
+  }
+}
+{
+  "proto": "google/maps/fleetengine/delivery/v1/delivery_vehicles",
+  "pkg": "maps.fleetengine.delivery.v1",
+  "msgs": [
+    {
+      "type": "DeliveryVehicle"
+    },
+    {
+      "type": "LocationInfo"
+    },
+    {
+      "type": "VehicleJourneySegment"
+    },
+    {
+      "type": "VehicleStop",
+      "msgs": [
+        {
+          "type": "TaskInfo"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "maps/fleetengine/delivery/apiv1/deliverypb/delivery_vehicles.pb.go",
+    "pkg": "deliverypb",
+    "pkg_full": "cloud.google.com/go/maps/fleetengine/delivery/apiv1/deliverypb"
+  }
+}
+{
+  "proto": "google/maps/fleetengine/delivery/v1/task_tracking_info",
+  "pkg": "maps.fleetengine.delivery.v1",
+  "msgs": [
+    {
+      "type": "TaskTrackingInfo"
+    }
+  ],
+  "go": {
+    "src": "maps/fleetengine/delivery/apiv1/deliverypb/task_tracking_info.pb.go",
+    "pkg": "deliverypb",
+    "pkg_full": "cloud.google.com/go/maps/fleetengine/delivery/apiv1/deliverypb"
+  }
+}
+{
+  "proto": "google/maps/fleetengine/delivery/v1/header",
+  "pkg": "maps.fleetengine.delivery.v1",
+  "msgs": [
+    {
+      "type": "DeliveryRequestHeader"
+    }
+  ],
+  "go": {
+    "src": "maps/fleetengine/delivery/apiv1/deliverypb/header.pb.go",
+    "pkg": "deliverypb",
+    "pkg_full": "cloud.google.com/go/maps/fleetengine/delivery/apiv1/deliverypb"
+  }
+}
+{
+  "proto": "google/maps/fleetengine/delivery/v1/delivery_api",
+  "pkg": "maps.fleetengine.delivery.v1",
+  "svcs": [
+    {
+      "svc": "DeliveryService",
+      "host": "fleetengine.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateDeliveryVehicle",
+          "request": {
+            "type": "CreateDeliveryVehicleRequest"
+          },
+          "response": {
+            "type": "DeliveryVehicle"
+          }
+        },
+        {
+          "method": "GetDeliveryVehicle",
+          "request": {
+            "type": "GetDeliveryVehicleRequest"
+          },
+          "response": {
+            "type": "DeliveryVehicle"
+          }
+        },
+        {
+          "method": "UpdateDeliveryVehicle",
+          "request": {
+            "type": "UpdateDeliveryVehicleRequest"
+          },
+          "response": {
+            "type": "DeliveryVehicle"
+          }
+        },
+        {
+          "method": "BatchCreateTasks",
+          "request": {
+            "type": "BatchCreateTasksRequest"
+          },
+          "response": {
+            "type": "BatchCreateTasksResponse"
+          }
+        },
+        {
+          "method": "CreateTask",
+          "request": {
+            "type": "CreateTaskRequest"
+          },
+          "response": {
+            "type": "Task"
+          }
+        },
+        {
+          "method": "GetTask",
+          "request": {
+            "type": "GetTaskRequest"
+          },
+          "response": {
+            "type": "Task"
+          }
+        },
+        {
+          "method": "UpdateTask",
+          "request": {
+            "type": "UpdateTaskRequest"
+          },
+          "response": {
+            "type": "Task"
+          }
+        },
+        {
+          "method": "ListTasks",
+          "request": {
+            "type": "ListTasksRequest"
+          },
+          "response": {
+            "type": "ListTasksResponse"
+          }
+        },
+        {
+          "method": "GetTaskTrackingInfo",
+          "request": {
+            "type": "GetTaskTrackingInfoRequest"
+          },
+          "response": {
+            "type": "TaskTrackingInfo"
+          }
+        },
+        {
+          "method": "ListDeliveryVehicles",
+          "request": {
+            "type": "ListDeliveryVehiclesRequest"
+          },
+          "response": {
+            "type": "ListDeliveryVehiclesResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateDeliveryVehicleRequest"
+    },
+    {
+      "type": "GetDeliveryVehicleRequest"
+    },
+    {
+      "type": "ListDeliveryVehiclesRequest"
+    },
+    {
+      "type": "ListDeliveryVehiclesResponse"
+    },
+    {
+      "type": "UpdateDeliveryVehicleRequest"
+    },
+    {
+      "type": "BatchCreateTasksRequest"
+    },
+    {
+      "type": "BatchCreateTasksResponse"
+    },
+    {
+      "type": "CreateTaskRequest"
+    },
+    {
+      "type": "GetTaskRequest"
+    },
+    {
+      "type": "UpdateTaskRequest"
+    },
+    {
+      "type": "ListTasksRequest"
+    },
+    {
+      "type": "ListTasksResponse"
+    },
+    {
+      "type": "GetTaskTrackingInfoRequest"
+    }
+  ],
+  "go": {
+    "src": "maps/fleetengine/delivery/apiv1/deliverypb/delivery_api.pb.go",
+    "pkg": "deliverypb",
+    "pkg_full": "cloud.google.com/go/maps/fleetengine/delivery/apiv1/deliverypb"
+  }
+}
+{
+  "proto": "google/maps/fleetengine/delivery/v1/common",
+  "pkg": "maps.fleetengine.delivery.v1",
+  "msgs": [
+    {
+      "type": "DeliveryVehicleAttribute"
+    },
+    {
+      "type": "DeliveryVehicleLocation"
+    },
+    {
+      "type": "TimeWindow"
+    },
+    {
+      "type": "TaskAttribute"
+    }
+  ],
+  "go": {
+    "src": "maps/fleetengine/delivery/apiv1/deliverypb/common.pb.go",
+    "pkg": "deliverypb",
+    "pkg_full": "cloud.google.com/go/maps/fleetengine/delivery/apiv1/deliverypb"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "proto": "google/monitoring/metricsscope/v1/metrics_scope",
+  "pkg": "google.monitoring.metricsscope.v1",
+  "msgs": [
+    {
+      "type": "MetricsScope"
+    },
+    {
+      "type": "MonitoredProject"
+    }
+  ],
+  "go": {
+    "src": "monitoring/metricsscope/apiv1/metricsscopepb/metrics_scope.pb.go",
+    "pkg": "metricsscopepb",
+    "pkg_full": "cloud.google.com/go/monitoring/metricsscope/apiv1/metricsscopepb"
+  }
+}
+{
+  "proto": "google/monitoring/metricsscope/v1/metrics_scopes",
+  "pkg": "google.monitoring.metricsscope.v1",
+  "svcs": [
+    {
+      "svc": "MetricsScopes",
+      "host": "monitoring.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetMetricsScope",
+          "request": {
+            "type": "GetMetricsScopeRequest"
+          },
+          "response": {
+            "type": "MetricsScope"
+          }
+        },
+        {
+          "method": "ListMetricsScopesByMonitoredProject",
+          "request": {
+            "type": "ListMetricsScopesByMonitoredProjectRequest"
+          },
+          "response": {
+            "type": "ListMetricsScopesByMonitoredProjectResponse"
+          }
+        },
+        {
+          "method": "CreateMonitoredProject",
+          "request": {
+            "type": "CreateMonitoredProjectRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteMonitoredProject",
+          "request": {
+            "type": "DeleteMonitoredProjectRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GetMetricsScopeRequest"
+    },
+    {
+      "type": "ListMetricsScopesByMonitoredProjectRequest"
+    },
+    {
+      "type": "ListMetricsScopesByMonitoredProjectResponse"
+    },
+    {
+      "type": "CreateMonitoredProjectRequest"
+    },
+    {
+      "type": "DeleteMonitoredProjectRequest"
+    },
+    {
+      "type": "OperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "monitoring/metricsscope/apiv1/metricsscopepb/metrics_scopes.pb.go",
+    "pkg": "metricsscopepb",
+    "pkg_full": "cloud.google.com/go/monitoring/metricsscope/apiv1/metricsscopepb"
+  }
+}

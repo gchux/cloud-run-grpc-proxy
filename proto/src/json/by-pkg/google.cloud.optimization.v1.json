@@ -1,0 +1,230 @@
+{
+  "proto": "google/cloud/optimization/v1/fleet_routing",
+  "pkg": "google.cloud.optimization.v1",
+  "svcs": [
+    {
+      "svc": "FleetRouting",
+      "host": "cloudoptimization.googleapis.com",
+      "rpcs": [
+        {
+          "method": "OptimizeTours",
+          "request": {
+            "type": "OptimizeToursRequest"
+          },
+          "response": {
+            "type": "OptimizeToursResponse"
+          }
+        },
+        {
+          "method": "BatchOptimizeTours",
+          "request": {
+            "type": "BatchOptimizeToursRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "OptimizeToursRequest"
+    },
+    {
+      "type": "OptimizeToursResponse",
+      "msgs": [
+        {
+          "type": "Metrics"
+        }
+      ]
+    },
+    {
+      "type": "BatchOptimizeToursRequest",
+      "msgs": [
+        {
+          "type": "AsyncModelConfig"
+        }
+      ]
+    },
+    {
+      "type": "BatchOptimizeToursResponse"
+    },
+    {
+      "type": "ShipmentModel",
+      "msgs": [
+        {
+          "type": "DurationDistanceMatrix"
+        },
+        {
+          "type": "Row"
+        },
+        {
+          "type": "PrecedenceRule"
+        },
+        {
+          "type": "BreakRule"
+        },
+        {
+          "type": "BreakRequest"
+        },
+        {
+          "type": "FrequencyConstraint"
+        }
+      ]
+    },
+    {
+      "type": "Shipment",
+      "msgs": [
+        {
+          "type": "VisitRequest"
+        },
+        {
+          "type": "Load"
+        }
+      ]
+    },
+    {
+      "type": "ShipmentTypeIncompatibility"
+    },
+    {
+      "type": "ShipmentTypeRequirement"
+    },
+    {
+      "type": "RouteModifiers"
+    },
+    {
+      "type": "Vehicle",
+      "msgs": [
+        {
+          "type": "LoadLimit"
+        },
+        {
+          "type": "Interval"
+        },
+        {
+          "type": "DurationLimit"
+        }
+      ]
+    },
+    {
+      "type": "TimeWindow"
+    },
+    {
+      "type": "CapacityQuantity"
+    },
+    {
+      "type": "CapacityQuantityInterval"
+    },
+    {
+      "type": "DistanceLimit"
+    },
+    {
+      "type": "TransitionAttributes"
+    },
+    {
+      "type": "Waypoint"
+    },
+    {
+      "type": "Location"
+    },
+    {
+      "type": "BreakRule",
+      "msgs": [
+        {
+          "type": "BreakRequest"
+        },
+        {
+          "type": "FrequencyConstraint"
+        }
+      ]
+    },
+    {
+      "type": "ShipmentRoute",
+      "msgs": [
+        {
+          "type": "Delay"
+        },
+        {
+          "type": "Visit"
+        },
+        {
+          "type": "Transition"
+        },
+        {
+          "type": "VehicleLoad"
+        },
+        {
+          "type": "EncodedPolyline"
+        },
+        {
+          "type": "Break"
+        },
+        {
+          "type": "TravelStep"
+        }
+      ]
+    },
+    {
+      "type": "SkippedShipment",
+      "msgs": [
+        {
+          "type": "Reason"
+        }
+      ]
+    },
+    {
+      "type": "AggregatedMetrics"
+    },
+    {
+      "type": "InjectedSolutionConstraint",
+      "msgs": [
+        {
+          "type": "ConstraintRelaxation"
+        },
+        {
+          "type": "Relaxation"
+        }
+      ]
+    },
+    {
+      "type": "OptimizeToursValidationError",
+      "msgs": [
+        {
+          "type": "FieldReference"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "optimization/apiv1/optimizationpb/fleet_routing.pb.go",
+    "pkg": "optimizationpb",
+    "pkg_full": "cloud.google.com/go/optimization/apiv1/optimizationpb"
+  }
+}
+{
+  "proto": "google/cloud/optimization/v1/async_model",
+  "pkg": "google.cloud.optimization.v1",
+  "msgs": [
+    {
+      "type": "InputConfig"
+    },
+    {
+      "type": "OutputConfig"
+    },
+    {
+      "type": "GcsSource"
+    },
+    {
+      "type": "GcsDestination"
+    },
+    {
+      "type": "AsyncModelMetadata"
+    }
+  ],
+  "go": {
+    "src": "optimization/apiv1/optimizationpb/async_model.pb.go",
+    "pkg": "optimizationpb",
+    "pkg_full": "cloud.google.com/go/optimization/apiv1/optimizationpb"
+  }
+}

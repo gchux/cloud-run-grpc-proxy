@@ -1,0 +1,342 @@
+{
+  "proto": "google/api/serviceusage/v1beta1/resources",
+  "pkg": "google.api.serviceusage.v1beta1",
+  "msgs": [
+    {
+      "type": "Service"
+    },
+    {
+      "type": "ServiceConfig"
+    },
+    {
+      "type": "OperationMetadata"
+    },
+    {
+      "type": "ConsumerQuotaMetric"
+    },
+    {
+      "type": "ConsumerQuotaLimit"
+    },
+    {
+      "type": "QuotaBucket"
+    },
+    {
+      "type": "QuotaOverride"
+    },
+    {
+      "type": "OverrideInlineSource"
+    },
+    {
+      "type": "ProducerQuotaPolicy"
+    },
+    {
+      "type": "AdminQuotaPolicy"
+    },
+    {
+      "type": "ServiceIdentity"
+    }
+  ],
+  "go": {
+    "src": "googleapis/api/serviceusage/v1beta1/resources.pb.go",
+    "pkg": "serviceusage",
+    "pkg_full": "google.golang.org/genproto/googleapis/api/serviceusage/v1beta1"
+  }
+}
+{
+  "proto": "google/api/serviceusage/v1beta1/serviceusage",
+  "pkg": "google.api.serviceusage.v1beta1",
+  "svcs": [
+    {
+      "svc": "ServiceUsage",
+      "host": "serviceusage.googleapis.com",
+      "rpcs": [
+        {
+          "method": "EnableService",
+          "request": {
+            "type": "EnableServiceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DisableService",
+          "request": {
+            "type": "DisableServiceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetService",
+          "request": {
+            "type": "GetServiceRequest"
+          },
+          "response": {
+            "type": "Service"
+          }
+        },
+        {
+          "method": "ListServices",
+          "request": {
+            "type": "ListServicesRequest"
+          },
+          "response": {
+            "type": "ListServicesResponse"
+          }
+        },
+        {
+          "method": "BatchEnableServices",
+          "request": {
+            "type": "BatchEnableServicesRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListConsumerQuotaMetrics",
+          "request": {
+            "type": "ListConsumerQuotaMetricsRequest"
+          },
+          "response": {
+            "type": "ListConsumerQuotaMetricsResponse"
+          }
+        },
+        {
+          "method": "GetConsumerQuotaMetric",
+          "request": {
+            "type": "GetConsumerQuotaMetricRequest"
+          },
+          "response": {
+            "type": "ConsumerQuotaMetric"
+          }
+        },
+        {
+          "method": "GetConsumerQuotaLimit",
+          "request": {
+            "type": "GetConsumerQuotaLimitRequest"
+          },
+          "response": {
+            "type": "ConsumerQuotaLimit"
+          }
+        },
+        {
+          "method": "CreateAdminOverride",
+          "request": {
+            "type": "CreateAdminOverrideRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateAdminOverride",
+          "request": {
+            "type": "UpdateAdminOverrideRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteAdminOverride",
+          "request": {
+            "type": "DeleteAdminOverrideRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListAdminOverrides",
+          "request": {
+            "type": "ListAdminOverridesRequest"
+          },
+          "response": {
+            "type": "ListAdminOverridesResponse"
+          }
+        },
+        {
+          "method": "ImportAdminOverrides",
+          "request": {
+            "type": "ImportAdminOverridesRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CreateConsumerOverride",
+          "request": {
+            "type": "CreateConsumerOverrideRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateConsumerOverride",
+          "request": {
+            "type": "UpdateConsumerOverrideRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteConsumerOverride",
+          "request": {
+            "type": "DeleteConsumerOverrideRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListConsumerOverrides",
+          "request": {
+            "type": "ListConsumerOverridesRequest"
+          },
+          "response": {
+            "type": "ListConsumerOverridesResponse"
+          }
+        },
+        {
+          "method": "ImportConsumerOverrides",
+          "request": {
+            "type": "ImportConsumerOverridesRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GenerateServiceIdentity",
+          "request": {
+            "type": "GenerateServiceIdentityRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "EnableServiceRequest"
+    },
+    {
+      "type": "DisableServiceRequest"
+    },
+    {
+      "type": "GetServiceRequest"
+    },
+    {
+      "type": "ListServicesRequest"
+    },
+    {
+      "type": "ListServicesResponse"
+    },
+    {
+      "type": "BatchEnableServicesRequest"
+    },
+    {
+      "type": "ListConsumerQuotaMetricsRequest"
+    },
+    {
+      "type": "ListConsumerQuotaMetricsResponse"
+    },
+    {
+      "type": "GetConsumerQuotaMetricRequest"
+    },
+    {
+      "type": "GetConsumerQuotaLimitRequest"
+    },
+    {
+      "type": "CreateAdminOverrideRequest"
+    },
+    {
+      "type": "UpdateAdminOverrideRequest"
+    },
+    {
+      "type": "DeleteAdminOverrideRequest"
+    },
+    {
+      "type": "ListAdminOverridesRequest"
+    },
+    {
+      "type": "ListAdminOverridesResponse"
+    },
+    {
+      "type": "BatchCreateAdminOverridesResponse"
+    },
+    {
+      "type": "ImportAdminOverridesRequest"
+    },
+    {
+      "type": "ImportAdminOverridesResponse"
+    },
+    {
+      "type": "ImportAdminOverridesMetadata"
+    },
+    {
+      "type": "CreateConsumerOverrideRequest"
+    },
+    {
+      "type": "UpdateConsumerOverrideRequest"
+    },
+    {
+      "type": "DeleteConsumerOverrideRequest"
+    },
+    {
+      "type": "ListConsumerOverridesRequest"
+    },
+    {
+      "type": "ListConsumerOverridesResponse"
+    },
+    {
+      "type": "BatchCreateConsumerOverridesResponse"
+    },
+    {
+      "type": "ImportConsumerOverridesRequest"
+    },
+    {
+      "type": "ImportConsumerOverridesResponse"
+    },
+    {
+      "type": "ImportConsumerOverridesMetadata"
+    },
+    {
+      "type": "ImportAdminQuotaPoliciesResponse"
+    },
+    {
+      "type": "ImportAdminQuotaPoliciesMetadata"
+    },
+    {
+      "type": "CreateAdminQuotaPolicyMetadata"
+    },
+    {
+      "type": "UpdateAdminQuotaPolicyMetadata"
+    },
+    {
+      "type": "DeleteAdminQuotaPolicyMetadata"
+    },
+    {
+      "type": "GenerateServiceIdentityRequest"
+    },
+    {
+      "type": "GetServiceIdentityResponse"
+    },
+    {
+      "type": "GetServiceIdentityMetadata"
+    }
+  ],
+  "go": {
+    "src": "googleapis/api/serviceusage/v1beta1/serviceusage.pb.go",
+    "pkg": "serviceusage",
+    "pkg_full": "google.golang.org/genproto/googleapis/api/serviceusage/v1beta1"
+  }
+}

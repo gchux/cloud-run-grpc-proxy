@@ -1,0 +1,568 @@
+{
+  "proto": "google/cloud/alloydb/v1beta/resources",
+  "pkg": "google.cloud.alloydb.v1beta",
+  "msgs": [
+    {
+      "type": "UserPassword"
+    },
+    {
+      "type": "MigrationSource"
+    },
+    {
+      "type": "EncryptionConfig"
+    },
+    {
+      "type": "EncryptionInfo"
+    },
+    {
+      "type": "SslConfig"
+    },
+    {
+      "type": "AutomatedBackupPolicy",
+      "msgs": [
+        {
+          "type": "WeeklySchedule"
+        },
+        {
+          "type": "TimeBasedRetention"
+        },
+        {
+          "type": "QuantityBasedRetention"
+        }
+      ]
+    },
+    {
+      "type": "ContinuousBackupConfig"
+    },
+    {
+      "type": "ContinuousBackupInfo"
+    },
+    {
+      "type": "BackupSource"
+    },
+    {
+      "type": "ContinuousBackupSource"
+    },
+    {
+      "type": "Cluster",
+      "msgs": [
+        {
+          "type": "NetworkConfig"
+        },
+        {
+          "type": "SecondaryConfig"
+        },
+        {
+          "type": "PrimaryConfig"
+        }
+      ]
+    },
+    {
+      "type": "Instance",
+      "msgs": [
+        {
+          "type": "MachineConfig"
+        },
+        {
+          "type": "Node"
+        },
+        {
+          "type": "QueryInsightsInstanceConfig"
+        },
+        {
+          "type": "ReadPoolConfig"
+        },
+        {
+          "type": "UpdatePolicy"
+        },
+        {
+          "type": "ClientConnectionConfig"
+        },
+        {
+          "type": "PscInterfaceConfig"
+        },
+        {
+          "type": "PscInstanceConfig"
+        },
+        {
+          "type": "InstanceNetworkConfig"
+        },
+        {
+          "type": "AuthorizedNetwork"
+        }
+      ]
+    },
+    {
+      "type": "ConnectionInfo"
+    },
+    {
+      "type": "Backup",
+      "msgs": [
+        {
+          "type": "QuantityBasedExpiry"
+        }
+      ]
+    },
+    {
+      "type": "SupportedDatabaseFlag",
+      "msgs": [
+        {
+          "type": "StringRestrictions"
+        },
+        {
+          "type": "IntegerRestrictions"
+        }
+      ]
+    },
+    {
+      "type": "User"
+    },
+    {
+      "type": "Database"
+    }
+  ],
+  "go": {
+    "src": "alloydb/apiv1beta/alloydbpb/resources.pb.go",
+    "pkg": "alloydbpb",
+    "pkg_full": "cloud.google.com/go/alloydb/apiv1beta/alloydbpb"
+  }
+}
+{
+  "proto": "google/cloud/alloydb/v1beta/service",
+  "pkg": "google.cloud.alloydb.v1beta",
+  "svcs": [
+    {
+      "svc": "AlloyDBAdmin",
+      "host": "alloydb.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListClusters",
+          "request": {
+            "type": "ListClustersRequest"
+          },
+          "response": {
+            "type": "ListClustersResponse"
+          }
+        },
+        {
+          "method": "GetCluster",
+          "request": {
+            "type": "GetClusterRequest"
+          },
+          "response": {
+            "type": "Cluster"
+          }
+        },
+        {
+          "method": "CreateCluster",
+          "request": {
+            "type": "CreateClusterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateCluster",
+          "request": {
+            "type": "UpdateClusterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteCluster",
+          "request": {
+            "type": "DeleteClusterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "PromoteCluster",
+          "request": {
+            "type": "PromoteClusterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "RestoreCluster",
+          "request": {
+            "type": "RestoreClusterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CreateSecondaryCluster",
+          "request": {
+            "type": "CreateSecondaryClusterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListInstances",
+          "request": {
+            "type": "ListInstancesRequest"
+          },
+          "response": {
+            "type": "ListInstancesResponse"
+          }
+        },
+        {
+          "method": "GetInstance",
+          "request": {
+            "type": "GetInstanceRequest"
+          },
+          "response": {
+            "type": "Instance"
+          }
+        },
+        {
+          "method": "CreateInstance",
+          "request": {
+            "type": "CreateInstanceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CreateSecondaryInstance",
+          "request": {
+            "type": "CreateSecondaryInstanceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "BatchCreateInstances",
+          "request": {
+            "type": "BatchCreateInstancesRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateInstance",
+          "request": {
+            "type": "UpdateInstanceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteInstance",
+          "request": {
+            "type": "DeleteInstanceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "FailoverInstance",
+          "request": {
+            "type": "FailoverInstanceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "InjectFault",
+          "request": {
+            "type": "InjectFaultRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "RestartInstance",
+          "request": {
+            "type": "RestartInstanceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListBackups",
+          "request": {
+            "type": "ListBackupsRequest"
+          },
+          "response": {
+            "type": "ListBackupsResponse"
+          }
+        },
+        {
+          "method": "GetBackup",
+          "request": {
+            "type": "GetBackupRequest"
+          },
+          "response": {
+            "type": "Backup"
+          }
+        },
+        {
+          "method": "CreateBackup",
+          "request": {
+            "type": "CreateBackupRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateBackup",
+          "request": {
+            "type": "UpdateBackupRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteBackup",
+          "request": {
+            "type": "DeleteBackupRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListSupportedDatabaseFlags",
+          "request": {
+            "type": "ListSupportedDatabaseFlagsRequest"
+          },
+          "response": {
+            "type": "ListSupportedDatabaseFlagsResponse"
+          }
+        },
+        {
+          "method": "GenerateClientCertificate",
+          "request": {
+            "type": "GenerateClientCertificateRequest"
+          },
+          "response": {
+            "type": "GenerateClientCertificateResponse"
+          }
+        },
+        {
+          "method": "GetConnectionInfo",
+          "request": {
+            "type": "GetConnectionInfoRequest"
+          },
+          "response": {
+            "type": "ConnectionInfo"
+          }
+        },
+        {
+          "method": "ListUsers",
+          "request": {
+            "type": "ListUsersRequest"
+          },
+          "response": {
+            "type": "ListUsersResponse"
+          }
+        },
+        {
+          "method": "GetUser",
+          "request": {
+            "type": "GetUserRequest"
+          },
+          "response": {
+            "type": "User"
+          }
+        },
+        {
+          "method": "CreateUser",
+          "request": {
+            "type": "CreateUserRequest"
+          },
+          "response": {
+            "type": "User"
+          }
+        },
+        {
+          "method": "UpdateUser",
+          "request": {
+            "type": "UpdateUserRequest"
+          },
+          "response": {
+            "type": "User"
+          }
+        },
+        {
+          "method": "DeleteUser",
+          "request": {
+            "type": "DeleteUserRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListDatabases",
+          "request": {
+            "type": "ListDatabasesRequest"
+          },
+          "response": {
+            "type": "ListDatabasesResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ListClustersRequest"
+    },
+    {
+      "type": "ListClustersResponse"
+    },
+    {
+      "type": "GetClusterRequest"
+    },
+    {
+      "type": "CreateSecondaryClusterRequest"
+    },
+    {
+      "type": "CreateClusterRequest"
+    },
+    {
+      "type": "UpdateClusterRequest"
+    },
+    {
+      "type": "DeleteClusterRequest"
+    },
+    {
+      "type": "PromoteClusterRequest"
+    },
+    {
+      "type": "RestoreClusterRequest"
+    },
+    {
+      "type": "ListInstancesRequest"
+    },
+    {
+      "type": "ListInstancesResponse"
+    },
+    {
+      "type": "GetInstanceRequest"
+    },
+    {
+      "type": "CreateInstanceRequest"
+    },
+    {
+      "type": "CreateSecondaryInstanceRequest"
+    },
+    {
+      "type": "CreateInstanceRequests"
+    },
+    {
+      "type": "BatchCreateInstancesRequest"
+    },
+    {
+      "type": "BatchCreateInstancesResponse"
+    },
+    {
+      "type": "BatchCreateInstancesMetadata"
+    },
+    {
+      "type": "BatchCreateInstanceStatus"
+    },
+    {
+      "type": "UpdateInstanceRequest"
+    },
+    {
+      "type": "DeleteInstanceRequest"
+    },
+    {
+      "type": "FailoverInstanceRequest"
+    },
+    {
+      "type": "InjectFaultRequest"
+    },
+    {
+      "type": "RestartInstanceRequest"
+    },
+    {
+      "type": "ListBackupsRequest"
+    },
+    {
+      "type": "ListBackupsResponse"
+    },
+    {
+      "type": "GetBackupRequest"
+    },
+    {
+      "type": "CreateBackupRequest"
+    },
+    {
+      "type": "UpdateBackupRequest"
+    },
+    {
+      "type": "DeleteBackupRequest"
+    },
+    {
+      "type": "ListSupportedDatabaseFlagsRequest"
+    },
+    {
+      "type": "ListSupportedDatabaseFlagsResponse"
+    },
+    {
+      "type": "GenerateClientCertificateRequest"
+    },
+    {
+      "type": "GenerateClientCertificateResponse"
+    },
+    {
+      "type": "GetConnectionInfoRequest"
+    },
+    {
+      "type": "OperationMetadata"
+    },
+    {
+      "type": "ListUsersRequest"
+    },
+    {
+      "type": "ListUsersResponse"
+    },
+    {
+      "type": "GetUserRequest"
+    },
+    {
+      "type": "CreateUserRequest"
+    },
+    {
+      "type": "UpdateUserRequest"
+    },
+    {
+      "type": "DeleteUserRequest"
+    },
+    {
+      "type": "ListDatabasesRequest"
+    },
+    {
+      "type": "ListDatabasesResponse"
+    }
+  ],
+  "go": {
+    "src": "alloydb/apiv1beta/alloydbpb/service.pb.go",
+    "pkg": "alloydbpb",
+    "pkg_full": "cloud.google.com/go/alloydb/apiv1beta/alloydbpb"
+  }
+}

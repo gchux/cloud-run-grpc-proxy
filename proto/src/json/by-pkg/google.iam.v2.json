@@ -1,0 +1,105 @@
+{
+  "proto": "google/iam/v2/policy",
+  "pkg": "google.iam.v2",
+  "svcs": [
+    {
+      "svc": "Policies",
+      "host": "iam.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListPolicies",
+          "request": {
+            "type": "ListPoliciesRequest"
+          },
+          "response": {
+            "type": "ListPoliciesResponse"
+          }
+        },
+        {
+          "method": "GetPolicy",
+          "request": {
+            "type": "GetPolicyRequest"
+          },
+          "response": {
+            "type": "Policy"
+          }
+        },
+        {
+          "method": "CreatePolicy",
+          "request": {
+            "type": "CreatePolicyRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdatePolicy",
+          "request": {
+            "type": "UpdatePolicyRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeletePolicy",
+          "request": {
+            "type": "DeletePolicyRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Policy"
+    },
+    {
+      "type": "PolicyRule"
+    },
+    {
+      "type": "ListPoliciesRequest"
+    },
+    {
+      "type": "ListPoliciesResponse"
+    },
+    {
+      "type": "GetPolicyRequest"
+    },
+    {
+      "type": "CreatePolicyRequest"
+    },
+    {
+      "type": "UpdatePolicyRequest"
+    },
+    {
+      "type": "DeletePolicyRequest"
+    },
+    {
+      "type": "PolicyOperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "iam/apiv2/iampb/policy.pb.go",
+    "pkg": "iampb",
+    "pkg_full": "cloud.google.com/go/iam/apiv2/iampb"
+  }
+}
+{
+  "proto": "google/iam/v2/deny",
+  "pkg": "google.iam.v2",
+  "msgs": [
+    {
+      "type": "DenyRule"
+    }
+  ],
+  "go": {
+    "src": "iam/apiv2/iampb/deny.pb.go",
+    "pkg": "iampb",
+    "pkg_full": "cloud.google.com/go/iam/apiv2/iampb"
+  }
+}

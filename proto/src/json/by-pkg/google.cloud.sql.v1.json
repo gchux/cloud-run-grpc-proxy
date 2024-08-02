@@ -1,0 +1,1290 @@
+{
+  "proto": "google/cloud/sql/v1/cloud_sql_instance_names",
+  "pkg": "google.cloud.sql.v1",
+  "svcs": [
+    {
+      "svc": "SqlInstanceNamesService",
+      "host": "sqladmin.googleapis.com"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/sql/v1/cloud_sql_instance_names.pb.go",
+    "pkg": "sqlpb",
+    "pkg_full": "cloud.google.com/go/sql/apiv1/sqlpb"
+  }
+}
+{
+  "proto": "google/cloud/sql/v1/cloud_sql_backup_runs",
+  "pkg": "google.cloud.sql.v1",
+  "svcs": [
+    {
+      "svc": "SqlBackupRunsService",
+      "host": "sqladmin.googleapis.com",
+      "rpcs": [
+        {
+          "method": "Delete",
+          "request": {
+            "type": "SqlBackupRunsDeleteRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "Get",
+          "request": {
+            "type": "SqlBackupRunsGetRequest"
+          },
+          "response": {
+            "type": "BackupRun"
+          }
+        },
+        {
+          "method": "Insert",
+          "request": {
+            "type": "SqlBackupRunsInsertRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "List",
+          "request": {
+            "type": "SqlBackupRunsListRequest"
+          },
+          "response": {
+            "type": "BackupRunsListResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "SqlBackupRunsDeleteRequest"
+    },
+    {
+      "type": "SqlBackupRunsGetRequest"
+    },
+    {
+      "type": "SqlBackupRunsInsertRequest"
+    },
+    {
+      "type": "SqlBackupRunsListRequest"
+    },
+    {
+      "type": "BackupRun"
+    },
+    {
+      "type": "BackupRunsListResponse"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/sql/v1/cloud_sql_backup_runs.pb.go",
+    "pkg": "sqlpb",
+    "pkg_full": "cloud.google.com/go/sql/apiv1/sqlpb"
+  }
+}
+{
+  "proto": "google/cloud/sql/v1/cloud_sql_operations",
+  "pkg": "google.cloud.sql.v1",
+  "svcs": [
+    {
+      "svc": "SqlOperationsService",
+      "host": "sqladmin.googleapis.com",
+      "rpcs": [
+        {
+          "method": "Get",
+          "request": {
+            "type": "SqlOperationsGetRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "List",
+          "request": {
+            "type": "SqlOperationsListRequest"
+          },
+          "response": {
+            "type": "OperationsListResponse"
+          }
+        },
+        {
+          "method": "Cancel",
+          "request": {
+            "type": "SqlOperationsCancelRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "SqlOperationsGetRequest"
+    },
+    {
+      "type": "SqlOperationsListRequest"
+    },
+    {
+      "type": "OperationsListResponse"
+    },
+    {
+      "type": "SqlOperationsCancelRequest"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/sql/v1/cloud_sql_operations.pb.go",
+    "pkg": "sqlpb",
+    "pkg_full": "cloud.google.com/go/sql/apiv1/sqlpb"
+  }
+}
+{
+  "proto": "google/cloud/sql/v1/cloud_sql_iam_policies",
+  "pkg": "google.cloud.sql.v1",
+  "svcs": [
+    {
+      "svc": "SqlIamPoliciesService",
+      "host": "sqladmin.googleapis.com"
+    }
+  ],
+  "go": {
+    "pkg": "sqlpb",
+    "pkg_full": "cloud.google.com/go/sql/apiv1/sqlpb"
+  }
+}
+{
+  "proto": "google/cloud/sql/v1/cloud_sql_users",
+  "pkg": "google.cloud.sql.v1",
+  "svcs": [
+    {
+      "svc": "SqlUsersService",
+      "host": "sqladmin.googleapis.com",
+      "rpcs": [
+        {
+          "method": "Delete",
+          "request": {
+            "type": "SqlUsersDeleteRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "Get",
+          "request": {
+            "type": "SqlUsersGetRequest"
+          },
+          "response": {
+            "type": "User"
+          }
+        },
+        {
+          "method": "Insert",
+          "request": {
+            "type": "SqlUsersInsertRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "List",
+          "request": {
+            "type": "SqlUsersListRequest"
+          },
+          "response": {
+            "type": "UsersListResponse"
+          }
+        },
+        {
+          "method": "Update",
+          "request": {
+            "type": "SqlUsersUpdateRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "SqlUsersDeleteRequest"
+    },
+    {
+      "type": "SqlUsersGetRequest"
+    },
+    {
+      "type": "SqlUsersInsertRequest"
+    },
+    {
+      "type": "SqlUsersListRequest"
+    },
+    {
+      "type": "SqlUsersUpdateRequest"
+    },
+    {
+      "type": "UserPasswordValidationPolicy"
+    },
+    {
+      "type": "PasswordStatus"
+    },
+    {
+      "type": "User"
+    },
+    {
+      "type": "SqlServerUserDetails"
+    },
+    {
+      "type": "UsersListResponse"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/sql/v1/cloud_sql_users.pb.go",
+    "pkg": "sqlpb",
+    "pkg_full": "cloud.google.com/go/sql/apiv1/sqlpb"
+  }
+}
+{
+  "proto": "google/cloud/sql/v1/cloud_sql_databases",
+  "pkg": "google.cloud.sql.v1",
+  "svcs": [
+    {
+      "svc": "SqlDatabasesService",
+      "host": "sqladmin.googleapis.com",
+      "rpcs": [
+        {
+          "method": "Delete",
+          "request": {
+            "type": "SqlDatabasesDeleteRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "Get",
+          "request": {
+            "type": "SqlDatabasesGetRequest"
+          },
+          "response": {
+            "type": "Database"
+          }
+        },
+        {
+          "method": "Insert",
+          "request": {
+            "type": "SqlDatabasesInsertRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "List",
+          "request": {
+            "type": "SqlDatabasesListRequest"
+          },
+          "response": {
+            "type": "DatabasesListResponse"
+          }
+        },
+        {
+          "method": "Patch",
+          "request": {
+            "type": "SqlDatabasesUpdateRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "Update",
+          "request": {
+            "type": "SqlDatabasesUpdateRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "SqlDatabasesDeleteRequest"
+    },
+    {
+      "type": "SqlDatabasesGetRequest"
+    },
+    {
+      "type": "SqlDatabasesInsertRequest"
+    },
+    {
+      "type": "SqlDatabasesListRequest"
+    },
+    {
+      "type": "SqlDatabasesUpdateRequest"
+    },
+    {
+      "type": "DatabasesListResponse"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/sql/v1/cloud_sql_databases.pb.go",
+    "pkg": "sqlpb",
+    "pkg_full": "cloud.google.com/go/sql/apiv1/sqlpb"
+  }
+}
+{
+  "proto": "google/cloud/sql/v1/cloud_sql_events",
+  "pkg": "google.cloud.sql.v1",
+  "svcs": [
+    {
+      "svc": "SqlEventsService",
+      "host": "sqladmin.googleapis.com"
+    }
+  ],
+  "go": {
+    "pkg": "sqlpb",
+    "pkg_full": "cloud.google.com/go/sql/apiv1/sqlpb"
+  }
+}
+{
+  "proto": "google/cloud/sql/v1/cloud_sql_ssl_certs",
+  "pkg": "google.cloud.sql.v1",
+  "svcs": [
+    {
+      "svc": "SqlSslCertsService",
+      "host": "sqladmin.googleapis.com",
+      "rpcs": [
+        {
+          "method": "Delete",
+          "request": {
+            "type": "SqlSslCertsDeleteRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "Get",
+          "request": {
+            "type": "SqlSslCertsGetRequest"
+          },
+          "response": {
+            "type": "SslCert"
+          }
+        },
+        {
+          "method": "Insert",
+          "request": {
+            "type": "SqlSslCertsInsertRequest"
+          },
+          "response": {
+            "type": "SslCertsInsertResponse"
+          }
+        },
+        {
+          "method": "List",
+          "request": {
+            "type": "SqlSslCertsListRequest"
+          },
+          "response": {
+            "type": "SslCertsListResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "SqlSslCertsDeleteRequest"
+    },
+    {
+      "type": "SqlSslCertsGetRequest"
+    },
+    {
+      "type": "SqlSslCertsInsertRequest"
+    },
+    {
+      "type": "SqlSslCertsListRequest"
+    },
+    {
+      "type": "SslCertsInsertRequest"
+    },
+    {
+      "type": "SslCertsInsertResponse"
+    },
+    {
+      "type": "SslCertsListResponse"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/sql/v1/cloud_sql_ssl_certs.pb.go",
+    "pkg": "sqlpb",
+    "pkg_full": "cloud.google.com/go/sql/apiv1/sqlpb"
+  }
+}
+{
+  "proto": "google/cloud/sql/v1/cloud_sql_resources",
+  "pkg": "google.cloud.sql.v1",
+  "msgs": [
+    {
+      "type": "AclEntry"
+    },
+    {
+      "type": "ApiWarning"
+    },
+    {
+      "type": "BackupRetentionSettings"
+    },
+    {
+      "type": "BackupConfiguration"
+    },
+    {
+      "type": "PerformDiskShrinkContext"
+    },
+    {
+      "type": "BackupContext"
+    },
+    {
+      "type": "Database"
+    },
+    {
+      "type": "SqlServerDatabaseDetails"
+    },
+    {
+      "type": "DatabaseFlags"
+    },
+    {
+      "type": "MySqlSyncConfig"
+    },
+    {
+      "type": "SyncFlags"
+    },
+    {
+      "type": "InstanceReference"
+    },
+    {
+      "type": "DemoteMasterConfiguration"
+    },
+    {
+      "type": "DemoteMasterMySqlReplicaConfiguration"
+    },
+    {
+      "type": "ExportContext",
+      "msgs": [
+        {
+          "type": "SqlCsvExportOptions"
+        },
+        {
+          "type": "SqlExportOptions"
+        },
+        {
+          "type": "MysqlExportOptions"
+        },
+        {
+          "type": "SqlBakExportOptions"
+        }
+      ]
+    },
+    {
+      "type": "ImportContext",
+      "msgs": [
+        {
+          "type": "SqlImportOptions"
+        },
+        {
+          "type": "SqlCsvImportOptions"
+        },
+        {
+          "type": "SqlBakImportOptions"
+        },
+        {
+          "type": "EncryptionOptions"
+        }
+      ]
+    },
+    {
+      "type": "IpConfiguration"
+    },
+    {
+      "type": "PscConfig"
+    },
+    {
+      "type": "LocationPreference"
+    },
+    {
+      "type": "MaintenanceWindow"
+    },
+    {
+      "type": "DenyMaintenancePeriod"
+    },
+    {
+      "type": "InsightsConfig"
+    },
+    {
+      "type": "MySqlReplicaConfiguration"
+    },
+    {
+      "type": "DiskEncryptionConfiguration"
+    },
+    {
+      "type": "DiskEncryptionStatus"
+    },
+    {
+      "type": "IpMapping"
+    },
+    {
+      "type": "Operation"
+    },
+    {
+      "type": "OperationError"
+    },
+    {
+      "type": "OperationErrors"
+    },
+    {
+      "type": "PasswordValidationPolicy"
+    },
+    {
+      "type": "DataCacheConfig"
+    },
+    {
+      "type": "Settings"
+    },
+    {
+      "type": "AdvancedMachineFeatures"
+    },
+    {
+      "type": "SslCert"
+    },
+    {
+      "type": "SslCertDetail"
+    },
+    {
+      "type": "SqlActiveDirectoryConfig"
+    },
+    {
+      "type": "SqlServerAuditConfig"
+    },
+    {
+      "type": "AcquireSsrsLeaseContext"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/sql/v1/cloud_sql_resources.pb.go",
+    "pkg": "sqlpb",
+    "pkg_full": "cloud.google.com/go/sql/apiv1/sqlpb"
+  }
+}
+{
+  "proto": "google/cloud/sql/v1/cloud_sql_instances",
+  "pkg": "google.cloud.sql.v1",
+  "svcs": [
+    {
+      "svc": "SqlInstancesService",
+      "host": "sqladmin.googleapis.com",
+      "rpcs": [
+        {
+          "method": "AddServerCa",
+          "request": {
+            "type": "SqlInstancesAddServerCaRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "Clone",
+          "request": {
+            "type": "SqlInstancesCloneRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "Delete",
+          "request": {
+            "type": "SqlInstancesDeleteRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "DemoteMaster",
+          "request": {
+            "type": "SqlInstancesDemoteMasterRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "Demote",
+          "request": {
+            "type": "SqlInstancesDemoteRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "Export",
+          "request": {
+            "type": "SqlInstancesExportRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "Failover",
+          "request": {
+            "type": "SqlInstancesFailoverRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "Reencrypt",
+          "request": {
+            "type": "SqlInstancesReencryptRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "Get",
+          "request": {
+            "type": "SqlInstancesGetRequest"
+          },
+          "response": {
+            "type": "DatabaseInstance"
+          }
+        },
+        {
+          "method": "Import",
+          "request": {
+            "type": "SqlInstancesImportRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "Insert",
+          "request": {
+            "type": "SqlInstancesInsertRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "List",
+          "request": {
+            "type": "SqlInstancesListRequest"
+          },
+          "response": {
+            "type": "InstancesListResponse"
+          }
+        },
+        {
+          "method": "ListServerCas",
+          "request": {
+            "type": "SqlInstancesListServerCasRequest"
+          },
+          "response": {
+            "type": "InstancesListServerCasResponse"
+          }
+        },
+        {
+          "method": "Patch",
+          "request": {
+            "type": "SqlInstancesPatchRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "PromoteReplica",
+          "request": {
+            "type": "SqlInstancesPromoteReplicaRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "Switchover",
+          "request": {
+            "type": "SqlInstancesSwitchoverRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "ResetSslConfig",
+          "request": {
+            "type": "SqlInstancesResetSslConfigRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "Restart",
+          "request": {
+            "type": "SqlInstancesRestartRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "RestoreBackup",
+          "request": {
+            "type": "SqlInstancesRestoreBackupRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "RotateServerCa",
+          "request": {
+            "type": "SqlInstancesRotateServerCaRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "StartReplica",
+          "request": {
+            "type": "SqlInstancesStartReplicaRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "StopReplica",
+          "request": {
+            "type": "SqlInstancesStopReplicaRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "TruncateLog",
+          "request": {
+            "type": "SqlInstancesTruncateLogRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "Update",
+          "request": {
+            "type": "SqlInstancesUpdateRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "CreateEphemeral",
+          "request": {
+            "type": "SqlInstancesCreateEphemeralCertRequest"
+          },
+          "response": {
+            "type": "SslCert"
+          }
+        },
+        {
+          "method": "RescheduleMaintenance",
+          "request": {
+            "type": "SqlInstancesRescheduleMaintenanceRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "VerifyExternalSyncSettings",
+          "request": {
+            "type": "SqlInstancesVerifyExternalSyncSettingsRequest"
+          },
+          "response": {
+            "type": "SqlInstancesVerifyExternalSyncSettingsResponse"
+          }
+        },
+        {
+          "method": "StartExternalSync",
+          "request": {
+            "type": "SqlInstancesStartExternalSyncRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "PerformDiskShrink",
+          "request": {
+            "type": "SqlInstancesPerformDiskShrinkRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "GetDiskShrinkConfig",
+          "request": {
+            "type": "SqlInstancesGetDiskShrinkConfigRequest"
+          },
+          "response": {
+            "type": "SqlInstancesGetDiskShrinkConfigResponse"
+          }
+        },
+        {
+          "method": "ResetReplicaSize",
+          "request": {
+            "type": "SqlInstancesResetReplicaSizeRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "GetLatestRecoveryTime",
+          "request": {
+            "type": "SqlInstancesGetLatestRecoveryTimeRequest"
+          },
+          "response": {
+            "type": "SqlInstancesGetLatestRecoveryTimeResponse"
+          }
+        },
+        {
+          "method": "AcquireSsrsLease",
+          "request": {
+            "type": "SqlInstancesAcquireSsrsLeaseRequest"
+          },
+          "response": {
+            "type": "SqlInstancesAcquireSsrsLeaseResponse"
+          }
+        },
+        {
+          "method": "ReleaseSsrsLease",
+          "request": {
+            "type": "SqlInstancesReleaseSsrsLeaseRequest"
+          },
+          "response": {
+            "type": "SqlInstancesReleaseSsrsLeaseResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "SqlInstancesAddServerCaRequest"
+    },
+    {
+      "type": "SqlInstancesCloneRequest"
+    },
+    {
+      "type": "SqlInstancesDeleteRequest"
+    },
+    {
+      "type": "SqlInstancesDemoteMasterRequest"
+    },
+    {
+      "type": "SqlInstancesDemoteRequest"
+    },
+    {
+      "type": "SqlInstancesExportRequest"
+    },
+    {
+      "type": "SqlInstancesFailoverRequest"
+    },
+    {
+      "type": "SqlInstancesGetRequest"
+    },
+    {
+      "type": "SqlInstancesImportRequest"
+    },
+    {
+      "type": "SqlInstancesInsertRequest"
+    },
+    {
+      "type": "SqlInstancesListRequest"
+    },
+    {
+      "type": "SqlInstancesListServerCasRequest"
+    },
+    {
+      "type": "SqlInstancesPatchRequest"
+    },
+    {
+      "type": "SqlInstancesPromoteReplicaRequest"
+    },
+    {
+      "type": "SqlInstancesSwitchoverRequest"
+    },
+    {
+      "type": "SqlInstancesResetSslConfigRequest"
+    },
+    {
+      "type": "SqlInstancesRestartRequest"
+    },
+    {
+      "type": "SqlInstancesRestoreBackupRequest"
+    },
+    {
+      "type": "SqlInstancesRotateServerCaRequest"
+    },
+    {
+      "type": "SqlInstancesStartReplicaRequest"
+    },
+    {
+      "type": "SqlInstancesStopReplicaRequest"
+    },
+    {
+      "type": "SqlInstancesTruncateLogRequest"
+    },
+    {
+      "type": "SqlInstancesPerformDiskShrinkRequest"
+    },
+    {
+      "type": "SqlInstancesUpdateRequest"
+    },
+    {
+      "type": "SqlInstancesRescheduleMaintenanceRequest"
+    },
+    {
+      "type": "SqlInstancesReencryptRequest"
+    },
+    {
+      "type": "InstancesReencryptRequest"
+    },
+    {
+      "type": "BackupReencryptionConfig"
+    },
+    {
+      "type": "SqlInstancesGetDiskShrinkConfigRequest"
+    },
+    {
+      "type": "SqlInstancesVerifyExternalSyncSettingsRequest"
+    },
+    {
+      "type": "SqlInstancesStartExternalSyncRequest"
+    },
+    {
+      "type": "SqlInstancesResetReplicaSizeRequest"
+    },
+    {
+      "type": "SqlInstancesCreateEphemeralCertRequest"
+    },
+    {
+      "type": "InstancesCloneRequest"
+    },
+    {
+      "type": "InstancesDemoteMasterRequest"
+    },
+    {
+      "type": "InstancesDemoteRequest"
+    },
+    {
+      "type": "InstancesExportRequest"
+    },
+    {
+      "type": "InstancesFailoverRequest"
+    },
+    {
+      "type": "SslCertsCreateEphemeralRequest"
+    },
+    {
+      "type": "InstancesImportRequest"
+    },
+    {
+      "type": "InstancesListResponse"
+    },
+    {
+      "type": "InstancesListServerCasResponse"
+    },
+    {
+      "type": "InstancesRestoreBackupRequest"
+    },
+    {
+      "type": "InstancesRotateServerCaRequest"
+    },
+    {
+      "type": "InstancesTruncateLogRequest"
+    },
+    {
+      "type": "InstancesAcquireSsrsLeaseRequest"
+    },
+    {
+      "type": "SqlInstancesVerifyExternalSyncSettingsResponse"
+    },
+    {
+      "type": "SqlInstancesGetDiskShrinkConfigResponse"
+    },
+    {
+      "type": "SqlInstancesGetLatestRecoveryTimeRequest"
+    },
+    {
+      "type": "SqlInstancesGetLatestRecoveryTimeResponse"
+    },
+    {
+      "type": "CloneContext"
+    },
+    {
+      "type": "BinLogCoordinates"
+    },
+    {
+      "type": "DatabaseInstance",
+      "msgs": [
+        {
+          "type": "SqlFailoverReplica"
+        },
+        {
+          "type": "SqlScheduledMaintenance"
+        },
+        {
+          "type": "SqlOutOfDiskReport"
+        }
+      ]
+    },
+    {
+      "type": "GeminiInstanceConfig"
+    },
+    {
+      "type": "ReplicationCluster"
+    },
+    {
+      "type": "AvailableDatabaseVersion"
+    },
+    {
+      "type": "SqlInstancesRescheduleMaintenanceRequestBody",
+      "msgs": [
+        {
+          "type": "Reschedule"
+        }
+      ]
+    },
+    {
+      "type": "DemoteMasterContext"
+    },
+    {
+      "type": "DemoteContext"
+    },
+    {
+      "type": "FailoverContext"
+    },
+    {
+      "type": "RestoreBackupContext"
+    },
+    {
+      "type": "RotateServerCaContext"
+    },
+    {
+      "type": "TruncateLogContext"
+    },
+    {
+      "type": "SqlExternalSyncSettingError"
+    },
+    {
+      "type": "OnPremisesConfiguration"
+    },
+    {
+      "type": "ReplicaConfiguration"
+    },
+    {
+      "type": "SqlInstancesAcquireSsrsLeaseRequest"
+    },
+    {
+      "type": "SqlInstancesAcquireSsrsLeaseResponse"
+    },
+    {
+      "type": "SqlInstancesReleaseSsrsLeaseRequest"
+    },
+    {
+      "type": "SqlInstancesReleaseSsrsLeaseResponse"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/sql/v1/cloud_sql_instances.pb.go",
+    "pkg": "sqlpb",
+    "pkg_full": "cloud.google.com/go/sql/apiv1/sqlpb"
+  }
+}
+{
+  "proto": "google/cloud/sql/v1/cloud_sql_connect",
+  "pkg": "google.cloud.sql.v1",
+  "svcs": [
+    {
+      "svc": "SqlConnectService",
+      "host": "sqladmin.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetConnectSettings",
+          "request": {
+            "type": "GetConnectSettingsRequest"
+          },
+          "response": {
+            "type": "ConnectSettings"
+          }
+        },
+        {
+          "method": "GenerateEphemeralCert",
+          "request": {
+            "type": "GenerateEphemeralCertRequest"
+          },
+          "response": {
+            "type": "GenerateEphemeralCertResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GetConnectSettingsRequest"
+    },
+    {
+      "type": "ConnectSettings"
+    },
+    {
+      "type": "GenerateEphemeralCertRequest"
+    },
+    {
+      "type": "GenerateEphemeralCertResponse"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/sql/v1/cloud_sql_connect.pb.go",
+    "pkg": "sqlpb",
+    "pkg_full": "cloud.google.com/go/sql/apiv1/sqlpb"
+  }
+}
+{
+  "proto": "google/cloud/sql/v1/cloud_sql_tiers",
+  "pkg": "google.cloud.sql.v1",
+  "svcs": [
+    {
+      "svc": "SqlTiersService",
+      "host": "sqladmin.googleapis.com",
+      "rpcs": [
+        {
+          "method": "List",
+          "request": {
+            "type": "SqlTiersListRequest"
+          },
+          "response": {
+            "type": "TiersListResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "SqlTiersListRequest"
+    },
+    {
+      "type": "TiersListResponse"
+    },
+    {
+      "type": "Tier"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/sql/v1/cloud_sql_tiers.pb.go",
+    "pkg": "sqlpb",
+    "pkg_full": "cloud.google.com/go/sql/apiv1/sqlpb"
+  }
+}
+{
+  "proto": "google/cloud/sql/v1/cloud_sql_regions",
+  "pkg": "google.cloud.sql.v1",
+  "svcs": [
+    {
+      "svc": "SqlRegionsService",
+      "host": "sqladmin.googleapis.com"
+    }
+  ],
+  "go": {
+    "pkg": "sqlpb",
+    "pkg_full": "cloud.google.com/go/sql/apiv1/sqlpb"
+  }
+}
+{
+  "proto": "google/cloud/sql/v1/cloud_sql_available_database_versions",
+  "pkg": "google.cloud.sql.v1",
+  "svcs": [
+    {
+      "svc": "SqlAvailableDatabaseVersionsService",
+      "host": "sqladmin.googleapis.com"
+    }
+  ],
+  "go": {
+    "pkg": "sqlpb",
+    "pkg_full": "cloud.google.com/go/sql/apiv1/sqlpb"
+  }
+}
+{
+  "proto": "google/cloud/sql/v1/cloud_sql_flags",
+  "pkg": "google.cloud.sql.v1",
+  "svcs": [
+    {
+      "svc": "SqlFlagsService",
+      "host": "sqladmin.googleapis.com",
+      "rpcs": [
+        {
+          "method": "List",
+          "request": {
+            "type": "SqlFlagsListRequest"
+          },
+          "response": {
+            "type": "FlagsListResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "SqlFlagsListRequest"
+    },
+    {
+      "type": "FlagsListResponse"
+    },
+    {
+      "type": "Flag"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/sql/v1/cloud_sql_flags.pb.go",
+    "pkg": "sqlpb",
+    "pkg_full": "cloud.google.com/go/sql/apiv1/sqlpb"
+  }
+}

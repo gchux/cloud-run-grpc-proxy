@@ -1,0 +1,154 @@
+{
+  "proto": "google/cloud/resourcemanager/v2/folders",
+  "pkg": "google.cloud.resourcemanager.v2",
+  "svcs": [
+    {
+      "svc": "Folders",
+      "host": "cloudresourcemanager.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListFolders",
+          "request": {
+            "type": "ListFoldersRequest"
+          },
+          "response": {
+            "type": "ListFoldersResponse"
+          }
+        },
+        {
+          "method": "SearchFolders",
+          "request": {
+            "type": "SearchFoldersRequest"
+          },
+          "response": {
+            "type": "SearchFoldersResponse"
+          }
+        },
+        {
+          "method": "GetFolder",
+          "request": {
+            "type": "GetFolderRequest"
+          },
+          "response": {
+            "type": "Folder"
+          }
+        },
+        {
+          "method": "CreateFolder",
+          "request": {
+            "type": "CreateFolderRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateFolder",
+          "request": {
+            "type": "UpdateFolderRequest"
+          },
+          "response": {
+            "type": "Folder"
+          }
+        },
+        {
+          "method": "MoveFolder",
+          "request": {
+            "type": "MoveFolderRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteFolder",
+          "request": {
+            "type": "DeleteFolderRequest"
+          },
+          "response": {
+            "type": "Folder"
+          }
+        },
+        {
+          "method": "UndeleteFolder",
+          "request": {
+            "type": "UndeleteFolderRequest"
+          },
+          "response": {
+            "type": "Folder"
+          }
+        },
+        {
+          "method": "GetIamPolicy",
+          "request": {
+            "type": "google.iam.v1.GetIamPolicyRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.Policy"
+          }
+        },
+        {
+          "method": "SetIamPolicy",
+          "request": {
+            "type": "google.iam.v1.SetIamPolicyRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.Policy"
+          }
+        },
+        {
+          "method": "TestIamPermissions",
+          "request": {
+            "type": "google.iam.v1.TestIamPermissionsRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.TestIamPermissionsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Folder"
+    },
+    {
+      "type": "ListFoldersRequest"
+    },
+    {
+      "type": "ListFoldersResponse"
+    },
+    {
+      "type": "SearchFoldersRequest"
+    },
+    {
+      "type": "SearchFoldersResponse"
+    },
+    {
+      "type": "GetFolderRequest"
+    },
+    {
+      "type": "CreateFolderRequest"
+    },
+    {
+      "type": "MoveFolderRequest"
+    },
+    {
+      "type": "UpdateFolderRequest"
+    },
+    {
+      "type": "DeleteFolderRequest"
+    },
+    {
+      "type": "UndeleteFolderRequest"
+    },
+    {
+      "type": "FolderOperation"
+    }
+  ],
+  "go": {
+    "src": "resourcemanager/apiv2/resourcemanagerpb/folders.pb.go",
+    "pkg": "resourcemanagerpb",
+    "pkg_full": "cloud.google.com/go/resourcemanager/apiv2/resourcemanagerpb"
+  }
+}

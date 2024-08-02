@@ -1,0 +1,321 @@
+{
+  "proto": "google/cloud/cloudcontrolspartner/v1/customers",
+  "pkg": "google.cloud.cloudcontrolspartner.v1",
+  "msgs": [
+    {
+      "type": "Customer"
+    },
+    {
+      "type": "ListCustomersRequest"
+    },
+    {
+      "type": "ListCustomersResponse"
+    },
+    {
+      "type": "GetCustomerRequest"
+    },
+    {
+      "type": "CustomerOnboardingState"
+    },
+    {
+      "type": "CustomerOnboardingStep"
+    }
+  ],
+  "go": {
+    "src": "cloudcontrolspartner/apiv1/cloudcontrolspartnerpb/customers.pb.go",
+    "pkg": "cloudcontrolspartnerpb",
+    "pkg_full": "cloud.google.com/go/cloudcontrolspartner/apiv1/cloudcontrolspartnerpb"
+  }
+}
+{
+  "proto": "google/cloud/cloudcontrolspartner/v1/partners",
+  "pkg": "google.cloud.cloudcontrolspartner.v1",
+  "msgs": [
+    {
+      "type": "Partner"
+    },
+    {
+      "type": "GetPartnerRequest"
+    },
+    {
+      "type": "Sku"
+    },
+    {
+      "type": "EkmMetadata"
+    }
+  ],
+  "go": {
+    "src": "cloudcontrolspartner/apiv1/cloudcontrolspartnerpb/partners.pb.go",
+    "pkg": "cloudcontrolspartnerpb",
+    "pkg_full": "cloud.google.com/go/cloudcontrolspartner/apiv1/cloudcontrolspartnerpb"
+  }
+}
+{
+  "proto": "google/cloud/cloudcontrolspartner/v1/completion_state",
+  "pkg": "google.cloud.cloudcontrolspartner.v1",
+  "go": {
+    "src": "cloudcontrolspartner/apiv1/cloudcontrolspartnerpb/completion_state.pb.go",
+    "pkg": "cloudcontrolspartnerpb",
+    "pkg_full": "cloud.google.com/go/cloudcontrolspartner/apiv1/cloudcontrolspartnerpb"
+  }
+}
+{
+  "proto": "google/cloud/cloudcontrolspartner/v1/customer_workloads",
+  "pkg": "google.cloud.cloudcontrolspartner.v1",
+  "msgs": [
+    {
+      "type": "Workload"
+    },
+    {
+      "type": "ListWorkloadsRequest"
+    },
+    {
+      "type": "ListWorkloadsResponse"
+    },
+    {
+      "type": "GetWorkloadRequest"
+    },
+    {
+      "type": "WorkloadOnboardingState"
+    },
+    {
+      "type": "WorkloadOnboardingStep"
+    }
+  ],
+  "go": {
+    "src": "cloudcontrolspartner/apiv1/cloudcontrolspartnerpb/customer_workloads.pb.go",
+    "pkg": "cloudcontrolspartnerpb",
+    "pkg_full": "cloud.google.com/go/cloudcontrolspartner/apiv1/cloudcontrolspartnerpb"
+  }
+}
+{
+  "proto": "google/cloud/cloudcontrolspartner/v1/access_approval_requests",
+  "pkg": "google.cloud.cloudcontrolspartner.v1",
+  "msgs": [
+    {
+      "type": "AccessApprovalRequest"
+    },
+    {
+      "type": "ListAccessApprovalRequestsRequest"
+    },
+    {
+      "type": "ListAccessApprovalRequestsResponse"
+    },
+    {
+      "type": "AccessReason"
+    }
+  ],
+  "go": {
+    "src": "cloudcontrolspartner/apiv1/cloudcontrolspartnerpb/access_approval_requests.pb.go",
+    "pkg": "cloudcontrolspartnerpb",
+    "pkg_full": "cloud.google.com/go/cloudcontrolspartner/apiv1/cloudcontrolspartnerpb"
+  }
+}
+{
+  "proto": "google/cloud/cloudcontrolspartner/v1/monitoring",
+  "pkg": "google.cloud.cloudcontrolspartner.v1",
+  "svcs": [
+    {
+      "svc": "CloudControlsPartnerMonitoring",
+      "host": "cloudcontrolspartner.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListViolations",
+          "request": {
+            "type": "ListViolationsRequest"
+          },
+          "response": {
+            "type": "ListViolationsResponse"
+          }
+        },
+        {
+          "method": "GetViolation",
+          "request": {
+            "type": "GetViolationRequest"
+          },
+          "response": {
+            "type": "Violation"
+          }
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "cloudcontrolspartner/apiv1/cloudcontrolspartnerpb/monitoring.pb.go",
+    "pkg": "cloudcontrolspartnerpb",
+    "pkg_full": "cloud.google.com/go/cloudcontrolspartner/apiv1/cloudcontrolspartnerpb"
+  }
+}
+{
+  "proto": "google/cloud/cloudcontrolspartner/v1/partner_permissions",
+  "pkg": "google.cloud.cloudcontrolspartner.v1",
+  "msgs": [
+    {
+      "type": "PartnerPermissions"
+    },
+    {
+      "type": "GetPartnerPermissionsRequest"
+    }
+  ],
+  "go": {
+    "src": "cloudcontrolspartner/apiv1/cloudcontrolspartnerpb/partner_permissions.pb.go",
+    "pkg": "cloudcontrolspartnerpb",
+    "pkg_full": "cloud.google.com/go/cloudcontrolspartner/apiv1/cloudcontrolspartnerpb"
+  }
+}
+{
+  "proto": "google/cloud/cloudcontrolspartner/v1/violations",
+  "pkg": "google.cloud.cloudcontrolspartner.v1",
+  "msgs": [
+    {
+      "type": "Violation",
+      "msgs": [
+        {
+          "type": "Remediation"
+        },
+        {
+          "type": "Instructions"
+        },
+        {
+          "type": "Gcloud"
+        },
+        {
+          "type": "Console"
+        }
+      ]
+    },
+    {
+      "type": "ListViolationsRequest"
+    },
+    {
+      "type": "ListViolationsResponse"
+    },
+    {
+      "type": "GetViolationRequest"
+    }
+  ],
+  "go": {
+    "src": "cloudcontrolspartner/apiv1/cloudcontrolspartnerpb/violations.pb.go",
+    "pkg": "cloudcontrolspartnerpb",
+    "pkg_full": "cloud.google.com/go/cloudcontrolspartner/apiv1/cloudcontrolspartnerpb"
+  }
+}
+{
+  "proto": "google/cloud/cloudcontrolspartner/v1/ekm_connections",
+  "pkg": "google.cloud.cloudcontrolspartner.v1",
+  "msgs": [
+    {
+      "type": "EkmConnections"
+    },
+    {
+      "type": "GetEkmConnectionsRequest"
+    },
+    {
+      "type": "EkmConnection",
+      "msgs": [
+        {
+          "type": "ConnectionError"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "cloudcontrolspartner/apiv1/cloudcontrolspartnerpb/ekm_connections.pb.go",
+    "pkg": "cloudcontrolspartnerpb",
+    "pkg_full": "cloud.google.com/go/cloudcontrolspartner/apiv1/cloudcontrolspartnerpb"
+  }
+}
+{
+  "proto": "google/cloud/cloudcontrolspartner/v1/core",
+  "pkg": "google.cloud.cloudcontrolspartner.v1",
+  "svcs": [
+    {
+      "svc": "CloudControlsPartnerCore",
+      "host": "cloudcontrolspartner.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetWorkload",
+          "request": {
+            "type": "GetWorkloadRequest"
+          },
+          "response": {
+            "type": "Workload"
+          }
+        },
+        {
+          "method": "ListWorkloads",
+          "request": {
+            "type": "ListWorkloadsRequest"
+          },
+          "response": {
+            "type": "ListWorkloadsResponse"
+          }
+        },
+        {
+          "method": "GetCustomer",
+          "request": {
+            "type": "GetCustomerRequest"
+          },
+          "response": {
+            "type": "Customer"
+          }
+        },
+        {
+          "method": "ListCustomers",
+          "request": {
+            "type": "ListCustomersRequest"
+          },
+          "response": {
+            "type": "ListCustomersResponse"
+          }
+        },
+        {
+          "method": "GetEkmConnections",
+          "request": {
+            "type": "GetEkmConnectionsRequest"
+          },
+          "response": {
+            "type": "EkmConnections"
+          }
+        },
+        {
+          "method": "GetPartnerPermissions",
+          "request": {
+            "type": "GetPartnerPermissionsRequest"
+          },
+          "response": {
+            "type": "PartnerPermissions"
+          }
+        },
+        {
+          "method": "ListAccessApprovalRequests",
+          "request": {
+            "type": "ListAccessApprovalRequestsRequest"
+          },
+          "response": {
+            "type": "ListAccessApprovalRequestsResponse"
+          }
+        },
+        {
+          "method": "GetPartner",
+          "request": {
+            "type": "GetPartnerRequest"
+          },
+          "response": {
+            "type": "Partner"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "OperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "cloudcontrolspartner/apiv1/cloudcontrolspartnerpb/core.pb.go",
+    "pkg": "cloudcontrolspartnerpb",
+    "pkg_full": "cloud.google.com/go/cloudcontrolspartner/apiv1/cloudcontrolspartnerpb"
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "proto": "google/cloud/videointelligence/v1p3beta1/video_intelligence",
+  "pkg": "google.cloud.videointelligence.v1p3beta1",
+  "svcs": [
+    {
+      "svc": "VideoIntelligenceService",
+      "host": "videointelligence.googleapis.com",
+      "rpcs": [
+        {
+          "method": "AnnotateVideo",
+          "request": {
+            "type": "AnnotateVideoRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    },
+    {
+      "svc": "StreamingVideoIntelligenceService",
+      "host": "videointelligence.googleapis.com",
+      "rpcs": [
+        {
+          "method": "StreamingAnnotateVideo",
+          "request": {
+            "type": "StreamingAnnotateVideoRequest",
+            "stream": true
+          },
+          "response": {
+            "type": "StreamingAnnotateVideoResponse",
+            "stream": true
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "AnnotateVideoRequest"
+    },
+    {
+      "type": "VideoContext"
+    },
+    {
+      "type": "LabelDetectionConfig"
+    },
+    {
+      "type": "ShotChangeDetectionConfig"
+    },
+    {
+      "type": "ObjectTrackingConfig"
+    },
+    {
+      "type": "ExplicitContentDetectionConfig"
+    },
+    {
+      "type": "FaceDetectionConfig"
+    },
+    {
+      "type": "PersonDetectionConfig"
+    },
+    {
+      "type": "TextDetectionConfig"
+    },
+    {
+      "type": "VideoSegment"
+    },
+    {
+      "type": "LabelSegment"
+    },
+    {
+      "type": "LabelFrame"
+    },
+    {
+      "type": "Entity"
+    },
+    {
+      "type": "LabelAnnotation"
+    },
+    {
+      "type": "ExplicitContentFrame"
+    },
+    {
+      "type": "ExplicitContentAnnotation"
+    },
+    {
+      "type": "NormalizedBoundingBox"
+    },
+    {
+      "type": "TimestampedObject"
+    },
+    {
+      "type": "Track"
+    },
+    {
+      "type": "DetectedAttribute"
+    },
+    {
+      "type": "Celebrity"
+    },
+    {
+      "type": "CelebrityTrack",
+      "msgs": [
+        {
+          "type": "RecognizedCelebrity"
+        }
+      ]
+    },
+    {
+      "type": "CelebrityRecognitionAnnotation"
+    },
+    {
+      "type": "DetectedLandmark"
+    },
+    {
+      "type": "FaceDetectionAnnotation"
+    },
+    {
+      "type": "PersonDetectionAnnotation"
+    },
+    {
+      "type": "VideoAnnotationResults"
+    },
+    {
+      "type": "AnnotateVideoResponse"
+    },
+    {
+      "type": "VideoAnnotationProgress"
+    },
+    {
+      "type": "AnnotateVideoProgress"
+    },
+    {
+      "type": "SpeechTranscriptionConfig"
+    },
+    {
+      "type": "SpeechContext"
+    },
+    {
+      "type": "SpeechTranscription"
+    },
+    {
+      "type": "SpeechRecognitionAlternative"
+    },
+    {
+      "type": "WordInfo"
+    },
+    {
+      "type": "NormalizedVertex"
+    },
+    {
+      "type": "NormalizedBoundingPoly"
+    },
+    {
+      "type": "TextSegment"
+    },
+    {
+      "type": "TextFrame"
+    },
+    {
+      "type": "TextAnnotation"
+    },
+    {
+      "type": "ObjectTrackingFrame"
+    },
+    {
+      "type": "ObjectTrackingAnnotation"
+    },
+    {
+      "type": "LogoRecognitionAnnotation"
+    },
+    {
+      "type": "StreamingAnnotateVideoRequest"
+    },
+    {
+      "type": "StreamingVideoConfig"
+    },
+    {
+      "type": "StreamingAnnotateVideoResponse"
+    },
+    {
+      "type": "StreamingVideoAnnotationResults"
+    },
+    {
+      "type": "StreamingShotChangeDetectionConfig"
+    },
+    {
+      "type": "StreamingLabelDetectionConfig"
+    },
+    {
+      "type": "StreamingExplicitContentDetectionConfig"
+    },
+    {
+      "type": "StreamingObjectTrackingConfig"
+    },
+    {
+      "type": "StreamingAutomlActionRecognitionConfig"
+    },
+    {
+      "type": "StreamingAutomlClassificationConfig"
+    },
+    {
+      "type": "StreamingAutomlObjectTrackingConfig"
+    },
+    {
+      "type": "StreamingStorageConfig"
+    }
+  ],
+  "go": {
+    "src": "videointelligence/apiv1p3beta1/videointelligencepb/video_intelligence.pb.go",
+    "pkg": "videointelligencepb",
+    "pkg_full": "cloud.google.com/go/videointelligence/apiv1p3beta1/videointelligencepb"
+  }
+}

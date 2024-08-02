@@ -1,0 +1,406 @@
+{
+  "proto": "google/cloud/translate/v3/translation_service",
+  "pkg": "google.cloud.translation.v3",
+  "svcs": [
+    {
+      "svc": "TranslationService",
+      "host": "translate.googleapis.com",
+      "rpcs": [
+        {
+          "method": "TranslateText",
+          "request": {
+            "type": "TranslateTextRequest"
+          },
+          "response": {
+            "type": "TranslateTextResponse"
+          }
+        },
+        {
+          "method": "DetectLanguage",
+          "request": {
+            "type": "DetectLanguageRequest"
+          },
+          "response": {
+            "type": "DetectLanguageResponse"
+          }
+        },
+        {
+          "method": "GetSupportedLanguages",
+          "request": {
+            "type": "GetSupportedLanguagesRequest"
+          },
+          "response": {
+            "type": "SupportedLanguages"
+          }
+        },
+        {
+          "method": "TranslateDocument",
+          "request": {
+            "type": "TranslateDocumentRequest"
+          },
+          "response": {
+            "type": "TranslateDocumentResponse"
+          }
+        },
+        {
+          "method": "BatchTranslateText",
+          "request": {
+            "type": "BatchTranslateTextRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "BatchTranslateDocument",
+          "request": {
+            "type": "BatchTranslateDocumentRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CreateGlossary",
+          "request": {
+            "type": "CreateGlossaryRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListGlossaries",
+          "request": {
+            "type": "ListGlossariesRequest"
+          },
+          "response": {
+            "type": "ListGlossariesResponse"
+          }
+        },
+        {
+          "method": "GetGlossary",
+          "request": {
+            "type": "GetGlossaryRequest"
+          },
+          "response": {
+            "type": "Glossary"
+          }
+        },
+        {
+          "method": "DeleteGlossary",
+          "request": {
+            "type": "DeleteGlossaryRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CreateAdaptiveMtDataset",
+          "request": {
+            "type": "CreateAdaptiveMtDatasetRequest"
+          },
+          "response": {
+            "type": "AdaptiveMtDataset"
+          }
+        },
+        {
+          "method": "DeleteAdaptiveMtDataset",
+          "request": {
+            "type": "DeleteAdaptiveMtDatasetRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "GetAdaptiveMtDataset",
+          "request": {
+            "type": "GetAdaptiveMtDatasetRequest"
+          },
+          "response": {
+            "type": "AdaptiveMtDataset"
+          }
+        },
+        {
+          "method": "ListAdaptiveMtDatasets",
+          "request": {
+            "type": "ListAdaptiveMtDatasetsRequest"
+          },
+          "response": {
+            "type": "ListAdaptiveMtDatasetsResponse"
+          }
+        },
+        {
+          "method": "AdaptiveMtTranslate",
+          "request": {
+            "type": "AdaptiveMtTranslateRequest"
+          },
+          "response": {
+            "type": "AdaptiveMtTranslateResponse"
+          }
+        },
+        {
+          "method": "GetAdaptiveMtFile",
+          "request": {
+            "type": "GetAdaptiveMtFileRequest"
+          },
+          "response": {
+            "type": "AdaptiveMtFile"
+          }
+        },
+        {
+          "method": "DeleteAdaptiveMtFile",
+          "request": {
+            "type": "DeleteAdaptiveMtFileRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ImportAdaptiveMtFile",
+          "request": {
+            "type": "ImportAdaptiveMtFileRequest"
+          },
+          "response": {
+            "type": "ImportAdaptiveMtFileResponse"
+          }
+        },
+        {
+          "method": "ListAdaptiveMtFiles",
+          "request": {
+            "type": "ListAdaptiveMtFilesRequest"
+          },
+          "response": {
+            "type": "ListAdaptiveMtFilesResponse"
+          }
+        },
+        {
+          "method": "ListAdaptiveMtSentences",
+          "request": {
+            "type": "ListAdaptiveMtSentencesRequest"
+          },
+          "response": {
+            "type": "ListAdaptiveMtSentencesResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "TranslateTextGlossaryConfig"
+    },
+    {
+      "type": "TranslateTextRequest"
+    },
+    {
+      "type": "TranslateTextResponse"
+    },
+    {
+      "type": "Translation"
+    },
+    {
+      "type": "DetectLanguageRequest"
+    },
+    {
+      "type": "DetectedLanguage"
+    },
+    {
+      "type": "DetectLanguageResponse"
+    },
+    {
+      "type": "GetSupportedLanguagesRequest"
+    },
+    {
+      "type": "SupportedLanguages"
+    },
+    {
+      "type": "SupportedLanguage"
+    },
+    {
+      "type": "GcsSource"
+    },
+    {
+      "type": "InputConfig"
+    },
+    {
+      "type": "GcsDestination"
+    },
+    {
+      "type": "OutputConfig"
+    },
+    {
+      "type": "DocumentInputConfig"
+    },
+    {
+      "type": "DocumentOutputConfig"
+    },
+    {
+      "type": "TranslateDocumentRequest"
+    },
+    {
+      "type": "DocumentTranslation"
+    },
+    {
+      "type": "TranslateDocumentResponse"
+    },
+    {
+      "type": "BatchTranslateTextRequest"
+    },
+    {
+      "type": "BatchTranslateMetadata"
+    },
+    {
+      "type": "BatchTranslateResponse"
+    },
+    {
+      "type": "GlossaryInputConfig"
+    },
+    {
+      "type": "Glossary",
+      "msgs": [
+        {
+          "type": "LanguageCodePair"
+        },
+        {
+          "type": "LanguageCodesSet"
+        }
+      ]
+    },
+    {
+      "type": "CreateGlossaryRequest"
+    },
+    {
+      "type": "GetGlossaryRequest"
+    },
+    {
+      "type": "DeleteGlossaryRequest"
+    },
+    {
+      "type": "ListGlossariesRequest"
+    },
+    {
+      "type": "ListGlossariesResponse"
+    },
+    {
+      "type": "CreateGlossaryMetadata"
+    },
+    {
+      "type": "DeleteGlossaryMetadata"
+    },
+    {
+      "type": "DeleteGlossaryResponse"
+    },
+    {
+      "type": "BatchTranslateDocumentRequest"
+    },
+    {
+      "type": "BatchDocumentInputConfig"
+    },
+    {
+      "type": "BatchDocumentOutputConfig"
+    },
+    {
+      "type": "BatchTranslateDocumentResponse"
+    },
+    {
+      "type": "BatchTranslateDocumentMetadata"
+    }
+  ],
+  "go": {
+    "src": "translate/apiv3/translatepb/translation_service.pb.go",
+    "pkg": "translatepb",
+    "pkg_full": "cloud.google.com/go/translate/apiv3/translatepb"
+  }
+}
+{
+  "proto": "google/cloud/translate/v3/adaptive_mt",
+  "pkg": "google.cloud.translation.v3",
+  "msgs": [
+    {
+      "type": "AdaptiveMtDataset"
+    },
+    {
+      "type": "CreateAdaptiveMtDatasetRequest"
+    },
+    {
+      "type": "DeleteAdaptiveMtDatasetRequest"
+    },
+    {
+      "type": "GetAdaptiveMtDatasetRequest"
+    },
+    {
+      "type": "ListAdaptiveMtDatasetsRequest"
+    },
+    {
+      "type": "ListAdaptiveMtDatasetsResponse"
+    },
+    {
+      "type": "AdaptiveMtTranslateRequest"
+    },
+    {
+      "type": "AdaptiveMtTranslation"
+    },
+    {
+      "type": "AdaptiveMtTranslateResponse"
+    },
+    {
+      "type": "AdaptiveMtFile"
+    },
+    {
+      "type": "GetAdaptiveMtFileRequest"
+    },
+    {
+      "type": "DeleteAdaptiveMtFileRequest"
+    },
+    {
+      "type": "ImportAdaptiveMtFileRequest"
+    },
+    {
+      "type": "ImportAdaptiveMtFileResponse"
+    },
+    {
+      "type": "ListAdaptiveMtFilesRequest"
+    },
+    {
+      "type": "ListAdaptiveMtFilesResponse"
+    },
+    {
+      "type": "AdaptiveMtSentence"
+    },
+    {
+      "type": "ListAdaptiveMtSentencesRequest"
+    },
+    {
+      "type": "ListAdaptiveMtSentencesResponse"
+    }
+  ],
+  "go": {
+    "src": "translate/apiv3/translatepb/adaptive_mt.pb.go",
+    "pkg": "translatepb",
+    "pkg_full": "cloud.google.com/go/translate/apiv3/translatepb"
+  }
+}
+{
+  "proto": "google/cloud/translate/v3/common",
+  "pkg": "google.cloud.translation.v3",
+  "msgs": [
+    {
+      "type": "GcsInputSource"
+    },
+    {
+      "type": "FileInputSource"
+    },
+    {
+      "type": "GcsOutputDestination"
+    }
+  ],
+  "go": {
+    "src": "translate/apiv3/translatepb/common.pb.go",
+    "pkg": "translatepb",
+    "pkg_full": "cloud.google.com/go/translate/apiv3/translatepb"
+  }
+}

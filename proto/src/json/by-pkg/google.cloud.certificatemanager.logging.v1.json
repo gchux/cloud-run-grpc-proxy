@@ -1,0 +1,14 @@
+{
+  "proto": "google/cloud/certificatemanager/logging/v1/logs",
+  "pkg": "google.cloud.certificatemanager.logging.v1",
+  "msgs": [
+    {
+      "type": "CertificatesExpiry"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/certificatemanager/logging/v1/logs.pb.go",
+    "pkg": "loggingpb",
+    "pkg_full": "cloud.google.com/go/certificatemanager/logging/apiv1/loggingpb"
+  }
+}

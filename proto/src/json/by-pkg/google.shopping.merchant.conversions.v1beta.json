@@ -1,0 +1,111 @@
+{
+  "proto": "google/shopping/merchant/conversions/v1beta/conversionsources",
+  "pkg": "google.shopping.merchant.conversions.v1beta",
+  "svcs": [
+    {
+      "svc": "ConversionSourcesService",
+      "host": "merchantapi.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateConversionSource",
+          "request": {
+            "type": "CreateConversionSourceRequest"
+          },
+          "response": {
+            "type": "ConversionSource"
+          }
+        },
+        {
+          "method": "UpdateConversionSource",
+          "request": {
+            "type": "UpdateConversionSourceRequest"
+          },
+          "response": {
+            "type": "ConversionSource"
+          }
+        },
+        {
+          "method": "DeleteConversionSource",
+          "request": {
+            "type": "DeleteConversionSourceRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "UndeleteConversionSource",
+          "request": {
+            "type": "UndeleteConversionSourceRequest"
+          },
+          "response": {
+            "type": "ConversionSource"
+          }
+        },
+        {
+          "method": "GetConversionSource",
+          "request": {
+            "type": "GetConversionSourceRequest"
+          },
+          "response": {
+            "type": "ConversionSource"
+          }
+        },
+        {
+          "method": "ListConversionSources",
+          "request": {
+            "type": "ListConversionSourcesRequest"
+          },
+          "response": {
+            "type": "ListConversionSourcesResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ConversionSource"
+    },
+    {
+      "type": "AttributionSettings",
+      "msgs": [
+        {
+          "type": "ConversionType"
+        }
+      ]
+    },
+    {
+      "type": "GoogleAnalyticsLink"
+    },
+    {
+      "type": "MerchantCenterDestination"
+    },
+    {
+      "type": "CreateConversionSourceRequest"
+    },
+    {
+      "type": "UpdateConversionSourceRequest"
+    },
+    {
+      "type": "DeleteConversionSourceRequest"
+    },
+    {
+      "type": "UndeleteConversionSourceRequest"
+    },
+    {
+      "type": "GetConversionSourceRequest"
+    },
+    {
+      "type": "ListConversionSourcesRequest"
+    },
+    {
+      "type": "ListConversionSourcesResponse"
+    }
+  ],
+  "go": {
+    "src": "shopping/merchant/conversions/apiv1beta/conversionspb/conversionsources.pb.go",
+    "pkg": "conversionspb",
+    "pkg_full": "cloud.google.com/go/shopping/merchant/conversions/apiv1beta/conversionspb"
+  }
+}

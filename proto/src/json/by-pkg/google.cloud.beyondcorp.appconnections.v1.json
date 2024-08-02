@@ -1,0 +1,116 @@
+{
+  "proto": "google/cloud/beyondcorp/appconnections/v1/app_connections_service",
+  "pkg": "google.cloud.beyondcorp.appconnections.v1",
+  "svcs": [
+    {
+      "svc": "AppConnectionsService",
+      "host": "beyondcorp.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListAppConnections",
+          "request": {
+            "type": "ListAppConnectionsRequest"
+          },
+          "response": {
+            "type": "ListAppConnectionsResponse"
+          }
+        },
+        {
+          "method": "GetAppConnection",
+          "request": {
+            "type": "GetAppConnectionRequest"
+          },
+          "response": {
+            "type": "AppConnection"
+          }
+        },
+        {
+          "method": "CreateAppConnection",
+          "request": {
+            "type": "CreateAppConnectionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateAppConnection",
+          "request": {
+            "type": "UpdateAppConnectionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteAppConnection",
+          "request": {
+            "type": "DeleteAppConnectionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ResolveAppConnections",
+          "request": {
+            "type": "ResolveAppConnectionsRequest"
+          },
+          "response": {
+            "type": "ResolveAppConnectionsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ListAppConnectionsRequest"
+    },
+    {
+      "type": "ListAppConnectionsResponse"
+    },
+    {
+      "type": "GetAppConnectionRequest"
+    },
+    {
+      "type": "CreateAppConnectionRequest"
+    },
+    {
+      "type": "UpdateAppConnectionRequest"
+    },
+    {
+      "type": "DeleteAppConnectionRequest"
+    },
+    {
+      "type": "ResolveAppConnectionsRequest"
+    },
+    {
+      "type": "ResolveAppConnectionsResponse",
+      "msgs": [
+        {
+          "type": "AppConnectionDetails"
+        }
+      ]
+    },
+    {
+      "type": "AppConnection",
+      "msgs": [
+        {
+          "type": "ApplicationEndpoint"
+        },
+        {
+          "type": "Gateway"
+        }
+      ]
+    },
+    {
+      "type": "AppConnectionOperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "beyondcorp/appconnections/apiv1/appconnectionspb/app_connections_service.pb.go",
+    "pkg": "appconnectionspb",
+    "pkg_full": "cloud.google.com/go/beyondcorp/appconnections/apiv1/appconnectionspb"
+  }
+}

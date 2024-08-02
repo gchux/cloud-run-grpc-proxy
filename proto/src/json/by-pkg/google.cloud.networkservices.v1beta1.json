@@ -1,0 +1,283 @@
+{
+  "proto": "google/cloud/networkservices/v1beta1/network_services",
+  "pkg": "google.cloud.networkservices.v1beta1",
+  "svcs": [
+    {
+      "svc": "NetworkServices",
+      "host": "networkservices.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListEndpointPolicies",
+          "request": {
+            "type": "ListEndpointPoliciesRequest"
+          },
+          "response": {
+            "type": "ListEndpointPoliciesResponse"
+          }
+        },
+        {
+          "method": "GetEndpointPolicy",
+          "request": {
+            "type": "GetEndpointPolicyRequest"
+          },
+          "response": {
+            "type": "EndpointPolicy"
+          }
+        },
+        {
+          "method": "CreateEndpointPolicy",
+          "request": {
+            "type": "CreateEndpointPolicyRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateEndpointPolicy",
+          "request": {
+            "type": "UpdateEndpointPolicyRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteEndpointPolicy",
+          "request": {
+            "type": "DeleteEndpointPolicyRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/networkservices/v1beta1/network_services.pb.go",
+    "pkg": "networkservicespb",
+    "pkg_full": "cloud.google.com/go/networkservices/apiv1beta1/networkservicespb"
+  }
+}
+{
+  "proto": "google/cloud/networkservices/v1beta1/endpoint_policy",
+  "pkg": "google.cloud.networkservices.v1beta1",
+  "msgs": [
+    {
+      "type": "EndpointPolicy"
+    },
+    {
+      "type": "ListEndpointPoliciesRequest"
+    },
+    {
+      "type": "ListEndpointPoliciesResponse"
+    },
+    {
+      "type": "GetEndpointPolicyRequest"
+    },
+    {
+      "type": "CreateEndpointPolicyRequest"
+    },
+    {
+      "type": "UpdateEndpointPolicyRequest"
+    },
+    {
+      "type": "DeleteEndpointPolicyRequest"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/networkservices/v1beta1/endpoint_policy.pb.go",
+    "pkg": "networkservicespb",
+    "pkg_full": "cloud.google.com/go/networkservices/apiv1beta1/networkservicespb"
+  }
+}
+{
+  "proto": "google/cloud/networkservices/v1beta1/dep",
+  "pkg": "google.cloud.networkservices.v1beta1",
+  "svcs": [
+    {
+      "svc": "DepService",
+      "host": "networkservices.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListLbTrafficExtensions",
+          "request": {
+            "type": "ListLbTrafficExtensionsRequest"
+          },
+          "response": {
+            "type": "ListLbTrafficExtensionsResponse"
+          }
+        },
+        {
+          "method": "GetLbTrafficExtension",
+          "request": {
+            "type": "GetLbTrafficExtensionRequest"
+          },
+          "response": {
+            "type": "LbTrafficExtension"
+          }
+        },
+        {
+          "method": "CreateLbTrafficExtension",
+          "request": {
+            "type": "CreateLbTrafficExtensionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateLbTrafficExtension",
+          "request": {
+            "type": "UpdateLbTrafficExtensionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteLbTrafficExtension",
+          "request": {
+            "type": "DeleteLbTrafficExtensionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListLbRouteExtensions",
+          "request": {
+            "type": "ListLbRouteExtensionsRequest"
+          },
+          "response": {
+            "type": "ListLbRouteExtensionsResponse"
+          }
+        },
+        {
+          "method": "GetLbRouteExtension",
+          "request": {
+            "type": "GetLbRouteExtensionRequest"
+          },
+          "response": {
+            "type": "LbRouteExtension"
+          }
+        },
+        {
+          "method": "CreateLbRouteExtension",
+          "request": {
+            "type": "CreateLbRouteExtensionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateLbRouteExtension",
+          "request": {
+            "type": "UpdateLbRouteExtensionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteLbRouteExtension",
+          "request": {
+            "type": "DeleteLbRouteExtensionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ExtensionChain",
+      "msgs": [
+        {
+          "type": "MatchCondition"
+        },
+        {
+          "type": "Extension"
+        }
+      ]
+    },
+    {
+      "type": "LbTrafficExtension"
+    },
+    {
+      "type": "ListLbTrafficExtensionsRequest"
+    },
+    {
+      "type": "ListLbTrafficExtensionsResponse"
+    },
+    {
+      "type": "GetLbTrafficExtensionRequest"
+    },
+    {
+      "type": "CreateLbTrafficExtensionRequest"
+    },
+    {
+      "type": "UpdateLbTrafficExtensionRequest"
+    },
+    {
+      "type": "DeleteLbTrafficExtensionRequest"
+    },
+    {
+      "type": "LbRouteExtension"
+    },
+    {
+      "type": "ListLbRouteExtensionsRequest"
+    },
+    {
+      "type": "ListLbRouteExtensionsResponse"
+    },
+    {
+      "type": "GetLbRouteExtensionRequest"
+    },
+    {
+      "type": "CreateLbRouteExtensionRequest"
+    },
+    {
+      "type": "UpdateLbRouteExtensionRequest"
+    },
+    {
+      "type": "DeleteLbRouteExtensionRequest"
+    }
+  ],
+  "go": {
+    "pkg": "networkservicespb",
+    "pkg_full": "cloud.google.com/go/networkservices/apiv1beta1/networkservicespb"
+  }
+}
+{
+  "proto": "google/cloud/networkservices/v1beta1/common",
+  "pkg": "google.cloud.networkservices.v1beta1",
+  "msgs": [
+    {
+      "type": "OperationMetadata"
+    },
+    {
+      "type": "TrafficPortSelector"
+    },
+    {
+      "type": "EndpointMatcher",
+      "msgs": [
+        {
+          "type": "MetadataLabelMatcher"
+        },
+        {
+          "type": "MetadataLabels"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/networkservices/v1beta1/common.pb.go",
+    "pkg": "networkservicespb",
+    "pkg_full": "cloud.google.com/go/networkservices/apiv1beta1/networkservicespb"
+  }
+}

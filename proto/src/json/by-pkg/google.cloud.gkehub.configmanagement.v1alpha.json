@@ -1,0 +1,83 @@
+{
+  "proto": "google/cloud/gkehub/v1alpha/configmanagement/configmanagement",
+  "pkg": "google.cloud.gkehub.configmanagement.v1alpha",
+  "msgs": [
+    {
+      "type": "MembershipState"
+    },
+    {
+      "type": "MembershipSpec"
+    },
+    {
+      "type": "ConfigSync"
+    },
+    {
+      "type": "GitConfig"
+    },
+    {
+      "type": "PolicyController"
+    },
+    {
+      "type": "BinauthzConfig"
+    },
+    {
+      "type": "HierarchyControllerConfig"
+    },
+    {
+      "type": "HierarchyControllerDeploymentState"
+    },
+    {
+      "type": "HierarchyControllerVersion"
+    },
+    {
+      "type": "HierarchyControllerState"
+    },
+    {
+      "type": "OperatorState"
+    },
+    {
+      "type": "InstallError"
+    },
+    {
+      "type": "ConfigSyncState"
+    },
+    {
+      "type": "ConfigSyncVersion"
+    },
+    {
+      "type": "ConfigSyncDeploymentState"
+    },
+    {
+      "type": "SyncState"
+    },
+    {
+      "type": "SyncError"
+    },
+    {
+      "type": "ErrorResource"
+    },
+    {
+      "type": "GroupVersionKind"
+    },
+    {
+      "type": "PolicyControllerState"
+    },
+    {
+      "type": "PolicyControllerVersion"
+    },
+    {
+      "type": "BinauthzState"
+    },
+    {
+      "type": "BinauthzVersion"
+    },
+    {
+      "type": "GatekeeperDeploymentState"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/gkehub/configmanagement/v1alpha/configmanagement.pb.go",
+    "pkg": "configmanagementpb",
+    "pkg_full": "cloud.google.com/go/gkehub/configmanagement/apiv1alpha/configmanagementpb"
+  }
+}

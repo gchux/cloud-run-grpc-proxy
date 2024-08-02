@@ -1,0 +1,14 @@
+{
+  "proto": "google/cloud/gkehub/v1/multiclusteringress/multiclusteringress",
+  "pkg": "google.cloud.gkehub.multiclusteringress.v1",
+  "msgs": [
+    {
+      "type": "FeatureSpec"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/gkehub/multiclusteringress/v1/multiclusteringress.pb.go",
+    "pkg": "multiclusteringresspb",
+    "pkg_full": "cloud.google.com/go/gkehub/multiclusteringress/apiv1/multiclusteringresspb"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "proto": "google/cloud/gkehub/servicemesh/v1beta/servicemesh",
+  "pkg": "google.cloud.gkehub.servicemesh.v1beta",
+  "msgs": [
+    {
+      "type": "MembershipSpec"
+    },
+    {
+      "type": "MembershipState",
+      "msgs": [
+        {
+          "type": "ControlPlaneManagement"
+        },
+        {
+          "type": "DataPlaneManagement"
+        },
+        {
+          "type": "Condition"
+        }
+      ]
+    },
+    {
+      "type": "StatusDetails"
+    }
+  ],
+  "go": {
+    "pkg": "servicemeshpb",
+    "pkg_full": "cloud.google.com/go/gkehub/servicemesh/apiv1beta/servicemeshpb"
+  }
+}

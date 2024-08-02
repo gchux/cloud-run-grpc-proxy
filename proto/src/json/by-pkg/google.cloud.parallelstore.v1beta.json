@@ -1,0 +1,142 @@
+{
+  "proto": "google/cloud/parallelstore/v1beta/parallelstore",
+  "pkg": "google.cloud.parallelstore.v1beta",
+  "svcs": [
+    {
+      "svc": "Parallelstore",
+      "host": "parallelstore.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListInstances",
+          "request": {
+            "type": "ListInstancesRequest"
+          },
+          "response": {
+            "type": "ListInstancesResponse"
+          }
+        },
+        {
+          "method": "GetInstance",
+          "request": {
+            "type": "GetInstanceRequest"
+          },
+          "response": {
+            "type": "Instance"
+          }
+        },
+        {
+          "method": "CreateInstance",
+          "request": {
+            "type": "CreateInstanceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateInstance",
+          "request": {
+            "type": "UpdateInstanceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteInstance",
+          "request": {
+            "type": "DeleteInstanceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ImportData",
+          "request": {
+            "type": "ImportDataRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ExportData",
+          "request": {
+            "type": "ExportDataRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Instance"
+    },
+    {
+      "type": "ListInstancesRequest"
+    },
+    {
+      "type": "ListInstancesResponse"
+    },
+    {
+      "type": "GetInstanceRequest"
+    },
+    {
+      "type": "CreateInstanceRequest"
+    },
+    {
+      "type": "UpdateInstanceRequest"
+    },
+    {
+      "type": "DeleteInstanceRequest"
+    },
+    {
+      "type": "OperationMetadata"
+    },
+    {
+      "type": "SourceGcsBucket"
+    },
+    {
+      "type": "DestinationGcsBucket"
+    },
+    {
+      "type": "SourceParallelstore"
+    },
+    {
+      "type": "DestinationParallelstore"
+    },
+    {
+      "type": "ImportDataRequest"
+    },
+    {
+      "type": "ExportDataRequest"
+    },
+    {
+      "type": "ImportDataResponse"
+    },
+    {
+      "type": "ImportDataMetadata"
+    },
+    {
+      "type": "ExportDataResponse"
+    },
+    {
+      "type": "ExportDataMetadata"
+    },
+    {
+      "type": "TransferOperationMetadata"
+    },
+    {
+      "type": "TransferCounters"
+    }
+  ],
+  "go": {
+    "src": "parallelstore/apiv1beta/parallelstorepb/parallelstore.pb.go",
+    "pkg": "parallelstorepb",
+    "pkg_full": "cloud.google.com/go/parallelstore/apiv1beta/parallelstorepb"
+  }
+}

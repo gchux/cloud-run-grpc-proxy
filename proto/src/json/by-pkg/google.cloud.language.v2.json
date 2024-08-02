@@ -1,0 +1,120 @@
+{
+  "proto": "google/cloud/language/v2/language_service",
+  "pkg": "google.cloud.language.v2",
+  "svcs": [
+    {
+      "svc": "LanguageService",
+      "host": "language.googleapis.com",
+      "rpcs": [
+        {
+          "method": "AnalyzeSentiment",
+          "request": {
+            "type": "AnalyzeSentimentRequest"
+          },
+          "response": {
+            "type": "AnalyzeSentimentResponse"
+          }
+        },
+        {
+          "method": "AnalyzeEntities",
+          "request": {
+            "type": "AnalyzeEntitiesRequest"
+          },
+          "response": {
+            "type": "AnalyzeEntitiesResponse"
+          }
+        },
+        {
+          "method": "ClassifyText",
+          "request": {
+            "type": "ClassifyTextRequest"
+          },
+          "response": {
+            "type": "ClassifyTextResponse"
+          }
+        },
+        {
+          "method": "ModerateText",
+          "request": {
+            "type": "ModerateTextRequest"
+          },
+          "response": {
+            "type": "ModerateTextResponse"
+          }
+        },
+        {
+          "method": "AnnotateText",
+          "request": {
+            "type": "AnnotateTextRequest"
+          },
+          "response": {
+            "type": "AnnotateTextResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Document"
+    },
+    {
+      "type": "Sentence"
+    },
+    {
+      "type": "Entity"
+    },
+    {
+      "type": "Sentiment"
+    },
+    {
+      "type": "EntityMention"
+    },
+    {
+      "type": "TextSpan"
+    },
+    {
+      "type": "ClassificationCategory"
+    },
+    {
+      "type": "AnalyzeSentimentRequest"
+    },
+    {
+      "type": "AnalyzeSentimentResponse"
+    },
+    {
+      "type": "AnalyzeEntitiesRequest"
+    },
+    {
+      "type": "AnalyzeEntitiesResponse"
+    },
+    {
+      "type": "ClassifyTextRequest"
+    },
+    {
+      "type": "ClassifyTextResponse"
+    },
+    {
+      "type": "ModerateTextRequest"
+    },
+    {
+      "type": "ModerateTextResponse"
+    },
+    {
+      "type": "AnnotateTextRequest",
+      "msgs": [
+        {
+          "type": "Features"
+        }
+      ]
+    },
+    {
+      "type": "AnnotateTextResponse"
+    }
+  ],
+  "go": {
+    "src": "language/apiv2/languagepb/language_service.pb.go",
+    "pkg": "languagepb",
+    "pkg_full": "cloud.google.com/go/language/apiv2/languagepb"
+  }
+}

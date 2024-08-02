@@ -1,0 +1,277 @@
+{
+  "proto": "google/cloud/support/v2/case",
+  "pkg": "google.cloud.support.v2",
+  "msgs": [
+    {
+      "type": "Case"
+    },
+    {
+      "type": "CaseClassification"
+    }
+  ],
+  "go": {
+    "src": "support/apiv2/supportpb/case.pb.go",
+    "pkg": "supportpb",
+    "pkg_full": "cloud.google.com/go/support/apiv2/supportpb"
+  }
+}
+{
+  "proto": "google/cloud/support/v2/actor",
+  "pkg": "google.cloud.support.v2",
+  "msgs": [
+    {
+      "type": "Actor"
+    }
+  ],
+  "go": {
+    "src": "support/apiv2/supportpb/actor.pb.go",
+    "pkg": "supportpb",
+    "pkg_full": "cloud.google.com/go/support/apiv2/supportpb"
+  }
+}
+{
+  "proto": "google/cloud/support/v2/attachment",
+  "pkg": "google.cloud.support.v2",
+  "msgs": [
+    {
+      "type": "Attachment"
+    }
+  ],
+  "go": {
+    "src": "support/apiv2/supportpb/attachment.pb.go",
+    "pkg": "supportpb",
+    "pkg_full": "cloud.google.com/go/support/apiv2/supportpb"
+  }
+}
+{
+  "proto": "google/cloud/support/v2/comment",
+  "pkg": "google.cloud.support.v2",
+  "msgs": [
+    {
+      "type": "Comment"
+    }
+  ],
+  "go": {
+    "src": "support/apiv2/supportpb/comment.pb.go",
+    "pkg": "supportpb",
+    "pkg_full": "cloud.google.com/go/support/apiv2/supportpb"
+  }
+}
+{
+  "proto": "google/cloud/support/v2/case_service",
+  "pkg": "google.cloud.support.v2",
+  "svcs": [
+    {
+      "svc": "CaseService",
+      "host": "cloudsupport.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetCase",
+          "request": {
+            "type": "GetCaseRequest"
+          },
+          "response": {
+            "type": "Case"
+          }
+        },
+        {
+          "method": "ListCases",
+          "request": {
+            "type": "ListCasesRequest"
+          },
+          "response": {
+            "type": "ListCasesResponse"
+          }
+        },
+        {
+          "method": "SearchCases",
+          "request": {
+            "type": "SearchCasesRequest"
+          },
+          "response": {
+            "type": "SearchCasesResponse"
+          }
+        },
+        {
+          "method": "CreateCase",
+          "request": {
+            "type": "CreateCaseRequest"
+          },
+          "response": {
+            "type": "Case"
+          }
+        },
+        {
+          "method": "UpdateCase",
+          "request": {
+            "type": "UpdateCaseRequest"
+          },
+          "response": {
+            "type": "Case"
+          }
+        },
+        {
+          "method": "EscalateCase",
+          "request": {
+            "type": "EscalateCaseRequest"
+          },
+          "response": {
+            "type": "Case"
+          }
+        },
+        {
+          "method": "CloseCase",
+          "request": {
+            "type": "CloseCaseRequest"
+          },
+          "response": {
+            "type": "Case"
+          }
+        },
+        {
+          "method": "SearchCaseClassifications",
+          "request": {
+            "type": "SearchCaseClassificationsRequest"
+          },
+          "response": {
+            "type": "SearchCaseClassificationsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GetCaseRequest"
+    },
+    {
+      "type": "CreateCaseRequest"
+    },
+    {
+      "type": "ListCasesRequest"
+    },
+    {
+      "type": "ListCasesResponse"
+    },
+    {
+      "type": "SearchCasesRequest"
+    },
+    {
+      "type": "SearchCasesResponse"
+    },
+    {
+      "type": "EscalateCaseRequest"
+    },
+    {
+      "type": "UpdateCaseRequest"
+    },
+    {
+      "type": "CloseCaseRequest"
+    },
+    {
+      "type": "SearchCaseClassificationsRequest"
+    },
+    {
+      "type": "SearchCaseClassificationsResponse"
+    }
+  ],
+  "go": {
+    "src": "support/apiv2/supportpb/case_service.pb.go",
+    "pkg": "supportpb",
+    "pkg_full": "cloud.google.com/go/support/apiv2/supportpb"
+  }
+}
+{
+  "proto": "google/cloud/support/v2/comment_service",
+  "pkg": "google.cloud.support.v2",
+  "svcs": [
+    {
+      "svc": "CommentService",
+      "host": "cloudsupport.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListComments",
+          "request": {
+            "type": "ListCommentsRequest"
+          },
+          "response": {
+            "type": "ListCommentsResponse"
+          }
+        },
+        {
+          "method": "CreateComment",
+          "request": {
+            "type": "CreateCommentRequest"
+          },
+          "response": {
+            "type": "Comment"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ListCommentsRequest"
+    },
+    {
+      "type": "ListCommentsResponse"
+    },
+    {
+      "type": "CreateCommentRequest"
+    }
+  ],
+  "go": {
+    "src": "support/apiv2/supportpb/comment_service.pb.go",
+    "pkg": "supportpb",
+    "pkg_full": "cloud.google.com/go/support/apiv2/supportpb"
+  }
+}
+{
+  "proto": "google/cloud/support/v2/attachment_service",
+  "pkg": "google.cloud.support.v2",
+  "svcs": [
+    {
+      "svc": "CaseAttachmentService",
+      "host": "cloudsupport.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListAttachments",
+          "request": {
+            "type": "ListAttachmentsRequest"
+          },
+          "response": {
+            "type": "ListAttachmentsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ListAttachmentsRequest"
+    },
+    {
+      "type": "ListAttachmentsResponse"
+    }
+  ],
+  "go": {
+    "src": "support/apiv2/supportpb/attachment_service.pb.go",
+    "pkg": "supportpb",
+    "pkg_full": "cloud.google.com/go/support/apiv2/supportpb"
+  }
+}
+{
+  "proto": "google/cloud/support/v2/escalation",
+  "pkg": "google.cloud.support.v2",
+  "msgs": [
+    {
+      "type": "Escalation"
+    }
+  ],
+  "go": {
+    "src": "support/apiv2/supportpb/escalation.pb.go",
+    "pkg": "supportpb",
+    "pkg_full": "cloud.google.com/go/support/apiv2/supportpb"
+  }
+}

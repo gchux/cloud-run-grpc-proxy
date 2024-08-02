@@ -1,0 +1,338 @@
+{
+  "proto": "google/analytics/data/v1beta/analytics_data_api",
+  "pkg": "google.analytics.data.v1beta",
+  "svcs": [
+    {
+      "svc": "BetaAnalyticsData",
+      "host": "analyticsdata.googleapis.com",
+      "rpcs": [
+        {
+          "method": "RunReport",
+          "request": {
+            "type": "RunReportRequest"
+          },
+          "response": {
+            "type": "RunReportResponse"
+          }
+        },
+        {
+          "method": "RunPivotReport",
+          "request": {
+            "type": "RunPivotReportRequest"
+          },
+          "response": {
+            "type": "RunPivotReportResponse"
+          }
+        },
+        {
+          "method": "BatchRunReports",
+          "request": {
+            "type": "BatchRunReportsRequest"
+          },
+          "response": {
+            "type": "BatchRunReportsResponse"
+          }
+        },
+        {
+          "method": "BatchRunPivotReports",
+          "request": {
+            "type": "BatchRunPivotReportsRequest"
+          },
+          "response": {
+            "type": "BatchRunPivotReportsResponse"
+          }
+        },
+        {
+          "method": "GetMetadata",
+          "request": {
+            "type": "GetMetadataRequest"
+          },
+          "response": {
+            "type": "Metadata"
+          }
+        },
+        {
+          "method": "RunRealtimeReport",
+          "request": {
+            "type": "RunRealtimeReportRequest"
+          },
+          "response": {
+            "type": "RunRealtimeReportResponse"
+          }
+        },
+        {
+          "method": "CheckCompatibility",
+          "request": {
+            "type": "CheckCompatibilityRequest"
+          },
+          "response": {
+            "type": "CheckCompatibilityResponse"
+          }
+        },
+        {
+          "method": "CreateAudienceExport",
+          "request": {
+            "type": "CreateAudienceExportRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "QueryAudienceExport",
+          "request": {
+            "type": "QueryAudienceExportRequest"
+          },
+          "response": {
+            "type": "QueryAudienceExportResponse"
+          }
+        },
+        {
+          "method": "GetAudienceExport",
+          "request": {
+            "type": "GetAudienceExportRequest"
+          },
+          "response": {
+            "type": "AudienceExport"
+          }
+        },
+        {
+          "method": "ListAudienceExports",
+          "request": {
+            "type": "ListAudienceExportsRequest"
+          },
+          "response": {
+            "type": "ListAudienceExportsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CheckCompatibilityRequest"
+    },
+    {
+      "type": "CheckCompatibilityResponse"
+    },
+    {
+      "type": "Metadata"
+    },
+    {
+      "type": "RunReportRequest"
+    },
+    {
+      "type": "RunReportResponse"
+    },
+    {
+      "type": "RunPivotReportRequest"
+    },
+    {
+      "type": "RunPivotReportResponse"
+    },
+    {
+      "type": "BatchRunReportsRequest"
+    },
+    {
+      "type": "BatchRunReportsResponse"
+    },
+    {
+      "type": "BatchRunPivotReportsRequest"
+    },
+    {
+      "type": "BatchRunPivotReportsResponse"
+    },
+    {
+      "type": "GetMetadataRequest"
+    },
+    {
+      "type": "RunRealtimeReportRequest"
+    },
+    {
+      "type": "RunRealtimeReportResponse"
+    },
+    {
+      "type": "GetAudienceExportRequest"
+    },
+    {
+      "type": "ListAudienceExportsRequest"
+    },
+    {
+      "type": "ListAudienceExportsResponse"
+    },
+    {
+      "type": "CreateAudienceExportRequest"
+    },
+    {
+      "type": "AudienceExport"
+    },
+    {
+      "type": "AudienceExportMetadata"
+    },
+    {
+      "type": "QueryAudienceExportRequest"
+    },
+    {
+      "type": "QueryAudienceExportResponse"
+    },
+    {
+      "type": "AudienceRow"
+    },
+    {
+      "type": "AudienceDimension"
+    },
+    {
+      "type": "AudienceDimensionValue"
+    }
+  ],
+  "go": {
+    "src": "googleapis/analytics/data/v1beta/analytics_data_api.pb.go",
+    "pkg": "data",
+    "pkg_full": "google.golang.org/genproto/googleapis/analytics/data/v1beta"
+  }
+}
+{
+  "proto": "google/analytics/data/v1beta/data",
+  "pkg": "google.analytics.data.v1beta",
+  "msgs": [
+    {
+      "type": "DateRange"
+    },
+    {
+      "type": "MinuteRange"
+    },
+    {
+      "type": "Dimension"
+    },
+    {
+      "type": "DimensionExpression",
+      "msgs": [
+        {
+          "type": "CaseExpression"
+        },
+        {
+          "type": "ConcatenateExpression"
+        }
+      ]
+    },
+    {
+      "type": "Metric"
+    },
+    {
+      "type": "FilterExpression"
+    },
+    {
+      "type": "FilterExpressionList"
+    },
+    {
+      "type": "Filter",
+      "msgs": [
+        {
+          "type": "StringFilter"
+        },
+        {
+          "type": "InListFilter"
+        },
+        {
+          "type": "NumericFilter"
+        },
+        {
+          "type": "BetweenFilter"
+        }
+      ]
+    },
+    {
+      "type": "OrderBy",
+      "msgs": [
+        {
+          "type": "MetricOrderBy"
+        },
+        {
+          "type": "DimensionOrderBy"
+        },
+        {
+          "type": "PivotOrderBy"
+        },
+        {
+          "type": "PivotSelection"
+        }
+      ]
+    },
+    {
+      "type": "Pivot"
+    },
+    {
+      "type": "CohortSpec"
+    },
+    {
+      "type": "Cohort"
+    },
+    {
+      "type": "CohortsRange"
+    },
+    {
+      "type": "CohortReportSettings"
+    },
+    {
+      "type": "ResponseMetaData",
+      "msgs": [
+        {
+          "type": "SchemaRestrictionResponse"
+        },
+        {
+          "type": "ActiveMetricRestriction"
+        }
+      ]
+    },
+    {
+      "type": "SamplingMetadata"
+    },
+    {
+      "type": "DimensionHeader"
+    },
+    {
+      "type": "MetricHeader"
+    },
+    {
+      "type": "PivotHeader"
+    },
+    {
+      "type": "PivotDimensionHeader"
+    },
+    {
+      "type": "Row"
+    },
+    {
+      "type": "DimensionValue"
+    },
+    {
+      "type": "MetricValue"
+    },
+    {
+      "type": "NumericValue"
+    },
+    {
+      "type": "PropertyQuota"
+    },
+    {
+      "type": "QuotaStatus"
+    },
+    {
+      "type": "DimensionMetadata"
+    },
+    {
+      "type": "MetricMetadata"
+    },
+    {
+      "type": "DimensionCompatibility"
+    },
+    {
+      "type": "MetricCompatibility"
+    }
+  ],
+  "go": {
+    "src": "googleapis/analytics/data/v1beta/data.pb.go",
+    "pkg": "data",
+    "pkg_full": "google.golang.org/genproto/googleapis/analytics/data/v1beta"
+  }
+}

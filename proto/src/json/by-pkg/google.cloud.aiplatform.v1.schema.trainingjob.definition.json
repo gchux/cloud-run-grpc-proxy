@@ -1,0 +1,225 @@
+{
+  "proto": "google/cloud/aiplatform/v1/schema/trainingjob/definition/automl_text_extraction",
+  "pkg": "google.cloud.aiplatform.v1.schema.trainingjob.definition",
+  "msgs": [
+    {
+      "type": "AutoMlTextExtraction"
+    },
+    {
+      "type": "AutoMlTextExtractionInputs"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/aiplatform/v1/schema/trainingjob/definition/automl_text_extraction.pb.go",
+    "pkg": "definitionpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1/schema/trainingjob/definition/definitionpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1/schema/trainingjob/definition/automl_text_sentiment",
+  "pkg": "google.cloud.aiplatform.v1.schema.trainingjob.definition",
+  "msgs": [
+    {
+      "type": "AutoMlTextSentiment"
+    },
+    {
+      "type": "AutoMlTextSentimentInputs"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/aiplatform/v1/schema/trainingjob/definition/automl_text_sentiment.pb.go",
+    "pkg": "definitionpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1/schema/trainingjob/definition/definitionpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1/schema/trainingjob/definition/automl_image_segmentation",
+  "pkg": "google.cloud.aiplatform.v1.schema.trainingjob.definition",
+  "msgs": [
+    {
+      "type": "AutoMlImageSegmentation"
+    },
+    {
+      "type": "AutoMlImageSegmentationInputs"
+    },
+    {
+      "type": "AutoMlImageSegmentationMetadata"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/aiplatform/v1/schema/trainingjob/definition/automl_image_segmentation.pb.go",
+    "pkg": "definitionpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1/schema/trainingjob/definition/definitionpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1/schema/trainingjob/definition/automl_image_classification",
+  "pkg": "google.cloud.aiplatform.v1.schema.trainingjob.definition",
+  "msgs": [
+    {
+      "type": "AutoMlImageClassification"
+    },
+    {
+      "type": "AutoMlImageClassificationInputs"
+    },
+    {
+      "type": "AutoMlImageClassificationMetadata"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/aiplatform/v1/schema/trainingjob/definition/automl_image_classification.pb.go",
+    "pkg": "definitionpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1/schema/trainingjob/definition/definitionpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1/schema/trainingjob/definition/automl_tables",
+  "pkg": "google.cloud.aiplatform.v1.schema.trainingjob.definition",
+  "msgs": [
+    {
+      "type": "AutoMlTables"
+    },
+    {
+      "type": "AutoMlTablesInputs",
+      "msgs": [
+        {
+          "type": "Transformation"
+        },
+        {
+          "type": "AutoTransformation"
+        },
+        {
+          "type": "NumericTransformation"
+        },
+        {
+          "type": "CategoricalTransformation"
+        },
+        {
+          "type": "TimestampTransformation"
+        },
+        {
+          "type": "TextTransformation"
+        },
+        {
+          "type": "NumericArrayTransformation"
+        },
+        {
+          "type": "CategoricalArrayTransformation"
+        },
+        {
+          "type": "TextArrayTransformation"
+        }
+      ]
+    },
+    {
+      "type": "AutoMlTablesMetadata"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/aiplatform/v1/schema/trainingjob/definition/automl_tables.pb.go",
+    "pkg": "definitionpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1/schema/trainingjob/definition/definitionpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1/schema/trainingjob/definition/automl_text_classification",
+  "pkg": "google.cloud.aiplatform.v1.schema.trainingjob.definition",
+  "msgs": [
+    {
+      "type": "AutoMlTextClassification"
+    },
+    {
+      "type": "AutoMlTextClassificationInputs"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/aiplatform/v1/schema/trainingjob/definition/automl_text_classification.pb.go",
+    "pkg": "definitionpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1/schema/trainingjob/definition/definitionpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1/schema/trainingjob/definition/automl_video_action_recognition",
+  "pkg": "google.cloud.aiplatform.v1.schema.trainingjob.definition",
+  "msgs": [
+    {
+      "type": "AutoMlVideoActionRecognition"
+    },
+    {
+      "type": "AutoMlVideoActionRecognitionInputs"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/aiplatform/v1/schema/trainingjob/definition/automl_video_action_recognition.pb.go",
+    "pkg": "definitionpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1/schema/trainingjob/definition/definitionpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1/schema/trainingjob/definition/automl_video_object_tracking",
+  "pkg": "google.cloud.aiplatform.v1.schema.trainingjob.definition",
+  "msgs": [
+    {
+      "type": "AutoMlVideoObjectTracking"
+    },
+    {
+      "type": "AutoMlVideoObjectTrackingInputs"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/aiplatform/v1/schema/trainingjob/definition/automl_video_object_tracking.pb.go",
+    "pkg": "definitionpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1/schema/trainingjob/definition/definitionpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1/schema/trainingjob/definition/automl_video_classification",
+  "pkg": "google.cloud.aiplatform.v1.schema.trainingjob.definition",
+  "msgs": [
+    {
+      "type": "AutoMlVideoClassification"
+    },
+    {
+      "type": "AutoMlVideoClassificationInputs"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/aiplatform/v1/schema/trainingjob/definition/automl_video_classification.pb.go",
+    "pkg": "definitionpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1/schema/trainingjob/definition/definitionpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1/schema/trainingjob/definition/export_evaluated_data_items_config",
+  "pkg": "google.cloud.aiplatform.v1.schema.trainingjob.definition",
+  "msgs": [
+    {
+      "type": "ExportEvaluatedDataItemsConfig"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/aiplatform/v1/schema/trainingjob/definition/export_evaluated_data_items_config.pb.go",
+    "pkg": "definitionpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1/schema/trainingjob/definition/definitionpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1/schema/trainingjob/definition/automl_image_object_detection",
+  "pkg": "google.cloud.aiplatform.v1.schema.trainingjob.definition",
+  "msgs": [
+    {
+      "type": "AutoMlImageObjectDetection"
+    },
+    {
+      "type": "AutoMlImageObjectDetectionInputs"
+    },
+    {
+      "type": "AutoMlImageObjectDetectionMetadata"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/aiplatform/v1/schema/trainingjob/definition/automl_image_object_detection.pb.go",
+    "pkg": "definitionpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1/schema/trainingjob/definition/definitionpb"
+  }
+}

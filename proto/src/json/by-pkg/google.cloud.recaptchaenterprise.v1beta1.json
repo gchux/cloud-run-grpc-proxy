@@ -1,0 +1,95 @@
+{
+  "proto": "google/cloud/recaptchaenterprise/v1beta1/recaptchaenterprise",
+  "pkg": "google.cloud.recaptchaenterprise.v1beta1",
+  "svcs": [
+    {
+      "svc": "RecaptchaEnterpriseServiceV1Beta1",
+      "host": "recaptchaenterprise.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateAssessment",
+          "request": {
+            "type": "CreateAssessmentRequest"
+          },
+          "response": {
+            "type": "Assessment"
+          }
+        },
+        {
+          "method": "AnnotateAssessment",
+          "request": {
+            "type": "AnnotateAssessmentRequest"
+          },
+          "response": {
+            "type": "AnnotateAssessmentResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateAssessmentRequest"
+    },
+    {
+      "type": "TransactionEvent"
+    },
+    {
+      "type": "AnnotateAssessmentRequest"
+    },
+    {
+      "type": "AnnotateAssessmentResponse"
+    },
+    {
+      "type": "PasswordLeakVerification"
+    },
+    {
+      "type": "Assessment"
+    },
+    {
+      "type": "Event"
+    },
+    {
+      "type": "TransactionData",
+      "msgs": [
+        {
+          "type": "Address"
+        },
+        {
+          "type": "User"
+        },
+        {
+          "type": "Item"
+        },
+        {
+          "type": "GatewayInfo"
+        }
+      ]
+    },
+    {
+      "type": "TokenProperties"
+    },
+    {
+      "type": "FraudPreventionAssessment",
+      "msgs": [
+        {
+          "type": "StolenInstrumentVerdict"
+        },
+        {
+          "type": "CardTestingVerdict"
+        },
+        {
+          "type": "BehavioralTrustVerdict"
+        }
+      ]
+    },
+    {
+      "type": "AccountDefenderAssessment"
+    }
+  ],
+  "go": {
+    "src": "recaptchaenterprise/apiv1beta1/recaptchaenterprisepb/recaptchaenterprise.pb.go",
+    "pkg": "recaptchaenterprisepb",
+    "pkg_full": "cloud.google.com/go/recaptchaenterprise/v2/apiv1beta1/recaptchaenterprisepb"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "proto": "google/geo/type/viewport",
+  "pkg": "google.geo.type",
+  "msgs": [
+    {
+      "type": "Viewport"
+    }
+  ],
+  "go": {
+    "src": "googleapis/geo/type/viewport/viewport.pb.go",
+    "pkg": "viewport",
+    "pkg_full": "google.golang.org/genproto/googleapis/geo/type/viewport"
+  }
+}

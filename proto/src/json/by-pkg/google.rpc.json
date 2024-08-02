@@ -1,0 +1,104 @@
+{
+  "proto": "google/rpc/status",
+  "pkg": "google.rpc",
+  "msgs": [
+    {
+      "type": "Status"
+    }
+  ],
+  "go": {
+    "src": "googleapis/rpc/status/status.pb.go",
+    "pkg": "status",
+    "pkg_full": "google.golang.org/genproto/googleapis/rpc/status"
+  }
+}
+{
+  "proto": "google/rpc/error_details",
+  "pkg": "google.rpc",
+  "msgs": [
+    {
+      "type": "ErrorInfo"
+    },
+    {
+      "type": "RetryInfo"
+    },
+    {
+      "type": "DebugInfo"
+    },
+    {
+      "type": "QuotaFailure",
+      "msgs": [
+        {
+          "type": "Violation"
+        }
+      ]
+    },
+    {
+      "type": "PreconditionFailure",
+      "msgs": [
+        {
+          "type": "Violation"
+        }
+      ]
+    },
+    {
+      "type": "BadRequest",
+      "msgs": [
+        {
+          "type": "FieldViolation"
+        }
+      ]
+    },
+    {
+      "type": "RequestInfo"
+    },
+    {
+      "type": "ResourceInfo"
+    },
+    {
+      "type": "Help",
+      "msgs": [
+        {
+          "type": "Link"
+        }
+      ]
+    },
+    {
+      "type": "LocalizedMessage"
+    }
+  ],
+  "go": {
+    "src": "googleapis/rpc/errdetails/error_details.pb.go",
+    "pkg": "errdetails",
+    "pkg_full": "google.golang.org/genproto/googleapis/rpc/errdetails"
+  }
+}
+{
+  "proto": "google/rpc/code",
+  "pkg": "google.rpc",
+  "go": {
+    "src": "googleapis/rpc/code/code.pb.go",
+    "pkg": "code",
+    "pkg_full": "google.golang.org/genproto/googleapis/rpc/code"
+  }
+}
+{
+  "proto": "google/rpc/http",
+  "pkg": "google.rpc",
+  "msgs": [
+    {
+      "type": "HttpRequest"
+    },
+    {
+      "type": "HttpResponse"
+    },
+    {
+      "type": "HttpHeader"
+    }
+  ],
+  "go": {
+    "src": "googleapis/rpc/http/http.pb.go",
+    "pkg": "http",
+    "pkg_full": "google.golang.org/genproto/googleapis/rpc/http"
+  }
+}

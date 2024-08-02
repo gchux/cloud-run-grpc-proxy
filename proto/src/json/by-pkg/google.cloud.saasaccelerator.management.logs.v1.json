@@ -1,0 +1,28 @@
+{
+  "proto": "google/cloud/saasaccelerator/management/logs/v1/notification_service_payload",
+  "pkg": "google.cloud.saasaccelerator.management.logs.v1",
+  "msgs": [
+    {
+      "type": "NotificationStage"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/saasaccelerator/management/logs/v1/notification_service_payload.pb.go",
+    "pkg": "logspb",
+    "pkg_full": "cloud.google.com/go/saasaccelerator/management/logs/apiv1/logspb"
+  }
+}
+{
+  "proto": "google/cloud/saasaccelerator/management/logs/v1/saas_instance_payload",
+  "pkg": "google.cloud.saasaccelerator.management.logs.v1",
+  "msgs": [
+    {
+      "type": "InstanceEvent"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/saasaccelerator/management/logs/v1/saas_instance_payload.pb.go",
+    "pkg": "logspb",
+    "pkg_full": "cloud.google.com/go/saasaccelerator/management/logs/apiv1/logspb"
+  }
+}

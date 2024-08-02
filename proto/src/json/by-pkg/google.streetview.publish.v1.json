@@ -1,0 +1,272 @@
+{
+  "proto": "google/streetview/publish/v1/resources",
+  "pkg": "google.streetview.publish.v1",
+  "msgs": [
+    {
+      "type": "UploadRef"
+    },
+    {
+      "type": "PhotoId"
+    },
+    {
+      "type": "Level"
+    },
+    {
+      "type": "Pose"
+    },
+    {
+      "type": "Imu",
+      "msgs": [
+        {
+          "type": "Measurement3d"
+        }
+      ]
+    },
+    {
+      "type": "Place"
+    },
+    {
+      "type": "Connection"
+    },
+    {
+      "type": "Photo"
+    },
+    {
+      "type": "PhotoSequence"
+    },
+    {
+      "type": "LatLngBounds"
+    },
+    {
+      "type": "ProcessingFailureDetails"
+    },
+    {
+      "type": "InsufficientGpsFailureDetails"
+    },
+    {
+      "type": "GpsDataGapFailureDetails"
+    },
+    {
+      "type": "ImuDataGapFailureDetails"
+    },
+    {
+      "type": "NotOutdoorsFailureDetails"
+    },
+    {
+      "type": "NoOverlapGpsFailureDetails"
+    }
+  ],
+  "go": {
+    "src": "streetview/publish/apiv1/publishpb/resources.pb.go",
+    "pkg": "publishpb",
+    "pkg_full": "cloud.google.com/go/streetview/publish/apiv1/publishpb"
+  }
+}
+{
+  "proto": "google/streetview/publish/v1/streetview_publish",
+  "pkg": "google.streetview.publish.v1",
+  "svcs": [
+    {
+      "svc": "StreetViewPublishService",
+      "host": "streetviewpublish.googleapis.com",
+      "rpcs": [
+        {
+          "method": "StartUpload",
+          "request": {
+            "type": "google.protobuf.Empty"
+          },
+          "response": {
+            "type": "UploadRef"
+          }
+        },
+        {
+          "method": "CreatePhoto",
+          "request": {
+            "type": "CreatePhotoRequest"
+          },
+          "response": {
+            "type": "Photo"
+          }
+        },
+        {
+          "method": "GetPhoto",
+          "request": {
+            "type": "GetPhotoRequest"
+          },
+          "response": {
+            "type": "Photo"
+          }
+        },
+        {
+          "method": "BatchGetPhotos",
+          "request": {
+            "type": "BatchGetPhotosRequest"
+          },
+          "response": {
+            "type": "BatchGetPhotosResponse"
+          }
+        },
+        {
+          "method": "ListPhotos",
+          "request": {
+            "type": "ListPhotosRequest"
+          },
+          "response": {
+            "type": "ListPhotosResponse"
+          }
+        },
+        {
+          "method": "UpdatePhoto",
+          "request": {
+            "type": "UpdatePhotoRequest"
+          },
+          "response": {
+            "type": "Photo"
+          }
+        },
+        {
+          "method": "BatchUpdatePhotos",
+          "request": {
+            "type": "BatchUpdatePhotosRequest"
+          },
+          "response": {
+            "type": "BatchUpdatePhotosResponse"
+          }
+        },
+        {
+          "method": "DeletePhoto",
+          "request": {
+            "type": "DeletePhotoRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "BatchDeletePhotos",
+          "request": {
+            "type": "BatchDeletePhotosRequest"
+          },
+          "response": {
+            "type": "BatchDeletePhotosResponse"
+          }
+        },
+        {
+          "method": "StartPhotoSequenceUpload",
+          "request": {
+            "type": "google.protobuf.Empty"
+          },
+          "response": {
+            "type": "UploadRef"
+          }
+        },
+        {
+          "method": "CreatePhotoSequence",
+          "request": {
+            "type": "CreatePhotoSequenceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetPhotoSequence",
+          "request": {
+            "type": "GetPhotoSequenceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListPhotoSequences",
+          "request": {
+            "type": "ListPhotoSequencesRequest"
+          },
+          "response": {
+            "type": "ListPhotoSequencesResponse"
+          }
+        },
+        {
+          "method": "DeletePhotoSequence",
+          "request": {
+            "type": "DeletePhotoSequenceRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "streetview/publish/apiv1/publishpb/streetview_publish.pb.go",
+    "pkg": "publishpb",
+    "pkg_full": "cloud.google.com/go/streetview/publish/apiv1/publishpb"
+  }
+}
+{
+  "proto": "google/streetview/publish/v1/rpcmessages",
+  "pkg": "google.streetview.publish.v1",
+  "msgs": [
+    {
+      "type": "CreatePhotoRequest"
+    },
+    {
+      "type": "GetPhotoRequest"
+    },
+    {
+      "type": "BatchGetPhotosRequest"
+    },
+    {
+      "type": "BatchGetPhotosResponse"
+    },
+    {
+      "type": "PhotoResponse"
+    },
+    {
+      "type": "ListPhotosRequest"
+    },
+    {
+      "type": "ListPhotosResponse"
+    },
+    {
+      "type": "UpdatePhotoRequest"
+    },
+    {
+      "type": "BatchUpdatePhotosRequest"
+    },
+    {
+      "type": "BatchUpdatePhotosResponse"
+    },
+    {
+      "type": "DeletePhotoRequest"
+    },
+    {
+      "type": "BatchDeletePhotosRequest"
+    },
+    {
+      "type": "CreatePhotoSequenceRequest"
+    },
+    {
+      "type": "GetPhotoSequenceRequest"
+    },
+    {
+      "type": "DeletePhotoSequenceRequest"
+    },
+    {
+      "type": "BatchDeletePhotosResponse"
+    },
+    {
+      "type": "ListPhotoSequencesRequest"
+    },
+    {
+      "type": "ListPhotoSequencesResponse"
+    }
+  ],
+  "go": {
+    "src": "streetview/publish/apiv1/publishpb/rpcmessages.pb.go",
+    "pkg": "publishpb",
+    "pkg_full": "cloud.google.com/go/streetview/publish/apiv1/publishpb"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "proto": "google/cloud/policytroubleshooter/iam/v3beta/troubleshooter",
+  "pkg": "google.cloud.policytroubleshooter.iam.v3beta",
+  "svcs": [
+    {
+      "svc": "PolicyTroubleshooter",
+      "host": "policytroubleshooter.googleapis.com",
+      "rpcs": [
+        {
+          "method": "TroubleshootIamPolicy",
+          "request": {
+            "type": "TroubleshootIamPolicyRequest"
+          },
+          "response": {
+            "type": "TroubleshootIamPolicyResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "TroubleshootIamPolicyRequest"
+    },
+    {
+      "type": "TroubleshootIamPolicyResponse"
+    },
+    {
+      "type": "AccessTuple"
+    },
+    {
+      "type": "ConditionContext",
+      "msgs": [
+        {
+          "type": "Resource"
+        },
+        {
+          "type": "Peer"
+        },
+        {
+          "type": "Request"
+        },
+        {
+          "type": "EffectiveTag"
+        }
+      ]
+    },
+    {
+      "type": "AllowPolicyExplanation"
+    },
+    {
+      "type": "ExplainedAllowPolicy"
+    },
+    {
+      "type": "AllowBindingExplanation",
+      "msgs": [
+        {
+          "type": "AnnotatedAllowMembership"
+        }
+      ]
+    },
+    {
+      "type": "DenyPolicyExplanation"
+    },
+    {
+      "type": "ExplainedDenyResource"
+    },
+    {
+      "type": "ExplainedDenyPolicy"
+    },
+    {
+      "type": "DenyRuleExplanation",
+      "msgs": [
+        {
+          "type": "AnnotatedPermissionMatching"
+        },
+        {
+          "type": "AnnotatedDenyPrincipalMatching"
+        }
+      ]
+    },
+    {
+      "type": "ConditionExplanation",
+      "msgs": [
+        {
+          "type": "EvaluationState"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "pkg": "iampb",
+    "pkg_full": "cloud.google.com/go/policytroubleshooter/iam/apiv3beta/iampb"
+  }
+}

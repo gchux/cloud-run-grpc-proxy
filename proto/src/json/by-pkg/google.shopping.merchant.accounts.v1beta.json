@@ -1,0 +1,1037 @@
+{
+  "proto": "google/shopping/merchant/accounts/v1beta/phoneverificationstate",
+  "pkg": "google.shopping.merchant.accounts.v1beta",
+  "go": {
+    "src": "shopping/merchant/accounts/apiv1beta/accountspb/phoneverificationstate.pb.go",
+    "pkg": "accountspb",
+    "pkg_full": "cloud.google.com/go/shopping/merchant/accounts/apiv1beta/accountspb"
+  }
+}
+{
+  "proto": "google/shopping/merchant/accounts/v1beta/accessright",
+  "pkg": "google.shopping.merchant.accounts.v1beta",
+  "go": {
+    "src": "shopping/merchant/accounts/apiv1beta/accountspb/accessright.pb.go",
+    "pkg": "accountspb",
+    "pkg_full": "cloud.google.com/go/shopping/merchant/accounts/apiv1beta/accountspb"
+  }
+}
+{
+  "proto": "google/shopping/merchant/accounts/v1beta/homepage",
+  "pkg": "google.shopping.merchant.accounts.v1beta",
+  "svcs": [
+    {
+      "svc": "HomepageService",
+      "host": "merchantapi.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetHomepage",
+          "request": {
+            "type": "GetHomepageRequest"
+          },
+          "response": {
+            "type": "Homepage"
+          }
+        },
+        {
+          "method": "UpdateHomepage",
+          "request": {
+            "type": "UpdateHomepageRequest"
+          },
+          "response": {
+            "type": "Homepage"
+          }
+        },
+        {
+          "method": "ClaimHomepage",
+          "request": {
+            "type": "ClaimHomepageRequest"
+          },
+          "response": {
+            "type": "Homepage"
+          }
+        },
+        {
+          "method": "UnclaimHomepage",
+          "request": {
+            "type": "UnclaimHomepageRequest"
+          },
+          "response": {
+            "type": "Homepage"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Homepage"
+    },
+    {
+      "type": "GetHomepageRequest"
+    },
+    {
+      "type": "UpdateHomepageRequest"
+    },
+    {
+      "type": "ClaimHomepageRequest"
+    },
+    {
+      "type": "UnclaimHomepageRequest"
+    }
+  ],
+  "go": {
+    "src": "shopping/merchant/accounts/apiv1beta/accountspb/homepage.pb.go",
+    "pkg": "accountspb",
+    "pkg_full": "cloud.google.com/go/shopping/merchant/accounts/apiv1beta/accountspb"
+  }
+}
+{
+  "proto": "google/shopping/merchant/accounts/v1beta/termsofservice",
+  "pkg": "google.shopping.merchant.accounts.v1beta",
+  "svcs": [
+    {
+      "svc": "TermsOfServiceService",
+      "host": "merchantapi.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetTermsOfService",
+          "request": {
+            "type": "GetTermsOfServiceRequest"
+          },
+          "response": {
+            "type": "TermsOfService"
+          }
+        },
+        {
+          "method": "RetrieveLatestTermsOfService",
+          "request": {
+            "type": "RetrieveLatestTermsOfServiceRequest"
+          },
+          "response": {
+            "type": "TermsOfService"
+          }
+        },
+        {
+          "method": "AcceptTermsOfService",
+          "request": {
+            "type": "AcceptTermsOfServiceRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "TermsOfService"
+    },
+    {
+      "type": "GetTermsOfServiceRequest"
+    },
+    {
+      "type": "RetrieveLatestTermsOfServiceRequest"
+    },
+    {
+      "type": "AcceptTermsOfServiceRequest"
+    }
+  ],
+  "go": {
+    "src": "shopping/merchant/accounts/apiv1beta/accountspb/termsofservice.pb.go",
+    "pkg": "accountspb",
+    "pkg_full": "cloud.google.com/go/shopping/merchant/accounts/apiv1beta/accountspb"
+  }
+}
+{
+  "proto": "google/shopping/merchant/accounts/v1beta/businessidentity",
+  "pkg": "google.shopping.merchant.accounts.v1beta",
+  "svcs": [
+    {
+      "svc": "BusinessIdentityService",
+      "host": "merchantapi.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetBusinessIdentity",
+          "request": {
+            "type": "GetBusinessIdentityRequest"
+          },
+          "response": {
+            "type": "BusinessIdentity"
+          }
+        },
+        {
+          "method": "UpdateBusinessIdentity",
+          "request": {
+            "type": "UpdateBusinessIdentityRequest"
+          },
+          "response": {
+            "type": "BusinessIdentity"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "BusinessIdentity",
+      "msgs": [
+        {
+          "type": "IdentityAttribute"
+        }
+      ]
+    },
+    {
+      "type": "GetBusinessIdentityRequest"
+    },
+    {
+      "type": "UpdateBusinessIdentityRequest"
+    }
+  ],
+  "go": {
+    "src": "shopping/merchant/accounts/apiv1beta/accountspb/businessidentity.pb.go",
+    "pkg": "accountspb",
+    "pkg_full": "cloud.google.com/go/shopping/merchant/accounts/apiv1beta/accountspb"
+  }
+}
+{
+  "proto": "google/shopping/merchant/accounts/v1beta/account_tax",
+  "pkg": "google.shopping.merchant.accounts.v1beta",
+  "svcs": [
+    {
+      "svc": "AccountTaxService",
+      "host": "merchantapi.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetAccountTax",
+          "request": {
+            "type": "GetAccountTaxRequest"
+          },
+          "response": {
+            "type": "AccountTax"
+          }
+        },
+        {
+          "method": "ListAccountTax",
+          "request": {
+            "type": "ListAccountTaxRequest"
+          },
+          "response": {
+            "type": "ListAccountTaxResponse"
+          }
+        },
+        {
+          "method": "UpdateAccountTax",
+          "request": {
+            "type": "UpdateAccountTaxRequest"
+          },
+          "response": {
+            "type": "AccountTax"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "AccountTax"
+    },
+    {
+      "type": "GetAccountTaxRequest"
+    },
+    {
+      "type": "UpdateAccountTaxRequest"
+    },
+    {
+      "type": "ListAccountTaxRequest"
+    },
+    {
+      "type": "ListAccountTaxResponse"
+    }
+  ],
+  "go": {
+    "src": "shopping/merchant/accounts/apiv1beta/accountspb/account_tax.pb.go",
+    "pkg": "accountspb",
+    "pkg_full": "cloud.google.com/go/shopping/merchant/accounts/apiv1beta/accountspb"
+  }
+}
+{
+  "proto": "google/shopping/merchant/accounts/v1beta/businessinfo",
+  "pkg": "google.shopping.merchant.accounts.v1beta",
+  "svcs": [
+    {
+      "svc": "BusinessInfoService",
+      "host": "merchantapi.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetBusinessInfo",
+          "request": {
+            "type": "GetBusinessInfoRequest"
+          },
+          "response": {
+            "type": "BusinessInfo"
+          }
+        },
+        {
+          "method": "UpdateBusinessInfo",
+          "request": {
+            "type": "UpdateBusinessInfoRequest"
+          },
+          "response": {
+            "type": "BusinessInfo"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "BusinessInfo"
+    },
+    {
+      "type": "GetBusinessInfoRequest"
+    },
+    {
+      "type": "UpdateBusinessInfoRequest"
+    }
+  ],
+  "go": {
+    "src": "shopping/merchant/accounts/apiv1beta/accountspb/businessinfo.pb.go",
+    "pkg": "accountspb",
+    "pkg_full": "cloud.google.com/go/shopping/merchant/accounts/apiv1beta/accountspb"
+  }
+}
+{
+  "proto": "google/shopping/merchant/accounts/v1beta/regions",
+  "pkg": "google.shopping.merchant.accounts.v1beta",
+  "svcs": [
+    {
+      "svc": "RegionsService",
+      "host": "merchantapi.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetRegion",
+          "request": {
+            "type": "GetRegionRequest"
+          },
+          "response": {
+            "type": "Region"
+          }
+        },
+        {
+          "method": "CreateRegion",
+          "request": {
+            "type": "CreateRegionRequest"
+          },
+          "response": {
+            "type": "Region"
+          }
+        },
+        {
+          "method": "UpdateRegion",
+          "request": {
+            "type": "UpdateRegionRequest"
+          },
+          "response": {
+            "type": "Region"
+          }
+        },
+        {
+          "method": "DeleteRegion",
+          "request": {
+            "type": "DeleteRegionRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListRegions",
+          "request": {
+            "type": "ListRegionsRequest"
+          },
+          "response": {
+            "type": "ListRegionsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GetRegionRequest"
+    },
+    {
+      "type": "CreateRegionRequest"
+    },
+    {
+      "type": "UpdateRegionRequest"
+    },
+    {
+      "type": "DeleteRegionRequest"
+    },
+    {
+      "type": "ListRegionsRequest"
+    },
+    {
+      "type": "ListRegionsResponse"
+    },
+    {
+      "type": "Region",
+      "msgs": [
+        {
+          "type": "PostalCodeArea"
+        },
+        {
+          "type": "PostalCodeRange"
+        },
+        {
+          "type": "GeoTargetArea"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "shopping/merchant/accounts/apiv1beta/accountspb/regions.pb.go",
+    "pkg": "accountspb",
+    "pkg_full": "cloud.google.com/go/shopping/merchant/accounts/apiv1beta/accountspb"
+  }
+}
+{
+  "proto": "google/shopping/merchant/accounts/v1beta/termsofserviceagreementstate",
+  "pkg": "google.shopping.merchant.accounts.v1beta",
+  "svcs": [
+    {
+      "svc": "TermsOfServiceAgreementStateService",
+      "host": "merchantapi.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetTermsOfServiceAgreementState",
+          "request": {
+            "type": "GetTermsOfServiceAgreementStateRequest"
+          },
+          "response": {
+            "type": "TermsOfServiceAgreementState"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "TermsOfServiceAgreementState"
+    },
+    {
+      "type": "Accepted"
+    },
+    {
+      "type": "Required"
+    },
+    {
+      "type": "GetTermsOfServiceAgreementStateRequest"
+    },
+    {
+      "type": "RetrieveForApplicationTermsOfServiceAgreementStateRequest"
+    }
+  ],
+  "go": {
+    "src": "shopping/merchant/accounts/apiv1beta/accountspb/termsofserviceagreementstate.pb.go",
+    "pkg": "accountspb",
+    "pkg_full": "cloud.google.com/go/shopping/merchant/accounts/apiv1beta/accountspb"
+  }
+}
+{
+  "proto": "google/shopping/merchant/accounts/v1beta/emailpreferences",
+  "pkg": "google.shopping.merchant.accounts.v1beta",
+  "svcs": [
+    {
+      "svc": "EmailPreferencesService",
+      "host": "merchantapi.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetEmailPreferences",
+          "request": {
+            "type": "GetEmailPreferencesRequest"
+          },
+          "response": {
+            "type": "EmailPreferences"
+          }
+        },
+        {
+          "method": "UpdateEmailPreferences",
+          "request": {
+            "type": "UpdateEmailPreferencesRequest"
+          },
+          "response": {
+            "type": "EmailPreferences"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "EmailPreferences"
+    },
+    {
+      "type": "GetEmailPreferencesRequest"
+    },
+    {
+      "type": "UpdateEmailPreferencesRequest"
+    }
+  ],
+  "go": {
+    "src": "shopping/merchant/accounts/apiv1beta/accountspb/emailpreferences.pb.go",
+    "pkg": "accountspb",
+    "pkg_full": "cloud.google.com/go/shopping/merchant/accounts/apiv1beta/accountspb"
+  }
+}
+{
+  "proto": "google/shopping/merchant/accounts/v1beta/online_return_policy",
+  "pkg": "google.shopping.merchant.accounts.v1beta",
+  "svcs": [
+    {
+      "svc": "OnlineReturnPolicyService",
+      "host": "merchantapi.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetOnlineReturnPolicy",
+          "request": {
+            "type": "GetOnlineReturnPolicyRequest"
+          },
+          "response": {
+            "type": "OnlineReturnPolicy"
+          }
+        },
+        {
+          "method": "ListOnlineReturnPolicies",
+          "request": {
+            "type": "ListOnlineReturnPoliciesRequest"
+          },
+          "response": {
+            "type": "ListOnlineReturnPoliciesResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GetOnlineReturnPolicyRequest"
+    },
+    {
+      "type": "ListOnlineReturnPoliciesRequest"
+    },
+    {
+      "type": "ListOnlineReturnPoliciesResponse"
+    },
+    {
+      "type": "OnlineReturnPolicy",
+      "msgs": [
+        {
+          "type": "ReturnShippingFee"
+        },
+        {
+          "type": "RestockingFee"
+        },
+        {
+          "type": "Policy"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "shopping/merchant/accounts/apiv1beta/accountspb/online_return_policy.pb.go",
+    "pkg": "accountspb",
+    "pkg_full": "cloud.google.com/go/shopping/merchant/accounts/apiv1beta/accountspb"
+  }
+}
+{
+  "proto": "google/shopping/merchant/accounts/v1beta/accounts",
+  "pkg": "google.shopping.merchant.accounts.v1beta",
+  "svcs": [
+    {
+      "svc": "AccountsService",
+      "host": "merchantapi.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetAccount",
+          "request": {
+            "type": "GetAccountRequest"
+          },
+          "response": {
+            "type": "Account"
+          }
+        },
+        {
+          "method": "CreateAndConfigureAccount",
+          "request": {
+            "type": "CreateAndConfigureAccountRequest"
+          },
+          "response": {
+            "type": "Account"
+          }
+        },
+        {
+          "method": "DeleteAccount",
+          "request": {
+            "type": "DeleteAccountRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "UpdateAccount",
+          "request": {
+            "type": "UpdateAccountRequest"
+          },
+          "response": {
+            "type": "Account"
+          }
+        },
+        {
+          "method": "ListAccounts",
+          "request": {
+            "type": "ListAccountsRequest"
+          },
+          "response": {
+            "type": "ListAccountsResponse"
+          }
+        },
+        {
+          "method": "ListSubAccounts",
+          "request": {
+            "type": "ListSubAccountsRequest"
+          },
+          "response": {
+            "type": "ListSubAccountsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Account"
+    },
+    {
+      "type": "GetAccountRequest"
+    },
+    {
+      "type": "CreateAndConfigureAccountRequest",
+      "msgs": [
+        {
+          "type": "AcceptTermsOfService"
+        },
+        {
+          "type": "AddAccountService"
+        }
+      ]
+    },
+    {
+      "type": "DeleteAccountRequest"
+    },
+    {
+      "type": "UpdateAccountRequest"
+    },
+    {
+      "type": "ListAccountsRequest"
+    },
+    {
+      "type": "ListAccountsResponse"
+    },
+    {
+      "type": "ListSubAccountsRequest"
+    },
+    {
+      "type": "ListSubAccountsResponse"
+    }
+  ],
+  "go": {
+    "src": "shopping/merchant/accounts/apiv1beta/accountspb/accounts.pb.go",
+    "pkg": "accountspb",
+    "pkg_full": "cloud.google.com/go/shopping/merchant/accounts/apiv1beta/accountspb"
+  }
+}
+{
+  "proto": "google/shopping/merchant/accounts/v1beta/tax_rule",
+  "pkg": "google.shopping.merchant.accounts.v1beta",
+  "msgs": [
+    {
+      "type": "TaxRule",
+      "msgs": [
+        {
+          "type": "TaxPostalCodeRange"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "shopping/merchant/accounts/apiv1beta/accountspb/tax_rule.pb.go",
+    "pkg": "accountspb",
+    "pkg_full": "cloud.google.com/go/shopping/merchant/accounts/apiv1beta/accountspb"
+  }
+}
+{
+  "proto": "google/shopping/merchant/accounts/v1beta/accountissue",
+  "pkg": "google.shopping.merchant.accounts.v1beta",
+  "svcs": [
+    {
+      "svc": "AccountIssueService",
+      "host": "merchantapi.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListAccountIssues",
+          "request": {
+            "type": "ListAccountIssuesRequest"
+          },
+          "response": {
+            "type": "ListAccountIssuesResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "AccountIssue",
+      "msgs": [
+        {
+          "type": "ImpactedDestination"
+        },
+        {
+          "type": "Impact"
+        }
+      ]
+    },
+    {
+      "type": "ListAccountIssuesRequest"
+    },
+    {
+      "type": "ListAccountIssuesResponse"
+    }
+  ],
+  "go": {
+    "src": "shopping/merchant/accounts/apiv1beta/accountspb/accountissue.pb.go",
+    "pkg": "accountspb",
+    "pkg_full": "cloud.google.com/go/shopping/merchant/accounts/apiv1beta/accountspb"
+  }
+}
+{
+  "proto": "google/shopping/merchant/accounts/v1beta/termsofservicekind",
+  "pkg": "google.shopping.merchant.accounts.v1beta",
+  "go": {
+    "src": "shopping/merchant/accounts/apiv1beta/accountspb/termsofservicekind.pb.go",
+    "pkg": "accountspb",
+    "pkg_full": "cloud.google.com/go/shopping/merchant/accounts/apiv1beta/accountspb"
+  }
+}
+{
+  "proto": "google/shopping/merchant/accounts/v1beta/user",
+  "pkg": "google.shopping.merchant.accounts.v1beta",
+  "svcs": [
+    {
+      "svc": "UserService",
+      "host": "merchantapi.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetUser",
+          "request": {
+            "type": "GetUserRequest"
+          },
+          "response": {
+            "type": "User"
+          }
+        },
+        {
+          "method": "CreateUser",
+          "request": {
+            "type": "CreateUserRequest"
+          },
+          "response": {
+            "type": "User"
+          }
+        },
+        {
+          "method": "DeleteUser",
+          "request": {
+            "type": "DeleteUserRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "UpdateUser",
+          "request": {
+            "type": "UpdateUserRequest"
+          },
+          "response": {
+            "type": "User"
+          }
+        },
+        {
+          "method": "ListUsers",
+          "request": {
+            "type": "ListUsersRequest"
+          },
+          "response": {
+            "type": "ListUsersResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "User"
+    },
+    {
+      "type": "GetUserRequest"
+    },
+    {
+      "type": "CreateUserRequest"
+    },
+    {
+      "type": "DeleteUserRequest"
+    },
+    {
+      "type": "UpdateUserRequest"
+    },
+    {
+      "type": "ListUsersRequest"
+    },
+    {
+      "type": "ListUsersResponse"
+    }
+  ],
+  "go": {
+    "src": "shopping/merchant/accounts/apiv1beta/accountspb/user.pb.go",
+    "pkg": "accountspb",
+    "pkg_full": "cloud.google.com/go/shopping/merchant/accounts/apiv1beta/accountspb"
+  }
+}
+{
+  "proto": "google/shopping/merchant/accounts/v1beta/customerservice",
+  "pkg": "google.shopping.merchant.accounts.v1beta",
+  "msgs": [
+    {
+      "type": "CustomerService"
+    }
+  ],
+  "go": {
+    "src": "shopping/merchant/accounts/apiv1beta/accountspb/customerservice.pb.go",
+    "pkg": "accountspb",
+    "pkg_full": "cloud.google.com/go/shopping/merchant/accounts/apiv1beta/accountspb"
+  }
+}
+{
+  "proto": "google/shopping/merchant/accounts/v1beta/programs",
+  "pkg": "google.shopping.merchant.accounts.v1beta",
+  "svcs": [
+    {
+      "svc": "ProgramsService",
+      "host": "merchantapi.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetProgram",
+          "request": {
+            "type": "GetProgramRequest"
+          },
+          "response": {
+            "type": "Program"
+          }
+        },
+        {
+          "method": "ListPrograms",
+          "request": {
+            "type": "ListProgramsRequest"
+          },
+          "response": {
+            "type": "ListProgramsResponse"
+          }
+        },
+        {
+          "method": "EnableProgram",
+          "request": {
+            "type": "EnableProgramRequest"
+          },
+          "response": {
+            "type": "Program"
+          }
+        },
+        {
+          "method": "DisableProgram",
+          "request": {
+            "type": "DisableProgramRequest"
+          },
+          "response": {
+            "type": "Program"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Program",
+      "msgs": [
+        {
+          "type": "Requirement"
+        }
+      ]
+    },
+    {
+      "type": "GetProgramRequest"
+    },
+    {
+      "type": "ListProgramsRequest"
+    },
+    {
+      "type": "ListProgramsResponse"
+    },
+    {
+      "type": "EnableProgramRequest"
+    },
+    {
+      "type": "DisableProgramRequest"
+    }
+  ],
+  "go": {
+    "src": "shopping/merchant/accounts/apiv1beta/accountspb/programs.pb.go",
+    "pkg": "accountspb",
+    "pkg_full": "cloud.google.com/go/shopping/merchant/accounts/apiv1beta/accountspb"
+  }
+}
+{
+  "proto": "google/shopping/merchant/accounts/v1beta/shippingsettings",
+  "pkg": "google.shopping.merchant.accounts.v1beta",
+  "svcs": [
+    {
+      "svc": "ShippingSettingsService",
+      "host": "merchantapi.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetShippingSettings",
+          "request": {
+            "type": "GetShippingSettingsRequest"
+          },
+          "response": {
+            "type": "ShippingSettings"
+          }
+        },
+        {
+          "method": "InsertShippingSettings",
+          "request": {
+            "type": "InsertShippingSettingsRequest"
+          },
+          "response": {
+            "type": "ShippingSettings"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ShippingSettings"
+    },
+    {
+      "type": "Service",
+      "msgs": [
+        {
+          "type": "StoreConfig"
+        },
+        {
+          "type": "CutoffConfig"
+        },
+        {
+          "type": "LocalCutoffTime"
+        },
+        {
+          "type": "LoyaltyProgram"
+        },
+        {
+          "type": "LoyaltyProgramTiers"
+        }
+      ]
+    },
+    {
+      "type": "Distance"
+    },
+    {
+      "type": "Warehouse"
+    },
+    {
+      "type": "WarehouseCutoffTime"
+    },
+    {
+      "type": "Address"
+    },
+    {
+      "type": "DeliveryTime"
+    },
+    {
+      "type": "CutoffTime"
+    },
+    {
+      "type": "BusinessDayConfig"
+    },
+    {
+      "type": "WarehouseBasedDeliveryTime"
+    },
+    {
+      "type": "RateGroup"
+    },
+    {
+      "type": "Table"
+    },
+    {
+      "type": "TransitTable",
+      "msgs": [
+        {
+          "type": "TransitTimeRow"
+        },
+        {
+          "type": "TransitTimeValue"
+        }
+      ]
+    },
+    {
+      "type": "MinimumOrderValueTable",
+      "msgs": [
+        {
+          "type": "StoreCodeSetWithMov"
+        }
+      ]
+    },
+    {
+      "type": "Headers"
+    },
+    {
+      "type": "LocationIdSet"
+    },
+    {
+      "type": "Row"
+    },
+    {
+      "type": "Value"
+    },
+    {
+      "type": "CarrierRate"
+    },
+    {
+      "type": "GetShippingSettingsRequest"
+    },
+    {
+      "type": "InsertShippingSettingsRequest"
+    }
+  ],
+  "go": {
+    "src": "shopping/merchant/accounts/apiv1beta/accountspb/shippingsettings.pb.go",
+    "pkg": "accountspb",
+    "pkg_full": "cloud.google.com/go/shopping/merchant/accounts/apiv1beta/accountspb"
+  }
+}

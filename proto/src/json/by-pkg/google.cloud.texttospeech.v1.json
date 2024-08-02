@@ -1,0 +1,101 @@
+{
+  "proto": "google/cloud/texttospeech/v1/cloud_tts_lrs",
+  "pkg": "google.cloud.texttospeech.v1",
+  "svcs": [
+    {
+      "svc": "TextToSpeechLongAudioSynthesize",
+      "host": "texttospeech.googleapis.com",
+      "rpcs": [
+        {
+          "method": "SynthesizeLongAudio",
+          "request": {
+            "type": "SynthesizeLongAudioRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "SynthesizeLongAudioRequest"
+    },
+    {
+      "type": "SynthesizeLongAudioResponse"
+    },
+    {
+      "type": "SynthesizeLongAudioMetadata"
+    }
+  ],
+  "go": {
+    "src": "texttospeech/apiv1/texttospeechpb/cloud_tts_lrs.pb.go",
+    "pkg": "texttospeechpb",
+    "pkg_full": "cloud.google.com/go/texttospeech/apiv1/texttospeechpb"
+  }
+}
+{
+  "proto": "google/cloud/texttospeech/v1/cloud_tts",
+  "pkg": "google.cloud.texttospeech.v1",
+  "svcs": [
+    {
+      "svc": "TextToSpeech",
+      "host": "texttospeech.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListVoices",
+          "request": {
+            "type": "ListVoicesRequest"
+          },
+          "response": {
+            "type": "ListVoicesResponse"
+          }
+        },
+        {
+          "method": "SynthesizeSpeech",
+          "request": {
+            "type": "SynthesizeSpeechRequest"
+          },
+          "response": {
+            "type": "SynthesizeSpeechResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ListVoicesRequest"
+    },
+    {
+      "type": "ListVoicesResponse"
+    },
+    {
+      "type": "Voice"
+    },
+    {
+      "type": "SynthesizeSpeechRequest"
+    },
+    {
+      "type": "SynthesisInput"
+    },
+    {
+      "type": "VoiceSelectionParams"
+    },
+    {
+      "type": "AudioConfig"
+    },
+    {
+      "type": "CustomVoiceParams"
+    },
+    {
+      "type": "SynthesizeSpeechResponse"
+    }
+  ],
+  "go": {
+    "src": "texttospeech/apiv1/texttospeechpb/cloud_tts.pb.go",
+    "pkg": "texttospeechpb",
+    "pkg_full": "cloud.google.com/go/texttospeech/apiv1/texttospeechpb"
+  }
+}

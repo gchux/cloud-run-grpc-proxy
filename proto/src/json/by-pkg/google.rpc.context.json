@@ -1,0 +1,48 @@
+{
+  "proto": "google/rpc/context/attribute_context",
+  "pkg": "google.rpc.context",
+  "msgs": [
+    {
+      "type": "AttributeContext",
+      "msgs": [
+        {
+          "type": "Peer"
+        },
+        {
+          "type": "Api"
+        },
+        {
+          "type": "Auth"
+        },
+        {
+          "type": "Request"
+        },
+        {
+          "type": "Response"
+        },
+        {
+          "type": "Resource"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/rpc/context/attribute_context/attribute_context.pb.go",
+    "pkg": "attribute_context",
+    "pkg_full": "google.golang.org/genproto/googleapis/rpc/context/attribute_context"
+  }
+}
+{
+  "proto": "google/rpc/context/audit_context",
+  "pkg": "google.rpc.context",
+  "msgs": [
+    {
+      "type": "AuditContext"
+    }
+  ],
+  "go": {
+    "src": "googleapis/rpc/context/audit_context.pb.go",
+    "pkg": "context",
+    "pkg_full": "google.golang.org/genproto/googleapis/rpc/context"
+  }
+}

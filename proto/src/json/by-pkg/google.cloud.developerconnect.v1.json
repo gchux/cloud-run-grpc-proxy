@@ -1,0 +1,234 @@
+{
+  "proto": "google/cloud/developerconnect/v1/developer_connect",
+  "pkg": "google.cloud.developerconnect.v1",
+  "svcs": [
+    {
+      "svc": "DeveloperConnect",
+      "host": "developerconnect.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListConnections",
+          "request": {
+            "type": "ListConnectionsRequest"
+          },
+          "response": {
+            "type": "ListConnectionsResponse"
+          }
+        },
+        {
+          "method": "GetConnection",
+          "request": {
+            "type": "GetConnectionRequest"
+          },
+          "response": {
+            "type": "Connection"
+          }
+        },
+        {
+          "method": "CreateConnection",
+          "request": {
+            "type": "CreateConnectionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateConnection",
+          "request": {
+            "type": "UpdateConnectionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteConnection",
+          "request": {
+            "type": "DeleteConnectionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CreateGitRepositoryLink",
+          "request": {
+            "type": "CreateGitRepositoryLinkRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteGitRepositoryLink",
+          "request": {
+            "type": "DeleteGitRepositoryLinkRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListGitRepositoryLinks",
+          "request": {
+            "type": "ListGitRepositoryLinksRequest"
+          },
+          "response": {
+            "type": "ListGitRepositoryLinksResponse"
+          }
+        },
+        {
+          "method": "GetGitRepositoryLink",
+          "request": {
+            "type": "GetGitRepositoryLinkRequest"
+          },
+          "response": {
+            "type": "GitRepositoryLink"
+          }
+        },
+        {
+          "method": "FetchReadWriteToken",
+          "request": {
+            "type": "FetchReadWriteTokenRequest"
+          },
+          "response": {
+            "type": "FetchReadWriteTokenResponse"
+          }
+        },
+        {
+          "method": "FetchReadToken",
+          "request": {
+            "type": "FetchReadTokenRequest"
+          },
+          "response": {
+            "type": "FetchReadTokenResponse"
+          }
+        },
+        {
+          "method": "FetchLinkableGitRepositories",
+          "request": {
+            "type": "FetchLinkableGitRepositoriesRequest"
+          },
+          "response": {
+            "type": "FetchLinkableGitRepositoriesResponse"
+          }
+        },
+        {
+          "method": "FetchGitHubInstallations",
+          "request": {
+            "type": "FetchGitHubInstallationsRequest"
+          },
+          "response": {
+            "type": "FetchGitHubInstallationsResponse"
+          }
+        },
+        {
+          "method": "FetchGitRefs",
+          "request": {
+            "type": "FetchGitRefsRequest"
+          },
+          "response": {
+            "type": "FetchGitRefsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Connection"
+    },
+    {
+      "type": "InstallationState"
+    },
+    {
+      "type": "GitHubConfig"
+    },
+    {
+      "type": "OAuthCredential"
+    },
+    {
+      "type": "ListConnectionsRequest"
+    },
+    {
+      "type": "ListConnectionsResponse"
+    },
+    {
+      "type": "GetConnectionRequest"
+    },
+    {
+      "type": "CreateConnectionRequest"
+    },
+    {
+      "type": "UpdateConnectionRequest"
+    },
+    {
+      "type": "DeleteConnectionRequest"
+    },
+    {
+      "type": "OperationMetadata"
+    },
+    {
+      "type": "GitRepositoryLink"
+    },
+    {
+      "type": "CreateGitRepositoryLinkRequest"
+    },
+    {
+      "type": "DeleteGitRepositoryLinkRequest"
+    },
+    {
+      "type": "ListGitRepositoryLinksRequest"
+    },
+    {
+      "type": "ListGitRepositoryLinksResponse"
+    },
+    {
+      "type": "GetGitRepositoryLinkRequest"
+    },
+    {
+      "type": "FetchReadWriteTokenRequest"
+    },
+    {
+      "type": "FetchReadTokenRequest"
+    },
+    {
+      "type": "FetchReadTokenResponse"
+    },
+    {
+      "type": "FetchReadWriteTokenResponse"
+    },
+    {
+      "type": "FetchLinkableGitRepositoriesRequest"
+    },
+    {
+      "type": "FetchLinkableGitRepositoriesResponse"
+    },
+    {
+      "type": "LinkableGitRepository"
+    },
+    {
+      "type": "FetchGitHubInstallationsRequest"
+    },
+    {
+      "type": "FetchGitHubInstallationsResponse",
+      "msgs": [
+        {
+          "type": "Installation"
+        }
+      ]
+    },
+    {
+      "type": "FetchGitRefsRequest"
+    },
+    {
+      "type": "FetchGitRefsResponse"
+    }
+  ],
+  "go": {
+    "src": "developerconnect/apiv1/developerconnectpb/developer_connect.pb.go",
+    "pkg": "developerconnectpb",
+    "pkg_full": "cloud.google.com/go/developerconnect/apiv1/developerconnectpb"
+  }
+}

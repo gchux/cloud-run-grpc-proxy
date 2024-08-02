@@ -1,0 +1,293 @@
+{
+  "proto": "google/cloud/video/transcoder/v1/resources",
+  "pkg": "google.cloud.video.transcoder.v1",
+  "msgs": [
+    {
+      "type": "Job"
+    },
+    {
+      "type": "JobTemplate"
+    },
+    {
+      "type": "JobConfig"
+    },
+    {
+      "type": "Input"
+    },
+    {
+      "type": "Output"
+    },
+    {
+      "type": "EditAtom"
+    },
+    {
+      "type": "AdBreak"
+    },
+    {
+      "type": "ElementaryStream"
+    },
+    {
+      "type": "MuxStream"
+    },
+    {
+      "type": "Manifest",
+      "msgs": [
+        {
+          "type": "DashConfig"
+        }
+      ]
+    },
+    {
+      "type": "PubsubDestination"
+    },
+    {
+      "type": "SpriteSheet"
+    },
+    {
+      "type": "Overlay",
+      "msgs": [
+        {
+          "type": "NormalizedCoordinate"
+        },
+        {
+          "type": "Image"
+        },
+        {
+          "type": "AnimationStatic"
+        },
+        {
+          "type": "AnimationFade"
+        },
+        {
+          "type": "AnimationEnd"
+        },
+        {
+          "type": "Animation"
+        }
+      ]
+    },
+    {
+      "type": "PreprocessingConfig",
+      "msgs": [
+        {
+          "type": "Color"
+        },
+        {
+          "type": "Denoise"
+        },
+        {
+          "type": "Deblock"
+        },
+        {
+          "type": "Audio"
+        },
+        {
+          "type": "Crop"
+        },
+        {
+          "type": "Pad"
+        },
+        {
+          "type": "Deinterlace"
+        },
+        {
+          "type": "YadifConfig"
+        },
+        {
+          "type": "BwdifConfig"
+        }
+      ]
+    },
+    {
+      "type": "VideoStream",
+      "msgs": [
+        {
+          "type": "H264CodecSettings"
+        },
+        {
+          "type": "H265CodecSettings"
+        },
+        {
+          "type": "Vp9CodecSettings"
+        }
+      ]
+    },
+    {
+      "type": "AudioStream",
+      "msgs": [
+        {
+          "type": "AudioMapping"
+        }
+      ]
+    },
+    {
+      "type": "TextStream",
+      "msgs": [
+        {
+          "type": "TextMapping"
+        }
+      ]
+    },
+    {
+      "type": "SegmentSettings"
+    },
+    {
+      "type": "Encryption",
+      "msgs": [
+        {
+          "type": "Aes128Encryption"
+        },
+        {
+          "type": "SampleAesEncryption"
+        },
+        {
+          "type": "MpegCommonEncryption"
+        },
+        {
+          "type": "SecretManagerSource"
+        },
+        {
+          "type": "Widevine"
+        },
+        {
+          "type": "Fairplay"
+        },
+        {
+          "type": "Playready"
+        },
+        {
+          "type": "Clearkey"
+        },
+        {
+          "type": "DrmSystems"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "video/transcoder/apiv1/transcoderpb/resources.pb.go",
+    "pkg": "transcoderpb",
+    "pkg_full": "cloud.google.com/go/video/transcoder/apiv1/transcoderpb"
+  }
+}
+{
+  "proto": "google/cloud/video/transcoder/v1/services",
+  "pkg": "google.cloud.video.transcoder.v1",
+  "svcs": [
+    {
+      "svc": "TranscoderService",
+      "host": "transcoder.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateJob",
+          "request": {
+            "type": "CreateJobRequest"
+          },
+          "response": {
+            "type": "Job"
+          }
+        },
+        {
+          "method": "ListJobs",
+          "request": {
+            "type": "ListJobsRequest"
+          },
+          "response": {
+            "type": "ListJobsResponse"
+          }
+        },
+        {
+          "method": "GetJob",
+          "request": {
+            "type": "GetJobRequest"
+          },
+          "response": {
+            "type": "Job"
+          }
+        },
+        {
+          "method": "DeleteJob",
+          "request": {
+            "type": "DeleteJobRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "CreateJobTemplate",
+          "request": {
+            "type": "CreateJobTemplateRequest"
+          },
+          "response": {
+            "type": "JobTemplate"
+          }
+        },
+        {
+          "method": "ListJobTemplates",
+          "request": {
+            "type": "ListJobTemplatesRequest"
+          },
+          "response": {
+            "type": "ListJobTemplatesResponse"
+          }
+        },
+        {
+          "method": "GetJobTemplate",
+          "request": {
+            "type": "GetJobTemplateRequest"
+          },
+          "response": {
+            "type": "JobTemplate"
+          }
+        },
+        {
+          "method": "DeleteJobTemplate",
+          "request": {
+            "type": "DeleteJobTemplateRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateJobRequest"
+    },
+    {
+      "type": "ListJobsRequest"
+    },
+    {
+      "type": "GetJobRequest"
+    },
+    {
+      "type": "DeleteJobRequest"
+    },
+    {
+      "type": "ListJobsResponse"
+    },
+    {
+      "type": "CreateJobTemplateRequest"
+    },
+    {
+      "type": "ListJobTemplatesRequest"
+    },
+    {
+      "type": "GetJobTemplateRequest"
+    },
+    {
+      "type": "DeleteJobTemplateRequest"
+    },
+    {
+      "type": "ListJobTemplatesResponse"
+    }
+  ],
+  "go": {
+    "src": "video/transcoder/apiv1/transcoderpb/services.pb.go",
+    "pkg": "transcoderpb",
+    "pkg_full": "cloud.google.com/go/video/transcoder/apiv1/transcoderpb"
+  }
+}

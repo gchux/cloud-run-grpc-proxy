@@ -1,0 +1,17 @@
+{
+  "proto": "google/cloud/recommender/logging/v1/action_log",
+  "pkg": "google.cloud.recommender.logging.v1",
+  "msgs": [
+    {
+      "type": "ActionLog"
+    },
+    {
+      "type": "InsightActionLog"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/recommender/logging/v1/action_log.pb.go",
+    "pkg": "loggingpb",
+    "pkg_full": "cloud.google.com/go/recommender/logging/apiv1/loggingpb"
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "proto": "google/cloud/dataqna/v1alpha/user_feedback",
+  "pkg": "google.cloud.dataqna.v1alpha",
+  "msgs": [
+    {
+      "type": "UserFeedback"
+    }
+  ],
+  "go": {
+    "src": "dataqna/apiv1alpha/dataqnapb/user_feedback.pb.go",
+    "pkg": "dataqnapb",
+    "pkg_full": "cloud.google.com/go/dataqna/apiv1alpha/dataqnapb"
+  }
+}
+{
+  "proto": "google/cloud/dataqna/v1alpha/question_service",
+  "pkg": "google.cloud.dataqna.v1alpha",
+  "svcs": [
+    {
+      "svc": "QuestionService",
+      "host": "dataqna.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetQuestion",
+          "request": {
+            "type": "GetQuestionRequest"
+          },
+          "response": {
+            "type": "Question"
+          }
+        },
+        {
+          "method": "CreateQuestion",
+          "request": {
+            "type": "CreateQuestionRequest"
+          },
+          "response": {
+            "type": "Question"
+          }
+        },
+        {
+          "method": "ExecuteQuestion",
+          "request": {
+            "type": "ExecuteQuestionRequest"
+          },
+          "response": {
+            "type": "Question"
+          }
+        },
+        {
+          "method": "GetUserFeedback",
+          "request": {
+            "type": "GetUserFeedbackRequest"
+          },
+          "response": {
+            "type": "UserFeedback"
+          }
+        },
+        {
+          "method": "UpdateUserFeedback",
+          "request": {
+            "type": "UpdateUserFeedbackRequest"
+          },
+          "response": {
+            "type": "UserFeedback"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GetQuestionRequest"
+    },
+    {
+      "type": "CreateQuestionRequest"
+    },
+    {
+      "type": "ExecuteQuestionRequest"
+    },
+    {
+      "type": "GetUserFeedbackRequest"
+    },
+    {
+      "type": "UpdateUserFeedbackRequest"
+    }
+  ],
+  "go": {
+    "src": "dataqna/apiv1alpha/dataqnapb/question_service.pb.go",
+    "pkg": "dataqnapb",
+    "pkg_full": "cloud.google.com/go/dataqna/apiv1alpha/dataqnapb"
+  }
+}
+{
+  "proto": "google/cloud/dataqna/v1alpha/annotated_string",
+  "pkg": "google.cloud.dataqna.v1alpha",
+  "msgs": [
+    {
+      "type": "AnnotatedString",
+      "msgs": [
+        {
+          "type": "SemanticMarkup"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "dataqna/apiv1alpha/dataqnapb/annotated_string.pb.go",
+    "pkg": "dataqnapb",
+    "pkg_full": "cloud.google.com/go/dataqna/apiv1alpha/dataqnapb"
+  }
+}
+{
+  "proto": "google/cloud/dataqna/v1alpha/auto_suggestion_service",
+  "pkg": "google.cloud.dataqna.v1alpha",
+  "svcs": [
+    {
+      "svc": "AutoSuggestionService",
+      "host": "dataqna.googleapis.com",
+      "rpcs": [
+        {
+          "method": "SuggestQueries",
+          "request": {
+            "type": "SuggestQueriesRequest"
+          },
+          "response": {
+            "type": "SuggestQueriesResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "SuggestQueriesRequest"
+    },
+    {
+      "type": "Suggestion"
+    },
+    {
+      "type": "SuggestionInfo",
+      "msgs": [
+        {
+          "type": "MatchInfo"
+        }
+      ]
+    },
+    {
+      "type": "SuggestQueriesResponse"
+    }
+  ],
+  "go": {
+    "src": "dataqna/apiv1alpha/dataqnapb/auto_suggestion_service.pb.go",
+    "pkg": "dataqnapb",
+    "pkg_full": "cloud.google.com/go/dataqna/apiv1alpha/dataqnapb"
+  }
+}
+{
+  "proto": "google/cloud/dataqna/v1alpha/question",
+  "pkg": "google.cloud.dataqna.v1alpha",
+  "msgs": [
+    {
+      "type": "Question"
+    },
+    {
+      "type": "InterpretError",
+      "msgs": [
+        {
+          "type": "InterpretErrorDetails"
+        },
+        {
+          "type": "InterpretUnsupportedDetails"
+        },
+        {
+          "type": "InterpretIncompleteQueryDetails"
+        },
+        {
+          "type": "InterpretAmbiguityDetails"
+        }
+      ]
+    },
+    {
+      "type": "ExecutionInfo"
+    },
+    {
+      "type": "BigQueryJob"
+    },
+    {
+      "type": "Interpretation"
+    },
+    {
+      "type": "DataQuery"
+    },
+    {
+      "type": "HumanReadable"
+    },
+    {
+      "type": "InterpretationStructure",
+      "msgs": [
+        {
+          "type": "ColumnInfo"
+        }
+      ]
+    },
+    {
+      "type": "DebugFlags"
+    }
+  ],
+  "go": {
+    "src": "dataqna/apiv1alpha/dataqnapb/question.pb.go",
+    "pkg": "dataqnapb",
+    "pkg_full": "cloud.google.com/go/dataqna/apiv1alpha/dataqnapb"
+  }
+}

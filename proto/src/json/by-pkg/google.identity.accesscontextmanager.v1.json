@@ -1,0 +1,452 @@
+{
+  "proto": "google/identity/accesscontextmanager/v1/service_perimeter",
+  "pkg": "google.identity.accesscontextmanager.v1",
+  "msgs": [
+    {
+      "type": "ServicePerimeter"
+    },
+    {
+      "type": "ServicePerimeterConfig",
+      "msgs": [
+        {
+          "type": "VpcAccessibleServices"
+        },
+        {
+          "type": "MethodSelector"
+        },
+        {
+          "type": "ApiOperation"
+        },
+        {
+          "type": "IngressSource"
+        },
+        {
+          "type": "IngressFrom"
+        },
+        {
+          "type": "IngressTo"
+        },
+        {
+          "type": "IngressPolicy"
+        },
+        {
+          "type": "EgressFrom"
+        },
+        {
+          "type": "EgressTo"
+        },
+        {
+          "type": "EgressPolicy"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "accesscontextmanager/apiv1/accesscontextmanagerpb/service_perimeter.pb.go",
+    "pkg": "accesscontextmanagerpb",
+    "pkg_full": "cloud.google.com/go/accesscontextmanager/apiv1/accesscontextmanagerpb"
+  }
+}
+{
+  "proto": "google/identity/accesscontextmanager/v1/access_policy",
+  "pkg": "google.identity.accesscontextmanager.v1",
+  "msgs": [
+    {
+      "type": "AccessPolicy"
+    }
+  ],
+  "go": {
+    "src": "accesscontextmanager/apiv1/accesscontextmanagerpb/access_policy.pb.go",
+    "pkg": "accesscontextmanagerpb",
+    "pkg_full": "cloud.google.com/go/accesscontextmanager/apiv1/accesscontextmanagerpb"
+  }
+}
+{
+  "proto": "google/identity/accesscontextmanager/v1/gcp_user_access_binding",
+  "pkg": "google.identity.accesscontextmanager.v1",
+  "msgs": [
+    {
+      "type": "GcpUserAccessBinding"
+    }
+  ],
+  "go": {
+    "src": "accesscontextmanager/apiv1/accesscontextmanagerpb/gcp_user_access_binding.pb.go",
+    "pkg": "accesscontextmanagerpb",
+    "pkg_full": "cloud.google.com/go/accesscontextmanager/apiv1/accesscontextmanagerpb"
+  }
+}
+{
+  "proto": "google/identity/accesscontextmanager/v1/access_context_manager",
+  "pkg": "google.identity.accesscontextmanager.v1",
+  "svcs": [
+    {
+      "svc": "AccessContextManager",
+      "host": "accesscontextmanager.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListAccessPolicies",
+          "request": {
+            "type": "ListAccessPoliciesRequest"
+          },
+          "response": {
+            "type": "ListAccessPoliciesResponse"
+          }
+        },
+        {
+          "method": "GetAccessPolicy",
+          "request": {
+            "type": "GetAccessPolicyRequest"
+          },
+          "response": {
+            "type": "AccessPolicy"
+          }
+        },
+        {
+          "method": "CreateAccessPolicy",
+          "request": {
+            "type": "AccessPolicy"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateAccessPolicy",
+          "request": {
+            "type": "UpdateAccessPolicyRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteAccessPolicy",
+          "request": {
+            "type": "DeleteAccessPolicyRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListAccessLevels",
+          "request": {
+            "type": "ListAccessLevelsRequest"
+          },
+          "response": {
+            "type": "ListAccessLevelsResponse"
+          }
+        },
+        {
+          "method": "GetAccessLevel",
+          "request": {
+            "type": "GetAccessLevelRequest"
+          },
+          "response": {
+            "type": "AccessLevel"
+          }
+        },
+        {
+          "method": "CreateAccessLevel",
+          "request": {
+            "type": "CreateAccessLevelRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateAccessLevel",
+          "request": {
+            "type": "UpdateAccessLevelRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteAccessLevel",
+          "request": {
+            "type": "DeleteAccessLevelRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ReplaceAccessLevels",
+          "request": {
+            "type": "ReplaceAccessLevelsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListServicePerimeters",
+          "request": {
+            "type": "ListServicePerimetersRequest"
+          },
+          "response": {
+            "type": "ListServicePerimetersResponse"
+          }
+        },
+        {
+          "method": "GetServicePerimeter",
+          "request": {
+            "type": "GetServicePerimeterRequest"
+          },
+          "response": {
+            "type": "ServicePerimeter"
+          }
+        },
+        {
+          "method": "CreateServicePerimeter",
+          "request": {
+            "type": "CreateServicePerimeterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateServicePerimeter",
+          "request": {
+            "type": "UpdateServicePerimeterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteServicePerimeter",
+          "request": {
+            "type": "DeleteServicePerimeterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ReplaceServicePerimeters",
+          "request": {
+            "type": "ReplaceServicePerimetersRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CommitServicePerimeters",
+          "request": {
+            "type": "CommitServicePerimetersRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListGcpUserAccessBindings",
+          "request": {
+            "type": "ListGcpUserAccessBindingsRequest"
+          },
+          "response": {
+            "type": "ListGcpUserAccessBindingsResponse"
+          }
+        },
+        {
+          "method": "GetGcpUserAccessBinding",
+          "request": {
+            "type": "GetGcpUserAccessBindingRequest"
+          },
+          "response": {
+            "type": "GcpUserAccessBinding"
+          }
+        },
+        {
+          "method": "CreateGcpUserAccessBinding",
+          "request": {
+            "type": "CreateGcpUserAccessBindingRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateGcpUserAccessBinding",
+          "request": {
+            "type": "UpdateGcpUserAccessBindingRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteGcpUserAccessBinding",
+          "request": {
+            "type": "DeleteGcpUserAccessBindingRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "SetIamPolicy",
+          "request": {
+            "type": "google.iam.v1.SetIamPolicyRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.Policy"
+          }
+        },
+        {
+          "method": "GetIamPolicy",
+          "request": {
+            "type": "google.iam.v1.GetIamPolicyRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.Policy"
+          }
+        },
+        {
+          "method": "TestIamPermissions",
+          "request": {
+            "type": "google.iam.v1.TestIamPermissionsRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.TestIamPermissionsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ListAccessPoliciesRequest"
+    },
+    {
+      "type": "ListAccessPoliciesResponse"
+    },
+    {
+      "type": "GetAccessPolicyRequest"
+    },
+    {
+      "type": "UpdateAccessPolicyRequest"
+    },
+    {
+      "type": "DeleteAccessPolicyRequest"
+    },
+    {
+      "type": "ListAccessLevelsRequest"
+    },
+    {
+      "type": "ListAccessLevelsResponse"
+    },
+    {
+      "type": "GetAccessLevelRequest"
+    },
+    {
+      "type": "CreateAccessLevelRequest"
+    },
+    {
+      "type": "UpdateAccessLevelRequest"
+    },
+    {
+      "type": "DeleteAccessLevelRequest"
+    },
+    {
+      "type": "ReplaceAccessLevelsRequest"
+    },
+    {
+      "type": "ReplaceAccessLevelsResponse"
+    },
+    {
+      "type": "ListServicePerimetersRequest"
+    },
+    {
+      "type": "ListServicePerimetersResponse"
+    },
+    {
+      "type": "GetServicePerimeterRequest"
+    },
+    {
+      "type": "CreateServicePerimeterRequest"
+    },
+    {
+      "type": "UpdateServicePerimeterRequest"
+    },
+    {
+      "type": "DeleteServicePerimeterRequest"
+    },
+    {
+      "type": "ReplaceServicePerimetersRequest"
+    },
+    {
+      "type": "ReplaceServicePerimetersResponse"
+    },
+    {
+      "type": "CommitServicePerimetersRequest"
+    },
+    {
+      "type": "CommitServicePerimetersResponse"
+    },
+    {
+      "type": "ListGcpUserAccessBindingsRequest"
+    },
+    {
+      "type": "ListGcpUserAccessBindingsResponse"
+    },
+    {
+      "type": "GetGcpUserAccessBindingRequest"
+    },
+    {
+      "type": "CreateGcpUserAccessBindingRequest"
+    },
+    {
+      "type": "UpdateGcpUserAccessBindingRequest"
+    },
+    {
+      "type": "DeleteGcpUserAccessBindingRequest"
+    },
+    {
+      "type": "GcpUserAccessBindingOperationMetadata"
+    },
+    {
+      "type": "AccessContextManagerOperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "accesscontextmanager/apiv1/accesscontextmanagerpb/access_context_manager.pb.go",
+    "pkg": "accesscontextmanagerpb",
+    "pkg_full": "cloud.google.com/go/accesscontextmanager/apiv1/accesscontextmanagerpb"
+  }
+}
+{
+  "proto": "google/identity/accesscontextmanager/v1/access_level",
+  "pkg": "google.identity.accesscontextmanager.v1",
+  "msgs": [
+    {
+      "type": "AccessLevel"
+    },
+    {
+      "type": "BasicLevel"
+    },
+    {
+      "type": "Condition"
+    },
+    {
+      "type": "CustomLevel"
+    },
+    {
+      "type": "DevicePolicy"
+    },
+    {
+      "type": "OsConstraint"
+    }
+  ],
+  "go": {
+    "src": "accesscontextmanager/apiv1/accesscontextmanagerpb/access_level.pb.go",
+    "pkg": "accesscontextmanagerpb",
+    "pkg_full": "cloud.google.com/go/accesscontextmanager/apiv1/accesscontextmanagerpb"
+  }
+}

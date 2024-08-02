@@ -1,0 +1,133 @@
+{
+  "proto": "google/cloud/servicehealth/v1/event_resources",
+  "pkg": "google.cloud.servicehealth.v1",
+  "msgs": [
+    {
+      "type": "Event"
+    },
+    {
+      "type": "OrganizationEvent"
+    },
+    {
+      "type": "EventUpdate"
+    },
+    {
+      "type": "Location"
+    },
+    {
+      "type": "Product"
+    },
+    {
+      "type": "EventImpact"
+    },
+    {
+      "type": "OrganizationImpact"
+    },
+    {
+      "type": "Asset"
+    },
+    {
+      "type": "ListEventsRequest"
+    },
+    {
+      "type": "ListEventsResponse"
+    },
+    {
+      "type": "GetEventRequest"
+    },
+    {
+      "type": "ListOrganizationEventsRequest"
+    },
+    {
+      "type": "ListOrganizationEventsResponse"
+    },
+    {
+      "type": "GetOrganizationEventRequest"
+    },
+    {
+      "type": "ListOrganizationImpactsRequest"
+    },
+    {
+      "type": "ListOrganizationImpactsResponse"
+    },
+    {
+      "type": "GetOrganizationImpactRequest"
+    }
+  ],
+  "go": {
+    "src": "servicehealth/apiv1/servicehealthpb/event_resources.pb.go",
+    "pkg": "servicehealthpb",
+    "pkg_full": "cloud.google.com/go/servicehealth/apiv1/servicehealthpb"
+  }
+}
+{
+  "proto": "google/cloud/servicehealth/v1/event_service",
+  "pkg": "google.cloud.servicehealth.v1",
+  "svcs": [
+    {
+      "svc": "ServiceHealth",
+      "host": "servicehealth.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListEvents",
+          "request": {
+            "type": "ListEventsRequest"
+          },
+          "response": {
+            "type": "ListEventsResponse"
+          }
+        },
+        {
+          "method": "GetEvent",
+          "request": {
+            "type": "GetEventRequest"
+          },
+          "response": {
+            "type": "Event"
+          }
+        },
+        {
+          "method": "ListOrganizationEvents",
+          "request": {
+            "type": "ListOrganizationEventsRequest"
+          },
+          "response": {
+            "type": "ListOrganizationEventsResponse"
+          }
+        },
+        {
+          "method": "GetOrganizationEvent",
+          "request": {
+            "type": "GetOrganizationEventRequest"
+          },
+          "response": {
+            "type": "OrganizationEvent"
+          }
+        },
+        {
+          "method": "ListOrganizationImpacts",
+          "request": {
+            "type": "ListOrganizationImpactsRequest"
+          },
+          "response": {
+            "type": "ListOrganizationImpactsResponse"
+          }
+        },
+        {
+          "method": "GetOrganizationImpact",
+          "request": {
+            "type": "GetOrganizationImpactRequest"
+          },
+          "response": {
+            "type": "OrganizationImpact"
+          }
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "servicehealth/apiv1/servicehealthpb/event_service.pb.go",
+    "pkg": "servicehealthpb",
+    "pkg_full": "cloud.google.com/go/servicehealth/apiv1/servicehealthpb"
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "proto": "google/devtools/clouddebugger/v2/controller",
+  "pkg": "google.devtools.clouddebugger.v2",
+  "svcs": [
+    {
+      "svc": "Controller2",
+      "host": "clouddebugger.googleapis.com",
+      "rpcs": [
+        {
+          "method": "RegisterDebuggee",
+          "request": {
+            "type": "RegisterDebuggeeRequest"
+          },
+          "response": {
+            "type": "RegisterDebuggeeResponse"
+          }
+        },
+        {
+          "method": "ListActiveBreakpoints",
+          "request": {
+            "type": "ListActiveBreakpointsRequest"
+          },
+          "response": {
+            "type": "ListActiveBreakpointsResponse"
+          }
+        },
+        {
+          "method": "UpdateActiveBreakpoint",
+          "request": {
+            "type": "UpdateActiveBreakpointRequest"
+          },
+          "response": {
+            "type": "UpdateActiveBreakpointResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "RegisterDebuggeeRequest"
+    },
+    {
+      "type": "RegisterDebuggeeResponse"
+    },
+    {
+      "type": "ListActiveBreakpointsRequest"
+    },
+    {
+      "type": "ListActiveBreakpointsResponse"
+    },
+    {
+      "type": "UpdateActiveBreakpointRequest"
+    },
+    {
+      "type": "UpdateActiveBreakpointResponse"
+    }
+  ],
+  "go": {
+    "src": "debugger/apiv2/debuggerpb/controller.pb.go",
+    "pkg": "debuggerpb",
+    "pkg_full": "cloud.google.com/go/debugger/apiv2/debuggerpb"
+  }
+}
+{
+  "proto": "google/devtools/clouddebugger/v2/data",
+  "pkg": "google.devtools.clouddebugger.v2",
+  "msgs": [
+    {
+      "type": "FormatMessage"
+    },
+    {
+      "type": "StatusMessage"
+    },
+    {
+      "type": "SourceLocation"
+    },
+    {
+      "type": "Variable"
+    },
+    {
+      "type": "StackFrame"
+    },
+    {
+      "type": "Breakpoint"
+    },
+    {
+      "type": "Debuggee"
+    }
+  ],
+  "go": {
+    "src": "debugger/apiv2/debuggerpb/data.pb.go",
+    "pkg": "debuggerpb",
+    "pkg_full": "cloud.google.com/go/debugger/apiv2/debuggerpb"
+  }
+}
+{
+  "proto": "google/devtools/clouddebugger/v2/debugger",
+  "pkg": "google.devtools.clouddebugger.v2",
+  "svcs": [
+    {
+      "svc": "Debugger2",
+      "host": "clouddebugger.googleapis.com",
+      "rpcs": [
+        {
+          "method": "SetBreakpoint",
+          "request": {
+            "type": "SetBreakpointRequest"
+          },
+          "response": {
+            "type": "SetBreakpointResponse"
+          }
+        },
+        {
+          "method": "GetBreakpoint",
+          "request": {
+            "type": "GetBreakpointRequest"
+          },
+          "response": {
+            "type": "GetBreakpointResponse"
+          }
+        },
+        {
+          "method": "DeleteBreakpoint",
+          "request": {
+            "type": "DeleteBreakpointRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListBreakpoints",
+          "request": {
+            "type": "ListBreakpointsRequest"
+          },
+          "response": {
+            "type": "ListBreakpointsResponse"
+          }
+        },
+        {
+          "method": "ListDebuggees",
+          "request": {
+            "type": "ListDebuggeesRequest"
+          },
+          "response": {
+            "type": "ListDebuggeesResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "SetBreakpointRequest"
+    },
+    {
+      "type": "SetBreakpointResponse"
+    },
+    {
+      "type": "GetBreakpointRequest"
+    },
+    {
+      "type": "GetBreakpointResponse"
+    },
+    {
+      "type": "DeleteBreakpointRequest"
+    },
+    {
+      "type": "ListBreakpointsRequest",
+      "msgs": [
+        {
+          "type": "BreakpointActionValue"
+        }
+      ]
+    },
+    {
+      "type": "ListBreakpointsResponse"
+    },
+    {
+      "type": "ListDebuggeesRequest"
+    },
+    {
+      "type": "ListDebuggeesResponse"
+    }
+  ],
+  "go": {
+    "src": "debugger/apiv2/debuggerpb/debugger.pb.go",
+    "pkg": "debuggerpb",
+    "pkg_full": "cloud.google.com/go/debugger/apiv2/debuggerpb"
+  }
+}

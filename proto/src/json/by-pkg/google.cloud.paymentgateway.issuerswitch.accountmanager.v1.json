@@ -1,0 +1,122 @@
+{
+  "proto": "google/cloud/paymentgateway/issuerswitch/accountmanager/v1/account_manager_transactions",
+  "pkg": "google.cloud.paymentgateway.issuerswitch.accountmanager.v1",
+  "svcs": [
+    {
+      "svc": "AccountManagerTransactions",
+      "host": "issuerswitch.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ExportAccountManagerTransactions",
+          "request": {
+            "type": "ExportAccountManagerTransactionsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListAccountManagerTransactions",
+          "request": {
+            "type": "ListAccountManagerTransactionsRequest"
+          },
+          "response": {
+            "type": "ListAccountManagerTransactionsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "AccountManagerTransaction"
+    },
+    {
+      "type": "AccountManagerTransactionInfo",
+      "msgs": [
+        {
+          "type": "AccountManagerTransactionMetadata"
+        },
+        {
+          "type": "AccountManagerTransactionErrorDetails"
+        }
+      ]
+    },
+    {
+      "type": "AccountManagerSettlementParticipant"
+    },
+    {
+      "type": "AccountManagerParticipant"
+    },
+    {
+      "type": "AccountManagerMerchantInfo"
+    },
+    {
+      "type": "AccountManagerTransactionReconciliationInfo"
+    },
+    {
+      "type": "ExportAccountManagerTransactionsRequest"
+    },
+    {
+      "type": "ListAccountManagerTransactionsRequest"
+    },
+    {
+      "type": "ListAccountManagerTransactionsResponse"
+    },
+    {
+      "type": "ReconcileAccountManagerTransactionsRequest"
+    },
+    {
+      "type": "BatchReconcileAccountManagerTransactionsRequest"
+    },
+    {
+      "type": "BatchReconcileAccountManagerTransactionsResponse"
+    }
+  ],
+  "go": {
+    "pkg": "accountmanagerpb",
+    "pkg_full": "cloud.google.com/go/paymentgateway/issuerswitch/accountmanager/apiv1/accountmanagerpb"
+  }
+}
+{
+  "proto": "google/cloud/paymentgateway/issuerswitch/accountmanager/v1/managed_accounts",
+  "pkg": "google.cloud.paymentgateway.issuerswitch.accountmanager.v1",
+  "svcs": [
+    {
+      "svc": "ManagedAccounts",
+      "host": "issuerswitch.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetManagedAccount",
+          "request": {
+            "type": "GetManagedAccountRequest"
+          },
+          "response": {
+            "type": "ManagedAccount"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ManagedAccount"
+    },
+    {
+      "type": "ReconcileManagedAccountBalanceRequest"
+    },
+    {
+      "type": "BatchReconcileManagedAccountBalanceRequest"
+    },
+    {
+      "type": "BatchReconcileManagedAccountBalanceResponse"
+    },
+    {
+      "type": "GetManagedAccountRequest"
+    }
+  ],
+  "go": {
+    "pkg": "accountmanagerpb",
+    "pkg_full": "cloud.google.com/go/paymentgateway/issuerswitch/accountmanager/apiv1/accountmanagerpb"
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "proto": "google/cloud/functions/v2alpha/functions",
+  "pkg": "google.cloud.functions.v2alpha",
+  "svcs": [
+    {
+      "svc": "FunctionService",
+      "host": "cloudfunctions.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetFunction",
+          "request": {
+            "type": "GetFunctionRequest"
+          },
+          "response": {
+            "type": "Function"
+          }
+        },
+        {
+          "method": "ListFunctions",
+          "request": {
+            "type": "ListFunctionsRequest"
+          },
+          "response": {
+            "type": "ListFunctionsResponse"
+          }
+        },
+        {
+          "method": "CreateFunction",
+          "request": {
+            "type": "CreateFunctionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateFunction",
+          "request": {
+            "type": "UpdateFunctionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteFunction",
+          "request": {
+            "type": "DeleteFunctionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GenerateUploadUrl",
+          "request": {
+            "type": "GenerateUploadUrlRequest"
+          },
+          "response": {
+            "type": "GenerateUploadUrlResponse"
+          }
+        },
+        {
+          "method": "GenerateDownloadUrl",
+          "request": {
+            "type": "GenerateDownloadUrlRequest"
+          },
+          "response": {
+            "type": "GenerateDownloadUrlResponse"
+          }
+        },
+        {
+          "method": "ListRuntimes",
+          "request": {
+            "type": "ListRuntimesRequest"
+          },
+          "response": {
+            "type": "ListRuntimesResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Function"
+    },
+    {
+      "type": "StateMessage"
+    },
+    {
+      "type": "StorageSource"
+    },
+    {
+      "type": "RepoSource"
+    },
+    {
+      "type": "Source"
+    },
+    {
+      "type": "SourceProvenance"
+    },
+    {
+      "type": "BuildConfig"
+    },
+    {
+      "type": "ServiceConfig"
+    },
+    {
+      "type": "SecretEnvVar"
+    },
+    {
+      "type": "SecretVolume",
+      "msgs": [
+        {
+          "type": "SecretVersion"
+        }
+      ]
+    },
+    {
+      "type": "EventTrigger"
+    },
+    {
+      "type": "EventFilter"
+    },
+    {
+      "type": "GetFunctionRequest"
+    },
+    {
+      "type": "ListFunctionsRequest"
+    },
+    {
+      "type": "ListFunctionsResponse"
+    },
+    {
+      "type": "CreateFunctionRequest"
+    },
+    {
+      "type": "UpdateFunctionRequest"
+    },
+    {
+      "type": "DeleteFunctionRequest"
+    },
+    {
+      "type": "GenerateUploadUrlRequest"
+    },
+    {
+      "type": "GenerateUploadUrlResponse"
+    },
+    {
+      "type": "GenerateDownloadUrlRequest"
+    },
+    {
+      "type": "GenerateDownloadUrlResponse"
+    },
+    {
+      "type": "ListRuntimesRequest"
+    },
+    {
+      "type": "ListRuntimesResponse",
+      "msgs": [
+        {
+          "type": "Runtime"
+        }
+      ]
+    },
+    {
+      "type": "OperationMetadata"
+    },
+    {
+      "type": "LocationMetadata"
+    },
+    {
+      "type": "Stage"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/functions/v2alpha/functions.pb.go",
+    "pkg": "functionspb",
+    "pkg_full": "cloud.google.com/go/functions/apiv2alpha/functionspb"
+  }
+}

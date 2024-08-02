@@ -1,0 +1,126 @@
+{
+  "proto": "google/cloud/aiplatform/v1/schema/predict/instance/image_object_detection",
+  "pkg": "google.cloud.aiplatform.v1.schema.predict.instance",
+  "msgs": [
+    {
+      "type": "ImageObjectDetectionPredictionInstance"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/aiplatform/v1/schema/predict/instance/image_object_detection.pb.go",
+    "pkg": "instancepb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1/schema/predict/instance/instancepb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1/schema/predict/instance/video_classification",
+  "pkg": "google.cloud.aiplatform.v1.schema.predict.instance",
+  "msgs": [
+    {
+      "type": "VideoClassificationPredictionInstance"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/aiplatform/v1/schema/predict/instance/video_classification.pb.go",
+    "pkg": "instancepb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1/schema/predict/instance/instancepb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1/schema/predict/instance/video_object_tracking",
+  "pkg": "google.cloud.aiplatform.v1.schema.predict.instance",
+  "msgs": [
+    {
+      "type": "VideoObjectTrackingPredictionInstance"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/aiplatform/v1/schema/predict/instance/video_object_tracking.pb.go",
+    "pkg": "instancepb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1/schema/predict/instance/instancepb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1/schema/predict/instance/image_classification",
+  "pkg": "google.cloud.aiplatform.v1.schema.predict.instance",
+  "msgs": [
+    {
+      "type": "ImageClassificationPredictionInstance"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/aiplatform/v1/schema/predict/instance/image_classification.pb.go",
+    "pkg": "instancepb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1/schema/predict/instance/instancepb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1/schema/predict/instance/text_extraction",
+  "pkg": "google.cloud.aiplatform.v1.schema.predict.instance",
+  "msgs": [
+    {
+      "type": "TextExtractionPredictionInstance"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/aiplatform/v1/schema/predict/instance/text_extraction.pb.go",
+    "pkg": "instancepb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1/schema/predict/instance/instancepb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1/schema/predict/instance/text_classification",
+  "pkg": "google.cloud.aiplatform.v1.schema.predict.instance",
+  "msgs": [
+    {
+      "type": "TextClassificationPredictionInstance"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/aiplatform/v1/schema/predict/instance/text_classification.pb.go",
+    "pkg": "instancepb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1/schema/predict/instance/instancepb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1/schema/predict/instance/image_segmentation",
+  "pkg": "google.cloud.aiplatform.v1.schema.predict.instance",
+  "msgs": [
+    {
+      "type": "ImageSegmentationPredictionInstance"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/aiplatform/v1/schema/predict/instance/image_segmentation.pb.go",
+    "pkg": "instancepb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1/schema/predict/instance/instancepb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1/schema/predict/instance/text_sentiment",
+  "pkg": "google.cloud.aiplatform.v1.schema.predict.instance",
+  "msgs": [
+    {
+      "type": "TextSentimentPredictionInstance"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/aiplatform/v1/schema/predict/instance/text_sentiment.pb.go",
+    "pkg": "instancepb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1/schema/predict/instance/instancepb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1/schema/predict/instance/video_action_recognition",
+  "pkg": "google.cloud.aiplatform.v1.schema.predict.instance",
+  "msgs": [
+    {
+      "type": "VideoActionRecognitionPredictionInstance"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/aiplatform/v1/schema/predict/instance/video_action_recognition.pb.go",
+    "pkg": "instancepb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1/schema/predict/instance/instancepb"
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "proto": "google/cloud/beyondcorp/appconnectors/v1/resource_info",
+  "pkg": "google.cloud.beyondcorp.appconnectors.v1",
+  "msgs": [
+    {
+      "type": "ResourceInfo"
+    }
+  ],
+  "go": {
+    "src": "beyondcorp/appconnectors/apiv1/appconnectorspb/resource_info.pb.go",
+    "pkg": "appconnectorspb",
+    "pkg_full": "cloud.google.com/go/beyondcorp/appconnectors/apiv1/appconnectorspb"
+  }
+}
+{
+  "proto": "google/cloud/beyondcorp/appconnectors/v1/app_connectors_service",
+  "pkg": "google.cloud.beyondcorp.appconnectors.v1",
+  "svcs": [
+    {
+      "svc": "AppConnectorsService",
+      "host": "beyondcorp.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListAppConnectors",
+          "request": {
+            "type": "ListAppConnectorsRequest"
+          },
+          "response": {
+            "type": "ListAppConnectorsResponse"
+          }
+        },
+        {
+          "method": "GetAppConnector",
+          "request": {
+            "type": "GetAppConnectorRequest"
+          },
+          "response": {
+            "type": "AppConnector"
+          }
+        },
+        {
+          "method": "CreateAppConnector",
+          "request": {
+            "type": "CreateAppConnectorRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateAppConnector",
+          "request": {
+            "type": "UpdateAppConnectorRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteAppConnector",
+          "request": {
+            "type": "DeleteAppConnectorRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ReportStatus",
+          "request": {
+            "type": "ReportStatusRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ListAppConnectorsRequest"
+    },
+    {
+      "type": "ListAppConnectorsResponse"
+    },
+    {
+      "type": "GetAppConnectorRequest"
+    },
+    {
+      "type": "CreateAppConnectorRequest"
+    },
+    {
+      "type": "UpdateAppConnectorRequest"
+    },
+    {
+      "type": "DeleteAppConnectorRequest"
+    },
+    {
+      "type": "ReportStatusRequest"
+    },
+    {
+      "type": "AppConnector",
+      "msgs": [
+        {
+          "type": "PrincipalInfo"
+        },
+        {
+          "type": "ServiceAccount"
+        }
+      ]
+    },
+    {
+      "type": "AppConnectorOperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "beyondcorp/appconnectors/apiv1/appconnectorspb/app_connectors_service.pb.go",
+    "pkg": "appconnectorspb",
+    "pkg_full": "cloud.google.com/go/beyondcorp/appconnectors/apiv1/appconnectorspb"
+  }
+}
+{
+  "proto": "google/cloud/beyondcorp/appconnectors/v1/app_connector_instance_config",
+  "pkg": "google.cloud.beyondcorp.appconnectors.v1",
+  "msgs": [
+    {
+      "type": "AppConnectorInstanceConfig"
+    },
+    {
+      "type": "NotificationConfig",
+      "msgs": [
+        {
+          "type": "CloudPubSubNotificationConfig"
+        }
+      ]
+    },
+    {
+      "type": "ImageConfig"
+    }
+  ],
+  "go": {
+    "src": "beyondcorp/appconnectors/apiv1/appconnectorspb/app_connector_instance_config.pb.go",
+    "pkg": "appconnectorspb",
+    "pkg_full": "cloud.google.com/go/beyondcorp/appconnectors/apiv1/appconnectorspb"
+  }
+}

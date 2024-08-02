@@ -1,0 +1,13 @@
+{
+  "proto": "google/cloud/common_resources",
+  "pkg": "google.cloud"
+}
+{
+  "proto": "google/cloud/extended_operations",
+  "pkg": "google.cloud",
+  "go": {
+    "src": "googleapis/cloud/extendedops/extended_operations.pb.go",
+    "pkg": "extendedops",
+    "pkg_full": "google.golang.org/genproto/googleapis/cloud/extendedops"
+  }
+}

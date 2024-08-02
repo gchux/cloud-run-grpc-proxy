@@ -1,0 +1,34 @@
+{
+  "proto": "google/cloud/phishingprotection/v1beta1/phishingprotection",
+  "pkg": "google.cloud.phishingprotection.v1beta1",
+  "svcs": [
+    {
+      "svc": "PhishingProtectionServiceV1Beta1",
+      "host": "phishingprotection.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ReportPhishing",
+          "request": {
+            "type": "ReportPhishingRequest"
+          },
+          "response": {
+            "type": "ReportPhishingResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ReportPhishingRequest"
+    },
+    {
+      "type": "ReportPhishingResponse"
+    }
+  ],
+  "go": {
+    "src": "phishingprotection/apiv1beta1/phishingprotectionpb/phishingprotection.pb.go",
+    "pkg": "phishingprotectionpb",
+    "pkg_full": "cloud.google.com/go/phishingprotection/apiv1beta1/phishingprotectionpb"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "proto": "google/cloud/shell/v1/cloudshell",
+  "pkg": "google.cloud.shell.v1",
+  "svcs": [
+    {
+      "svc": "CloudShellService",
+      "host": "cloudshell.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetEnvironment",
+          "request": {
+            "type": "GetEnvironmentRequest"
+          },
+          "response": {
+            "type": "Environment"
+          }
+        },
+        {
+          "method": "StartEnvironment",
+          "request": {
+            "type": "StartEnvironmentRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "AuthorizeEnvironment",
+          "request": {
+            "type": "AuthorizeEnvironmentRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "AddPublicKey",
+          "request": {
+            "type": "AddPublicKeyRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "RemovePublicKey",
+          "request": {
+            "type": "RemovePublicKeyRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Environment"
+    },
+    {
+      "type": "GetEnvironmentRequest"
+    },
+    {
+      "type": "CreateEnvironmentMetadata"
+    },
+    {
+      "type": "DeleteEnvironmentMetadata"
+    },
+    {
+      "type": "StartEnvironmentRequest"
+    },
+    {
+      "type": "AuthorizeEnvironmentRequest"
+    },
+    {
+      "type": "AuthorizeEnvironmentResponse"
+    },
+    {
+      "type": "AuthorizeEnvironmentMetadata"
+    },
+    {
+      "type": "StartEnvironmentMetadata"
+    },
+    {
+      "type": "StartEnvironmentResponse"
+    },
+    {
+      "type": "AddPublicKeyRequest"
+    },
+    {
+      "type": "AddPublicKeyResponse"
+    },
+    {
+      "type": "AddPublicKeyMetadata"
+    },
+    {
+      "type": "RemovePublicKeyRequest"
+    },
+    {
+      "type": "RemovePublicKeyResponse"
+    },
+    {
+      "type": "RemovePublicKeyMetadata"
+    },
+    {
+      "type": "CloudShellErrorDetails"
+    }
+  ],
+  "go": {
+    "src": "shell/apiv1/shellpb/cloudshell.pb.go",
+    "pkg": "shellpb",
+    "pkg_full": "cloud.google.com/go/shell/apiv1/shellpb"
+  }
+}

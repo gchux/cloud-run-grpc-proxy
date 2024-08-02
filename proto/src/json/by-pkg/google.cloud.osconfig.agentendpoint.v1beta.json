@@ -1,0 +1,261 @@
+{
+  "proto": "google/cloud/osconfig/agentendpoint/v1beta/tasks",
+  "pkg": "google.cloud.osconfig.agentendpoint.v1beta",
+  "msgs": [
+    {
+      "type": "Task"
+    },
+    {
+      "type": "ApplyPatchesTask"
+    },
+    {
+      "type": "ApplyPatchesTaskProgress"
+    },
+    {
+      "type": "ApplyPatchesTaskOutput"
+    },
+    {
+      "type": "ExecStepTask"
+    },
+    {
+      "type": "ExecStepTaskProgress"
+    },
+    {
+      "type": "ExecStepTaskOutput"
+    }
+  ],
+  "go": {
+    "src": "osconfig/agentendpoint/apiv1beta/agentendpointpb/tasks.pb.go",
+    "pkg": "agentendpointpb",
+    "pkg_full": "cloud.google.com/go/osconfig/agentendpoint/apiv1beta/agentendpointpb"
+  }
+}
+{
+  "proto": "google/cloud/osconfig/agentendpoint/v1beta/agentendpoint",
+  "pkg": "google.cloud.osconfig.agentendpoint.v1beta",
+  "svcs": [
+    {
+      "svc": "AgentEndpointService",
+      "host": "osconfig.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ReceiveTaskNotification",
+          "request": {
+            "type": "ReceiveTaskNotificationRequest"
+          },
+          "response": {
+            "type": "ReceiveTaskNotificationResponse",
+            "stream": true
+          }
+        },
+        {
+          "method": "StartNextTask",
+          "request": {
+            "type": "StartNextTaskRequest"
+          },
+          "response": {
+            "type": "StartNextTaskResponse"
+          }
+        },
+        {
+          "method": "ReportTaskProgress",
+          "request": {
+            "type": "ReportTaskProgressRequest"
+          },
+          "response": {
+            "type": "ReportTaskProgressResponse"
+          }
+        },
+        {
+          "method": "ReportTaskComplete",
+          "request": {
+            "type": "ReportTaskCompleteRequest"
+          },
+          "response": {
+            "type": "ReportTaskCompleteResponse"
+          }
+        },
+        {
+          "method": "LookupEffectiveGuestPolicy",
+          "request": {
+            "type": "LookupEffectiveGuestPolicyRequest"
+          },
+          "response": {
+            "type": "EffectiveGuestPolicy"
+          }
+        },
+        {
+          "method": "RegisterAgent",
+          "request": {
+            "type": "RegisterAgentRequest"
+          },
+          "response": {
+            "type": "RegisterAgentResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ReceiveTaskNotificationRequest"
+    },
+    {
+      "type": "ReceiveTaskNotificationResponse"
+    },
+    {
+      "type": "StartNextTaskRequest"
+    },
+    {
+      "type": "StartNextTaskResponse"
+    },
+    {
+      "type": "ReportTaskProgressRequest"
+    },
+    {
+      "type": "ReportTaskProgressResponse"
+    },
+    {
+      "type": "ReportTaskCompleteRequest"
+    },
+    {
+      "type": "ReportTaskCompleteResponse"
+    },
+    {
+      "type": "RegisterAgentRequest"
+    },
+    {
+      "type": "RegisterAgentResponse"
+    }
+  ],
+  "go": {
+    "src": "osconfig/agentendpoint/apiv1beta/agentendpointpb/agentendpoint.pb.go",
+    "pkg": "agentendpointpb",
+    "pkg_full": "cloud.google.com/go/osconfig/agentendpoint/apiv1beta/agentendpointpb"
+  }
+}
+{
+  "proto": "google/cloud/osconfig/agentendpoint/v1beta/patch_jobs",
+  "pkg": "google.cloud.osconfig.agentendpoint.v1beta",
+  "msgs": [
+    {
+      "type": "PatchConfig"
+    },
+    {
+      "type": "AptSettings"
+    },
+    {
+      "type": "YumSettings"
+    },
+    {
+      "type": "GooSettings"
+    },
+    {
+      "type": "ZypperSettings"
+    },
+    {
+      "type": "WindowsUpdateSettings"
+    },
+    {
+      "type": "RetryStrategy"
+    },
+    {
+      "type": "ExecStep"
+    },
+    {
+      "type": "ExecStepConfig"
+    },
+    {
+      "type": "GcsObject"
+    }
+  ],
+  "go": {
+    "src": "osconfig/agentendpoint/apiv1beta/agentendpointpb/patch_jobs.pb.go",
+    "pkg": "agentendpointpb",
+    "pkg_full": "cloud.google.com/go/osconfig/agentendpoint/apiv1beta/agentendpointpb"
+  }
+}
+{
+  "proto": "google/cloud/osconfig/agentendpoint/v1beta/guest_policies",
+  "pkg": "google.cloud.osconfig.agentendpoint.v1beta",
+  "msgs": [
+    {
+      "type": "Package"
+    },
+    {
+      "type": "AptRepository"
+    },
+    {
+      "type": "YumRepository"
+    },
+    {
+      "type": "ZypperRepository"
+    },
+    {
+      "type": "GooRepository"
+    },
+    {
+      "type": "PackageRepository"
+    },
+    {
+      "type": "SoftwareRecipe",
+      "msgs": [
+        {
+          "type": "Artifact"
+        },
+        {
+          "type": "Remote"
+        },
+        {
+          "type": "Gcs"
+        },
+        {
+          "type": "Step"
+        },
+        {
+          "type": "CopyFile"
+        },
+        {
+          "type": "ExtractArchive"
+        },
+        {
+          "type": "InstallMsi"
+        },
+        {
+          "type": "InstallDpkg"
+        },
+        {
+          "type": "InstallRpm"
+        },
+        {
+          "type": "ExecFile"
+        },
+        {
+          "type": "RunScript"
+        }
+      ]
+    },
+    {
+      "type": "LookupEffectiveGuestPolicyRequest"
+    },
+    {
+      "type": "EffectiveGuestPolicy",
+      "msgs": [
+        {
+          "type": "SourcedPackage"
+        },
+        {
+          "type": "SourcedPackageRepository"
+        },
+        {
+          "type": "SourcedSoftwareRecipe"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "osconfig/agentendpoint/apiv1beta/agentendpointpb/guest_policies.pb.go",
+    "pkg": "agentendpointpb",
+    "pkg_full": "cloud.google.com/go/osconfig/agentendpoint/apiv1beta/agentendpointpb"
+  }
+}

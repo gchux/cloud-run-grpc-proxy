@@ -1,0 +1,52 @@
+{
+  "proto": "google/chromeos/uidetection/v1/ui_detection",
+  "pkg": "google.chromeos.uidetection.v1",
+  "svcs": [
+    {
+      "svc": "UiDetectionService",
+      "host": "chromeosuidetection.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ExecuteDetection",
+          "request": {
+            "type": "UiDetectionRequest"
+          },
+          "response": {
+            "type": "UiDetectionResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "UiDetectionRequest"
+    },
+    {
+      "type": "DetectionRequest"
+    },
+    {
+      "type": "TestMetadata"
+    },
+    {
+      "type": "WordDetectionRequest"
+    },
+    {
+      "type": "TextBlockDetectionRequest"
+    },
+    {
+      "type": "CustomIconDetectionRequest"
+    },
+    {
+      "type": "UiDetectionResponse"
+    },
+    {
+      "type": "BoundingBox"
+    }
+  ],
+  "go": {
+    "src": "googleapis/chromeos/uidetection/v1/ui_detection.pb.go",
+    "pkg": "uidetection",
+    "pkg_full": "google.golang.org/genproto/googleapis/chromeos/uidetection/v1"
+  }
+}

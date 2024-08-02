@@ -1,0 +1,1023 @@
+{
+  "proto": "google/cloud/channel/v1/channel_partner_links",
+  "pkg": "google.cloud.channel.v1",
+  "msgs": [
+    {
+      "type": "ChannelPartnerLink"
+    }
+  ],
+  "go": {
+    "src": "channel/apiv1/channelpb/channel_partner_links.pb.go",
+    "pkg": "channelpb",
+    "pkg_full": "cloud.google.com/go/channel/apiv1/channelpb"
+  }
+}
+{
+  "proto": "google/cloud/channel/v1/products",
+  "pkg": "google.cloud.channel.v1",
+  "msgs": [
+    {
+      "type": "Product"
+    },
+    {
+      "type": "Sku"
+    },
+    {
+      "type": "MarketingInfo"
+    },
+    {
+      "type": "Media"
+    }
+  ],
+  "go": {
+    "src": "channel/apiv1/channelpb/products.pb.go",
+    "pkg": "channelpb",
+    "pkg_full": "cloud.google.com/go/channel/apiv1/channelpb"
+  }
+}
+{
+  "proto": "google/cloud/channel/v1/offers",
+  "pkg": "google.cloud.channel.v1",
+  "msgs": [
+    {
+      "type": "Offer"
+    },
+    {
+      "type": "ParameterDefinition"
+    },
+    {
+      "type": "Constraints"
+    },
+    {
+      "type": "CustomerConstraints"
+    },
+    {
+      "type": "Plan"
+    },
+    {
+      "type": "PriceByResource"
+    },
+    {
+      "type": "Price"
+    },
+    {
+      "type": "PricePhase"
+    },
+    {
+      "type": "PriceTier"
+    },
+    {
+      "type": "Period"
+    }
+  ],
+  "go": {
+    "src": "channel/apiv1/channelpb/offers.pb.go",
+    "pkg": "channelpb",
+    "pkg_full": "cloud.google.com/go/channel/apiv1/channelpb"
+  }
+}
+{
+  "proto": "google/cloud/channel/v1/reports_service",
+  "pkg": "google.cloud.channel.v1",
+  "svcs": [
+    {
+      "svc": "CloudChannelReportsService",
+      "host": "cloudchannel.googleapis.com",
+      "rpcs": [
+        {
+          "method": "RunReportJob",
+          "request": {
+            "type": "RunReportJobRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "FetchReportResults",
+          "request": {
+            "type": "FetchReportResultsRequest"
+          },
+          "response": {
+            "type": "FetchReportResultsResponse"
+          }
+        },
+        {
+          "method": "ListReports",
+          "request": {
+            "type": "ListReportsRequest"
+          },
+          "response": {
+            "type": "ListReportsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "RunReportJobRequest"
+    },
+    {
+      "type": "RunReportJobResponse"
+    },
+    {
+      "type": "FetchReportResultsRequest"
+    },
+    {
+      "type": "FetchReportResultsResponse"
+    },
+    {
+      "type": "ListReportsRequest"
+    },
+    {
+      "type": "ListReportsResponse"
+    },
+    {
+      "type": "ReportJob"
+    },
+    {
+      "type": "ReportResultsMetadata"
+    },
+    {
+      "type": "Column"
+    },
+    {
+      "type": "DateRange"
+    },
+    {
+      "type": "Row"
+    },
+    {
+      "type": "ReportValue"
+    },
+    {
+      "type": "ReportStatus"
+    },
+    {
+      "type": "Report"
+    }
+  ],
+  "go": {
+    "src": "channel/apiv1/channelpb/reports_service.pb.go",
+    "pkg": "channelpb",
+    "pkg_full": "cloud.google.com/go/channel/apiv1/channelpb"
+  }
+}
+{
+  "proto": "google/cloud/channel/v1/billing_accounts",
+  "pkg": "google.cloud.channel.v1",
+  "msgs": [
+    {
+      "type": "BillingAccount"
+    }
+  ],
+  "go": {
+    "src": "channel/apiv1/channelpb/billing_accounts.pb.go",
+    "pkg": "channelpb",
+    "pkg_full": "cloud.google.com/go/channel/apiv1/channelpb"
+  }
+}
+{
+  "proto": "google/cloud/channel/v1/operations",
+  "pkg": "google.cloud.channel.v1",
+  "msgs": [
+    {
+      "type": "OperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "channel/apiv1/channelpb/operations.pb.go",
+    "pkg": "channelpb",
+    "pkg_full": "cloud.google.com/go/channel/apiv1/channelpb"
+  }
+}
+{
+  "proto": "google/cloud/channel/v1/common",
+  "pkg": "google.cloud.channel.v1",
+  "msgs": [
+    {
+      "type": "EduData"
+    },
+    {
+      "type": "CloudIdentityInfo"
+    },
+    {
+      "type": "Value"
+    },
+    {
+      "type": "AdminUser"
+    }
+  ],
+  "go": {
+    "src": "channel/apiv1/channelpb/common.pb.go",
+    "pkg": "channelpb",
+    "pkg_full": "cloud.google.com/go/channel/apiv1/channelpb"
+  }
+}
+{
+  "proto": "google/cloud/channel/v1/entitlements",
+  "pkg": "google.cloud.channel.v1",
+  "msgs": [
+    {
+      "type": "Entitlement"
+    },
+    {
+      "type": "Parameter"
+    },
+    {
+      "type": "AssociationInfo"
+    },
+    {
+      "type": "ProvisionedService"
+    },
+    {
+      "type": "CommitmentSettings"
+    },
+    {
+      "type": "RenewalSettings"
+    },
+    {
+      "type": "TrialSettings"
+    },
+    {
+      "type": "TransferableSku"
+    },
+    {
+      "type": "TransferEligibility"
+    }
+  ],
+  "go": {
+    "src": "channel/apiv1/channelpb/entitlements.pb.go",
+    "pkg": "channelpb",
+    "pkg_full": "cloud.google.com/go/channel/apiv1/channelpb"
+  }
+}
+{
+  "proto": "google/cloud/channel/v1/customers",
+  "pkg": "google.cloud.channel.v1",
+  "msgs": [
+    {
+      "type": "Customer"
+    },
+    {
+      "type": "ContactInfo"
+    }
+  ],
+  "go": {
+    "src": "channel/apiv1/channelpb/customers.pb.go",
+    "pkg": "channelpb",
+    "pkg_full": "cloud.google.com/go/channel/apiv1/channelpb"
+  }
+}
+{
+  "proto": "google/cloud/channel/v1/repricing",
+  "pkg": "google.cloud.channel.v1",
+  "msgs": [
+    {
+      "type": "CustomerRepricingConfig"
+    },
+    {
+      "type": "ChannelPartnerRepricingConfig"
+    },
+    {
+      "type": "RepricingConfig",
+      "msgs": [
+        {
+          "type": "EntitlementGranularity"
+        },
+        {
+          "type": "ChannelPartnerGranularity"
+        }
+      ]
+    },
+    {
+      "type": "RepricingAdjustment"
+    },
+    {
+      "type": "PercentageAdjustment"
+    },
+    {
+      "type": "ConditionalOverride"
+    },
+    {
+      "type": "RepricingCondition"
+    },
+    {
+      "type": "SkuGroupCondition"
+    }
+  ],
+  "go": {
+    "src": "channel/apiv1/channelpb/repricing.pb.go",
+    "pkg": "channelpb",
+    "pkg_full": "cloud.google.com/go/channel/apiv1/channelpb"
+  }
+}
+{
+  "proto": "google/cloud/channel/v1/service",
+  "pkg": "google.cloud.channel.v1",
+  "svcs": [
+    {
+      "svc": "CloudChannelService",
+      "host": "cloudchannel.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListCustomers",
+          "request": {
+            "type": "ListCustomersRequest"
+          },
+          "response": {
+            "type": "ListCustomersResponse"
+          }
+        },
+        {
+          "method": "GetCustomer",
+          "request": {
+            "type": "GetCustomerRequest"
+          },
+          "response": {
+            "type": "Customer"
+          }
+        },
+        {
+          "method": "CheckCloudIdentityAccountsExist",
+          "request": {
+            "type": "CheckCloudIdentityAccountsExistRequest"
+          },
+          "response": {
+            "type": "CheckCloudIdentityAccountsExistResponse"
+          }
+        },
+        {
+          "method": "CreateCustomer",
+          "request": {
+            "type": "CreateCustomerRequest"
+          },
+          "response": {
+            "type": "Customer"
+          }
+        },
+        {
+          "method": "UpdateCustomer",
+          "request": {
+            "type": "UpdateCustomerRequest"
+          },
+          "response": {
+            "type": "Customer"
+          }
+        },
+        {
+          "method": "DeleteCustomer",
+          "request": {
+            "type": "DeleteCustomerRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ImportCustomer",
+          "request": {
+            "type": "ImportCustomerRequest"
+          },
+          "response": {
+            "type": "Customer"
+          }
+        },
+        {
+          "method": "ProvisionCloudIdentity",
+          "request": {
+            "type": "ProvisionCloudIdentityRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListEntitlements",
+          "request": {
+            "type": "ListEntitlementsRequest"
+          },
+          "response": {
+            "type": "ListEntitlementsResponse"
+          }
+        },
+        {
+          "method": "ListTransferableSkus",
+          "request": {
+            "type": "ListTransferableSkusRequest"
+          },
+          "response": {
+            "type": "ListTransferableSkusResponse"
+          }
+        },
+        {
+          "method": "ListTransferableOffers",
+          "request": {
+            "type": "ListTransferableOffersRequest"
+          },
+          "response": {
+            "type": "ListTransferableOffersResponse"
+          }
+        },
+        {
+          "method": "GetEntitlement",
+          "request": {
+            "type": "GetEntitlementRequest"
+          },
+          "response": {
+            "type": "Entitlement"
+          }
+        },
+        {
+          "method": "CreateEntitlement",
+          "request": {
+            "type": "CreateEntitlementRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ChangeParameters",
+          "request": {
+            "type": "ChangeParametersRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ChangeRenewalSettings",
+          "request": {
+            "type": "ChangeRenewalSettingsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ChangeOffer",
+          "request": {
+            "type": "ChangeOfferRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "StartPaidService",
+          "request": {
+            "type": "StartPaidServiceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "SuspendEntitlement",
+          "request": {
+            "type": "SuspendEntitlementRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CancelEntitlement",
+          "request": {
+            "type": "CancelEntitlementRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ActivateEntitlement",
+          "request": {
+            "type": "ActivateEntitlementRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "TransferEntitlements",
+          "request": {
+            "type": "TransferEntitlementsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "TransferEntitlementsToGoogle",
+          "request": {
+            "type": "TransferEntitlementsToGoogleRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListChannelPartnerLinks",
+          "request": {
+            "type": "ListChannelPartnerLinksRequest"
+          },
+          "response": {
+            "type": "ListChannelPartnerLinksResponse"
+          }
+        },
+        {
+          "method": "GetChannelPartnerLink",
+          "request": {
+            "type": "GetChannelPartnerLinkRequest"
+          },
+          "response": {
+            "type": "ChannelPartnerLink"
+          }
+        },
+        {
+          "method": "CreateChannelPartnerLink",
+          "request": {
+            "type": "CreateChannelPartnerLinkRequest"
+          },
+          "response": {
+            "type": "ChannelPartnerLink"
+          }
+        },
+        {
+          "method": "UpdateChannelPartnerLink",
+          "request": {
+            "type": "UpdateChannelPartnerLinkRequest"
+          },
+          "response": {
+            "type": "ChannelPartnerLink"
+          }
+        },
+        {
+          "method": "GetCustomerRepricingConfig",
+          "request": {
+            "type": "GetCustomerRepricingConfigRequest"
+          },
+          "response": {
+            "type": "CustomerRepricingConfig"
+          }
+        },
+        {
+          "method": "ListCustomerRepricingConfigs",
+          "request": {
+            "type": "ListCustomerRepricingConfigsRequest"
+          },
+          "response": {
+            "type": "ListCustomerRepricingConfigsResponse"
+          }
+        },
+        {
+          "method": "CreateCustomerRepricingConfig",
+          "request": {
+            "type": "CreateCustomerRepricingConfigRequest"
+          },
+          "response": {
+            "type": "CustomerRepricingConfig"
+          }
+        },
+        {
+          "method": "UpdateCustomerRepricingConfig",
+          "request": {
+            "type": "UpdateCustomerRepricingConfigRequest"
+          },
+          "response": {
+            "type": "CustomerRepricingConfig"
+          }
+        },
+        {
+          "method": "DeleteCustomerRepricingConfig",
+          "request": {
+            "type": "DeleteCustomerRepricingConfigRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "GetChannelPartnerRepricingConfig",
+          "request": {
+            "type": "GetChannelPartnerRepricingConfigRequest"
+          },
+          "response": {
+            "type": "ChannelPartnerRepricingConfig"
+          }
+        },
+        {
+          "method": "ListSkuGroups",
+          "request": {
+            "type": "ListSkuGroupsRequest"
+          },
+          "response": {
+            "type": "ListSkuGroupsResponse"
+          }
+        },
+        {
+          "method": "ListSkuGroupBillableSkus",
+          "request": {
+            "type": "ListSkuGroupBillableSkusRequest"
+          },
+          "response": {
+            "type": "ListSkuGroupBillableSkusResponse"
+          }
+        },
+        {
+          "method": "LookupOffer",
+          "request": {
+            "type": "LookupOfferRequest"
+          },
+          "response": {
+            "type": "Offer"
+          }
+        },
+        {
+          "method": "ListProducts",
+          "request": {
+            "type": "ListProductsRequest"
+          },
+          "response": {
+            "type": "ListProductsResponse"
+          }
+        },
+        {
+          "method": "ListSkus",
+          "request": {
+            "type": "ListSkusRequest"
+          },
+          "response": {
+            "type": "ListSkusResponse"
+          }
+        },
+        {
+          "method": "ListOffers",
+          "request": {
+            "type": "ListOffersRequest"
+          },
+          "response": {
+            "type": "ListOffersResponse"
+          }
+        },
+        {
+          "method": "ListPurchasableSkus",
+          "request": {
+            "type": "ListPurchasableSkusRequest"
+          },
+          "response": {
+            "type": "ListPurchasableSkusResponse"
+          }
+        },
+        {
+          "method": "ListPurchasableOffers",
+          "request": {
+            "type": "ListPurchasableOffersRequest"
+          },
+          "response": {
+            "type": "ListPurchasableOffersResponse"
+          }
+        },
+        {
+          "method": "QueryEligibleBillingAccounts",
+          "request": {
+            "type": "QueryEligibleBillingAccountsRequest"
+          },
+          "response": {
+            "type": "QueryEligibleBillingAccountsResponse"
+          }
+        },
+        {
+          "method": "RegisterSubscriber",
+          "request": {
+            "type": "RegisterSubscriberRequest"
+          },
+          "response": {
+            "type": "RegisterSubscriberResponse"
+          }
+        },
+        {
+          "method": "UnregisterSubscriber",
+          "request": {
+            "type": "UnregisterSubscriberRequest"
+          },
+          "response": {
+            "type": "UnregisterSubscriberResponse"
+          }
+        },
+        {
+          "method": "ListSubscribers",
+          "request": {
+            "type": "ListSubscribersRequest"
+          },
+          "response": {
+            "type": "ListSubscribersResponse"
+          }
+        },
+        {
+          "method": "ListEntitlementChanges",
+          "request": {
+            "type": "ListEntitlementChangesRequest"
+          },
+          "response": {
+            "type": "ListEntitlementChangesResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CheckCloudIdentityAccountsExistRequest"
+    },
+    {
+      "type": "CloudIdentityCustomerAccount"
+    },
+    {
+      "type": "CheckCloudIdentityAccountsExistResponse"
+    },
+    {
+      "type": "ListCustomersRequest"
+    },
+    {
+      "type": "ListCustomersResponse"
+    },
+    {
+      "type": "GetCustomerRequest"
+    },
+    {
+      "type": "CreateCustomerRequest"
+    },
+    {
+      "type": "UpdateCustomerRequest"
+    },
+    {
+      "type": "DeleteCustomerRequest"
+    },
+    {
+      "type": "ImportCustomerRequest"
+    },
+    {
+      "type": "ProvisionCloudIdentityRequest"
+    },
+    {
+      "type": "ListEntitlementsRequest"
+    },
+    {
+      "type": "ListEntitlementsResponse"
+    },
+    {
+      "type": "ListTransferableSkusRequest"
+    },
+    {
+      "type": "ListTransferableSkusResponse"
+    },
+    {
+      "type": "ListTransferableOffersRequest"
+    },
+    {
+      "type": "ListTransferableOffersResponse"
+    },
+    {
+      "type": "TransferableOffer"
+    },
+    {
+      "type": "GetEntitlementRequest"
+    },
+    {
+      "type": "ListChannelPartnerLinksRequest"
+    },
+    {
+      "type": "ListChannelPartnerLinksResponse"
+    },
+    {
+      "type": "GetChannelPartnerLinkRequest"
+    },
+    {
+      "type": "CreateChannelPartnerLinkRequest"
+    },
+    {
+      "type": "UpdateChannelPartnerLinkRequest"
+    },
+    {
+      "type": "GetCustomerRepricingConfigRequest"
+    },
+    {
+      "type": "ListCustomerRepricingConfigsRequest"
+    },
+    {
+      "type": "ListCustomerRepricingConfigsResponse"
+    },
+    {
+      "type": "CreateCustomerRepricingConfigRequest"
+    },
+    {
+      "type": "UpdateCustomerRepricingConfigRequest"
+    },
+    {
+      "type": "DeleteCustomerRepricingConfigRequest"
+    },
+    {
+      "type": "GetChannelPartnerRepricingConfigRequest"
+    },
+    {
+      "type": "ListChannelPartnerRepricingConfigsRequest"
+    },
+    {
+      "type": "ListChannelPartnerRepricingConfigsResponse"
+    },
+    {
+      "type": "CreateChannelPartnerRepricingConfigRequest"
+    },
+    {
+      "type": "UpdateChannelPartnerRepricingConfigRequest"
+    },
+    {
+      "type": "DeleteChannelPartnerRepricingConfigRequest"
+    },
+    {
+      "type": "ListSkuGroupsRequest"
+    },
+    {
+      "type": "ListSkuGroupBillableSkusRequest"
+    },
+    {
+      "type": "ListSkuGroupsResponse"
+    },
+    {
+      "type": "ListSkuGroupBillableSkusResponse"
+    },
+    {
+      "type": "SkuGroup"
+    },
+    {
+      "type": "BillableSku"
+    },
+    {
+      "type": "CreateEntitlementRequest"
+    },
+    {
+      "type": "TransferEntitlementsRequest"
+    },
+    {
+      "type": "TransferEntitlementsResponse"
+    },
+    {
+      "type": "TransferEntitlementsToGoogleRequest"
+    },
+    {
+      "type": "ChangeParametersRequest"
+    },
+    {
+      "type": "ChangeRenewalSettingsRequest"
+    },
+    {
+      "type": "ChangeOfferRequest"
+    },
+    {
+      "type": "StartPaidServiceRequest"
+    },
+    {
+      "type": "CancelEntitlementRequest"
+    },
+    {
+      "type": "SuspendEntitlementRequest"
+    },
+    {
+      "type": "ActivateEntitlementRequest"
+    },
+    {
+      "type": "LookupOfferRequest"
+    },
+    {
+      "type": "ListProductsRequest"
+    },
+    {
+      "type": "ListProductsResponse"
+    },
+    {
+      "type": "ListSkusRequest"
+    },
+    {
+      "type": "ListSkusResponse"
+    },
+    {
+      "type": "ListOffersRequest"
+    },
+    {
+      "type": "ListOffersResponse"
+    },
+    {
+      "type": "ListPurchasableSkusRequest",
+      "msgs": [
+        {
+          "type": "CreateEntitlementPurchase"
+        },
+        {
+          "type": "ChangeOfferPurchase"
+        }
+      ]
+    },
+    {
+      "type": "ListPurchasableSkusResponse"
+    },
+    {
+      "type": "PurchasableSku"
+    },
+    {
+      "type": "ListPurchasableOffersRequest",
+      "msgs": [
+        {
+          "type": "CreateEntitlementPurchase"
+        },
+        {
+          "type": "ChangeOfferPurchase"
+        }
+      ]
+    },
+    {
+      "type": "ListPurchasableOffersResponse"
+    },
+    {
+      "type": "PurchasableOffer"
+    },
+    {
+      "type": "QueryEligibleBillingAccountsRequest"
+    },
+    {
+      "type": "QueryEligibleBillingAccountsResponse"
+    },
+    {
+      "type": "SkuPurchaseGroup"
+    },
+    {
+      "type": "BillingAccountPurchaseInfo"
+    },
+    {
+      "type": "RegisterSubscriberRequest"
+    },
+    {
+      "type": "RegisterSubscriberResponse"
+    },
+    {
+      "type": "UnregisterSubscriberRequest"
+    },
+    {
+      "type": "UnregisterSubscriberResponse"
+    },
+    {
+      "type": "ListSubscribersRequest"
+    },
+    {
+      "type": "ListSubscribersResponse"
+    },
+    {
+      "type": "ListEntitlementChangesRequest"
+    },
+    {
+      "type": "ListEntitlementChangesResponse"
+    }
+  ],
+  "go": {
+    "src": "channel/apiv1/channelpb/service.pb.go",
+    "pkg": "channelpb",
+    "pkg_full": "cloud.google.com/go/channel/apiv1/channelpb"
+  }
+}
+{
+  "proto": "google/cloud/channel/v1/entitlement_changes",
+  "pkg": "google.cloud.channel.v1",
+  "msgs": [
+    {
+      "type": "EntitlementChange"
+    }
+  ],
+  "go": {
+    "src": "channel/apiv1/channelpb/entitlement_changes.pb.go",
+    "pkg": "channelpb",
+    "pkg_full": "cloud.google.com/go/channel/apiv1/channelpb"
+  }
+}
+{
+  "proto": "google/cloud/channel/v1/subscriber_event",
+  "pkg": "google.cloud.channel.v1",
+  "msgs": [
+    {
+      "type": "CustomerEvent"
+    },
+    {
+      "type": "EntitlementEvent"
+    },
+    {
+      "type": "SubscriberEvent"
+    }
+  ],
+  "go": {
+    "src": "channel/apiv1/channelpb/subscriber_event.pb.go",
+    "pkg": "channelpb",
+    "pkg_full": "cloud.google.com/go/channel/apiv1/channelpb"
+  }
+}

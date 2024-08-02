@@ -1,0 +1,13 @@
+{
+  "proto": "google/cloud/dataform/logging/v1/logging",
+  "pkg": "google.cloud.dataform.logging.v1",
+  "msgs": [
+    {
+      "type": "WorkflowInvocationCompletionLogEntry"
+    }
+  ],
+  "go": {
+    "pkg": "loggingpb",
+    "pkg_full": "cloud.google.com/go/dataform/logging/apiv1/loggingpb"
+  }
+}

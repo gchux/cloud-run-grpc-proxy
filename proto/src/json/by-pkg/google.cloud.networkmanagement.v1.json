@@ -1,0 +1,234 @@
+{
+  "proto": "google/cloud/networkmanagement/v1/reachability",
+  "pkg": "google.cloud.networkmanagement.v1",
+  "svcs": [
+    {
+      "svc": "ReachabilityService",
+      "host": "networkmanagement.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListConnectivityTests",
+          "request": {
+            "type": "ListConnectivityTestsRequest"
+          },
+          "response": {
+            "type": "ListConnectivityTestsResponse"
+          }
+        },
+        {
+          "method": "GetConnectivityTest",
+          "request": {
+            "type": "GetConnectivityTestRequest"
+          },
+          "response": {
+            "type": "ConnectivityTest"
+          }
+        },
+        {
+          "method": "CreateConnectivityTest",
+          "request": {
+            "type": "CreateConnectivityTestRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateConnectivityTest",
+          "request": {
+            "type": "UpdateConnectivityTestRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "RerunConnectivityTest",
+          "request": {
+            "type": "RerunConnectivityTestRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteConnectivityTest",
+          "request": {
+            "type": "DeleteConnectivityTestRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ListConnectivityTestsRequest"
+    },
+    {
+      "type": "ListConnectivityTestsResponse"
+    },
+    {
+      "type": "GetConnectivityTestRequest"
+    },
+    {
+      "type": "CreateConnectivityTestRequest"
+    },
+    {
+      "type": "UpdateConnectivityTestRequest"
+    },
+    {
+      "type": "DeleteConnectivityTestRequest"
+    },
+    {
+      "type": "RerunConnectivityTestRequest"
+    },
+    {
+      "type": "OperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "networkmanagement/apiv1/networkmanagementpb/reachability.pb.go",
+    "pkg": "networkmanagementpb",
+    "pkg_full": "cloud.google.com/go/networkmanagement/apiv1/networkmanagementpb"
+  }
+}
+{
+  "proto": "google/cloud/networkmanagement/v1/trace",
+  "pkg": "google.cloud.networkmanagement.v1",
+  "msgs": [
+    {
+      "type": "Trace"
+    },
+    {
+      "type": "Step"
+    },
+    {
+      "type": "InstanceInfo"
+    },
+    {
+      "type": "NetworkInfo"
+    },
+    {
+      "type": "FirewallInfo"
+    },
+    {
+      "type": "RouteInfo"
+    },
+    {
+      "type": "GoogleServiceInfo"
+    },
+    {
+      "type": "ForwardingRuleInfo"
+    },
+    {
+      "type": "LoadBalancerInfo"
+    },
+    {
+      "type": "LoadBalancerBackend"
+    },
+    {
+      "type": "VpnGatewayInfo"
+    },
+    {
+      "type": "VpnTunnelInfo"
+    },
+    {
+      "type": "EndpointInfo"
+    },
+    {
+      "type": "DeliverInfo"
+    },
+    {
+      "type": "ForwardInfo"
+    },
+    {
+      "type": "AbortInfo"
+    },
+    {
+      "type": "DropInfo"
+    },
+    {
+      "type": "GKEMasterInfo"
+    },
+    {
+      "type": "CloudSQLInstanceInfo"
+    },
+    {
+      "type": "CloudFunctionInfo"
+    },
+    {
+      "type": "CloudRunRevisionInfo"
+    },
+    {
+      "type": "AppEngineVersionInfo"
+    },
+    {
+      "type": "VpcConnectorInfo"
+    },
+    {
+      "type": "NatInfo"
+    },
+    {
+      "type": "ProxyConnectionInfo"
+    },
+    {
+      "type": "LoadBalancerBackendInfo"
+    },
+    {
+      "type": "StorageBucketInfo"
+    }
+  ],
+  "go": {
+    "src": "networkmanagement/apiv1/networkmanagementpb/trace.pb.go",
+    "pkg": "networkmanagementpb",
+    "pkg_full": "cloud.google.com/go/networkmanagement/apiv1/networkmanagementpb"
+  }
+}
+{
+  "proto": "google/cloud/networkmanagement/v1/connectivity_test",
+  "pkg": "google.cloud.networkmanagement.v1",
+  "msgs": [
+    {
+      "type": "ConnectivityTest"
+    },
+    {
+      "type": "Endpoint",
+      "msgs": [
+        {
+          "type": "CloudFunctionEndpoint"
+        },
+        {
+          "type": "AppEngineVersionEndpoint"
+        },
+        {
+          "type": "CloudRunRevisionEndpoint"
+        }
+      ]
+    },
+    {
+      "type": "ReachabilityDetails"
+    },
+    {
+      "type": "LatencyPercentile"
+    },
+    {
+      "type": "LatencyDistribution"
+    },
+    {
+      "type": "ProbingDetails",
+      "msgs": [
+        {
+          "type": "EdgeLocation"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "networkmanagement/apiv1/networkmanagementpb/connectivity_test.pb.go",
+    "pkg": "networkmanagementpb",
+    "pkg_full": "cloud.google.com/go/networkmanagement/apiv1/networkmanagementpb"
+  }
+}

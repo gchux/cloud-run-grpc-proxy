@@ -1,0 +1,199 @@
+{
+  "proto": "google/area120/tables/v1alpha1/tables",
+  "pkg": "google.area120.tables.v1alpha1",
+  "svcs": [
+    {
+      "svc": "TablesService",
+      "host": "area120tables.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetTable",
+          "request": {
+            "type": "GetTableRequest"
+          },
+          "response": {
+            "type": "Table"
+          }
+        },
+        {
+          "method": "ListTables",
+          "request": {
+            "type": "ListTablesRequest"
+          },
+          "response": {
+            "type": "ListTablesResponse"
+          }
+        },
+        {
+          "method": "GetWorkspace",
+          "request": {
+            "type": "GetWorkspaceRequest"
+          },
+          "response": {
+            "type": "Workspace"
+          }
+        },
+        {
+          "method": "ListWorkspaces",
+          "request": {
+            "type": "ListWorkspacesRequest"
+          },
+          "response": {
+            "type": "ListWorkspacesResponse"
+          }
+        },
+        {
+          "method": "GetRow",
+          "request": {
+            "type": "GetRowRequest"
+          },
+          "response": {
+            "type": "Row"
+          }
+        },
+        {
+          "method": "ListRows",
+          "request": {
+            "type": "ListRowsRequest"
+          },
+          "response": {
+            "type": "ListRowsResponse"
+          }
+        },
+        {
+          "method": "CreateRow",
+          "request": {
+            "type": "CreateRowRequest"
+          },
+          "response": {
+            "type": "Row"
+          }
+        },
+        {
+          "method": "BatchCreateRows",
+          "request": {
+            "type": "BatchCreateRowsRequest"
+          },
+          "response": {
+            "type": "BatchCreateRowsResponse"
+          }
+        },
+        {
+          "method": "UpdateRow",
+          "request": {
+            "type": "UpdateRowRequest"
+          },
+          "response": {
+            "type": "Row"
+          }
+        },
+        {
+          "method": "BatchUpdateRows",
+          "request": {
+            "type": "BatchUpdateRowsRequest"
+          },
+          "response": {
+            "type": "BatchUpdateRowsResponse"
+          }
+        },
+        {
+          "method": "DeleteRow",
+          "request": {
+            "type": "DeleteRowRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "BatchDeleteRows",
+          "request": {
+            "type": "BatchDeleteRowsRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GetTableRequest"
+    },
+    {
+      "type": "ListTablesRequest"
+    },
+    {
+      "type": "ListTablesResponse"
+    },
+    {
+      "type": "GetWorkspaceRequest"
+    },
+    {
+      "type": "ListWorkspacesRequest"
+    },
+    {
+      "type": "ListWorkspacesResponse"
+    },
+    {
+      "type": "GetRowRequest"
+    },
+    {
+      "type": "ListRowsRequest"
+    },
+    {
+      "type": "ListRowsResponse"
+    },
+    {
+      "type": "CreateRowRequest"
+    },
+    {
+      "type": "BatchCreateRowsRequest"
+    },
+    {
+      "type": "BatchCreateRowsResponse"
+    },
+    {
+      "type": "UpdateRowRequest"
+    },
+    {
+      "type": "BatchUpdateRowsRequest"
+    },
+    {
+      "type": "BatchUpdateRowsResponse"
+    },
+    {
+      "type": "DeleteRowRequest"
+    },
+    {
+      "type": "BatchDeleteRowsRequest"
+    },
+    {
+      "type": "Table"
+    },
+    {
+      "type": "ColumnDescription"
+    },
+    {
+      "type": "LabeledItem"
+    },
+    {
+      "type": "RelationshipDetails"
+    },
+    {
+      "type": "LookupDetails"
+    },
+    {
+      "type": "Row"
+    },
+    {
+      "type": "Workspace"
+    }
+  ],
+  "go": {
+    "src": "area120/tables/apiv1alpha1/tablespb/tables.pb.go",
+    "pkg": "tablespb",
+    "pkg_full": "cloud.google.com/go/area120/tables/apiv1alpha1/tablespb"
+  }
+}

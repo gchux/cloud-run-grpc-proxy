@@ -1,0 +1,34 @@
+{
+  "proto": "google/bytestream/bytestream",
+  "pkg": "google.bytestream",
+  "svcs": [
+    {
+      "svc": "ByteStream"
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ReadRequest"
+    },
+    {
+      "type": "ReadResponse"
+    },
+    {
+      "type": "WriteRequest"
+    },
+    {
+      "type": "WriteResponse"
+    },
+    {
+      "type": "QueryWriteStatusRequest"
+    },
+    {
+      "type": "QueryWriteStatusResponse"
+    }
+  ],
+  "go": {
+    "src": "googleapis/bytestream/bytestream.pb.go",
+    "pkg": "bytestream",
+    "pkg_full": "google.golang.org/genproto/googleapis/bytestream"
+  }
+}

@@ -1,0 +1,297 @@
+{
+  "proto": "google/datastore/v1/query_profile",
+  "pkg": "google.datastore.v1",
+  "msgs": [
+    {
+      "type": "ExplainOptions"
+    },
+    {
+      "type": "ExplainMetrics"
+    },
+    {
+      "type": "PlanSummary"
+    },
+    {
+      "type": "ExecutionStats"
+    }
+  ],
+  "go": {
+    "src": "googleapis/datastore/v1/query_profile.pb.go",
+    "pkg": "datastorepb",
+    "pkg_full": "cloud.google.com/go/datastore/apiv1/datastorepb"
+  }
+}
+{
+  "proto": "google/datastore/v1/aggregation_result",
+  "pkg": "google.datastore.v1",
+  "msgs": [
+    {
+      "type": "AggregationResult"
+    },
+    {
+      "type": "AggregationResultBatch"
+    }
+  ],
+  "go": {
+    "src": "googleapis/datastore/v1/aggregation_result.pb.go",
+    "pkg": "datastorepb",
+    "pkg_full": "cloud.google.com/go/datastore/apiv1/datastorepb"
+  }
+}
+{
+  "proto": "google/datastore/v1/entity",
+  "pkg": "google.datastore.v1",
+  "msgs": [
+    {
+      "type": "PartitionId"
+    },
+    {
+      "type": "Key",
+      "msgs": [
+        {
+          "type": "PathElement"
+        }
+      ]
+    },
+    {
+      "type": "ArrayValue"
+    },
+    {
+      "type": "Value"
+    },
+    {
+      "type": "Entity"
+    }
+  ],
+  "go": {
+    "src": "googleapis/datastore/v1/entity.pb.go",
+    "pkg": "datastorepb",
+    "pkg_full": "cloud.google.com/go/datastore/apiv1/datastorepb"
+  }
+}
+{
+  "proto": "google/datastore/v1/query",
+  "pkg": "google.datastore.v1",
+  "msgs": [
+    {
+      "type": "EntityResult"
+    },
+    {
+      "type": "Query"
+    },
+    {
+      "type": "AggregationQuery",
+      "msgs": [
+        {
+          "type": "Aggregation"
+        },
+        {
+          "type": "Count"
+        },
+        {
+          "type": "Sum"
+        },
+        {
+          "type": "Avg"
+        }
+      ]
+    },
+    {
+      "type": "KindExpression"
+    },
+    {
+      "type": "PropertyReference"
+    },
+    {
+      "type": "Projection"
+    },
+    {
+      "type": "PropertyOrder"
+    },
+    {
+      "type": "Filter"
+    },
+    {
+      "type": "CompositeFilter"
+    },
+    {
+      "type": "PropertyFilter"
+    },
+    {
+      "type": "GqlQuery"
+    },
+    {
+      "type": "GqlQueryParameter"
+    },
+    {
+      "type": "QueryResultBatch"
+    }
+  ],
+  "go": {
+    "src": "googleapis/datastore/v1/query.pb.go",
+    "pkg": "datastorepb",
+    "pkg_full": "cloud.google.com/go/datastore/apiv1/datastorepb"
+  }
+}
+{
+  "proto": "google/datastore/v1/datastore",
+  "pkg": "google.datastore.v1",
+  "svcs": [
+    {
+      "svc": "Datastore",
+      "host": "datastore.googleapis.com",
+      "rpcs": [
+        {
+          "method": "Lookup",
+          "request": {
+            "type": "LookupRequest"
+          },
+          "response": {
+            "type": "LookupResponse"
+          }
+        },
+        {
+          "method": "RunQuery",
+          "request": {
+            "type": "RunQueryRequest"
+          },
+          "response": {
+            "type": "RunQueryResponse"
+          }
+        },
+        {
+          "method": "RunAggregationQuery",
+          "request": {
+            "type": "RunAggregationQueryRequest"
+          },
+          "response": {
+            "type": "RunAggregationQueryResponse"
+          }
+        },
+        {
+          "method": "BeginTransaction",
+          "request": {
+            "type": "BeginTransactionRequest"
+          },
+          "response": {
+            "type": "BeginTransactionResponse"
+          }
+        },
+        {
+          "method": "Commit",
+          "request": {
+            "type": "CommitRequest"
+          },
+          "response": {
+            "type": "CommitResponse"
+          }
+        },
+        {
+          "method": "Rollback",
+          "request": {
+            "type": "RollbackRequest"
+          },
+          "response": {
+            "type": "RollbackResponse"
+          }
+        },
+        {
+          "method": "AllocateIds",
+          "request": {
+            "type": "AllocateIdsRequest"
+          },
+          "response": {
+            "type": "AllocateIdsResponse"
+          }
+        },
+        {
+          "method": "ReserveIds",
+          "request": {
+            "type": "ReserveIdsRequest"
+          },
+          "response": {
+            "type": "ReserveIdsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "LookupRequest"
+    },
+    {
+      "type": "LookupResponse"
+    },
+    {
+      "type": "RunQueryRequest"
+    },
+    {
+      "type": "RunQueryResponse"
+    },
+    {
+      "type": "RunAggregationQueryRequest"
+    },
+    {
+      "type": "RunAggregationQueryResponse"
+    },
+    {
+      "type": "BeginTransactionRequest"
+    },
+    {
+      "type": "BeginTransactionResponse"
+    },
+    {
+      "type": "RollbackRequest"
+    },
+    {
+      "type": "RollbackResponse"
+    },
+    {
+      "type": "CommitRequest"
+    },
+    {
+      "type": "CommitResponse"
+    },
+    {
+      "type": "AllocateIdsRequest"
+    },
+    {
+      "type": "AllocateIdsResponse"
+    },
+    {
+      "type": "ReserveIdsRequest"
+    },
+    {
+      "type": "ReserveIdsResponse"
+    },
+    {
+      "type": "Mutation"
+    },
+    {
+      "type": "MutationResult"
+    },
+    {
+      "type": "PropertyMask"
+    },
+    {
+      "type": "ReadOptions"
+    },
+    {
+      "type": "TransactionOptions",
+      "msgs": [
+        {
+          "type": "ReadWrite"
+        },
+        {
+          "type": "ReadOnly"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/datastore/v1/datastore.pb.go",
+    "pkg": "datastorepb",
+    "pkg_full": "cloud.google.com/go/datastore/apiv1/datastorepb"
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "proto": "google/home/enterprise/sdm/v1/smart_device_management_service",
+  "pkg": "google.home.enterprise.sdm.v1",
+  "svcs": [
+    {
+      "svc": "SmartDeviceManagementService",
+      "host": "smartdevicemanagement.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetDevice",
+          "request": {
+            "type": "GetDeviceRequest"
+          },
+          "response": {
+            "type": "Device"
+          }
+        },
+        {
+          "method": "ListDevices",
+          "request": {
+            "type": "ListDevicesRequest"
+          },
+          "response": {
+            "type": "ListDevicesResponse"
+          }
+        },
+        {
+          "method": "ExecuteDeviceCommand",
+          "request": {
+            "type": "ExecuteDeviceCommandRequest"
+          },
+          "response": {
+            "type": "ExecuteDeviceCommandResponse"
+          }
+        },
+        {
+          "method": "GetStructure",
+          "request": {
+            "type": "GetStructureRequest"
+          },
+          "response": {
+            "type": "Structure"
+          }
+        },
+        {
+          "method": "ListStructures",
+          "request": {
+            "type": "ListStructuresRequest"
+          },
+          "response": {
+            "type": "ListStructuresResponse"
+          }
+        },
+        {
+          "method": "GetRoom",
+          "request": {
+            "type": "GetRoomRequest"
+          },
+          "response": {
+            "type": "Room"
+          }
+        },
+        {
+          "method": "ListRooms",
+          "request": {
+            "type": "ListRoomsRequest"
+          },
+          "response": {
+            "type": "ListRoomsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GetDeviceRequest"
+    },
+    {
+      "type": "ListDevicesRequest"
+    },
+    {
+      "type": "ListDevicesResponse"
+    },
+    {
+      "type": "ExecuteDeviceCommandRequest"
+    },
+    {
+      "type": "ExecuteDeviceCommandResponse"
+    },
+    {
+      "type": "GetStructureRequest"
+    },
+    {
+      "type": "ListStructuresRequest"
+    },
+    {
+      "type": "ListStructuresResponse"
+    },
+    {
+      "type": "GetRoomRequest"
+    },
+    {
+      "type": "ListRoomsRequest"
+    },
+    {
+      "type": "ListRoomsResponse"
+    }
+  ],
+  "go": {
+    "src": "googleapis/home/enterprise/sdm/v1/smart_device_management_service.pb.go",
+    "pkg": "sdm",
+    "pkg_full": "google.golang.org/genproto/googleapis/home/enterprise/sdm/v1"
+  }
+}
+{
+  "proto": "google/home/enterprise/sdm/v1/site",
+  "pkg": "google.home.enterprise.sdm.v1",
+  "msgs": [
+    {
+      "type": "Structure"
+    },
+    {
+      "type": "Room"
+    }
+  ],
+  "go": {
+    "src": "googleapis/home/enterprise/sdm/v1/site.pb.go",
+    "pkg": "sdm",
+    "pkg_full": "google.golang.org/genproto/googleapis/home/enterprise/sdm/v1"
+  }
+}
+{
+  "proto": "google/home/enterprise/sdm/v1/device",
+  "pkg": "google.home.enterprise.sdm.v1",
+  "msgs": [
+    {
+      "type": "Device"
+    },
+    {
+      "type": "ParentRelation"
+    }
+  ],
+  "go": {
+    "src": "googleapis/home/enterprise/sdm/v1/device.pb.go",
+    "pkg": "sdm",
+    "pkg_full": "google.golang.org/genproto/googleapis/home/enterprise/sdm/v1"
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "proto": "google/cloud/asset/v1p2beta1/asset_service",
+  "pkg": "google.cloud.asset.v1p2beta1",
+  "svcs": [
+    {
+      "svc": "AssetService",
+      "host": "cloudasset.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateFeed",
+          "request": {
+            "type": "CreateFeedRequest"
+          },
+          "response": {
+            "type": "Feed"
+          }
+        },
+        {
+          "method": "GetFeed",
+          "request": {
+            "type": "GetFeedRequest"
+          },
+          "response": {
+            "type": "Feed"
+          }
+        },
+        {
+          "method": "ListFeeds",
+          "request": {
+            "type": "ListFeedsRequest"
+          },
+          "response": {
+            "type": "ListFeedsResponse"
+          }
+        },
+        {
+          "method": "UpdateFeed",
+          "request": {
+            "type": "UpdateFeedRequest"
+          },
+          "response": {
+            "type": "Feed"
+          }
+        },
+        {
+          "method": "DeleteFeed",
+          "request": {
+            "type": "DeleteFeedRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ExportAssetsResponse"
+    },
+    {
+      "type": "BatchGetAssetsHistoryResponse"
+    },
+    {
+      "type": "CreateFeedRequest"
+    },
+    {
+      "type": "GetFeedRequest"
+    },
+    {
+      "type": "ListFeedsRequest"
+    },
+    {
+      "type": "ListFeedsResponse"
+    },
+    {
+      "type": "UpdateFeedRequest"
+    },
+    {
+      "type": "DeleteFeedRequest"
+    },
+    {
+      "type": "OutputConfig"
+    },
+    {
+      "type": "GcsDestination"
+    },
+    {
+      "type": "PubsubDestination"
+    },
+    {
+      "type": "FeedOutputConfig"
+    },
+    {
+      "type": "Feed"
+    }
+  ],
+  "go": {
+    "src": "asset/apiv1p2beta1/assetpb/asset_service.pb.go",
+    "pkg": "assetpb",
+    "pkg_full": "cloud.google.com/go/asset/apiv1p2beta1/assetpb"
+  }
+}
+{
+  "proto": "google/cloud/asset/v1p2beta1/assets",
+  "pkg": "google.cloud.asset.v1p2beta1",
+  "msgs": [
+    {
+      "type": "TemporalAsset"
+    },
+    {
+      "type": "TimeWindow"
+    },
+    {
+      "type": "Asset"
+    },
+    {
+      "type": "Resource"
+    }
+  ],
+  "go": {
+    "src": "asset/apiv1p2beta1/assetpb/assets.pb.go",
+    "pkg": "assetpb",
+    "pkg_full": "cloud.google.com/go/asset/apiv1p2beta1/assetpb"
+  }
+}

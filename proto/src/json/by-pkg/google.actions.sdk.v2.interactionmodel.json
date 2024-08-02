@@ -1,0 +1,139 @@
+{
+  "proto": "google/actions/sdk/v2/interactionmodel/intent_event",
+  "pkg": "google.actions.sdk.v2.interactionmodel",
+  "msgs": [
+    {
+      "type": "IntentEvent"
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/interactionmodel/intent_event.pb.go",
+    "pkg": "interactionmodel",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2/interactionmodel"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/interactionmodel/conditional_event",
+  "pkg": "google.actions.sdk.v2.interactionmodel",
+  "msgs": [
+    {
+      "type": "ConditionalEvent"
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/interactionmodel/conditional_event.pb.go",
+    "pkg": "interactionmodel",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2/interactionmodel"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/interactionmodel/entity_set",
+  "pkg": "google.actions.sdk.v2.interactionmodel",
+  "msgs": [
+    {
+      "type": "EntitySet",
+      "msgs": [
+        {
+          "type": "Entity"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/interactionmodel/entity_set.pb.go",
+    "pkg": "interactionmodel",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2/interactionmodel"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/interactionmodel/global_intent_event",
+  "pkg": "google.actions.sdk.v2.interactionmodel",
+  "msgs": [
+    {
+      "type": "GlobalIntentEvent"
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/interactionmodel/global_intent_event.pb.go",
+    "pkg": "interactionmodel",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2/interactionmodel"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/interactionmodel/event_handler",
+  "pkg": "google.actions.sdk.v2.interactionmodel",
+  "msgs": [
+    {
+      "type": "EventHandler"
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/interactionmodel/event_handler.pb.go",
+    "pkg": "interactionmodel",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2/interactionmodel"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/interactionmodel/scene",
+  "pkg": "google.actions.sdk.v2.interactionmodel",
+  "msgs": [
+    {
+      "type": "Scene"
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/interactionmodel/scene.pb.go",
+    "pkg": "interactionmodel",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2/interactionmodel"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/interactionmodel/slot",
+  "pkg": "google.actions.sdk.v2.interactionmodel",
+  "msgs": [
+    {
+      "type": "Slot",
+      "msgs": [
+        {
+          "type": "PromptSettings"
+        },
+        {
+          "type": "CommitBehavior"
+        },
+        {
+          "type": "DefaultValue"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/interactionmodel/slot.pb.go",
+    "pkg": "interactionmodel",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2/interactionmodel"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/interactionmodel/intent",
+  "pkg": "google.actions.sdk.v2.interactionmodel",
+  "msgs": [
+    {
+      "type": "Intent",
+      "msgs": [
+        {
+          "type": "IntentParameter"
+        },
+        {
+          "type": "EntitySetReferences"
+        },
+        {
+          "type": "EntitySetReference"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/interactionmodel/intent.pb.go",
+    "pkg": "interactionmodel",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2/interactionmodel"
+  }
+}

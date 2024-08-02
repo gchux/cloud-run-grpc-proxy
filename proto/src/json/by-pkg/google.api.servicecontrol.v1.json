@@ -1,0 +1,206 @@
+{
+  "proto": "google/api/servicecontrol/v1/distribution",
+  "pkg": "google.api.servicecontrol.v1",
+  "msgs": [
+    {
+      "type": "Distribution",
+      "msgs": [
+        {
+          "type": "LinearBuckets"
+        },
+        {
+          "type": "ExponentialBuckets"
+        },
+        {
+          "type": "ExplicitBuckets"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "servicecontrol/apiv1/servicecontrolpb/distribution.pb.go",
+    "pkg": "servicecontrolpb",
+    "pkg_full": "cloud.google.com/go/servicecontrol/apiv1/servicecontrolpb"
+  }
+}
+{
+  "proto": "google/api/servicecontrol/v1/quota_controller",
+  "pkg": "google.api.servicecontrol.v1",
+  "svcs": [
+    {
+      "svc": "QuotaController",
+      "host": "servicecontrol.googleapis.com",
+      "rpcs": [
+        {
+          "method": "AllocateQuota",
+          "request": {
+            "type": "AllocateQuotaRequest"
+          },
+          "response": {
+            "type": "AllocateQuotaResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "AllocateQuotaRequest"
+    },
+    {
+      "type": "QuotaOperation"
+    },
+    {
+      "type": "AllocateQuotaResponse"
+    },
+    {
+      "type": "QuotaError"
+    }
+  ],
+  "go": {
+    "src": "servicecontrol/apiv1/servicecontrolpb/quota_controller.pb.go",
+    "pkg": "servicecontrolpb",
+    "pkg_full": "cloud.google.com/go/servicecontrol/apiv1/servicecontrolpb"
+  }
+}
+{
+  "proto": "google/api/servicecontrol/v1/operation",
+  "pkg": "google.api.servicecontrol.v1",
+  "msgs": [
+    {
+      "type": "Operation"
+    }
+  ],
+  "go": {
+    "src": "servicecontrol/apiv1/servicecontrolpb/operation.pb.go",
+    "pkg": "servicecontrolpb",
+    "pkg_full": "cloud.google.com/go/servicecontrol/apiv1/servicecontrolpb"
+  }
+}
+{
+  "proto": "google/api/servicecontrol/v1/http_request",
+  "pkg": "google.api.servicecontrol.v1",
+  "msgs": [
+    {
+      "type": "HttpRequest"
+    }
+  ],
+  "go": {
+    "src": "servicecontrol/apiv1/servicecontrolpb/http_request.pb.go",
+    "pkg": "servicecontrolpb",
+    "pkg_full": "cloud.google.com/go/servicecontrol/apiv1/servicecontrolpb"
+  }
+}
+{
+  "proto": "google/api/servicecontrol/v1/metric_value",
+  "pkg": "google.api.servicecontrol.v1",
+  "msgs": [
+    {
+      "type": "MetricValue"
+    },
+    {
+      "type": "MetricValueSet"
+    }
+  ],
+  "go": {
+    "src": "servicecontrol/apiv1/servicecontrolpb/metric_value.pb.go",
+    "pkg": "servicecontrolpb",
+    "pkg_full": "cloud.google.com/go/servicecontrol/apiv1/servicecontrolpb"
+  }
+}
+{
+  "proto": "google/api/servicecontrol/v1/log_entry",
+  "pkg": "google.api.servicecontrol.v1",
+  "msgs": [
+    {
+      "type": "LogEntry"
+    },
+    {
+      "type": "LogEntryOperation"
+    },
+    {
+      "type": "LogEntrySourceLocation"
+    }
+  ],
+  "go": {
+    "src": "servicecontrol/apiv1/servicecontrolpb/log_entry.pb.go",
+    "pkg": "servicecontrolpb",
+    "pkg_full": "cloud.google.com/go/servicecontrol/apiv1/servicecontrolpb"
+  }
+}
+{
+  "proto": "google/api/servicecontrol/v1/service_controller",
+  "pkg": "google.api.servicecontrol.v1",
+  "svcs": [
+    {
+      "svc": "ServiceController",
+      "host": "servicecontrol.googleapis.com",
+      "rpcs": [
+        {
+          "method": "Check",
+          "request": {
+            "type": "CheckRequest"
+          },
+          "response": {
+            "type": "CheckResponse"
+          }
+        },
+        {
+          "method": "Report",
+          "request": {
+            "type": "ReportRequest"
+          },
+          "response": {
+            "type": "ReportResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CheckRequest"
+    },
+    {
+      "type": "CheckResponse",
+      "msgs": [
+        {
+          "type": "CheckInfo"
+        },
+        {
+          "type": "ConsumerInfo"
+        }
+      ]
+    },
+    {
+      "type": "ReportRequest"
+    },
+    {
+      "type": "ReportResponse",
+      "msgs": [
+        {
+          "type": "ReportError"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "servicecontrol/apiv1/servicecontrolpb/service_controller.pb.go",
+    "pkg": "servicecontrolpb",
+    "pkg_full": "cloud.google.com/go/servicecontrol/apiv1/servicecontrolpb"
+  }
+}
+{
+  "proto": "google/api/servicecontrol/v1/check_error",
+  "pkg": "google.api.servicecontrol.v1",
+  "msgs": [
+    {
+      "type": "CheckError"
+    }
+  ],
+  "go": {
+    "src": "servicecontrol/apiv1/servicecontrolpb/check_error.pb.go",
+    "pkg": "servicecontrolpb",
+    "pkg_full": "cloud.google.com/go/servicecontrol/apiv1/servicecontrolpb"
+  }
+}

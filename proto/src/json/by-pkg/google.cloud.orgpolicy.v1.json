@@ -1,0 +1,25 @@
+{
+  "proto": "google/cloud/orgpolicy/v1/orgpolicy",
+  "pkg": "google.cloud.orgpolicy.v1",
+  "msgs": [
+    {
+      "type": "Policy",
+      "msgs": [
+        {
+          "type": "ListPolicy"
+        },
+        {
+          "type": "BooleanPolicy"
+        },
+        {
+          "type": "RestoreDefault"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "orgpolicy/apiv1/orgpolicypb/orgpolicy.pb.go",
+    "pkg": "orgpolicypb",
+    "pkg_full": "cloud.google.com/go/orgpolicy/apiv1/orgpolicypb"
+  }
+}

@@ -1,0 +1,322 @@
+{
+  "proto": "google/cloud/filestore/v1beta1/cloud_filestore_service",
+  "pkg": "google.cloud.filestore.v1beta1",
+  "svcs": [
+    {
+      "svc": "CloudFilestoreManager",
+      "host": "file.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListInstances",
+          "request": {
+            "type": "ListInstancesRequest"
+          },
+          "response": {
+            "type": "ListInstancesResponse"
+          }
+        },
+        {
+          "method": "GetInstance",
+          "request": {
+            "type": "GetInstanceRequest"
+          },
+          "response": {
+            "type": "Instance"
+          }
+        },
+        {
+          "method": "CreateInstance",
+          "request": {
+            "type": "CreateInstanceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateInstance",
+          "request": {
+            "type": "UpdateInstanceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "RestoreInstance",
+          "request": {
+            "type": "RestoreInstanceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "RevertInstance",
+          "request": {
+            "type": "RevertInstanceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteInstance",
+          "request": {
+            "type": "DeleteInstanceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListSnapshots",
+          "request": {
+            "type": "ListSnapshotsRequest"
+          },
+          "response": {
+            "type": "ListSnapshotsResponse"
+          }
+        },
+        {
+          "method": "GetSnapshot",
+          "request": {
+            "type": "GetSnapshotRequest"
+          },
+          "response": {
+            "type": "Snapshot"
+          }
+        },
+        {
+          "method": "CreateSnapshot",
+          "request": {
+            "type": "CreateSnapshotRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteSnapshot",
+          "request": {
+            "type": "DeleteSnapshotRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateSnapshot",
+          "request": {
+            "type": "UpdateSnapshotRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListBackups",
+          "request": {
+            "type": "ListBackupsRequest"
+          },
+          "response": {
+            "type": "ListBackupsResponse"
+          }
+        },
+        {
+          "method": "GetBackup",
+          "request": {
+            "type": "GetBackupRequest"
+          },
+          "response": {
+            "type": "Backup"
+          }
+        },
+        {
+          "method": "CreateBackup",
+          "request": {
+            "type": "CreateBackupRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteBackup",
+          "request": {
+            "type": "DeleteBackupRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateBackup",
+          "request": {
+            "type": "UpdateBackupRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListShares",
+          "request": {
+            "type": "ListSharesRequest"
+          },
+          "response": {
+            "type": "ListSharesResponse"
+          }
+        },
+        {
+          "method": "GetShare",
+          "request": {
+            "type": "GetShareRequest"
+          },
+          "response": {
+            "type": "Share"
+          }
+        },
+        {
+          "method": "CreateShare",
+          "request": {
+            "type": "CreateShareRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteShare",
+          "request": {
+            "type": "DeleteShareRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateShare",
+          "request": {
+            "type": "UpdateShareRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "NetworkConfig"
+    },
+    {
+      "type": "FileShareConfig"
+    },
+    {
+      "type": "NfsExportOptions"
+    },
+    {
+      "type": "ManagedActiveDirectoryConfig"
+    },
+    {
+      "type": "DirectoryServicesConfig"
+    },
+    {
+      "type": "Instance"
+    },
+    {
+      "type": "CreateInstanceRequest"
+    },
+    {
+      "type": "GetInstanceRequest"
+    },
+    {
+      "type": "UpdateInstanceRequest"
+    },
+    {
+      "type": "RestoreInstanceRequest"
+    },
+    {
+      "type": "RevertInstanceRequest"
+    },
+    {
+      "type": "DeleteInstanceRequest"
+    },
+    {
+      "type": "ListInstancesRequest"
+    },
+    {
+      "type": "ListInstancesResponse"
+    },
+    {
+      "type": "Snapshot"
+    },
+    {
+      "type": "CreateSnapshotRequest"
+    },
+    {
+      "type": "GetSnapshotRequest"
+    },
+    {
+      "type": "DeleteSnapshotRequest"
+    },
+    {
+      "type": "UpdateSnapshotRequest"
+    },
+    {
+      "type": "ListSnapshotsRequest"
+    },
+    {
+      "type": "ListSnapshotsResponse"
+    },
+    {
+      "type": "Backup"
+    },
+    {
+      "type": "CreateBackupRequest"
+    },
+    {
+      "type": "DeleteBackupRequest"
+    },
+    {
+      "type": "UpdateBackupRequest"
+    },
+    {
+      "type": "GetBackupRequest"
+    },
+    {
+      "type": "ListBackupsRequest"
+    },
+    {
+      "type": "ListBackupsResponse"
+    },
+    {
+      "type": "Share"
+    },
+    {
+      "type": "CreateShareRequest"
+    },
+    {
+      "type": "GetShareRequest"
+    },
+    {
+      "type": "DeleteShareRequest"
+    },
+    {
+      "type": "ListSharesRequest"
+    },
+    {
+      "type": "ListSharesResponse"
+    },
+    {
+      "type": "UpdateShareRequest"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/filestore/v1beta1/cloud_filestore_service.pb.go",
+    "pkg": "filestorepb",
+    "pkg_full": "cloud.google.com/go/filestore/apiv1beta1/filestorepb"
+  }
+}

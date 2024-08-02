@@ -1,0 +1,165 @@
+{
+  "proto": "google/cloud/memcache/v1beta2/cloud_memcache",
+  "pkg": "google.cloud.memcache.v1beta2",
+  "svcs": [
+    {
+      "svc": "CloudMemcache",
+      "host": "memcache.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListInstances",
+          "request": {
+            "type": "ListInstancesRequest"
+          },
+          "response": {
+            "type": "ListInstancesResponse"
+          }
+        },
+        {
+          "method": "GetInstance",
+          "request": {
+            "type": "GetInstanceRequest"
+          },
+          "response": {
+            "type": "Instance"
+          }
+        },
+        {
+          "method": "CreateInstance",
+          "request": {
+            "type": "CreateInstanceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateInstance",
+          "request": {
+            "type": "UpdateInstanceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateParameters",
+          "request": {
+            "type": "UpdateParametersRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteInstance",
+          "request": {
+            "type": "DeleteInstanceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ApplyParameters",
+          "request": {
+            "type": "ApplyParametersRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ApplySoftwareUpdate",
+          "request": {
+            "type": "ApplySoftwareUpdateRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "RescheduleMaintenance",
+          "request": {
+            "type": "RescheduleMaintenanceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Instance",
+      "msgs": [
+        {
+          "type": "NodeConfig"
+        },
+        {
+          "type": "Node"
+        },
+        {
+          "type": "InstanceMessage"
+        }
+      ]
+    },
+    {
+      "type": "MaintenancePolicy"
+    },
+    {
+      "type": "WeeklyMaintenanceWindow"
+    },
+    {
+      "type": "MaintenanceSchedule"
+    },
+    {
+      "type": "ListInstancesRequest"
+    },
+    {
+      "type": "ListInstancesResponse"
+    },
+    {
+      "type": "GetInstanceRequest"
+    },
+    {
+      "type": "CreateInstanceRequest"
+    },
+    {
+      "type": "UpdateInstanceRequest"
+    },
+    {
+      "type": "DeleteInstanceRequest"
+    },
+    {
+      "type": "RescheduleMaintenanceRequest"
+    },
+    {
+      "type": "ApplyParametersRequest"
+    },
+    {
+      "type": "UpdateParametersRequest"
+    },
+    {
+      "type": "ApplySoftwareUpdateRequest"
+    },
+    {
+      "type": "MemcacheParameters"
+    },
+    {
+      "type": "OperationMetadata"
+    },
+    {
+      "type": "LocationMetadata"
+    },
+    {
+      "type": "ZoneMetadata"
+    }
+  ],
+  "go": {
+    "src": "memcache/apiv1beta2/memcachepb/cloud_memcache.pb.go",
+    "pkg": "memcachepb",
+    "pkg_full": "cloud.google.com/go/memcache/apiv1beta2/memcachepb"
+  }
+}

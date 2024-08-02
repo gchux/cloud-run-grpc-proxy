@@ -1,0 +1,14 @@
+{
+  "proto": "google/cloud/gkehub/v1beta/metering/metering",
+  "pkg": "google.cloud.gkehub.metering.v1beta",
+  "msgs": [
+    {
+      "type": "MembershipState"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/gkehub/metering/v1beta/metering.pb.go",
+    "pkg": "meteringpb",
+    "pkg_full": "cloud.google.com/go/gkehub/metering/apiv1beta/meteringpb"
+  }
+}

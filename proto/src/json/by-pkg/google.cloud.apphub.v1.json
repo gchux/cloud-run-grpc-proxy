@@ -1,0 +1,476 @@
+{
+  "proto": "google/cloud/apphub/v1/workload",
+  "pkg": "google.cloud.apphub.v1",
+  "msgs": [
+    {
+      "type": "Workload"
+    },
+    {
+      "type": "WorkloadReference"
+    },
+    {
+      "type": "WorkloadProperties"
+    },
+    {
+      "type": "DiscoveredWorkload"
+    }
+  ],
+  "go": {
+    "src": "apphub/apiv1/apphubpb/workload.pb.go",
+    "pkg": "apphubpb",
+    "pkg_full": "cloud.google.com/go/apphub/apiv1/apphubpb"
+  }
+}
+{
+  "proto": "google/cloud/apphub/v1/application",
+  "pkg": "google.cloud.apphub.v1",
+  "msgs": [
+    {
+      "type": "Application"
+    },
+    {
+      "type": "Scope"
+    }
+  ],
+  "go": {
+    "src": "apphub/apiv1/apphubpb/application.pb.go",
+    "pkg": "apphubpb",
+    "pkg_full": "cloud.google.com/go/apphub/apiv1/apphubpb"
+  }
+}
+{
+  "proto": "google/cloud/apphub/v1/service_project_attachment",
+  "pkg": "google.cloud.apphub.v1",
+  "msgs": [
+    {
+      "type": "ServiceProjectAttachment"
+    }
+  ],
+  "go": {
+    "src": "apphub/apiv1/apphubpb/service_project_attachment.pb.go",
+    "pkg": "apphubpb",
+    "pkg_full": "cloud.google.com/go/apphub/apiv1/apphubpb"
+  }
+}
+{
+  "proto": "google/cloud/apphub/v1/apphub_service",
+  "pkg": "google.cloud.apphub.v1",
+  "svcs": [
+    {
+      "svc": "AppHub",
+      "host": "apphub.googleapis.com",
+      "rpcs": [
+        {
+          "method": "LookupServiceProjectAttachment",
+          "request": {
+            "type": "LookupServiceProjectAttachmentRequest"
+          },
+          "response": {
+            "type": "LookupServiceProjectAttachmentResponse"
+          }
+        },
+        {
+          "method": "ListServiceProjectAttachments",
+          "request": {
+            "type": "ListServiceProjectAttachmentsRequest"
+          },
+          "response": {
+            "type": "ListServiceProjectAttachmentsResponse"
+          }
+        },
+        {
+          "method": "CreateServiceProjectAttachment",
+          "request": {
+            "type": "CreateServiceProjectAttachmentRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetServiceProjectAttachment",
+          "request": {
+            "type": "GetServiceProjectAttachmentRequest"
+          },
+          "response": {
+            "type": "ServiceProjectAttachment"
+          }
+        },
+        {
+          "method": "DeleteServiceProjectAttachment",
+          "request": {
+            "type": "DeleteServiceProjectAttachmentRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DetachServiceProjectAttachment",
+          "request": {
+            "type": "DetachServiceProjectAttachmentRequest"
+          },
+          "response": {
+            "type": "DetachServiceProjectAttachmentResponse"
+          }
+        },
+        {
+          "method": "ListDiscoveredServices",
+          "request": {
+            "type": "ListDiscoveredServicesRequest"
+          },
+          "response": {
+            "type": "ListDiscoveredServicesResponse"
+          }
+        },
+        {
+          "method": "GetDiscoveredService",
+          "request": {
+            "type": "GetDiscoveredServiceRequest"
+          },
+          "response": {
+            "type": "DiscoveredService"
+          }
+        },
+        {
+          "method": "LookupDiscoveredService",
+          "request": {
+            "type": "LookupDiscoveredServiceRequest"
+          },
+          "response": {
+            "type": "LookupDiscoveredServiceResponse"
+          }
+        },
+        {
+          "method": "ListServices",
+          "request": {
+            "type": "ListServicesRequest"
+          },
+          "response": {
+            "type": "ListServicesResponse"
+          }
+        },
+        {
+          "method": "CreateService",
+          "request": {
+            "type": "CreateServiceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetService",
+          "request": {
+            "type": "GetServiceRequest"
+          },
+          "response": {
+            "type": "Service"
+          }
+        },
+        {
+          "method": "UpdateService",
+          "request": {
+            "type": "UpdateServiceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteService",
+          "request": {
+            "type": "DeleteServiceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListDiscoveredWorkloads",
+          "request": {
+            "type": "ListDiscoveredWorkloadsRequest"
+          },
+          "response": {
+            "type": "ListDiscoveredWorkloadsResponse"
+          }
+        },
+        {
+          "method": "GetDiscoveredWorkload",
+          "request": {
+            "type": "GetDiscoveredWorkloadRequest"
+          },
+          "response": {
+            "type": "DiscoveredWorkload"
+          }
+        },
+        {
+          "method": "LookupDiscoveredWorkload",
+          "request": {
+            "type": "LookupDiscoveredWorkloadRequest"
+          },
+          "response": {
+            "type": "LookupDiscoveredWorkloadResponse"
+          }
+        },
+        {
+          "method": "ListWorkloads",
+          "request": {
+            "type": "ListWorkloadsRequest"
+          },
+          "response": {
+            "type": "ListWorkloadsResponse"
+          }
+        },
+        {
+          "method": "CreateWorkload",
+          "request": {
+            "type": "CreateWorkloadRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetWorkload",
+          "request": {
+            "type": "GetWorkloadRequest"
+          },
+          "response": {
+            "type": "Workload"
+          }
+        },
+        {
+          "method": "UpdateWorkload",
+          "request": {
+            "type": "UpdateWorkloadRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteWorkload",
+          "request": {
+            "type": "DeleteWorkloadRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListApplications",
+          "request": {
+            "type": "ListApplicationsRequest"
+          },
+          "response": {
+            "type": "ListApplicationsResponse"
+          }
+        },
+        {
+          "method": "CreateApplication",
+          "request": {
+            "type": "CreateApplicationRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetApplication",
+          "request": {
+            "type": "GetApplicationRequest"
+          },
+          "response": {
+            "type": "Application"
+          }
+        },
+        {
+          "method": "UpdateApplication",
+          "request": {
+            "type": "UpdateApplicationRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteApplication",
+          "request": {
+            "type": "DeleteApplicationRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "LookupServiceProjectAttachmentRequest"
+    },
+    {
+      "type": "LookupServiceProjectAttachmentResponse"
+    },
+    {
+      "type": "ListServiceProjectAttachmentsRequest"
+    },
+    {
+      "type": "ListServiceProjectAttachmentsResponse"
+    },
+    {
+      "type": "CreateServiceProjectAttachmentRequest"
+    },
+    {
+      "type": "GetServiceProjectAttachmentRequest"
+    },
+    {
+      "type": "DeleteServiceProjectAttachmentRequest"
+    },
+    {
+      "type": "DetachServiceProjectAttachmentRequest"
+    },
+    {
+      "type": "DetachServiceProjectAttachmentResponse"
+    },
+    {
+      "type": "ListServicesRequest"
+    },
+    {
+      "type": "ListServicesResponse"
+    },
+    {
+      "type": "ListDiscoveredServicesRequest"
+    },
+    {
+      "type": "ListDiscoveredServicesResponse"
+    },
+    {
+      "type": "CreateServiceRequest"
+    },
+    {
+      "type": "GetServiceRequest"
+    },
+    {
+      "type": "GetDiscoveredServiceRequest"
+    },
+    {
+      "type": "LookupDiscoveredServiceRequest"
+    },
+    {
+      "type": "LookupDiscoveredServiceResponse"
+    },
+    {
+      "type": "UpdateServiceRequest"
+    },
+    {
+      "type": "DeleteServiceRequest"
+    },
+    {
+      "type": "ListApplicationsRequest"
+    },
+    {
+      "type": "ListApplicationsResponse"
+    },
+    {
+      "type": "CreateApplicationRequest"
+    },
+    {
+      "type": "GetApplicationRequest"
+    },
+    {
+      "type": "UpdateApplicationRequest"
+    },
+    {
+      "type": "DeleteApplicationRequest"
+    },
+    {
+      "type": "ListWorkloadsRequest"
+    },
+    {
+      "type": "ListWorkloadsResponse"
+    },
+    {
+      "type": "ListDiscoveredWorkloadsRequest"
+    },
+    {
+      "type": "ListDiscoveredWorkloadsResponse"
+    },
+    {
+      "type": "CreateWorkloadRequest"
+    },
+    {
+      "type": "GetWorkloadRequest"
+    },
+    {
+      "type": "GetDiscoveredWorkloadRequest"
+    },
+    {
+      "type": "LookupDiscoveredWorkloadRequest"
+    },
+    {
+      "type": "LookupDiscoveredWorkloadResponse"
+    },
+    {
+      "type": "UpdateWorkloadRequest"
+    },
+    {
+      "type": "DeleteWorkloadRequest"
+    },
+    {
+      "type": "OperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "apphub/apiv1/apphubpb/apphub_service.pb.go",
+    "pkg": "apphubpb",
+    "pkg_full": "cloud.google.com/go/apphub/apiv1/apphubpb"
+  }
+}
+{
+  "proto": "google/cloud/apphub/v1/attributes",
+  "pkg": "google.cloud.apphub.v1",
+  "msgs": [
+    {
+      "type": "Attributes"
+    },
+    {
+      "type": "Criticality"
+    },
+    {
+      "type": "Environment"
+    },
+    {
+      "type": "ContactInfo"
+    }
+  ],
+  "go": {
+    "src": "apphub/apiv1/apphubpb/attributes.pb.go",
+    "pkg": "apphubpb",
+    "pkg_full": "cloud.google.com/go/apphub/apiv1/apphubpb"
+  }
+}
+{
+  "proto": "google/cloud/apphub/v1/service",
+  "pkg": "google.cloud.apphub.v1",
+  "msgs": [
+    {
+      "type": "Service"
+    },
+    {
+      "type": "ServiceReference"
+    },
+    {
+      "type": "ServiceProperties"
+    },
+    {
+      "type": "DiscoveredService"
+    }
+  ],
+  "go": {
+    "src": "apphub/apiv1/apphubpb/service.pb.go",
+    "pkg": "apphubpb",
+    "pkg_full": "cloud.google.com/go/apphub/apiv1/apphubpb"
+  }
+}

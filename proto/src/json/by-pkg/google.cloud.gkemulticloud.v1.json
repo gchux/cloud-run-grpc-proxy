@@ -1,0 +1,866 @@
+{
+  "proto": "google/cloud/gkemulticloud/v1/aws_resources",
+  "pkg": "google.cloud.gkemulticloud.v1",
+  "msgs": [
+    {
+      "type": "AwsCluster"
+    },
+    {
+      "type": "AwsControlPlane"
+    },
+    {
+      "type": "AwsServicesAuthentication"
+    },
+    {
+      "type": "AwsAuthorization"
+    },
+    {
+      "type": "AwsClusterUser"
+    },
+    {
+      "type": "AwsClusterGroup"
+    },
+    {
+      "type": "AwsDatabaseEncryption"
+    },
+    {
+      "type": "AwsVolumeTemplate"
+    },
+    {
+      "type": "AwsClusterNetworking"
+    },
+    {
+      "type": "AwsNodePool"
+    },
+    {
+      "type": "UpdateSettings"
+    },
+    {
+      "type": "SurgeSettings"
+    },
+    {
+      "type": "AwsNodeManagement"
+    },
+    {
+      "type": "AwsNodeConfig"
+    },
+    {
+      "type": "AwsNodePoolAutoscaling"
+    },
+    {
+      "type": "AwsOpenIdConfig"
+    },
+    {
+      "type": "AwsJsonWebKeys"
+    },
+    {
+      "type": "AwsServerConfig"
+    },
+    {
+      "type": "AwsK8sVersionInfo"
+    },
+    {
+      "type": "AwsSshConfig"
+    },
+    {
+      "type": "AwsProxyConfig"
+    },
+    {
+      "type": "AwsConfigEncryption"
+    },
+    {
+      "type": "AwsInstancePlacement"
+    },
+    {
+      "type": "AwsAutoscalingGroupMetricsCollection"
+    },
+    {
+      "type": "SpotConfig"
+    },
+    {
+      "type": "AwsClusterError"
+    },
+    {
+      "type": "AwsNodePoolError"
+    }
+  ],
+  "go": {
+    "src": "gkemulticloud/apiv1/gkemulticloudpb/aws_resources.pb.go",
+    "pkg": "gkemulticloudpb",
+    "pkg_full": "cloud.google.com/go/gkemulticloud/apiv1/gkemulticloudpb"
+  }
+}
+{
+  "proto": "google/cloud/gkemulticloud/v1/aws_service",
+  "pkg": "google.cloud.gkemulticloud.v1",
+  "svcs": [
+    {
+      "svc": "AwsClusters",
+      "host": "gkemulticloud.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateAwsCluster",
+          "request": {
+            "type": "CreateAwsClusterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateAwsCluster",
+          "request": {
+            "type": "UpdateAwsClusterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetAwsCluster",
+          "request": {
+            "type": "GetAwsClusterRequest"
+          },
+          "response": {
+            "type": "AwsCluster"
+          }
+        },
+        {
+          "method": "ListAwsClusters",
+          "request": {
+            "type": "ListAwsClustersRequest"
+          },
+          "response": {
+            "type": "ListAwsClustersResponse"
+          }
+        },
+        {
+          "method": "DeleteAwsCluster",
+          "request": {
+            "type": "DeleteAwsClusterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GenerateAwsClusterAgentToken",
+          "request": {
+            "type": "GenerateAwsClusterAgentTokenRequest"
+          },
+          "response": {
+            "type": "GenerateAwsClusterAgentTokenResponse"
+          }
+        },
+        {
+          "method": "GenerateAwsAccessToken",
+          "request": {
+            "type": "GenerateAwsAccessTokenRequest"
+          },
+          "response": {
+            "type": "GenerateAwsAccessTokenResponse"
+          }
+        },
+        {
+          "method": "CreateAwsNodePool",
+          "request": {
+            "type": "CreateAwsNodePoolRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateAwsNodePool",
+          "request": {
+            "type": "UpdateAwsNodePoolRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "RollbackAwsNodePoolUpdate",
+          "request": {
+            "type": "RollbackAwsNodePoolUpdateRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetAwsNodePool",
+          "request": {
+            "type": "GetAwsNodePoolRequest"
+          },
+          "response": {
+            "type": "AwsNodePool"
+          }
+        },
+        {
+          "method": "ListAwsNodePools",
+          "request": {
+            "type": "ListAwsNodePoolsRequest"
+          },
+          "response": {
+            "type": "ListAwsNodePoolsResponse"
+          }
+        },
+        {
+          "method": "DeleteAwsNodePool",
+          "request": {
+            "type": "DeleteAwsNodePoolRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetAwsOpenIdConfig",
+          "request": {
+            "type": "GetAwsOpenIdConfigRequest"
+          },
+          "response": {
+            "type": "AwsOpenIdConfig"
+          }
+        },
+        {
+          "method": "GetAwsJsonWebKeys",
+          "request": {
+            "type": "GetAwsJsonWebKeysRequest"
+          },
+          "response": {
+            "type": "AwsJsonWebKeys"
+          }
+        },
+        {
+          "method": "GetAwsServerConfig",
+          "request": {
+            "type": "GetAwsServerConfigRequest"
+          },
+          "response": {
+            "type": "AwsServerConfig"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateAwsClusterRequest"
+    },
+    {
+      "type": "UpdateAwsClusterRequest"
+    },
+    {
+      "type": "GetAwsClusterRequest"
+    },
+    {
+      "type": "ListAwsClustersRequest"
+    },
+    {
+      "type": "ListAwsClustersResponse"
+    },
+    {
+      "type": "DeleteAwsClusterRequest"
+    },
+    {
+      "type": "CreateAwsNodePoolRequest"
+    },
+    {
+      "type": "UpdateAwsNodePoolRequest"
+    },
+    {
+      "type": "RollbackAwsNodePoolUpdateRequest"
+    },
+    {
+      "type": "GetAwsNodePoolRequest"
+    },
+    {
+      "type": "ListAwsNodePoolsRequest"
+    },
+    {
+      "type": "ListAwsNodePoolsResponse"
+    },
+    {
+      "type": "DeleteAwsNodePoolRequest"
+    },
+    {
+      "type": "GetAwsOpenIdConfigRequest"
+    },
+    {
+      "type": "GetAwsJsonWebKeysRequest"
+    },
+    {
+      "type": "GetAwsServerConfigRequest"
+    },
+    {
+      "type": "GenerateAwsAccessTokenRequest"
+    },
+    {
+      "type": "GenerateAwsAccessTokenResponse"
+    },
+    {
+      "type": "GenerateAwsClusterAgentTokenRequest"
+    },
+    {
+      "type": "GenerateAwsClusterAgentTokenResponse"
+    }
+  ],
+  "go": {
+    "src": "gkemulticloud/apiv1/gkemulticloudpb/aws_service.pb.go",
+    "pkg": "gkemulticloudpb",
+    "pkg_full": "cloud.google.com/go/gkemulticloud/apiv1/gkemulticloudpb"
+  }
+}
+{
+  "proto": "google/cloud/gkemulticloud/v1/common_resources",
+  "pkg": "google.cloud.gkemulticloud.v1",
+  "msgs": [
+    {
+      "type": "Jwk"
+    },
+    {
+      "type": "WorkloadIdentityConfig"
+    },
+    {
+      "type": "MaxPodsConstraint"
+    },
+    {
+      "type": "OperationMetadata"
+    },
+    {
+      "type": "NodeTaint"
+    },
+    {
+      "type": "Fleet"
+    },
+    {
+      "type": "LoggingConfig"
+    },
+    {
+      "type": "LoggingComponentConfig"
+    },
+    {
+      "type": "MonitoringConfig"
+    },
+    {
+      "type": "ManagedPrometheusConfig"
+    },
+    {
+      "type": "BinaryAuthorization"
+    }
+  ],
+  "go": {
+    "src": "gkemulticloud/apiv1/gkemulticloudpb/common_resources.pb.go",
+    "pkg": "gkemulticloudpb",
+    "pkg_full": "cloud.google.com/go/gkemulticloud/apiv1/gkemulticloudpb"
+  }
+}
+{
+  "proto": "google/cloud/gkemulticloud/v1/attached_service",
+  "pkg": "google.cloud.gkemulticloud.v1",
+  "svcs": [
+    {
+      "svc": "AttachedClusters",
+      "host": "gkemulticloud.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateAttachedCluster",
+          "request": {
+            "type": "CreateAttachedClusterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateAttachedCluster",
+          "request": {
+            "type": "UpdateAttachedClusterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ImportAttachedCluster",
+          "request": {
+            "type": "ImportAttachedClusterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetAttachedCluster",
+          "request": {
+            "type": "GetAttachedClusterRequest"
+          },
+          "response": {
+            "type": "AttachedCluster"
+          }
+        },
+        {
+          "method": "ListAttachedClusters",
+          "request": {
+            "type": "ListAttachedClustersRequest"
+          },
+          "response": {
+            "type": "ListAttachedClustersResponse"
+          }
+        },
+        {
+          "method": "DeleteAttachedCluster",
+          "request": {
+            "type": "DeleteAttachedClusterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetAttachedServerConfig",
+          "request": {
+            "type": "GetAttachedServerConfigRequest"
+          },
+          "response": {
+            "type": "AttachedServerConfig"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GenerateAttachedClusterInstallManifestRequest"
+    },
+    {
+      "type": "GenerateAttachedClusterInstallManifestResponse"
+    },
+    {
+      "type": "CreateAttachedClusterRequest"
+    },
+    {
+      "type": "ImportAttachedClusterRequest"
+    },
+    {
+      "type": "UpdateAttachedClusterRequest"
+    },
+    {
+      "type": "GetAttachedClusterRequest"
+    },
+    {
+      "type": "ListAttachedClustersRequest"
+    },
+    {
+      "type": "ListAttachedClustersResponse"
+    },
+    {
+      "type": "DeleteAttachedClusterRequest"
+    },
+    {
+      "type": "GetAttachedServerConfigRequest"
+    },
+    {
+      "type": "GenerateAttachedClusterAgentTokenRequest"
+    },
+    {
+      "type": "GenerateAttachedClusterAgentTokenResponse"
+    }
+  ],
+  "go": {
+    "src": "gkemulticloud/apiv1/gkemulticloudpb/attached_service.pb.go",
+    "pkg": "gkemulticloudpb",
+    "pkg_full": "cloud.google.com/go/gkemulticloud/apiv1/gkemulticloudpb"
+  }
+}
+{
+  "proto": "google/cloud/gkemulticloud/v1/azure_service",
+  "pkg": "google.cloud.gkemulticloud.v1",
+  "svcs": [
+    {
+      "svc": "AzureClusters",
+      "host": "gkemulticloud.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateAzureClient",
+          "request": {
+            "type": "CreateAzureClientRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetAzureClient",
+          "request": {
+            "type": "GetAzureClientRequest"
+          },
+          "response": {
+            "type": "AzureClient"
+          }
+        },
+        {
+          "method": "ListAzureClients",
+          "request": {
+            "type": "ListAzureClientsRequest"
+          },
+          "response": {
+            "type": "ListAzureClientsResponse"
+          }
+        },
+        {
+          "method": "DeleteAzureClient",
+          "request": {
+            "type": "DeleteAzureClientRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "CreateAzureCluster",
+          "request": {
+            "type": "CreateAzureClusterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateAzureCluster",
+          "request": {
+            "type": "UpdateAzureClusterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetAzureCluster",
+          "request": {
+            "type": "GetAzureClusterRequest"
+          },
+          "response": {
+            "type": "AzureCluster"
+          }
+        },
+        {
+          "method": "ListAzureClusters",
+          "request": {
+            "type": "ListAzureClustersRequest"
+          },
+          "response": {
+            "type": "ListAzureClustersResponse"
+          }
+        },
+        {
+          "method": "DeleteAzureCluster",
+          "request": {
+            "type": "DeleteAzureClusterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GenerateAzureClusterAgentToken",
+          "request": {
+            "type": "GenerateAzureClusterAgentTokenRequest"
+          },
+          "response": {
+            "type": "GenerateAzureClusterAgentTokenResponse"
+          }
+        },
+        {
+          "method": "GenerateAzureAccessToken",
+          "request": {
+            "type": "GenerateAzureAccessTokenRequest"
+          },
+          "response": {
+            "type": "GenerateAzureAccessTokenResponse"
+          }
+        },
+        {
+          "method": "CreateAzureNodePool",
+          "request": {
+            "type": "CreateAzureNodePoolRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateAzureNodePool",
+          "request": {
+            "type": "UpdateAzureNodePoolRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetAzureNodePool",
+          "request": {
+            "type": "GetAzureNodePoolRequest"
+          },
+          "response": {
+            "type": "AzureNodePool"
+          }
+        },
+        {
+          "method": "ListAzureNodePools",
+          "request": {
+            "type": "ListAzureNodePoolsRequest"
+          },
+          "response": {
+            "type": "ListAzureNodePoolsResponse"
+          }
+        },
+        {
+          "method": "DeleteAzureNodePool",
+          "request": {
+            "type": "DeleteAzureNodePoolRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetAzureOpenIdConfig",
+          "request": {
+            "type": "GetAzureOpenIdConfigRequest"
+          },
+          "response": {
+            "type": "AzureOpenIdConfig"
+          }
+        },
+        {
+          "method": "GetAzureJsonWebKeys",
+          "request": {
+            "type": "GetAzureJsonWebKeysRequest"
+          },
+          "response": {
+            "type": "AzureJsonWebKeys"
+          }
+        },
+        {
+          "method": "GetAzureServerConfig",
+          "request": {
+            "type": "GetAzureServerConfigRequest"
+          },
+          "response": {
+            "type": "AzureServerConfig"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateAzureClusterRequest"
+    },
+    {
+      "type": "UpdateAzureClusterRequest"
+    },
+    {
+      "type": "GetAzureClusterRequest"
+    },
+    {
+      "type": "ListAzureClustersRequest"
+    },
+    {
+      "type": "ListAzureClustersResponse"
+    },
+    {
+      "type": "DeleteAzureClusterRequest"
+    },
+    {
+      "type": "CreateAzureNodePoolRequest"
+    },
+    {
+      "type": "UpdateAzureNodePoolRequest"
+    },
+    {
+      "type": "GetAzureNodePoolRequest"
+    },
+    {
+      "type": "ListAzureNodePoolsRequest"
+    },
+    {
+      "type": "ListAzureNodePoolsResponse"
+    },
+    {
+      "type": "DeleteAzureNodePoolRequest"
+    },
+    {
+      "type": "GetAzureOpenIdConfigRequest"
+    },
+    {
+      "type": "GetAzureJsonWebKeysRequest"
+    },
+    {
+      "type": "GetAzureServerConfigRequest"
+    },
+    {
+      "type": "CreateAzureClientRequest"
+    },
+    {
+      "type": "GetAzureClientRequest"
+    },
+    {
+      "type": "ListAzureClientsRequest"
+    },
+    {
+      "type": "ListAzureClientsResponse"
+    },
+    {
+      "type": "DeleteAzureClientRequest"
+    },
+    {
+      "type": "GenerateAzureAccessTokenRequest"
+    },
+    {
+      "type": "GenerateAzureAccessTokenResponse"
+    },
+    {
+      "type": "GenerateAzureClusterAgentTokenRequest"
+    },
+    {
+      "type": "GenerateAzureClusterAgentTokenResponse"
+    }
+  ],
+  "go": {
+    "src": "gkemulticloud/apiv1/gkemulticloudpb/azure_service.pb.go",
+    "pkg": "gkemulticloudpb",
+    "pkg_full": "cloud.google.com/go/gkemulticloud/apiv1/gkemulticloudpb"
+  }
+}
+{
+  "proto": "google/cloud/gkemulticloud/v1/attached_resources",
+  "pkg": "google.cloud.gkemulticloud.v1",
+  "msgs": [
+    {
+      "type": "AttachedCluster"
+    },
+    {
+      "type": "AttachedClustersAuthorization"
+    },
+    {
+      "type": "AttachedClusterUser"
+    },
+    {
+      "type": "AttachedClusterGroup"
+    },
+    {
+      "type": "AttachedOidcConfig"
+    },
+    {
+      "type": "AttachedServerConfig"
+    },
+    {
+      "type": "AttachedPlatformVersionInfo"
+    },
+    {
+      "type": "AttachedClusterError"
+    },
+    {
+      "type": "AttachedProxyConfig"
+    },
+    {
+      "type": "KubernetesSecret"
+    }
+  ],
+  "go": {
+    "src": "gkemulticloud/apiv1/gkemulticloudpb/attached_resources.pb.go",
+    "pkg": "gkemulticloudpb",
+    "pkg_full": "cloud.google.com/go/gkemulticloud/apiv1/gkemulticloudpb"
+  }
+}
+{
+  "proto": "google/cloud/gkemulticloud/v1/azure_resources",
+  "pkg": "google.cloud.gkemulticloud.v1",
+  "msgs": [
+    {
+      "type": "AzureCluster"
+    },
+    {
+      "type": "AzureClusterNetworking"
+    },
+    {
+      "type": "AzureControlPlane"
+    },
+    {
+      "type": "ReplicaPlacement"
+    },
+    {
+      "type": "AzureProxyConfig"
+    },
+    {
+      "type": "AzureDatabaseEncryption"
+    },
+    {
+      "type": "AzureConfigEncryption"
+    },
+    {
+      "type": "AzureDiskTemplate"
+    },
+    {
+      "type": "AzureClient"
+    },
+    {
+      "type": "AzureAuthorization"
+    },
+    {
+      "type": "AzureServicesAuthentication"
+    },
+    {
+      "type": "AzureClusterUser"
+    },
+    {
+      "type": "AzureClusterGroup"
+    },
+    {
+      "type": "AzureNodePool"
+    },
+    {
+      "type": "AzureNodeManagement"
+    },
+    {
+      "type": "AzureNodeConfig"
+    },
+    {
+      "type": "AzureNodePoolAutoscaling"
+    },
+    {
+      "type": "AzureOpenIdConfig"
+    },
+    {
+      "type": "AzureJsonWebKeys"
+    },
+    {
+      "type": "AzureServerConfig"
+    },
+    {
+      "type": "AzureK8sVersionInfo"
+    },
+    {
+      "type": "AzureSshConfig"
+    },
+    {
+      "type": "AzureClusterResources"
+    },
+    {
+      "type": "AzureClusterError"
+    },
+    {
+      "type": "AzureNodePoolError"
+    }
+  ],
+  "go": {
+    "src": "gkemulticloud/apiv1/gkemulticloudpb/azure_resources.pb.go",
+    "pkg": "gkemulticloudpb",
+    "pkg_full": "cloud.google.com/go/gkemulticloud/apiv1/gkemulticloudpb"
+  }
+}

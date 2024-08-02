@@ -1,0 +1,810 @@
+{
+  "proto": "google/chat/v1/event_payload",
+  "pkg": "google.chat.v1",
+  "msgs": [
+    {
+      "type": "MembershipCreatedEventData"
+    },
+    {
+      "type": "MembershipDeletedEventData"
+    },
+    {
+      "type": "MembershipUpdatedEventData"
+    },
+    {
+      "type": "MembershipBatchCreatedEventData"
+    },
+    {
+      "type": "MembershipBatchUpdatedEventData"
+    },
+    {
+      "type": "MembershipBatchDeletedEventData"
+    },
+    {
+      "type": "MessageCreatedEventData"
+    },
+    {
+      "type": "MessageUpdatedEventData"
+    },
+    {
+      "type": "MessageDeletedEventData"
+    },
+    {
+      "type": "MessageBatchCreatedEventData"
+    },
+    {
+      "type": "MessageBatchUpdatedEventData"
+    },
+    {
+      "type": "MessageBatchDeletedEventData"
+    },
+    {
+      "type": "SpaceUpdatedEventData"
+    },
+    {
+      "type": "SpaceBatchUpdatedEventData"
+    },
+    {
+      "type": "ReactionCreatedEventData"
+    },
+    {
+      "type": "ReactionDeletedEventData"
+    },
+    {
+      "type": "ReactionBatchCreatedEventData"
+    },
+    {
+      "type": "ReactionBatchDeletedEventData"
+    }
+  ],
+  "go": {
+    "src": "chat/apiv1/chatpb/event_payload.pb.go",
+    "pkg": "chatpb",
+    "pkg_full": "cloud.google.com/go/chat/apiv1/chatpb"
+  }
+}
+{
+  "proto": "google/chat/v1/deletion_metadata",
+  "pkg": "google.chat.v1",
+  "msgs": [
+    {
+      "type": "DeletionMetadata"
+    }
+  ],
+  "go": {
+    "src": "chat/apiv1/chatpb/deletion_metadata.pb.go",
+    "pkg": "chatpb",
+    "pkg_full": "cloud.google.com/go/chat/apiv1/chatpb"
+  }
+}
+{
+  "proto": "google/chat/v1/space",
+  "pkg": "google.chat.v1",
+  "msgs": [
+    {
+      "type": "Space",
+      "msgs": [
+        {
+          "type": "SpaceDetails"
+        },
+        {
+          "type": "AccessSettings"
+        }
+      ]
+    },
+    {
+      "type": "CreateSpaceRequest"
+    },
+    {
+      "type": "ListSpacesRequest"
+    },
+    {
+      "type": "ListSpacesResponse"
+    },
+    {
+      "type": "GetSpaceRequest"
+    },
+    {
+      "type": "FindDirectMessageRequest"
+    },
+    {
+      "type": "UpdateSpaceRequest"
+    },
+    {
+      "type": "DeleteSpaceRequest"
+    },
+    {
+      "type": "CompleteImportSpaceRequest"
+    },
+    {
+      "type": "CompleteImportSpaceResponse"
+    }
+  ],
+  "go": {
+    "src": "chat/apiv1/chatpb/space.pb.go",
+    "pkg": "chatpb",
+    "pkg_full": "cloud.google.com/go/chat/apiv1/chatpb"
+  }
+}
+{
+  "proto": "google/chat/v1/slash_command",
+  "pkg": "google.chat.v1",
+  "msgs": [
+    {
+      "type": "SlashCommand"
+    }
+  ],
+  "go": {
+    "src": "chat/apiv1/chatpb/slash_command.pb.go",
+    "pkg": "chatpb",
+    "pkg_full": "cloud.google.com/go/chat/apiv1/chatpb"
+  }
+}
+{
+  "proto": "google/chat/v1/action_status",
+  "pkg": "google.chat.v1",
+  "msgs": [
+    {
+      "type": "ActionStatus"
+    }
+  ],
+  "go": {
+    "src": "chat/apiv1/chatpb/action_status.pb.go",
+    "pkg": "chatpb",
+    "pkg_full": "cloud.google.com/go/chat/apiv1/chatpb"
+  }
+}
+{
+  "proto": "google/chat/v1/message",
+  "pkg": "google.chat.v1",
+  "msgs": [
+    {
+      "type": "Message"
+    },
+    {
+      "type": "AttachedGif"
+    },
+    {
+      "type": "QuotedMessageMetadata"
+    },
+    {
+      "type": "Thread"
+    },
+    {
+      "type": "ActionResponse",
+      "msgs": [
+        {
+          "type": "SelectionItems"
+        },
+        {
+          "type": "UpdatedWidget"
+        }
+      ]
+    },
+    {
+      "type": "AccessoryWidget"
+    },
+    {
+      "type": "GetMessageRequest"
+    },
+    {
+      "type": "DeleteMessageRequest"
+    },
+    {
+      "type": "UpdateMessageRequest"
+    },
+    {
+      "type": "CreateMessageRequest"
+    },
+    {
+      "type": "ListMessagesRequest"
+    },
+    {
+      "type": "ListMessagesResponse"
+    },
+    {
+      "type": "DialogAction"
+    },
+    {
+      "type": "Dialog"
+    },
+    {
+      "type": "CardWithId"
+    }
+  ],
+  "go": {
+    "src": "chat/apiv1/chatpb/message.pb.go",
+    "pkg": "chatpb",
+    "pkg_full": "cloud.google.com/go/chat/apiv1/chatpb"
+  }
+}
+{
+  "proto": "google/chat/v1/space_setup",
+  "pkg": "google.chat.v1",
+  "msgs": [
+    {
+      "type": "SetUpSpaceRequest"
+    }
+  ],
+  "go": {
+    "src": "chat/apiv1/chatpb/space_setup.pb.go",
+    "pkg": "chatpb",
+    "pkg_full": "cloud.google.com/go/chat/apiv1/chatpb"
+  }
+}
+{
+  "proto": "google/chat/v1/space_event",
+  "pkg": "google.chat.v1",
+  "msgs": [
+    {
+      "type": "SpaceEvent"
+    },
+    {
+      "type": "GetSpaceEventRequest"
+    },
+    {
+      "type": "ListSpaceEventsRequest"
+    },
+    {
+      "type": "ListSpaceEventsResponse"
+    }
+  ],
+  "go": {
+    "src": "chat/apiv1/chatpb/space_event.pb.go",
+    "pkg": "chatpb",
+    "pkg_full": "cloud.google.com/go/chat/apiv1/chatpb"
+  }
+}
+{
+  "proto": "google/chat/v1/membership",
+  "pkg": "google.chat.v1",
+  "msgs": [
+    {
+      "type": "Membership"
+    },
+    {
+      "type": "CreateMembershipRequest"
+    },
+    {
+      "type": "UpdateMembershipRequest"
+    },
+    {
+      "type": "ListMembershipsRequest"
+    },
+    {
+      "type": "ListMembershipsResponse"
+    },
+    {
+      "type": "GetMembershipRequest"
+    },
+    {
+      "type": "DeleteMembershipRequest"
+    }
+  ],
+  "go": {
+    "src": "chat/apiv1/chatpb/membership.pb.go",
+    "pkg": "chatpb",
+    "pkg_full": "cloud.google.com/go/chat/apiv1/chatpb"
+  }
+}
+{
+  "proto": "google/chat/v1/attachment",
+  "pkg": "google.chat.v1",
+  "msgs": [
+    {
+      "type": "Attachment"
+    },
+    {
+      "type": "DriveDataRef"
+    },
+    {
+      "type": "AttachmentDataRef"
+    },
+    {
+      "type": "GetAttachmentRequest"
+    },
+    {
+      "type": "UploadAttachmentRequest"
+    },
+    {
+      "type": "UploadAttachmentResponse"
+    }
+  ],
+  "go": {
+    "src": "chat/apiv1/chatpb/attachment.pb.go",
+    "pkg": "chatpb",
+    "pkg_full": "cloud.google.com/go/chat/apiv1/chatpb"
+  }
+}
+{
+  "proto": "google/chat/v1/thread_read_state",
+  "pkg": "google.chat.v1",
+  "msgs": [
+    {
+      "type": "ThreadReadState"
+    },
+    {
+      "type": "GetThreadReadStateRequest"
+    }
+  ],
+  "go": {
+    "src": "chat/apiv1/chatpb/thread_read_state.pb.go",
+    "pkg": "chatpb",
+    "pkg_full": "cloud.google.com/go/chat/apiv1/chatpb"
+  }
+}
+{
+  "proto": "google/chat/v1/group",
+  "pkg": "google.chat.v1",
+  "msgs": [
+    {
+      "type": "Group"
+    }
+  ],
+  "go": {
+    "src": "chat/apiv1/chatpb/group.pb.go",
+    "pkg": "chatpb",
+    "pkg_full": "cloud.google.com/go/chat/apiv1/chatpb"
+  }
+}
+{
+  "proto": "google/chat/v1/annotation",
+  "pkg": "google.chat.v1",
+  "msgs": [
+    {
+      "type": "Annotation"
+    },
+    {
+      "type": "UserMentionMetadata"
+    },
+    {
+      "type": "SlashCommandMetadata"
+    },
+    {
+      "type": "RichLinkMetadata"
+    },
+    {
+      "type": "DriveLinkData"
+    }
+  ],
+  "go": {
+    "src": "chat/apiv1/chatpb/annotation.pb.go",
+    "pkg": "chatpb",
+    "pkg_full": "cloud.google.com/go/chat/apiv1/chatpb"
+  }
+}
+{
+  "proto": "google/chat/v1/widgets",
+  "pkg": "google.chat.v1",
+  "msgs": [
+    {
+      "type": "WidgetMarkup",
+      "msgs": [
+        {
+          "type": "TextParagraph"
+        },
+        {
+          "type": "Button"
+        },
+        {
+          "type": "TextButton"
+        },
+        {
+          "type": "KeyValue"
+        },
+        {
+          "type": "Image"
+        },
+        {
+          "type": "ImageButton"
+        },
+        {
+          "type": "OnClick"
+        },
+        {
+          "type": "OpenLink"
+        },
+        {
+          "type": "FormAction"
+        },
+        {
+          "type": "ActionParameter"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "chat/apiv1/chatpb/widgets.pb.go",
+    "pkg": "chatpb",
+    "pkg_full": "cloud.google.com/go/chat/apiv1/chatpb"
+  }
+}
+{
+  "proto": "google/chat/v1/chat_service",
+  "pkg": "google.chat.v1",
+  "svcs": [
+    {
+      "svc": "ChatService",
+      "host": "chat.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateMessage",
+          "request": {
+            "type": "CreateMessageRequest"
+          },
+          "response": {
+            "type": "Message"
+          }
+        },
+        {
+          "method": "ListMessages",
+          "request": {
+            "type": "ListMessagesRequest"
+          },
+          "response": {
+            "type": "ListMessagesResponse"
+          }
+        },
+        {
+          "method": "ListMemberships",
+          "request": {
+            "type": "ListMembershipsRequest"
+          },
+          "response": {
+            "type": "ListMembershipsResponse"
+          }
+        },
+        {
+          "method": "GetMembership",
+          "request": {
+            "type": "GetMembershipRequest"
+          },
+          "response": {
+            "type": "Membership"
+          }
+        },
+        {
+          "method": "GetMessage",
+          "request": {
+            "type": "GetMessageRequest"
+          },
+          "response": {
+            "type": "Message"
+          }
+        },
+        {
+          "method": "UpdateMessage",
+          "request": {
+            "type": "UpdateMessageRequest"
+          },
+          "response": {
+            "type": "Message"
+          }
+        },
+        {
+          "method": "DeleteMessage",
+          "request": {
+            "type": "DeleteMessageRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "GetAttachment",
+          "request": {
+            "type": "GetAttachmentRequest"
+          },
+          "response": {
+            "type": "Attachment"
+          }
+        },
+        {
+          "method": "UploadAttachment",
+          "request": {
+            "type": "UploadAttachmentRequest"
+          },
+          "response": {
+            "type": "UploadAttachmentResponse"
+          }
+        },
+        {
+          "method": "ListSpaces",
+          "request": {
+            "type": "ListSpacesRequest"
+          },
+          "response": {
+            "type": "ListSpacesResponse"
+          }
+        },
+        {
+          "method": "GetSpace",
+          "request": {
+            "type": "GetSpaceRequest"
+          },
+          "response": {
+            "type": "Space"
+          }
+        },
+        {
+          "method": "CreateSpace",
+          "request": {
+            "type": "CreateSpaceRequest"
+          },
+          "response": {
+            "type": "Space"
+          }
+        },
+        {
+          "method": "SetUpSpace",
+          "request": {
+            "type": "SetUpSpaceRequest"
+          },
+          "response": {
+            "type": "Space"
+          }
+        },
+        {
+          "method": "UpdateSpace",
+          "request": {
+            "type": "UpdateSpaceRequest"
+          },
+          "response": {
+            "type": "Space"
+          }
+        },
+        {
+          "method": "DeleteSpace",
+          "request": {
+            "type": "DeleteSpaceRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "CompleteImportSpace",
+          "request": {
+            "type": "CompleteImportSpaceRequest"
+          },
+          "response": {
+            "type": "CompleteImportSpaceResponse"
+          }
+        },
+        {
+          "method": "FindDirectMessage",
+          "request": {
+            "type": "FindDirectMessageRequest"
+          },
+          "response": {
+            "type": "Space"
+          }
+        },
+        {
+          "method": "CreateMembership",
+          "request": {
+            "type": "CreateMembershipRequest"
+          },
+          "response": {
+            "type": "Membership"
+          }
+        },
+        {
+          "method": "UpdateMembership",
+          "request": {
+            "type": "UpdateMembershipRequest"
+          },
+          "response": {
+            "type": "Membership"
+          }
+        },
+        {
+          "method": "DeleteMembership",
+          "request": {
+            "type": "DeleteMembershipRequest"
+          },
+          "response": {
+            "type": "Membership"
+          }
+        },
+        {
+          "method": "CreateReaction",
+          "request": {
+            "type": "CreateReactionRequest"
+          },
+          "response": {
+            "type": "Reaction"
+          }
+        },
+        {
+          "method": "ListReactions",
+          "request": {
+            "type": "ListReactionsRequest"
+          },
+          "response": {
+            "type": "ListReactionsResponse"
+          }
+        },
+        {
+          "method": "DeleteReaction",
+          "request": {
+            "type": "DeleteReactionRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "GetSpaceReadState",
+          "request": {
+            "type": "GetSpaceReadStateRequest"
+          },
+          "response": {
+            "type": "SpaceReadState"
+          }
+        },
+        {
+          "method": "UpdateSpaceReadState",
+          "request": {
+            "type": "UpdateSpaceReadStateRequest"
+          },
+          "response": {
+            "type": "SpaceReadState"
+          }
+        },
+        {
+          "method": "GetThreadReadState",
+          "request": {
+            "type": "GetThreadReadStateRequest"
+          },
+          "response": {
+            "type": "ThreadReadState"
+          }
+        },
+        {
+          "method": "GetSpaceEvent",
+          "request": {
+            "type": "GetSpaceEventRequest"
+          },
+          "response": {
+            "type": "SpaceEvent"
+          }
+        },
+        {
+          "method": "ListSpaceEvents",
+          "request": {
+            "type": "ListSpaceEventsRequest"
+          },
+          "response": {
+            "type": "ListSpaceEventsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "chat/apiv1/chatpb/chat_service.pb.go",
+    "pkg": "chatpb",
+    "pkg_full": "cloud.google.com/go/chat/apiv1/chatpb"
+  }
+}
+{
+  "proto": "google/chat/v1/user",
+  "pkg": "google.chat.v1",
+  "msgs": [
+    {
+      "type": "User"
+    }
+  ],
+  "go": {
+    "src": "chat/apiv1/chatpb/user.pb.go",
+    "pkg": "chatpb",
+    "pkg_full": "cloud.google.com/go/chat/apiv1/chatpb"
+  }
+}
+{
+  "proto": "google/chat/v1/space_read_state",
+  "pkg": "google.chat.v1",
+  "msgs": [
+    {
+      "type": "SpaceReadState"
+    },
+    {
+      "type": "GetSpaceReadStateRequest"
+    },
+    {
+      "type": "UpdateSpaceReadStateRequest"
+    }
+  ],
+  "go": {
+    "src": "chat/apiv1/chatpb/space_read_state.pb.go",
+    "pkg": "chatpb",
+    "pkg_full": "cloud.google.com/go/chat/apiv1/chatpb"
+  }
+}
+{
+  "proto": "google/chat/v1/history_state",
+  "pkg": "google.chat.v1",
+  "go": {
+    "src": "chat/apiv1/chatpb/history_state.pb.go",
+    "pkg": "chatpb",
+    "pkg_full": "cloud.google.com/go/chat/apiv1/chatpb"
+  }
+}
+{
+  "proto": "google/chat/v1/reaction",
+  "pkg": "google.chat.v1",
+  "msgs": [
+    {
+      "type": "Reaction"
+    },
+    {
+      "type": "Emoji"
+    },
+    {
+      "type": "CustomEmoji"
+    },
+    {
+      "type": "EmojiReactionSummary"
+    },
+    {
+      "type": "CreateReactionRequest"
+    },
+    {
+      "type": "ListReactionsRequest"
+    },
+    {
+      "type": "ListReactionsResponse"
+    },
+    {
+      "type": "DeleteReactionRequest"
+    }
+  ],
+  "go": {
+    "src": "chat/apiv1/chatpb/reaction.pb.go",
+    "pkg": "chatpb",
+    "pkg_full": "cloud.google.com/go/chat/apiv1/chatpb"
+  }
+}
+{
+  "proto": "google/chat/v1/matched_url",
+  "pkg": "google.chat.v1",
+  "msgs": [
+    {
+      "type": "MatchedUrl"
+    }
+  ],
+  "go": {
+    "src": "chat/apiv1/chatpb/matched_url.pb.go",
+    "pkg": "chatpb",
+    "pkg_full": "cloud.google.com/go/chat/apiv1/chatpb"
+  }
+}
+{
+  "proto": "google/chat/v1/contextual_addon",
+  "pkg": "google.chat.v1",
+  "msgs": [
+    {
+      "type": "ContextualAddOnMarkup",
+      "msgs": [
+        {
+          "type": "Card"
+        },
+        {
+          "type": "CardHeader"
+        },
+        {
+          "type": "Section"
+        },
+        {
+          "type": "CardAction"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "chat/apiv1/chatpb/contextual_addon.pb.go",
+    "pkg": "chatpb",
+    "pkg_full": "cloud.google.com/go/chat/apiv1/chatpb"
+  }
+}

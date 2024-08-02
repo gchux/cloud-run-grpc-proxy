@@ -1,0 +1,14 @@
+{
+  "proto": "google/cloud/datapipelines/logging/v1/logging",
+  "pkg": "google.cloud.datapipelines.logging.v1",
+  "msgs": [
+    {
+      "type": "RequestLogEntry"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/datapipelines/logging/v1/logging.pb.go",
+    "pkg": "loggingpb",
+    "pkg_full": "cloud.google.com/go/datapipelines/logging/apiv1/loggingpb"
+  }
+}

@@ -1,0 +1,177 @@
+{
+  "proto": "google/cloud/binaryauthorization/v1/resources",
+  "pkg": "google.cloud.binaryauthorization.v1",
+  "msgs": [
+    {
+      "type": "Policy"
+    },
+    {
+      "type": "AdmissionWhitelistPattern"
+    },
+    {
+      "type": "AdmissionRule"
+    },
+    {
+      "type": "Attestor"
+    },
+    {
+      "type": "UserOwnedGrafeasNote"
+    },
+    {
+      "type": "PkixPublicKey"
+    },
+    {
+      "type": "AttestorPublicKey"
+    }
+  ],
+  "go": {
+    "src": "binaryauthorization/apiv1/binaryauthorizationpb/resources.pb.go",
+    "pkg": "binaryauthorizationpb",
+    "pkg_full": "cloud.google.com/go/binaryauthorization/apiv1/binaryauthorizationpb"
+  }
+}
+{
+  "proto": "google/cloud/binaryauthorization/v1/service",
+  "pkg": "google.cloud.binaryauthorization.v1",
+  "svcs": [
+    {
+      "svc": "BinauthzManagementServiceV1",
+      "host": "binaryauthorization.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetPolicy",
+          "request": {
+            "type": "GetPolicyRequest"
+          },
+          "response": {
+            "type": "Policy"
+          }
+        },
+        {
+          "method": "UpdatePolicy",
+          "request": {
+            "type": "UpdatePolicyRequest"
+          },
+          "response": {
+            "type": "Policy"
+          }
+        },
+        {
+          "method": "CreateAttestor",
+          "request": {
+            "type": "CreateAttestorRequest"
+          },
+          "response": {
+            "type": "Attestor"
+          }
+        },
+        {
+          "method": "GetAttestor",
+          "request": {
+            "type": "GetAttestorRequest"
+          },
+          "response": {
+            "type": "Attestor"
+          }
+        },
+        {
+          "method": "UpdateAttestor",
+          "request": {
+            "type": "UpdateAttestorRequest"
+          },
+          "response": {
+            "type": "Attestor"
+          }
+        },
+        {
+          "method": "ListAttestors",
+          "request": {
+            "type": "ListAttestorsRequest"
+          },
+          "response": {
+            "type": "ListAttestorsResponse"
+          }
+        },
+        {
+          "method": "DeleteAttestor",
+          "request": {
+            "type": "DeleteAttestorRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    },
+    {
+      "svc": "SystemPolicyV1",
+      "host": "binaryauthorization.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetSystemPolicy",
+          "request": {
+            "type": "GetSystemPolicyRequest"
+          },
+          "response": {
+            "type": "Policy"
+          }
+        }
+      ]
+    },
+    {
+      "svc": "ValidationHelperV1",
+      "host": "binaryauthorization.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ValidateAttestationOccurrence",
+          "request": {
+            "type": "ValidateAttestationOccurrenceRequest"
+          },
+          "response": {
+            "type": "ValidateAttestationOccurrenceResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GetPolicyRequest"
+    },
+    {
+      "type": "UpdatePolicyRequest"
+    },
+    {
+      "type": "CreateAttestorRequest"
+    },
+    {
+      "type": "GetAttestorRequest"
+    },
+    {
+      "type": "UpdateAttestorRequest"
+    },
+    {
+      "type": "ListAttestorsRequest"
+    },
+    {
+      "type": "ListAttestorsResponse"
+    },
+    {
+      "type": "DeleteAttestorRequest"
+    },
+    {
+      "type": "GetSystemPolicyRequest"
+    },
+    {
+      "type": "ValidateAttestationOccurrenceRequest"
+    },
+    {
+      "type": "ValidateAttestationOccurrenceResponse"
+    }
+  ],
+  "go": {
+    "src": "binaryauthorization/apiv1/binaryauthorizationpb/service.pb.go",
+    "pkg": "binaryauthorizationpb",
+    "pkg_full": "cloud.google.com/go/binaryauthorization/apiv1/binaryauthorizationpb"
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "proto": "google/cloud/bigquery/biglake/v1/metastore",
+  "pkg": "google.cloud.bigquery.biglake.v1",
+  "svcs": [
+    {
+      "svc": "MetastoreService",
+      "host": "biglake.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateCatalog",
+          "request": {
+            "type": "CreateCatalogRequest"
+          },
+          "response": {
+            "type": "Catalog"
+          }
+        },
+        {
+          "method": "DeleteCatalog",
+          "request": {
+            "type": "DeleteCatalogRequest"
+          },
+          "response": {
+            "type": "Catalog"
+          }
+        },
+        {
+          "method": "GetCatalog",
+          "request": {
+            "type": "GetCatalogRequest"
+          },
+          "response": {
+            "type": "Catalog"
+          }
+        },
+        {
+          "method": "ListCatalogs",
+          "request": {
+            "type": "ListCatalogsRequest"
+          },
+          "response": {
+            "type": "ListCatalogsResponse"
+          }
+        },
+        {
+          "method": "CreateDatabase",
+          "request": {
+            "type": "CreateDatabaseRequest"
+          },
+          "response": {
+            "type": "Database"
+          }
+        },
+        {
+          "method": "DeleteDatabase",
+          "request": {
+            "type": "DeleteDatabaseRequest"
+          },
+          "response": {
+            "type": "Database"
+          }
+        },
+        {
+          "method": "UpdateDatabase",
+          "request": {
+            "type": "UpdateDatabaseRequest"
+          },
+          "response": {
+            "type": "Database"
+          }
+        },
+        {
+          "method": "GetDatabase",
+          "request": {
+            "type": "GetDatabaseRequest"
+          },
+          "response": {
+            "type": "Database"
+          }
+        },
+        {
+          "method": "ListDatabases",
+          "request": {
+            "type": "ListDatabasesRequest"
+          },
+          "response": {
+            "type": "ListDatabasesResponse"
+          }
+        },
+        {
+          "method": "CreateTable",
+          "request": {
+            "type": "CreateTableRequest"
+          },
+          "response": {
+            "type": "Table"
+          }
+        },
+        {
+          "method": "DeleteTable",
+          "request": {
+            "type": "DeleteTableRequest"
+          },
+          "response": {
+            "type": "Table"
+          }
+        },
+        {
+          "method": "UpdateTable",
+          "request": {
+            "type": "UpdateTableRequest"
+          },
+          "response": {
+            "type": "Table"
+          }
+        },
+        {
+          "method": "RenameTable",
+          "request": {
+            "type": "RenameTableRequest"
+          },
+          "response": {
+            "type": "Table"
+          }
+        },
+        {
+          "method": "GetTable",
+          "request": {
+            "type": "GetTableRequest"
+          },
+          "response": {
+            "type": "Table"
+          }
+        },
+        {
+          "method": "ListTables",
+          "request": {
+            "type": "ListTablesRequest"
+          },
+          "response": {
+            "type": "ListTablesResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Catalog"
+    },
+    {
+      "type": "Database"
+    },
+    {
+      "type": "Table"
+    },
+    {
+      "type": "CreateCatalogRequest"
+    },
+    {
+      "type": "DeleteCatalogRequest"
+    },
+    {
+      "type": "GetCatalogRequest"
+    },
+    {
+      "type": "ListCatalogsRequest"
+    },
+    {
+      "type": "ListCatalogsResponse"
+    },
+    {
+      "type": "CreateDatabaseRequest"
+    },
+    {
+      "type": "DeleteDatabaseRequest"
+    },
+    {
+      "type": "UpdateDatabaseRequest"
+    },
+    {
+      "type": "GetDatabaseRequest"
+    },
+    {
+      "type": "ListDatabasesRequest"
+    },
+    {
+      "type": "ListDatabasesResponse"
+    },
+    {
+      "type": "CreateTableRequest"
+    },
+    {
+      "type": "DeleteTableRequest"
+    },
+    {
+      "type": "UpdateTableRequest"
+    },
+    {
+      "type": "RenameTableRequest"
+    },
+    {
+      "type": "GetTableRequest"
+    },
+    {
+      "type": "ListTablesRequest"
+    },
+    {
+      "type": "ListTablesResponse"
+    },
+    {
+      "type": "HiveDatabaseOptions"
+    },
+    {
+      "type": "HiveTableOptions",
+      "msgs": [
+        {
+          "type": "SerDeInfo"
+        },
+        {
+          "type": "StorageDescriptor"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "bigquery/biglake/apiv1/biglakepb/metastore.pb.go",
+    "pkg": "biglakepb",
+    "pkg_full": "cloud.google.com/go/bigquery/biglake/apiv1/biglakepb"
+  }
+}

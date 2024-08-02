@@ -1,0 +1,347 @@
+{
+  "proto": "google/cloud/eventarc/v1/trigger",
+  "pkg": "google.cloud.eventarc.v1",
+  "msgs": [
+    {
+      "type": "Trigger"
+    },
+    {
+      "type": "EventFilter"
+    },
+    {
+      "type": "StateCondition"
+    },
+    {
+      "type": "Destination"
+    },
+    {
+      "type": "Transport"
+    },
+    {
+      "type": "CloudRun"
+    },
+    {
+      "type": "GKE"
+    },
+    {
+      "type": "Pubsub"
+    }
+  ],
+  "go": {
+    "src": "eventarc/apiv1/eventarcpb/trigger.pb.go",
+    "pkg": "eventarcpb",
+    "pkg_full": "cloud.google.com/go/eventarc/apiv1/eventarcpb"
+  }
+}
+{
+  "proto": "google/cloud/eventarc/v1/channel",
+  "pkg": "google.cloud.eventarc.v1",
+  "msgs": [
+    {
+      "type": "Channel"
+    }
+  ],
+  "go": {
+    "src": "eventarc/apiv1/eventarcpb/channel.pb.go",
+    "pkg": "eventarcpb",
+    "pkg_full": "cloud.google.com/go/eventarc/apiv1/eventarcpb"
+  }
+}
+{
+  "proto": "google/cloud/eventarc/v1/eventarc",
+  "pkg": "google.cloud.eventarc.v1",
+  "svcs": [
+    {
+      "svc": "Eventarc",
+      "host": "eventarc.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetTrigger",
+          "request": {
+            "type": "GetTriggerRequest"
+          },
+          "response": {
+            "type": "Trigger"
+          }
+        },
+        {
+          "method": "ListTriggers",
+          "request": {
+            "type": "ListTriggersRequest"
+          },
+          "response": {
+            "type": "ListTriggersResponse"
+          }
+        },
+        {
+          "method": "CreateTrigger",
+          "request": {
+            "type": "CreateTriggerRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateTrigger",
+          "request": {
+            "type": "UpdateTriggerRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteTrigger",
+          "request": {
+            "type": "DeleteTriggerRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetChannel",
+          "request": {
+            "type": "GetChannelRequest"
+          },
+          "response": {
+            "type": "Channel"
+          }
+        },
+        {
+          "method": "ListChannels",
+          "request": {
+            "type": "ListChannelsRequest"
+          },
+          "response": {
+            "type": "ListChannelsResponse"
+          }
+        },
+        {
+          "method": "CreateChannel",
+          "request": {
+            "type": "CreateChannelRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateChannel",
+          "request": {
+            "type": "UpdateChannelRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteChannel",
+          "request": {
+            "type": "DeleteChannelRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetProvider",
+          "request": {
+            "type": "GetProviderRequest"
+          },
+          "response": {
+            "type": "Provider"
+          }
+        },
+        {
+          "method": "ListProviders",
+          "request": {
+            "type": "ListProvidersRequest"
+          },
+          "response": {
+            "type": "ListProvidersResponse"
+          }
+        },
+        {
+          "method": "GetChannelConnection",
+          "request": {
+            "type": "GetChannelConnectionRequest"
+          },
+          "response": {
+            "type": "ChannelConnection"
+          }
+        },
+        {
+          "method": "ListChannelConnections",
+          "request": {
+            "type": "ListChannelConnectionsRequest"
+          },
+          "response": {
+            "type": "ListChannelConnectionsResponse"
+          }
+        },
+        {
+          "method": "CreateChannelConnection",
+          "request": {
+            "type": "CreateChannelConnectionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteChannelConnection",
+          "request": {
+            "type": "DeleteChannelConnectionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetGoogleChannelConfig",
+          "request": {
+            "type": "GetGoogleChannelConfigRequest"
+          },
+          "response": {
+            "type": "GoogleChannelConfig"
+          }
+        },
+        {
+          "method": "UpdateGoogleChannelConfig",
+          "request": {
+            "type": "UpdateGoogleChannelConfigRequest"
+          },
+          "response": {
+            "type": "GoogleChannelConfig"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GetTriggerRequest"
+    },
+    {
+      "type": "ListTriggersRequest"
+    },
+    {
+      "type": "ListTriggersResponse"
+    },
+    {
+      "type": "CreateTriggerRequest"
+    },
+    {
+      "type": "UpdateTriggerRequest"
+    },
+    {
+      "type": "DeleteTriggerRequest"
+    },
+    {
+      "type": "GetChannelRequest"
+    },
+    {
+      "type": "ListChannelsRequest"
+    },
+    {
+      "type": "ListChannelsResponse"
+    },
+    {
+      "type": "CreateChannelRequest"
+    },
+    {
+      "type": "UpdateChannelRequest"
+    },
+    {
+      "type": "DeleteChannelRequest"
+    },
+    {
+      "type": "GetProviderRequest"
+    },
+    {
+      "type": "ListProvidersRequest"
+    },
+    {
+      "type": "ListProvidersResponse"
+    },
+    {
+      "type": "GetChannelConnectionRequest"
+    },
+    {
+      "type": "ListChannelConnectionsRequest"
+    },
+    {
+      "type": "ListChannelConnectionsResponse"
+    },
+    {
+      "type": "CreateChannelConnectionRequest"
+    },
+    {
+      "type": "DeleteChannelConnectionRequest"
+    },
+    {
+      "type": "UpdateGoogleChannelConfigRequest"
+    },
+    {
+      "type": "GetGoogleChannelConfigRequest"
+    },
+    {
+      "type": "OperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "eventarc/apiv1/eventarcpb/eventarc.pb.go",
+    "pkg": "eventarcpb",
+    "pkg_full": "cloud.google.com/go/eventarc/apiv1/eventarcpb"
+  }
+}
+{
+  "proto": "google/cloud/eventarc/v1/channel_connection",
+  "pkg": "google.cloud.eventarc.v1",
+  "msgs": [
+    {
+      "type": "ChannelConnection"
+    }
+  ],
+  "go": {
+    "src": "eventarc/apiv1/eventarcpb/channel_connection.pb.go",
+    "pkg": "eventarcpb",
+    "pkg_full": "cloud.google.com/go/eventarc/apiv1/eventarcpb"
+  }
+}
+{
+  "proto": "google/cloud/eventarc/v1/google_channel_config",
+  "pkg": "google.cloud.eventarc.v1",
+  "msgs": [
+    {
+      "type": "GoogleChannelConfig"
+    }
+  ],
+  "go": {
+    "src": "eventarc/apiv1/eventarcpb/google_channel_config.pb.go",
+    "pkg": "eventarcpb",
+    "pkg_full": "cloud.google.com/go/eventarc/apiv1/eventarcpb"
+  }
+}
+{
+  "proto": "google/cloud/eventarc/v1/discovery",
+  "pkg": "google.cloud.eventarc.v1",
+  "msgs": [
+    {
+      "type": "Provider"
+    },
+    {
+      "type": "EventType"
+    },
+    {
+      "type": "FilteringAttribute"
+    }
+  ],
+  "go": {
+    "src": "eventarc/apiv1/eventarcpb/discovery.pb.go",
+    "pkg": "eventarcpb",
+    "pkg_full": "cloud.google.com/go/eventarc/apiv1/eventarcpb"
+  }
+}

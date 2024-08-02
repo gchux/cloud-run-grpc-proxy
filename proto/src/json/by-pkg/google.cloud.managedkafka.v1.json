@@ -1,0 +1,240 @@
+{
+  "proto": "google/cloud/managedkafka/v1/managed_kafka",
+  "pkg": "google.cloud.managedkafka.v1",
+  "svcs": [
+    {
+      "svc": "ManagedKafka",
+      "host": "managedkafka.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListClusters",
+          "request": {
+            "type": "ListClustersRequest"
+          },
+          "response": {
+            "type": "ListClustersResponse"
+          }
+        },
+        {
+          "method": "GetCluster",
+          "request": {
+            "type": "GetClusterRequest"
+          },
+          "response": {
+            "type": "Cluster"
+          }
+        },
+        {
+          "method": "CreateCluster",
+          "request": {
+            "type": "CreateClusterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateCluster",
+          "request": {
+            "type": "UpdateClusterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteCluster",
+          "request": {
+            "type": "DeleteClusterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListTopics",
+          "request": {
+            "type": "ListTopicsRequest"
+          },
+          "response": {
+            "type": "ListTopicsResponse"
+          }
+        },
+        {
+          "method": "GetTopic",
+          "request": {
+            "type": "GetTopicRequest"
+          },
+          "response": {
+            "type": "Topic"
+          }
+        },
+        {
+          "method": "CreateTopic",
+          "request": {
+            "type": "CreateTopicRequest"
+          },
+          "response": {
+            "type": "Topic"
+          }
+        },
+        {
+          "method": "UpdateTopic",
+          "request": {
+            "type": "UpdateTopicRequest"
+          },
+          "response": {
+            "type": "Topic"
+          }
+        },
+        {
+          "method": "DeleteTopic",
+          "request": {
+            "type": "DeleteTopicRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListConsumerGroups",
+          "request": {
+            "type": "ListConsumerGroupsRequest"
+          },
+          "response": {
+            "type": "ListConsumerGroupsResponse"
+          }
+        },
+        {
+          "method": "GetConsumerGroup",
+          "request": {
+            "type": "GetConsumerGroupRequest"
+          },
+          "response": {
+            "type": "ConsumerGroup"
+          }
+        },
+        {
+          "method": "UpdateConsumerGroup",
+          "request": {
+            "type": "UpdateConsumerGroupRequest"
+          },
+          "response": {
+            "type": "ConsumerGroup"
+          }
+        },
+        {
+          "method": "DeleteConsumerGroup",
+          "request": {
+            "type": "DeleteConsumerGroupRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ListClustersRequest"
+    },
+    {
+      "type": "ListClustersResponse"
+    },
+    {
+      "type": "GetClusterRequest"
+    },
+    {
+      "type": "CreateClusterRequest"
+    },
+    {
+      "type": "UpdateClusterRequest"
+    },
+    {
+      "type": "DeleteClusterRequest"
+    },
+    {
+      "type": "ListTopicsRequest"
+    },
+    {
+      "type": "ListTopicsResponse"
+    },
+    {
+      "type": "GetTopicRequest"
+    },
+    {
+      "type": "CreateTopicRequest"
+    },
+    {
+      "type": "UpdateTopicRequest"
+    },
+    {
+      "type": "DeleteTopicRequest"
+    },
+    {
+      "type": "ListConsumerGroupsRequest"
+    },
+    {
+      "type": "ListConsumerGroupsResponse"
+    },
+    {
+      "type": "GetConsumerGroupRequest"
+    },
+    {
+      "type": "UpdateConsumerGroupRequest"
+    },
+    {
+      "type": "DeleteConsumerGroupRequest"
+    }
+  ],
+  "go": {
+    "src": "managedkafka/apiv1/managedkafkapb/managed_kafka.pb.go",
+    "pkg": "managedkafkapb",
+    "pkg_full": "cloud.google.com/go/managedkafka/apiv1/managedkafkapb"
+  }
+}
+{
+  "proto": "google/cloud/managedkafka/v1/resources",
+  "pkg": "google.cloud.managedkafka.v1",
+  "msgs": [
+    {
+      "type": "Cluster"
+    },
+    {
+      "type": "CapacityConfig"
+    },
+    {
+      "type": "RebalanceConfig"
+    },
+    {
+      "type": "NetworkConfig"
+    },
+    {
+      "type": "AccessConfig"
+    },
+    {
+      "type": "GcpConfig"
+    },
+    {
+      "type": "Topic"
+    },
+    {
+      "type": "ConsumerTopicMetadata"
+    },
+    {
+      "type": "ConsumerPartitionMetadata"
+    },
+    {
+      "type": "ConsumerGroup"
+    },
+    {
+      "type": "OperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "managedkafka/apiv1/managedkafkapb/resources.pb.go",
+    "pkg": "managedkafkapb",
+    "pkg_full": "cloud.google.com/go/managedkafka/apiv1/managedkafkapb"
+  }
+}

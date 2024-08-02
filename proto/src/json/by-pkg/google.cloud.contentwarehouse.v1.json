@@ -1,0 +1,844 @@
+{
+  "proto": "google/cloud/contentwarehouse/v1/document",
+  "pkg": "google.cloud.contentwarehouse.v1",
+  "msgs": [
+    {
+      "type": "Document"
+    },
+    {
+      "type": "DocumentReference"
+    },
+    {
+      "type": "Property"
+    },
+    {
+      "type": "IntegerArray"
+    },
+    {
+      "type": "FloatArray"
+    },
+    {
+      "type": "TextArray"
+    },
+    {
+      "type": "EnumArray"
+    },
+    {
+      "type": "DateTimeArray"
+    },
+    {
+      "type": "TimestampArray"
+    },
+    {
+      "type": "TimestampValue"
+    },
+    {
+      "type": "PropertyArray"
+    },
+    {
+      "type": "MapProperty"
+    },
+    {
+      "type": "Value"
+    },
+    {
+      "type": "EnumValue"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/contentwarehouse/v1/document.pb.go",
+    "pkg": "contentwarehousepb",
+    "pkg_full": "cloud.google.com/go/contentwarehouse/apiv1/contentwarehousepb"
+  }
+}
+{
+  "proto": "google/cloud/contentwarehouse/v1/synonymset_service",
+  "pkg": "google.cloud.contentwarehouse.v1",
+  "svcs": [
+    {
+      "svc": "SynonymSetService",
+      "host": "contentwarehouse.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateSynonymSet",
+          "request": {
+            "type": "CreateSynonymSetRequest"
+          },
+          "response": {
+            "type": "SynonymSet"
+          }
+        },
+        {
+          "method": "GetSynonymSet",
+          "request": {
+            "type": "GetSynonymSetRequest"
+          },
+          "response": {
+            "type": "SynonymSet"
+          }
+        },
+        {
+          "method": "UpdateSynonymSet",
+          "request": {
+            "type": "UpdateSynonymSetRequest"
+          },
+          "response": {
+            "type": "SynonymSet"
+          }
+        },
+        {
+          "method": "DeleteSynonymSet",
+          "request": {
+            "type": "DeleteSynonymSetRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListSynonymSets",
+          "request": {
+            "type": "ListSynonymSetsRequest"
+          },
+          "response": {
+            "type": "ListSynonymSetsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/contentwarehouse/v1/synonymset_service.pb.go",
+    "pkg": "contentwarehousepb",
+    "pkg_full": "cloud.google.com/go/contentwarehouse/apiv1/contentwarehousepb"
+  }
+}
+{
+  "proto": "google/cloud/contentwarehouse/v1/document_schema",
+  "pkg": "google.cloud.contentwarehouse.v1",
+  "msgs": [
+    {
+      "type": "DocumentSchema"
+    },
+    {
+      "type": "PropertyDefinition",
+      "msgs": [
+        {
+          "type": "SchemaSource"
+        }
+      ]
+    },
+    {
+      "type": "IntegerTypeOptions"
+    },
+    {
+      "type": "FloatTypeOptions"
+    },
+    {
+      "type": "TextTypeOptions"
+    },
+    {
+      "type": "DateTimeTypeOptions"
+    },
+    {
+      "type": "MapTypeOptions"
+    },
+    {
+      "type": "TimestampTypeOptions"
+    },
+    {
+      "type": "PropertyTypeOptions"
+    },
+    {
+      "type": "EnumTypeOptions"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/contentwarehouse/v1/document_schema.pb.go",
+    "pkg": "contentwarehousepb",
+    "pkg_full": "cloud.google.com/go/contentwarehouse/apiv1/contentwarehousepb"
+  }
+}
+{
+  "proto": "google/cloud/contentwarehouse/v1/document_service_request",
+  "pkg": "google.cloud.contentwarehouse.v1",
+  "msgs": [
+    {
+      "type": "CloudAIDocumentOption"
+    },
+    {
+      "type": "CreateDocumentRequest"
+    },
+    {
+      "type": "GetDocumentRequest"
+    },
+    {
+      "type": "UpdateDocumentRequest"
+    },
+    {
+      "type": "DeleteDocumentRequest"
+    },
+    {
+      "type": "SearchDocumentsRequest"
+    },
+    {
+      "type": "LockDocumentRequest"
+    },
+    {
+      "type": "FetchAclRequest"
+    },
+    {
+      "type": "SetAclRequest"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/contentwarehouse/v1/document_service_request.pb.go",
+    "pkg": "contentwarehousepb",
+    "pkg_full": "cloud.google.com/go/contentwarehouse/apiv1/contentwarehousepb"
+  }
+}
+{
+  "proto": "google/cloud/contentwarehouse/v1/document_link_service",
+  "pkg": "google.cloud.contentwarehouse.v1",
+  "svcs": [
+    {
+      "svc": "DocumentLinkService",
+      "host": "contentwarehouse.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListLinkedTargets",
+          "request": {
+            "type": "ListLinkedTargetsRequest"
+          },
+          "response": {
+            "type": "ListLinkedTargetsResponse"
+          }
+        },
+        {
+          "method": "ListLinkedSources",
+          "request": {
+            "type": "ListLinkedSourcesRequest"
+          },
+          "response": {
+            "type": "ListLinkedSourcesResponse"
+          }
+        },
+        {
+          "method": "CreateDocumentLink",
+          "request": {
+            "type": "CreateDocumentLinkRequest"
+          },
+          "response": {
+            "type": "DocumentLink"
+          }
+        },
+        {
+          "method": "DeleteDocumentLink",
+          "request": {
+            "type": "DeleteDocumentLinkRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "ListLinkedTargetsResponse"
+    },
+    {
+      "type": "ListLinkedTargetsRequest"
+    },
+    {
+      "type": "ListLinkedSourcesResponse"
+    },
+    {
+      "type": "ListLinkedSourcesRequest"
+    },
+    {
+      "type": "DocumentLink"
+    },
+    {
+      "type": "CreateDocumentLinkRequest"
+    },
+    {
+      "type": "DeleteDocumentLinkRequest"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/contentwarehouse/v1/document_link_service.pb.go",
+    "pkg": "contentwarehousepb",
+    "pkg_full": "cloud.google.com/go/contentwarehouse/apiv1/contentwarehousepb"
+  }
+}
+{
+  "proto": "google/cloud/contentwarehouse/v1/common",
+  "pkg": "google.cloud.contentwarehouse.v1",
+  "msgs": [
+    {
+      "type": "RequestMetadata"
+    },
+    {
+      "type": "ResponseMetadata"
+    },
+    {
+      "type": "UserInfo"
+    },
+    {
+      "type": "UpdateOptions"
+    },
+    {
+      "type": "MergeFieldsOptions"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/contentwarehouse/v1/common.pb.go",
+    "pkg": "contentwarehousepb",
+    "pkg_full": "cloud.google.com/go/contentwarehouse/apiv1/contentwarehousepb"
+  }
+}
+{
+  "proto": "google/cloud/contentwarehouse/v1/histogram",
+  "pkg": "google.cloud.contentwarehouse.v1",
+  "msgs": [
+    {
+      "type": "HistogramQuery"
+    },
+    {
+      "type": "HistogramQueryPropertyNameFilter"
+    },
+    {
+      "type": "HistogramQueryResult"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/contentwarehouse/v1/histogram.pb.go",
+    "pkg": "contentwarehousepb",
+    "pkg_full": "cloud.google.com/go/contentwarehouse/apiv1/contentwarehousepb"
+  }
+}
+{
+  "proto": "google/cloud/contentwarehouse/v1/synonymset_service_request",
+  "pkg": "google.cloud.contentwarehouse.v1",
+  "msgs": [
+    {
+      "type": "CreateSynonymSetRequest"
+    },
+    {
+      "type": "GetSynonymSetRequest"
+    },
+    {
+      "type": "ListSynonymSetsRequest"
+    },
+    {
+      "type": "ListSynonymSetsResponse"
+    },
+    {
+      "type": "UpdateSynonymSetRequest"
+    },
+    {
+      "type": "DeleteSynonymSetRequest"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/contentwarehouse/v1/synonymset_service_request.pb.go",
+    "pkg": "contentwarehousepb",
+    "pkg_full": "cloud.google.com/go/contentwarehouse/apiv1/contentwarehousepb"
+  }
+}
+{
+  "proto": "google/cloud/contentwarehouse/v1/synonymset",
+  "pkg": "google.cloud.contentwarehouse.v1",
+  "msgs": [
+    {
+      "type": "SynonymSet",
+      "msgs": [
+        {
+          "type": "Synonym"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/contentwarehouse/v1/synonymset.pb.go",
+    "pkg": "contentwarehousepb",
+    "pkg_full": "cloud.google.com/go/contentwarehouse/apiv1/contentwarehousepb"
+  }
+}
+{
+  "proto": "google/cloud/contentwarehouse/v1/pipelines",
+  "pkg": "google.cloud.contentwarehouse.v1",
+  "msgs": [
+    {
+      "type": "RunPipelineResponse"
+    },
+    {
+      "type": "RunPipelineMetadata",
+      "msgs": [
+        {
+          "type": "GcsIngestPipelineMetadata"
+        },
+        {
+          "type": "ExportToCdwPipelineMetadata"
+        },
+        {
+          "type": "ProcessWithDocAiPipelineMetadata"
+        },
+        {
+          "type": "IndividualDocumentStatus"
+        }
+      ]
+    },
+    {
+      "type": "ProcessorInfo"
+    },
+    {
+      "type": "IngestPipelineConfig"
+    },
+    {
+      "type": "GcsIngestPipeline"
+    },
+    {
+      "type": "GcsIngestWithDocAiProcessorsPipeline"
+    },
+    {
+      "type": "ExportToCdwPipeline"
+    },
+    {
+      "type": "ProcessWithDocAiPipeline"
+    }
+  ],
+  "go": {
+    "pkg": "contentwarehousepb",
+    "pkg_full": "cloud.google.com/go/contentwarehouse/apiv1/contentwarehousepb"
+  }
+}
+{
+  "proto": "google/cloud/contentwarehouse/v1/ruleset_service",
+  "pkg": "google.cloud.contentwarehouse.v1",
+  "svcs": [
+    {
+      "svc": "RuleSetService",
+      "host": "contentwarehouse.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateRuleSet",
+          "request": {
+            "type": "CreateRuleSetRequest"
+          },
+          "response": {
+            "type": "RuleSet"
+          }
+        },
+        {
+          "method": "GetRuleSet",
+          "request": {
+            "type": "GetRuleSetRequest"
+          },
+          "response": {
+            "type": "RuleSet"
+          }
+        },
+        {
+          "method": "UpdateRuleSet",
+          "request": {
+            "type": "UpdateRuleSetRequest"
+          },
+          "response": {
+            "type": "RuleSet"
+          }
+        },
+        {
+          "method": "DeleteRuleSet",
+          "request": {
+            "type": "DeleteRuleSetRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListRuleSets",
+          "request": {
+            "type": "ListRuleSetsRequest"
+          },
+          "response": {
+            "type": "ListRuleSetsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/contentwarehouse/v1/ruleset_service.pb.go",
+    "pkg": "contentwarehousepb",
+    "pkg_full": "cloud.google.com/go/contentwarehouse/apiv1/contentwarehousepb"
+  }
+}
+{
+  "proto": "google/cloud/contentwarehouse/v1/document_service",
+  "pkg": "google.cloud.contentwarehouse.v1",
+  "svcs": [
+    {
+      "svc": "DocumentService",
+      "host": "contentwarehouse.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateDocument",
+          "request": {
+            "type": "CreateDocumentRequest"
+          },
+          "response": {
+            "type": "CreateDocumentResponse"
+          }
+        },
+        {
+          "method": "GetDocument",
+          "request": {
+            "type": "GetDocumentRequest"
+          },
+          "response": {
+            "type": "Document"
+          }
+        },
+        {
+          "method": "UpdateDocument",
+          "request": {
+            "type": "UpdateDocumentRequest"
+          },
+          "response": {
+            "type": "UpdateDocumentResponse"
+          }
+        },
+        {
+          "method": "DeleteDocument",
+          "request": {
+            "type": "DeleteDocumentRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "SearchDocuments",
+          "request": {
+            "type": "SearchDocumentsRequest"
+          },
+          "response": {
+            "type": "SearchDocumentsResponse"
+          }
+        },
+        {
+          "method": "LockDocument",
+          "request": {
+            "type": "LockDocumentRequest"
+          },
+          "response": {
+            "type": "Document"
+          }
+        },
+        {
+          "method": "FetchAcl",
+          "request": {
+            "type": "FetchAclRequest"
+          },
+          "response": {
+            "type": "FetchAclResponse"
+          }
+        },
+        {
+          "method": "SetAcl",
+          "request": {
+            "type": "SetAclRequest"
+          },
+          "response": {
+            "type": "SetAclResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateDocumentResponse"
+    },
+    {
+      "type": "UpdateDocumentResponse"
+    },
+    {
+      "type": "QAResult",
+      "msgs": [
+        {
+          "type": "Highlight"
+        }
+      ]
+    },
+    {
+      "type": "SearchDocumentsResponse",
+      "msgs": [
+        {
+          "type": "MatchingDocument"
+        }
+      ]
+    },
+    {
+      "type": "FetchAclResponse"
+    },
+    {
+      "type": "SetAclResponse"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/contentwarehouse/v1/document_service.pb.go",
+    "pkg": "contentwarehousepb",
+    "pkg_full": "cloud.google.com/go/contentwarehouse/apiv1/contentwarehousepb"
+  }
+}
+{
+  "proto": "google/cloud/contentwarehouse/v1/filters",
+  "pkg": "google.cloud.contentwarehouse.v1",
+  "msgs": [
+    {
+      "type": "DocumentQuery"
+    },
+    {
+      "type": "TimeFilter"
+    },
+    {
+      "type": "PropertyFilter"
+    },
+    {
+      "type": "FileTypeFilter"
+    },
+    {
+      "type": "CustomWeightsMetadata"
+    },
+    {
+      "type": "WeightedSchemaProperty"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/contentwarehouse/v1/filters.pb.go",
+    "pkg": "contentwarehousepb",
+    "pkg_full": "cloud.google.com/go/contentwarehouse/apiv1/contentwarehousepb"
+  }
+}
+{
+  "proto": "google/cloud/contentwarehouse/v1/ruleset_service_request",
+  "pkg": "google.cloud.contentwarehouse.v1",
+  "msgs": [
+    {
+      "type": "CreateRuleSetRequest"
+    },
+    {
+      "type": "GetRuleSetRequest"
+    },
+    {
+      "type": "UpdateRuleSetRequest"
+    },
+    {
+      "type": "DeleteRuleSetRequest"
+    },
+    {
+      "type": "ListRuleSetsRequest"
+    },
+    {
+      "type": "ListRuleSetsResponse"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/contentwarehouse/v1/ruleset_service_request.pb.go",
+    "pkg": "contentwarehousepb",
+    "pkg_full": "cloud.google.com/go/contentwarehouse/apiv1/contentwarehousepb"
+  }
+}
+{
+  "proto": "google/cloud/contentwarehouse/v1/document_schema_service",
+  "pkg": "google.cloud.contentwarehouse.v1",
+  "svcs": [
+    {
+      "svc": "DocumentSchemaService",
+      "host": "contentwarehouse.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateDocumentSchema",
+          "request": {
+            "type": "CreateDocumentSchemaRequest"
+          },
+          "response": {
+            "type": "DocumentSchema"
+          }
+        },
+        {
+          "method": "UpdateDocumentSchema",
+          "request": {
+            "type": "UpdateDocumentSchemaRequest"
+          },
+          "response": {
+            "type": "DocumentSchema"
+          }
+        },
+        {
+          "method": "GetDocumentSchema",
+          "request": {
+            "type": "GetDocumentSchemaRequest"
+          },
+          "response": {
+            "type": "DocumentSchema"
+          }
+        },
+        {
+          "method": "DeleteDocumentSchema",
+          "request": {
+            "type": "DeleteDocumentSchemaRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListDocumentSchemas",
+          "request": {
+            "type": "ListDocumentSchemasRequest"
+          },
+          "response": {
+            "type": "ListDocumentSchemasResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateDocumentSchemaRequest"
+    },
+    {
+      "type": "GetDocumentSchemaRequest"
+    },
+    {
+      "type": "UpdateDocumentSchemaRequest"
+    },
+    {
+      "type": "DeleteDocumentSchemaRequest"
+    },
+    {
+      "type": "ListDocumentSchemasRequest"
+    },
+    {
+      "type": "ListDocumentSchemasResponse"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/contentwarehouse/v1/document_schema_service.pb.go",
+    "pkg": "contentwarehousepb",
+    "pkg_full": "cloud.google.com/go/contentwarehouse/apiv1/contentwarehousepb"
+  }
+}
+{
+  "proto": "google/cloud/contentwarehouse/v1/pipeline_service",
+  "pkg": "google.cloud.contentwarehouse.v1",
+  "svcs": [
+    {
+      "svc": "PipelineService",
+      "host": "contentwarehouse.googleapis.com",
+      "rpcs": [
+        {
+          "method": "RunPipeline",
+          "request": {
+            "type": "RunPipelineRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "RunPipelineRequest"
+    }
+  ],
+  "go": {
+    "pkg": "contentwarehousepb",
+    "pkg_full": "cloud.google.com/go/contentwarehouse/apiv1/contentwarehousepb"
+  }
+}
+{
+  "proto": "google/cloud/contentwarehouse/v1/async_document_service_request",
+  "pkg": "google.cloud.contentwarehouse.v1",
+  "msgs": [
+    {
+      "type": "CreateDocumentMetadata"
+    },
+    {
+      "type": "UpdateDocumentMetadata"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/contentwarehouse/v1/async_document_service_request.pb.go",
+    "pkg": "contentwarehousepb",
+    "pkg_full": "cloud.google.com/go/contentwarehouse/apiv1/contentwarehousepb"
+  }
+}
+{
+  "proto": "google/cloud/contentwarehouse/v1/rule_engine",
+  "pkg": "google.cloud.contentwarehouse.v1",
+  "msgs": [
+    {
+      "type": "RuleSet"
+    },
+    {
+      "type": "Rule"
+    },
+    {
+      "type": "Action"
+    },
+    {
+      "type": "AccessControlAction"
+    },
+    {
+      "type": "DataValidationAction"
+    },
+    {
+      "type": "DataUpdateAction"
+    },
+    {
+      "type": "AddToFolderAction"
+    },
+    {
+      "type": "RemoveFromFolderAction"
+    },
+    {
+      "type": "PublishAction"
+    },
+    {
+      "type": "DeleteDocumentAction"
+    },
+    {
+      "type": "RuleEngineOutput"
+    },
+    {
+      "type": "RuleEvaluatorOutput"
+    },
+    {
+      "type": "InvalidRule"
+    },
+    {
+      "type": "ActionExecutorOutput"
+    },
+    {
+      "type": "RuleActionsPair"
+    },
+    {
+      "type": "ActionOutput"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/contentwarehouse/v1/rule_engine.pb.go",
+    "pkg": "contentwarehousepb",
+    "pkg_full": "cloud.google.com/go/contentwarehouse/apiv1/contentwarehousepb"
+  }
+}

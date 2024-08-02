@@ -1,0 +1,141 @@
+{
+  "proto": "google/shopping/merchant/lfp/v1beta/lfpsale",
+  "pkg": "google.shopping.merchant.lfp.v1beta",
+  "svcs": [
+    {
+      "svc": "LfpSaleService",
+      "host": "merchantapi.googleapis.com",
+      "rpcs": [
+        {
+          "method": "InsertLfpSale",
+          "request": {
+            "type": "InsertLfpSaleRequest"
+          },
+          "response": {
+            "type": "LfpSale"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "LfpSale"
+    },
+    {
+      "type": "InsertLfpSaleRequest"
+    }
+  ],
+  "go": {
+    "src": "shopping/merchant/lfp/apiv1beta/lfppb/lfpsale.pb.go",
+    "pkg": "lfppb",
+    "pkg_full": "cloud.google.com/go/shopping/merchant/lfp/apiv1beta/lfppb"
+  }
+}
+{
+  "proto": "google/shopping/merchant/lfp/v1beta/lfpstore",
+  "pkg": "google.shopping.merchant.lfp.v1beta",
+  "svcs": [
+    {
+      "svc": "LfpStoreService",
+      "host": "merchantapi.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetLfpStore",
+          "request": {
+            "type": "GetLfpStoreRequest"
+          },
+          "response": {
+            "type": "LfpStore"
+          }
+        },
+        {
+          "method": "InsertLfpStore",
+          "request": {
+            "type": "InsertLfpStoreRequest"
+          },
+          "response": {
+            "type": "LfpStore"
+          }
+        },
+        {
+          "method": "DeleteLfpStore",
+          "request": {
+            "type": "DeleteLfpStoreRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListLfpStores",
+          "request": {
+            "type": "ListLfpStoresRequest"
+          },
+          "response": {
+            "type": "ListLfpStoresResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "LfpStore"
+    },
+    {
+      "type": "GetLfpStoreRequest"
+    },
+    {
+      "type": "InsertLfpStoreRequest"
+    },
+    {
+      "type": "DeleteLfpStoreRequest"
+    },
+    {
+      "type": "ListLfpStoresRequest"
+    },
+    {
+      "type": "ListLfpStoresResponse"
+    }
+  ],
+  "go": {
+    "src": "shopping/merchant/lfp/apiv1beta/lfppb/lfpstore.pb.go",
+    "pkg": "lfppb",
+    "pkg_full": "cloud.google.com/go/shopping/merchant/lfp/apiv1beta/lfppb"
+  }
+}
+{
+  "proto": "google/shopping/merchant/lfp/v1beta/lfpinventory",
+  "pkg": "google.shopping.merchant.lfp.v1beta",
+  "svcs": [
+    {
+      "svc": "LfpInventoryService",
+      "host": "merchantapi.googleapis.com",
+      "rpcs": [
+        {
+          "method": "InsertLfpInventory",
+          "request": {
+            "type": "InsertLfpInventoryRequest"
+          },
+          "response": {
+            "type": "LfpInventory"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "LfpInventory"
+    },
+    {
+      "type": "InsertLfpInventoryRequest"
+    }
+  ],
+  "go": {
+    "src": "shopping/merchant/lfp/apiv1beta/lfppb/lfpinventory.pb.go",
+    "pkg": "lfppb",
+    "pkg_full": "cloud.google.com/go/shopping/merchant/lfp/apiv1beta/lfppb"
+  }
+}

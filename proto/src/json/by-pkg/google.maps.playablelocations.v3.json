@@ -1,0 +1,81 @@
+{
+  "proto": "google/maps/playablelocations/v3/resources",
+  "pkg": "google.maps.playablelocations.v3",
+  "msgs": [
+    {
+      "type": "PlayerReport"
+    },
+    {
+      "type": "Impression"
+    }
+  ],
+  "go": {
+    "src": "googleapis/maps/playablelocations/v3/resources.pb.go",
+    "pkg": "playablelocationspb",
+    "pkg_full": "cloud.google.com/go/maps/playablelocations/apiv3/playablelocationspb"
+  }
+}
+{
+  "proto": "google/maps/playablelocations/v3/playablelocations",
+  "pkg": "google.maps.playablelocations.v3",
+  "svcs": [
+    {
+      "svc": "PlayableLocations",
+      "host": "playablelocations.googleapis.com",
+      "rpcs": [
+        {
+          "method": "SamplePlayableLocations",
+          "request": {
+            "type": "SamplePlayableLocationsRequest"
+          },
+          "response": {
+            "type": "SamplePlayableLocationsResponse"
+          }
+        },
+        {
+          "method": "LogPlayerReports",
+          "request": {
+            "type": "LogPlayerReportsRequest"
+          },
+          "response": {
+            "type": "LogPlayerReportsResponse"
+          }
+        },
+        {
+          "method": "LogImpressions",
+          "request": {
+            "type": "LogImpressionsRequest"
+          },
+          "response": {
+            "type": "LogImpressionsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "SamplePlayableLocationsRequest"
+    },
+    {
+      "type": "SamplePlayableLocationsResponse"
+    },
+    {
+      "type": "LogPlayerReportsRequest"
+    },
+    {
+      "type": "LogPlayerReportsResponse"
+    },
+    {
+      "type": "LogImpressionsRequest"
+    },
+    {
+      "type": "LogImpressionsResponse"
+    }
+  ],
+  "go": {
+    "src": "googleapis/maps/playablelocations/v3/playablelocations.pb.go",
+    "pkg": "playablelocationspb",
+    "pkg_full": "cloud.google.com/go/maps/playablelocations/apiv3/playablelocationspb"
+  }
+}

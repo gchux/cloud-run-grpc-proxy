@@ -1,0 +1,52 @@
+{
+  "proto": "google/storagetransfer/logging/transfer_activity_log",
+  "pkg": "google.storagetransfer.logging",
+  "msgs": [
+    {
+      "type": "AwsS3ObjectMetadata"
+    },
+    {
+      "type": "AwsS3BucketMetadata"
+    },
+    {
+      "type": "GcsObjectMetadata"
+    },
+    {
+      "type": "GcsBucketMetadata"
+    },
+    {
+      "type": "AzureBlobMetadata"
+    },
+    {
+      "type": "AzureBlobContainerMetadata"
+    },
+    {
+      "type": "PosixFileMetadata"
+    },
+    {
+      "type": "HttpFileMetadata"
+    },
+    {
+      "type": "HttpManifestMetadata"
+    },
+    {
+      "type": "ObjectMetadata"
+    },
+    {
+      "type": "ContainerMetadata"
+    },
+    {
+      "type": "TransferActivityLog",
+      "msgs": [
+        {
+          "type": "Status"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/storagetransfer/logging/transfer_activity_log.pb.go",
+    "pkg": "logging",
+    "pkg_full": "google.golang.org/genproto/googleapis/storagetransfer/logging"
+  }
+}

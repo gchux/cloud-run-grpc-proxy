@@ -1,0 +1,52 @@
+{
+  "proto": "google/maps/roads/v1op/roads",
+  "pkg": "google.maps.roads.v1op",
+  "svcs": [
+    {
+      "svc": "RoadsService",
+      "host": "roads.googleapis.com",
+      "rpcs": [
+        {
+          "method": "SnapToRoads",
+          "request": {
+            "type": "SnapToRoadsRequest"
+          },
+          "response": {
+            "type": "SnapToRoadsResponse"
+          }
+        },
+        {
+          "method": "ListNearestRoads",
+          "request": {
+            "type": "ListNearestRoadsRequest"
+          },
+          "response": {
+            "type": "ListNearestRoadsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "SnapToRoadsRequest"
+    },
+    {
+      "type": "SnappedPoint"
+    },
+    {
+      "type": "SnapToRoadsResponse"
+    },
+    {
+      "type": "ListNearestRoadsRequest"
+    },
+    {
+      "type": "ListNearestRoadsResponse"
+    }
+  ],
+  "go": {
+    "src": "googleapis/maps/roads/v1op/roads.pb.go",
+    "pkg": "roadspb",
+    "pkg_full": "cloud.google.com/go/maps/roads/apiv1op/roadspb"
+  }
+}

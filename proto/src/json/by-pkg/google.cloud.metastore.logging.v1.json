@@ -1,0 +1,30 @@
+{
+  "proto": "google/cloud/metastore/logging/v1/scheduled_backups_log",
+  "pkg": "google.cloud.metastore.logging.v1",
+  "msgs": [
+    {
+      "type": "ScheduledBackupLogEntry"
+    }
+  ],
+  "go": {
+    "pkg": "loggingpb",
+    "pkg_full": "cloud.google.com/go/metastore/logging/apiv1/loggingpb"
+  }
+}
+{
+  "proto": "google/cloud/metastore/logging/v1/log_streams",
+  "pkg": "google.cloud.metastore.logging.v1",
+  "msgs": [
+    {
+      "type": "RequestsLogEntry"
+    },
+    {
+      "type": "SystemActivityLogEntry"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/metastore/logging/v1/log_streams.pb.go",
+    "pkg": "loggingpb",
+    "pkg_full": "cloud.google.com/go/metastore/logging/apiv1/loggingpb"
+  }
+}

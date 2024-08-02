@@ -1,0 +1,241 @@
+{
+  "proto": "google/cloud/tpu/v2/cloud_tpu",
+  "pkg": "google.cloud.tpu.v2",
+  "svcs": [
+    {
+      "svc": "Tpu",
+      "host": "tpu.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListNodes",
+          "request": {
+            "type": "ListNodesRequest"
+          },
+          "response": {
+            "type": "ListNodesResponse"
+          }
+        },
+        {
+          "method": "GetNode",
+          "request": {
+            "type": "GetNodeRequest"
+          },
+          "response": {
+            "type": "Node"
+          }
+        },
+        {
+          "method": "CreateNode",
+          "request": {
+            "type": "CreateNodeRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteNode",
+          "request": {
+            "type": "DeleteNodeRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "StopNode",
+          "request": {
+            "type": "StopNodeRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "StartNode",
+          "request": {
+            "type": "StartNodeRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateNode",
+          "request": {
+            "type": "UpdateNodeRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GenerateServiceIdentity",
+          "request": {
+            "type": "GenerateServiceIdentityRequest"
+          },
+          "response": {
+            "type": "GenerateServiceIdentityResponse"
+          }
+        },
+        {
+          "method": "ListAcceleratorTypes",
+          "request": {
+            "type": "ListAcceleratorTypesRequest"
+          },
+          "response": {
+            "type": "ListAcceleratorTypesResponse"
+          }
+        },
+        {
+          "method": "GetAcceleratorType",
+          "request": {
+            "type": "GetAcceleratorTypeRequest"
+          },
+          "response": {
+            "type": "AcceleratorType"
+          }
+        },
+        {
+          "method": "ListRuntimeVersions",
+          "request": {
+            "type": "ListRuntimeVersionsRequest"
+          },
+          "response": {
+            "type": "ListRuntimeVersionsResponse"
+          }
+        },
+        {
+          "method": "GetRuntimeVersion",
+          "request": {
+            "type": "GetRuntimeVersionRequest"
+          },
+          "response": {
+            "type": "RuntimeVersion"
+          }
+        },
+        {
+          "method": "GetGuestAttributes",
+          "request": {
+            "type": "GetGuestAttributesRequest"
+          },
+          "response": {
+            "type": "GetGuestAttributesResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GuestAttributes"
+    },
+    {
+      "type": "GuestAttributesValue"
+    },
+    {
+      "type": "GuestAttributesEntry"
+    },
+    {
+      "type": "AttachedDisk"
+    },
+    {
+      "type": "SchedulingConfig"
+    },
+    {
+      "type": "NetworkEndpoint"
+    },
+    {
+      "type": "AccessConfig"
+    },
+    {
+      "type": "NetworkConfig"
+    },
+    {
+      "type": "ServiceAccount"
+    },
+    {
+      "type": "Node"
+    },
+    {
+      "type": "ListNodesRequest"
+    },
+    {
+      "type": "ListNodesResponse"
+    },
+    {
+      "type": "GetNodeRequest"
+    },
+    {
+      "type": "CreateNodeRequest"
+    },
+    {
+      "type": "DeleteNodeRequest"
+    },
+    {
+      "type": "StopNodeRequest"
+    },
+    {
+      "type": "StartNodeRequest"
+    },
+    {
+      "type": "UpdateNodeRequest"
+    },
+    {
+      "type": "ServiceIdentity"
+    },
+    {
+      "type": "GenerateServiceIdentityRequest"
+    },
+    {
+      "type": "GenerateServiceIdentityResponse"
+    },
+    {
+      "type": "AcceleratorType"
+    },
+    {
+      "type": "GetAcceleratorTypeRequest"
+    },
+    {
+      "type": "ListAcceleratorTypesRequest"
+    },
+    {
+      "type": "ListAcceleratorTypesResponse"
+    },
+    {
+      "type": "RuntimeVersion"
+    },
+    {
+      "type": "GetRuntimeVersionRequest"
+    },
+    {
+      "type": "ListRuntimeVersionsRequest"
+    },
+    {
+      "type": "ListRuntimeVersionsResponse"
+    },
+    {
+      "type": "OperationMetadata"
+    },
+    {
+      "type": "Symptom"
+    },
+    {
+      "type": "GetGuestAttributesRequest"
+    },
+    {
+      "type": "GetGuestAttributesResponse"
+    },
+    {
+      "type": "AcceleratorConfig"
+    },
+    {
+      "type": "ShieldedInstanceConfig"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/tpu/v2/cloud_tpu.pb.go",
+    "pkg": "tpupb",
+    "pkg_full": "cloud.google.com/go/tpu/apiv2/tpupb"
+  }
+}

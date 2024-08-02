@@ -1,0 +1,455 @@
+{
+  "proto": "google/analytics/data/v1alpha/analytics_data_api",
+  "pkg": "google.analytics.data.v1alpha",
+  "svcs": [
+    {
+      "svc": "AlphaAnalyticsData",
+      "host": "analyticsdata.googleapis.com",
+      "rpcs": [
+        {
+          "method": "RunFunnelReport",
+          "request": {
+            "type": "RunFunnelReportRequest"
+          },
+          "response": {
+            "type": "RunFunnelReportResponse"
+          }
+        },
+        {
+          "method": "CreateAudienceList",
+          "request": {
+            "type": "CreateAudienceListRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "QueryAudienceList",
+          "request": {
+            "type": "QueryAudienceListRequest"
+          },
+          "response": {
+            "type": "QueryAudienceListResponse"
+          }
+        },
+        {
+          "method": "SheetExportAudienceList",
+          "request": {
+            "type": "SheetExportAudienceListRequest"
+          },
+          "response": {
+            "type": "SheetExportAudienceListResponse"
+          }
+        },
+        {
+          "method": "GetAudienceList",
+          "request": {
+            "type": "GetAudienceListRequest"
+          },
+          "response": {
+            "type": "AudienceList"
+          }
+        },
+        {
+          "method": "ListAudienceLists",
+          "request": {
+            "type": "ListAudienceListsRequest"
+          },
+          "response": {
+            "type": "ListAudienceListsResponse"
+          }
+        },
+        {
+          "method": "CreateRecurringAudienceList",
+          "request": {
+            "type": "CreateRecurringAudienceListRequest"
+          },
+          "response": {
+            "type": "RecurringAudienceList"
+          }
+        },
+        {
+          "method": "GetRecurringAudienceList",
+          "request": {
+            "type": "GetRecurringAudienceListRequest"
+          },
+          "response": {
+            "type": "RecurringAudienceList"
+          }
+        },
+        {
+          "method": "ListRecurringAudienceLists",
+          "request": {
+            "type": "ListRecurringAudienceListsRequest"
+          },
+          "response": {
+            "type": "ListRecurringAudienceListsResponse"
+          }
+        },
+        {
+          "method": "CreateReportTask",
+          "request": {
+            "type": "CreateReportTaskRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "QueryReportTask",
+          "request": {
+            "type": "QueryReportTaskRequest"
+          },
+          "response": {
+            "type": "QueryReportTaskResponse"
+          }
+        },
+        {
+          "method": "GetReportTask",
+          "request": {
+            "type": "GetReportTaskRequest"
+          },
+          "response": {
+            "type": "ReportTask"
+          }
+        },
+        {
+          "method": "ListReportTasks",
+          "request": {
+            "type": "ListReportTasksRequest"
+          },
+          "response": {
+            "type": "ListReportTasksResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateRecurringAudienceListRequest"
+    },
+    {
+      "type": "RecurringAudienceList"
+    },
+    {
+      "type": "WebhookNotification"
+    },
+    {
+      "type": "GetRecurringAudienceListRequest"
+    },
+    {
+      "type": "ListRecurringAudienceListsRequest"
+    },
+    {
+      "type": "ListRecurringAudienceListsResponse"
+    },
+    {
+      "type": "GetAudienceListRequest"
+    },
+    {
+      "type": "ListAudienceListsRequest"
+    },
+    {
+      "type": "ListAudienceListsResponse"
+    },
+    {
+      "type": "CreateAudienceListRequest"
+    },
+    {
+      "type": "AudienceList"
+    },
+    {
+      "type": "AudienceListMetadata"
+    },
+    {
+      "type": "QueryAudienceListRequest"
+    },
+    {
+      "type": "QueryAudienceListResponse"
+    },
+    {
+      "type": "SheetExportAudienceListRequest"
+    },
+    {
+      "type": "SheetExportAudienceListResponse"
+    },
+    {
+      "type": "AudienceRow"
+    },
+    {
+      "type": "AudienceDimension"
+    },
+    {
+      "type": "AudienceDimensionValue"
+    },
+    {
+      "type": "RunFunnelReportRequest"
+    },
+    {
+      "type": "RunFunnelReportResponse"
+    },
+    {
+      "type": "ReportTask",
+      "msgs": [
+        {
+          "type": "ReportDefinition"
+        },
+        {
+          "type": "ReportMetadata"
+        }
+      ]
+    },
+    {
+      "type": "CreateReportTaskRequest"
+    },
+    {
+      "type": "ReportTaskMetadata"
+    },
+    {
+      "type": "QueryReportTaskRequest"
+    },
+    {
+      "type": "QueryReportTaskResponse"
+    },
+    {
+      "type": "GetReportTaskRequest"
+    },
+    {
+      "type": "ListReportTasksRequest"
+    },
+    {
+      "type": "ListReportTasksResponse"
+    }
+  ],
+  "go": {
+    "src": "googleapis/analytics/data/v1alpha/analytics_data_api.pb.go",
+    "pkg": "data",
+    "pkg_full": "google.golang.org/genproto/googleapis/analytics/data/v1alpha"
+  }
+}
+{
+  "proto": "google/analytics/data/v1alpha/data",
+  "pkg": "google.analytics.data.v1alpha",
+  "msgs": [
+    {
+      "type": "DateRange"
+    },
+    {
+      "type": "Dimension"
+    },
+    {
+      "type": "DimensionExpression",
+      "msgs": [
+        {
+          "type": "CaseExpression"
+        },
+        {
+          "type": "ConcatenateExpression"
+        }
+      ]
+    },
+    {
+      "type": "Metric"
+    },
+    {
+      "type": "FilterExpression"
+    },
+    {
+      "type": "FilterExpressionList"
+    },
+    {
+      "type": "Filter"
+    },
+    {
+      "type": "StringFilter"
+    },
+    {
+      "type": "InListFilter"
+    },
+    {
+      "type": "NumericFilter"
+    },
+    {
+      "type": "OrderBy",
+      "msgs": [
+        {
+          "type": "MetricOrderBy"
+        },
+        {
+          "type": "DimensionOrderBy"
+        }
+      ]
+    },
+    {
+      "type": "BetweenFilter"
+    },
+    {
+      "type": "NumericValue"
+    },
+    {
+      "type": "CohortSpec"
+    },
+    {
+      "type": "Cohort"
+    },
+    {
+      "type": "CohortsRange"
+    },
+    {
+      "type": "CohortReportSettings"
+    },
+    {
+      "type": "ResponseMetaData",
+      "msgs": [
+        {
+          "type": "SchemaRestrictionResponse"
+        },
+        {
+          "type": "ActiveMetricRestriction"
+        }
+      ]
+    },
+    {
+      "type": "DimensionHeader"
+    },
+    {
+      "type": "MetricHeader"
+    },
+    {
+      "type": "Row"
+    },
+    {
+      "type": "DimensionValue"
+    },
+    {
+      "type": "MetricValue"
+    },
+    {
+      "type": "PropertyQuota"
+    },
+    {
+      "type": "QuotaStatus"
+    },
+    {
+      "type": "FunnelBreakdown"
+    },
+    {
+      "type": "FunnelNextAction"
+    },
+    {
+      "type": "Funnel"
+    },
+    {
+      "type": "FunnelStep"
+    },
+    {
+      "type": "FunnelSubReport"
+    },
+    {
+      "type": "UserSegment"
+    },
+    {
+      "type": "UserSegmentCriteria"
+    },
+    {
+      "type": "UserSegmentConditionGroup"
+    },
+    {
+      "type": "UserSegmentSequenceGroup"
+    },
+    {
+      "type": "UserSequenceStep"
+    },
+    {
+      "type": "UserSegmentExclusion"
+    },
+    {
+      "type": "SessionSegment"
+    },
+    {
+      "type": "SessionSegmentCriteria"
+    },
+    {
+      "type": "SessionSegmentConditionGroup"
+    },
+    {
+      "type": "SessionSegmentExclusion"
+    },
+    {
+      "type": "EventSegment"
+    },
+    {
+      "type": "EventSegmentCriteria"
+    },
+    {
+      "type": "EventSegmentConditionGroup"
+    },
+    {
+      "type": "EventSegmentExclusion"
+    },
+    {
+      "type": "Segment"
+    },
+    {
+      "type": "SegmentFilterExpression"
+    },
+    {
+      "type": "SegmentFilterExpressionList"
+    },
+    {
+      "type": "SegmentFilter"
+    },
+    {
+      "type": "SegmentFilterScoping"
+    },
+    {
+      "type": "SegmentEventFilter"
+    },
+    {
+      "type": "SegmentParameterFilterExpression"
+    },
+    {
+      "type": "SegmentParameterFilterExpressionList"
+    },
+    {
+      "type": "SegmentParameterFilter"
+    },
+    {
+      "type": "SegmentParameterFilterScoping"
+    },
+    {
+      "type": "FunnelFilterExpression"
+    },
+    {
+      "type": "FunnelFilterExpressionList"
+    },
+    {
+      "type": "FunnelFieldFilter"
+    },
+    {
+      "type": "FunnelEventFilter"
+    },
+    {
+      "type": "FunnelParameterFilterExpression"
+    },
+    {
+      "type": "FunnelParameterFilterExpressionList"
+    },
+    {
+      "type": "FunnelParameterFilter"
+    },
+    {
+      "type": "FunnelResponseMetadata"
+    },
+    {
+      "type": "SamplingMetadata"
+    }
+  ],
+  "go": {
+    "src": "googleapis/analytics/data/v1alpha/data.pb.go",
+    "pkg": "data",
+    "pkg_full": "google.golang.org/genproto/googleapis/analytics/data/v1alpha"
+  }
+}

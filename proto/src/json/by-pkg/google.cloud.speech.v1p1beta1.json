@@ -1,0 +1,298 @@
+{
+  "proto": "google/cloud/speech/v1p1beta1/resource",
+  "pkg": "google.cloud.speech.v1p1beta1",
+  "msgs": [
+    {
+      "type": "CustomClass",
+      "msgs": [
+        {
+          "type": "ClassItem"
+        }
+      ]
+    },
+    {
+      "type": "PhraseSet",
+      "msgs": [
+        {
+          "type": "Phrase"
+        }
+      ]
+    },
+    {
+      "type": "SpeechAdaptation",
+      "msgs": [
+        {
+          "type": "ABNFGrammar"
+        }
+      ]
+    },
+    {
+      "type": "TranscriptNormalization",
+      "msgs": [
+        {
+          "type": "Entry"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "speech/apiv1p1beta1/speechpb/resource.pb.go",
+    "pkg": "speechpb",
+    "pkg_full": "cloud.google.com/go/speech/apiv1p1beta1/speechpb"
+  }
+}
+{
+  "proto": "google/cloud/speech/v1p1beta1/cloud_speech",
+  "pkg": "google.cloud.speech.v1p1beta1",
+  "svcs": [
+    {
+      "svc": "Speech",
+      "host": "speech.googleapis.com",
+      "rpcs": [
+        {
+          "method": "Recognize",
+          "request": {
+            "type": "RecognizeRequest"
+          },
+          "response": {
+            "type": "RecognizeResponse"
+          }
+        },
+        {
+          "method": "LongRunningRecognize",
+          "request": {
+            "type": "LongRunningRecognizeRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "StreamingRecognize",
+          "request": {
+            "type": "StreamingRecognizeRequest",
+            "stream": true
+          },
+          "response": {
+            "type": "StreamingRecognizeResponse",
+            "stream": true
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "RecognizeRequest"
+    },
+    {
+      "type": "LongRunningRecognizeRequest"
+    },
+    {
+      "type": "TranscriptOutputConfig"
+    },
+    {
+      "type": "StreamingRecognizeRequest"
+    },
+    {
+      "type": "StreamingRecognitionConfig",
+      "msgs": [
+        {
+          "type": "VoiceActivityTimeout"
+        }
+      ]
+    },
+    {
+      "type": "RecognitionConfig"
+    },
+    {
+      "type": "SpeakerDiarizationConfig"
+    },
+    {
+      "type": "RecognitionMetadata"
+    },
+    {
+      "type": "SpeechContext"
+    },
+    {
+      "type": "RecognitionAudio"
+    },
+    {
+      "type": "RecognizeResponse"
+    },
+    {
+      "type": "LongRunningRecognizeResponse"
+    },
+    {
+      "type": "LongRunningRecognizeMetadata"
+    },
+    {
+      "type": "StreamingRecognizeResponse"
+    },
+    {
+      "type": "StreamingRecognitionResult"
+    },
+    {
+      "type": "SpeechRecognitionResult"
+    },
+    {
+      "type": "SpeechRecognitionAlternative"
+    },
+    {
+      "type": "WordInfo"
+    },
+    {
+      "type": "SpeechAdaptationInfo"
+    }
+  ],
+  "go": {
+    "src": "speech/apiv1p1beta1/speechpb/cloud_speech.pb.go",
+    "pkg": "speechpb",
+    "pkg_full": "cloud.google.com/go/speech/apiv1p1beta1/speechpb"
+  }
+}
+{
+  "proto": "google/cloud/speech/v1p1beta1/cloud_speech_adaptation",
+  "pkg": "google.cloud.speech.v1p1beta1",
+  "svcs": [
+    {
+      "svc": "Adaptation",
+      "host": "speech.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreatePhraseSet",
+          "request": {
+            "type": "CreatePhraseSetRequest"
+          },
+          "response": {
+            "type": "PhraseSet"
+          }
+        },
+        {
+          "method": "GetPhraseSet",
+          "request": {
+            "type": "GetPhraseSetRequest"
+          },
+          "response": {
+            "type": "PhraseSet"
+          }
+        },
+        {
+          "method": "ListPhraseSet",
+          "request": {
+            "type": "ListPhraseSetRequest"
+          },
+          "response": {
+            "type": "ListPhraseSetResponse"
+          }
+        },
+        {
+          "method": "UpdatePhraseSet",
+          "request": {
+            "type": "UpdatePhraseSetRequest"
+          },
+          "response": {
+            "type": "PhraseSet"
+          }
+        },
+        {
+          "method": "DeletePhraseSet",
+          "request": {
+            "type": "DeletePhraseSetRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "CreateCustomClass",
+          "request": {
+            "type": "CreateCustomClassRequest"
+          },
+          "response": {
+            "type": "CustomClass"
+          }
+        },
+        {
+          "method": "GetCustomClass",
+          "request": {
+            "type": "GetCustomClassRequest"
+          },
+          "response": {
+            "type": "CustomClass"
+          }
+        },
+        {
+          "method": "ListCustomClasses",
+          "request": {
+            "type": "ListCustomClassesRequest"
+          },
+          "response": {
+            "type": "ListCustomClassesResponse"
+          }
+        },
+        {
+          "method": "UpdateCustomClass",
+          "request": {
+            "type": "UpdateCustomClassRequest"
+          },
+          "response": {
+            "type": "CustomClass"
+          }
+        },
+        {
+          "method": "DeleteCustomClass",
+          "request": {
+            "type": "DeleteCustomClassRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreatePhraseSetRequest"
+    },
+    {
+      "type": "UpdatePhraseSetRequest"
+    },
+    {
+      "type": "GetPhraseSetRequest"
+    },
+    {
+      "type": "ListPhraseSetRequest"
+    },
+    {
+      "type": "ListPhraseSetResponse"
+    },
+    {
+      "type": "DeletePhraseSetRequest"
+    },
+    {
+      "type": "CreateCustomClassRequest"
+    },
+    {
+      "type": "UpdateCustomClassRequest"
+    },
+    {
+      "type": "GetCustomClassRequest"
+    },
+    {
+      "type": "ListCustomClassesRequest"
+    },
+    {
+      "type": "ListCustomClassesResponse"
+    },
+    {
+      "type": "DeleteCustomClassRequest"
+    }
+  ],
+  "go": {
+    "src": "speech/apiv1p1beta1/speechpb/cloud_speech_adaptation.pb.go",
+    "pkg": "speechpb",
+    "pkg_full": "cloud.google.com/go/speech/apiv1p1beta1/speechpb"
+  }
+}

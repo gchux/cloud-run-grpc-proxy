@@ -1,0 +1,304 @@
+{
+  "proto": "google/maps/fleetengine/v1/vehicles",
+  "pkg": "maps.fleetengine.v1",
+  "msgs": [
+    {
+      "type": "Vehicle",
+      "msgs": [
+        {
+          "type": "VehicleType"
+        }
+      ]
+    },
+    {
+      "type": "BatteryInfo"
+    },
+    {
+      "type": "DeviceSettings"
+    },
+    {
+      "type": "LicensePlate"
+    },
+    {
+      "type": "VisualTrafficReportPolylineRendering",
+      "msgs": [
+        {
+          "type": "RoadStretch"
+        }
+      ]
+    },
+    {
+      "type": "TrafficPolylineData"
+    }
+  ],
+  "go": {
+    "src": "maps/fleetengine/apiv1/fleetenginepb/vehicles.pb.go",
+    "pkg": "fleetenginepb",
+    "pkg_full": "cloud.google.com/go/maps/fleetengine/apiv1/fleetenginepb"
+  }
+}
+{
+  "proto": "google/maps/fleetengine/v1/vehicle_api",
+  "pkg": "maps.fleetengine.v1",
+  "svcs": [
+    {
+      "svc": "VehicleService",
+      "host": "fleetengine.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateVehicle",
+          "request": {
+            "type": "CreateVehicleRequest"
+          },
+          "response": {
+            "type": "Vehicle"
+          }
+        },
+        {
+          "method": "GetVehicle",
+          "request": {
+            "type": "GetVehicleRequest"
+          },
+          "response": {
+            "type": "Vehicle"
+          }
+        },
+        {
+          "method": "UpdateVehicle",
+          "request": {
+            "type": "UpdateVehicleRequest"
+          },
+          "response": {
+            "type": "Vehicle"
+          }
+        },
+        {
+          "method": "UpdateVehicleAttributes",
+          "request": {
+            "type": "UpdateVehicleAttributesRequest"
+          },
+          "response": {
+            "type": "UpdateVehicleAttributesResponse"
+          }
+        },
+        {
+          "method": "ListVehicles",
+          "request": {
+            "type": "ListVehiclesRequest"
+          },
+          "response": {
+            "type": "ListVehiclesResponse"
+          }
+        },
+        {
+          "method": "SearchVehicles",
+          "request": {
+            "type": "SearchVehiclesRequest"
+          },
+          "response": {
+            "type": "SearchVehiclesResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateVehicleRequest"
+    },
+    {
+      "type": "GetVehicleRequest"
+    },
+    {
+      "type": "UpdateVehicleRequest"
+    },
+    {
+      "type": "UpdateVehicleAttributesRequest"
+    },
+    {
+      "type": "UpdateVehicleAttributesResponse"
+    },
+    {
+      "type": "SearchVehiclesRequest"
+    },
+    {
+      "type": "SearchVehiclesResponse"
+    },
+    {
+      "type": "ListVehiclesRequest"
+    },
+    {
+      "type": "ListVehiclesResponse"
+    },
+    {
+      "type": "Waypoint"
+    },
+    {
+      "type": "VehicleMatch"
+    },
+    {
+      "type": "VehicleAttributeList"
+    }
+  ],
+  "go": {
+    "src": "maps/fleetengine/apiv1/fleetenginepb/vehicle_api.pb.go",
+    "pkg": "fleetenginepb",
+    "pkg_full": "cloud.google.com/go/maps/fleetengine/apiv1/fleetenginepb"
+  }
+}
+{
+  "proto": "google/maps/fleetengine/v1/fleetengine",
+  "pkg": "maps.fleetengine.v1",
+  "msgs": [
+    {
+      "type": "TerminalPointId"
+    },
+    {
+      "type": "TerminalLocation"
+    },
+    {
+      "type": "TripWaypoint"
+    },
+    {
+      "type": "VehicleAttribute"
+    },
+    {
+      "type": "VehicleLocation"
+    }
+  ],
+  "go": {
+    "src": "maps/fleetengine/apiv1/fleetenginepb/fleetengine.pb.go",
+    "pkg": "fleetenginepb",
+    "pkg_full": "cloud.google.com/go/maps/fleetengine/apiv1/fleetenginepb"
+  }
+}
+{
+  "proto": "google/maps/fleetengine/v1/trip_api",
+  "pkg": "maps.fleetengine.v1",
+  "svcs": [
+    {
+      "svc": "TripService",
+      "host": "fleetengine.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateTrip",
+          "request": {
+            "type": "CreateTripRequest"
+          },
+          "response": {
+            "type": "Trip"
+          }
+        },
+        {
+          "method": "GetTrip",
+          "request": {
+            "type": "GetTripRequest"
+          },
+          "response": {
+            "type": "Trip"
+          }
+        },
+        {
+          "method": "ReportBillableTrip",
+          "request": {
+            "type": "ReportBillableTripRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "SearchTrips",
+          "request": {
+            "type": "SearchTripsRequest"
+          },
+          "response": {
+            "type": "SearchTripsResponse"
+          }
+        },
+        {
+          "method": "UpdateTrip",
+          "request": {
+            "type": "UpdateTripRequest"
+          },
+          "response": {
+            "type": "Trip"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateTripRequest"
+    },
+    {
+      "type": "GetTripRequest"
+    },
+    {
+      "type": "ReportBillableTripRequest"
+    },
+    {
+      "type": "UpdateTripRequest"
+    },
+    {
+      "type": "SearchTripsRequest"
+    },
+    {
+      "type": "SearchTripsResponse"
+    }
+  ],
+  "go": {
+    "src": "maps/fleetengine/apiv1/fleetenginepb/trip_api.pb.go",
+    "pkg": "fleetenginepb",
+    "pkg_full": "cloud.google.com/go/maps/fleetengine/apiv1/fleetenginepb"
+  }
+}
+{
+  "proto": "google/maps/fleetengine/v1/trips",
+  "pkg": "maps.fleetengine.v1",
+  "msgs": [
+    {
+      "type": "Trip"
+    },
+    {
+      "type": "StopLocation"
+    }
+  ],
+  "go": {
+    "src": "maps/fleetengine/apiv1/fleetenginepb/trips.pb.go",
+    "pkg": "fleetenginepb",
+    "pkg_full": "cloud.google.com/go/maps/fleetengine/apiv1/fleetenginepb"
+  }
+}
+{
+  "proto": "google/maps/fleetengine/v1/traffic",
+  "pkg": "maps.fleetengine.v1",
+  "msgs": [
+    {
+      "type": "SpeedReadingInterval"
+    },
+    {
+      "type": "ConsumableTrafficPolyline"
+    }
+  ],
+  "go": {
+    "src": "maps/fleetengine/apiv1/fleetenginepb/traffic.pb.go",
+    "pkg": "fleetenginepb",
+    "pkg_full": "cloud.google.com/go/maps/fleetengine/apiv1/fleetenginepb"
+  }
+}
+{
+  "proto": "google/maps/fleetengine/v1/header",
+  "pkg": "maps.fleetengine.v1",
+  "msgs": [
+    {
+      "type": "RequestHeader"
+    }
+  ],
+  "go": {
+    "src": "maps/fleetengine/apiv1/fleetenginepb/header.pb.go",
+    "pkg": "fleetenginepb",
+    "pkg_full": "cloud.google.com/go/maps/fleetengine/apiv1/fleetenginepb"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "proto": "google/maps/routes/v1alpha/route_service",
+  "pkg": "google.maps.routes.v1alpha",
+  "svcs": [
+    {
+      "svc": "RoutesAlpha",
+      "host": "routespreferred.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ComputeRoutes",
+          "request": {
+            "type": "google.maps.routes.v1.ComputeRoutesRequest"
+          },
+          "response": {
+            "type": "google.maps.routes.v1.ComputeRoutesResponse"
+          }
+        },
+        {
+          "method": "ComputeRouteMatrix",
+          "request": {
+            "type": "google.maps.routes.v1.ComputeRouteMatrixRequest"
+          },
+          "response": {
+            "type": "google.maps.routes.v1.RouteMatrixElement",
+            "stream": true
+          }
+        },
+        {
+          "method": "ComputeCustomRoutes",
+          "request": {
+            "type": "google.maps.routes.v1.ComputeCustomRoutesRequest"
+          },
+          "response": {
+            "type": "google.maps.routes.v1.ComputeCustomRoutesResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/maps/routes/v1alpha/route_service.pb.go",
+    "pkg": "routespb",
+    "pkg_full": "cloud.google.com/go/maps/routes/apiv1alpha/routespb"
+  }
+}

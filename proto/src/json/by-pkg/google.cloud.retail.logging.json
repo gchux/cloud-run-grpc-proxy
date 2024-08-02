@@ -1,0 +1,29 @@
+{
+  "proto": "google/cloud/retail/logging/error_log",
+  "pkg": "google.cloud.retail.logging",
+  "msgs": [
+    {
+      "type": "ServiceContext"
+    },
+    {
+      "type": "HttpRequestContext"
+    },
+    {
+      "type": "SourceLocation"
+    },
+    {
+      "type": "ErrorContext"
+    },
+    {
+      "type": "ImportErrorContext"
+    },
+    {
+      "type": "ErrorLog"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/retail/logging/error_log.pb.go",
+    "pkg": "loggingpb",
+    "pkg_full": "cloud.google.com/go/retail/logging/loggingpb"
+  }
+}

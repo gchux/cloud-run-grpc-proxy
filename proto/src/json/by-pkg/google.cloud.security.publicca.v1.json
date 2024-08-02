@@ -1,0 +1,45 @@
+{
+  "proto": "google/cloud/security/publicca/v1/service",
+  "pkg": "google.cloud.security.publicca.v1",
+  "svcs": [
+    {
+      "svc": "PublicCertificateAuthorityService",
+      "host": "publicca.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateExternalAccountKey",
+          "request": {
+            "type": "CreateExternalAccountKeyRequest"
+          },
+          "response": {
+            "type": "ExternalAccountKey"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateExternalAccountKeyRequest"
+    }
+  ],
+  "go": {
+    "src": "security/publicca/apiv1/publiccapb/service.pb.go",
+    "pkg": "publiccapb",
+    "pkg_full": "cloud.google.com/go/security/publicca/apiv1/publiccapb"
+  }
+}
+{
+  "proto": "google/cloud/security/publicca/v1/resources",
+  "pkg": "google.cloud.security.publicca.v1",
+  "msgs": [
+    {
+      "type": "ExternalAccountKey"
+    }
+  ],
+  "go": {
+    "src": "security/publicca/apiv1/publiccapb/resources.pb.go",
+    "pkg": "publiccapb",
+    "pkg_full": "cloud.google.com/go/security/publicca/apiv1/publiccapb"
+  }
+}

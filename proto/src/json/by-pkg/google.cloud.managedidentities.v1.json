@@ -1,0 +1,165 @@
+{
+  "proto": "google/cloud/managedidentities/v1/managed_identities_service",
+  "pkg": "google.cloud.managedidentities.v1",
+  "svcs": [
+    {
+      "svc": "ManagedIdentitiesService",
+      "host": "managedidentities.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateMicrosoftAdDomain",
+          "request": {
+            "type": "CreateMicrosoftAdDomainRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ResetAdminPassword",
+          "request": {
+            "type": "ResetAdminPasswordRequest"
+          },
+          "response": {
+            "type": "ResetAdminPasswordResponse"
+          }
+        },
+        {
+          "method": "ListDomains",
+          "request": {
+            "type": "ListDomainsRequest"
+          },
+          "response": {
+            "type": "ListDomainsResponse"
+          }
+        },
+        {
+          "method": "GetDomain",
+          "request": {
+            "type": "GetDomainRequest"
+          },
+          "response": {
+            "type": "Domain"
+          }
+        },
+        {
+          "method": "UpdateDomain",
+          "request": {
+            "type": "UpdateDomainRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteDomain",
+          "request": {
+            "type": "DeleteDomainRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "AttachTrust",
+          "request": {
+            "type": "AttachTrustRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ReconfigureTrust",
+          "request": {
+            "type": "ReconfigureTrustRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DetachTrust",
+          "request": {
+            "type": "DetachTrustRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ValidateTrust",
+          "request": {
+            "type": "ValidateTrustRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "OpMetadata"
+    },
+    {
+      "type": "CreateMicrosoftAdDomainRequest"
+    },
+    {
+      "type": "ResetAdminPasswordRequest"
+    },
+    {
+      "type": "ResetAdminPasswordResponse"
+    },
+    {
+      "type": "ListDomainsRequest"
+    },
+    {
+      "type": "ListDomainsResponse"
+    },
+    {
+      "type": "GetDomainRequest"
+    },
+    {
+      "type": "UpdateDomainRequest"
+    },
+    {
+      "type": "DeleteDomainRequest"
+    },
+    {
+      "type": "AttachTrustRequest"
+    },
+    {
+      "type": "ReconfigureTrustRequest"
+    },
+    {
+      "type": "DetachTrustRequest"
+    },
+    {
+      "type": "ValidateTrustRequest"
+    }
+  ],
+  "go": {
+    "src": "managedidentities/apiv1/managedidentitiespb/managed_identities_service.pb.go",
+    "pkg": "managedidentitiespb",
+    "pkg_full": "cloud.google.com/go/managedidentities/apiv1/managedidentitiespb"
+  }
+}
+{
+  "proto": "google/cloud/managedidentities/v1/resource",
+  "pkg": "google.cloud.managedidentities.v1",
+  "msgs": [
+    {
+      "type": "Domain"
+    },
+    {
+      "type": "Trust"
+    }
+  ],
+  "go": {
+    "src": "managedidentities/apiv1/managedidentitiespb/resource.pb.go",
+    "pkg": "managedidentitiespb",
+    "pkg_full": "cloud.google.com/go/managedidentities/apiv1/managedidentitiespb"
+  }
+}

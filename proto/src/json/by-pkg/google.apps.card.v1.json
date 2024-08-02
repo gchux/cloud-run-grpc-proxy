@@ -1,0 +1,127 @@
+{
+  "proto": "google/apps/card/v1/card",
+  "pkg": "google.apps.card.v1",
+  "msgs": [
+    {
+      "type": "Card",
+      "msgs": [
+        {
+          "type": "CardHeader"
+        },
+        {
+          "type": "Section"
+        },
+        {
+          "type": "CardAction"
+        },
+        {
+          "type": "CardFixedFooter"
+        }
+      ]
+    },
+    {
+      "type": "Widget"
+    },
+    {
+      "type": "TextParagraph"
+    },
+    {
+      "type": "Image"
+    },
+    {
+      "type": "Divider"
+    },
+    {
+      "type": "DecoratedText",
+      "msgs": [
+        {
+          "type": "SwitchControl"
+        }
+      ]
+    },
+    {
+      "type": "TextInput"
+    },
+    {
+      "type": "Suggestions",
+      "msgs": [
+        {
+          "type": "SuggestionItem"
+        }
+      ]
+    },
+    {
+      "type": "ButtonList"
+    },
+    {
+      "type": "SelectionInput",
+      "msgs": [
+        {
+          "type": "SelectionItem"
+        },
+        {
+          "type": "PlatformDataSource"
+        }
+      ]
+    },
+    {
+      "type": "DateTimePicker"
+    },
+    {
+      "type": "Button"
+    },
+    {
+      "type": "Icon"
+    },
+    {
+      "type": "MaterialIcon"
+    },
+    {
+      "type": "ImageCropStyle"
+    },
+    {
+      "type": "BorderStyle"
+    },
+    {
+      "type": "ImageComponent"
+    },
+    {
+      "type": "Grid",
+      "msgs": [
+        {
+          "type": "GridItem"
+        }
+      ]
+    },
+    {
+      "type": "Columns",
+      "msgs": [
+        {
+          "type": "Column"
+        },
+        {
+          "type": "Widgets"
+        }
+      ]
+    },
+    {
+      "type": "OnClick"
+    },
+    {
+      "type": "OpenLink"
+    },
+    {
+      "type": "Action",
+      "msgs": [
+        {
+          "type": "ActionParameter"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/apps/card/v1/card.pb.go",
+    "pkg": "card",
+    "pkg_full": "google.golang.org/genproto/googleapis/apps/card/v1"
+  }
+}

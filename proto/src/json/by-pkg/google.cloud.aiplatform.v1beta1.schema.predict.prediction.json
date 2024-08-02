@@ -1,0 +1,159 @@
+{
+  "proto": "google/cloud/aiplatform/v1beta1/schema/predict/prediction/image_segmentation",
+  "pkg": "google.cloud.aiplatform.v1beta1.schema.predict.prediction",
+  "msgs": [
+    {
+      "type": "ImageSegmentationPredictionResult"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/aiplatform/v1beta1/schema/predict/prediction/image_segmentation.pb.go",
+    "pkg": "predictionpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/schema/predict/prediction/predictionpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/schema/predict/prediction/classification",
+  "pkg": "google.cloud.aiplatform.v1beta1.schema.predict.prediction",
+  "msgs": [
+    {
+      "type": "ClassificationPredictionResult"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/aiplatform/v1beta1/schema/predict/prediction/classification.pb.go",
+    "pkg": "predictionpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/schema/predict/prediction/predictionpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/schema/predict/prediction/tabular_regression",
+  "pkg": "google.cloud.aiplatform.v1beta1.schema.predict.prediction",
+  "msgs": [
+    {
+      "type": "TabularRegressionPredictionResult"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/aiplatform/v1beta1/schema/predict/prediction/tabular_regression.pb.go",
+    "pkg": "predictionpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/schema/predict/prediction/predictionpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/schema/predict/prediction/time_series_forecasting",
+  "pkg": "google.cloud.aiplatform.v1beta1.schema.predict.prediction",
+  "msgs": [
+    {
+      "type": "TimeSeriesForecastingPredictionResult"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/aiplatform/v1beta1/schema/predict/prediction/time_series_forecasting.pb.go",
+    "pkg": "predictionpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/schema/predict/prediction/predictionpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/schema/predict/prediction/video_classification",
+  "pkg": "google.cloud.aiplatform.v1beta1.schema.predict.prediction",
+  "msgs": [
+    {
+      "type": "VideoClassificationPredictionResult"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/aiplatform/v1beta1/schema/predict/prediction/video_classification.pb.go",
+    "pkg": "predictionpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/schema/predict/prediction/predictionpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/schema/predict/prediction/text_extraction",
+  "pkg": "google.cloud.aiplatform.v1beta1.schema.predict.prediction",
+  "msgs": [
+    {
+      "type": "TextExtractionPredictionResult"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/aiplatform/v1beta1/schema/predict/prediction/text_extraction.pb.go",
+    "pkg": "predictionpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/schema/predict/prediction/predictionpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/schema/predict/prediction/video_object_tracking",
+  "pkg": "google.cloud.aiplatform.v1beta1.schema.predict.prediction",
+  "msgs": [
+    {
+      "type": "VideoObjectTrackingPredictionResult",
+      "msgs": [
+        {
+          "type": "Frame"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/aiplatform/v1beta1/schema/predict/prediction/video_object_tracking.pb.go",
+    "pkg": "predictionpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/schema/predict/prediction/predictionpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/schema/predict/prediction/tabular_classification",
+  "pkg": "google.cloud.aiplatform.v1beta1.schema.predict.prediction",
+  "msgs": [
+    {
+      "type": "TabularClassificationPredictionResult"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/aiplatform/v1beta1/schema/predict/prediction/tabular_classification.pb.go",
+    "pkg": "predictionpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/schema/predict/prediction/predictionpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/schema/predict/prediction/text_sentiment",
+  "pkg": "google.cloud.aiplatform.v1beta1.schema.predict.prediction",
+  "msgs": [
+    {
+      "type": "TextSentimentPredictionResult"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/aiplatform/v1beta1/schema/predict/prediction/text_sentiment.pb.go",
+    "pkg": "predictionpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/schema/predict/prediction/predictionpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/schema/predict/prediction/video_action_recognition",
+  "pkg": "google.cloud.aiplatform.v1beta1.schema.predict.prediction",
+  "msgs": [
+    {
+      "type": "VideoActionRecognitionPredictionResult"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/aiplatform/v1beta1/schema/predict/prediction/video_action_recognition.pb.go",
+    "pkg": "predictionpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/schema/predict/prediction/predictionpb"
+  }
+}
+{
+  "proto": "google/cloud/aiplatform/v1beta1/schema/predict/prediction/image_object_detection",
+  "pkg": "google.cloud.aiplatform.v1beta1.schema.predict.prediction",
+  "msgs": [
+    {
+      "type": "ImageObjectDetectionPredictionResult"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/aiplatform/v1beta1/schema/predict/prediction/image_object_detection.pb.go",
+    "pkg": "predictionpb",
+    "pkg_full": "cloud.google.com/go/aiplatform/apiv1beta1/schema/predict/prediction/predictionpb"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "proto": "google/maps/mobilitybilling/logs/v1/mobility_billing_cloud_logging",
+  "pkg": "google.maps.mobilitybilling.logs.v1",
+  "msgs": [
+    {
+      "type": "ReportBillableEventLog"
+    }
+  ],
+  "go": {
+    "pkg": "logspb",
+    "pkg_full": "cloud.google.com/go/maps/mobilitybilling/logs/apiv1/logspb"
+  }
+}

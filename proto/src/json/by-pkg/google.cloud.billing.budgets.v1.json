@@ -1,0 +1,114 @@
+{
+  "proto": "google/cloud/billing/budgets/v1/budget_model",
+  "pkg": "google.cloud.billing.budgets.v1",
+  "msgs": [
+    {
+      "type": "Budget"
+    },
+    {
+      "type": "BudgetAmount"
+    },
+    {
+      "type": "LastPeriodAmount"
+    },
+    {
+      "type": "ThresholdRule"
+    },
+    {
+      "type": "NotificationsRule"
+    },
+    {
+      "type": "Filter"
+    },
+    {
+      "type": "CustomPeriod"
+    }
+  ],
+  "go": {
+    "src": "billing/budgets/apiv1/budgetspb/budget_model.pb.go",
+    "pkg": "budgetspb",
+    "pkg_full": "cloud.google.com/go/billing/budgets/apiv1/budgetspb"
+  }
+}
+{
+  "proto": "google/cloud/billing/budgets/v1/budget_service",
+  "pkg": "google.cloud.billing.budgets.v1",
+  "svcs": [
+    {
+      "svc": "BudgetService",
+      "host": "billingbudgets.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateBudget",
+          "request": {
+            "type": "CreateBudgetRequest"
+          },
+          "response": {
+            "type": "Budget"
+          }
+        },
+        {
+          "method": "UpdateBudget",
+          "request": {
+            "type": "UpdateBudgetRequest"
+          },
+          "response": {
+            "type": "Budget"
+          }
+        },
+        {
+          "method": "GetBudget",
+          "request": {
+            "type": "GetBudgetRequest"
+          },
+          "response": {
+            "type": "Budget"
+          }
+        },
+        {
+          "method": "ListBudgets",
+          "request": {
+            "type": "ListBudgetsRequest"
+          },
+          "response": {
+            "type": "ListBudgetsResponse"
+          }
+        },
+        {
+          "method": "DeleteBudget",
+          "request": {
+            "type": "DeleteBudgetRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateBudgetRequest"
+    },
+    {
+      "type": "UpdateBudgetRequest"
+    },
+    {
+      "type": "GetBudgetRequest"
+    },
+    {
+      "type": "ListBudgetsRequest"
+    },
+    {
+      "type": "ListBudgetsResponse"
+    },
+    {
+      "type": "DeleteBudgetRequest"
+    }
+  ],
+  "go": {
+    "src": "billing/budgets/apiv1/budgetspb/budget_service.pb.go",
+    "pkg": "budgetspb",
+    "pkg_full": "cloud.google.com/go/billing/budgets/apiv1/budgetspb"
+  }
+}

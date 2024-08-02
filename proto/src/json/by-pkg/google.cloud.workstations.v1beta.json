@@ -1,0 +1,332 @@
+{
+  "proto": "google/cloud/workstations/v1beta/workstations",
+  "pkg": "google.cloud.workstations.v1beta",
+  "svcs": [
+    {
+      "svc": "Workstations",
+      "host": "workstations.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetWorkstationCluster",
+          "request": {
+            "type": "GetWorkstationClusterRequest"
+          },
+          "response": {
+            "type": "WorkstationCluster"
+          }
+        },
+        {
+          "method": "ListWorkstationClusters",
+          "request": {
+            "type": "ListWorkstationClustersRequest"
+          },
+          "response": {
+            "type": "ListWorkstationClustersResponse"
+          }
+        },
+        {
+          "method": "CreateWorkstationCluster",
+          "request": {
+            "type": "CreateWorkstationClusterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateWorkstationCluster",
+          "request": {
+            "type": "UpdateWorkstationClusterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteWorkstationCluster",
+          "request": {
+            "type": "DeleteWorkstationClusterRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetWorkstationConfig",
+          "request": {
+            "type": "GetWorkstationConfigRequest"
+          },
+          "response": {
+            "type": "WorkstationConfig"
+          }
+        },
+        {
+          "method": "ListWorkstationConfigs",
+          "request": {
+            "type": "ListWorkstationConfigsRequest"
+          },
+          "response": {
+            "type": "ListWorkstationConfigsResponse"
+          }
+        },
+        {
+          "method": "ListUsableWorkstationConfigs",
+          "request": {
+            "type": "ListUsableWorkstationConfigsRequest"
+          },
+          "response": {
+            "type": "ListUsableWorkstationConfigsResponse"
+          }
+        },
+        {
+          "method": "CreateWorkstationConfig",
+          "request": {
+            "type": "CreateWorkstationConfigRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateWorkstationConfig",
+          "request": {
+            "type": "UpdateWorkstationConfigRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteWorkstationConfig",
+          "request": {
+            "type": "DeleteWorkstationConfigRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GetWorkstation",
+          "request": {
+            "type": "GetWorkstationRequest"
+          },
+          "response": {
+            "type": "Workstation"
+          }
+        },
+        {
+          "method": "ListWorkstations",
+          "request": {
+            "type": "ListWorkstationsRequest"
+          },
+          "response": {
+            "type": "ListWorkstationsResponse"
+          }
+        },
+        {
+          "method": "ListUsableWorkstations",
+          "request": {
+            "type": "ListUsableWorkstationsRequest"
+          },
+          "response": {
+            "type": "ListUsableWorkstationsResponse"
+          }
+        },
+        {
+          "method": "CreateWorkstation",
+          "request": {
+            "type": "CreateWorkstationRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateWorkstation",
+          "request": {
+            "type": "UpdateWorkstationRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteWorkstation",
+          "request": {
+            "type": "DeleteWorkstationRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "StartWorkstation",
+          "request": {
+            "type": "StartWorkstationRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "StopWorkstation",
+          "request": {
+            "type": "StopWorkstationRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "GenerateAccessToken",
+          "request": {
+            "type": "GenerateAccessTokenRequest"
+          },
+          "response": {
+            "type": "GenerateAccessTokenResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "WorkstationCluster",
+      "msgs": [
+        {
+          "type": "PrivateClusterConfig"
+        }
+      ]
+    },
+    {
+      "type": "WorkstationConfig",
+      "msgs": [
+        {
+          "type": "Host"
+        },
+        {
+          "type": "GceInstance"
+        },
+        {
+          "type": "GceShieldedInstanceConfig"
+        },
+        {
+          "type": "GceConfidentialInstanceConfig"
+        },
+        {
+          "type": "Accelerator"
+        },
+        {
+          "type": "PersistentDirectory"
+        },
+        {
+          "type": "GceRegionalPersistentDisk"
+        },
+        {
+          "type": "EphemeralDirectory"
+        },
+        {
+          "type": "GcePersistentDisk"
+        },
+        {
+          "type": "Container"
+        },
+        {
+          "type": "CustomerEncryptionKey"
+        },
+        {
+          "type": "ReadinessCheck"
+        }
+      ]
+    },
+    {
+      "type": "Workstation"
+    },
+    {
+      "type": "GetWorkstationClusterRequest"
+    },
+    {
+      "type": "ListWorkstationClustersRequest"
+    },
+    {
+      "type": "ListWorkstationClustersResponse"
+    },
+    {
+      "type": "CreateWorkstationClusterRequest"
+    },
+    {
+      "type": "UpdateWorkstationClusterRequest"
+    },
+    {
+      "type": "DeleteWorkstationClusterRequest"
+    },
+    {
+      "type": "GetWorkstationConfigRequest"
+    },
+    {
+      "type": "ListWorkstationConfigsRequest"
+    },
+    {
+      "type": "ListWorkstationConfigsResponse"
+    },
+    {
+      "type": "ListUsableWorkstationConfigsRequest"
+    },
+    {
+      "type": "ListUsableWorkstationConfigsResponse"
+    },
+    {
+      "type": "CreateWorkstationConfigRequest"
+    },
+    {
+      "type": "UpdateWorkstationConfigRequest"
+    },
+    {
+      "type": "DeleteWorkstationConfigRequest"
+    },
+    {
+      "type": "GetWorkstationRequest"
+    },
+    {
+      "type": "ListWorkstationsRequest"
+    },
+    {
+      "type": "ListWorkstationsResponse"
+    },
+    {
+      "type": "ListUsableWorkstationsRequest"
+    },
+    {
+      "type": "ListUsableWorkstationsResponse"
+    },
+    {
+      "type": "CreateWorkstationRequest"
+    },
+    {
+      "type": "UpdateWorkstationRequest"
+    },
+    {
+      "type": "DeleteWorkstationRequest"
+    },
+    {
+      "type": "StartWorkstationRequest"
+    },
+    {
+      "type": "StopWorkstationRequest"
+    },
+    {
+      "type": "GenerateAccessTokenRequest"
+    },
+    {
+      "type": "GenerateAccessTokenResponse"
+    },
+    {
+      "type": "OperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "workstations/apiv1beta/workstationspb/workstations.pb.go",
+    "pkg": "workstationspb",
+    "pkg_full": "cloud.google.com/go/workstations/apiv1beta/workstationspb"
+  }
+}

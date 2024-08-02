@@ -1,0 +1,127 @@
+{
+  "proto": "google/cloud/bigquery/datapolicies/v1/datapolicy",
+  "pkg": "google.cloud.bigquery.datapolicies.v1",
+  "svcs": [
+    {
+      "svc": "DataPolicyService",
+      "host": "bigquerydatapolicy.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateDataPolicy",
+          "request": {
+            "type": "CreateDataPolicyRequest"
+          },
+          "response": {
+            "type": "DataPolicy"
+          }
+        },
+        {
+          "method": "UpdateDataPolicy",
+          "request": {
+            "type": "UpdateDataPolicyRequest"
+          },
+          "response": {
+            "type": "DataPolicy"
+          }
+        },
+        {
+          "method": "RenameDataPolicy",
+          "request": {
+            "type": "RenameDataPolicyRequest"
+          },
+          "response": {
+            "type": "DataPolicy"
+          }
+        },
+        {
+          "method": "DeleteDataPolicy",
+          "request": {
+            "type": "DeleteDataPolicyRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "GetDataPolicy",
+          "request": {
+            "type": "GetDataPolicyRequest"
+          },
+          "response": {
+            "type": "DataPolicy"
+          }
+        },
+        {
+          "method": "ListDataPolicies",
+          "request": {
+            "type": "ListDataPoliciesRequest"
+          },
+          "response": {
+            "type": "ListDataPoliciesResponse"
+          }
+        },
+        {
+          "method": "GetIamPolicy",
+          "request": {
+            "type": "google.iam.v1.GetIamPolicyRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.Policy"
+          }
+        },
+        {
+          "method": "SetIamPolicy",
+          "request": {
+            "type": "google.iam.v1.SetIamPolicyRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.Policy"
+          }
+        },
+        {
+          "method": "TestIamPermissions",
+          "request": {
+            "type": "google.iam.v1.TestIamPermissionsRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.TestIamPermissionsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateDataPolicyRequest"
+    },
+    {
+      "type": "UpdateDataPolicyRequest"
+    },
+    {
+      "type": "RenameDataPolicyRequest"
+    },
+    {
+      "type": "DeleteDataPolicyRequest"
+    },
+    {
+      "type": "GetDataPolicyRequest"
+    },
+    {
+      "type": "ListDataPoliciesRequest"
+    },
+    {
+      "type": "ListDataPoliciesResponse"
+    },
+    {
+      "type": "DataPolicy"
+    },
+    {
+      "type": "DataMaskingPolicy"
+    }
+  ],
+  "go": {
+    "src": "bigquery/datapolicies/apiv1/datapoliciespb/datapolicy.pb.go",
+    "pkg": "datapoliciespb",
+    "pkg_full": "cloud.google.com/go/bigquery/datapolicies/apiv1/datapoliciespb"
+  }
+}

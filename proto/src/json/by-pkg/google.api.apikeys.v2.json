@@ -1,0 +1,159 @@
+{
+  "proto": "google/api/apikeys/v2/resources",
+  "pkg": "google.api.apikeys.v2",
+  "msgs": [
+    {
+      "type": "Key"
+    },
+    {
+      "type": "Restrictions"
+    },
+    {
+      "type": "BrowserKeyRestrictions"
+    },
+    {
+      "type": "ServerKeyRestrictions"
+    },
+    {
+      "type": "AndroidKeyRestrictions"
+    },
+    {
+      "type": "AndroidApplication"
+    },
+    {
+      "type": "IosKeyRestrictions"
+    },
+    {
+      "type": "ApiTarget"
+    }
+  ],
+  "go": {
+    "src": "apikeys/apiv2/apikeyspb/resources.pb.go",
+    "pkg": "apikeyspb",
+    "pkg_full": "cloud.google.com/go/apikeys/apiv2/apikeyspb"
+  }
+}
+{
+  "proto": "google/api/apikeys/v2/apikeys",
+  "pkg": "google.api.apikeys.v2",
+  "svcs": [
+    {
+      "svc": "ApiKeys",
+      "host": "apikeys.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateKey",
+          "request": {
+            "type": "CreateKeyRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListKeys",
+          "request": {
+            "type": "ListKeysRequest"
+          },
+          "response": {
+            "type": "ListKeysResponse"
+          }
+        },
+        {
+          "method": "GetKey",
+          "request": {
+            "type": "GetKeyRequest"
+          },
+          "response": {
+            "type": "Key"
+          }
+        },
+        {
+          "method": "GetKeyString",
+          "request": {
+            "type": "GetKeyStringRequest"
+          },
+          "response": {
+            "type": "GetKeyStringResponse"
+          }
+        },
+        {
+          "method": "UpdateKey",
+          "request": {
+            "type": "UpdateKeyRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteKey",
+          "request": {
+            "type": "DeleteKeyRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UndeleteKey",
+          "request": {
+            "type": "UndeleteKeyRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "LookupKey",
+          "request": {
+            "type": "LookupKeyRequest"
+          },
+          "response": {
+            "type": "LookupKeyResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateKeyRequest"
+    },
+    {
+      "type": "ListKeysRequest"
+    },
+    {
+      "type": "ListKeysResponse"
+    },
+    {
+      "type": "GetKeyRequest"
+    },
+    {
+      "type": "GetKeyStringRequest"
+    },
+    {
+      "type": "GetKeyStringResponse"
+    },
+    {
+      "type": "UpdateKeyRequest"
+    },
+    {
+      "type": "DeleteKeyRequest"
+    },
+    {
+      "type": "UndeleteKeyRequest"
+    },
+    {
+      "type": "LookupKeyRequest"
+    },
+    {
+      "type": "LookupKeyResponse"
+    }
+  ],
+  "go": {
+    "src": "apikeys/apiv2/apikeyspb/apikeys.pb.go",
+    "pkg": "apikeyspb",
+    "pkg_full": "cloud.google.com/go/apikeys/apiv2/apikeyspb"
+  }
+}

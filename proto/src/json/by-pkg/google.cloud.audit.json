@@ -1,0 +1,203 @@
+{
+  "proto": "google/cloud/audit/audit_log",
+  "pkg": "google.cloud.audit",
+  "msgs": [
+    {
+      "type": "AuditLog"
+    },
+    {
+      "type": "AuthenticationInfo"
+    },
+    {
+      "type": "AuthorizationInfo"
+    },
+    {
+      "type": "RequestMetadata"
+    },
+    {
+      "type": "ResourceLocation"
+    },
+    {
+      "type": "ServiceAccountDelegationInfo",
+      "msgs": [
+        {
+          "type": "FirstPartyPrincipal"
+        },
+        {
+          "type": "ThirdPartyPrincipal"
+        }
+      ]
+    },
+    {
+      "type": "PolicyViolationInfo"
+    },
+    {
+      "type": "OrgPolicyViolationInfo"
+    },
+    {
+      "type": "ViolationInfo"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/audit/audit_log.pb.go",
+    "pkg": "audit",
+    "pkg_full": "google.golang.org/genproto/googleapis/cloud/audit"
+  }
+}
+{
+  "proto": "google/cloud/audit/bigquery_audit_metadata",
+  "pkg": "google.cloud.audit",
+  "msgs": [
+    {
+      "type": "BigQueryAuditMetadata",
+      "msgs": [
+        {
+          "type": "JobInsertion"
+        },
+        {
+          "type": "JobChange"
+        },
+        {
+          "type": "JobDeletion"
+        },
+        {
+          "type": "DatasetCreation"
+        },
+        {
+          "type": "DatasetChange"
+        },
+        {
+          "type": "DatasetDeletion"
+        },
+        {
+          "type": "TableCreation"
+        },
+        {
+          "type": "ModelCreation"
+        },
+        {
+          "type": "RoutineCreation"
+        },
+        {
+          "type": "TableDataRead"
+        },
+        {
+          "type": "TableChange"
+        },
+        {
+          "type": "ModelMetadataChange"
+        },
+        {
+          "type": "RoutineChange"
+        },
+        {
+          "type": "TableDataChange"
+        },
+        {
+          "type": "ModelDataChange"
+        },
+        {
+          "type": "ModelDataRead"
+        },
+        {
+          "type": "TableDeletion"
+        },
+        {
+          "type": "ModelDeletion"
+        },
+        {
+          "type": "RoutineDeletion"
+        },
+        {
+          "type": "RowAccessPolicyCreation"
+        },
+        {
+          "type": "RowAccessPolicyChange"
+        },
+        {
+          "type": "RowAccessPolicyDeletion"
+        },
+        {
+          "type": "UnlinkDataset"
+        },
+        {
+          "type": "Job"
+        },
+        {
+          "type": "JobConfig"
+        },
+        {
+          "type": "Query"
+        },
+        {
+          "type": "Load"
+        },
+        {
+          "type": "Extract"
+        },
+        {
+          "type": "TableCopy"
+        },
+        {
+          "type": "TableDefinition"
+        },
+        {
+          "type": "JobStatus"
+        },
+        {
+          "type": "JobStats"
+        },
+        {
+          "type": "Query"
+        },
+        {
+          "type": "Load"
+        },
+        {
+          "type": "Extract"
+        },
+        {
+          "type": "ReservationResourceUsage"
+        },
+        {
+          "type": "Table"
+        },
+        {
+          "type": "Model"
+        },
+        {
+          "type": "Routine"
+        },
+        {
+          "type": "EntityInfo"
+        },
+        {
+          "type": "TableViewDefinition"
+        },
+        {
+          "type": "Dataset"
+        },
+        {
+          "type": "BigQueryAcl"
+        },
+        {
+          "type": "EncryptionInfo"
+        },
+        {
+          "type": "RowAccessPolicy"
+        },
+        {
+          "type": "FirstPartyAppMetadata"
+        },
+        {
+          "type": "SheetsMetadata"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/audit/bigquery_audit_metadata.pb.go",
+    "pkg": "audit",
+    "pkg_full": "google.golang.org/genproto/googleapis/cloud/audit"
+  }
+}

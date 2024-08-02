@@ -1,0 +1,301 @@
+{
+  "proto": "google/cloud/notebooks/v1beta1/service",
+  "pkg": "google.cloud.notebooks.v1beta1",
+  "svcs": [
+    {
+      "svc": "NotebookService",
+      "host": "notebooks.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListInstances",
+          "request": {
+            "type": "ListInstancesRequest"
+          },
+          "response": {
+            "type": "ListInstancesResponse"
+          }
+        },
+        {
+          "method": "GetInstance",
+          "request": {
+            "type": "GetInstanceRequest"
+          },
+          "response": {
+            "type": "Instance"
+          }
+        },
+        {
+          "method": "CreateInstance",
+          "request": {
+            "type": "CreateInstanceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "RegisterInstance",
+          "request": {
+            "type": "RegisterInstanceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "SetInstanceAccelerator",
+          "request": {
+            "type": "SetInstanceAcceleratorRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "SetInstanceMachineType",
+          "request": {
+            "type": "SetInstanceMachineTypeRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "SetInstanceLabels",
+          "request": {
+            "type": "SetInstanceLabelsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteInstance",
+          "request": {
+            "type": "DeleteInstanceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "StartInstance",
+          "request": {
+            "type": "StartInstanceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "StopInstance",
+          "request": {
+            "type": "StopInstanceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ResetInstance",
+          "request": {
+            "type": "ResetInstanceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ReportInstanceInfo",
+          "request": {
+            "type": "ReportInstanceInfoRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "IsInstanceUpgradeable",
+          "request": {
+            "type": "IsInstanceUpgradeableRequest"
+          },
+          "response": {
+            "type": "IsInstanceUpgradeableResponse"
+          }
+        },
+        {
+          "method": "UpgradeInstance",
+          "request": {
+            "type": "UpgradeInstanceRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpgradeInstanceInternal",
+          "request": {
+            "type": "UpgradeInstanceInternalRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListEnvironments",
+          "request": {
+            "type": "ListEnvironmentsRequest"
+          },
+          "response": {
+            "type": "ListEnvironmentsResponse"
+          }
+        },
+        {
+          "method": "GetEnvironment",
+          "request": {
+            "type": "GetEnvironmentRequest"
+          },
+          "response": {
+            "type": "Environment"
+          }
+        },
+        {
+          "method": "CreateEnvironment",
+          "request": {
+            "type": "CreateEnvironmentRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "DeleteEnvironment",
+          "request": {
+            "type": "DeleteEnvironmentRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "OperationMetadata"
+    },
+    {
+      "type": "ListInstancesRequest"
+    },
+    {
+      "type": "ListInstancesResponse"
+    },
+    {
+      "type": "GetInstanceRequest"
+    },
+    {
+      "type": "CreateInstanceRequest"
+    },
+    {
+      "type": "RegisterInstanceRequest"
+    },
+    {
+      "type": "SetInstanceAcceleratorRequest"
+    },
+    {
+      "type": "SetInstanceMachineTypeRequest"
+    },
+    {
+      "type": "SetInstanceLabelsRequest"
+    },
+    {
+      "type": "DeleteInstanceRequest"
+    },
+    {
+      "type": "StartInstanceRequest"
+    },
+    {
+      "type": "StopInstanceRequest"
+    },
+    {
+      "type": "ResetInstanceRequest"
+    },
+    {
+      "type": "ReportInstanceInfoRequest"
+    },
+    {
+      "type": "IsInstanceUpgradeableRequest"
+    },
+    {
+      "type": "IsInstanceUpgradeableResponse"
+    },
+    {
+      "type": "UpgradeInstanceRequest"
+    },
+    {
+      "type": "UpgradeInstanceInternalRequest"
+    },
+    {
+      "type": "ListEnvironmentsRequest"
+    },
+    {
+      "type": "ListEnvironmentsResponse"
+    },
+    {
+      "type": "GetEnvironmentRequest"
+    },
+    {
+      "type": "CreateEnvironmentRequest"
+    },
+    {
+      "type": "DeleteEnvironmentRequest"
+    }
+  ],
+  "go": {
+    "src": "notebooks/apiv1beta1/notebookspb/service.pb.go",
+    "pkg": "notebookspb",
+    "pkg_full": "cloud.google.com/go/notebooks/apiv1beta1/notebookspb"
+  }
+}
+{
+  "proto": "google/cloud/notebooks/v1beta1/instance",
+  "pkg": "google.cloud.notebooks.v1beta1",
+  "msgs": [
+    {
+      "type": "ReservationAffinity"
+    },
+    {
+      "type": "Instance",
+      "msgs": [
+        {
+          "type": "AcceleratorConfig"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "notebooks/apiv1beta1/notebookspb/instance.pb.go",
+    "pkg": "notebookspb",
+    "pkg_full": "cloud.google.com/go/notebooks/apiv1beta1/notebookspb"
+  }
+}
+{
+  "proto": "google/cloud/notebooks/v1beta1/environment",
+  "pkg": "google.cloud.notebooks.v1beta1",
+  "msgs": [
+    {
+      "type": "Environment"
+    },
+    {
+      "type": "VmImage"
+    },
+    {
+      "type": "ContainerImage"
+    }
+  ],
+  "go": {
+    "src": "notebooks/apiv1beta1/notebookspb/environment.pb.go",
+    "pkg": "notebookspb",
+    "pkg_full": "cloud.google.com/go/notebooks/apiv1beta1/notebookspb"
+  }
+}

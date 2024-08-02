@@ -1,0 +1,593 @@
+{
+  "proto": "google/apps/drive/labels/v2/label_lock",
+  "pkg": "google.apps.drive.labels.v2",
+  "msgs": [
+    {
+      "type": "LabelLock",
+      "msgs": [
+        {
+          "type": "Capabilities"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/apps/drive/labels/v2/label_lock.pb.go",
+    "pkg": "labels",
+    "pkg_full": "google.golang.org/genproto/googleapis/apps/drive/labels/v2"
+  }
+}
+{
+  "proto": "google/apps/drive/labels/v2/requests",
+  "pkg": "google.apps.drive.labels.v2",
+  "msgs": [
+    {
+      "type": "WriteControl"
+    },
+    {
+      "type": "GetUserCapabilitiesRequest"
+    },
+    {
+      "type": "CreateLabelRequest"
+    },
+    {
+      "type": "GetLabelRequest"
+    },
+    {
+      "type": "DeltaUpdateLabelRequest",
+      "msgs": [
+        {
+          "type": "Request"
+        },
+        {
+          "type": "UpdateLabelPropertiesRequest"
+        },
+        {
+          "type": "DisableFieldRequest"
+        },
+        {
+          "type": "EnableFieldRequest"
+        },
+        {
+          "type": "DeleteFieldRequest"
+        },
+        {
+          "type": "CreateFieldRequest"
+        },
+        {
+          "type": "UpdateFieldPropertiesRequest"
+        },
+        {
+          "type": "UpdateFieldTypeRequest"
+        },
+        {
+          "type": "CreateSelectionChoiceRequest"
+        },
+        {
+          "type": "UpdateSelectionChoicePropertiesRequest"
+        },
+        {
+          "type": "DeleteSelectionChoiceRequest"
+        },
+        {
+          "type": "DisableSelectionChoiceRequest"
+        },
+        {
+          "type": "EnableSelectionChoiceRequest"
+        }
+      ]
+    },
+    {
+      "type": "DeltaUpdateLabelResponse",
+      "msgs": [
+        {
+          "type": "Response"
+        },
+        {
+          "type": "UpdateLabelPropertiesResponse"
+        },
+        {
+          "type": "CreateFieldResponse"
+        },
+        {
+          "type": "UpdateFieldPropertiesResponse"
+        },
+        {
+          "type": "UpdateFieldTypeResponse"
+        },
+        {
+          "type": "EnableFieldResponse"
+        },
+        {
+          "type": "DisableFieldResponse"
+        },
+        {
+          "type": "DeleteFieldResponse"
+        },
+        {
+          "type": "CreateSelectionChoiceResponse"
+        },
+        {
+          "type": "UpdateSelectionChoicePropertiesResponse"
+        },
+        {
+          "type": "EnableSelectionChoiceResponse"
+        },
+        {
+          "type": "DisableSelectionChoiceResponse"
+        },
+        {
+          "type": "DeleteSelectionChoiceResponse"
+        }
+      ]
+    },
+    {
+      "type": "UpdateLabelCopyModeRequest"
+    },
+    {
+      "type": "GetLabelLimitsRequest"
+    },
+    {
+      "type": "ListLabelsRequest"
+    },
+    {
+      "type": "ListLabelsResponse"
+    },
+    {
+      "type": "CreateLabelPermissionRequest"
+    },
+    {
+      "type": "ListLabelPermissionsRequest"
+    },
+    {
+      "type": "ListLabelPermissionsResponse"
+    },
+    {
+      "type": "UpdateLabelPermissionRequest"
+    },
+    {
+      "type": "DeleteLabelPermissionRequest"
+    },
+    {
+      "type": "BatchUpdateLabelPermissionsRequest"
+    },
+    {
+      "type": "BatchUpdateLabelPermissionsResponse"
+    },
+    {
+      "type": "BatchDeleteLabelPermissionsRequest"
+    },
+    {
+      "type": "DisableLabelRequest"
+    },
+    {
+      "type": "PublishLabelRequest"
+    },
+    {
+      "type": "EnableLabelRequest"
+    },
+    {
+      "type": "DeleteLabelRequest"
+    },
+    {
+      "type": "ListLabelLocksRequest"
+    },
+    {
+      "type": "ListLabelLocksResponse"
+    }
+  ],
+  "go": {
+    "src": "googleapis/apps/drive/labels/v2/requests.pb.go",
+    "pkg": "labels",
+    "pkg_full": "google.golang.org/genproto/googleapis/apps/drive/labels/v2"
+  }
+}
+{
+  "proto": "google/apps/drive/labels/v2/user_capabilities",
+  "pkg": "google.apps.drive.labels.v2",
+  "msgs": [
+    {
+      "type": "UserCapabilities"
+    }
+  ],
+  "go": {
+    "src": "googleapis/apps/drive/labels/v2/user_capabilities.pb.go",
+    "pkg": "labels",
+    "pkg_full": "google.golang.org/genproto/googleapis/apps/drive/labels/v2"
+  }
+}
+{
+  "proto": "google/apps/drive/labels/v2/label_limits",
+  "pkg": "google.apps.drive.labels.v2",
+  "msgs": [
+    {
+      "type": "LabelLimits"
+    },
+    {
+      "type": "FieldLimits"
+    },
+    {
+      "type": "ListLimits"
+    },
+    {
+      "type": "TextLimits"
+    },
+    {
+      "type": "LongTextLimits"
+    },
+    {
+      "type": "IntegerLimits"
+    },
+    {
+      "type": "DateLimits"
+    },
+    {
+      "type": "SelectionLimits"
+    },
+    {
+      "type": "UserLimits"
+    }
+  ],
+  "go": {
+    "src": "googleapis/apps/drive/labels/v2/label_limits.pb.go",
+    "pkg": "labels",
+    "pkg_full": "google.golang.org/genproto/googleapis/apps/drive/labels/v2"
+  }
+}
+{
+  "proto": "google/apps/drive/labels/v2/common",
+  "pkg": "google.apps.drive.labels.v2",
+  "msgs": [
+    {
+      "type": "Lifecycle",
+      "msgs": [
+        {
+          "type": "DisabledPolicy"
+        }
+      ]
+    },
+    {
+      "type": "UserInfo"
+    },
+    {
+      "type": "BadgeConfig"
+    },
+    {
+      "type": "BadgeColors"
+    },
+    {
+      "type": "LockStatus"
+    }
+  ],
+  "go": {
+    "src": "googleapis/apps/drive/labels/v2/common.pb.go",
+    "pkg": "labels",
+    "pkg_full": "google.golang.org/genproto/googleapis/apps/drive/labels/v2"
+  }
+}
+{
+  "proto": "google/apps/drive/labels/v2/label_service",
+  "pkg": "google.apps.drive.labels.v2",
+  "svcs": [
+    {
+      "svc": "LabelService",
+      "host": "drivelabels.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetUserCapabilities",
+          "request": {
+            "type": "GetUserCapabilitiesRequest"
+          },
+          "response": {
+            "type": "UserCapabilities"
+          }
+        },
+        {
+          "method": "ListLabels",
+          "request": {
+            "type": "ListLabelsRequest"
+          },
+          "response": {
+            "type": "ListLabelsResponse"
+          }
+        },
+        {
+          "method": "GetLabel",
+          "request": {
+            "type": "GetLabelRequest"
+          },
+          "response": {
+            "type": "Label"
+          }
+        },
+        {
+          "method": "GetLabelLimits",
+          "request": {
+            "type": "GetLabelLimitsRequest"
+          },
+          "response": {
+            "type": "LabelLimits"
+          }
+        },
+        {
+          "method": "CreateLabel",
+          "request": {
+            "type": "CreateLabelRequest"
+          },
+          "response": {
+            "type": "Label"
+          }
+        },
+        {
+          "method": "DeltaUpdateLabel",
+          "request": {
+            "type": "DeltaUpdateLabelRequest"
+          },
+          "response": {
+            "type": "DeltaUpdateLabelResponse"
+          }
+        },
+        {
+          "method": "UpdateLabelCopyMode",
+          "request": {
+            "type": "UpdateLabelCopyModeRequest"
+          },
+          "response": {
+            "type": "Label"
+          }
+        },
+        {
+          "method": "PublishLabel",
+          "request": {
+            "type": "PublishLabelRequest"
+          },
+          "response": {
+            "type": "Label"
+          }
+        },
+        {
+          "method": "DisableLabel",
+          "request": {
+            "type": "DisableLabelRequest"
+          },
+          "response": {
+            "type": "Label"
+          }
+        },
+        {
+          "method": "EnableLabel",
+          "request": {
+            "type": "EnableLabelRequest"
+          },
+          "response": {
+            "type": "Label"
+          }
+        },
+        {
+          "method": "DeleteLabel",
+          "request": {
+            "type": "DeleteLabelRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListLabelPermissions",
+          "request": {
+            "type": "ListLabelPermissionsRequest"
+          },
+          "response": {
+            "type": "ListLabelPermissionsResponse"
+          }
+        },
+        {
+          "method": "CreateLabelPermission",
+          "request": {
+            "type": "CreateLabelPermissionRequest"
+          },
+          "response": {
+            "type": "LabelPermission"
+          }
+        },
+        {
+          "method": "UpdateLabelPermission",
+          "request": {
+            "type": "UpdateLabelPermissionRequest"
+          },
+          "response": {
+            "type": "LabelPermission"
+          }
+        },
+        {
+          "method": "DeleteLabelPermission",
+          "request": {
+            "type": "DeleteLabelPermissionRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "BatchUpdateLabelPermissions",
+          "request": {
+            "type": "BatchUpdateLabelPermissionsRequest"
+          },
+          "response": {
+            "type": "BatchUpdateLabelPermissionsResponse"
+          }
+        },
+        {
+          "method": "BatchDeleteLabelPermissions",
+          "request": {
+            "type": "BatchDeleteLabelPermissionsRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListLabelLocks",
+          "request": {
+            "type": "ListLabelLocksRequest"
+          },
+          "response": {
+            "type": "ListLabelLocksResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/apps/drive/labels/v2/label_service.pb.go",
+    "pkg": "labels",
+    "pkg_full": "google.golang.org/genproto/googleapis/apps/drive/labels/v2"
+  }
+}
+{
+  "proto": "google/apps/drive/labels/v2/label",
+  "pkg": "google.apps.drive.labels.v2",
+  "msgs": [
+    {
+      "type": "Label",
+      "msgs": [
+        {
+          "type": "Properties"
+        },
+        {
+          "type": "DisplayHints"
+        },
+        {
+          "type": "AppliedCapabilities"
+        },
+        {
+          "type": "SchemaCapabilities"
+        },
+        {
+          "type": "AppliedLabelPolicy"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/apps/drive/labels/v2/label.pb.go",
+    "pkg": "labels",
+    "pkg_full": "google.golang.org/genproto/googleapis/apps/drive/labels/v2"
+  }
+}
+{
+  "proto": "google/apps/drive/labels/v2/label_permission",
+  "pkg": "google.apps.drive.labels.v2",
+  "msgs": [
+    {
+      "type": "LabelPermission"
+    }
+  ],
+  "go": {
+    "src": "googleapis/apps/drive/labels/v2/label_permission.pb.go",
+    "pkg": "labels",
+    "pkg_full": "google.golang.org/genproto/googleapis/apps/drive/labels/v2"
+  }
+}
+{
+  "proto": "google/apps/drive/labels/v2/exception_detail",
+  "pkg": "google.apps.drive.labels.v2",
+  "msgs": [
+    {
+      "type": "ExceptionDetail"
+    }
+  ],
+  "go": {
+    "src": "googleapis/apps/drive/labels/v2/exception_detail.pb.go",
+    "pkg": "labels",
+    "pkg_full": "google.golang.org/genproto/googleapis/apps/drive/labels/v2"
+  }
+}
+{
+  "proto": "google/apps/drive/labels/v2/error_details",
+  "pkg": "google.apps.drive.labels.v2",
+  "msgs": [
+    {
+      "type": "InvalidArgument",
+      "msgs": [
+        {
+          "type": "FieldViolation"
+        }
+      ]
+    },
+    {
+      "type": "PreconditionFailure",
+      "msgs": [
+        {
+          "type": "Violation"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/apps/drive/labels/v2/error_details.pb.go",
+    "pkg": "labels",
+    "pkg_full": "google.golang.org/genproto/googleapis/apps/drive/labels/v2"
+  }
+}
+{
+  "proto": "google/apps/drive/labels/v2/field",
+  "pkg": "google.apps.drive.labels.v2",
+  "msgs": [
+    {
+      "type": "Field",
+      "msgs": [
+        {
+          "type": "Properties"
+        },
+        {
+          "type": "DisplayHints"
+        },
+        {
+          "type": "SchemaCapabilities"
+        },
+        {
+          "type": "AppliedCapabilities"
+        },
+        {
+          "type": "ListOptions"
+        },
+        {
+          "type": "TextOptions"
+        },
+        {
+          "type": "IntegerOptions"
+        },
+        {
+          "type": "DateOptions"
+        },
+        {
+          "type": "SelectionOptions"
+        },
+        {
+          "type": "Choice"
+        },
+        {
+          "type": "Properties"
+        },
+        {
+          "type": "DisplayHints"
+        },
+        {
+          "type": "SchemaCapabilities"
+        },
+        {
+          "type": "AppliedCapabilities"
+        },
+        {
+          "type": "UserOptions"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/apps/drive/labels/v2/field.pb.go",
+    "pkg": "labels",
+    "pkg_full": "google.golang.org/genproto/googleapis/apps/drive/labels/v2"
+  }
+}

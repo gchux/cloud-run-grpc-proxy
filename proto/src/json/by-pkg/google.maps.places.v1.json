@@ -1,0 +1,343 @@
+{
+  "proto": "google/maps/places/v1/attribution",
+  "pkg": "google.maps.places.v1",
+  "msgs": [
+    {
+      "type": "AuthorAttribution"
+    }
+  ],
+  "go": {
+    "src": "maps/places/apiv1/placespb/attribution.pb.go",
+    "pkg": "placespb",
+    "pkg_full": "cloud.google.com/go/maps/places/apiv1/placespb"
+  }
+}
+{
+  "proto": "google/maps/places/v1/review",
+  "pkg": "google.maps.places.v1",
+  "msgs": [
+    {
+      "type": "Review"
+    }
+  ],
+  "go": {
+    "src": "maps/places/apiv1/placespb/review.pb.go",
+    "pkg": "placespb",
+    "pkg_full": "cloud.google.com/go/maps/places/apiv1/placespb"
+  }
+}
+{
+  "proto": "google/maps/places/v1/geometry",
+  "pkg": "google.maps.places.v1",
+  "msgs": [
+    {
+      "type": "Circle"
+    }
+  ],
+  "go": {
+    "src": "maps/places/apiv1/placespb/geometry.pb.go",
+    "pkg": "placespb",
+    "pkg_full": "cloud.google.com/go/maps/places/apiv1/placespb"
+  }
+}
+{
+  "proto": "google/maps/places/v1/ev_charging",
+  "pkg": "google.maps.places.v1",
+  "msgs": [
+    {
+      "type": "EVChargeOptions",
+      "msgs": [
+        {
+          "type": "ConnectorAggregation"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "maps/places/apiv1/placespb/ev_charging.pb.go",
+    "pkg": "placespb",
+    "pkg_full": "cloud.google.com/go/maps/places/apiv1/placespb"
+  }
+}
+{
+  "proto": "google/maps/places/v1/reference",
+  "pkg": "google.maps.places.v1",
+  "msgs": [
+    {
+      "type": "References"
+    }
+  ],
+  "go": {
+    "src": "maps/places/apiv1/placespb/reference.pb.go",
+    "pkg": "placespb",
+    "pkg_full": "cloud.google.com/go/maps/places/apiv1/placespb"
+  }
+}
+{
+  "proto": "google/maps/places/v1/content_block",
+  "pkg": "google.maps.places.v1",
+  "msgs": [
+    {
+      "type": "ContentBlock"
+    }
+  ],
+  "go": {
+    "src": "maps/places/apiv1/placespb/content_block.pb.go",
+    "pkg": "placespb",
+    "pkg_full": "cloud.google.com/go/maps/places/apiv1/placespb"
+  }
+}
+{
+  "proto": "google/maps/places/v1/fuel_options",
+  "pkg": "google.maps.places.v1",
+  "msgs": [
+    {
+      "type": "FuelOptions",
+      "msgs": [
+        {
+          "type": "FuelPrice"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "maps/places/apiv1/placespb/fuel_options.pb.go",
+    "pkg": "placespb",
+    "pkg_full": "cloud.google.com/go/maps/places/apiv1/placespb"
+  }
+}
+{
+  "proto": "google/maps/places/v1/places_service",
+  "pkg": "google.maps.places.v1",
+  "svcs": [
+    {
+      "svc": "Places",
+      "host": "places.googleapis.com",
+      "rpcs": [
+        {
+          "method": "SearchNearby",
+          "request": {
+            "type": "SearchNearbyRequest"
+          },
+          "response": {
+            "type": "SearchNearbyResponse"
+          }
+        },
+        {
+          "method": "SearchText",
+          "request": {
+            "type": "SearchTextRequest"
+          },
+          "response": {
+            "type": "SearchTextResponse"
+          }
+        },
+        {
+          "method": "GetPhotoMedia",
+          "request": {
+            "type": "GetPhotoMediaRequest"
+          },
+          "response": {
+            "type": "PhotoMedia"
+          }
+        },
+        {
+          "method": "GetPlace",
+          "request": {
+            "type": "GetPlaceRequest"
+          },
+          "response": {
+            "type": "Place"
+          }
+        },
+        {
+          "method": "AutocompletePlaces",
+          "request": {
+            "type": "AutocompletePlacesRequest"
+          },
+          "response": {
+            "type": "AutocompletePlacesResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "SearchNearbyRequest",
+      "msgs": [
+        {
+          "type": "LocationRestriction"
+        }
+      ]
+    },
+    {
+      "type": "SearchNearbyResponse"
+    },
+    {
+      "type": "SearchTextRequest",
+      "msgs": [
+        {
+          "type": "LocationBias"
+        },
+        {
+          "type": "LocationRestriction"
+        },
+        {
+          "type": "EVOptions"
+        }
+      ]
+    },
+    {
+      "type": "SearchTextResponse"
+    },
+    {
+      "type": "GetPhotoMediaRequest"
+    },
+    {
+      "type": "PhotoMedia"
+    },
+    {
+      "type": "GetPlaceRequest"
+    },
+    {
+      "type": "AutocompletePlacesRequest",
+      "msgs": [
+        {
+          "type": "LocationBias"
+        },
+        {
+          "type": "LocationRestriction"
+        }
+      ]
+    },
+    {
+      "type": "AutocompletePlacesResponse",
+      "msgs": [
+        {
+          "type": "Suggestion"
+        },
+        {
+          "type": "StringRange"
+        },
+        {
+          "type": "FormattableText"
+        },
+        {
+          "type": "StructuredFormat"
+        },
+        {
+          "type": "PlacePrediction"
+        },
+        {
+          "type": "QueryPrediction"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "maps/places/apiv1/placespb/places_service.pb.go",
+    "pkg": "placespb",
+    "pkg_full": "cloud.google.com/go/maps/places/apiv1/placespb"
+  }
+}
+{
+  "proto": "google/maps/places/v1/photo",
+  "pkg": "google.maps.places.v1",
+  "msgs": [
+    {
+      "type": "Photo"
+    }
+  ],
+  "go": {
+    "src": "maps/places/apiv1/placespb/photo.pb.go",
+    "pkg": "placespb",
+    "pkg_full": "cloud.google.com/go/maps/places/apiv1/placespb"
+  }
+}
+{
+  "proto": "google/maps/places/v1/contextual_content",
+  "pkg": "google.maps.places.v1",
+  "msgs": [
+    {
+      "type": "ContextualContent",
+      "msgs": [
+        {
+          "type": "Justification"
+        },
+        {
+          "type": "ReviewJustification"
+        },
+        {
+          "type": "HighlightedText"
+        },
+        {
+          "type": "HighlightedTextRange"
+        },
+        {
+          "type": "BusinessAvailabilityAttributesJustification"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "maps/places/apiv1/placespb/contextual_content.pb.go",
+    "pkg": "placespb",
+    "pkg_full": "cloud.google.com/go/maps/places/apiv1/placespb"
+  }
+}
+{
+  "proto": "google/maps/places/v1/place",
+  "pkg": "google.maps.places.v1",
+  "msgs": [
+    {
+      "type": "Place",
+      "msgs": [
+        {
+          "type": "AddressComponent"
+        },
+        {
+          "type": "PlusCode"
+        },
+        {
+          "type": "OpeningHours"
+        },
+        {
+          "type": "Period"
+        },
+        {
+          "type": "Point"
+        },
+        {
+          "type": "SpecialDay"
+        },
+        {
+          "type": "Attribution"
+        },
+        {
+          "type": "PaymentOptions"
+        },
+        {
+          "type": "ParkingOptions"
+        },
+        {
+          "type": "SubDestination"
+        },
+        {
+          "type": "AccessibilityOptions"
+        },
+        {
+          "type": "GenerativeSummary"
+        },
+        {
+          "type": "AreaSummary"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "maps/places/apiv1/placespb/place.pb.go",
+    "pkg": "placespb",
+    "pkg_full": "cloud.google.com/go/maps/places/apiv1/placespb"
+  }
+}

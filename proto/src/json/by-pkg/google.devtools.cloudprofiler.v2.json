@@ -1,0 +1,82 @@
+{
+  "proto": "google/devtools/cloudprofiler/v2/profiler",
+  "pkg": "google.devtools.cloudprofiler.v2",
+  "svcs": [
+    {
+      "svc": "ProfilerService",
+      "host": "cloudprofiler.googleapis.com",
+      "rpcs": [
+        {
+          "method": "CreateProfile",
+          "request": {
+            "type": "CreateProfileRequest"
+          },
+          "response": {
+            "type": "Profile"
+          }
+        },
+        {
+          "method": "CreateOfflineProfile",
+          "request": {
+            "type": "CreateOfflineProfileRequest"
+          },
+          "response": {
+            "type": "Profile"
+          }
+        },
+        {
+          "method": "UpdateProfile",
+          "request": {
+            "type": "UpdateProfileRequest"
+          },
+          "response": {
+            "type": "Profile"
+          }
+        }
+      ]
+    },
+    {
+      "svc": "ExportService",
+      "host": "cloudprofiler.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListProfiles",
+          "request": {
+            "type": "ListProfilesRequest"
+          },
+          "response": {
+            "type": "ListProfilesResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "CreateProfileRequest"
+    },
+    {
+      "type": "CreateOfflineProfileRequest"
+    },
+    {
+      "type": "UpdateProfileRequest"
+    },
+    {
+      "type": "Profile"
+    },
+    {
+      "type": "Deployment"
+    },
+    {
+      "type": "ListProfilesRequest"
+    },
+    {
+      "type": "ListProfilesResponse"
+    }
+  ],
+  "go": {
+    "src": "cloudprofiler/apiv2/cloudprofilerpb/profiler.pb.go",
+    "pkg": "cloudprofilerpb",
+    "pkg_full": "cloud.google.com/go/cloudprofiler/apiv2/cloudprofilerpb"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "proto": "google/longrunning/operations",
+  "pkg": "google.longrunning",
+  "svcs": [
+    {
+      "svc": "Operations",
+      "host": "longrunning.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ListOperations",
+          "request": {
+            "type": "ListOperationsRequest"
+          },
+          "response": {
+            "type": "ListOperationsResponse"
+          }
+        },
+        {
+          "method": "GetOperation",
+          "request": {
+            "type": "GetOperationRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        },
+        {
+          "method": "DeleteOperation",
+          "request": {
+            "type": "DeleteOperationRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "CancelOperation",
+          "request": {
+            "type": "CancelOperationRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "WaitOperation",
+          "request": {
+            "type": "WaitOperationRequest"
+          },
+          "response": {
+            "type": "Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "Operation"
+    },
+    {
+      "type": "GetOperationRequest"
+    },
+    {
+      "type": "ListOperationsRequest"
+    },
+    {
+      "type": "ListOperationsResponse"
+    },
+    {
+      "type": "CancelOperationRequest"
+    },
+    {
+      "type": "DeleteOperationRequest"
+    },
+    {
+      "type": "WaitOperationRequest"
+    },
+    {
+      "type": "OperationInfo"
+    }
+  ],
+  "go": {
+    "src": "longrunning/autogen/longrunningpb/operations.pb.go",
+    "pkg": "longrunningpb",
+    "pkg_full": "cloud.google.com/go/longrunning/autogen/longrunningpb"
+  }
+}

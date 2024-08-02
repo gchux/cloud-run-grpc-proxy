@@ -1,0 +1,29 @@
+{
+  "proto": "google/shopping/type/types",
+  "pkg": "google.shopping.type",
+  "msgs": [
+    {
+      "type": "Weight"
+    },
+    {
+      "type": "Price"
+    },
+    {
+      "type": "CustomAttribute"
+    },
+    {
+      "type": "Destination"
+    },
+    {
+      "type": "ReportingContext"
+    },
+    {
+      "type": "Channel"
+    }
+  ],
+  "go": {
+    "src": "shopping/type/typepb/types.pb.go",
+    "pkg": "typepb",
+    "pkg_full": "cloud.google.com/go/shopping/type/typepb"
+  }
+}

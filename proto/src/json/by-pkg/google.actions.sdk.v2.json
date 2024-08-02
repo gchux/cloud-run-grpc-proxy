@@ -1,0 +1,586 @@
+{
+  "proto": "google/actions/sdk/v2/files",
+  "pkg": "google.actions.sdk.v2",
+  "msgs": [
+    {
+      "type": "Files"
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/files.pb.go",
+    "pkg": "sdk",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/event_logs",
+  "pkg": "google.actions.sdk.v2",
+  "msgs": [
+    {
+      "type": "ExecutionEvent"
+    },
+    {
+      "type": "ExecutionState"
+    },
+    {
+      "type": "Slots"
+    },
+    {
+      "type": "UserConversationInput"
+    },
+    {
+      "type": "IntentMatch"
+    },
+    {
+      "type": "ConditionsEvaluated"
+    },
+    {
+      "type": "Condition"
+    },
+    {
+      "type": "OnSceneEnter"
+    },
+    {
+      "type": "WebhookInitiatedTransition"
+    },
+    {
+      "type": "WebhookRequest"
+    },
+    {
+      "type": "WebhookResponse"
+    },
+    {
+      "type": "SlotMatch"
+    },
+    {
+      "type": "SlotRequested"
+    },
+    {
+      "type": "SlotValidated"
+    },
+    {
+      "type": "FormFilled"
+    },
+    {
+      "type": "WaitingForUserInput"
+    },
+    {
+      "type": "EndConversation"
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/event_logs.pb.go",
+    "pkg": "sdk",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/release_channel",
+  "pkg": "google.actions.sdk.v2",
+  "msgs": [
+    {
+      "type": "ReleaseChannel"
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/release_channel.pb.go",
+    "pkg": "sdk",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/manifest",
+  "pkg": "google.actions.sdk.v2",
+  "msgs": [
+    {
+      "type": "Manifest"
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/manifest.pb.go",
+    "pkg": "sdk",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/surface",
+  "pkg": "google.actions.sdk.v2",
+  "msgs": [
+    {
+      "type": "SurfaceRequirements"
+    },
+    {
+      "type": "CapabilityRequirement"
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/surface.pb.go",
+    "pkg": "sdk",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/actions_sdk",
+  "pkg": "google.actions.sdk.v2",
+  "svcs": [
+    {
+      "svc": "ActionsSdk",
+      "host": "actions.googleapis.com",
+      "rpcs": [
+        {
+          "method": "WriteDraft",
+          "request": {
+            "type": "WriteDraftRequest",
+            "stream": true
+          },
+          "response": {
+            "type": "Draft"
+          }
+        },
+        {
+          "method": "WritePreview",
+          "request": {
+            "type": "WritePreviewRequest",
+            "stream": true
+          },
+          "response": {
+            "type": "Preview"
+          }
+        },
+        {
+          "method": "CreateVersion",
+          "request": {
+            "type": "CreateVersionRequest",
+            "stream": true
+          },
+          "response": {
+            "type": "Version"
+          }
+        },
+        {
+          "method": "ReadDraft",
+          "request": {
+            "type": "ReadDraftRequest"
+          },
+          "response": {
+            "type": "ReadDraftResponse",
+            "stream": true
+          }
+        },
+        {
+          "method": "ReadVersion",
+          "request": {
+            "type": "ReadVersionRequest"
+          },
+          "response": {
+            "type": "ReadVersionResponse",
+            "stream": true
+          }
+        },
+        {
+          "method": "EncryptSecret",
+          "request": {
+            "type": "EncryptSecretRequest"
+          },
+          "response": {
+            "type": "EncryptSecretResponse"
+          }
+        },
+        {
+          "method": "DecryptSecret",
+          "request": {
+            "type": "DecryptSecretRequest"
+          },
+          "response": {
+            "type": "DecryptSecretResponse"
+          }
+        },
+        {
+          "method": "ListSampleProjects",
+          "request": {
+            "type": "ListSampleProjectsRequest"
+          },
+          "response": {
+            "type": "ListSampleProjectsResponse"
+          }
+        },
+        {
+          "method": "ListReleaseChannels",
+          "request": {
+            "type": "ListReleaseChannelsRequest"
+          },
+          "response": {
+            "type": "ListReleaseChannelsResponse"
+          }
+        },
+        {
+          "method": "ListVersions",
+          "request": {
+            "type": "ListVersionsRequest"
+          },
+          "response": {
+            "type": "ListVersionsResponse"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "WriteDraftRequest"
+    },
+    {
+      "type": "Draft"
+    },
+    {
+      "type": "WritePreviewRequest",
+      "msgs": [
+        {
+          "type": "ContentFromDraft"
+        },
+        {
+          "type": "ContentFromSubmittedVersion"
+        },
+        {
+          "type": "PreviewSettings"
+        }
+      ]
+    },
+    {
+      "type": "Preview"
+    },
+    {
+      "type": "CreateVersionRequest"
+    },
+    {
+      "type": "ReadDraftRequest"
+    },
+    {
+      "type": "ReadDraftResponse"
+    },
+    {
+      "type": "ReadVersionRequest"
+    },
+    {
+      "type": "ReadVersionResponse"
+    },
+    {
+      "type": "EncryptSecretRequest"
+    },
+    {
+      "type": "EncryptSecretResponse"
+    },
+    {
+      "type": "DecryptSecretRequest"
+    },
+    {
+      "type": "DecryptSecretResponse"
+    },
+    {
+      "type": "ListSampleProjectsRequest"
+    },
+    {
+      "type": "ListSampleProjectsResponse"
+    },
+    {
+      "type": "SampleProject"
+    },
+    {
+      "type": "ListReleaseChannelsRequest"
+    },
+    {
+      "type": "ListReleaseChannelsResponse"
+    },
+    {
+      "type": "ListVersionsRequest"
+    },
+    {
+      "type": "ListVersionsResponse"
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/actions_sdk.pb.go",
+    "pkg": "sdk",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/validation_results",
+  "pkg": "google.actions.sdk.v2",
+  "msgs": [
+    {
+      "type": "ValidationResults"
+    },
+    {
+      "type": "ValidationResult",
+      "msgs": [
+        {
+          "type": "ValidationContext"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/validation_results.pb.go",
+    "pkg": "sdk",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/webhook",
+  "pkg": "google.actions.sdk.v2",
+  "msgs": [
+    {
+      "type": "Webhook",
+      "msgs": [
+        {
+          "type": "Handler"
+        },
+        {
+          "type": "HttpsEndpoint"
+        },
+        {
+          "type": "InlineCloudFunction"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/webhook.pb.go",
+    "pkg": "sdk",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/config_file",
+  "pkg": "google.actions.sdk.v2",
+  "msgs": [
+    {
+      "type": "ConfigFiles"
+    },
+    {
+      "type": "ConfigFile"
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/config_file.pb.go",
+    "pkg": "sdk",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/account_linking_secret",
+  "pkg": "google.actions.sdk.v2",
+  "msgs": [
+    {
+      "type": "AccountLinkingSecret"
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/account_linking_secret.pb.go",
+    "pkg": "sdk",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/localized_settings",
+  "pkg": "google.actions.sdk.v2",
+  "msgs": [
+    {
+      "type": "LocalizedSettings"
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/localized_settings.pb.go",
+    "pkg": "sdk",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/settings",
+  "pkg": "google.actions.sdk.v2",
+  "msgs": [
+    {
+      "type": "Settings"
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/settings.pb.go",
+    "pkg": "sdk",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/actions_testing",
+  "pkg": "google.actions.sdk.v2",
+  "svcs": [
+    {
+      "svc": "ActionsTesting",
+      "host": "actions.googleapis.com",
+      "rpcs": [
+        {
+          "method": "SendInteraction",
+          "request": {
+            "type": "SendInteractionRequest"
+          },
+          "response": {
+            "type": "SendInteractionResponse"
+          }
+        },
+        {
+          "method": "MatchIntents",
+          "request": {
+            "type": "MatchIntentsRequest"
+          },
+          "response": {
+            "type": "MatchIntentsResponse"
+          }
+        },
+        {
+          "method": "SetWebAndAppActivityControl",
+          "request": {
+            "type": "SetWebAndAppActivityControlRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "SendInteractionRequest"
+    },
+    {
+      "type": "UserInput"
+    },
+    {
+      "type": "DeviceProperties"
+    },
+    {
+      "type": "Location"
+    },
+    {
+      "type": "SendInteractionResponse"
+    },
+    {
+      "type": "Output"
+    },
+    {
+      "type": "Diagnostics"
+    },
+    {
+      "type": "MatchIntentsRequest"
+    },
+    {
+      "type": "MatchIntentsResponse"
+    },
+    {
+      "type": "SetWebAndAppActivityControlRequest"
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/actions_testing.pb.go",
+    "pkg": "sdk",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/account_linking",
+  "pkg": "google.actions.sdk.v2",
+  "msgs": [
+    {
+      "type": "AccountLinking"
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/account_linking.pb.go",
+    "pkg": "sdk",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/theme_customization",
+  "pkg": "google.actions.sdk.v2",
+  "msgs": [
+    {
+      "type": "ThemeCustomization"
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/theme_customization.pb.go",
+    "pkg": "sdk",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/version",
+  "pkg": "google.actions.sdk.v2",
+  "msgs": [
+    {
+      "type": "Version",
+      "msgs": [
+        {
+          "type": "VersionState"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/version.pb.go",
+    "pkg": "sdk",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/action",
+  "pkg": "google.actions.sdk.v2",
+  "msgs": [
+    {
+      "type": "Actions",
+      "msgs": [
+        {
+          "type": "Engagement"
+        },
+        {
+          "type": "PushNotification"
+        },
+        {
+          "type": "DailyUpdate"
+        },
+        {
+          "type": "ActionLink"
+        },
+        {
+          "type": "AssistantLink"
+        },
+        {
+          "type": "CustomAction"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/action.pb.go",
+    "pkg": "sdk",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2"
+  }
+}
+{
+  "proto": "google/actions/sdk/v2/data_file",
+  "pkg": "google.actions.sdk.v2",
+  "msgs": [
+    {
+      "type": "DataFiles"
+    },
+    {
+      "type": "DataFile"
+    }
+  ],
+  "go": {
+    "src": "googleapis/actions/sdk/v2/data_file.pb.go",
+    "pkg": "sdk",
+    "pkg_full": "google.golang.org/genproto/googleapis/actions/sdk/v2"
+  }
+}

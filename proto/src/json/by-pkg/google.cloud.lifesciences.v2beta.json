@@ -1,0 +1,112 @@
+{
+  "proto": "google/cloud/lifesciences/v2beta/workflows",
+  "pkg": "google.cloud.lifesciences.v2beta",
+  "svcs": [
+    {
+      "svc": "WorkflowsServiceV2Beta",
+      "host": "lifesciences.googleapis.com",
+      "rpcs": [
+        {
+          "method": "RunPipeline",
+          "request": {
+            "type": "RunPipelineRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "RunPipelineRequest"
+    },
+    {
+      "type": "RunPipelineResponse"
+    },
+    {
+      "type": "Pipeline"
+    },
+    {
+      "type": "Action"
+    },
+    {
+      "type": "Secret"
+    },
+    {
+      "type": "Mount"
+    },
+    {
+      "type": "Resources"
+    },
+    {
+      "type": "VirtualMachine"
+    },
+    {
+      "type": "ServiceAccount"
+    },
+    {
+      "type": "Accelerator"
+    },
+    {
+      "type": "Network"
+    },
+    {
+      "type": "Disk"
+    },
+    {
+      "type": "Volume"
+    },
+    {
+      "type": "PersistentDisk"
+    },
+    {
+      "type": "ExistingDisk"
+    },
+    {
+      "type": "NFSMount"
+    },
+    {
+      "type": "Metadata"
+    },
+    {
+      "type": "Event"
+    },
+    {
+      "type": "DelayedEvent"
+    },
+    {
+      "type": "WorkerAssignedEvent"
+    },
+    {
+      "type": "WorkerReleasedEvent"
+    },
+    {
+      "type": "PullStartedEvent"
+    },
+    {
+      "type": "PullStoppedEvent"
+    },
+    {
+      "type": "ContainerStartedEvent"
+    },
+    {
+      "type": "ContainerStoppedEvent"
+    },
+    {
+      "type": "UnexpectedExitStatusEvent"
+    },
+    {
+      "type": "ContainerKilledEvent"
+    },
+    {
+      "type": "FailedEvent"
+    }
+  ],
+  "go": {
+    "src": "lifesciences/apiv2beta/lifesciencespb/workflows.pb.go",
+    "pkg": "lifesciencespb",
+    "pkg_full": "cloud.google.com/go/lifesciences/apiv2beta/lifesciencespb"
+  }
+}

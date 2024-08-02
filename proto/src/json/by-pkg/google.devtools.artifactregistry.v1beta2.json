@@ -1,0 +1,472 @@
+{
+  "proto": "google/devtools/artifactregistry/v1beta2/tag",
+  "pkg": "google.devtools.artifactregistry.v1beta2",
+  "msgs": [
+    {
+      "type": "Tag"
+    },
+    {
+      "type": "ListTagsRequest"
+    },
+    {
+      "type": "ListTagsResponse"
+    },
+    {
+      "type": "GetTagRequest"
+    },
+    {
+      "type": "CreateTagRequest"
+    },
+    {
+      "type": "UpdateTagRequest"
+    },
+    {
+      "type": "DeleteTagRequest"
+    }
+  ],
+  "go": {
+    "src": "artifactregistry/apiv1beta2/artifactregistrypb/tag.pb.go",
+    "pkg": "artifactregistrypb",
+    "pkg_full": "cloud.google.com/go/artifactregistry/apiv1beta2/artifactregistrypb"
+  }
+}
+{
+  "proto": "google/devtools/artifactregistry/v1beta2/repository",
+  "pkg": "google.devtools.artifactregistry.v1beta2",
+  "msgs": [
+    {
+      "type": "Repository",
+      "msgs": [
+        {
+          "type": "MavenRepositoryConfig"
+        }
+      ]
+    },
+    {
+      "type": "ListRepositoriesRequest"
+    },
+    {
+      "type": "ListRepositoriesResponse"
+    },
+    {
+      "type": "GetRepositoryRequest"
+    },
+    {
+      "type": "CreateRepositoryRequest"
+    },
+    {
+      "type": "UpdateRepositoryRequest"
+    },
+    {
+      "type": "DeleteRepositoryRequest"
+    }
+  ],
+  "go": {
+    "src": "artifactregistry/apiv1beta2/artifactregistrypb/repository.pb.go",
+    "pkg": "artifactregistrypb",
+    "pkg_full": "cloud.google.com/go/artifactregistry/apiv1beta2/artifactregistrypb"
+  }
+}
+{
+  "proto": "google/devtools/artifactregistry/v1beta2/version",
+  "pkg": "google.devtools.artifactregistry.v1beta2",
+  "msgs": [
+    {
+      "type": "Version"
+    },
+    {
+      "type": "ListVersionsRequest"
+    },
+    {
+      "type": "ListVersionsResponse"
+    },
+    {
+      "type": "GetVersionRequest"
+    },
+    {
+      "type": "DeleteVersionRequest"
+    }
+  ],
+  "go": {
+    "src": "artifactregistry/apiv1beta2/artifactregistrypb/version.pb.go",
+    "pkg": "artifactregistrypb",
+    "pkg_full": "cloud.google.com/go/artifactregistry/apiv1beta2/artifactregistrypb"
+  }
+}
+{
+  "proto": "google/devtools/artifactregistry/v1beta2/file",
+  "pkg": "google.devtools.artifactregistry.v1beta2",
+  "msgs": [
+    {
+      "type": "Hash"
+    },
+    {
+      "type": "File"
+    },
+    {
+      "type": "ListFilesRequest"
+    },
+    {
+      "type": "ListFilesResponse"
+    },
+    {
+      "type": "GetFileRequest"
+    }
+  ],
+  "go": {
+    "src": "artifactregistry/apiv1beta2/artifactregistrypb/file.pb.go",
+    "pkg": "artifactregistrypb",
+    "pkg_full": "cloud.google.com/go/artifactregistry/apiv1beta2/artifactregistrypb"
+  }
+}
+{
+  "proto": "google/devtools/artifactregistry/v1beta2/apt_artifact",
+  "pkg": "google.devtools.artifactregistry.v1beta2",
+  "msgs": [
+    {
+      "type": "AptArtifact"
+    },
+    {
+      "type": "ImportAptArtifactsGcsSource"
+    },
+    {
+      "type": "ImportAptArtifactsRequest"
+    },
+    {
+      "type": "ImportAptArtifactsErrorInfo"
+    },
+    {
+      "type": "ImportAptArtifactsResponse"
+    },
+    {
+      "type": "ImportAptArtifactsMetadata"
+    }
+  ],
+  "go": {
+    "src": "artifactregistry/apiv1beta2/artifactregistrypb/apt_artifact.pb.go",
+    "pkg": "artifactregistrypb",
+    "pkg_full": "cloud.google.com/go/artifactregistry/apiv1beta2/artifactregistrypb"
+  }
+}
+{
+  "proto": "google/devtools/artifactregistry/v1beta2/yum_artifact",
+  "pkg": "google.devtools.artifactregistry.v1beta2",
+  "msgs": [
+    {
+      "type": "YumArtifact"
+    },
+    {
+      "type": "ImportYumArtifactsGcsSource"
+    },
+    {
+      "type": "ImportYumArtifactsRequest"
+    },
+    {
+      "type": "ImportYumArtifactsErrorInfo"
+    },
+    {
+      "type": "ImportYumArtifactsResponse"
+    },
+    {
+      "type": "ImportYumArtifactsMetadata"
+    }
+  ],
+  "go": {
+    "src": "artifactregistry/apiv1beta2/artifactregistrypb/yum_artifact.pb.go",
+    "pkg": "artifactregistrypb",
+    "pkg_full": "cloud.google.com/go/artifactregistry/apiv1beta2/artifactregistrypb"
+  }
+}
+{
+  "proto": "google/devtools/artifactregistry/v1beta2/settings",
+  "pkg": "google.devtools.artifactregistry.v1beta2",
+  "msgs": [
+    {
+      "type": "ProjectSettings"
+    },
+    {
+      "type": "GetProjectSettingsRequest"
+    },
+    {
+      "type": "UpdateProjectSettingsRequest"
+    }
+  ],
+  "go": {
+    "src": "artifactregistry/apiv1beta2/artifactregistrypb/settings.pb.go",
+    "pkg": "artifactregistrypb",
+    "pkg_full": "cloud.google.com/go/artifactregistry/apiv1beta2/artifactregistrypb"
+  }
+}
+{
+  "proto": "google/devtools/artifactregistry/v1beta2/package",
+  "pkg": "google.devtools.artifactregistry.v1beta2",
+  "msgs": [
+    {
+      "type": "Package"
+    },
+    {
+      "type": "ListPackagesRequest"
+    },
+    {
+      "type": "ListPackagesResponse"
+    },
+    {
+      "type": "GetPackageRequest"
+    },
+    {
+      "type": "DeletePackageRequest"
+    }
+  ],
+  "go": {
+    "src": "artifactregistry/apiv1beta2/artifactregistrypb/package.pb.go",
+    "pkg": "artifactregistrypb",
+    "pkg_full": "cloud.google.com/go/artifactregistry/apiv1beta2/artifactregistrypb"
+  }
+}
+{
+  "proto": "google/devtools/artifactregistry/v1beta2/service",
+  "pkg": "google.devtools.artifactregistry.v1beta2",
+  "svcs": [
+    {
+      "svc": "ArtifactRegistry",
+      "host": "artifactregistry.googleapis.com",
+      "rpcs": [
+        {
+          "method": "ImportAptArtifacts",
+          "request": {
+            "type": "ImportAptArtifactsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ImportYumArtifacts",
+          "request": {
+            "type": "ImportYumArtifactsRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListRepositories",
+          "request": {
+            "type": "ListRepositoriesRequest"
+          },
+          "response": {
+            "type": "ListRepositoriesResponse"
+          }
+        },
+        {
+          "method": "GetRepository",
+          "request": {
+            "type": "GetRepositoryRequest"
+          },
+          "response": {
+            "type": "Repository"
+          }
+        },
+        {
+          "method": "CreateRepository",
+          "request": {
+            "type": "CreateRepositoryRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "UpdateRepository",
+          "request": {
+            "type": "UpdateRepositoryRequest"
+          },
+          "response": {
+            "type": "Repository"
+          }
+        },
+        {
+          "method": "DeleteRepository",
+          "request": {
+            "type": "DeleteRepositoryRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListPackages",
+          "request": {
+            "type": "ListPackagesRequest"
+          },
+          "response": {
+            "type": "ListPackagesResponse"
+          }
+        },
+        {
+          "method": "GetPackage",
+          "request": {
+            "type": "GetPackageRequest"
+          },
+          "response": {
+            "type": "Package"
+          }
+        },
+        {
+          "method": "DeletePackage",
+          "request": {
+            "type": "DeletePackageRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListVersions",
+          "request": {
+            "type": "ListVersionsRequest"
+          },
+          "response": {
+            "type": "ListVersionsResponse"
+          }
+        },
+        {
+          "method": "GetVersion",
+          "request": {
+            "type": "GetVersionRequest"
+          },
+          "response": {
+            "type": "Version"
+          }
+        },
+        {
+          "method": "DeleteVersion",
+          "request": {
+            "type": "DeleteVersionRequest"
+          },
+          "response": {
+            "type": "google.longrunning.Operation"
+          }
+        },
+        {
+          "method": "ListFiles",
+          "request": {
+            "type": "ListFilesRequest"
+          },
+          "response": {
+            "type": "ListFilesResponse"
+          }
+        },
+        {
+          "method": "GetFile",
+          "request": {
+            "type": "GetFileRequest"
+          },
+          "response": {
+            "type": "File"
+          }
+        },
+        {
+          "method": "ListTags",
+          "request": {
+            "type": "ListTagsRequest"
+          },
+          "response": {
+            "type": "ListTagsResponse"
+          }
+        },
+        {
+          "method": "GetTag",
+          "request": {
+            "type": "GetTagRequest"
+          },
+          "response": {
+            "type": "Tag"
+          }
+        },
+        {
+          "method": "CreateTag",
+          "request": {
+            "type": "CreateTagRequest"
+          },
+          "response": {
+            "type": "Tag"
+          }
+        },
+        {
+          "method": "UpdateTag",
+          "request": {
+            "type": "UpdateTagRequest"
+          },
+          "response": {
+            "type": "Tag"
+          }
+        },
+        {
+          "method": "DeleteTag",
+          "request": {
+            "type": "DeleteTagRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "SetIamPolicy",
+          "request": {
+            "type": "google.iam.v1.SetIamPolicyRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.Policy"
+          }
+        },
+        {
+          "method": "GetIamPolicy",
+          "request": {
+            "type": "google.iam.v1.GetIamPolicyRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.Policy"
+          }
+        },
+        {
+          "method": "TestIamPermissions",
+          "request": {
+            "type": "google.iam.v1.TestIamPermissionsRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.TestIamPermissionsResponse"
+          }
+        },
+        {
+          "method": "GetProjectSettings",
+          "request": {
+            "type": "GetProjectSettingsRequest"
+          },
+          "response": {
+            "type": "ProjectSettings"
+          }
+        },
+        {
+          "method": "UpdateProjectSettings",
+          "request": {
+            "type": "UpdateProjectSettingsRequest"
+          },
+          "response": {
+            "type": "ProjectSettings"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "OperationMetadata"
+    }
+  ],
+  "go": {
+    "src": "artifactregistry/apiv1beta2/artifactregistrypb/service.pb.go",
+    "pkg": "artifactregistrypb",
+    "pkg_full": "cloud.google.com/go/artifactregistry/apiv1beta2/artifactregistrypb"
+  }
+}

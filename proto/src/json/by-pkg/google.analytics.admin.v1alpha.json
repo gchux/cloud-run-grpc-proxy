@@ -1,0 +1,1992 @@
+{
+  "proto": "google/analytics/admin/v1alpha/subproperty_event_filter",
+  "pkg": "google.analytics.admin.v1alpha",
+  "msgs": [
+    {
+      "type": "SubpropertyEventFilterCondition",
+      "msgs": [
+        {
+          "type": "StringFilter"
+        }
+      ]
+    },
+    {
+      "type": "SubpropertyEventFilterExpression"
+    },
+    {
+      "type": "SubpropertyEventFilterExpressionList"
+    },
+    {
+      "type": "SubpropertyEventFilterClause"
+    },
+    {
+      "type": "SubpropertyEventFilter"
+    }
+  ],
+  "go": {
+    "src": "analytics/admin/apiv1alpha/adminpb/subproperty_event_filter.pb.go",
+    "pkg": "adminpb",
+    "pkg_full": "cloud.google.com/go/analytics/admin/apiv1alpha/adminpb"
+  }
+}
+{
+  "proto": "google/analytics/admin/v1alpha/analytics_admin",
+  "pkg": "google.analytics.admin.v1alpha",
+  "svcs": [
+    {
+      "svc": "AnalyticsAdminService",
+      "host": "analyticsadmin.googleapis.com",
+      "rpcs": [
+        {
+          "method": "GetAccount",
+          "request": {
+            "type": "GetAccountRequest"
+          },
+          "response": {
+            "type": "Account"
+          }
+        },
+        {
+          "method": "ListAccounts",
+          "request": {
+            "type": "ListAccountsRequest"
+          },
+          "response": {
+            "type": "ListAccountsResponse"
+          }
+        },
+        {
+          "method": "DeleteAccount",
+          "request": {
+            "type": "DeleteAccountRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "UpdateAccount",
+          "request": {
+            "type": "UpdateAccountRequest"
+          },
+          "response": {
+            "type": "Account"
+          }
+        },
+        {
+          "method": "ProvisionAccountTicket",
+          "request": {
+            "type": "ProvisionAccountTicketRequest"
+          },
+          "response": {
+            "type": "ProvisionAccountTicketResponse"
+          }
+        },
+        {
+          "method": "ListAccountSummaries",
+          "request": {
+            "type": "ListAccountSummariesRequest"
+          },
+          "response": {
+            "type": "ListAccountSummariesResponse"
+          }
+        },
+        {
+          "method": "GetProperty",
+          "request": {
+            "type": "GetPropertyRequest"
+          },
+          "response": {
+            "type": "Property"
+          }
+        },
+        {
+          "method": "ListProperties",
+          "request": {
+            "type": "ListPropertiesRequest"
+          },
+          "response": {
+            "type": "ListPropertiesResponse"
+          }
+        },
+        {
+          "method": "CreateProperty",
+          "request": {
+            "type": "CreatePropertyRequest"
+          },
+          "response": {
+            "type": "Property"
+          }
+        },
+        {
+          "method": "DeleteProperty",
+          "request": {
+            "type": "DeletePropertyRequest"
+          },
+          "response": {
+            "type": "Property"
+          }
+        },
+        {
+          "method": "UpdateProperty",
+          "request": {
+            "type": "UpdatePropertyRequest"
+          },
+          "response": {
+            "type": "Property"
+          }
+        },
+        {
+          "method": "CreateFirebaseLink",
+          "request": {
+            "type": "CreateFirebaseLinkRequest"
+          },
+          "response": {
+            "type": "FirebaseLink"
+          }
+        },
+        {
+          "method": "DeleteFirebaseLink",
+          "request": {
+            "type": "DeleteFirebaseLinkRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListFirebaseLinks",
+          "request": {
+            "type": "ListFirebaseLinksRequest"
+          },
+          "response": {
+            "type": "ListFirebaseLinksResponse"
+          }
+        },
+        {
+          "method": "GetGlobalSiteTag",
+          "request": {
+            "type": "GetGlobalSiteTagRequest"
+          },
+          "response": {
+            "type": "GlobalSiteTag"
+          }
+        },
+        {
+          "method": "CreateGoogleAdsLink",
+          "request": {
+            "type": "CreateGoogleAdsLinkRequest"
+          },
+          "response": {
+            "type": "GoogleAdsLink"
+          }
+        },
+        {
+          "method": "UpdateGoogleAdsLink",
+          "request": {
+            "type": "UpdateGoogleAdsLinkRequest"
+          },
+          "response": {
+            "type": "GoogleAdsLink"
+          }
+        },
+        {
+          "method": "DeleteGoogleAdsLink",
+          "request": {
+            "type": "DeleteGoogleAdsLinkRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListGoogleAdsLinks",
+          "request": {
+            "type": "ListGoogleAdsLinksRequest"
+          },
+          "response": {
+            "type": "ListGoogleAdsLinksResponse"
+          }
+        },
+        {
+          "method": "GetDataSharingSettings",
+          "request": {
+            "type": "GetDataSharingSettingsRequest"
+          },
+          "response": {
+            "type": "DataSharingSettings"
+          }
+        },
+        {
+          "method": "GetMeasurementProtocolSecret",
+          "request": {
+            "type": "GetMeasurementProtocolSecretRequest"
+          },
+          "response": {
+            "type": "MeasurementProtocolSecret"
+          }
+        },
+        {
+          "method": "ListMeasurementProtocolSecrets",
+          "request": {
+            "type": "ListMeasurementProtocolSecretsRequest"
+          },
+          "response": {
+            "type": "ListMeasurementProtocolSecretsResponse"
+          }
+        },
+        {
+          "method": "CreateMeasurementProtocolSecret",
+          "request": {
+            "type": "CreateMeasurementProtocolSecretRequest"
+          },
+          "response": {
+            "type": "MeasurementProtocolSecret"
+          }
+        },
+        {
+          "method": "DeleteMeasurementProtocolSecret",
+          "request": {
+            "type": "DeleteMeasurementProtocolSecretRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "UpdateMeasurementProtocolSecret",
+          "request": {
+            "type": "UpdateMeasurementProtocolSecretRequest"
+          },
+          "response": {
+            "type": "MeasurementProtocolSecret"
+          }
+        },
+        {
+          "method": "AcknowledgeUserDataCollection",
+          "request": {
+            "type": "AcknowledgeUserDataCollectionRequest"
+          },
+          "response": {
+            "type": "AcknowledgeUserDataCollectionResponse"
+          }
+        },
+        {
+          "method": "SearchChangeHistoryEvents",
+          "request": {
+            "type": "SearchChangeHistoryEventsRequest"
+          },
+          "response": {
+            "type": "SearchChangeHistoryEventsResponse"
+          }
+        },
+        {
+          "method": "GetGoogleSignalsSettings",
+          "request": {
+            "type": "GetGoogleSignalsSettingsRequest"
+          },
+          "response": {
+            "type": "GoogleSignalsSettings"
+          }
+        },
+        {
+          "method": "UpdateGoogleSignalsSettings",
+          "request": {
+            "type": "UpdateGoogleSignalsSettingsRequest"
+          },
+          "response": {
+            "type": "GoogleSignalsSettings"
+          }
+        },
+        {
+          "method": "CreateConversionEvent",
+          "request": {
+            "type": "CreateConversionEventRequest"
+          },
+          "response": {
+            "type": "ConversionEvent"
+          }
+        },
+        {
+          "method": "UpdateConversionEvent",
+          "request": {
+            "type": "UpdateConversionEventRequest"
+          },
+          "response": {
+            "type": "ConversionEvent"
+          }
+        },
+        {
+          "method": "GetConversionEvent",
+          "request": {
+            "type": "GetConversionEventRequest"
+          },
+          "response": {
+            "type": "ConversionEvent"
+          }
+        },
+        {
+          "method": "DeleteConversionEvent",
+          "request": {
+            "type": "DeleteConversionEventRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListConversionEvents",
+          "request": {
+            "type": "ListConversionEventsRequest"
+          },
+          "response": {
+            "type": "ListConversionEventsResponse"
+          }
+        },
+        {
+          "method": "GetDisplayVideo360AdvertiserLink",
+          "request": {
+            "type": "GetDisplayVideo360AdvertiserLinkRequest"
+          },
+          "response": {
+            "type": "DisplayVideo360AdvertiserLink"
+          }
+        },
+        {
+          "method": "CreateCustomDimension",
+          "request": {
+            "type": "CreateCustomDimensionRequest"
+          },
+          "response": {
+            "type": "CustomDimension"
+          }
+        },
+        {
+          "method": "UpdateCustomDimension",
+          "request": {
+            "type": "UpdateCustomDimensionRequest"
+          },
+          "response": {
+            "type": "CustomDimension"
+          }
+        },
+        {
+          "method": "ListCustomDimensions",
+          "request": {
+            "type": "ListCustomDimensionsRequest"
+          },
+          "response": {
+            "type": "ListCustomDimensionsResponse"
+          }
+        },
+        {
+          "method": "ArchiveCustomDimension",
+          "request": {
+            "type": "ArchiveCustomDimensionRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "GetCustomDimension",
+          "request": {
+            "type": "GetCustomDimensionRequest"
+          },
+          "response": {
+            "type": "CustomDimension"
+          }
+        },
+        {
+          "method": "CreateCustomMetric",
+          "request": {
+            "type": "CreateCustomMetricRequest"
+          },
+          "response": {
+            "type": "CustomMetric"
+          }
+        },
+        {
+          "method": "UpdateCustomMetric",
+          "request": {
+            "type": "UpdateCustomMetricRequest"
+          },
+          "response": {
+            "type": "CustomMetric"
+          }
+        },
+        {
+          "method": "ListCustomMetrics",
+          "request": {
+            "type": "ListCustomMetricsRequest"
+          },
+          "response": {
+            "type": "ListCustomMetricsResponse"
+          }
+        },
+        {
+          "method": "ArchiveCustomMetric",
+          "request": {
+            "type": "ArchiveCustomMetricRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "GetCustomMetric",
+          "request": {
+            "type": "GetCustomMetricRequest"
+          },
+          "response": {
+            "type": "CustomMetric"
+          }
+        },
+        {
+          "method": "GetDataRetentionSettings",
+          "request": {
+            "type": "GetDataRetentionSettingsRequest"
+          },
+          "response": {
+            "type": "DataRetentionSettings"
+          }
+        },
+        {
+          "method": "UpdateDataRetentionSettings",
+          "request": {
+            "type": "UpdateDataRetentionSettingsRequest"
+          },
+          "response": {
+            "type": "DataRetentionSettings"
+          }
+        },
+        {
+          "method": "CreateDataStream",
+          "request": {
+            "type": "CreateDataStreamRequest"
+          },
+          "response": {
+            "type": "DataStream"
+          }
+        },
+        {
+          "method": "DeleteDataStream",
+          "request": {
+            "type": "DeleteDataStreamRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "UpdateDataStream",
+          "request": {
+            "type": "UpdateDataStreamRequest"
+          },
+          "response": {
+            "type": "DataStream"
+          }
+        },
+        {
+          "method": "ListDataStreams",
+          "request": {
+            "type": "ListDataStreamsRequest"
+          },
+          "response": {
+            "type": "ListDataStreamsResponse"
+          }
+        },
+        {
+          "method": "GetDataStream",
+          "request": {
+            "type": "GetDataStreamRequest"
+          },
+          "response": {
+            "type": "DataStream"
+          }
+        },
+        {
+          "method": "GetAudience",
+          "request": {
+            "type": "GetAudienceRequest"
+          },
+          "response": {
+            "type": "Audience"
+          }
+        },
+        {
+          "method": "ListAudiences",
+          "request": {
+            "type": "ListAudiencesRequest"
+          },
+          "response": {
+            "type": "ListAudiencesResponse"
+          }
+        },
+        {
+          "method": "CreateAudience",
+          "request": {
+            "type": "CreateAudienceRequest"
+          },
+          "response": {
+            "type": "Audience"
+          }
+        },
+        {
+          "method": "UpdateAudience",
+          "request": {
+            "type": "UpdateAudienceRequest"
+          },
+          "response": {
+            "type": "Audience"
+          }
+        },
+        {
+          "method": "ArchiveAudience",
+          "request": {
+            "type": "ArchiveAudienceRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "GetSearchAds360Link",
+          "request": {
+            "type": "GetSearchAds360LinkRequest"
+          },
+          "response": {
+            "type": "SearchAds360Link"
+          }
+        },
+        {
+          "method": "ListSearchAds360Links",
+          "request": {
+            "type": "ListSearchAds360LinksRequest"
+          },
+          "response": {
+            "type": "ListSearchAds360LinksResponse"
+          }
+        },
+        {
+          "method": "CreateSearchAds360Link",
+          "request": {
+            "type": "CreateSearchAds360LinkRequest"
+          },
+          "response": {
+            "type": "SearchAds360Link"
+          }
+        },
+        {
+          "method": "DeleteSearchAds360Link",
+          "request": {
+            "type": "DeleteSearchAds360LinkRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "UpdateSearchAds360Link",
+          "request": {
+            "type": "UpdateSearchAds360LinkRequest"
+          },
+          "response": {
+            "type": "SearchAds360Link"
+          }
+        },
+        {
+          "method": "GetAttributionSettings",
+          "request": {
+            "type": "GetAttributionSettingsRequest"
+          },
+          "response": {
+            "type": "AttributionSettings"
+          }
+        },
+        {
+          "method": "UpdateAttributionSettings",
+          "request": {
+            "type": "UpdateAttributionSettingsRequest"
+          },
+          "response": {
+            "type": "AttributionSettings"
+          }
+        },
+        {
+          "method": "RunAccessReport",
+          "request": {
+            "type": "RunAccessReportRequest"
+          },
+          "response": {
+            "type": "RunAccessReportResponse"
+          }
+        },
+        {
+          "method": "CreateAccessBinding",
+          "request": {
+            "type": "CreateAccessBindingRequest"
+          },
+          "response": {
+            "type": "AccessBinding"
+          }
+        },
+        {
+          "method": "GetAccessBinding",
+          "request": {
+            "type": "GetAccessBindingRequest"
+          },
+          "response": {
+            "type": "AccessBinding"
+          }
+        },
+        {
+          "method": "UpdateAccessBinding",
+          "request": {
+            "type": "UpdateAccessBindingRequest"
+          },
+          "response": {
+            "type": "AccessBinding"
+          }
+        },
+        {
+          "method": "DeleteAccessBinding",
+          "request": {
+            "type": "DeleteAccessBindingRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListAccessBindings",
+          "request": {
+            "type": "ListAccessBindingsRequest"
+          },
+          "response": {
+            "type": "ListAccessBindingsResponse"
+          }
+        },
+        {
+          "method": "BatchCreateAccessBindings",
+          "request": {
+            "type": "BatchCreateAccessBindingsRequest"
+          },
+          "response": {
+            "type": "BatchCreateAccessBindingsResponse"
+          }
+        },
+        {
+          "method": "BatchGetAccessBindings",
+          "request": {
+            "type": "BatchGetAccessBindingsRequest"
+          },
+          "response": {
+            "type": "BatchGetAccessBindingsResponse"
+          }
+        },
+        {
+          "method": "BatchUpdateAccessBindings",
+          "request": {
+            "type": "BatchUpdateAccessBindingsRequest"
+          },
+          "response": {
+            "type": "BatchUpdateAccessBindingsResponse"
+          }
+        },
+        {
+          "method": "BatchDeleteAccessBindings",
+          "request": {
+            "type": "BatchDeleteAccessBindingsRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "GetExpandedDataSet",
+          "request": {
+            "type": "GetExpandedDataSetRequest"
+          },
+          "response": {
+            "type": "ExpandedDataSet"
+          }
+        },
+        {
+          "method": "ListExpandedDataSets",
+          "request": {
+            "type": "ListExpandedDataSetsRequest"
+          },
+          "response": {
+            "type": "ListExpandedDataSetsResponse"
+          }
+        },
+        {
+          "method": "CreateExpandedDataSet",
+          "request": {
+            "type": "CreateExpandedDataSetRequest"
+          },
+          "response": {
+            "type": "ExpandedDataSet"
+          }
+        },
+        {
+          "method": "UpdateExpandedDataSet",
+          "request": {
+            "type": "UpdateExpandedDataSetRequest"
+          },
+          "response": {
+            "type": "ExpandedDataSet"
+          }
+        },
+        {
+          "method": "DeleteExpandedDataSet",
+          "request": {
+            "type": "DeleteExpandedDataSetRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "GetChannelGroup",
+          "request": {
+            "type": "GetChannelGroupRequest"
+          },
+          "response": {
+            "type": "ChannelGroup"
+          }
+        },
+        {
+          "method": "ListChannelGroups",
+          "request": {
+            "type": "ListChannelGroupsRequest"
+          },
+          "response": {
+            "type": "ListChannelGroupsResponse"
+          }
+        },
+        {
+          "method": "CreateChannelGroup",
+          "request": {
+            "type": "CreateChannelGroupRequest"
+          },
+          "response": {
+            "type": "ChannelGroup"
+          }
+        },
+        {
+          "method": "UpdateChannelGroup",
+          "request": {
+            "type": "UpdateChannelGroupRequest"
+          },
+          "response": {
+            "type": "ChannelGroup"
+          }
+        },
+        {
+          "method": "DeleteChannelGroup",
+          "request": {
+            "type": "DeleteChannelGroupRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "GetBigQueryLink",
+          "request": {
+            "type": "GetBigQueryLinkRequest"
+          },
+          "response": {
+            "type": "BigQueryLink"
+          }
+        },
+        {
+          "method": "ListBigQueryLinks",
+          "request": {
+            "type": "ListBigQueryLinksRequest"
+          },
+          "response": {
+            "type": "ListBigQueryLinksResponse"
+          }
+        },
+        {
+          "method": "GetEnhancedMeasurementSettings",
+          "request": {
+            "type": "GetEnhancedMeasurementSettingsRequest"
+          },
+          "response": {
+            "type": "EnhancedMeasurementSettings"
+          }
+        },
+        {
+          "method": "CreateConnectedSiteTag",
+          "request": {
+            "type": "CreateConnectedSiteTagRequest"
+          },
+          "response": {
+            "type": "CreateConnectedSiteTagResponse"
+          }
+        },
+        {
+          "method": "DeleteConnectedSiteTag",
+          "request": {
+            "type": "DeleteConnectedSiteTagRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListConnectedSiteTags",
+          "request": {
+            "type": "ListConnectedSiteTagsRequest"
+          },
+          "response": {
+            "type": "ListConnectedSiteTagsResponse"
+          }
+        },
+        {
+          "method": "FetchConnectedGa4Property",
+          "request": {
+            "type": "FetchConnectedGa4PropertyRequest"
+          },
+          "response": {
+            "type": "FetchConnectedGa4PropertyResponse"
+          }
+        },
+        {
+          "method": "GetAdSenseLink",
+          "request": {
+            "type": "GetAdSenseLinkRequest"
+          },
+          "response": {
+            "type": "AdSenseLink"
+          }
+        },
+        {
+          "method": "CreateAdSenseLink",
+          "request": {
+            "type": "CreateAdSenseLinkRequest"
+          },
+          "response": {
+            "type": "AdSenseLink"
+          }
+        },
+        {
+          "method": "DeleteAdSenseLink",
+          "request": {
+            "type": "DeleteAdSenseLinkRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "ListAdSenseLinks",
+          "request": {
+            "type": "ListAdSenseLinksRequest"
+          },
+          "response": {
+            "type": "ListAdSenseLinksResponse"
+          }
+        },
+        {
+          "method": "GetEventCreateRule",
+          "request": {
+            "type": "GetEventCreateRuleRequest"
+          },
+          "response": {
+            "type": "EventCreateRule"
+          }
+        },
+        {
+          "method": "ListEventCreateRules",
+          "request": {
+            "type": "ListEventCreateRulesRequest"
+          },
+          "response": {
+            "type": "ListEventCreateRulesResponse"
+          }
+        },
+        {
+          "method": "CreateEventCreateRule",
+          "request": {
+            "type": "CreateEventCreateRuleRequest"
+          },
+          "response": {
+            "type": "EventCreateRule"
+          }
+        },
+        {
+          "method": "UpdateEventCreateRule",
+          "request": {
+            "type": "UpdateEventCreateRuleRequest"
+          },
+          "response": {
+            "type": "EventCreateRule"
+          }
+        },
+        {
+          "method": "DeleteEventCreateRule",
+          "request": {
+            "type": "DeleteEventCreateRuleRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "UpdateDataRedactionSettings",
+          "request": {
+            "type": "UpdateDataRedactionSettingsRequest"
+          },
+          "response": {
+            "type": "DataRedactionSettings"
+          }
+        },
+        {
+          "method": "GetDataRedactionSettings",
+          "request": {
+            "type": "GetDataRedactionSettingsRequest"
+          },
+          "response": {
+            "type": "DataRedactionSettings"
+          }
+        },
+        {
+          "method": "GetCalculatedMetric",
+          "request": {
+            "type": "GetCalculatedMetricRequest"
+          },
+          "response": {
+            "type": "CalculatedMetric"
+          }
+        },
+        {
+          "method": "CreateCalculatedMetric",
+          "request": {
+            "type": "CreateCalculatedMetricRequest"
+          },
+          "response": {
+            "type": "CalculatedMetric"
+          }
+        },
+        {
+          "method": "ListCalculatedMetrics",
+          "request": {
+            "type": "ListCalculatedMetricsRequest"
+          },
+          "response": {
+            "type": "ListCalculatedMetricsResponse"
+          }
+        },
+        {
+          "method": "UpdateCalculatedMetric",
+          "request": {
+            "type": "UpdateCalculatedMetricRequest"
+          },
+          "response": {
+            "type": "CalculatedMetric"
+          }
+        },
+        {
+          "method": "DeleteCalculatedMetric",
+          "request": {
+            "type": "DeleteCalculatedMetricRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "CreateRollupProperty",
+          "request": {
+            "type": "CreateRollupPropertyRequest"
+          },
+          "response": {
+            "type": "CreateRollupPropertyResponse"
+          }
+        },
+        {
+          "method": "GetRollupPropertySourceLink",
+          "request": {
+            "type": "GetRollupPropertySourceLinkRequest"
+          },
+          "response": {
+            "type": "RollupPropertySourceLink"
+          }
+        },
+        {
+          "method": "ListRollupPropertySourceLinks",
+          "request": {
+            "type": "ListRollupPropertySourceLinksRequest"
+          },
+          "response": {
+            "type": "ListRollupPropertySourceLinksResponse"
+          }
+        },
+        {
+          "method": "CreateRollupPropertySourceLink",
+          "request": {
+            "type": "CreateRollupPropertySourceLinkRequest"
+          },
+          "response": {
+            "type": "RollupPropertySourceLink"
+          }
+        },
+        {
+          "method": "DeleteRollupPropertySourceLink",
+          "request": {
+            "type": "DeleteRollupPropertySourceLinkRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        },
+        {
+          "method": "CreateSubproperty",
+          "request": {
+            "type": "CreateSubpropertyRequest"
+          },
+          "response": {
+            "type": "CreateSubpropertyResponse"
+          }
+        },
+        {
+          "method": "CreateSubpropertyEventFilter",
+          "request": {
+            "type": "CreateSubpropertyEventFilterRequest"
+          },
+          "response": {
+            "type": "SubpropertyEventFilter"
+          }
+        },
+        {
+          "method": "GetSubpropertyEventFilter",
+          "request": {
+            "type": "GetSubpropertyEventFilterRequest"
+          },
+          "response": {
+            "type": "SubpropertyEventFilter"
+          }
+        },
+        {
+          "method": "ListSubpropertyEventFilters",
+          "request": {
+            "type": "ListSubpropertyEventFiltersRequest"
+          },
+          "response": {
+            "type": "ListSubpropertyEventFiltersResponse"
+          }
+        },
+        {
+          "method": "UpdateSubpropertyEventFilter",
+          "request": {
+            "type": "UpdateSubpropertyEventFilterRequest"
+          },
+          "response": {
+            "type": "SubpropertyEventFilter"
+          }
+        },
+        {
+          "method": "DeleteSubpropertyEventFilter",
+          "request": {
+            "type": "DeleteSubpropertyEventFilterRequest"
+          },
+          "response": {
+            "type": "google.protobuf.Empty"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "RunAccessReportRequest"
+    },
+    {
+      "type": "RunAccessReportResponse"
+    },
+    {
+      "type": "GetAccountRequest"
+    },
+    {
+      "type": "ListAccountsRequest"
+    },
+    {
+      "type": "ListAccountsResponse"
+    },
+    {
+      "type": "DeleteAccountRequest"
+    },
+    {
+      "type": "UpdateAccountRequest"
+    },
+    {
+      "type": "ProvisionAccountTicketRequest"
+    },
+    {
+      "type": "ProvisionAccountTicketResponse"
+    },
+    {
+      "type": "GetPropertyRequest"
+    },
+    {
+      "type": "ListPropertiesRequest"
+    },
+    {
+      "type": "ListPropertiesResponse"
+    },
+    {
+      "type": "UpdatePropertyRequest"
+    },
+    {
+      "type": "CreatePropertyRequest"
+    },
+    {
+      "type": "DeletePropertyRequest"
+    },
+    {
+      "type": "CreateFirebaseLinkRequest"
+    },
+    {
+      "type": "DeleteFirebaseLinkRequest"
+    },
+    {
+      "type": "ListFirebaseLinksRequest"
+    },
+    {
+      "type": "ListFirebaseLinksResponse"
+    },
+    {
+      "type": "GetGlobalSiteTagRequest"
+    },
+    {
+      "type": "CreateGoogleAdsLinkRequest"
+    },
+    {
+      "type": "UpdateGoogleAdsLinkRequest"
+    },
+    {
+      "type": "DeleteGoogleAdsLinkRequest"
+    },
+    {
+      "type": "ListGoogleAdsLinksRequest"
+    },
+    {
+      "type": "ListGoogleAdsLinksResponse"
+    },
+    {
+      "type": "GetDataSharingSettingsRequest"
+    },
+    {
+      "type": "ListAccountSummariesRequest"
+    },
+    {
+      "type": "ListAccountSummariesResponse"
+    },
+    {
+      "type": "AcknowledgeUserDataCollectionRequest"
+    },
+    {
+      "type": "AcknowledgeUserDataCollectionResponse"
+    },
+    {
+      "type": "SearchChangeHistoryEventsRequest"
+    },
+    {
+      "type": "SearchChangeHistoryEventsResponse"
+    },
+    {
+      "type": "GetMeasurementProtocolSecretRequest"
+    },
+    {
+      "type": "CreateMeasurementProtocolSecretRequest"
+    },
+    {
+      "type": "DeleteMeasurementProtocolSecretRequest"
+    },
+    {
+      "type": "UpdateMeasurementProtocolSecretRequest"
+    },
+    {
+      "type": "ListMeasurementProtocolSecretsRequest"
+    },
+    {
+      "type": "ListMeasurementProtocolSecretsResponse"
+    },
+    {
+      "type": "GetSKAdNetworkConversionValueSchemaRequest"
+    },
+    {
+      "type": "CreateSKAdNetworkConversionValueSchemaRequest"
+    },
+    {
+      "type": "DeleteSKAdNetworkConversionValueSchemaRequest"
+    },
+    {
+      "type": "UpdateSKAdNetworkConversionValueSchemaRequest"
+    },
+    {
+      "type": "ListSKAdNetworkConversionValueSchemasRequest"
+    },
+    {
+      "type": "ListSKAdNetworkConversionValueSchemasResponse"
+    },
+    {
+      "type": "GetGoogleSignalsSettingsRequest"
+    },
+    {
+      "type": "UpdateGoogleSignalsSettingsRequest"
+    },
+    {
+      "type": "CreateConversionEventRequest"
+    },
+    {
+      "type": "UpdateConversionEventRequest"
+    },
+    {
+      "type": "GetConversionEventRequest"
+    },
+    {
+      "type": "DeleteConversionEventRequest"
+    },
+    {
+      "type": "ListConversionEventsRequest"
+    },
+    {
+      "type": "ListConversionEventsResponse"
+    },
+    {
+      "type": "GetDisplayVideo360AdvertiserLinkRequest"
+    },
+    {
+      "type": "ListDisplayVideo360AdvertiserLinksRequest"
+    },
+    {
+      "type": "ListDisplayVideo360AdvertiserLinksResponse"
+    },
+    {
+      "type": "CreateDisplayVideo360AdvertiserLinkRequest"
+    },
+    {
+      "type": "DeleteDisplayVideo360AdvertiserLinkRequest"
+    },
+    {
+      "type": "UpdateDisplayVideo360AdvertiserLinkRequest"
+    },
+    {
+      "type": "GetDisplayVideo360AdvertiserLinkProposalRequest"
+    },
+    {
+      "type": "ListDisplayVideo360AdvertiserLinkProposalsRequest"
+    },
+    {
+      "type": "ListDisplayVideo360AdvertiserLinkProposalsResponse"
+    },
+    {
+      "type": "CreateDisplayVideo360AdvertiserLinkProposalRequest"
+    },
+    {
+      "type": "DeleteDisplayVideo360AdvertiserLinkProposalRequest"
+    },
+    {
+      "type": "ApproveDisplayVideo360AdvertiserLinkProposalRequest"
+    },
+    {
+      "type": "ApproveDisplayVideo360AdvertiserLinkProposalResponse"
+    },
+    {
+      "type": "CancelDisplayVideo360AdvertiserLinkProposalRequest"
+    },
+    {
+      "type": "GetSearchAds360LinkRequest"
+    },
+    {
+      "type": "ListSearchAds360LinksRequest"
+    },
+    {
+      "type": "ListSearchAds360LinksResponse"
+    },
+    {
+      "type": "CreateSearchAds360LinkRequest"
+    },
+    {
+      "type": "DeleteSearchAds360LinkRequest"
+    },
+    {
+      "type": "UpdateSearchAds360LinkRequest"
+    },
+    {
+      "type": "CreateCustomDimensionRequest"
+    },
+    {
+      "type": "UpdateCustomDimensionRequest"
+    },
+    {
+      "type": "ListCustomDimensionsRequest"
+    },
+    {
+      "type": "ListCustomDimensionsResponse"
+    },
+    {
+      "type": "ArchiveCustomDimensionRequest"
+    },
+    {
+      "type": "GetCustomDimensionRequest"
+    },
+    {
+      "type": "CreateCustomMetricRequest"
+    },
+    {
+      "type": "UpdateCustomMetricRequest"
+    },
+    {
+      "type": "ListCustomMetricsRequest"
+    },
+    {
+      "type": "ListCustomMetricsResponse"
+    },
+    {
+      "type": "ArchiveCustomMetricRequest"
+    },
+    {
+      "type": "GetCustomMetricRequest"
+    },
+    {
+      "type": "CreateCalculatedMetricRequest"
+    },
+    {
+      "type": "UpdateCalculatedMetricRequest"
+    },
+    {
+      "type": "DeleteCalculatedMetricRequest"
+    },
+    {
+      "type": "ListCalculatedMetricsRequest"
+    },
+    {
+      "type": "ListCalculatedMetricsResponse"
+    },
+    {
+      "type": "GetCalculatedMetricRequest"
+    },
+    {
+      "type": "GetDataRetentionSettingsRequest"
+    },
+    {
+      "type": "UpdateDataRetentionSettingsRequest"
+    },
+    {
+      "type": "CreateDataStreamRequest"
+    },
+    {
+      "type": "DeleteDataStreamRequest"
+    },
+    {
+      "type": "UpdateDataStreamRequest"
+    },
+    {
+      "type": "ListDataStreamsRequest"
+    },
+    {
+      "type": "ListDataStreamsResponse"
+    },
+    {
+      "type": "GetDataStreamRequest"
+    },
+    {
+      "type": "GetAudienceRequest"
+    },
+    {
+      "type": "ListAudiencesRequest"
+    },
+    {
+      "type": "ListAudiencesResponse"
+    },
+    {
+      "type": "CreateAudienceRequest"
+    },
+    {
+      "type": "UpdateAudienceRequest"
+    },
+    {
+      "type": "ArchiveAudienceRequest"
+    },
+    {
+      "type": "GetAttributionSettingsRequest"
+    },
+    {
+      "type": "UpdateAttributionSettingsRequest"
+    },
+    {
+      "type": "GetAccessBindingRequest"
+    },
+    {
+      "type": "BatchGetAccessBindingsRequest"
+    },
+    {
+      "type": "BatchGetAccessBindingsResponse"
+    },
+    {
+      "type": "ListAccessBindingsRequest"
+    },
+    {
+      "type": "ListAccessBindingsResponse"
+    },
+    {
+      "type": "CreateAccessBindingRequest"
+    },
+    {
+      "type": "BatchCreateAccessBindingsRequest"
+    },
+    {
+      "type": "BatchCreateAccessBindingsResponse"
+    },
+    {
+      "type": "UpdateAccessBindingRequest"
+    },
+    {
+      "type": "BatchUpdateAccessBindingsRequest"
+    },
+    {
+      "type": "BatchUpdateAccessBindingsResponse"
+    },
+    {
+      "type": "DeleteAccessBindingRequest"
+    },
+    {
+      "type": "BatchDeleteAccessBindingsRequest"
+    },
+    {
+      "type": "CreateExpandedDataSetRequest"
+    },
+    {
+      "type": "UpdateExpandedDataSetRequest"
+    },
+    {
+      "type": "DeleteExpandedDataSetRequest"
+    },
+    {
+      "type": "GetExpandedDataSetRequest"
+    },
+    {
+      "type": "ListExpandedDataSetsRequest"
+    },
+    {
+      "type": "ListExpandedDataSetsResponse"
+    },
+    {
+      "type": "CreateChannelGroupRequest"
+    },
+    {
+      "type": "UpdateChannelGroupRequest"
+    },
+    {
+      "type": "DeleteChannelGroupRequest"
+    },
+    {
+      "type": "GetChannelGroupRequest"
+    },
+    {
+      "type": "ListChannelGroupsRequest"
+    },
+    {
+      "type": "ListChannelGroupsResponse"
+    },
+    {
+      "type": "SetAutomatedGa4ConfigurationOptOutRequest"
+    },
+    {
+      "type": "SetAutomatedGa4ConfigurationOptOutResponse"
+    },
+    {
+      "type": "FetchAutomatedGa4ConfigurationOptOutRequest"
+    },
+    {
+      "type": "FetchAutomatedGa4ConfigurationOptOutResponse"
+    },
+    {
+      "type": "GetBigQueryLinkRequest"
+    },
+    {
+      "type": "ListBigQueryLinksRequest"
+    },
+    {
+      "type": "ListBigQueryLinksResponse"
+    },
+    {
+      "type": "GetEnhancedMeasurementSettingsRequest"
+    },
+    {
+      "type": "UpdateEnhancedMeasurementSettingsRequest"
+    },
+    {
+      "type": "GetDataRedactionSettingsRequest"
+    },
+    {
+      "type": "UpdateDataRedactionSettingsRequest"
+    },
+    {
+      "type": "CreateConnectedSiteTagRequest"
+    },
+    {
+      "type": "CreateConnectedSiteTagResponse"
+    },
+    {
+      "type": "DeleteConnectedSiteTagRequest"
+    },
+    {
+      "type": "ListConnectedSiteTagsRequest"
+    },
+    {
+      "type": "ListConnectedSiteTagsResponse"
+    },
+    {
+      "type": "CreateAdSenseLinkRequest"
+    },
+    {
+      "type": "GetAdSenseLinkRequest"
+    },
+    {
+      "type": "DeleteAdSenseLinkRequest"
+    },
+    {
+      "type": "ListAdSenseLinksRequest"
+    },
+    {
+      "type": "ListAdSenseLinksResponse"
+    },
+    {
+      "type": "FetchConnectedGa4PropertyRequest"
+    },
+    {
+      "type": "FetchConnectedGa4PropertyResponse"
+    },
+    {
+      "type": "CreateEventCreateRuleRequest"
+    },
+    {
+      "type": "UpdateEventCreateRuleRequest"
+    },
+    {
+      "type": "DeleteEventCreateRuleRequest"
+    },
+    {
+      "type": "GetEventCreateRuleRequest"
+    },
+    {
+      "type": "ListEventCreateRulesRequest"
+    },
+    {
+      "type": "ListEventCreateRulesResponse"
+    },
+    {
+      "type": "CreateRollupPropertyRequest"
+    },
+    {
+      "type": "CreateRollupPropertyResponse"
+    },
+    {
+      "type": "GetRollupPropertySourceLinkRequest"
+    },
+    {
+      "type": "ListRollupPropertySourceLinksRequest"
+    },
+    {
+      "type": "ListRollupPropertySourceLinksResponse"
+    },
+    {
+      "type": "CreateRollupPropertySourceLinkRequest"
+    },
+    {
+      "type": "DeleteRollupPropertySourceLinkRequest"
+    },
+    {
+      "type": "CreateSubpropertyRequest"
+    },
+    {
+      "type": "CreateSubpropertyResponse"
+    },
+    {
+      "type": "CreateSubpropertyEventFilterRequest"
+    },
+    {
+      "type": "GetSubpropertyEventFilterRequest"
+    },
+    {
+      "type": "ListSubpropertyEventFiltersRequest"
+    },
+    {
+      "type": "ListSubpropertyEventFiltersResponse"
+    },
+    {
+      "type": "UpdateSubpropertyEventFilterRequest"
+    },
+    {
+      "type": "DeleteSubpropertyEventFilterRequest"
+    }
+  ],
+  "go": {
+    "src": "analytics/admin/apiv1alpha/adminpb/analytics_admin.pb.go",
+    "pkg": "adminpb",
+    "pkg_full": "cloud.google.com/go/analytics/admin/apiv1alpha/adminpb"
+  }
+}
+{
+  "proto": "google/analytics/admin/v1alpha/event_create_and_edit",
+  "pkg": "google.analytics.admin.v1alpha",
+  "msgs": [
+    {
+      "type": "ParameterMutation"
+    },
+    {
+      "type": "EventCreateRule"
+    },
+    {
+      "type": "MatchingCondition"
+    }
+  ],
+  "go": {
+    "src": "analytics/admin/apiv1alpha/adminpb/event_create_and_edit.pb.go",
+    "pkg": "adminpb",
+    "pkg_full": "cloud.google.com/go/analytics/admin/apiv1alpha/adminpb"
+  }
+}
+{
+  "proto": "google/analytics/admin/v1alpha/resources",
+  "pkg": "google.analytics.admin.v1alpha",
+  "msgs": [
+    {
+      "type": "Account"
+    },
+    {
+      "type": "Property"
+    },
+    {
+      "type": "DataStream",
+      "msgs": [
+        {
+          "type": "WebStreamData"
+        },
+        {
+          "type": "AndroidAppStreamData"
+        },
+        {
+          "type": "IosAppStreamData"
+        }
+      ]
+    },
+    {
+      "type": "FirebaseLink"
+    },
+    {
+      "type": "GlobalSiteTag"
+    },
+    {
+      "type": "GoogleAdsLink"
+    },
+    {
+      "type": "DataSharingSettings"
+    },
+    {
+      "type": "AccountSummary"
+    },
+    {
+      "type": "PropertySummary"
+    },
+    {
+      "type": "MeasurementProtocolSecret"
+    },
+    {
+      "type": "SKAdNetworkConversionValueSchema"
+    },
+    {
+      "type": "PostbackWindow"
+    },
+    {
+      "type": "ConversionValues"
+    },
+    {
+      "type": "EventMapping"
+    },
+    {
+      "type": "ChangeHistoryEvent"
+    },
+    {
+      "type": "ChangeHistoryChange",
+      "msgs": [
+        {
+          "type": "ChangeHistoryResource"
+        }
+      ]
+    },
+    {
+      "type": "DisplayVideo360AdvertiserLink"
+    },
+    {
+      "type": "DisplayVideo360AdvertiserLinkProposal"
+    },
+    {
+      "type": "SearchAds360Link"
+    },
+    {
+      "type": "LinkProposalStatusDetails"
+    },
+    {
+      "type": "ConversionEvent",
+      "msgs": [
+        {
+          "type": "DefaultConversionValue"
+        }
+      ]
+    },
+    {
+      "type": "GoogleSignalsSettings"
+    },
+    {
+      "type": "CustomDimension"
+    },
+    {
+      "type": "CustomMetric"
+    },
+    {
+      "type": "CalculatedMetric"
+    },
+    {
+      "type": "DataRetentionSettings"
+    },
+    {
+      "type": "AttributionSettings"
+    },
+    {
+      "type": "AccessBinding"
+    },
+    {
+      "type": "BigQueryLink"
+    },
+    {
+      "type": "EnhancedMeasurementSettings"
+    },
+    {
+      "type": "ConnectedSiteTag"
+    },
+    {
+      "type": "DataRedactionSettings"
+    },
+    {
+      "type": "AdSenseLink"
+    },
+    {
+      "type": "RollupPropertySourceLink"
+    }
+  ],
+  "go": {
+    "src": "analytics/admin/apiv1alpha/adminpb/resources.pb.go",
+    "pkg": "adminpb",
+    "pkg_full": "cloud.google.com/go/analytics/admin/apiv1alpha/adminpb"
+  }
+}
+{
+  "proto": "google/analytics/admin/v1alpha/channel_group",
+  "pkg": "google.analytics.admin.v1alpha",
+  "msgs": [
+    {
+      "type": "ChannelGroupFilter",
+      "msgs": [
+        {
+          "type": "StringFilter"
+        },
+        {
+          "type": "InListFilter"
+        }
+      ]
+    },
+    {
+      "type": "ChannelGroupFilterExpression"
+    },
+    {
+      "type": "ChannelGroupFilterExpressionList"
+    },
+    {
+      "type": "GroupingRule"
+    },
+    {
+      "type": "ChannelGroup"
+    }
+  ],
+  "go": {
+    "src": "analytics/admin/apiv1alpha/adminpb/channel_group.pb.go",
+    "pkg": "adminpb",
+    "pkg_full": "cloud.google.com/go/analytics/admin/apiv1alpha/adminpb"
+  }
+}
+{
+  "proto": "google/analytics/admin/v1alpha/access_report",
+  "pkg": "google.analytics.admin.v1alpha",
+  "msgs": [
+    {
+      "type": "AccessDimension"
+    },
+    {
+      "type": "AccessMetric"
+    },
+    {
+      "type": "AccessDateRange"
+    },
+    {
+      "type": "AccessFilterExpression"
+    },
+    {
+      "type": "AccessFilterExpressionList"
+    },
+    {
+      "type": "AccessFilter"
+    },
+    {
+      "type": "AccessStringFilter"
+    },
+    {
+      "type": "AccessInListFilter"
+    },
+    {
+      "type": "AccessNumericFilter"
+    },
+    {
+      "type": "AccessBetweenFilter"
+    },
+    {
+      "type": "NumericValue"
+    },
+    {
+      "type": "AccessOrderBy",
+      "msgs": [
+        {
+          "type": "MetricOrderBy"
+        },
+        {
+          "type": "DimensionOrderBy"
+        }
+      ]
+    },
+    {
+      "type": "AccessDimensionHeader"
+    },
+    {
+      "type": "AccessMetricHeader"
+    },
+    {
+      "type": "AccessRow"
+    },
+    {
+      "type": "AccessDimensionValue"
+    },
+    {
+      "type": "AccessMetricValue"
+    },
+    {
+      "type": "AccessQuota"
+    },
+    {
+      "type": "AccessQuotaStatus"
+    }
+  ],
+  "go": {
+    "src": "analytics/admin/apiv1alpha/adminpb/access_report.pb.go",
+    "pkg": "adminpb",
+    "pkg_full": "cloud.google.com/go/analytics/admin/apiv1alpha/adminpb"
+  }
+}
+{
+  "proto": "google/analytics/admin/v1alpha/expanded_data_set",
+  "pkg": "google.analytics.admin.v1alpha",
+  "msgs": [
+    {
+      "type": "ExpandedDataSetFilter",
+      "msgs": [
+        {
+          "type": "StringFilter"
+        },
+        {
+          "type": "InListFilter"
+        }
+      ]
+    },
+    {
+      "type": "ExpandedDataSetFilterExpression"
+    },
+    {
+      "type": "ExpandedDataSetFilterExpressionList"
+    },
+    {
+      "type": "ExpandedDataSet"
+    }
+  ],
+  "go": {
+    "src": "analytics/admin/apiv1alpha/adminpb/expanded_data_set.pb.go",
+    "pkg": "adminpb",
+    "pkg_full": "cloud.google.com/go/analytics/admin/apiv1alpha/adminpb"
+  }
+}
+{
+  "proto": "google/analytics/admin/v1alpha/audience",
+  "pkg": "google.analytics.admin.v1alpha",
+  "msgs": [
+    {
+      "type": "AudienceDimensionOrMetricFilter",
+      "msgs": [
+        {
+          "type": "StringFilter"
+        },
+        {
+          "type": "InListFilter"
+        },
+        {
+          "type": "NumericValue"
+        },
+        {
+          "type": "NumericFilter"
+        },
+        {
+          "type": "BetweenFilter"
+        }
+      ]
+    },
+    {
+      "type": "AudienceEventFilter"
+    },
+    {
+      "type": "AudienceFilterExpression"
+    },
+    {
+      "type": "AudienceFilterExpressionList"
+    },
+    {
+      "type": "AudienceSimpleFilter"
+    },
+    {
+      "type": "AudienceSequenceFilter",
+      "msgs": [
+        {
+          "type": "AudienceSequenceStep"
+        }
+      ]
+    },
+    {
+      "type": "AudienceFilterClause"
+    },
+    {
+      "type": "AudienceEventTrigger"
+    },
+    {
+      "type": "Audience"
+    }
+  ],
+  "go": {
+    "src": "analytics/admin/apiv1alpha/adminpb/audience.pb.go",
+    "pkg": "adminpb",
+    "pkg_full": "cloud.google.com/go/analytics/admin/apiv1alpha/adminpb"
+  }
+}

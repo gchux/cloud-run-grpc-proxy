@@ -1,0 +1,17 @@
+{
+  "proto": "google/cloud/cloudsetup/logging/v1/complete_deployment",
+  "pkg": "google.cloud.cloudsetup.logging.v1",
+  "msgs": [
+    {
+      "type": "CompleteDeploymentEvent"
+    },
+    {
+      "type": "CompleteDeploymentResult"
+    }
+  ],
+  "go": {
+    "src": "googleapis/cloud/cloudsetup/logging/v1/complete_deployment.pb.go",
+    "pkg": "loggingpb",
+    "pkg_full": "cloud.google.com/go/cloudsetup/logging/apiv1/loggingpb"
+  }
+}

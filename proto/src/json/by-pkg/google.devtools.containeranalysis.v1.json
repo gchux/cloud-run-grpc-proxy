@@ -1,0 +1,66 @@
+{
+  "proto": "google/devtools/containeranalysis/v1/containeranalysis",
+  "pkg": "google.devtools.containeranalysis.v1",
+  "svcs": [
+    {
+      "svc": "ContainerAnalysis",
+      "host": "containeranalysis.googleapis.com",
+      "rpcs": [
+        {
+          "method": "SetIamPolicy",
+          "request": {
+            "type": "google.iam.v1.SetIamPolicyRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.Policy"
+          }
+        },
+        {
+          "method": "GetIamPolicy",
+          "request": {
+            "type": "google.iam.v1.GetIamPolicyRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.Policy"
+          }
+        },
+        {
+          "method": "TestIamPermissions",
+          "request": {
+            "type": "google.iam.v1.TestIamPermissionsRequest"
+          },
+          "response": {
+            "type": "google.iam.v1.TestIamPermissionsResponse"
+          }
+        },
+        {
+          "method": "GetVulnerabilityOccurrencesSummary",
+          "request": {
+            "type": "GetVulnerabilityOccurrencesSummaryRequest"
+          },
+          "response": {
+            "type": "VulnerabilityOccurrencesSummary"
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "GetVulnerabilityOccurrencesSummaryRequest"
+    },
+    {
+      "type": "VulnerabilityOccurrencesSummary",
+      "msgs": [
+        {
+          "type": "FixableTotalByDigest"
+        }
+      ]
+    }
+  ],
+  "go": {
+    "src": "googleapis/devtools/containeranalysis/v1/containeranalysis.pb.go",
+    "pkg": "containeranalysispb",
+    "pkg_full": "cloud.google.com/go/containeranalysis/apiv1/containeranalysispb"
+  }
+}

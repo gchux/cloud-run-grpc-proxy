@@ -1,0 +1,50 @@
+{
+  "proto": "google/cloud/mediatranslation/v1beta1/media_translation",
+  "pkg": "google.cloud.mediatranslation.v1beta1",
+  "svcs": [
+    {
+      "svc": "SpeechTranslationService",
+      "host": "mediatranslation.googleapis.com",
+      "rpcs": [
+        {
+          "method": "StreamingTranslateSpeech",
+          "request": {
+            "type": "StreamingTranslateSpeechRequest",
+            "stream": true
+          },
+          "response": {
+            "type": "StreamingTranslateSpeechResponse",
+            "stream": true
+          }
+        }
+      ]
+    }
+  ],
+  "msgs": [
+    {
+      "type": "TranslateSpeechConfig"
+    },
+    {
+      "type": "StreamingTranslateSpeechConfig"
+    },
+    {
+      "type": "StreamingTranslateSpeechRequest"
+    },
+    {
+      "type": "StreamingTranslateSpeechResult",
+      "msgs": [
+        {
+          "type": "TextTranslationResult"
+        }
+      ]
+    },
+    {
+      "type": "StreamingTranslateSpeechResponse"
+    }
+  ],
+  "go": {
+    "src": "mediatranslation/apiv1beta1/mediatranslationpb/media_translation.pb.go",
+    "pkg": "mediatranslationpb",
+    "pkg_full": "cloud.google.com/go/mediatranslation/apiv1beta1/mediatranslationpb"
+  }
+}

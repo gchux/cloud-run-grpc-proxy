@@ -1,0 +1,34 @@
+{
+  "proto": "google/cloud/abuseevent/logging/v1/abuse_event",
+  "pkg": "google.cloud.abuseevent.logging.v1",
+  "msgs": [
+    {
+      "type": "AbuseEvent"
+    },
+    {
+      "type": "CryptoMiningEvent"
+    },
+    {
+      "type": "LeakedCredentialEvent"
+    },
+    {
+      "type": "ServiceAccountCredential"
+    },
+    {
+      "type": "ApiKeyCredential"
+    },
+    {
+      "type": "HarmfulContentEvent"
+    },
+    {
+      "type": "ReinstatementEvent"
+    },
+    {
+      "type": "DecisionEscalationEvent"
+    }
+  ],
+  "go": {
+    "pkg": "loggingpb",
+    "pkg_full": "cloud.google.com/go/abuseevent/logging/apiv1/loggingpb"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "proto": "google/compute/logging/dr/v1/disaster_recovery_event",
+  "pkg": "google.compute.logging.dr.v1",
+  "msgs": [
+    {
+      "type": "DisasterRecoveryEvent"
+    }
+  ],
+  "go": {
+    "pkg": "dr",
+    "pkg_full": "google.golang.org/genproto/googleapis/compute/logging/dr/v1"
+  }
+}
