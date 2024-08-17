@@ -11,7 +11,7 @@
 	shallow = true
 	active = true
 [submodule "_go-genproto"]
-	path = go-genproto
+	path = _go-genproto
 	url = https://github.com/googleapis/go-genproto.git
 	branch = main
 	shallow = true
