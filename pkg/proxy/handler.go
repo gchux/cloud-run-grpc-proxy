@@ -4,7 +4,9 @@ import (
 	"context"
 	"fmt"
 	"io"
+	"plugin"
 	"reflect"
+	"strings"
 	"sync/atomic"
 	"time"
 
@@ -19,6 +21,11 @@ import (
 type (
 	RPCLogger    = func(request, response *protoreflect.ProtoMessage, start, end *time.Time)
 	ProtoFactory = func(bool, bool) (protoreflect.ProtoMessage, protoreflect.ProtoMessage)
+	PluginLoader = func(
+		*skipmap.OrderedMap[string, string],
+		*skipmap.OrderedMap[string, reflect.Type],
+		*skipmap.OrderedMap[string, reflect.Type],
+	)
 )
 
 var clientStreamDescForProxying = &grpc.StreamDesc{
@@ -26,6 +33,14 @@ var clientStreamDescForProxying = &grpc.StreamDesc{
 	ClientStreams: true,
 }
 var counter atomic.Uint64
+
+var (
+	service2HostRegistry        = skipmap.New[string, string]()
+	method2RequestTypeRegistry  = skipmap.New[string, reflect.Type]()
+	method2ResponseTypeRegistry = skipmap.New[string, reflect.Type]()
+	rpc2pluginKey               = skipmap.New[string, string]()
+	protoPlugins                = skipmap.New[string, *plugin.Plugin]()
+)
 
 // RegisterService sets up a proxy handler for a particular gRPC service and method.
 // The behaviour is the same as if you were registering a handler method, e.g. from a generated pb.go file.
@@ -59,31 +74,72 @@ type handler struct {
 	director StreamDirector
 }
 
-func newProto(rpc *string, regsitry *skipmap.OrderedMap[string, reflect.Type]) (protoreflect.ProtoMessage, error) {
+func newProto(
+	rpc *string, regsitry *skipmap.OrderedMap[string, reflect.Type],
+) (protoreflect.ProtoMessage, error) {
 	protoType, loaded := regsitry.Load(*rpc)
 	if !loaded {
 		return &emptypb.Empty{},
 			fmt.Errorf("no proto not foound for: %s", *rpc)
 	}
 
-	if proto, ok := reflect.New(protoType).Interface().(protoreflect.ProtoMessage); ok {
+	if proto, ok := reflect.New(protoType).
+		Interface().(protoreflect.ProtoMessage); ok {
 		return proto, nil
 	}
 	return &emptypb.Empty{},
 		fmt.Errorf("proto is not 'protoreflect.ProtoMessage': %s", protoType.Name())
 }
 
-func getProtoFactoryForRPC(rpc *string) ProtoFactory {
-	return func(includeRequest, includeResponse bool) (protoreflect.ProtoMessage, protoreflect.ProtoMessage) {
-		var protoRequest, protoResponse protoreflect.ProtoMessage = nil, nil
-		if includeRequest {
-			protoRequest, _ = newProto(rpc, method2RequestType)
-		}
-		if includeResponse {
-			protoResponse, _ = newProto(rpc, method2ResponseType)
-		}
-		return protoRequest, protoResponse
+func newProtosForRPC(
+	rpc *string, includeRequest, includeResponse bool,
+) (protoreflect.ProtoMessage, protoreflect.ProtoMessage) {
+	var request, response protoreflect.ProtoMessage = nil, nil
+	if includeRequest {
+		request, _ = newProto(rpc, method2RequestTypeRegistry)
 	}
+	if includeResponse {
+		response, _ = newProto(rpc, method2ResponseTypeRegistry)
+	}
+	return request, response
+}
+
+func loadProtoPluginForRPC(rpc *string) bool {
+	pluginKey, _ := rpc2pluginKey.LoadOrStoreLazy(
+		*rpc, func() string {
+			rpcParts := strings.Split(*rpc, ".")
+			// `pluginKey` is everything except the method:
+			//   - a Proto package contains all the services ( thus: all the `rcp`s/`method`s )
+			return strings.Join(rpcParts[:len(rpcParts)-1], ".") + ".so"
+		})
+
+	// loading `Proto Plugin` from cache only for the side-effects...
+	// the error is not important as `newProto` returns `emptypb.Empty` if the actual type is not available;
+	// all that's been lost is the capacity to show the actual proto2json translations.
+	protoPlugin, _ := protoPlugins.LoadOrStoreLazy(
+		pluginKey, func() *plugin.Plugin {
+			protoPlugin, err := plugin.Open(pluginKey)
+			if err != nil {
+				return nil
+			}
+
+			LoadFn, err := protoPlugin.Lookup("Load")
+			if err != nil {
+				return nil
+			}
+
+			// a `Plugin` registers all the types for request/response
+			// for all the `rpc`s/`method`s available in a PRoto package.
+			LoadFn.(PluginLoader)(
+				service2HostRegistry,
+				method2RequestTypeRegistry,
+				method2ResponseTypeRegistry,
+			)
+
+			return protoPlugin
+		})
+
+	return protoPlugin != nil
 }
 
 // handler is where the real magic of proxying happens.
@@ -127,20 +183,23 @@ func (s *handler) handler(srv interface{}, serverStream grpc.ServerStream) error
 	}
 
 	rpcKey := fullMethodName[1:]
-	protoFactory := getProtoFactoryForRPC(&rpcKey)
+	loadProtoPluginForRPC(&rpcKey)
+	protoFactory := func(includeRequest, includeResponse bool) (
+		protoreflect.ProtoMessage, protoreflect.ProtoMessage,
+	) {
+		return newProtosForRPC(&rpcKey, includeRequest, includeResponse)
+	}
 
-	// [ToDo]: split stream timestamps into: server{start|end} and client{start|end}
+	rpcLogger := func(request, response *protoreflect.ProtoMessage, start, end *time.Time) {
+		go flowLogger(clientCtx, clientStream.Context(), flow, request, response, start, end, false /* isStreamEnd */)
+	}
+
 	tsStreamStart := time.Now()
 	defer func() {
 		tsStreamEnd := time.Now()
 		flow.TsStreamStart = &tsStreamStart
 		flow.TsStreamEnd = &tsStreamEnd
-		// go flowLogger(clientCtx, clientStream.Context(), flow, nil, nil, true /* isStreamEnd */)
 	}()
-
-	rpcLogger := func(request, response *protoreflect.ProtoMessage, start, end *time.Time) {
-		go flowLogger(clientCtx, clientStream.Context(), flow, request, response, start, end, false /* isStreamEnd */)
-	}
 
 	// Explicitly *do not close* s2cErrChan and c2sErrChan, otherwise the select below will not terminate.
 	// Channels do not have to be closed, it is just a control flow mechanism, see
@@ -196,9 +255,6 @@ func (s *handler) forwardClientToServer(src grpc.ClientStream, dst grpc.ServerSt
 				ret <- err // this can be io.EOF which is happy case
 				break
 			}
-			end := time.Now()
-
-			logger(nil, &protoResponse, &start, &end)
 
 			if i == 0 {
 				// This is a bit of a hack, but client to server headers are only readable after first client msg is
@@ -219,6 +275,9 @@ func (s *handler) forwardClientToServer(src grpc.ClientStream, dst grpc.ServerSt
 				ret <- err
 				break
 			}
+			end := time.Now()
+
+			logger(nil, &protoResponse, &start, &end)
 		}
 	}()
 	return ret
@@ -237,14 +296,14 @@ func (s *handler) forwardServerToClient(src grpc.ServerStream, dst grpc.ClientSt
 				ret <- err // this can be io.EOF which is happy case
 				break
 			}
-			end := time.Now()
-
-			logger(&protoRequest, nil, &start, &end)
 
 			if err := dst.SendMsg(protoRequest); err != nil {
 				ret <- err
 				break
 			}
+			end := time.Now()
+
+			logger(&protoRequest, nil, &start, &end)
 		}
 	}()
 	return ret

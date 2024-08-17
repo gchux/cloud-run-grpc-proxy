@@ -5,8 +5,13 @@ package main
 import (
 	"reflect"
 
-	google_spanner_executor_v1_executorpb "cloud.google.com/go/spanner/executor/apiv1/executorpb"
 	"github.com/zhangyunhao116/skipmap"
+
+	google_spanner_executor_v1_executorpb "cloud.google.com/go/spanner/executor/apiv1/executorpb"
+	_ "google.golang.org/grpc"
+	_ "google.golang.org/grpc/codes"
+	_ "google.golang.org/grpc/status"
+	_ "google.golang.org/protobuf/reflect/protoreflect"
 )
 
 func Load(service2Host *skipmap.OrderedMap[string, string], method2RequestType, method2ResponseType *skipmap.OrderedMap[string, reflect.Type]) {

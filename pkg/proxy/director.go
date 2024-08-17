@@ -14,9 +14,11 @@ type (
 	ProxyCounters struct {
 		ByMethod *uint64
 	}
+
 	ProxyStats struct {
 		Counters *ProxyCounters
 	}
+
 	ProxyFlow struct {
 		ClientConn             *grpc.ClientConn
 		Serial                 *uint64

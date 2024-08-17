@@ -10,20 +10,40 @@ tasks:
         --no-cache
         --platform=linux/amd64
         --file=Dockerfile.build
-        --output={{.USER_WORKING_DIR}}/bin
+        --build-arg="BIN_NAME=$GRPC_PROXY_BIN_NAME"
+        --output={{.USER_WORKING_DIR}}/_bin
         --target=releaser {{.USER_WORKING_DIR}}
 
   docker-build-plugin:
+    requires:
+      vars:
+        - PLUGIN_GO_FILE
+    vars:
+      BIN_DIR: "{{.USER_WORKING_DIR}}/_bin"
+      PLUGIN_SO_FILE: "{{trimSuffix (ext .PLUGIN_GO_FILE) .PLUGIN_GO_FILE}}.so"
     cmds:
-      - echo 'Building plugin for {{.PACKAGE}}'
+      - echo 'Building plugin for {{.USER_WORKING_DIR}}/_plugins/{{.PLUGIN_GO_FILE}} > {{.BIN_DIR}}/{{.PLUGIN_SO_FILE}}'
+      - rm -vf {{.BIN_DIR}}/{{.PLUGIN_SO_FILE}} {{.BIN_DIR}}/go.{mod,sum} {{.BIN_DIR}}/*.go
       - >-
         docker buildx build
         --no-cache
         --platform=linux/amd64
         --file=Dockerfile.build_plugin
-        --build-arg="PLUGIN_PACKAGE={{.PACKAGE}}"
-        --output={{.USER_WORKING_DIR}}/bin
+        --build-arg="PLUGIN_GO_FILE={{.PLUGIN_GO_FILE}}"
+        --build-arg="PLUGIN_SO_FILE={{.PLUGIN_SO_FILE}}"
+        --output={{.BIN_DIR}}/
         --target=releaser {{.USER_WORKING_DIR}}
+      - rm -vf {{.BIN_DIR}}/go.{mod,sum} {{.BIN_DIR}}/*.go
+
+  docker-build-all-plugins:
+    vars:
+      PLUGINS:
+        sh: ls -1 {{.USER_WORKING_DIR}}/_plugins/
+    cmds:
+      - for: { var: PLUGINS, as: PLUGIN_GO_FILE }
+        task: docker-build-plugin
+        vars:
+          PLUGIN_GO_FILE: "{{.PLUGIN_GO_FILE}}"
 
   go-fmt:
     cmds:

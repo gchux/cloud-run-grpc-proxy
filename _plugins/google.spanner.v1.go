@@ -5,8 +5,13 @@ package main
 import (
 	"reflect"
 
-	google_spanner_v1_spannerpb "cloud.google.com/go/spanner/apiv1/spannerpb"
 	"github.com/zhangyunhao116/skipmap"
+
+	google_spanner_v1_spannerpb "cloud.google.com/go/spanner/apiv1/spannerpb"
+	_ "google.golang.org/grpc"
+	_ "google.golang.org/grpc/codes"
+	_ "google.golang.org/grpc/status"
+	_ "google.golang.org/protobuf/reflect/protoreflect"
 	emptypb "google.golang.org/protobuf/types/known/emptypb"
 )
 

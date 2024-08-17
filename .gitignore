@@ -1,8 +1,13 @@
 client/
+_client/
 bin/
+_bin/
 tmp/
+_tmp/
 local_only/
+_local_only/
 local-only/
+_local-only/
 
 # Binaries for programs and plugins
 *.exe

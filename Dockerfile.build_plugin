@@ -2,12 +2,13 @@
 
 FROM --platform=linux/amd64 golang:1.22.4-bookworm AS builder
 
-ARG PLUGIN_PACKAGE
+ARG PLUGIN_GO_FILE
+ARG PLUGIN_SO_FILE
 
 WORKDIR /app
 
-COPY ./plugin_go.mod /app/go.mod
-COPY ./_plugins/${PLUGIN_PACKAGE}.go /app
+COPY ./go.mod /app/go.mod
+COPY ./_plugins/${PLUGIN_GO_FILE} /app
 
 ENV CGO_ENABLED=1
 ENV GOOS=linux
@@ -15,8 +16,8 @@ ENV GOARCH=amd64
 
 RUN go clean -modcache
 RUN go mod tidy -compat=1.22.4
-RUN go build -buildmode=plugin -o ${PLUGIN_PACKAGE}.so ${PLUGIN_PACKAGE}.go
+RUN go build -buildmode=plugin -o ${PLUGIN_SO_FILE} ${PLUGIN_GO_FILE}
 
 FROM scratch AS releaser
-ARG PLUGIN_PACKAGE
-COPY --link --from=builder /app/${PLUGIN_PACKAGE}.so /
+ARG PLUGIN_SO_FILE
+COPY --link --from=builder /app/${PLUGIN_SO_FILE} /

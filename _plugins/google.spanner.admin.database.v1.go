@@ -5,10 +5,15 @@ package main
 import (
 	"reflect"
 
+	"github.com/zhangyunhao116/skipmap"
+
 	google_iam_v1_iampb "cloud.google.com/go/iam/apiv1/iampb"
 	google_longrunning_longrunningpb "cloud.google.com/go/longrunning/autogen/longrunningpb"
 	google_spanner_admin_database_v1_databasepb "cloud.google.com/go/spanner/admin/database/apiv1/databasepb"
-	"github.com/zhangyunhao116/skipmap"
+	_ "google.golang.org/grpc"
+	_ "google.golang.org/grpc/codes"
+	_ "google.golang.org/grpc/status"
+	_ "google.golang.org/protobuf/reflect/protoreflect"
 	emptypb "google.golang.org/protobuf/types/known/emptypb"
 )
 
