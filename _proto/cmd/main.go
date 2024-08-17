@@ -11,6 +11,12 @@ type (
 		Go    string `json:"go"`
 	}
 
+	AliasFix struct {
+		Old string `json:"old"`
+		New string `json:"new"`
+		Stt string `json:"stt"`
+	}
+
 	Message struct {
 		Type     *string    `json:"type"`
 		Stream   bool       `json:"stream,omitempty"`
@@ -24,10 +30,12 @@ type (
 	}
 
 	Go struct {
-		SrcFile     *string `json:"src,omitempty"`
-		Package     *string `json:"pkg,omitempty"`
-		PackageFull *string `json:"pkg_full,omitempty"`
-		Namespace   *string `json:"-"`
+		SrcFile           *string `json:"src,omitempty"`
+		Package           *string `json:"pkg,omitempty"`
+		PackageFull       *string `json:"pkg_full,omitempty"`
+		LegacyPackageFull *string `json:"legacy_pkg_full,omitempty"`
+		Namespace         *string `json:"-"`
+		Migrated          bool    `json:"migrated,omitempty"`
 	}
 
 	Service struct {

@@ -1,9 +1,8 @@
-version: '3'
+version: "3"
 
-dotenv: ['.env']
+dotenv: [".env"]
 
 tasks:
-
   docker-build:
     cmds:
       - >-
@@ -14,12 +13,24 @@ tasks:
         --output={{.USER_WORKING_DIR}}/bin
         --target=releaser {{.USER_WORKING_DIR}}
 
+  docker-build-plugin:
+    cmds:
+      - echo 'Building plugin for {{.PACKAGE}}'
+      - >-
+        docker buildx build
+        --no-cache
+        --platform=linux/amd64
+        --file=Dockerfile.build_plugin
+        --build-arg="PLUGIN_PACKAGE={{.PACKAGE}}"
+        --output={{.USER_WORKING_DIR}}/bin
+        --target=releaser {{.USER_WORKING_DIR}}
+
   go-fmt:
     cmds:
       - gofumpt -l -w .
 
   local-build:
-    dotenv: ['.env']
+    dotenv: [".env"]
     cmds:
       - task: go-fmt
       - >-

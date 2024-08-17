@@ -16,6 +16,11 @@ import (
 	"google.golang.org/protobuf/types/known/emptypb"
 )
 
+type (
+	RPCLogger    = func(request, response *protoreflect.ProtoMessage, start, end *time.Time)
+	ProtoFactory = func(bool, bool) (protoreflect.ProtoMessage, protoreflect.ProtoMessage)
+)
+
 var clientStreamDescForProxying = &grpc.StreamDesc{
 	ServerStreams: true,
 	ClientStreams: true,
@@ -68,10 +73,17 @@ func newProto(rpc *string, regsitry *skipmap.OrderedMap[string, reflect.Type]) (
 		fmt.Errorf("proto is not 'protoreflect.ProtoMessage': %s", protoType.Name())
 }
 
-func getProtosForRPC(rpc *string) (protoreflect.ProtoMessage, protoreflect.ProtoMessage) {
-	requestProto, _ := newProto(rpc, method2RequestType)
-	responseProto, _ := newProto(rpc, method2ResponseType)
-	return requestProto, responseProto
+func getProtoFactoryForRPC(rpc *string) ProtoFactory {
+	return func(includeRequest, includeResponse bool) (protoreflect.ProtoMessage, protoreflect.ProtoMessage) {
+		var protoRequest, protoResponse protoreflect.ProtoMessage = nil, nil
+		if includeRequest {
+			protoRequest, _ = newProto(rpc, method2RequestType)
+		}
+		if includeResponse {
+			protoResponse, _ = newProto(rpc, method2ResponseType)
+		}
+		return protoRequest, protoResponse
+	}
 }
 
 // handler is where the real magic of proxying happens.
@@ -101,7 +113,7 @@ func (s *handler) handler(srv interface{}, serverStream grpc.ServerStream) error
 	}
 
 	// We require that the director's returned context inherits from the serverStream.Context().
-	outgoingCtx, backendConn, onStreamEnd, err := s.director(serverStream.Context(), flow)
+	outgoingCtx, backendConn, flowLogger, err := s.director(serverStream.Context(), flow)
 	if err != nil {
 		return err
 	}
@@ -114,23 +126,27 @@ func (s *handler) handler(srv interface{}, serverStream grpc.ServerStream) error
 		return err
 	}
 
+	rpcKey := fullMethodName[1:]
+	protoFactory := getProtoFactoryForRPC(&rpcKey)
+
 	// [ToDo]: split stream timestamps into: server{start|end} and client{start|end}
 	tsStreamStart := time.Now()
 	defer func() {
 		tsStreamEnd := time.Now()
 		flow.TsStreamStart = &tsStreamStart
 		flow.TsStreamEnd = &tsStreamEnd
-		go onStreamEnd(clientCtx, clientStream.Context(), flow)
+		// go flowLogger(clientCtx, clientStream.Context(), flow, nil, nil, true /* isStreamEnd */)
 	}()
 
-	rpcKey := fullMethodName[1:]
-	flow.ProtoRequest, flow.ProtoResponse = getProtosForRPC(&rpcKey)
+	rpcLogger := func(request, response *protoreflect.ProtoMessage, start, end *time.Time) {
+		go flowLogger(clientCtx, clientStream.Context(), flow, request, response, start, end, false /* isStreamEnd */)
+	}
 
 	// Explicitly *do not close* s2cErrChan and c2sErrChan, otherwise the select below will not terminate.
 	// Channels do not have to be closed, it is just a control flow mechanism, see
 	// https://groups.google.com/forum/#!msg/golang-nuts/pZwdYRGxCIk/qpbHxRRPJdUJ
-	s2cErrChan := s.forwardServerToClient(serverStream, clientStream, flow)
-	c2sErrChan := s.forwardClientToServer(clientStream, serverStream, flow)
+	s2cErrChan := s.forwardServerToClient(serverStream, clientStream, protoFactory, rpcLogger)
+	c2sErrChan := s.forwardClientToServer(clientStream, serverStream, protoFactory, rpcLogger)
 
 	// We don't know which side is going to stop sending first, so we need a select between the two.
 	for i := 0; i < 2; i++ {
@@ -167,15 +183,23 @@ func (s *handler) handler(srv interface{}, serverStream grpc.ServerStream) error
 	return status.Errorf(codes.Internal, "gRPC proxying should never reach this stage.")
 }
 
-func (s *handler) forwardClientToServer(src grpc.ClientStream, dst grpc.ServerStream, flow *ProxyFlow) chan error {
+func (s *handler) forwardClientToServer(src grpc.ClientStream, dst grpc.ServerStream, factory ProtoFactory, logger RPCLogger) chan error {
 	ret := make(chan error, 1)
 	go func() {
 		// f := &emptypb.Empty{}
 		for i := 0; ; i++ {
-			if err := src.RecvMsg(flow.ProtoResponse); err != nil {
+
+			_, protoResponse := factory(false /* includeRequest */, true /* includeResponse */)
+
+			start := time.Now()
+			if err := src.RecvMsg(protoResponse); err != nil {
 				ret <- err // this can be io.EOF which is happy case
 				break
 			}
+			end := time.Now()
+
+			logger(nil, &protoResponse, &start, &end)
+
 			if i == 0 {
 				// This is a bit of a hack, but client to server headers are only readable after first client msg is
 				// received but must be written to server stream before the first msg is flushed.
@@ -191,7 +215,7 @@ func (s *handler) forwardClientToServer(src grpc.ClientStream, dst grpc.ServerSt
 				}
 			}
 
-			if err := dst.SendMsg(flow.ProtoResponse); err != nil {
+			if err := dst.SendMsg(protoResponse); err != nil {
 				ret <- err
 				break
 			}
@@ -200,17 +224,24 @@ func (s *handler) forwardClientToServer(src grpc.ClientStream, dst grpc.ServerSt
 	return ret
 }
 
-func (s *handler) forwardServerToClient(src grpc.ServerStream, dst grpc.ClientStream, flow *ProxyFlow) chan error {
+func (s *handler) forwardServerToClient(src grpc.ServerStream, dst grpc.ClientStream, factory ProtoFactory, logger RPCLogger) chan error {
 	ret := make(chan error, 1)
 	go func() {
 		// f := &emptypb.Empty{}
 		for i := 0; ; i++ {
-			if err := src.RecvMsg(flow.ProtoRequest); err != nil {
+
+			protoRequest, _ := factory(true /* includeRequest */, false /* includeResponse */)
+
+			start := time.Now()
+			if err := src.RecvMsg(protoRequest); err != nil {
 				ret <- err // this can be io.EOF which is happy case
 				break
 			}
+			end := time.Now()
 
-			if err := dst.SendMsg(flow.ProtoRequest); err != nil {
+			logger(&protoRequest, nil, &start, &end)
+
+			if err := dst.SendMsg(protoRequest); err != nil {
 				ret <- err
 				break
 			}

@@ -32,6 +32,7 @@ var (
 var (
 	rawProtosFilePath    = flag.String("protos", "", "")
 	proto2GoJSONFilePath = flag.String("proto2go", "", "")
+	aliasfixJSONFilePath = flag.String("aliasfix", "", "")
 )
 
 func main_generator() {
@@ -44,6 +45,7 @@ func main_generator() {
 	}
 
 	protos := make(map[string]*ProtoDef)
+	goPkg2Proto := make(map[string][]string)
 
 	s := bufio.NewScanner(rawProtosFile)
 	for s.Scan() {
@@ -84,6 +86,12 @@ func main_generator() {
 			proto.Go = &Go{
 				Package:     &goPkgAlias,
 				PackageFull: &goPkgFull,
+			}
+
+			if protos, ok := goPkg2Proto[goPkgFull]; ok {
+				goPkg2Proto[goPkgFull] = append(protos, protoFilePath)
+			} else {
+				goPkg2Proto[goPkgFull] = []string{protoFilePath}
 			}
 
 		case strings.HasPrefix(entry, svcPrefix):
@@ -173,27 +181,79 @@ func main_generator() {
 			}
 		}
 	}
+	rawProtosFile.Close()
 
-	jsonFile, err := openFile(proto2GoJSONFilePath)
+	jsonFile, err := openFile(aliasfixJSONFilePath)
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err.Error())
-		os.Exit(1)
+		os.Exit(4)
 	}
+	d := json.NewDecoder(jsonFile)
+	for {
+		var v AliasFix
+		err = d.Decode(&v)
+		if err == io.EOF {
+			break
+		}
+		if err != nil {
+			fmt.Fprintln(os.Stderr, err.Error())
+			os.Exit(5)
+		}
 
-	s = bufio.NewScanner(jsonFile)
-	for s.Scan() {
+		// see: https://github.com/googleapis/google-cloud-go/blob/main/internal/aliasfix/mappings.go
+		// migration mappings currently ( and probably never will... ) only contains `StatusMigrated`
+		// so there's no way to make any other decisions here...
+		// see: https://github.com/googleapis/google-cloud-go/issues/10700
+		for _, protoFile := range goPkg2Proto[v.New] {
+			if protoDef, ok := protos[protoFile]; ok {
+				if protoDef.Go == nil {
+					pkg := "pb"
+					protoDef.Go = &Go{
+						Package:           &pkg,
+						PackageFull:       &v.New,
+						LegacyPackageFull: &v.Old,
+					}
+				}
+				protoDef.Go.Migrated = true
+			}
+		}
+	}
+	jsonFile.Close()
+
+	jsonFile, err = openFile(proto2GoJSONFilePath)
+	if err != nil {
+		fmt.Fprintln(os.Stderr, err.Error())
+		os.Exit(2)
+	}
+	d = json.NewDecoder(jsonFile)
+	for {
 		var v Proto2Go
-		if unmarshalErr := json.Unmarshal(s.Bytes(), &v); unmarshalErr != nil {
-			fmt.Fprintln(os.Stderr, unmarshalErr.Error())
-			os.Exit(2)
+		err = d.Decode(&v)
+		if err == io.EOF {
+			break
+		}
+		if err != nil {
+			fmt.Fprintln(os.Stderr, err.Error())
+			os.Exit(3)
 		}
 
 		if protoDef, ok := protos[v.Proto]; ok {
 			if protoDef.Go != nil {
 				protoDef.Go.SrcFile = &v.Go
+				if !protoDef.Go.Migrated && strings.HasPrefix(v.Go, "googleapis/") {
+					pkg := *protoDef.Go.SrcFile
+					pkgParts := strings.Split(pkg, "/")
+					sizeOfPkgParts := len(pkgParts)
+					pkgFull := "google.golang.org/genproto/" + strings.Join(pkgParts[:sizeOfPkgParts-1], "/")
+					pkgAlias := strings.Join(strings.SplitN(pkgParts[sizeOfPkgParts-1], ".", 3)[:2], "")
+					protoDef.Go.Package = &pkgAlias
+					protoDef.Go.LegacyPackageFull = &pkgFull
+				}
 			}
 		}
+
 	}
+	jsonFile.Close()
 
 	for _, protoDef := range protos {
 		jsonBytes, err := json.Marshal(protoDef)

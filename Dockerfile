@@ -13,7 +13,9 @@ ENV CGO_ENABLED=0
 ENV GOOS=linux
 ENV GOARCH=amd64
 
-RUN go build -v -o /app/grpc_proxy /app/cmd/grpc_proxy.go
+RUN go clean -modcache
+RUN go mod tidy -compat=1.22.4
+RUN go build -v -o /app/grpc_proxy cmd/grpc_proxy.go
 
 FROM scratch AS releaser
 COPY --link --from=builder /app/grpc_proxy /
@@ -24,4 +26,5 @@ COPY --from=builder /etc/group /etc/group
 COPY --from=builder /app/grpc_proxy /grpc_proxy
 COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 USER proxy
+
 CMD ["/grpc_proxy"]

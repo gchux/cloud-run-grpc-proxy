@@ -39,7 +39,7 @@ type (
 		TsStreamEnd            *time.Time
 	}
 
-	OnStreamEnd func(serverCtx, clientCtx context.Context, flow *ProxyFlow)
+	Logger func(serverCtx, clientCtx context.Context, flow *ProxyFlow, request, response *protoreflect.ProtoMessage, start, end *time.Time, isStreamEnd bool)
 
 	// StreamDirector returns a gRPC ClientConn to be used to forward the call to.
 	//
@@ -52,5 +52,5 @@ type (
 	//
 	// It is worth noting that the StreamDirector will be fired *after* all server-side stream interceptors
 	// are invoked. So decisions around authorization, monitoring etc. are better to be handled there.
-	StreamDirector func(ctx context.Context, flow *ProxyFlow) (context.Context, *grpc.ClientConn, OnStreamEnd, error)
+	StreamDirector func(ctx context.Context, flow *ProxyFlow) (context.Context, *grpc.ClientConn, Logger, error)
 )

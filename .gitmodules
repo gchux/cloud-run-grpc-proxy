@@ -1,13 +1,18 @@
 [submodule "google-cloud-go"]
-	path = google-cloud-go
+	path = _google-cloud-go
 	url = https://github.com/googleapis/google-cloud-go.git
-  branch = main
-  shallow = true
+	branch = main
+	shallow = true
+	active = true
 [submodule "googleapis"]
-	path = googleapis
+	path = _googleapis
 	url = https://github.com/googleapis/googleapis.git
-  branch = main
-  shallow = true
+	branch = master
+	shallow = true
+	active = true
 [submodule "go-genproto"]
-	path = go-genproto
+	path = _go-genproto
 	url = https://github.com/googleapis/go-genproto.git
+	branch = main
+	shallow = true
+	active = true
