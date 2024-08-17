@@ -2,29 +2,31 @@
 
 FROM --platform=linux/amd64 golang:1.22.4-bookworm AS builder
 
+ARG BIN_NAME
+
 WORKDIR /app
 
 ADD cmd /app/cmd
 ADD pkg /app/pkg
+
 COPY ./go.mod /app
 COPY ./go.sum /app
 
-ENV CGO_ENABLED=0
+ENV CGO_ENABLED=1
 ENV GOOS=linux
 ENV GOARCH=amd64
 
 RUN go clean -modcache
 RUN go mod tidy -compat=1.22.4
-RUN go build -v -o /app/grpc_proxy cmd/grpc_proxy.go
+RUN go build -v -o /app/${BIN_NAME} cmd/grpc_proxy.go
 
-FROM scratch AS releaser
-COPY --link --from=builder /app/grpc_proxy /
+FROM --platform=linux/amd64 golang:1.22.4-bookworm
 
-FROM scratch
-COPY --from=builder /etc/passwd /etc/passwd
-COPY --from=builder /etc/group /etc/group
-COPY --from=builder /app/grpc_proxy /grpc_proxy
-COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
+ARG BIN_NAME
+
+COPY --link --from=builder /app/${BIN_NAME} /
+COPY ./_bin/*.so /
+
 USER proxy
 
-CMD ["/grpc_proxy"]
+CMD ["/${BIN_NAME}"]
