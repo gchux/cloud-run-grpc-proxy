@@ -200,19 +200,24 @@ func newClientConnFactory(target *string) clientConnFactory {
 	}
 }
 
+func onStreamEnd(
+	serverCtx, clientCtx context.Context,
+	flow *proxy.ProxyFlow,
+	streamStart, streamEnd *time.Time,
+) {
+	serial := *flow.Serial
+	defer flows.Del(serial)
+}
+
 func logger(
 	serverCtx, clientCtx context.Context,
 	flow *proxy.ProxyFlow,
 	request, response *protoreflect.ProtoMessage,
 	rpcStart, rpcEnd *time.Time,
-	isStreamEnd bool,
 ) {
 	timestamp := time.Now()
 
 	serial := *flow.Serial
-	if isStreamEnd {
-		defer flows.Del(serial)
-	}
 
 	_projectID := *flow.ProjectID
 	endpoint := *flow.Endpoint
@@ -423,6 +428,7 @@ func rpcTrafficDirector(
 	context.Context,
 	*grpc.ClientConn,
 	proxy.Logger,
+	proxy.OnStreamEnd,
 	error,
 ) {
 	tsDirectorStart := time.Now()
@@ -447,6 +453,7 @@ func rpcTrafficDirector(
 	// [ToDo]:
 	//   - allow whitelisting endpoints and methods
 	//   - ratelimit on max-concurrent-rpc per project/host/method
+	//   - use PROTO host from Plugins via `service2HostRegistry`
 	rpcEndpointHeader := md.Get("x-grpc-proxy-endpoint")
 	if len(rpcEndpointHeader) > 0 && rpcEndpointHeader[0] != target {
 		rpcEndpoint := rpcEndpointHeader[0]
@@ -456,7 +463,7 @@ func rpcTrafficDirector(
 	}
 
 	if !rpcConnLoaded && rpcConn == nil {
-		return serverCtx, nil, nil, errors.New("failed to create connection")
+		return serverCtx, nil, nil, nil, errors.New("failed to create connection")
 	}
 
 	tsOauth2Start := time.Now()
@@ -464,7 +471,7 @@ func rpcTrafficDirector(
 	tsOauth2End := time.Now()
 	if err != nil {
 		fmt.Fprint(os.Stderr, err.Error()+"\n")
-		return serverCtx, nil, nil, err
+		return serverCtx, nil, nil, nil, err
 	}
 	md.Set("Authorization", "Bearer "+token.AccessToken)
 
@@ -508,7 +515,7 @@ func rpcTrafficDirector(
 	tsDirectorEnd := time.Now()
 	flow.TsDirectorEnd = &tsDirectorEnd
 
-	return ctx, rpcConn, logger, nil
+	return ctx, rpcConn, logger, onStreamEnd, nil
 }
 
 func contextDialer(ctx context.Context, addr string) (net.Conn, error) {
@@ -561,5 +568,7 @@ func main() {
 		grpc.KeepaliveEnforcementPolicy(keepAliveEnforcementPolicy),
 	)
 
+	// [ToDo]: listener must be a facade to handle connections:
+	//           - intercept H2 keepalives ( Ping frames )
 	proxyServer.Serve(serverListener)
 }

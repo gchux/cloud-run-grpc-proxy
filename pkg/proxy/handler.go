@@ -154,7 +154,10 @@ func (s *handler) handler(srv interface{}, serverStream grpc.ServerStream) error
 		return status.Errorf(codes.Internal, "lowLevelServerStream not exists in context")
 	}
 
-	// [ToDo]: get default host from registry: `service2Host`
+	rpcKey := fullMethodName[1:]
+	loadProtoPluginForRPC(&rpcKey)
+
+	// [ToDo]: get default host from registry: `service2HostRegistry`
 
 	serial := counter.Add(1)
 
@@ -169,7 +172,7 @@ func (s *handler) handler(srv interface{}, serverStream grpc.ServerStream) error
 	}
 
 	// We require that the director's returned context inherits from the serverStream.Context().
-	outgoingCtx, backendConn, flowLogger, err := s.director(serverStream.Context(), flow)
+	outgoingCtx, backendConn, logger, onStreamEnd, err := s.director(serverStream.Context(), flow)
 	if err != nil {
 		return err
 	}
@@ -182,8 +185,6 @@ func (s *handler) handler(srv interface{}, serverStream grpc.ServerStream) error
 		return err
 	}
 
-	rpcKey := fullMethodName[1:]
-	loadProtoPluginForRPC(&rpcKey)
 	protoFactory := func(includeRequest, includeResponse bool) (
 		protoreflect.ProtoMessage, protoreflect.ProtoMessage,
 	) {
@@ -191,21 +192,23 @@ func (s *handler) handler(srv interface{}, serverStream grpc.ServerStream) error
 	}
 
 	rpcLogger := func(request, response *protoreflect.ProtoMessage, start, end *time.Time) {
-		go flowLogger(clientCtx, clientStream.Context(), flow, request, response, start, end, false /* isStreamEnd */)
+		go logger(clientCtx, clientStream.Context(), flow, request, response, start, end)
 	}
 
 	tsStreamStart := time.Now()
-	defer func() {
-		tsStreamEnd := time.Now()
-		flow.TsStreamStart = &tsStreamStart
-		flow.TsStreamEnd = &tsStreamEnd
-	}()
 
 	// Explicitly *do not close* s2cErrChan and c2sErrChan, otherwise the select below will not terminate.
 	// Channels do not have to be closed, it is just a control flow mechanism, see
 	// https://groups.google.com/forum/#!msg/golang-nuts/pZwdYRGxCIk/qpbHxRRPJdUJ
 	s2cErrChan := s.forwardServerToClient(serverStream, clientStream, protoFactory, rpcLogger)
 	c2sErrChan := s.forwardClientToServer(clientStream, serverStream, protoFactory, rpcLogger)
+
+	defer func() {
+		tsStreamEnd := time.Now()
+		flow.TsStreamStart = &tsStreamStart
+		flow.TsStreamEnd = &tsStreamEnd
+		go onStreamEnd(clientCtx, clientStream.Context(), flow, &tsStreamStart, &tsStreamEnd)
+	}()
 
 	// We don't know which side is going to stop sending first, so we need a select between the two.
 	for i := 0; i < 2; i++ {
