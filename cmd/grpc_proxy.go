@@ -350,31 +350,37 @@ func logger(
 
 	json, message := newJSONLog(serverCtx, clientCtx, flow, &timestamp)
 
-	method := *rpc.Method
-	messageFullName := string(*rpc.MessageFullName)
-
 	rpcJSON, _ := json.Object("rpc")
-	rpcJSON.Set(method, "method")
 
-	var rpcMessageJSON *gabs.Container
-	var protoJSONstr string
-	if rpc.IsRequest {
-		rpcMessageJSON, _ = rpcJSON.Object("request")
-	} else {
-		rpcMessageJSON, _ = rpcJSON.Object("response")
-	}
-	protoJSONstr = protojson.Format(*rpc.MessageProto)
-	protoJSON, _ := gabs.ParseJSON([]byte(protoJSONstr))
-	rpcMessageJSON.Set(protoJSON, "proto")
-	rpcMessageJSON.Set(messageFullName, "type")
+	messageFullName := ""
 
-	labelsJSON := json.S("logging.googleapis.com/labels")
-	labelsJSON.Set(messageFullName, "tools.chux.dev/grpc/proxy/message")
+	if rpc.IsRequest || rpc.IsResponse {
 
-	if rpc.StatusProto != nil {
+		var rpcMessageJSON *gabs.Container
+		if rpc.IsRequest {
+			rpcMessageJSON, _ = rpcJSON.Object("request")
+		} else if rpc.IsResponse {
+			rpcMessageJSON, _ = rpcJSON.Object("response")
+		}
+
+		method := *rpc.Method
+		rpcJSON.Set(method, "method")
+
+		protoJSONstr := protojson.Format(*rpc.MessageProto)
+		protoJSON, _ := gabs.ParseJSON([]byte(protoJSONstr))
+
+		messageFullName = string(*rpc.MessageFullName)
+
+		rpcMessageJSON.Set(protoJSON, "proto")
+		rpcMessageJSON.Set(messageFullName, "type")
+
+		labelsJSON := json.S("logging.googleapis.com/labels")
+		labelsJSON.Set(messageFullName, "tools.chux.dev/grpc/proxy/message")
+	} else if rpc.StatusProto != nil {
 		statusJSON, _ := rpcJSON.Object("status")
 		statusJSON.Set(rpc.StatusProto.Code, "code")
 		statusJSON.Set(rpc.StatusProto.Message, "message")
+		messageFullName = rpc.StatusProto.Message
 	}
 
 	timestampJSON, _ := json.Object("timestamp")

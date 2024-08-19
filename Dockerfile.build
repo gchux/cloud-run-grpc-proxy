@@ -8,6 +8,7 @@ WORKDIR /app
 
 ADD cmd /app/cmd
 ADD pkg /app/pkg
+
 COPY ./go.mod /app
 COPY ./go.sum /app
 

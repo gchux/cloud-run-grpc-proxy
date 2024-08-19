@@ -4,14 +4,28 @@ dotenv: [".env"]
 
 tasks:
   docker-build:
+    vars:
+      BIN_DIR: "{{.USER_WORKING_DIR}}/_bin"
     cmds:
       - >-
         docker buildx build
         --no-cache
         --platform=linux/amd64
-        --file=Dockerfile.build
+        --file={{.USER_WORKING_DIR}}/Dockerfile
         --build-arg="BIN_NAME=$GRPC_PROXY_BIN_NAME"
-        --output={{.USER_WORKING_DIR}}/_bin
+        --tag=grpc-proxy:v{{.VERSION}} .
+
+  docker-build-bin:
+    vars:
+      BIN_DIR: "{{.USER_WORKING_DIR}}/_bin"
+    cmds:
+      - >-
+        docker buildx build
+        --no-cache
+        --platform=linux/amd64
+        --file={{.USER_WORKING_DIR}}/Dockerfile.build
+        --build-arg="BIN_NAME=$GRPC_PROXY_BIN_NAME"
+        --output={{.BIN_DIR}}/
         --target=releaser {{.USER_WORKING_DIR}}
 
   docker-build-plugin:
@@ -28,7 +42,7 @@ tasks:
         docker buildx build
         --no-cache
         --platform=linux/amd64
-        --file=Dockerfile.build_plugin
+        --file={{.USER_WORKING_DIR}}/Dockerfile.build_plugin
         --build-arg="PLUGIN_GO_FILE={{.PLUGIN_GO_FILE}}"
         --build-arg="PLUGIN_SO_FILE={{.PLUGIN_SO_FILE}}"
         --output={{.BIN_DIR}}/

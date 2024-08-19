@@ -1,32 +1,11 @@
 # syntax=docker/dockerfile:1.4
-
-FROM --platform=linux/amd64 golang:1.22.4-bookworm AS builder
+FROM --platform=linux/amd64 golang:1.22.4-bookworm
 
 ARG BIN_NAME
 
 WORKDIR /app
 
-ADD cmd /app/cmd
-ADD pkg /app/pkg
+COPY _bin/${BIN_NAME} /app/grpc_proxy
+COPY _bin/*.so /app/
 
-COPY ./go.mod /app
-COPY ./go.sum /app
-
-ENV CGO_ENABLED=1
-ENV GOOS=linux
-ENV GOARCH=amd64
-
-RUN go clean -modcache
-RUN go mod tidy -compat=1.22.4
-RUN go build -v -o /app/${BIN_NAME} cmd/grpc_proxy.go
-
-FROM --platform=linux/amd64 golang:1.22.4-bookworm
-
-ARG BIN_NAME
-
-COPY --link --from=builder /app/${BIN_NAME} /
-COPY ./_bin/*.so /
-
-USER proxy
-
-CMD ["/${BIN_NAME}"]
+CMD ["/app/grpc_proxy"]
