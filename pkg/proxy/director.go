@@ -2,8 +2,10 @@ package proxy
 
 import (
 	"context"
+	"sync/atomic"
 	"time"
 
+	"github.com/zhangyunhao116/skipmap"
 	spb "google.golang.org/genproto/googleapis/rpc/status"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/peer"
@@ -12,7 +14,8 @@ import (
 
 type (
 	ProxyCounters struct {
-		ByMethod *uint64
+		ByMessage *skipmap.OrderedMap[string, *atomic.Uint64]
+		ByMethod  *skipmap.OrderedMap[string, *atomic.Uint64]
 	}
 
 	ProxyStats struct {
@@ -22,13 +25,10 @@ type (
 	ProxyFlow struct {
 		ClientConn             *grpc.ClientConn
 		Serial                 *uint64
-		Stats                  *ProxyStats
+		Count                  *uint32
 		ProjectID              *string
 		Endpoint, Method       *string
 		XCloudTraceContext     *string
-		ProtoRequest           protoreflect.ProtoMessage
-		ProtoResponse          protoreflect.ProtoMessage
-		StatusProto            *spb.Status
 		Client, Server         *peer.Peer
 		TsProxyReceived        *time.Time
 		TsBeforeStreamCreation *time.Time
@@ -39,11 +39,35 @@ type (
 		TsOauth2End            *time.Time
 		TsStreamStart          *time.Time
 		TsStreamEnd            *time.Time
+		Stats                  *ProxyStats
 	}
 
-	Logger func(serverCtx, clientCtx context.Context, flow *ProxyFlow, request, response *protoreflect.ProtoMessage, start, end *time.Time)
+	RPC struct {
+		Endpoint        *string
+		Method          *string
+		TsStart         *time.Time
+		TsEnd           *time.Time
+		MessageProto    *protoreflect.ProtoMessage
+		MessageFullName *protoreflect.FullName
+		StatusProto     *spb.Status
+		IsRequest       bool
+		IsResponse      bool
+		Stats           *RPCStats
+	}
 
-	OnStreamEnd func(serverCtx, clientCtx context.Context, flow *ProxyFlow, start, end *time.Time)
+	RPCCounters struct {
+		ByMethod  *uint64
+		requests  *uint64
+		responses *uint64
+	}
+
+	RPCStats struct {
+		Counters *RPCCounters
+	}
+
+	Logger func(serverCtx, clientCtx context.Context, flow *ProxyFlow, rpc *RPC)
+
+	OnStreamEnd func(serverCtx, clientCtx context.Context, flow *ProxyFlow)
 
 	// StreamDirector returns a gRPC ClientConn to be used to forward the call to.
 	//

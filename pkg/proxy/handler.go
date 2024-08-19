@@ -7,10 +7,12 @@ import (
 	"plugin"
 	"reflect"
 	"strings"
+	"sync"
 	"sync/atomic"
 	"time"
 
 	"github.com/zhangyunhao116/skipmap"
+	spb "google.golang.org/genproto/googleapis/rpc/status"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
@@ -19,8 +21,14 @@ import (
 )
 
 type (
-	RPCLogger    = func(request, response *protoreflect.ProtoMessage, start, end *time.Time)
+	handler struct {
+		director StreamDirector
+		stats    *ProxyStats
+	}
+
+	RPCLogger    = func(request, response *protoreflect.ProtoMessage, status *spb.Status, start, end *time.Time)
 	ProtoFactory = func(bool, bool) (protoreflect.ProtoMessage, protoreflect.ProtoMessage)
+
 	PluginLoader = func(
 		*skipmap.OrderedMap[string, string],
 		*skipmap.OrderedMap[string, reflect.Type],
@@ -32,24 +40,44 @@ var clientStreamDescForProxying = &grpc.StreamDesc{
 	ServerStreams: true,
 	ClientStreams: true,
 }
-var counter atomic.Uint64
+
+var (
+	flowCounter atomic.Uint64
+	rpcCounter  atomic.Uint64
+)
 
 var (
 	service2HostRegistry        = skipmap.New[string, string]()
 	method2RequestTypeRegistry  = skipmap.New[string, reflect.Type]()
 	method2ResponseTypeRegistry = skipmap.New[string, reflect.Type]()
-	rpc2pluginKey               = skipmap.New[string, string]()
-	protoPlugins                = skipmap.New[string, *plugin.Plugin]()
+
+	rpc2pluginKey = skipmap.New[string, *string]()
+	protoPlugins  = skipmap.New[string, *plugin.Plugin]()
 )
+
+func newHandler(director StreamDirector) *handler {
+	streamer := handler{
+		director,
+		&ProxyStats{
+			Counters: &ProxyCounters{
+				ByMethod:  skipmap.New[string, *atomic.Uint64](),
+				ByMessage: skipmap.New[string, *atomic.Uint64](),
+			},
+		},
+	}
+	return &streamer
+}
 
 // RegisterService sets up a proxy handler for a particular gRPC service and method.
 // The behaviour is the same as if you were registering a handler method, e.g. from a generated pb.go file.
 func RegisterService(server *grpc.Server, director StreamDirector, serviceName string, methodNames ...string) {
-	streamer := &handler{director}
+	streamer := newHandler(director)
+
 	fakeDesc := &grpc.ServiceDesc{
 		ServiceName: serviceName,
 		HandlerType: (*interface{})(nil),
 	}
+
 	for _, m := range methodNames {
 		streamDesc := grpc.StreamDesc{
 			StreamName:    m,
@@ -59,6 +87,7 @@ func RegisterService(server *grpc.Server, director StreamDirector, serviceName s
 		}
 		fakeDesc.Streams = append(fakeDesc.Streams, streamDesc)
 	}
+
 	server.RegisterService(fakeDesc, streamer)
 }
 
@@ -66,21 +95,17 @@ func RegisterService(server *grpc.Server, director StreamDirector, serviceName s
 // The indented use here is as a transparent proxy, where the server doesn't know about the services implemented by the
 // backends. It should be used as a `grpc.UnknownServiceHandler`.
 func TransparentHandler(director StreamDirector) grpc.StreamHandler {
-	streamer := &handler{director: director}
+	streamer := newHandler(director)
 	return streamer.handler
 }
 
-type handler struct {
-	director StreamDirector
-}
-
 func newProto(
-	rpc *string, regsitry *skipmap.OrderedMap[string, reflect.Type],
+	method *string, regsitry *skipmap.OrderedMap[string, reflect.Type],
 ) (protoreflect.ProtoMessage, error) {
-	protoType, loaded := regsitry.Load(*rpc)
+	protoType, loaded := regsitry.Load(*method)
 	if !loaded {
 		return &emptypb.Empty{},
-			fmt.Errorf("no proto not foound for: %s", *rpc)
+			fmt.Errorf("no proto not foound for: %s", *method)
 	}
 
 	if proto, ok := reflect.New(protoType).
@@ -91,34 +116,35 @@ func newProto(
 		fmt.Errorf("proto is not 'protoreflect.ProtoMessage': %s", protoType.Name())
 }
 
-func newProtosForRPC(
-	rpc *string, includeRequest, includeResponse bool,
+func newProtosForMethod(
+	method *string, includeRequest, includeResponse bool,
 ) (protoreflect.ProtoMessage, protoreflect.ProtoMessage) {
 	var request, response protoreflect.ProtoMessage = nil, nil
 	if includeRequest {
-		request, _ = newProto(rpc, method2RequestTypeRegistry)
+		request, _ = newProto(method, method2RequestTypeRegistry)
 	}
 	if includeResponse {
-		response, _ = newProto(rpc, method2ResponseTypeRegistry)
+		response, _ = newProto(method, method2ResponseTypeRegistry)
 	}
 	return request, response
 }
 
-func loadProtoPluginForRPC(rpc *string) bool {
-	pluginKey, _ := rpc2pluginKey.LoadOrStoreLazy(
-		*rpc, func() string {
-			rpcParts := strings.Split(*rpc, ".")
+func loadProtoPluginForMethod(method *string) (*string, bool) {
+	pluginKey, _ := rpc2pluginKey.
+		LoadOrStoreLazy(*method, func() *string {
+			rpcParts := strings.Split(*method, ".")
 			// `pluginKey` is everything except the method:
 			//   - a Proto package contains all the services ( thus: all the `rcp`s/`method`s )
-			return strings.Join(rpcParts[:len(rpcParts)-1], ".") + ".so"
+			key := strings.Join(rpcParts[:len(rpcParts)-1], ".")
+			return &key
 		})
 
 	// loading `Proto Plugin` from cache only for the side-effects...
 	// the error is not important as `newProto` returns `emptypb.Empty` if the actual type is not available;
 	// all that's been lost is the capacity to show the actual proto2json translations.
 	protoPlugin, _ := protoPlugins.LoadOrStoreLazy(
-		pluginKey, func() *plugin.Plugin {
-			protoPlugin, err := plugin.Open(pluginKey)
+		*pluginKey+".so", func() *plugin.Plugin {
+			protoPlugin, err := plugin.Open(*pluginKey)
 			if err != nil {
 				return nil
 			}
@@ -139,7 +165,7 @@ func loadProtoPluginForRPC(rpc *string) bool {
 			return protoPlugin
 		})
 
-	return protoPlugin != nil
+	return pluginKey, protoPlugin != nil
 }
 
 // handler is where the real magic of proxying happens.
@@ -154,12 +180,7 @@ func (s *handler) handler(srv interface{}, serverStream grpc.ServerStream) error
 		return status.Errorf(codes.Internal, "lowLevelServerStream not exists in context")
 	}
 
-	rpcKey := fullMethodName[1:]
-	loadProtoPluginForRPC(&rpcKey)
-
-	// [ToDo]: get default host from registry: `service2HostRegistry`
-
-	serial := counter.Add(1)
+	serial := flowCounter.Add(1)
 
 	// `ProxyFlow` is the main mechanism for state propagation
 	flow := &ProxyFlow{
@@ -170,6 +191,20 @@ func (s *handler) handler(srv interface{}, serverStream grpc.ServerStream) error
 		TsProxyReceived: &tsProxyReceived,
 		Method:          &fullMethodName,
 	}
+
+	method := fullMethodName[1:]
+	if serviceKey, loaded := loadProtoPluginForMethod(&method); loaded {
+		if endpoint, loaded := service2HostRegistry.Load(*serviceKey); loaded {
+			flow.Endpoint = &endpoint
+		}
+	}
+
+	counterByMethod, _ := s.stats.Counters.ByMethod.
+		LoadOrStoreLazy(method, func() *atomic.Uint64 {
+			var counterByMethod atomic.Uint64
+			return &counterByMethod
+		})
+	currentCountByMethod := counterByMethod.Add(1)
 
 	// We require that the director's returned context inherits from the serverStream.Context().
 	outgoingCtx, backendConn, logger, onStreamEnd, err := s.director(serverStream.Context(), flow)
@@ -188,11 +223,69 @@ func (s *handler) handler(srv interface{}, serverStream grpc.ServerStream) error
 	protoFactory := func(includeRequest, includeResponse bool) (
 		protoreflect.ProtoMessage, protoreflect.ProtoMessage,
 	) {
-		return newProtosForRPC(&rpcKey, includeRequest, includeResponse)
+		return newProtosForMethod(&method, includeRequest, includeResponse)
 	}
 
-	rpcLogger := func(request, response *protoreflect.ProtoMessage, start, end *time.Time) {
-		go logger(clientCtx, clientStream.Context(), flow, request, response, start, end)
+	var requestCounter, responseCounter atomic.Uint64
+	var wg sync.WaitGroup
+
+	rpcLogger := func(request, response *protoreflect.ProtoMessage, status *spb.Status, start, end *time.Time) {
+		wg.Add(1)
+
+		// do NOT block streams
+		// [ToDo]: use go-routines pool
+		go func() {
+			rpc := &RPC{
+				Endpoint:    flow.Endpoint,
+				Method:      &method,
+				TsStart:     start,
+				TsEnd:       end,
+				StatusProto: status,
+			}
+
+			var protoMessage protoreflect.ProtoMessage
+
+			requestCount := requestCounter.Load()
+			responseCount := responseCounter.Load()
+
+			if response == nil {
+				requestCount = requestCounter.Add(1)
+				protoMessage = *request
+				rpc.MessageProto = request
+				rpc.IsRequest = true
+				rpc.IsResponse = false
+			} else {
+				responseCount = responseCounter.Add(1)
+				protoMessage = *response
+				rpc.MessageProto = response
+				rpc.IsRequest = false
+				rpc.IsResponse = true
+			}
+
+			// `protoreflect.FullName` is a `string`
+			// see: https://pkg.go.dev/google.golang.org/protobuf/reflect/protoreflect#ProtoMessage
+			messageFullName := protoMessage.ProtoReflect().Type().Descriptor().FullName()
+			rpc.MessageFullName = &messageFullName
+			counterByMessage, _ := s.stats.Counters.ByMessage.
+				LoadOrStoreLazy(string(messageFullName),
+					func() *atomic.Uint64 {
+						var counterByMethod atomic.Uint64
+						return &counterByMethod
+					})
+			counterByMessage.Add(1)
+
+			rpc.Stats = &RPCStats{
+				Counters: &RPCCounters{
+					ByMethod:  &currentCountByMethod,
+					requests:  &requestCount,
+					responses: &responseCount,
+				},
+			}
+
+			go logger(clientCtx, clientStream.Context(), flow, rpc)
+
+			wg.Done()
+		}()
 	}
 
 	tsStreamStart := time.Now()
@@ -205,9 +298,13 @@ func (s *handler) handler(srv interface{}, serverStream grpc.ServerStream) error
 
 	defer func() {
 		tsStreamEnd := time.Now()
-		flow.TsStreamStart = &tsStreamStart
-		flow.TsStreamEnd = &tsStreamEnd
-		go onStreamEnd(clientCtx, clientStream.Context(), flow, &tsStreamStart, &tsStreamEnd)
+		// do NOT block
+		go func() {
+			flow.TsStreamStart = &tsStreamStart
+			flow.TsStreamEnd = &tsStreamEnd
+			wg.Wait()
+			onStreamEnd(clientCtx, clientStream.Context(), flow)
+		}()
 	}()
 
 	// We don't know which side is going to stop sending first, so we need a select between the two.
@@ -231,9 +328,6 @@ func (s *handler) handler(srv interface{}, serverStream grpc.ServerStream) error
 			// will be nil.
 			md := clientStream.Trailer()
 			serverStream.SetTrailer(md)
-			if rpcStatus, ok := status.FromError(c2sErr); ok {
-				flow.StatusProto = rpcStatus.Proto()
-			}
 			// c2sErr will contain RPC error from client code. If not io.EOF return the RPC error as server stream error.
 			if c2sErr != io.EOF {
 				return c2sErr
@@ -249,15 +343,23 @@ func (s *handler) forwardClientToServer(src grpc.ClientStream, dst grpc.ServerSt
 	ret := make(chan error, 1)
 	go func() {
 		// f := &emptypb.Empty{}
-		for i := 0; ; i++ {
+		for i := uint32(0); ; i++ {
 
 			_, protoResponse := factory(false /* includeRequest */, true /* includeResponse */)
 
+			var statusProto *spb.Status
 			start := time.Now()
+			// receiving `response` from the actual `server`
 			if err := src.RecvMsg(protoResponse); err != nil {
+				end := time.Now()
 				ret <- err // this can be io.EOF which is happy case
+				if rpcStatus, ok := status.FromError(err); ok {
+					statusProto = rpcStatus.Proto()
+				}
+				logger(nil, nil, statusProto, &start, &end)
 				break
 			}
+			end := time.Now()
 
 			if i == 0 {
 				// This is a bit of a hack, but client to server headers are only readable after first client msg is
@@ -274,13 +376,13 @@ func (s *handler) forwardClientToServer(src grpc.ClientStream, dst grpc.ServerSt
 				}
 			}
 
+			// forwarding `response` to the actual `client`
 			if err := dst.SendMsg(protoResponse); err != nil {
 				ret <- err
 				break
 			}
-			end := time.Now()
 
-			logger(nil, &protoResponse, &start, &end)
+			logger(nil, &protoResponse, nil, &start, &end)
 		}
 	}()
 	return ret
@@ -290,23 +392,30 @@ func (s *handler) forwardServerToClient(src grpc.ServerStream, dst grpc.ClientSt
 	ret := make(chan error, 1)
 	go func() {
 		// f := &emptypb.Empty{}
-		for i := 0; ; i++ {
+		for i := uint32(0); ; i++ {
 
 			protoRequest, _ := factory(true /* includeRequest */, false /* includeResponse */)
 
-			start := time.Now()
+			// receiving `request` from the actual `client`
 			if err := src.RecvMsg(protoRequest); err != nil {
 				ret <- err // this can be io.EOF which is happy case
 				break
 			}
 
+			var statusProto *spb.Status = nil
+			start := time.Now()
+			// forwarding `request` to the actual `server`
 			if err := dst.SendMsg(protoRequest); err != nil {
+				end := time.Now()
 				ret <- err
+				if rpcStatus, ok := status.FromError(err); ok {
+					statusProto = rpcStatus.Proto()
+				}
+				logger(nil, nil, statusProto, &start, &end)
 				break
 			}
 			end := time.Now()
-
-			logger(&protoRequest, nil, &start, &end)
+			logger(&protoRequest, nil, nil, &start, &end)
 		}
 	}()
 	return ret

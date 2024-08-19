@@ -5,13 +5,13 @@ import (
 	"crypto/tls"
 	"errors"
 	"fmt"
+	"io"
 	"net"
 	"net/netip"
 	"os"
 	"regexp"
 	"strconv"
 	"strings"
-	"sync/atomic"
 	"syscall"
 	"time"
 
@@ -28,7 +28,6 @@ import (
 	"google.golang.org/grpc/metadata"
 	"google.golang.org/grpc/peer"
 	"google.golang.org/protobuf/encoding/protojson"
-	"google.golang.org/protobuf/reflect/protoreflect"
 
 	"golang.org/x/oauth2"
 	auth "golang.org/x/oauth2/google"
@@ -100,8 +99,6 @@ var (
 	}
 
 	ipToIfaceMap map[string]net.Interface
-
-	rpcCounters *haxmap.Map[string, *atomic.Uint64]
 
 	endpoints *haxmap.Map[string, *grpc.ClientConn]
 	flows     *haxmap.Map[uint64, *proxy.ProxyFlow]
@@ -200,30 +197,14 @@ func newClientConnFactory(target *string) clientConnFactory {
 	}
 }
 
-func onStreamEnd(
+func newJSONLog(
 	serverCtx, clientCtx context.Context,
-	flow *proxy.ProxyFlow,
-	streamStart, streamEnd *time.Time,
-) {
+	flow *proxy.ProxyFlow, ts *time.Time,
+) (*gabs.Container, *string) {
 	serial := *flow.Serial
-	defer flows.Del(serial)
-}
-
-func logger(
-	serverCtx, clientCtx context.Context,
-	flow *proxy.ProxyFlow,
-	request, response *protoreflect.ProtoMessage,
-	rpcStart, rpcEnd *time.Time,
-) {
-	timestamp := time.Now()
-
-	serial := *flow.Serial
-
-	_projectID := *flow.ProjectID
+	projectID := *flow.ProjectID
 	endpoint := *flow.Endpoint
 	method := *flow.Method
-
-	countByMethod := *flow.Stats.Counters.ByMethod
 
 	mdIn, _ := metadata.FromIncomingContext(serverCtx)
 	mdOut, _ := metadata.FromOutgoingContext(clientCtx)
@@ -271,6 +252,7 @@ func logger(
 
 	json.Set(serial, "serial")
 	json.Set(proxyFlowStr, "flow")
+	json.Set(*flow.ProjectID, "project")
 
 	mdJSON, _ := json.Object("metadata")
 	mdJSON.Set(mdIn, "in")
@@ -301,89 +283,118 @@ func logger(
 	outDstJSON.Set(clientPort, "port")
 	outDstJSON.Set(client.Addr.Network(), "net")
 
-	rpcJSON, _ := json.Object("rpc")
-	rpcJSON.Set(serial, "serial")
-	rpcJSON.Set(_projectID, "project")
-
-	methodJSON, _ := rpcJSON.Object("method")
-	methodJSON.Set(method, "id")
-	methodJSON.Set(strconv.FormatUint(countByMethod, 10), "serial")
-
-	authorityJSON, _ := rpcJSON.Object("authority")
+	authorityJSON, _ := json.Object("authority")
 	authorityJSON.Set(authorityParts[0], "src")
 	authorityJSON.Set(endpoint, "dst")
 
-	if request != nil {
-		rpcRequestJSON, _ := rpcJSON.Object("request")
-		jsonRquest := protojson.Format(*request)
-		protoRequest, _ := gabs.ParseJSON([]byte(jsonRquest))
-		rpcRequestJSON.Set(protoRequest, "proto")
+	operation, _ := json.Object("logging.googleapis.com/operation")
+	operation.Set(stringFormatter.Format("src/{0}:{1}/pxy/{2}:{3}/dst/{4}:{5}/pid/{6}/rpc:{7}{8}",
+		serverIPStr, serverPort, clientLocalIPStr, clientLocalPort, clientIPStr, clientPort, projectID, endpoint, method), "producer")
+	operation.Set(stringFormatter.Format("{0}/{1}/{2}", serverFlow, clientFlow, proxyFlow), "id")
 
+	labels, _ := json.Object("logging.googleapis.com/labels")
+	labels.Set("grpc-proxy", "tools.chux.dev/tool")
+	labels.Set(endpoint, "tools.chux.dev/grpc-proxy/authority")
+	labels.Set(method, "tools.chux.dev/grpc/proxy/method")
+
+	if flow.XCloudTraceContext != nil && *flow.XCloudTraceContext != "" {
+		if traceAndSpan := xCloudTraceContextRegexp.FindStringSubmatch(*flow.XCloudTraceContext); traceAndSpan != nil {
+			json.Set(stringFormatter.Format("projects/{0}/traces/{1}", projectID, traceAndSpan[1]), "logging.googleapis.com/trace")
+			json.Set(traceAndSpan[2], "logging.googleapis.com/spanId")
+			json.Set(true, "logging.googleapis.com/trace_sampled")
+		}
 	}
-
-	if response != nil {
-		rpcResponseJSON, _ := rpcJSON.Object("response")
-		jsonResponse := protojson.Format(*response)
-		protoResponse, _ := gabs.ParseJSON([]byte(jsonResponse))
-		rpcResponseJSON.Set(protoResponse, "proto")
-	}
-
-	timestampJSON, _ := json.Object("timestamp")
-	timestampJSON.Set(flow.TsProxyReceived.Unix(), "seconds")
-	timestampJSON.Set(flow.TsProxyReceived.Nanosecond(), "nanos")
-
-	tsBeforeStreamCreation := *flow.TsBeforeStreamCreation
-	tsAfterStreamCreation := *flow.TsAfterStreamCreation
-	streamSetupLatency := tsAfterStreamCreation.Sub(tsBeforeStreamCreation).Milliseconds()
-	rpcLatency := rpcEnd.Sub(*rpcStart).Milliseconds()
-	e2eLatencyMS := rpcEnd.Sub(*flow.TsProxyReceived).Milliseconds()
 
 	timestampsJSON, _ := json.Object("timestamps")
 	timestampsJSON.Set(flow.TsProxyReceived.Format(time.RFC3339Nano), "proxyStart")
-	timestampsJSON.Set(timestamp.Format(time.RFC3339Nano), "proxyEnd")
+	timestampsJSON.Set(ts.Format(time.RFC3339Nano), "proxyEnd")
 	timestampsJSON.Set(flow.TsDirectorStart.Format(time.RFC3339Nano), "directorStart")
 	timestampsJSON.Set(flow.TsDirectorEnd.Format(time.RFC3339Nano), "directorEnd")
 	timestampsJSON.Set(flow.TsOauth2Start.Format(time.RFC3339Nano), "oauth2Start")
 	timestampsJSON.Set(flow.TsOauth2End.Format(time.RFC3339Nano), "oauth2End")
 	timestampsJSON.Set(flow.TsBeforeStreamCreation.Format(time.RFC3339Nano), "streamCreationStart")
 	timestampsJSON.Set(flow.TsAfterStreamCreation.Format(time.RFC3339Nano), "streamCreationEnd")
-	timestampsJSON.Set(rpcStart.Format(time.RFC3339Nano), "rpcStart")
-	timestampsJSON.Set(rpcEnd.Format(time.RFC3339Nano), "rpcmEnd")
+
+	tsBeforeStreamCreation := *flow.TsBeforeStreamCreation
+	tsAfterStreamCreation := *flow.TsAfterStreamCreation
+	streamSetupLatency := tsAfterStreamCreation.Sub(tsBeforeStreamCreation).Milliseconds()
 
 	latencyJSON, _ := json.Object("latency")
-	latencyJSON.Set(e2eLatencyMS, "e2e")
-	latencyJSON.Set(rpcLatency, "rpc")
 	latencyJSON.Set(flow.TsDirectorEnd.Sub(*flow.TsDirectorStart).Milliseconds(), "director")
 	latencyJSON.Set(flow.TsOauth2End.Sub(*flow.TsOauth2Start).Milliseconds(), "oauth2")
 	latencyJSON.Set(streamSetupLatency, "setup")
-	latencyJSON.Set(rpcStart.Sub(*flow.TsProxyReceived).Milliseconds(), "proxy") // overhead
 
 	srcConn := stringFormatter.Format("{0}:{1} > {2}:{3}", serverIPStr, serverPort, serverLocalIPStr, serverLocalPort)
 	dstConn := stringFormatter.Format("{0}:{1} > {2}:{3}", clientLocalIPStr, clientLocalPort, clientIPStr, clientPort)
 
-	operation, _ := json.Object("logging.googleapis.com/operation")
-	operation.Set(stringFormatter.Format("src/{0}:{1}/pxy/{2}:{3}/dst/{4}:{5}/pid/{6}/rpc:{7}{8}",
-		serverIPStr, serverPort, clientLocalIPStr, clientLocalPort, clientIPStr, clientPort, _projectID, endpoint, method), "producer")
-	operation.Set(stringFormatter.Format("{0}/{1}/{2}", serverFlow, clientFlow, proxyFlow), "id")
+	// pre-populate some of the message to be shown in Cloud Logging
+	message := stringFormatter.Format("#:{0} | src[{1}] >> dst[{2}] | project:{3} | rpc:{4}{5}",
+		serial, srcConn, dstConn, projectID, endpoint, method, streamSetupLatency)
 
-	labels, _ := json.Object("logging.googleapis.com/labels")
-	labels.Set("grpc-proxy", "tools.chux.dev/tool")
-	labels.Set(authorityParts[0], "tools.chux.dev/grpc-proxy/authority/src")
-	labels.Set(endpoint, "tools.chux.dev/grpc-proxy/authority/dst")
-	labels.Set(method, "tools.chux.dev/grpc/proxy/method")
+	return json, &message
+}
 
-	if flow.XCloudTraceContext != nil && *flow.XCloudTraceContext != "" {
-		if traceAndSpan := xCloudTraceContextRegexp.FindStringSubmatch(*flow.XCloudTraceContext); traceAndSpan != nil {
-			json.Set(stringFormatter.Format("projects/{0}/traces/{1}", _projectID, traceAndSpan[1]), "logging.googleapis.com/trace")
-			json.Set(traceAndSpan[2], "logging.googleapis.com/spanId")
-			json.Set(true, "logging.googleapis.com/trace_sampled")
-		}
+func onStreamEnd(
+	serverCtx, clientCtx context.Context,
+	flow *proxy.ProxyFlow,
+) {
+	serial := *flow.Serial
+	defer flows.Del(serial)
+}
+
+func logger(
+	serverCtx, clientCtx context.Context,
+	flow *proxy.ProxyFlow, rpc *proxy.RPC,
+) {
+	timestamp := time.Now()
+
+	json, message := newJSONLog(serverCtx, clientCtx, flow, &timestamp)
+
+	method := *rpc.Method
+	messageFullName := string(*rpc.MessageFullName)
+
+	rpcJSON, _ := json.Object("rpc")
+	rpcJSON.Set(method, "method")
+
+	var rpcMessageJSON *gabs.Container
+	var protoJSONstr string
+	if rpc.IsRequest {
+		rpcMessageJSON, _ = rpcJSON.Object("request")
+	} else {
+		rpcMessageJSON, _ = rpcJSON.Object("response")
+	}
+	protoJSONstr = protojson.Format(*rpc.MessageProto)
+	protoJSON, _ := gabs.ParseJSON([]byte(protoJSONstr))
+	rpcMessageJSON.Set(protoJSON, "proto")
+	rpcMessageJSON.Set(messageFullName, "type")
+
+	if rpc.StatusProto != nil {
+		statusJSON, _ := rpcJSON.Object("status")
+		statusJSON.Set(rpc.StatusProto.Code, "code")
+		statusJSON.Set(rpc.StatusProto.Message, "message")
 	}
 
-	message := stringFormatter.Format("#:{0}/{1} | src[{2}] >> dst[{3}] | project:{4} | rpc:{5}{6} | latency[setup:{7}|rpc:{8}|e2e:{9}]ms",
-		serial, countByMethod, srcConn, dstConn, _projectID, endpoint, method, streamSetupLatency, rpcLatency, e2eLatencyMS)
-	json.Set(message, "message")
-	fmt.Println(json.String())
+	timestampJSON, _ := json.Object("timestamp")
+	timestampJSON.Set(rpc.TsStart.Unix(), "seconds")
+	timestampJSON.Set(rpc.TsStart.Nanosecond(), "nanos")
+
+	timestampsJSON := json.S("timestamps")
+	timestampsJSON.Set(rpc.TsStart.Format(time.RFC3339Nano), "rpcStart")
+	timestampsJSON.Set(rpc.TsEnd.Format(time.RFC3339Nano), "rpcEnd")
+
+	rpcLatency := rpc.TsEnd.Sub(*rpc.TsStart).Milliseconds()
+	e2eLatencyMS := rpc.TsEnd.Sub(*flow.TsProxyReceived).Milliseconds()
+
+	latencyJSON := json.S("latency")
+	latencyJSON.Set(e2eLatencyMS, "e2e")
+	latencyJSON.Set(rpcLatency, "rpc")
+	latencyJSON.Set(rpc.TsStart.Sub(*flow.TsProxyReceived).Milliseconds(), "proxy")
+
+	_message := stringFormatter.Format("{0} | msg:{1} | {2}ms", *message, messageFullName, rpcLatency)
+
+	json.Set(_message, "message")
+
+	io.WriteString(os.Stdout, json.String()+"\n")
 }
 
 func streamClientInterceptor(
@@ -436,15 +447,6 @@ func rpcTrafficDirector(
 	serial := *flow.Serial
 	flows.Set(serial, flow)
 
-	// count RPCs by method
-	// [ToDO]: consider counting by project And method
-	byMethodCounter, _ := rpcCounters.GetOrCompute(*flow.Method,
-		func() *atomic.Uint64 {
-			return new(atomic.Uint64)
-		})
-
-	byMethodCount := byMethodCounter.Add(1)
-
 	md, _ := metadata.FromIncomingContext(serverCtx)
 
 	var rpcConn *grpc.ClientConn
@@ -452,14 +454,17 @@ func rpcTrafficDirector(
 
 	// [ToDo]:
 	//   - allow whitelisting endpoints and methods
-	//   - ratelimit on max-concurrent-rpc per project/host/method
-	//   - use PROTO host from Plugins via `service2HostRegistry`
+	//   - ratelimit? on max-concurrent-rpc per project/host/method
 	rpcEndpointHeader := md.Get("x-grpc-proxy-endpoint")
-	if len(rpcEndpointHeader) > 0 && rpcEndpointHeader[0] != target {
+	if len(rpcEndpointHeader) > 0 && rpcEndpointHeader[0] != target { // override
 		rpcEndpoint := rpcEndpointHeader[0]
 		rpcConn, rpcConnLoaded = endpoints.GetOrCompute(rpcEndpoint, newClientConnFactory(&rpcEndpoint))
+		flow.Endpoint = &rpcEndpoint
+	} else if flow.Endpoint != nil {
+		rpcConn, rpcConnLoaded = endpoints.GetOrCompute(*flow.Endpoint, newClientConnFactory(flow.Endpoint))
 	} else {
 		rpcConn, rpcConnLoaded = endpoints.GetOrCompute(target, defaultClientConnFactory)
+		flow.Endpoint = &target
 	}
 
 	if !rpcConnLoaded && rpcConn == nil {
@@ -481,13 +486,11 @@ func rpcTrafficDirector(
 	server, _ := peer.FromContext(serverCtx)
 
 	flow.ClientConn = rpcConn
-	flow.Endpoint = &rpcEndpoint
 	flow.Server = server
 	flow.XCloudTraceContext = nil
 	flow.TsDirectorStart = &tsDirectorStart
 	flow.TsOauth2Start = &tsOauth2Start
 	flow.TsOauth2End = &tsOauth2End
-	flow.Stats.Counters.ByMethod = &byMethodCount
 
 	md.Set(":authority", strings.SplitN(rpcEndpoint, ":", 2)[0])
 
@@ -556,7 +559,6 @@ func main() {
 
 	endpoints = haxmap.New[string, *grpc.ClientConn]()
 	flows = haxmap.New[uint64, *proxy.ProxyFlow]()
-	rpcCounters = haxmap.New[string, *atomic.Uint64]()
 
 	encoding.RegisterCodec(proxy.Codec(encoding.GetCodec("proto")))
 	streamHandler := proxy.TransparentHandler(rpcTrafficDirector)

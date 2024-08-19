@@ -32,12 +32,13 @@ package main
 import (
 	"reflect"
 
-	"github.com/zhangyunhao116/skipmap"
-
 	_ "google.golang.org/grpc"
 	_ "google.golang.org/grpc/codes"
 	_ "google.golang.org/grpc/status"
+	_ "google.golang.org/genproto/googleapis/rpc/status"
 	_ "google.golang.org/protobuf/reflect/protoreflect"
+
+	"github.com/zhangyunhao116/skipmap"
 
 {{- range $alias, $import := .imports }}
 	{{$alias}} "{{$import -}}"
