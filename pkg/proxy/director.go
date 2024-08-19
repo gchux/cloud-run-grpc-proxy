@@ -56,9 +56,10 @@ type (
 	}
 
 	RPCCounters struct {
-		ByMethod  *uint64
-		requests  *uint64
-		responses *uint64
+		ForMethod *uint64
+		ForRPC    *uint64
+		Requests  *uint64
+		Responses *uint64
 	}
 
 	RPCStats struct {

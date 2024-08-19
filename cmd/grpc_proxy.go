@@ -292,10 +292,10 @@ func newJSONLog(
 		serverIPStr, serverPort, clientLocalIPStr, clientLocalPort, clientIPStr, clientPort, projectID, endpoint, method), "producer")
 	operation.Set(stringFormatter.Format("{0}/{1}/{2}", serverFlow, clientFlow, proxyFlow), "id")
 
-	labels, _ := json.Object("logging.googleapis.com/labels")
-	labels.Set("grpc-proxy", "tools.chux.dev/tool")
-	labels.Set(endpoint, "tools.chux.dev/grpc-proxy/authority")
-	labels.Set(method, "tools.chux.dev/grpc/proxy/method")
+	labelsJSON, _ := json.Object("logging.googleapis.com/labels")
+	labelsJSON.Set("grpc-proxy", "tools.chux.dev/tool")
+	labelsJSON.Set(endpoint, "tools.chux.dev/grpc-proxy/authority")
+	labelsJSON.Set(method, "tools.chux.dev/grpc/proxy/method")
 
 	if flow.XCloudTraceContext != nil && *flow.XCloudTraceContext != "" {
 		if traceAndSpan := xCloudTraceContextRegexp.FindStringSubmatch(*flow.XCloudTraceContext); traceAndSpan != nil {
@@ -367,6 +367,9 @@ func logger(
 	protoJSON, _ := gabs.ParseJSON([]byte(protoJSONstr))
 	rpcMessageJSON.Set(protoJSON, "proto")
 	rpcMessageJSON.Set(messageFullName, "type")
+
+	labelsJSON := json.S("logging.googleapis.com/labels")
+	labelsJSON.Set(messageFullName, "tools.chux.dev/grpc/proxy/message")
 
 	if rpc.StatusProto != nil {
 		statusJSON, _ := rpcJSON.Object("status")

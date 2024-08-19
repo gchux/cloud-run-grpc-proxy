@@ -45,6 +45,16 @@ tasks:
         vars:
           PLUGIN_GO_FILE: "{{.PLUGIN_GO_FILE}}"
 
+  docker-build-plugins:
+    vars:
+      PLUGINS:
+        sh: cat {{.USER_WORKING_DIR}}/_plugins_pkg/{{.PKG}}.pkg
+    cmds:
+      - for: { var: PLUGINS, as: PLUGIN }
+        task: docker-build-plugin
+        vars:
+          PLUGIN_GO_FILE: "{{.PLUGIN}}.go"
+
   go-fmt:
     cmds:
       - gofumpt -l -w .

@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"io"
+	"os"
 	"plugin"
 	"reflect"
 	"strings"
@@ -143,14 +144,16 @@ func loadProtoPluginForMethod(method *string) (*string, bool) {
 	// the error is not important as `newProto` returns `emptypb.Empty` if the actual type is not available;
 	// all that's been lost is the capacity to show the actual proto2json translations.
 	protoPlugin, _ := protoPlugins.LoadOrStoreLazy(
-		*pluginKey+".so", func() *plugin.Plugin {
-			protoPlugin, err := plugin.Open(*pluginKey)
+		*pluginKey, func() *plugin.Plugin {
+			protoPlugin, err := plugin.Open(*pluginKey + ".so")
 			if err != nil {
+				io.WriteString(os.Stderr, err.Error()+"\n")
 				return nil
 			}
 
 			LoadFn, err := protoPlugin.Lookup("Load")
 			if err != nil {
+				io.WriteString(os.Stderr, err.Error()+"\n")
 				return nil
 			}
 
@@ -229,16 +232,19 @@ func (s *handler) handler(srv interface{}, serverStream grpc.ServerStream) error
 	var requestCounter, responseCounter atomic.Uint64
 	var wg sync.WaitGroup
 
-	rpcLogger := func(request, response *protoreflect.ProtoMessage, status *spb.Status, start, end *time.Time) {
+	rpcLogger := func(
+		request, response *protoreflect.ProtoMessage,
+		status *spb.Status, start, end *time.Time,
+	) {
 		wg.Add(1)
-		rpcCounter.Add(1)
+		currentCountByRPC := rpcCounter.Add(1)
 
 		// do NOT block streams
 		// [ToDo]: use go-routines pool
-		go func() {
+		go func(currentCountByMethod, currentCountByRPC *uint64) {
 			rpc := &RPC{
 				Endpoint:    flow.Endpoint,
-				Method:      &method,
+				Method:      flow.Method,
 				TsStart:     start,
 				TsEnd:       end,
 				StatusProto: status,
@@ -249,44 +255,50 @@ func (s *handler) handler(srv interface{}, serverStream grpc.ServerStream) error
 			requestCount := requestCounter.Load()
 			responseCount := responseCounter.Load()
 
-			if response == nil {
+			if request != nil && response == nil {
 				requestCount = requestCounter.Add(1)
 				protoMessage = *request
 				rpc.MessageProto = request
 				rpc.IsRequest = true
 				rpc.IsResponse = false
-			} else {
+			} else if response != nil && request == nil {
 				responseCount = responseCounter.Add(1)
 				protoMessage = *response
 				rpc.MessageProto = response
 				rpc.IsRequest = false
 				rpc.IsResponse = true
+			} else {
+				rpc.IsRequest = false
+				rpc.IsResponse = false
 			}
 
-			// `protoreflect.FullName` is a `string`
-			// see: https://pkg.go.dev/google.golang.org/protobuf/reflect/protoreflect#ProtoMessage
-			messageFullName := protoMessage.ProtoReflect().Type().Descriptor().FullName()
-			rpc.MessageFullName = &messageFullName
-			counterByMessage, _ := s.stats.Counters.ByMessage.
-				LoadOrStoreLazy(string(messageFullName),
-					func() *atomic.Uint64 {
-						var counterByMethod atomic.Uint64
-						return &counterByMethod
-					})
-			counterByMessage.Add(1)
+			if rpc.IsRequest || rpc.IsResponse {
+				// `protoreflect.FullName` is a `string`
+				// see: https://pkg.go.dev/google.golang.org/protobuf/reflect/protoreflect#ProtoMessage
+				messageFullName := protoMessage.ProtoReflect().Type().Descriptor().FullName()
+				rpc.MessageFullName = &messageFullName
+				counterByMessage, _ := s.stats.Counters.ByMessage.
+					LoadOrStoreLazy(string(messageFullName),
+						func() *atomic.Uint64 {
+							var counterByMethod atomic.Uint64
+							return &counterByMethod
+						})
+				counterByMessage.Add(1)
+			}
 
 			rpc.Stats = &RPCStats{
 				Counters: &RPCCounters{
-					ByMethod:  &currentCountByMethod,
-					requests:  &requestCount,
-					responses: &responseCount,
+					ForMethod: currentCountByMethod,
+					ForRPC:    currentCountByRPC,
+					Requests:  &requestCount,
+					Responses: &responseCount,
 				},
 			}
 
 			go logger(clientCtx, clientStream.Context(), flow, rpc)
 
 			wg.Done()
-		}()
+		}(&currentCountByMethod, &currentCountByRPC)
 	}
 
 	tsStreamStart := time.Now()

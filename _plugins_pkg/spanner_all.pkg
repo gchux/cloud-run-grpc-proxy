@@ -1,0 +1,4 @@
+google.spanner.admin.database.v1
+google.spanner.admin.instance.v1
+google.spanner.executor.v1
+google.spanner.v1
