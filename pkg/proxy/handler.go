@@ -231,6 +231,7 @@ func (s *handler) handler(srv interface{}, serverStream grpc.ServerStream) error
 
 	rpcLogger := func(request, response *protoreflect.ProtoMessage, status *spb.Status, start, end *time.Time) {
 		wg.Add(1)
+		rpcCounter.Add(1)
 
 		// do NOT block streams
 		// [ToDo]: use go-routines pool
@@ -300,9 +301,12 @@ func (s *handler) handler(srv interface{}, serverStream grpc.ServerStream) error
 		tsStreamEnd := time.Now()
 		// do NOT block
 		go func() {
+			wg.Wait()
 			flow.TsStreamStart = &tsStreamStart
 			flow.TsStreamEnd = &tsStreamEnd
-			wg.Wait()
+			_ = rpcCounter.Load()
+			_ = requestCounter.Load()
+			_ = responseCounter.Load()
 			onStreamEnd(clientCtx, clientStream.Context(), flow)
 		}()
 	}()
