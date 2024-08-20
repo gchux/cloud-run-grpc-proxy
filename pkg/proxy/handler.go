@@ -212,8 +212,8 @@ func (s *handler) handler(srv interface{}, serverStream grpc.ServerStream) error
 
 	method := fullMethodName[1:]
 	if serviceKey, loaded := s.loadProtoPluginForMethod(&method); loaded {
-		if endpoint, loaded := s.registry.hosts.Load(*serviceKey); loaded {
-			flow.Endpoint = &endpoint
+		if host, loaded := s.registry.hosts.Load(*serviceKey); loaded {
+			flow.Target = &host
 		}
 	}
 
@@ -232,7 +232,7 @@ func (s *handler) handler(srv interface{}, serverStream grpc.ServerStream) error
 	}
 
 	// Proxy is now commited to handle the RPC
-	s.getCounter(flow.Endpoint, s.stats.Counters.ByTarget).Add(1)
+	s.getCounter(flow.Target, s.stats.Counters.ByTarget).Add(1)
 	s.getCounter(&method, s.stats.Counters.ByMethod).Add(1)
 
 	protoFactory := func(includeRequest, includeResponse bool) (
@@ -261,8 +261,8 @@ func (s *handler) handler(srv interface{}, serverStream grpc.ServerStream) error
 			errorsCount := errorCounter.Load()
 
 			rpc := &RPC{
-				Endpoint: flow.Endpoint,
-				Method:   flow.Method,
+				Target: flow.Target,
+				Method: flow.Method,
 				Timestamps: &RPCTimestamps{
 					Start: start,
 					End:   end,
@@ -340,7 +340,7 @@ func (s *handler) handler(srv interface{}, serverStream grpc.ServerStream) error
 			// capture global proxy stats on stream end
 			overallFlowsCount := s.stats.Counters.Flows.Load()
 			overallMessagesCount := s.stats.Counters.Messages.Load()
-			overallCountForTarget := s.getCounter(flow.Endpoint, s.stats.Counters.ByTarget).Load()
+			overallCountForTarget := s.getCounter(flow.Target, s.stats.Counters.ByTarget).Load()
 			overallCountForMethod := s.getCounter(&method, s.stats.Counters.ByMethod).Load()
 
 			messagesCount := messageCounter.Load()

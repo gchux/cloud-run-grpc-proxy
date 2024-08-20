@@ -66,7 +66,7 @@ type (
 		Serial             *uint64
 		Count              *uint32
 		ProjectID          *string
-		Endpoint, Method   *string
+		Target, Method     *string
 		XCloudTraceContext *string
 		Client, Server     *peer.Peer
 		Handlers           *ProxyFlowHandlers
@@ -80,7 +80,7 @@ type (
 	}
 
 	RPC struct {
-		Endpoint        *string
+		Target          *string
 		Method          *string
 		Timestamps      *RPCTimestamps
 		MessageProto    *protoreflect.ProtoMessage

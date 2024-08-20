@@ -35,7 +35,8 @@ import (
 )
 
 type (
-	clientConnectionFactory = func() *grpc.ClientConn
+	connectionFactoryProvider = func() connectionFactory
+	connectionFactory         = func() *grpc.ClientConn
 )
 
 const (
@@ -91,10 +92,12 @@ var (
 
 	ipToIfaceMap map[string]net.Interface
 
-	endpoints *skipmap.OrderedMap[string, clientConnectionFactory]
-	flows     *skipmap.OrderedMap[uint64, *proxy.ProxyFlow]
+	connectionFactories *skipmap.OrderedMap[string, connectionFactory]
+	connections         *skipmap.OrderedMap[string, *grpc.ClientConn]
+	flows               *skipmap.OrderedMap[uint64, *proxy.ProxyFlow]
 
-	defaultClientConnFactory = newClientConnFactory(&target)
+	defaultClientConnFactory         = newConnectionFactory(&target)
+	defaultConnectionFactoryProvider = func() connectionFactory { return defaultClientConnFactory }
 
 	xCloudTraceContextRegexp = regexp.MustCompile(`^(?P<trace>.+?)/(?P<span>.+?)(?:;o=.*)?$`)
 )
@@ -172,19 +175,24 @@ func getProxyFlowFromMetadata(md metadata.MD) (*proxy.ProxyFlow, error) {
 	return flow, nil
 }
 
-func newClientConnFactory(target *string) clientConnectionFactory {
+func newConnectionFactory(target *string) connectionFactory {
 	return func() *grpc.ClientConn {
-		// [ToDo]: validate `target`
-		cc, err := grpc.NewClient(*target,
-			grpc.WithTransportCredentials(tlsCreds),
-			grpc.WithContextDialer(contextDialer),
-			grpc.WithUserAgent("grpc-proxy/1.0.0"),
-			grpc.WithStreamInterceptor(streamClientInterceptor),
-			grpc.WithDefaultServiceConfig(`{"loadBalancingConfig": [{"round_robin":{}}]}`))
-		if err != nil {
-			return nil
-		}
-		return cc
+		connection, _ := connections.
+			LoadOrStoreLazy(*target, func() *grpc.ClientConn {
+				// [ToDo]: validate `target`
+				cc, err := grpc.NewClient(*target,
+					grpc.WithTransportCredentials(tlsCreds),
+					grpc.WithContextDialer(contextDialer),
+					grpc.WithUserAgent("grpc-proxy/1.0.0"),
+					grpc.WithStreamInterceptor(streamClientInterceptor),
+					grpc.WithDefaultServiceConfig(`{"loadBalancingConfig": [{"round_robin":{}}]}`))
+				if err != nil {
+					io.WriteString(os.Stderr, err.Error()+"\n")
+					return nil
+				}
+				return cc
+			})
+		return connection
 	}
 }
 
@@ -194,7 +202,7 @@ func newJSONLog(
 ) (*gabs.Container, *string) {
 	serial := *flow.Serial
 	projectID := *flow.ProjectID
-	endpoint := *flow.Endpoint
+	target := *flow.Target
 	method := *flow.Method
 
 	mdIn, _ := metadata.FromIncomingContext(serverCtx)
@@ -276,16 +284,16 @@ func newJSONLog(
 
 	authorityJSON, _ := json.Object("authority")
 	authorityJSON.Set(authorityParts[0], "src")
-	authorityJSON.Set(endpoint, "dst")
+	authorityJSON.Set(target, "dst")
 
 	operation, _ := json.Object("logging.googleapis.com/operation")
 	operation.Set(stringFormatter.Format("src/{0}:{1}/pxy/{2}:{3}/dst/{4}:{5}/pid/{6}/rpc:{7}{8}",
-		serverIPStr, serverPort, clientLocalIPStr, clientLocalPort, clientIPStr, clientPort, projectID, endpoint, method), "producer")
+		serverIPStr, serverPort, clientLocalIPStr, clientLocalPort, clientIPStr, clientPort, projectID, target, method), "producer")
 	operation.Set(stringFormatter.Format("{0}/{1}/{2}", serverFlow, clientFlow, proxyFlow), "id")
 
 	labelsJSON, _ := json.Object("logging.googleapis.com/labels")
 	labelsJSON.Set("grpc-proxy", "tools.chux.dev/tool")
-	labelsJSON.Set(endpoint, "tools.chux.dev/grpc-proxy/authority")
+	labelsJSON.Set(target, "tools.chux.dev/grpc-proxy/authority")
 	labelsJSON.Set(method, "tools.chux.dev/grpc/proxy/method")
 
 	if flow.XCloudTraceContext != nil && *flow.XCloudTraceContext != "" {
@@ -319,7 +327,7 @@ func newJSONLog(
 
 	// pre-populate some of the message to be shown in Cloud Logging
 	message := stringFormatter.Format("#:{0} | src[{1}] >> dst[{2}] | project:{3} | rpc:{4}{5}",
-		serial, srcConn, dstConn, projectID, endpoint, method, streamSetupLatency)
+		serial, srcConn, dstConn, projectID, target, method, streamSetupLatency)
 
 	return json, &message
 }
@@ -338,7 +346,7 @@ func onStreamStart(
 	timestampJSON.Set(flow.Timestamps.StreamStart.Nanosecond(), "nanos")
 
 	rpcJSON, _ := json.Object("rpc")
-	rpcJSON.Set(*flow.Endpoint, "target")
+	rpcJSON.Set(*flow.Target, "target")
 	rpcJSON.Set(*flow.Method, "method")
 
 	latencyJSON := json.S("latency")
@@ -369,7 +377,7 @@ func onStreamEnd(
 	timestampJSON.Set(flow.Timestamps.StreamEnd.Nanosecond(), "nanos")
 
 	rpcJSON, _ := json.Object("rpc")
-	rpcJSON.Set(*flow.Endpoint, "target")
+	rpcJSON.Set(*flow.Target, "target")
 	rpcJSON.Set(*flow.Method, "method")
 
 	timestampsJSON := json.S("timestamps")
@@ -412,7 +420,7 @@ func logger(
 
 	rpcJSON, _ := json.Object("rpc")
 
-	rpcJSON.Set(*flow.Endpoint, "target")
+	rpcJSON.Set(*rpc.Target, "target")
 	rpcJSON.Set(*flow.Method, "method")
 
 	logMessage := ""
@@ -529,48 +537,52 @@ func rpcTrafficDirector(
 
 	md, _ := metadata.FromIncomingContext(serverCtx)
 
-	var connectionFactory clientConnectionFactory
+	var _connectionFactory connectionFactory
 	connectionFactoryLoaded := false
+
+	_target := target
+	_connectionFactoryProvider := defaultConnectionFactoryProvider
 
 	// [ToDo]:
 	//   - allow whitelisting endpoints and methods
 	//   - ratelimit? on max-concurrent-rpc per project/host/method
 	rpcEndpointHeader := md.Get("x-grpc-proxy-endpoint")
 	if len(rpcEndpointHeader) > 0 && rpcEndpointHeader[0] != target { // override
-		rpcEndpoint := rpcEndpointHeader[0]
-		connectionFactory, connectionFactoryLoaded = endpoints.
-			LoadOrStoreLazy(rpcEndpoint, func() clientConnectionFactory {
-				return newClientConnFactory(&rpcEndpoint)
-			})
-	} else if flow.Endpoint != nil {
-		rpcEndpoint := *flow.Endpoint + ":443"
-		connectionFactory, connectionFactoryLoaded = endpoints.
-			LoadOrStoreLazy(rpcEndpoint, func() clientConnectionFactory {
-				return newClientConnFactory(&rpcEndpoint)
-			})
-	} else {
-		connectionFactory, connectionFactoryLoaded = endpoints.LoadOrStore(target, defaultClientConnFactory)
+		_target = rpcEndpointHeader[0]
+	} else if flow.Target != nil {
+		_target = *flow.Target + ":443"
 	}
 
+	if _target != target {
+		_connectionFactoryProvider = func() connectionFactory {
+			return newConnectionFactory(&_target)
+		}
+	}
+
+	_connectionFactory, connectionFactoryLoaded = connectionFactories.LoadOrStoreLazy(_target, _connectionFactoryProvider)
 	if !connectionFactoryLoaded {
-		return serverCtx, nil, nil, nil, errors.New("failed to create connection factory")
+		errorMsg := stringFormatter.Format("failed to create connection factory for: {0} ", _target)
+		io.WriteString(os.Stderr, errorMsg+"\n")
+		return serverCtx, nil, nil, nil, errors.New(errorMsg)
 	}
 
 	tsOauth2Start := time.Now()
 	token, err := getToken()
 	tsOauth2End := time.Now()
 	if err != nil {
-		fmt.Fprint(os.Stderr, err.Error()+"\n")
+		io.WriteString(os.Stderr, err.Error()+"\n")
 		return serverCtx, nil, nil, nil, err
 	}
 	md.Set("Authorization", "Bearer "+token.AccessToken)
 
-	rpcConnection := connectionFactory()
+	rpcConnection := _connectionFactory()
 	if rpcConnection == nil {
-		return serverCtx, nil, nil, nil, errors.New("failed to create connection")
+		errorMsg := stringFormatter.Format("failed to create connection for: {0}", _target)
+		io.WriteString(os.Stderr, errorMsg+"\n")
+		return serverCtx, nil, nil, nil, errors.New(errorMsg)
 	}
-	rpcEndpoint := rpcConnection.Target()
-	flow.Endpoint = &rpcEndpoint
+	rpcTarget := rpcConnection.Target()
+	flow.Target = &rpcTarget
 
 	// connection from client to proxy
 	server, _ := peer.FromContext(serverCtx)
@@ -581,8 +593,6 @@ func rpcTrafficDirector(
 	flow.Timestamps.DirectorStart = &tsDirectorStart
 	flow.Timestamps.Oauth2Start = &tsOauth2Start
 	flow.Timestamps.Oauth2End = &tsOauth2End
-
-	md.Set(":authority", strings.SplitN(rpcEndpoint, ":", 2)[0])
 
 	projectIDHeader := md.Get("x-grpc-proxy-project")
 	if len(projectIDHeader) > 0 {
@@ -613,7 +623,7 @@ func rpcTrafficDirector(
 		OnStreamEnd:   onStreamEnd,
 	}
 
-	return ctx, rpcConn, logger, handlers, nil
+	return ctx, rpcConnection, logger, handlers, nil
 }
 
 func contextDialer(ctx context.Context, addr string) (net.Conn, error) {
@@ -652,7 +662,8 @@ func main() {
 		}
 	}
 
-	endpoints = skipmap.New[string, *grpc.ClientConn]()
+	connectionFactories = skipmap.New[string, connectionFactory]()
+	connections = skipmap.New[string, *grpc.ClientConn]()
 	flows = skipmap.New[uint64, *proxy.ProxyFlow]()
 
 	encoding.RegisterCodec(proxy.Codec(encoding.GetCodec("proto")))
