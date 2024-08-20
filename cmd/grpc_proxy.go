@@ -448,16 +448,22 @@ func logger(
 		logMessage = stringFormatter.Format("{0} | msg:{1} | {2}ms",
 			*message, messageFullName, rpcLatency)
 
-	} else if rpc.StatusProto != nil {
+	}
+
+	if rpc.StatusProto != nil {
+		json.Set("ERROR", "severity")
+
 		statusJSON, _ := rpcJSON.Object("status")
 		statusJSON.Set(rpc.StatusProto.Code, "code")
 		statusJSON.Set(rpc.StatusProto.Message, "message")
 
-		logMessage = stringFormatter.Format("{0} | code:{1} | {2}ms",
-			*message, rpc.StatusProto.Code, rpcLatency)
-	} else {
-		logMessage = stringFormatter.Format("{0} | {2}ms",
-			*message, rpc.StatusProto.Code, rpcLatency)
+		if rpc.IsRequest || rpc.IsResponse {
+			logMessage = stringFormatter.Format("{0} | code:{1} | {2}",
+				logMessage, rpc.StatusProto.GetCode(), rpc.StatusProto.GetMessage())
+		} else {
+			logMessage = stringFormatter.Format("{0} | code:{1} | {2} | {3}ms",
+				*message, rpc.StatusProto.GetCode(), rpc.StatusProto.GetMessage(), rpcLatency)
+		}
 	}
 
 	json.Set(logMessage, "message")

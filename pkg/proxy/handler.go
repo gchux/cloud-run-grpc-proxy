@@ -18,6 +18,7 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 	"google.golang.org/protobuf/reflect/protoreflect"
+	"google.golang.org/protobuf/types/known/anypb"
 	"google.golang.org/protobuf/types/known/emptypb"
 )
 
@@ -255,6 +256,10 @@ func (s *handler) handler(srv interface{}, serverStream grpc.ServerStream) error
 		// do NOT block streams
 		// [ToDo]: use go-routines pool
 		go func(messageCounter, requestCounter, responseCounter, errorCounter *atomic.Uint64) {
+			if request == nil && response == nil && status == nil {
+				return // no RPC error, must be EOF with status 0
+			}
+
 			messagesCount := messageCounter.Add(1)
 			requestsCount := requestCounter.Load()
 			responsesCount := responseCounter.Load()
@@ -267,6 +272,8 @@ func (s *handler) handler(srv interface{}, serverStream grpc.ServerStream) error
 					Start: start,
 					End:   end,
 				},
+				IsRequest:  false,
+				IsResponse: false,
 				Stats: &RPCStats{
 					Counters: &RPCCounters{
 						Messages:  &messagesCount,
@@ -293,20 +300,20 @@ func (s *handler) handler(srv interface{}, serverStream grpc.ServerStream) error
 				rpc.IsRequest = false
 				rpc.IsResponse = true
 				rpc.Stats.Counters.Responses = &responsesCount
-			} else if status != nil {
+			}
+
+			if status != nil {
 				errorsCount = errorCounter.Add(1)
-				rpc.IsRequest = false
-				rpc.IsResponse = false
 				rpc.StatusProto = status
 				rpc.Stats.Counters.Errors = &errorsCount
-			} else {
-				return // no RPC error, must be EOF with status 0
 			}
 
 			if rpc.IsRequest || rpc.IsResponse {
 				// `protoreflect.FullName` is a `string`
 				// see: https://pkg.go.dev/google.golang.org/protobuf/reflect/protoreflect#ProtoMessage
-				messageFullName := protoMessage.ProtoReflect().Type().Descriptor().FullName()
+				any, _ := anypb.New(protoMessage)
+				// messageFullName := protoMessage.ProtoReflect().Type().Descriptor().FullName()
+				messageFullName := any.MessageName()
 				rpc.MessageFullName = &messageFullName
 				messageFullNameStr := string(messageFullName)
 				s.getCounter(&messageFullNameStr, s.stats.Counters.ByMessage).Add(1)
@@ -465,7 +472,7 @@ func (s *handler) forwardServerToClient(src grpc.ServerStream, dst grpc.ClientSt
 				end := time.Now()
 				ret <- err
 				if rpcStatus, ok := status.FromError(err); ok {
-					logger(nil, nil, rpcStatus.Proto(), &start, &end)
+					logger(nil, &protoRequest, rpcStatus.Proto(), &start, &end)
 				}
 				break
 			}
