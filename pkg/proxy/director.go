@@ -2,6 +2,8 @@ package proxy
 
 import (
 	"context"
+	"plugin"
+	"reflect"
 	"sync/atomic"
 	"time"
 
@@ -13,40 +15,74 @@ import (
 )
 
 type (
+	ProxyLogger = func(serverCtx, clientCtx context.Context, flow *ProxyFlow, rpc *RPC)
+
+	OnStreamStartHamdler = func(serverCtx, clientCtx context.Context, flow *ProxyFlow)
+	OnStreamEndHandler   = func(serverCtx, clientCtx context.Context, flow *ProxyFlow, stats *RPCStats)
+
+	ProxyRegistry struct {
+		hosts         *skipmap.OrderedMap[string, string]
+		requestTypes  *skipmap.OrderedMap[string, reflect.Type]
+		responseTypes *skipmap.OrderedMap[string, reflect.Type]
+		pluginsKeys   *skipmap.OrderedMap[string, *string]
+		plugins       *skipmap.OrderedMap[string, *plugin.Plugin]
+	}
+
+	ProxyPlugins struct {
+		keys *skipmap.OrderedMap[string, *string]
+	}
+
 	ProxyCounters struct {
-		ByMessage *skipmap.OrderedMap[string, *atomic.Uint64]
+		Flows     *atomic.Uint64
+		Messages  *atomic.Uint64
+		ByTarget  *skipmap.OrderedMap[string, *atomic.Uint64]
 		ByMethod  *skipmap.OrderedMap[string, *atomic.Uint64]
+		ByMessage *skipmap.OrderedMap[string, *atomic.Uint64]
 	}
 
 	ProxyStats struct {
 		Counters *ProxyCounters
 	}
 
+	ProxyFlowTimestamps struct {
+		ProxyReceived       *time.Time
+		StreamCreationStart *time.Time
+		StreamCreationEnd   *time.Time
+		DirectorStart       *time.Time
+		DirectorEnd         *time.Time
+		Oauth2Start         *time.Time
+		Oauth2End           *time.Time
+		StreamStart         *time.Time
+		StreamEnd           *time.Time
+	}
+
+	ProxyFlowHandlers struct {
+		OnStreamStart OnStreamStartHamdler
+		OnStreamEnd   OnStreamEndHandler
+	}
+
 	ProxyFlow struct {
-		ClientConn             *grpc.ClientConn
-		Serial                 *uint64
-		Count                  *uint32
-		ProjectID              *string
-		Endpoint, Method       *string
-		XCloudTraceContext     *string
-		Client, Server         *peer.Peer
-		TsProxyReceived        *time.Time
-		TsBeforeStreamCreation *time.Time
-		TsAfterStreamCreation  *time.Time
-		TsDirectorStart        *time.Time
-		TsDirectorEnd          *time.Time
-		TsOauth2Start          *time.Time
-		TsOauth2End            *time.Time
-		TsStreamStart          *time.Time
-		TsStreamEnd            *time.Time
-		Stats                  *ProxyStats
+		ClientConn         *grpc.ClientConn
+		Serial             *uint64
+		Count              *uint32
+		ProjectID          *string
+		Endpoint, Method   *string
+		XCloudTraceContext *string
+		Client, Server     *peer.Peer
+		Handlers           *ProxyFlowHandlers
+		Timestamps         *ProxyFlowTimestamps
+		Stats              *ProxyStats
+	}
+
+	RPCTimestamps struct {
+		Start *time.Time
+		End   *time.Time
 	}
 
 	RPC struct {
 		Endpoint        *string
 		Method          *string
-		TsStart         *time.Time
-		TsEnd           *time.Time
+		Timestamps      *RPCTimestamps
 		MessageProto    *protoreflect.ProtoMessage
 		MessageFullName *protoreflect.FullName
 		StatusProto     *spb.Status
@@ -55,20 +91,24 @@ type (
 		Stats           *RPCStats
 	}
 
-	RPCCounters struct {
+	Counters struct {
+		Flows     *uint64
+		Messages  *uint64
+		ForTarget *uint64
 		ForMethod *uint64
-		ForRPC    *uint64
+	}
+
+	RPCCounters struct {
+		Overall   *Counters
+		Messages  *uint64
 		Requests  *uint64
 		Responses *uint64
+		Errors    *uint64
 	}
 
 	RPCStats struct {
 		Counters *RPCCounters
 	}
-
-	Logger func(serverCtx, clientCtx context.Context, flow *ProxyFlow, rpc *RPC)
-
-	OnStreamEnd func(serverCtx, clientCtx context.Context, flow *ProxyFlow)
 
 	// StreamDirector returns a gRPC ClientConn to be used to forward the call to.
 	//
@@ -81,5 +121,5 @@ type (
 	//
 	// It is worth noting that the StreamDirector will be fired *after* all server-side stream interceptors
 	// are invoked. So decisions around authorization, monitoring etc. are better to be handled there.
-	StreamDirector func(ctx context.Context, flow *ProxyFlow) (context.Context, *grpc.ClientConn, Logger, OnStreamEnd, error)
+	StreamDirector = func(ctx context.Context, flow *ProxyFlow) (context.Context, *grpc.ClientConn, ProxyLogger, *ProxyFlowHandlers, error)
 )

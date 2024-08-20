@@ -306,22 +306,21 @@ func newJSONLog(
 	}
 
 	timestampsJSON, _ := json.Object("timestamps")
-	timestampsJSON.Set(flow.TsProxyReceived.Format(time.RFC3339Nano), "proxyStart")
-	timestampsJSON.Set(ts.Format(time.RFC3339Nano), "proxyEnd")
-	timestampsJSON.Set(flow.TsDirectorStart.Format(time.RFC3339Nano), "directorStart")
-	timestampsJSON.Set(flow.TsDirectorEnd.Format(time.RFC3339Nano), "directorEnd")
-	timestampsJSON.Set(flow.TsOauth2Start.Format(time.RFC3339Nano), "oauth2Start")
-	timestampsJSON.Set(flow.TsOauth2End.Format(time.RFC3339Nano), "oauth2End")
-	timestampsJSON.Set(flow.TsBeforeStreamCreation.Format(time.RFC3339Nano), "streamCreationStart")
-	timestampsJSON.Set(flow.TsAfterStreamCreation.Format(time.RFC3339Nano), "streamCreationEnd")
-
-	tsBeforeStreamCreation := *flow.TsBeforeStreamCreation
-	tsAfterStreamCreation := *flow.TsAfterStreamCreation
-	streamSetupLatency := tsAfterStreamCreation.Sub(tsBeforeStreamCreation).Milliseconds()
+	timestampsJSON.Set(flow.Timestamps.ProxyReceived.Format(time.RFC3339Nano), "proxyStart")
+	timestampsJSON.Set(ts.Format(time.RFC3339Nano), "logger")
+	timestampsJSON.Set(flow.Timestamps.DirectorStart.Format(time.RFC3339Nano), "directorStart")
+	timestampsJSON.Set(flow.Timestamps.DirectorEnd.Format(time.RFC3339Nano), "directorEnd")
+	timestampsJSON.Set(flow.Timestamps.Oauth2Start.Format(time.RFC3339Nano), "oauth2Start")
+	timestampsJSON.Set(flow.Timestamps.Oauth2End.Format(time.RFC3339Nano), "oauth2End")
+	timestampsJSON.Set(flow.Timestamps.StreamCreationStart.Format(time.RFC3339Nano), "streamCreationStart")
+	timestampsJSON.Set(flow.Timestamps.StreamCreationEnd.Format(time.RFC3339Nano), "streamCreationEnd")
+	timestampsJSON.Set(flow.Timestamps.StreamStart.Format(time.RFC3339Nano), "streamStart")
 
 	latencyJSON, _ := json.Object("latency")
-	latencyJSON.Set(flow.TsDirectorEnd.Sub(*flow.TsDirectorStart).Milliseconds(), "director")
-	latencyJSON.Set(flow.TsOauth2End.Sub(*flow.TsOauth2Start).Milliseconds(), "oauth2")
+	latencyJSON.Set(flow.Timestamps.DirectorEnd.Sub(*flow.Timestamps.DirectorStart).Milliseconds(), "director")
+	latencyJSON.Set(flow.Timestamps.Oauth2End.Sub(*flow.Timestamps.Oauth2Start).Milliseconds(), "oauth2")
+
+	streamSetupLatency := flow.Timestamps.StreamCreationEnd.Sub(*flow.Timestamps.StreamCreationStart).Milliseconds()
 	latencyJSON.Set(streamSetupLatency, "setup")
 
 	srcConn := stringFormatter.Format("{0}:{1} > {2}:{3}", serverIPStr, serverPort, serverLocalIPStr, serverLocalPort)
@@ -334,12 +333,82 @@ func newJSONLog(
 	return json, &message
 }
 
-func onStreamEnd(
-	serverCtx, clientCtx context.Context,
-	flow *proxy.ProxyFlow,
+func onStreamStart(
+	serverCtx, clientCtx context.Context, flow *proxy.ProxyFlow,
 ) {
+	timestamp := time.Now()
+
 	serial := *flow.Serial
 	defer flows.Del(serial)
+
+	e2eLatencyMS := flow.Timestamps.StreamStart.Sub(*flow.Timestamps.ProxyReceived).Milliseconds()
+
+	json, message := newJSONLog(serverCtx, clientCtx, flow, &timestamp)
+
+	timestampJSON, _ := json.Object("timestamp")
+	timestampJSON.Set(flow.Timestamps.StreamStart.Unix(), "seconds")
+	timestampJSON.Set(flow.Timestamps.StreamStart.Nanosecond(), "nanos")
+
+	rpcJSON, _ := json.Object("rpc")
+	rpcJSON.Set(*flow.Endpoint, "target")
+	rpcJSON.Set(*flow.Method, "method")
+
+	latencyJSON := json.S("latency")
+	latencyJSON.Set(e2eLatencyMS, "e2e")
+
+	logMessage := stringFormatter.Format("{0} | STREAM_START | {1}ms", *message, e2eLatencyMS)
+	json.Set(logMessage, "message")
+
+	io.WriteString(os.Stdout, json.String()+"\n")
+}
+
+func onStreamEnd(
+	serverCtx, clientCtx context.Context,
+	flow *proxy.ProxyFlow, stats *proxy.RPCStats,
+) {
+	timestamp := time.Now()
+
+	serial := *flow.Serial
+	defer flows.Del(serial)
+
+	e2eLatencyMS := flow.Timestamps.StreamEnd.Sub(*flow.Timestamps.ProxyReceived).Milliseconds()
+	streamatencyMS := flow.Timestamps.StreamEnd.Sub(*flow.Timestamps.StreamStart).Milliseconds()
+
+	json, message := newJSONLog(serverCtx, clientCtx, flow, &timestamp)
+
+	timestampJSON, _ := json.Object("timestamp")
+	timestampJSON.Set(flow.Timestamps.StreamEnd.Unix(), "seconds")
+	timestampJSON.Set(flow.Timestamps.StreamEnd.Nanosecond(), "nanos")
+
+	rpcJSON, _ := json.Object("rpc")
+	rpcJSON.Set(*flow.Endpoint, "target")
+	rpcJSON.Set(*flow.Method, "method")
+
+	timestampsJSON := json.S("timestamps")
+	timestampsJSON.Set(flow.Timestamps.StreamEnd.Format(time.RFC3339Nano), "streamEnd")
+
+	latencyJSON := json.S("latency")
+	latencyJSON.Set(e2eLatencyMS, "e2e")
+	latencyJSON.Set(streamatencyMS, "stream")
+
+	statsJSON, _ := json.Object("stats")
+
+	countersJSON, _ := statsJSON.Object("counters")
+	countersJSON.Set(stats.Counters.Messages, "messages")
+	countersJSON.Set(stats.Counters.Requests, "reqiests")
+	countersJSON.Set(stats.Counters.Responses, "responses")
+	countersJSON.Set(stats.Counters.Errors, "errors")
+
+	overallCountersJSON, _ := countersJSON.Object("overall")
+	overallCountersJSON.Set(stats.Counters.Overall.Flows, "flows")
+	overallCountersJSON.Set(stats.Counters.Overall.Messages, "messages")
+	overallCountersJSON.Set(stats.Counters.Overall.ForTarget, "forHost")
+	overallCountersJSON.Set(stats.Counters.Overall.ForMethod, "forMethod")
+
+	logMessage := stringFormatter.Format("{0} | STREAM_END | {1}ms", *message, streamatencyMS)
+	json.Set(logMessage, "message")
+
+	io.WriteString(os.Stdout, json.String()+"\n")
 }
 
 func logger(
@@ -348,11 +417,17 @@ func logger(
 ) {
 	timestamp := time.Now()
 
+	rpcLatency := rpc.Timestamps.End.Sub(*rpc.Timestamps.Start).Milliseconds()
+	e2eLatencyMS := rpc.Timestamps.End.Sub(*flow.Timestamps.ProxyReceived).Milliseconds()
+
 	json, message := newJSONLog(serverCtx, clientCtx, flow, &timestamp)
 
 	rpcJSON, _ := json.Object("rpc")
 
-	messageFullName := ""
+	rpcJSON.Set(*flow.Endpoint, "target")
+	rpcJSON.Set(*flow.Method, "method")
+
+	logMessage := ""
 
 	if rpc.IsRequest || rpc.IsResponse {
 
@@ -363,45 +438,53 @@ func logger(
 			rpcMessageJSON, _ = rpcJSON.Object("response")
 		}
 
-		method := *rpc.Method
-		rpcJSON.Set(method, "method")
-
 		protoJSONstr := protojson.Format(*rpc.MessageProto)
 		protoJSON, _ := gabs.ParseJSON([]byte(protoJSONstr))
 
-		messageFullName = string(*rpc.MessageFullName)
+		messageFullName := string(*rpc.MessageFullName)
 
 		rpcMessageJSON.Set(protoJSON, "proto")
 		rpcMessageJSON.Set(messageFullName, "type")
 
 		labelsJSON := json.S("logging.googleapis.com/labels")
 		labelsJSON.Set(messageFullName, "tools.chux.dev/grpc/proxy/message")
+
+		logMessage = stringFormatter.Format("{0} | msg:{1} | {2}ms",
+			*message, messageFullName, rpcLatency)
+
 	} else if rpc.StatusProto != nil {
 		statusJSON, _ := rpcJSON.Object("status")
 		statusJSON.Set(rpc.StatusProto.Code, "code")
 		statusJSON.Set(rpc.StatusProto.Message, "message")
-		messageFullName = rpc.StatusProto.Message
+
+		logMessage = stringFormatter.Format("{0} | code:{1} | {2}ms",
+			*message, rpc.StatusProto.Code, rpcLatency)
+	} else {
+		logMessage = stringFormatter.Format("{0} | {2}ms",
+			*message, rpc.StatusProto.Code, rpcLatency)
 	}
 
+	json.Set(logMessage, "message")
+
 	timestampJSON, _ := json.Object("timestamp")
-	timestampJSON.Set(rpc.TsStart.Unix(), "seconds")
-	timestampJSON.Set(rpc.TsStart.Nanosecond(), "nanos")
+	timestampJSON.Set(rpc.Timestamps.Start.Unix(), "seconds")
+	timestampJSON.Set(rpc.Timestamps.Start.Nanosecond(), "nanos")
 
 	timestampsJSON := json.S("timestamps")
-	timestampsJSON.Set(rpc.TsStart.Format(time.RFC3339Nano), "rpcStart")
-	timestampsJSON.Set(rpc.TsEnd.Format(time.RFC3339Nano), "rpcEnd")
-
-	rpcLatency := rpc.TsEnd.Sub(*rpc.TsStart).Milliseconds()
-	e2eLatencyMS := rpc.TsEnd.Sub(*flow.TsProxyReceived).Milliseconds()
+	timestampsJSON.Set(rpc.Timestamps.Start.Format(time.RFC3339Nano), "rpcStart")
+	timestampsJSON.Set(rpc.Timestamps.End.Format(time.RFC3339Nano), "rpcEnd")
 
 	latencyJSON := json.S("latency")
 	latencyJSON.Set(e2eLatencyMS, "e2e")
 	latencyJSON.Set(rpcLatency, "rpc")
-	latencyJSON.Set(rpc.TsStart.Sub(*flow.TsProxyReceived).Milliseconds(), "proxy")
+	latencyJSON.Set(rpc.Timestamps.Start.Sub(*flow.Timestamps.ProxyReceived).Milliseconds(), "proxy")
 
-	_message := stringFormatter.Format("{0} | msg:{1} | {2}ms", *message, messageFullName, rpcLatency)
-
-	json.Set(_message, "message")
+	statsJSON, _ := json.Object("stats")
+	countersJSON, _ := statsJSON.Object("counters")
+	countersJSON.Set(rpc.Stats.Counters.Messages, "messages")
+	countersJSON.Set(rpc.Stats.Counters.Requests, "reqiests")
+	countersJSON.Set(rpc.Stats.Counters.Responses, "responses")
+	countersJSON.Set(rpc.Stats.Counters.Errors, "errors")
 
 	io.WriteString(os.Stdout, json.String()+"\n")
 }
@@ -435,8 +518,8 @@ func streamClientInterceptor(
 	client, _ := peer.FromContext(clientCtx)
 
 	flow.Client = client
-	flow.TsBeforeStreamCreation = &tsBeforeStreamCreation
-	flow.TsAfterStreamCreation = &tsAfterStreamCreation
+	flow.Timestamps.StreamCreationStart = &tsBeforeStreamCreation
+	flow.Timestamps.StreamCreationEnd = &tsAfterStreamCreation
 
 	return clientStream, err
 }
@@ -447,8 +530,8 @@ func rpcTrafficDirector(
 ) (
 	context.Context,
 	*grpc.ClientConn,
-	proxy.Logger,
-	proxy.OnStreamEnd,
+	proxy.ProxyLogger,
+	*proxy.ProxyFlowHandlers,
 	error,
 ) {
 	tsDirectorStart := time.Now()
@@ -470,7 +553,9 @@ func rpcTrafficDirector(
 		rpcConn, rpcConnLoaded = endpoints.GetOrCompute(rpcEndpoint, newClientConnFactory(&rpcEndpoint))
 		flow.Endpoint = &rpcEndpoint
 	} else if flow.Endpoint != nil {
-		rpcConn, rpcConnLoaded = endpoints.GetOrCompute(*flow.Endpoint, newClientConnFactory(flow.Endpoint))
+		rpcEndpoint := *flow.Endpoint + ":443"
+		flow.Endpoint = &rpcEndpoint
+		rpcConn, rpcConnLoaded = endpoints.GetOrCompute(*flow.Endpoint, newClientConnFactory(&rpcEndpoint))
 	} else {
 		rpcConn, rpcConnLoaded = endpoints.GetOrCompute(target, defaultClientConnFactory)
 		flow.Endpoint = &target
@@ -497,9 +582,9 @@ func rpcTrafficDirector(
 	flow.ClientConn = rpcConn
 	flow.Server = server
 	flow.XCloudTraceContext = nil
-	flow.TsDirectorStart = &tsDirectorStart
-	flow.TsOauth2Start = &tsOauth2Start
-	flow.TsOauth2End = &tsOauth2End
+	flow.Timestamps.DirectorStart = &tsDirectorStart
+	flow.Timestamps.Oauth2Start = &tsOauth2Start
+	flow.Timestamps.Oauth2End = &tsOauth2End
 
 	md.Set(":authority", strings.SplitN(rpcEndpoint, ":", 2)[0])
 
@@ -525,9 +610,14 @@ func rpcTrafficDirector(
 	ctx := metadata.NewOutgoingContext(serverCtx, md.Copy())
 
 	tsDirectorEnd := time.Now()
-	flow.TsDirectorEnd = &tsDirectorEnd
+	flow.Timestamps.DirectorEnd = &tsDirectorEnd
 
-	return ctx, rpcConn, logger, onStreamEnd, nil
+	handlers := &proxy.ProxyFlowHandlers{
+		OnStreamStart: onStreamStart,
+		OnStreamEnd:   onStreamEnd,
+	}
+
+	return ctx, rpcConn, logger, handlers, nil
 }
 
 func contextDialer(ctx context.Context, addr string) (net.Conn, error) {

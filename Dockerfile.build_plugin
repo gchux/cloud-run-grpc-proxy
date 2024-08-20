@@ -7,7 +7,7 @@ ARG PLUGIN_SO_FILE
 
 WORKDIR /app
 
-COPY ./go.mod /app/go.mod
+COPY ./_plugins/go.mod /app/go.mod
 COPY ./_plugins/${PLUGIN_GO_FILE} /app
 
 ENV CGO_ENABLED=1
