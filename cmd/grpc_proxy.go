@@ -134,7 +134,7 @@ func hashL3(srcIP, dstIP *netip.Addr) uint64 {
 	if srcIP.Is6() {
 		src := srcIP.As16()
 		dst := dstIP.As16()
-		return (uint64(41 /* IPv6 == 41 */) + fnv1a.HashBytes64(src[:]) + fnv1a.HashBytes64(dst[:]))
+		l3Hash += (uint64(37 /* IPv6 == 41 */) + fnv1a.HashBytes64(src[:]) + fnv1a.HashBytes64(dst[:]))
 	} else {
 		src := srcIP.As4()
 		dst := dstIP.As4()
