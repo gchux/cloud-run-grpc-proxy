@@ -567,11 +567,8 @@ func rpcTrafficDirector(
 		}
 	}
 
-	var _connectionFactory connectionFactory
-	connectionFactoryLoaded := false
-
-	_connectionFactory, connectionFactoryLoaded = connectionFactories.LoadOrStoreLazy(_target, _connectionFactoryProvider)
-	if !connectionFactoryLoaded {
+	_connectionFactory, _ := connectionFactories.LoadOrStoreLazy(_target, _connectionFactoryProvider)
+	if _connectionFactory == nil {
 		errorMsg := stringFormatter.Format("failed to create connection factory for: {0} ", _target)
 		io.WriteString(os.Stderr, errorMsg+"\n")
 		return serverCtx, nil, nil, nil, errors.New(errorMsg)
