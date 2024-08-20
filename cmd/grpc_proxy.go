@@ -16,10 +16,10 @@ import (
 	"time"
 
 	"github.com/Jeffail/gabs/v2"
-	"github.com/alphadose/haxmap"
 	"github.com/gchux/grpc-proxy/pkg/proxy"
 	"github.com/segmentio/fasthash/fnv1a"
 	"github.com/wissance/stringFormatter"
+	"github.com/zhangyunhao116/skipmap"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
@@ -35,16 +35,7 @@ import (
 )
 
 type (
-	ProxyFlow struct {
-		Serial                 *uint64
-		Method                 *string
-		Client, Server         *peer.Peer
-		TsProxyReceived        *time.Time
-		TsBeforeStreamCreation *time.Time
-		TsAfterStreamCreation  *time.Time
-	}
-
-	clientConnFactory func() *grpc.ClientConn
+	clientConnectionFactory = func() *grpc.ClientConn
 )
 
 const (
@@ -100,8 +91,8 @@ var (
 
 	ipToIfaceMap map[string]net.Interface
 
-	endpoints *haxmap.Map[string, *grpc.ClientConn]
-	flows     *haxmap.Map[uint64, *proxy.ProxyFlow]
+	endpoints *skipmap.OrderedMap[string, clientConnectionFactory]
+	flows     *skipmap.OrderedMap[uint64, *proxy.ProxyFlow]
 
 	defaultClientConnFactory = newClientConnFactory(&target)
 
@@ -173,7 +164,7 @@ func getProxyFlowFromMetadata(md metadata.MD) (*proxy.ProxyFlow, error) {
 		return nil, err
 	}
 
-	flow, ok := flows.Get(rpc)
+	flow, ok := flows.Load(rpc)
 	if !ok {
 		return nil, errors.New("RPC flow not found: " + grpcProxyID[0])
 	}
@@ -181,7 +172,7 @@ func getProxyFlowFromMetadata(md metadata.MD) (*proxy.ProxyFlow, error) {
 	return flow, nil
 }
 
-func newClientConnFactory(target *string) clientConnFactory {
+func newClientConnFactory(target *string) clientConnectionFactory {
 	return func() *grpc.ClientConn {
 		// [ToDo]: validate `target`
 		cc, err := grpc.NewClient(*target,
@@ -338,9 +329,6 @@ func onStreamStart(
 ) {
 	timestamp := time.Now()
 
-	serial := *flow.Serial
-	defer flows.Del(serial)
-
 	e2eLatencyMS := flow.Timestamps.StreamStart.Sub(*flow.Timestamps.ProxyReceived).Milliseconds()
 
 	json, message := newJSONLog(serverCtx, clientCtx, flow, &timestamp)
@@ -369,7 +357,7 @@ func onStreamEnd(
 	timestamp := time.Now()
 
 	serial := *flow.Serial
-	defer flows.Del(serial)
+	defer flows.Delete(serial)
 
 	e2eLatencyMS := flow.Timestamps.StreamEnd.Sub(*flow.Timestamps.ProxyReceived).Milliseconds()
 	streamatencyMS := flow.Timestamps.StreamEnd.Sub(*flow.Timestamps.StreamStart).Milliseconds()
@@ -537,12 +525,12 @@ func rpcTrafficDirector(
 	tsDirectorStart := time.Now()
 
 	serial := *flow.Serial
-	flows.Set(serial, flow)
+	flows.Store(serial, flow)
 
 	md, _ := metadata.FromIncomingContext(serverCtx)
 
-	var rpcConn *grpc.ClientConn
-	rpcConnLoaded := false
+	var connectionFactory clientConnectionFactory
+	connectionFactoryLoaded := false
 
 	// [ToDo]:
 	//   - allow whitelisting endpoints and methods
@@ -550,19 +538,22 @@ func rpcTrafficDirector(
 	rpcEndpointHeader := md.Get("x-grpc-proxy-endpoint")
 	if len(rpcEndpointHeader) > 0 && rpcEndpointHeader[0] != target { // override
 		rpcEndpoint := rpcEndpointHeader[0]
-		rpcConn, rpcConnLoaded = endpoints.GetOrCompute(rpcEndpoint, newClientConnFactory(&rpcEndpoint))
-		flow.Endpoint = &rpcEndpoint
+		connectionFactory, connectionFactoryLoaded = endpoints.
+			LoadOrStoreLazy(rpcEndpoint, func() clientConnectionFactory {
+				return newClientConnFactory(&rpcEndpoint)
+			})
 	} else if flow.Endpoint != nil {
 		rpcEndpoint := *flow.Endpoint + ":443"
-		rpcConn, rpcConnLoaded = endpoints.GetOrCompute(rpcEndpoint, newClientConnFactory(&rpcEndpoint))
-		flow.Endpoint = &rpcEndpoint
+		connectionFactory, connectionFactoryLoaded = endpoints.
+			LoadOrStoreLazy(rpcEndpoint, func() clientConnectionFactory {
+				return newClientConnFactory(&rpcEndpoint)
+			})
 	} else {
-		rpcConn, rpcConnLoaded = endpoints.GetOrCompute(target, defaultClientConnFactory)
-		flow.Endpoint = &target
+		connectionFactory, connectionFactoryLoaded = endpoints.LoadOrStore(target, defaultClientConnFactory)
 	}
 
-	if !rpcConnLoaded && rpcConn == nil {
-		return serverCtx, nil, nil, nil, errors.New("failed to create connection")
+	if !connectionFactoryLoaded {
+		return serverCtx, nil, nil, nil, errors.New("failed to create connection factory")
 	}
 
 	tsOauth2Start := time.Now()
@@ -574,13 +565,18 @@ func rpcTrafficDirector(
 	}
 	md.Set("Authorization", "Bearer "+token.AccessToken)
 
-	rpcEndpoint := rpcConn.Target()
+	rpcConnection := connectionFactory()
+	if rpcConnection == nil {
+		return serverCtx, nil, nil, nil, errors.New("failed to create connection")
+	}
+	rpcEndpoint := rpcConnection.Target()
+	flow.Endpoint = &rpcEndpoint
 
 	// connection from client to proxy
 	server, _ := peer.FromContext(serverCtx)
-
-	flow.ClientConn = rpcConn
 	flow.Server = server
+
+	flow.ClientConn = rpcConnection
 	flow.XCloudTraceContext = nil
 	flow.Timestamps.DirectorStart = &tsDirectorStart
 	flow.Timestamps.Oauth2Start = &tsOauth2Start
@@ -656,8 +652,8 @@ func main() {
 		}
 	}
 
-	endpoints = haxmap.New[string, *grpc.ClientConn]()
-	flows = haxmap.New[uint64, *proxy.ProxyFlow]()
+	endpoints = skipmap.New[string, *grpc.ClientConn]()
+	flows = skipmap.New[uint64, *proxy.ProxyFlow]()
 
 	encoding.RegisterCodec(proxy.Codec(encoding.GetCodec("proto")))
 	streamHandler := proxy.TransparentHandler(rpcTrafficDirector)
