@@ -554,8 +554,8 @@ func rpcTrafficDirector(
 		flow.Endpoint = &rpcEndpoint
 	} else if flow.Endpoint != nil {
 		rpcEndpoint := *flow.Endpoint + ":443"
+		rpcConn, rpcConnLoaded = endpoints.GetOrCompute(rpcEndpoint, newClientConnFactory(&rpcEndpoint))
 		flow.Endpoint = &rpcEndpoint
-		rpcConn, rpcConnLoaded = endpoints.GetOrCompute(*flow.Endpoint, newClientConnFactory(&rpcEndpoint))
 	} else {
 		rpcConn, rpcConnLoaded = endpoints.GetOrCompute(target, defaultClientConnFactory)
 		flow.Endpoint = &target
