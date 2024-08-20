@@ -132,13 +132,15 @@ func getToken() (*oauth2.Token, error) {
 func hashL3(srcIP, dstIP *netip.Addr) uint64 {
 	l3Hash := uint64(4) // IPv4 == 4
 	if srcIP.Is6() {
-		l3Hash += 37 // IPv6 == 41
+		src := srcIP.As16()
+		dst := dstIP.As16()
+		return (uint64(41 /* IPv6 == 41 */) + fnv1a.HashBytes64(src[:]) + fnv1a.HashBytes64(dst[:]))
+	} else {
+		src := srcIP.As4()
+		dst := dstIP.As4()
+		l3Hash += (fnv1a.HashBytes64(src[:]) + fnv1a.HashBytes64(dst[:]))
 	}
-	srcBytes := srcIP.As16()
-	dstBytes := dstIP.As16()
-	return l3Hash +
-		fnv1a.HashBytes64(srcBytes[:]) +
-		fnv1a.HashBytes64(dstBytes[:])
+	return fnv1a.HashUint64(l3Hash)
 }
 
 func hashL4(p *peer.Peer, srcPort, dstPort *uint64) uint64 {
@@ -146,10 +148,13 @@ func hashL4(p *peer.Peer, srcPort, dstPort *uint64) uint64 {
 	if strings.HasPrefix(p.LocalAddr.Network(), "udp") {
 		proto += uint64(11) // UDP(17)
 	}
-	return proto + *srcPort + *dstPort
+	return fnv1a.HashUint64(proto + *srcPort + *dstPort)
 }
 
-func hash(p *peer.Peer, srcIP, dstIP *netip.Addr, srcPort, dstPort, ifaceIndex *uint64) uint64 {
+func hash(p *peer.Peer,
+	srcIP, dstIP *netip.Addr,
+	srcPort, dstPort, ifaceIndex *uint64,
+) uint64 {
 	hash := fnv1a.AddUint64(fnv1a.Init64, *ifaceIndex)
 	hash = fnv1a.AddUint64(hash, hashL3(srcIP, dstIP))
 	return fnv1a.AddUint64(hash, hashL4(p, srcPort, dstPort))
@@ -241,7 +246,7 @@ func newJSONLog(
 
 	serverFlow := hash(server, &serverIP, &serverLocalIP, &serverPort, &serverLocalPort, &serverIfaceIndex)
 	clientFlow := hash(client, &clientLocalIP, &clientIP, &clientLocalPort, &clientPort, &clientIfaceIndex)
-	proxyFlow := fnv1a.HashUint64(serverFlow + clientFlow)
+	proxyFlow := fnv1a.HashUint64(serial + serverFlow + clientFlow)
 
 	serverFlowStr := strconv.FormatUint(serverFlow, 10)
 	clientFlowStr := strconv.FormatUint(clientFlow, 10)
