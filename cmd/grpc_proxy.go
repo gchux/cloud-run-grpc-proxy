@@ -537,9 +537,6 @@ func rpcTrafficDirector(
 
 	md, _ := metadata.FromIncomingContext(serverCtx)
 
-	var _connectionFactory connectionFactory
-	connectionFactoryLoaded := false
-
 	_target := target
 	_connectionFactoryProvider := defaultConnectionFactoryProvider
 
@@ -558,6 +555,9 @@ func rpcTrafficDirector(
 			return newConnectionFactory(&_target)
 		}
 	}
+
+	var _connectionFactory connectionFactory
+	connectionFactoryLoaded := false
 
 	_connectionFactory, connectionFactoryLoaded = connectionFactories.LoadOrStoreLazy(_target, _connectionFactoryProvider)
 	if !connectionFactoryLoaded {
