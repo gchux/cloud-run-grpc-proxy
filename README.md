@@ -12,7 +12,7 @@ it can be not as simple to get all the datapoints required to troubleshoot witho
 The `gRPC Proxy` for Google APIs aims to simplify the troubleshooting process by providing all the information required by developers leveraging `gRPC` clients to perform Google APIs operations;
 for example: if there is a timeout, was the actual `rpc` sent or not?; if there was an unexpected response: was the actual request correct?, etc...
 
-![alt text](https://github.com/gchux/cloud-run-grpc-proxy/blob/main/img/proxy.png?raw=true)
+![alt text](https://github.com/gchux/cloud-run-grpc-proxy/blob/main/img/grpc_proxy.png?raw=true)
 
 ---
 
