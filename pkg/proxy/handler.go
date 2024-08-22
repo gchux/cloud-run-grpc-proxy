@@ -311,9 +311,9 @@ func (s *handler) handler(srv interface{}, serverStream grpc.ServerStream) error
 			if rpc.IsRequest || rpc.IsResponse {
 				// `protoreflect.FullName` is a `string`
 				// see: https://pkg.go.dev/google.golang.org/protobuf/reflect/protoreflect#ProtoMessage
-				any, _ := anypb.New(protoMessage)
 				// messageFullName := protoMessage.ProtoReflect().Type().Descriptor().FullName()
-				messageFullName := any.MessageName()
+				anyProto, _ := anypb.New(protoMessage)
+				messageFullName := anyProto.MessageName()
 				rpc.MessageFullName = &messageFullName
 				messageFullNameStr := string(messageFullName)
 				s.getCounter(&messageFullNameStr, s.stats.Counters.ByMessage).Add(1)

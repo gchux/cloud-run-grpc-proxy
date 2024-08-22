@@ -246,24 +246,30 @@ func newJSONLog(
 
 	serverFlow := hash(server, &serverIP, &serverLocalIP, &serverPort, &serverLocalPort, &serverIfaceIndex)
 	clientFlow := hash(client, &clientLocalIP, &clientIP, &clientLocalPort, &clientPort, &clientIfaceIndex)
-	proxyFlow := fnv1a.HashUint64(serial + serverFlow + clientFlow)
+	proxyFlow := fnv1a.HashUint64(serverFlow + clientFlow)
+	streamFlow := fnv1a.HashUint64(serial + proxyFlow)
 
 	serverFlowStr := strconv.FormatUint(serverFlow, 10)
 	clientFlowStr := strconv.FormatUint(clientFlow, 10)
 	proxyFlowStr := strconv.FormatUint(proxyFlow, 10)
+	streamFlowStr := strconv.FormatUint(streamFlow, 10)
 
 	json := gabs.New()
 
 	json.Set(serial, "serial")
-	json.Set(proxyFlowStr, "flow")
 	json.Set(*flow.ProjectID, "project")
+
+	flowJSON, _ := json.Object("flow")
+	flowJSON.Set(serverFlowStr, "server")
+	flowJSON.Set(clientFlowStr, "client")
+	flowJSON.Set(proxyFlowStr, "proxy")
+	flowJSON.Set(streamFlowStr, "stream")
 
 	mdJSON, _ := json.Object("metadata")
 	mdJSON.Set(mdIn, "in")
 	mdJSON.Set(mdOut, "out")
 
 	inJSON, _ := json.Object("in")
-	outJSON, _ := json.Object("out")
 
 	inJSON.Set(serverFlowStr, "flow")
 	inSrcJSON, _ := inJSON.Object("src")
@@ -275,6 +281,8 @@ func newJSONLog(
 	inDstJSON.Set(serverLocalIPStr, "ip")
 	inDstJSON.Set(serverLocalPort, "port")
 	inDstJSON.Set(server.LocalAddr.Network(), "net")
+
+	outJSON, _ := json.Object("out")
 
 	outJSON.Set(clientFlowStr, "flow")
 	outSrcJSON, _ := outJSON.Object("src")
