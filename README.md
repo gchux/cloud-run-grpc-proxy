@@ -109,3 +109,9 @@ Plugins are build using [`Go Plugins package`](https://pkg.go.dev/plugin) and, `
 This `package file` strategy allows developers to create a bundle with multiple packages from different APIs and point all the clients to the same `gRPC Proxy` server at runtime.
 
 The image provided does not contain any bundled plugins, it is a base image in which the `gRPC Proxy` handles all `rpc`s and all logging entries contain the [`Epmty message`](https://pkg.go.dev/google.golang.org/protobuf/types/known/emptypb); however, all other relevant information about the `rpc` will be available.
+
+---
+
+## Caveats
+
+- In order to work well with other troubleshooting tools ( i/e: the [`PCAP sidecar`](https://github.com/gchux/cloud-run-tcpdump) ), the `gRPC Proxy` does not serve over HTTPS; however, this should not be a problem as unencrypted traffic only happens within the [Cloud Run container runtime's sandbox](https://cloud.google.com/run/docs/container-contract#sandbox), so all traffic against the API target/upstream is done over HTTPS.
