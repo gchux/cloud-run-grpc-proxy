@@ -32,6 +32,8 @@ for example: if there is a timeout, was the actual `rpc` sent or not?; if there 
 
 - Log events into Cloud Logging and optionally add trace and span id to perform distribyted trace analysis in Cloud Trace.
 
+- Handler authentication for all `rpc`s executed through the `gRPC Proxy` server, unless the `rpc` already contains an `Authorization` header.
+
 ---
 
 ## Available `configurations`
